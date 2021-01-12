@@ -52,6 +52,12 @@
     <Compile Include="frmBaseList.Designer.cs">
       <DependentUpon>frmBaseList.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmDetail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmDetail.Designer.cs">
+      <DependentUpon>frmDetail.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmListDetail.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -68,6 +74,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="frmBaseList.resx">
       <DependentUpon>frmBaseList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmDetail.resx">
+      <DependentUpon>frmDetail.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmListDetail.resx">
       <DependentUpon>frmListDetail.cs</DependentUpon>
