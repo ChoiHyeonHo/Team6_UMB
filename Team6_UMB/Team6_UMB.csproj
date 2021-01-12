@@ -58,6 +58,12 @@
     <Compile Include="frmDetail.Designer.cs">
       <DependentUpon>frmDetail.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmDialog.Designer.cs">
+      <DependentUpon>frmDialog.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmListDetail.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -70,6 +76,12 @@
     <Compile Include="frmListList.Designer.cs">
       <DependentUpon>frmListList.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmPopUp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPopUp.Designer.cs">
+      <DependentUpon>frmPopUp.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="frmBaseList.resx">
@@ -78,11 +90,17 @@
     <EmbeddedResource Include="frmDetail.resx">
       <DependentUpon>frmDetail.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmDialog.resx">
+      <DependentUpon>frmDialog.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmListDetail.resx">
       <DependentUpon>frmListDetail.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmListList.resx">
       <DependentUpon>frmListList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPopUp.resx">
+      <DependentUpon>frmPopUp.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -92,6 +110,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -105,6 +124,15 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\question.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cancel.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\checked.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
