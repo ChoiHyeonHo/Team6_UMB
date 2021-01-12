@@ -60,14 +60,14 @@
             this.dataGridView1.Location = new System.Drawing.Point(13, 166);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowTemplate.Height = 23;
-            this.dataGridView1.Size = new System.Drawing.Size(440, 422);
+            this.dataGridView1.Size = new System.Drawing.Size(462, 422);
             this.dataGridView1.TabIndex = 3;
             // 
             // groupBox2
             // 
-            this.groupBox2.Location = new System.Drawing.Point(468, 159);
+            this.groupBox2.Location = new System.Drawing.Point(481, 159);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(420, 429);
+            this.groupBox2.Size = new System.Drawing.Size(407, 429);
             this.groupBox2.TabIndex = 6;
             this.groupBox2.TabStop = false;
             // 
