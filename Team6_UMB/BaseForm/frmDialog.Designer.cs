@@ -116,6 +116,7 @@ namespace Team6_UMB
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(415, 129);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.button2);
@@ -124,6 +125,7 @@ namespace Team6_UMB
             this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.pictureBox1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "frmDialog";
             this.Text = "frmDialog";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -136,12 +138,12 @@ namespace Team6_UMB
 
         #endregion
 
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.PictureBox pictureBox3;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Label label2;
+        protected System.Windows.Forms.PictureBox pictureBox1;
+        protected System.Windows.Forms.PictureBox pictureBox2;
+        protected System.Windows.Forms.PictureBox pictureBox3;
+        protected System.Windows.Forms.Label label1;
+        protected System.Windows.Forms.Button button1;
+        protected System.Windows.Forms.Button button2;
+        protected System.Windows.Forms.Label label2;
     }
 }
