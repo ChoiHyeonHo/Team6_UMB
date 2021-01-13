@@ -3,12 +3,15 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web.Http;
 
-namespace UMB_Web
+namespace UMB_WEB
 {
     public static class WebApiConfig
     {
         public static void Register(HttpConfiguration config)
         {
+            // Web API 구성 및 서비스
+
+            // Web API 경로
             config.MapHttpAttributeRoutes();
 
             config.Routes.MapHttpRoute(
