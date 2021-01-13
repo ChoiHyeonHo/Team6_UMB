@@ -87,19 +87,20 @@
     <Compile Include="BaseForm\frmPopUp.Designer.cs">
       <DependentUpon>frmPopUp.cs</DependentUpon>
     </Compile>
-    <Compile Include="DGV_Custom.cs">
+    <Compile Include="Class\Helper.cs" />
+    <Compile Include="Controls\DGV_Custom.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="DGV_Custom.Designer.cs">
+    <Compile Include="Controls\DGV_Custom.Designer.cs">
       <DependentUpon>DGV_Custom.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmMain.cs">
+    <Compile Include="Forms\frmMain.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmMain.Designer.cs">
+    <Compile Include="Forms\frmMain.Designer.cs">
       <DependentUpon>frmMain.cs</DependentUpon>
     </Compile>
-    <Compile Include="Log4Net.cs" />
+    <Compile Include="Class\Log4Net.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="BaseForm\frmBaseList.resx">
@@ -120,7 +121,7 @@
     <EmbeddedResource Include="BaseForm\frmPopUp.resx">
       <DependentUpon>frmPopUp.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmMain.resx">
+    <EmbeddedResource Include="Forms\frmMain.resx">
       <DependentUpon>frmMain.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">

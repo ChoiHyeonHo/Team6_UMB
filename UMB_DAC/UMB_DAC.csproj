@@ -49,7 +49,6 @@
     <Compile Include="BOMDAC.cs" />
     <Compile Include="BORDAC.cs" />
     <Compile Include="ConnectionAccess.cs" />
-    <Compile Include="Helper.cs" />
     <Compile Include="ProcessDAC.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
