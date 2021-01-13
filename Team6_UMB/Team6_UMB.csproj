@@ -46,60 +46,60 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="frmBaseList.cs">
+    <Compile Include="BaseForm\frmBaseList.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmBaseList.Designer.cs">
+    <Compile Include="BaseForm\frmBaseList.Designer.cs">
       <DependentUpon>frmBaseList.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmDetail.cs">
+    <Compile Include="BaseForm\frmDetail.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmDetail.Designer.cs">
+    <Compile Include="BaseForm\frmDetail.Designer.cs">
       <DependentUpon>frmDetail.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmDialog.cs">
+    <Compile Include="BaseForm\frmDialog.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmDialog.Designer.cs">
+    <Compile Include="BaseForm\frmDialog.Designer.cs">
       <DependentUpon>frmDialog.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmListDetail.cs">
+    <Compile Include="BaseForm\frmListDetail.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmListDetail.Designer.cs">
+    <Compile Include="BaseForm\frmListDetail.Designer.cs">
       <DependentUpon>frmListDetail.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmListList.cs">
+    <Compile Include="BaseForm\frmListList.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmListList.Designer.cs">
+    <Compile Include="BaseForm\frmListList.Designer.cs">
       <DependentUpon>frmListList.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmPopUp.cs">
+    <Compile Include="BaseForm\frmPopUp.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmPopUp.Designer.cs">
+    <Compile Include="BaseForm\frmPopUp.Designer.cs">
       <DependentUpon>frmPopUp.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="frmBaseList.resx">
+    <EmbeddedResource Include="BaseForm\frmBaseList.resx">
       <DependentUpon>frmBaseList.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmDetail.resx">
+    <EmbeddedResource Include="BaseForm\frmDetail.resx">
       <DependentUpon>frmDetail.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmDialog.resx">
+    <EmbeddedResource Include="BaseForm\frmDialog.resx">
       <DependentUpon>frmDialog.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmListDetail.resx">
+    <EmbeddedResource Include="BaseForm\frmListDetail.resx">
       <DependentUpon>frmListDetail.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmListList.resx">
+    <EmbeddedResource Include="BaseForm\frmListList.resx">
       <DependentUpon>frmListList.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmPopUp.resx">
+    <EmbeddedResource Include="BaseForm\frmPopUp.resx">
       <DependentUpon>frmPopUp.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
