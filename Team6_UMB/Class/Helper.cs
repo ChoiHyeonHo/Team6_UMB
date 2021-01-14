@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 using System.Data;
 using System.Reflection;
 
-namespace UMB_DAC
+namespace Team6_UMB
 {
     public static class Helper
     {

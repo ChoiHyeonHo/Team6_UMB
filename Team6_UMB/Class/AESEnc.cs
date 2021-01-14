@@ -5,7 +5,7 @@ using System.IO;
 using System.Threading;
 using System.Security.Cryptography;
 
-namespace EncrytLibrary
+namespace Team6_UMB
 {
     public class AES
     {
