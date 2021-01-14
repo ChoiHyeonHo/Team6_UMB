@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace UMB_DAC
 {
-    class BOMDAC : ConnectionAccess, IDisposable
+    public class BOMDAC : ConnectionAccess, IDisposable
     {
         string strConn;
         SqlConnection conn;
@@ -17,6 +17,11 @@ namespace UMB_DAC
             strConn = this.ConnectionString;
             conn = new SqlConnection(strConn);
             conn.Open();
+        }
+
+        public string enc()
+        {
+            return strConn;
         }
 
         public void Dispose()

@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Team6_UMB.Service;
 
 namespace Team6_UMB
 {
@@ -72,21 +73,21 @@ namespace Team6_UMB
 
         private void frmMain_Load(object sender, EventArgs e)
         {
-            textBox1.Text = "Server=whyfi8888.ddns.net,11433;Database=team6;Uid=team6;Pwd=team6";
+            //textBox1.Text = "Server=whyfi8888.ddns.net,11433;Database=team6;Uid=team6;Pwd=team6";
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-            AES enc = new AES();
-            textBox1.Text = enc.AESEncrypt256(textBox1.Text);
+            BOMService service = new BOMService();
+            textBox1.Text = service.enc();
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
             try
             {
-                string strConn = string.Empty;
-                strConn = textBox1.Text;
+                BOMService service = new BOMService();
+                string strConn = service.enc();
 
                 SqlConnection conn = new SqlConnection(strConn);
                 conn.Open();

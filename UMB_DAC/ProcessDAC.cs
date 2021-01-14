@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace UMB_DAC
 {
-    class ProcessDAC : ConnectionAccess, IDisposable
+    public class ProcessDAC : ConnectionAccess, IDisposable
     {
         string strConn;
         SqlConnection conn;

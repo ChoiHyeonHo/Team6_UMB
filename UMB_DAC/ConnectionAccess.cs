@@ -23,9 +23,10 @@ namespace UMB_DAC
 
                 foreach (XmlNode node in addNodes)
                 {
-                    if (node.Attributes["key"].InnerText == "MyDB")
+                    if (node.Attributes["key"].InnerText == "Team6")
                     {
-                        strConn = (node.ChildNodes[0]).InnerText;
+                        AES enc = new AES();
+                        strConn = enc.AESDecrypt256((node.ChildNodes[0]).InnerText);
                         break;
                     }
                 }
