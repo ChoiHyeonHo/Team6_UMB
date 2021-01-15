@@ -9,12 +9,10 @@ namespace UMB_DAC
 {
     public class ProcessDAC : ConnectionAccess, IDisposable
     {
-        string strConn;
         SqlConnection conn;
 
         public ProcessDAC()
         {
-            strConn = this.ConnectionString;
             conn = new SqlConnection(strConn);
             conn.Open();
         }

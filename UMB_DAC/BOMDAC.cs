@@ -9,12 +9,10 @@ namespace UMB_DAC
 {
     public class BOMDAC : ConnectionAccess, IDisposable
     {
-        string strConn;
         SqlConnection conn;
 
         public BOMDAC()
         {
-            strConn = this.ConnectionString;
             conn = new SqlConnection(strConn);
             conn.Open();
         }

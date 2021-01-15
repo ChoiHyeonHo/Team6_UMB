@@ -9,29 +9,51 @@ namespace UMB_DAC
 {
     public class ConnectionAccess
     {
-        protected string ConnectionString
+        public static string strConn;
+
+        //protected string ConnectionString
+        //{
+        //    get
+        //    {
+        //        string currentPath = System.IO.Directory.GetCurrentDirectory();
+        //        string strConn = string.Empty;
+        //        XmlDocument configXml = new XmlDocument();
+        //        string path = currentPath + "/Sample_DEV.xml";
+        //        configXml.Load(path);
+
+        //        XmlNodeList addNodes = configXml.SelectNodes("configuration/settings/add");
+
+        //        foreach (XmlNode node in addNodes)
+        //        {
+        //            if (node.Attributes["key"].InnerText == "Team6")
+        //            {
+        //                EncrytLibrary.AES aes = new EncrytLibrary.();
+        //                strConn = enc.AESDecrypt256((node.ChildNodes[0]).InnerText);
+        //                break;
+        //            }
+        //        }
+
+        //        return strConn;
+        //    }
+        //}
+
+        public void Connect()
         {
-            get
+            string currentPath = System.IO.Directory.GetCurrentDirectory();
+            XmlDocument configXml = new XmlDocument();
+            string path = currentPath + "/Sample_DEV.xml";
+            configXml.Load(path);
+
+            XmlNodeList addNodes = configXml.SelectNodes("configuration/settings/add");
+
+            foreach (XmlNode node in addNodes)
             {
-                string currentPath = System.IO.Directory.GetCurrentDirectory();
-                string strConn = string.Empty;
-                XmlDocument configXml = new XmlDocument();
-                string path = currentPath + "/Sample_DEV.xml";
-                configXml.Load(path);
-
-                XmlNodeList addNodes = configXml.SelectNodes("configuration/settings/add");
-
-                foreach (XmlNode node in addNodes)
+                if (node.Attributes["key"].InnerText == "Team6")
                 {
-                    if (node.Attributes["key"].InnerText == "Team6")
-                    {
-                        EncrytLibrary.AES aes = new EncrytLibrary.AES();
-                        strConn = aes.AESDecrypt256((node.ChildNodes[0]).InnerText);
-                        break;
-                    }
+                    EncrytLibrary.AES aes = new EncrytLibrary.();
+                    strConn = aes.AESDecrypt256((node.ChildNodes[0]).InnerText);
+                    break;
                 }
-
-                return strConn;
             }
         }
     }
