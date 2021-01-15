@@ -50,7 +50,7 @@ namespace UMB_DAC
             {
                 if (node.Attributes["key"].InnerText == "Team6")
                 {
-                    EncrytLibrary.AES aes = new EncrytLibrary.();
+                    EncrytLibrary.AES aes = new EncrytLibrary.AES();
                     strConn = aes.AESDecrypt256((node.ChildNodes[0]).InnerText);
                     break;
                 }
