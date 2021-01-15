@@ -59,7 +59,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Library\EncrytLibrary.dll" />
-    <Content Include="Sample_DEV.xml">
+    <Content Include="DBConnection.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
   </ItemGroup>
