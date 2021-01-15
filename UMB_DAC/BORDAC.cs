@@ -10,7 +10,7 @@ namespace UMB_DAC
     public class BORDAC : ConnectionAccess, IDisposable
     {
         SqlConnection conn;
-
+        //ㅁㄴㅇ
         public BORDAC()
         {
             conn = new SqlConnection(strConn);
