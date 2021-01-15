@@ -25,8 +25,8 @@ namespace UMB_DAC
                 {
                     if (node.Attributes["key"].InnerText == "Team6")
                     {
-                        AES enc = new AES();
-                        strConn = enc.AESDecrypt256((node.ChildNodes[0]).InnerText);
+                        EncrytLibrary.AES aes = new EncrytLibrary.AES();
+                        strConn = aes.AESDecrypt256((node.ChildNodes[0]).InnerText);
                         break;
                     }
                 }

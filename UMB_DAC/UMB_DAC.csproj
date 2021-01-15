@@ -31,6 +31,10 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EncrytLibrary, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Library\EncrytLibrary.dll</HintPath>
+    </Reference>
     <Reference Include="log4net, Version=2.0.12.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a, processorArchitecture=MSIL">
       <HintPath>..\packages\log4net.2.0.12\lib\net45\log4net.dll</HintPath>
     </Reference>
@@ -48,14 +52,13 @@
   <ItemGroup>
     <Compile Include="BOMDAC.cs" />
     <Compile Include="BORDAC.cs" />
-    <Compile Include="Class\AESEnc.cs" />
-    <Compile Include="Class\AESSalt.cs" />
     <Compile Include="Class\Helper.cs" />
     <Compile Include="ConnectionAccess.cs" />
     <Compile Include="ProcessDAC.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Library\EncrytLibrary.dll" />
     <Content Include="Sample_DEV.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>

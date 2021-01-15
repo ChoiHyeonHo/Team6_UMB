@@ -87,8 +87,6 @@
     <Compile Include="BaseForm\frmPopUp.Designer.cs">
       <DependentUpon>frmPopUp.cs</DependentUpon>
     </Compile>
-    <Compile Include="Class\AESEnc.cs" />
-    <Compile Include="Class\AESSalt.cs" />
     <Compile Include="Class\Helper.cs" />
     <Compile Include="Controls\DGV_Custom.cs">
       <SubType>Component</SubType>
@@ -163,7 +161,6 @@
   <ItemGroup>
     <None Include="Resources\umbrella.png" />
   </ItemGroup>
-  <ItemGroup />
   <ItemGroup>
     <ProjectReference Include="..\UMB_DAC\UMB_DAC.csproj">
       <Project>{8F8B5EDA-BF7D-4853-A6AC-F200F018366B}</Project>
