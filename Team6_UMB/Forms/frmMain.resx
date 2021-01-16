@@ -117,4 +117,26 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="textBox1.Text" xml:space="preserve">
+    <value>Button =&gt; btnName
+CheckBox =&gt; cheName
+ComboBox =&gt; cbName
+DataGridView =&gt; dgvName
+DateTimePicker =&gt; dtpName
+GroupBox =&gt; gbName
+ImageList =&gt; imgName
+Label =&gt; lblName
+ListBox =&gt; libName
+MenuStrip =&gt; msName
+MonthCalendar =&gt; mcName
+NumericUpDown =&gt; nuName
+Panel =&gt; pnlName
+PictureBox =&gt; pbName
+ProgressBar =&gt; pgbName
+RadioButton =&gt; rbName
+TextBox =&gt; txtName
+TreeView =&gt; tvName
+
+</value>
+  </data>
 </root>
