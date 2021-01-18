@@ -69,6 +69,12 @@
     <Compile Include="BaseForm\frmDialog.Designer.cs">
       <DependentUpon>frmDialog.cs</DependentUpon>
     </Compile>
+    <Compile Include="BaseForm\frmList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BaseForm\frmList.Designer.cs">
+      <DependentUpon>frmList.cs</DependentUpon>
+    </Compile>
     <Compile Include="BaseForm\frmListDetail.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -99,6 +105,12 @@
     <Compile Include="Forms\frmLogIn.Designer.cs">
       <DependentUpon>frmLogIn.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\frmPriceManage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmPriceManage.Designer.cs">
+      <DependentUpon>frmPriceManage.cs</DependentUpon>
+    </Compile>
     <Compile Include="Util\CommonUtil.cs" />
     <Compile Include="Util\ExcelExportImport.cs" />
     <Compile Include="Controls\DGV_Custom.cs">
@@ -126,6 +138,9 @@
     <EmbeddedResource Include="BaseForm\frmDialog.resx">
       <DependentUpon>frmDialog.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="BaseForm\frmList.resx">
+      <DependentUpon>frmList.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="BaseForm\frmListDetail.resx">
       <DependentUpon>frmListDetail.cs</DependentUpon>
     </EmbeddedResource>
@@ -143,6 +158,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\frmMain.resx">
       <DependentUpon>frmMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmPriceManage.resx">
+      <DependentUpon>frmPriceManage.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
