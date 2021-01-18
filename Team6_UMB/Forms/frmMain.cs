@@ -20,6 +20,10 @@ namespace Team6_UMB
             pnlMain1.Dock = pnlMain2.Dock = pnlMain3.Dock = pnlMain4.Dock = pnlMain5.Dock = pnlMain6.Dock = DockStyle.Fill;
             pnlMain1.Visible = pnlMain2.Visible = pnlMain3.Visible = pnlMain4.Visible = pnlMain5.Visible = pnlMain6.Visible = false;
         }
+        private void frmMain_Load(object sender, EventArgs e)
+        {
+            btnArrow.Text = "≪";
+        }
 
         private void btnMain1_Click(object sender, EventArgs e)
         {
@@ -105,6 +109,45 @@ namespace Team6_UMB
             this.btn1_1.BackColor = System.Drawing.Color.White;
             this.btn1_1.ForeColor = System.Drawing.Color.Black;
         }
+
+        private void btnArrow_Click(object sender, EventArgs e)
+        {
+            if (btnArrow.Text == "≪")
+            {
+                pnlButtons.Visible = false;
+                pnlNavigation.Dock = DockStyle.Fill;
+                pnlMenu.Size = new Size(49, 789);
+                btnArrow.Text = "≫";
+                pbChangeUser.Location = new Point(0, 49);
+                pbSetting.Location = new Point(0, 98);
+                pbExcel.Location = new Point(0, 147);
+                pbPrint.Location = new Point(0, 196);
+                
+            }
+            else if(btnArrow.Text == "≫")
+            {
+                pnlButtons.Visible = true;
+                pnlNavigation.Dock = DockStyle.Top;
+                pnlMenu.Size = new Size(151, 789);
+                btnArrow.Text = "≪";
+                pbChangeUser.Location = new Point(49, 0);
+                pbSetting.Location = new Point(98, 0);
+                pbExcel.Location = new Point(3, 49);
+                pbPrint.Location = new Point(49, 49);
+
+            }
+        }
+
+        private void pbChangeUser_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("User Change");
+        }
+
+        private void pbSetting_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Settings....");
+        }
+
         private void pnMin_Click(object sender, EventArgs e)
         {
             this.WindowState = FormWindowState.Minimized;

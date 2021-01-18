@@ -32,7 +32,6 @@ namespace Team6_UMB
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMain));
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.splitContainer2 = new System.Windows.Forms.SplitContainer();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pnlAppState = new System.Windows.Forms.Panel();
             this.pnMin = new System.Windows.Forms.PictureBox();
             this.pbMax = new System.Windows.Forms.PictureBox();
@@ -80,6 +79,13 @@ namespace Team6_UMB
             this.btn1_3 = new System.Windows.Forms.Button();
             this.btn1_2 = new System.Windows.Forms.Button();
             this.btn1_1 = new System.Windows.Forms.Button();
+            this.pnlNavigation = new System.Windows.Forms.Panel();
+            this.pbPrint = new System.Windows.Forms.PictureBox();
+            this.pbExcel = new System.Windows.Forms.PictureBox();
+            this.pbSetting = new System.Windows.Forms.PictureBox();
+            this.pbChangeUser = new System.Windows.Forms.PictureBox();
+            this.btnArrow = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -88,7 +94,6 @@ namespace Team6_UMB
             this.splitContainer2.Panel1.SuspendLayout();
             this.splitContainer2.Panel2.SuspendLayout();
             this.splitContainer2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.pnlAppState.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pnMin)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbMax)).BeginInit();
@@ -103,6 +108,12 @@ namespace Team6_UMB
             this.pnlMain4.SuspendLayout();
             this.pnlMain2.SuspendLayout();
             this.pnlMain1.SuspendLayout();
+            this.pnlNavigation.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbPrint)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbExcel)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbSetting)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbChangeUser)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // splitContainer1
@@ -149,16 +160,6 @@ namespace Team6_UMB
             this.splitContainer2.SplitterDistance = 150;
             this.splitContainer2.SplitterWidth = 1;
             this.splitContainer2.TabIndex = 0;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::Team6_UMB.Properties.Resources.Logo_White;
-            this.pictureBox1.Location = new System.Drawing.Point(24, 11);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(100, 50);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 1;
-            this.pictureBox1.TabStop = false;
             // 
             // pnlAppState
             // 
@@ -332,6 +333,7 @@ namespace Team6_UMB
             // pnlMenu
             // 
             this.pnlMenu.Controls.Add(this.pnlButtons);
+            this.pnlMenu.Controls.Add(this.pnlNavigation);
             this.pnlMenu.Dock = System.Windows.Forms.DockStyle.Left;
             this.pnlMenu.Location = new System.Drawing.Point(0, 0);
             this.pnlMenu.Name = "pnlMenu";
@@ -871,6 +873,87 @@ namespace Team6_UMB
             this.btn1_1.UseVisualStyleBackColor = false;
             this.btn1_1.Click += new System.EventHandler(this.btn1_1_Click);
             // 
+            // pnlNavigation
+            // 
+            this.pnlNavigation.BackColor = System.Drawing.Color.Transparent;
+            this.pnlNavigation.Controls.Add(this.pbPrint);
+            this.pnlNavigation.Controls.Add(this.pbExcel);
+            this.pnlNavigation.Controls.Add(this.pbSetting);
+            this.pnlNavigation.Controls.Add(this.pbChangeUser);
+            this.pnlNavigation.Controls.Add(this.btnArrow);
+            this.pnlNavigation.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pnlNavigation.Location = new System.Drawing.Point(0, 0);
+            this.pnlNavigation.Name = "pnlNavigation";
+            this.pnlNavigation.Size = new System.Drawing.Size(145, 139);
+            this.pnlNavigation.TabIndex = 0;
+            // 
+            // pbPrint
+            // 
+            this.pbPrint.Image = global::Team6_UMB.Properties.Resources.Print;
+            this.pbPrint.Location = new System.Drawing.Point(49, 49);
+            this.pbPrint.Name = "pbPrint";
+            this.pbPrint.Size = new System.Drawing.Size(43, 43);
+            this.pbPrint.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbPrint.TabIndex = 0;
+            this.pbPrint.TabStop = false;
+            // 
+            // pbExcel
+            // 
+            this.pbExcel.Image = global::Team6_UMB.Properties.Resources.Excel;
+            this.pbExcel.Location = new System.Drawing.Point(3, 49);
+            this.pbExcel.Name = "pbExcel";
+            this.pbExcel.Size = new System.Drawing.Size(43, 43);
+            this.pbExcel.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbExcel.TabIndex = 0;
+            this.pbExcel.TabStop = false;
+            // 
+            // pbSetting
+            // 
+            this.pbSetting.Image = global::Team6_UMB.Properties.Resources.Gear;
+            this.pbSetting.Location = new System.Drawing.Point(98, 0);
+            this.pbSetting.Name = "pbSetting";
+            this.pbSetting.Size = new System.Drawing.Size(43, 43);
+            this.pbSetting.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbSetting.TabIndex = 4;
+            this.pbSetting.TabStop = false;
+            this.pbSetting.Click += new System.EventHandler(this.pbSetting_Click);
+            // 
+            // pbChangeUser
+            // 
+            this.pbChangeUser.Image = global::Team6_UMB.Properties.Resources.ChangeUser;
+            this.pbChangeUser.Location = new System.Drawing.Point(49, 0);
+            this.pbChangeUser.Name = "pbChangeUser";
+            this.pbChangeUser.Size = new System.Drawing.Size(43, 43);
+            this.pbChangeUser.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbChangeUser.TabIndex = 3;
+            this.pbChangeUser.TabStop = false;
+            this.pbChangeUser.Click += new System.EventHandler(this.pbChangeUser_Click);
+            // 
+            // btnArrow
+            // 
+            this.btnArrow.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(52)))), ((int)(((byte)(78)))));
+            this.btnArrow.FlatAppearance.BorderSize = 0;
+            this.btnArrow.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnArrow.Font = new System.Drawing.Font("나눔바른고딕", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.btnArrow.ForeColor = System.Drawing.Color.White;
+            this.btnArrow.Location = new System.Drawing.Point(0, 0);
+            this.btnArrow.Name = "btnArrow";
+            this.btnArrow.Size = new System.Drawing.Size(43, 43);
+            this.btnArrow.TabIndex = 2;
+            this.btnArrow.Text = "≪";
+            this.btnArrow.UseVisualStyleBackColor = false;
+            this.btnArrow.Click += new System.EventHandler(this.btnArrow_Click);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::Team6_UMB.Properties.Resources.Logo_White;
+            this.pictureBox1.Location = new System.Drawing.Point(24, 11);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(100, 50);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 1;
+            this.pictureBox1.TabStop = false;
+            // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
@@ -882,6 +965,7 @@ namespace Team6_UMB
             this.Name = "frmMain";
             this.Text = "frmMain";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.Load += new System.EventHandler(this.frmMain_Load);
             this.splitContainer1.Panel1.ResumeLayout(false);
             this.splitContainer1.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
@@ -890,7 +974,6 @@ namespace Team6_UMB
             this.splitContainer2.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer2)).EndInit();
             this.splitContainer2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.pnlAppState.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pnMin)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbMax)).EndInit();
@@ -906,6 +989,12 @@ namespace Team6_UMB
             this.pnlMain4.ResumeLayout(false);
             this.pnlMain2.ResumeLayout(false);
             this.pnlMain1.ResumeLayout(false);
+            this.pnlNavigation.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pbPrint)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbExcel)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbSetting)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbChangeUser)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -949,16 +1038,22 @@ namespace Team6_UMB
         private System.Windows.Forms.Button btn5_3;
         private System.Windows.Forms.Button btn5_2;
         private System.Windows.Forms.Button btn5_1;
+        private System.Windows.Forms.Panel pnlNavigation;
         private System.Windows.Forms.Panel pnlButtons;
         private System.Windows.Forms.Panel pnlMain6;
         private System.Windows.Forms.Button btn6_4;
         private System.Windows.Forms.Button btn6_3;
         private System.Windows.Forms.Button btn6_2;
         private System.Windows.Forms.Button btn6_1;
+        private System.Windows.Forms.Button btnArrow;
+        private System.Windows.Forms.PictureBox pbChangeUser;
+        private System.Windows.Forms.PictureBox pbSetting;
         private System.Windows.Forms.Panel pnlAppState;
         private System.Windows.Forms.PictureBox pbClose;
         private System.Windows.Forms.PictureBox pbMax;
         private System.Windows.Forms.PictureBox pnMin;
+        private System.Windows.Forms.PictureBox pbExcel;
+        private System.Windows.Forms.PictureBox pbPrint;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.PictureBox pictureBox1;

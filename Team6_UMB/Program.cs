@@ -16,7 +16,7 @@ namespace Team6_UMB
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Forms.frmPriceManage());
+            Application.Run(new Forms.frmLogIn());
         }
     }
 }
