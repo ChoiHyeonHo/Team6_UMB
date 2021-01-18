@@ -30,28 +30,27 @@
         {
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            this.dgV_Custom1 = new Team6_UMB.DGV_Custom();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgvMenu = new Team6_UMB.DGV_Custom();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column4 = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.label2 = new System.Windows.Forms.Label();
             this.maskedTextBox1 = new System.Windows.Forms.MaskedTextBox();
             this.button1 = new System.Windows.Forms.Button();
-            this.panel1.SuspendLayout();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.dgV_Custom1 = new Team6_UMB.DGV_Custom();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.dgvMenu = new Team6_UMB.DGV_Custom();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column4 = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
             this.splitContainer1.SuspendLayout();
+            this.panel1.SuspendLayout();
+            this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgV_Custom1)).BeginInit();
+            this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvMenu)).BeginInit();
             this.SuspendLayout();
-            // 
-            // label1
-            // 
-            this.label1.Size = new System.Drawing.Size(153, 24);
-            this.label1.Text = "사용자 권한 관리";
             // 
             // splitContainer1
             // 
@@ -64,86 +63,14 @@
             // 
             // splitContainer1.Panel2
             // 
-            this.splitContainer1.Panel2.Controls.Add(this.dgvMenu);
-            this.splitContainer1.Panel2.Controls.Add(this.dgV_Custom1);
+            this.splitContainer1.Panel2.Controls.Add(this.groupBox2);
+            this.splitContainer1.Panel2.Controls.Add(this.groupBox1);
             this.splitContainer1.SplitterDistance = 49;
             // 
-            // dgV_Custom1
+            // label1
             // 
-            this.dgV_Custom1.BackgroundColor = System.Drawing.Color.White;
-            this.dgV_Custom1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("나눔바른고딕", 9F);
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgV_Custom1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            this.dgV_Custom1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgV_Custom1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Column1,
-            this.Column2});
-            this.dgV_Custom1.Cursor = System.Windows.Forms.Cursors.Arrow;
-            this.dgV_Custom1.GridColor = System.Drawing.Color.LightGray;
-            this.dgV_Custom1.Location = new System.Drawing.Point(1, 1);
-            this.dgV_Custom1.Margin = new System.Windows.Forms.Padding(4, 1, 4, 1);
-            this.dgV_Custom1.MinimumSize = new System.Drawing.Size(150, 150);
-            this.dgV_Custom1.Name = "dgV_Custom1";
-            this.dgV_Custom1.RowTemplate.Height = 23;
-            this.dgV_Custom1.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.dgV_Custom1.Size = new System.Drawing.Size(430, 475);
-            this.dgV_Custom1.TabIndex = 0;
-            // 
-            // Column1
-            // 
-            this.Column1.HeaderText = "사원ID";
-            this.Column1.Name = "Column1";
-            // 
-            // Column2
-            // 
-            this.Column2.HeaderText = "사원명";
-            this.Column2.Name = "Column2";
-            this.Column2.Width = 250;
-            // 
-            // dgvMenu
-            // 
-            this.dgvMenu.BackgroundColor = System.Drawing.Color.White;
-            this.dgvMenu.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("나눔바른고딕", 9F);
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvMenu.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
-            this.dgvMenu.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvMenu.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Column3,
-            this.Column4});
-            this.dgvMenu.Cursor = System.Windows.Forms.Cursors.Arrow;
-            this.dgvMenu.GridColor = System.Drawing.Color.LightGray;
-            this.dgvMenu.Location = new System.Drawing.Point(446, 1);
-            this.dgvMenu.Margin = new System.Windows.Forms.Padding(4, 1, 4, 1);
-            this.dgvMenu.MinimumSize = new System.Drawing.Size(150, 150);
-            this.dgvMenu.Name = "dgvMenu";
-            this.dgvMenu.RowTemplate.Height = 23;
-            this.dgvMenu.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.dgvMenu.Size = new System.Drawing.Size(430, 475);
-            this.dgvMenu.TabIndex = 0;
-            this.dgvMenu.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvMenu_CellContentClick);
-            this.dgvMenu.CellPainting += new System.Windows.Forms.DataGridViewCellPaintingEventHandler(this.dgvMenu_CellPainting);
-            // 
-            // Column3
-            // 
-            this.Column3.HeaderText = "메뉴명";
-            this.Column3.Name = "Column3";
-            // 
-            // Column4
-            // 
-            this.Column4.HeaderText = "체크";
-            this.Column4.Name = "Column4";
+            this.label1.Size = new System.Drawing.Size(153, 24);
+            this.label1.Text = "사용자 권한 관리";
             // 
             // label2
             // 
@@ -171,19 +98,116 @@
             this.button1.Text = "조회";
             this.button1.UseVisualStyleBackColor = true;
             // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.dgV_Custom1);
+            this.groupBox1.Location = new System.Drawing.Point(3, 3);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(436, 471);
+            this.groupBox1.TabIndex = 1;
+            this.groupBox1.TabStop = false;
+            // 
+            // dgV_Custom1
+            // 
+            this.dgV_Custom1.BackgroundColor = System.Drawing.Color.White;
+            this.dgV_Custom1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("나눔바른고딕", 9F);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgV_Custom1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            this.dgV_Custom1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgV_Custom1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Column1,
+            this.Column2});
+            this.dgV_Custom1.Cursor = System.Windows.Forms.Cursors.Arrow;
+            this.dgV_Custom1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgV_Custom1.GridColor = System.Drawing.Color.LightGray;
+            this.dgV_Custom1.Location = new System.Drawing.Point(3, 17);
+            this.dgV_Custom1.Margin = new System.Windows.Forms.Padding(4, 1, 4, 1);
+            this.dgV_Custom1.MinimumSize = new System.Drawing.Size(150, 150);
+            this.dgV_Custom1.Name = "dgV_Custom1";
+            this.dgV_Custom1.RowTemplate.Height = 23;
+            this.dgV_Custom1.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.dgV_Custom1.Size = new System.Drawing.Size(430, 451);
+            this.dgV_Custom1.TabIndex = 1;
+            // 
+            // Column1
+            // 
+            this.Column1.HeaderText = "사원ID";
+            this.Column1.Name = "Column1";
+            // 
+            // Column2
+            // 
+            this.Column2.HeaderText = "사원명";
+            this.Column2.Name = "Column2";
+            this.Column2.Width = 250;
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.dgvMenu);
+            this.groupBox2.Location = new System.Drawing.Point(445, 3);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(428, 471);
+            this.groupBox2.TabIndex = 2;
+            this.groupBox2.TabStop = false;
+            // 
+            // dgvMenu
+            // 
+            this.dgvMenu.BackgroundColor = System.Drawing.Color.White;
+            this.dgvMenu.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("나눔바른고딕", 9F);
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvMenu.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.dgvMenu.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvMenu.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Column3,
+            this.Column4});
+            this.dgvMenu.Cursor = System.Windows.Forms.Cursors.Arrow;
+            this.dgvMenu.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgvMenu.GridColor = System.Drawing.Color.LightGray;
+            this.dgvMenu.Location = new System.Drawing.Point(3, 17);
+            this.dgvMenu.Margin = new System.Windows.Forms.Padding(4, 1, 4, 1);
+            this.dgvMenu.MinimumSize = new System.Drawing.Size(150, 150);
+            this.dgvMenu.Name = "dgvMenu";
+            this.dgvMenu.RowTemplate.Height = 23;
+            this.dgvMenu.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.dgvMenu.Size = new System.Drawing.Size(422, 451);
+            this.dgvMenu.TabIndex = 1;
+            // 
+            // Column3
+            // 
+            this.Column3.HeaderText = "메뉴명";
+            this.Column3.Name = "Column3";
+            // 
+            // Column4
+            // 
+            this.Column4.HeaderText = "체크";
+            this.Column4.Name = "Column4";
+            // 
             // frmAuthority
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.ClientSize = new System.Drawing.Size(900, 600);
             this.Name = "frmAuthority";
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
             this.splitContainer1.Panel1.ResumeLayout(false);
             this.splitContainer1.Panel1.PerformLayout();
             this.splitContainer1.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
             this.splitContainer1.ResumeLayout(false);
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
+            this.groupBox1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgV_Custom1)).EndInit();
+            this.groupBox2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvMenu)).EndInit();
             this.ResumeLayout(false);
 
@@ -194,9 +218,11 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.MaskedTextBox maskedTextBox1;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.GroupBox groupBox2;
         private DGV_Custom dgvMenu;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
         private System.Windows.Forms.DataGridViewCheckBoxColumn Column4;
+        private System.Windows.Forms.GroupBox groupBox1;
         private DGV_Custom dgV_Custom1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;

@@ -29,8 +29,9 @@ namespace Team6_UMB.Forms
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.button1 = new System.Windows.Forms.Button();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
@@ -46,7 +47,7 @@ namespace Team6_UMB.Forms
             this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnAllButtons1 = new Team6_UMB.Controls.btnAllButtons();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -68,6 +69,12 @@ namespace Team6_UMB.Forms
             this.splitContainer1.Panel2.Controls.Add(this.dgvPrice);
             this.splitContainer1.SplitterDistance = 50;
             // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.btnAllButtons1);
+            this.panel1.Controls.SetChildIndex(this.label1, 0);
+            this.panel1.Controls.SetChildIndex(this.btnAllButtons1, 0);
+            // 
             // label1
             // 
             this.label1.Size = new System.Drawing.Size(86, 24);
@@ -88,6 +95,18 @@ namespace Team6_UMB.Forms
             this.groupBox1.Size = new System.Drawing.Size(876, 50);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
+            // 
+            // button1
+            // 
+            this.button1.BackgroundImage = global::Team6_UMB.Properties.Resources.Search;
+            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Location = new System.Drawing.Point(836, 11);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(34, 30);
+            this.button1.TabIndex = 21;
+            this.button1.UseVisualStyleBackColor = true;
             // 
             // textBox2
             // 
@@ -150,14 +169,14 @@ namespace Team6_UMB.Forms
             // 
             this.dgvPrice.BackgroundColor = System.Drawing.Color.White;
             this.dgvPrice.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("나눔바른고딕", 9F);
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvPrice.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("나눔바른고딕", 9F);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvPrice.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dgvPrice.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvPrice.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column1,
@@ -226,17 +245,14 @@ namespace Team6_UMB.Forms
             this.Column8.Name = "Column8";
             this.Column8.Width = 80;
             // 
-            // button1
+            // btnAllButtons1
             // 
-            this.button1.BackgroundImage = global::Team6_UMB.Properties.Resources.Search;
-            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Location = new System.Drawing.Point(836, 11);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(34, 30);
-            this.button1.TabIndex = 21;
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnAllButtons1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(52)))), ((int)(((byte)(79)))));
+            this.btnAllButtons1.Dock = System.Windows.Forms.DockStyle.Right;
+            this.btnAllButtons1.Location = new System.Drawing.Point(499, 0);
+            this.btnAllButtons1.Name = "btnAllButtons1";
+            this.btnAllButtons1.Size = new System.Drawing.Size(377, 35);
+            this.btnAllButtons1.TabIndex = 2;
             // 
             // frmPriceManage
             // 
@@ -275,5 +291,6 @@ namespace Team6_UMB.Forms
         private System.Windows.Forms.Label label2;
         private PJT_Olive.Control.PeriodSearchControl periodSearchControl1;
         private System.Windows.Forms.Button button1;
+        private Controls.btnAllButtons btnAllButtons1;
     }
 }

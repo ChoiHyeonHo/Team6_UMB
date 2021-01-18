@@ -3,23 +3,16 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
-using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Team6_UMB
+namespace Team6_UMB.Forms
 {
-    public partial class frmDialog : Form
+    public partial class frmPriceManagePopUp : Team6_UMB.frmPopUp
     {
-        public frmDialog()
+        public frmPriceManagePopUp()
         {
             InitializeComponent();
-        }
-
-        private void frmDialog_Load(object sender, EventArgs e)
-        {
-
         }
     }
 }

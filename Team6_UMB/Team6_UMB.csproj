@@ -93,6 +93,12 @@
     <Compile Include="BaseForm\frmPopUp.Designer.cs">
       <DependentUpon>frmPopUp.cs</DependentUpon>
     </Compile>
+    <Compile Include="Controls\btnAllButtons.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\btnAllButtons.Designer.cs">
+      <DependentUpon>btnAllButtons.cs</DependentUpon>
+    </Compile>
     <Compile Include="Controls\periodSearchControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -117,6 +123,13 @@
     <Compile Include="Forms\frmPriceManage.Designer.cs">
       <DependentUpon>frmPriceManage.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\frmPriceManagePopUp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmPriceManagePopUp.Designer.cs">
+      <DependentUpon>frmPriceManagePopUp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Util\ChamJo.cs" />
     <Compile Include="Util\CommonUtil.cs" />
     <Compile Include="Util\ExcelExportImport.cs" />
     <Compile Include="Controls\DGV_Custom.cs">
@@ -156,6 +169,9 @@
     <EmbeddedResource Include="BaseForm\frmPopUp.resx">
       <DependentUpon>frmPopUp.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Controls\btnAllButtons.resx">
+      <DependentUpon>btnAllButtons.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Controls\periodSearchControl.resx">
       <DependentUpon>periodSearchControl.cs</DependentUpon>
     </EmbeddedResource>
@@ -170,6 +186,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\frmPriceManage.resx">
       <DependentUpon>frmPriceManage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmPriceManagePopUp.resx">
+      <DependentUpon>frmPriceManagePopUp.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -277,6 +296,15 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Search.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\delete.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\erase.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Create.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

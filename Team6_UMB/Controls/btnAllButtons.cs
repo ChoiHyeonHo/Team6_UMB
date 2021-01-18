@@ -8,18 +8,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Team6_UMB
+namespace Team6_UMB.Controls
 {
-    public partial class frmDialog : Form
+    public partial class btnAllButtons : UserControl
     {
-        public frmDialog()
+        public btnAllButtons()
         {
             InitializeComponent();
-        }
-
-        private void frmDialog_Load(object sender, EventArgs e)
-        {
-
         }
     }
 }
