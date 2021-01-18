@@ -75,6 +75,12 @@
     <Compile Include="BaseForm\frmListDetail.Designer.cs">
       <DependentUpon>frmListDetail.cs</DependentUpon>
     </Compile>
+    <Compile Include="BaseForm\frmListInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BaseForm\frmListInfo.Designer.cs">
+      <DependentUpon>frmListInfo.cs</DependentUpon>
+    </Compile>
     <Compile Include="BaseForm\frmListList.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -87,11 +93,23 @@
     <Compile Include="BaseForm\frmPopUp.Designer.cs">
       <DependentUpon>frmPopUp.cs</DependentUpon>
     </Compile>
+    <Compile Include="Controls\periodSearchControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\periodSearchControl.Designer.cs">
+      <DependentUpon>periodSearchControl.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\frmLogIn.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Forms\frmLogIn.Designer.cs">
       <DependentUpon>frmLogIn.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmPriceManage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmPriceManage.Designer.cs">
+      <DependentUpon>frmPriceManage.cs</DependentUpon>
     </Compile>
     <Compile Include="Util\CommonUtil.cs" />
     <Compile Include="Util\ExcelExportImport.cs" />
@@ -123,17 +141,26 @@
     <EmbeddedResource Include="BaseForm\frmListDetail.resx">
       <DependentUpon>frmListDetail.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="BaseForm\frmListInfo.resx">
+      <DependentUpon>frmListInfo.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="BaseForm\frmListList.resx">
       <DependentUpon>frmListList.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="BaseForm\frmPopUp.resx">
       <DependentUpon>frmPopUp.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Controls\periodSearchControl.resx">
+      <DependentUpon>periodSearchControl.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\frmLogIn.resx">
       <DependentUpon>frmLogIn.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\frmMain.resx">
       <DependentUpon>frmMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmPriceManage.resx">
+      <DependentUpon>frmPriceManage.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -238,6 +265,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\UserIcon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Search.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
