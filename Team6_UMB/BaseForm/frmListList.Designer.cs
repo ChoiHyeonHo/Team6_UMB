@@ -84,8 +84,8 @@
         }
 
         #endregion
-        private System.Windows.Forms.SplitContainer splitContainer1;
         protected System.Windows.Forms.Panel panel1;
         protected System.Windows.Forms.Label label1;
+        public System.Windows.Forms.SplitContainer splitContainer1;
     }
 }

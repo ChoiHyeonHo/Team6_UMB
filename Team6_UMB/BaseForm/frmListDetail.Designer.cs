@@ -100,9 +100,9 @@
         }
 
         #endregion
-        private System.Windows.Forms.SplitContainer splitContainer1;
         private System.Windows.Forms.GroupBox groupBox1;
         protected System.Windows.Forms.Panel panel1;
         protected System.Windows.Forms.Label label1;
+        public System.Windows.Forms.SplitContainer splitContainer1;
     }
 }
