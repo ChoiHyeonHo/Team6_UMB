@@ -99,6 +99,12 @@
     <Compile Include="Controls\btnAllButtons.Designer.cs">
       <DependentUpon>btnAllButtons.cs</DependentUpon>
     </Compile>
+    <Compile Include="Controls\btnSearchExcelPrint.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\btnSearchExcelPrint.Designer.cs">
+      <DependentUpon>btnSearchExcelPrint.cs</DependentUpon>
+    </Compile>
     <Compile Include="Controls\periodSearchControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -152,6 +158,18 @@
     </Compile>
     <Compile Include="Forms\frmOrder.Designer.cs">
       <DependentUpon>frmOrder.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmPDStock.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmPDStock.Designer.cs">
+      <DependentUpon>frmPDStock.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmPDStockPopUp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmPDStockPopUp.Designer.cs">
+      <DependentUpon>frmPDStockPopUp.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\frmProductManagePopUp.cs">
       <SubType>Form</SubType>
@@ -232,6 +250,9 @@
     <EmbeddedResource Include="Controls\btnAllButtons.resx">
       <DependentUpon>btnAllButtons.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Controls\btnSearchExcelPrint.resx">
+      <DependentUpon>btnSearchExcelPrint.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Controls\periodSearchControl.resx">
       <DependentUpon>periodSearchControl.cs</DependentUpon>
     </EmbeddedResource>
@@ -258,6 +279,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\frmMatPriceManage.resx">
       <DependentUpon>frmMatPriceManage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmPDStock.resx">
+      <DependentUpon>frmPDStock.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmPDStockPopUp.resx">
+      <DependentUpon>frmPDStockPopUp.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\frmProductManagePopUp.resx">
       <DependentUpon>frmProductManagePopUp.cs</DependentUpon>
@@ -392,6 +419,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Create.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SearchWhite.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
