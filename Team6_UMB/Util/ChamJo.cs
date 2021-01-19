@@ -30,5 +30,8 @@ namespace Team6_UMB.Util
             TextBox => txtName
             TreeView => tvName
          */
+
+        //폼 크기
+        //1535, 950
     }
 }

@@ -739,6 +739,7 @@ namespace Team6_UMB
             this.btn2_1.Text = "영업단가관리";
             this.btn2_1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn2_1.UseVisualStyleBackColor = false;
+            this.btn2_1.Click += new System.EventHandler(this.btn2_1_Click);
             // 
             // pnlMain1
             // 

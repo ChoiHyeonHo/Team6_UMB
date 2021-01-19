@@ -8,18 +8,32 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Team6_UMB.Forms;
 using Team6_UMB.Service;
 
 namespace Team6_UMB
 {
     public partial class frmMain : Form
     {
+        public static Forms.frmPriceManage frmPriceManage;
+
         public frmMain()
         {
             InitializeComponent();
             pnlMain1.Dock = pnlMain2.Dock = pnlMain3.Dock = pnlMain4.Dock = pnlMain5.Dock = pnlMain6.Dock = pnlMain7.Dock = DockStyle.Fill;
             pnlMain1.Visible = pnlMain2.Visible = pnlMain3.Visible = pnlMain4.Visible = pnlMain5.Visible = pnlMain6.Visible = pnlMain7.Visible = false;
         }
+
+        public static frmPriceManage CreatePriceManage()
+        {
+            if (frmPriceManage == null)
+            {
+                frmPriceManage = new frmPriceManage();
+            }
+            return frmPriceManage;
+        }
+
+
         private void btnMain1_Click(object sender, EventArgs e)
         {
             PanelControl(1);
@@ -131,6 +145,16 @@ namespace Team6_UMB
         private void pbClose_Click(object sender, EventArgs e)
         {
             Application.Exit();
+        }
+
+        private void btn2_1_Click(object sender, EventArgs e)
+        {
+            CreatePriceManage();
+            frmPriceManage.TopLevel = false;
+            pnlBackPage.Controls.Clear();
+            pnlBackPage.Controls.Add(frmPriceManage);
+            frmPriceManage.Dock = DockStyle.Fill;
+            frmPriceManage.Show();
         }
     }
 }
