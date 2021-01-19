@@ -67,6 +67,7 @@ namespace Team6_UMB.Controls
             this.btnCreate.Text = "등록";
             this.btnCreate.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnCreate.UseVisualStyleBackColor = true;
+            this.btnCreate.Click += new System.EventHandler(this.BtnCreate_Click);
             // 
             // flowLayoutPanel1
             // 
