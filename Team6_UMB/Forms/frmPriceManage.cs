@@ -14,5 +14,15 @@ namespace Team6_UMB.Forms
         {
             InitializeComponent();
         }
+
+        private void btnAllButtons1_btnCreate_Event(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void btnAllButtons1_btnUpdate_Event(object sender, EventArgs e)
+        {
+            MessageBox.Show("수정");
+        }
     }
 }
