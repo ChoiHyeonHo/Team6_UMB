@@ -117,17 +117,53 @@
     <Compile Include="Forms\frmAuthority.Designer.cs">
       <DependentUpon>frmAuthority.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\frmIncommingWait.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmIncommingWait.Designer.cs">
+      <DependentUpon>frmIncommingWait.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\frmLogIn.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Forms\frmLogIn.Designer.cs">
       <DependentUpon>frmLogIn.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\frmPriceManage.cs">
+    <Compile Include="Forms\frmMatPriceManage.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\frmPriceManage.Designer.cs">
-      <DependentUpon>frmPriceManage.cs</DependentUpon>
+    <Compile Include="Forms\frmMatPriceManage.Designer.cs">
+      <DependentUpon>frmMatPriceManage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmOrder.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmOrder.Designer.cs">
+      <DependentUpon>frmOrder.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmProductManagePopUp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmProductManagePopUp.Designer.cs">
+      <DependentUpon>frmProductManagePopUp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmOrderStatus.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmOrderStatus.Designer.cs">
+      <DependentUpon>frmOrderStatus.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmProductManage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmProductManage.Designer.cs">
+      <DependentUpon>frmProductManage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmSalesPriceManage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmSalesPriceManage.Designer.cs">
+      <DependentUpon>frmSalesPriceManage.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\frmPriceManagePopUp.cs">
       <SubType>Form</SubType>
@@ -193,14 +229,29 @@
     <EmbeddedResource Include="Forms\frmAuthority.resx">
       <DependentUpon>frmAuthority.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmIncommingWait.resx">
+      <DependentUpon>frmIncommingWait.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\frmLogIn.resx">
       <DependentUpon>frmLogIn.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\frmMain.resx">
       <DependentUpon>frmMain.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\frmPriceManage.resx">
-      <DependentUpon>frmPriceManage.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\frmMatPriceManage.resx">
+      <DependentUpon>frmMatPriceManage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmProductManagePopUp.resx">
+      <DependentUpon>frmProductManagePopUp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmOrderStatus.resx">
+      <DependentUpon>frmOrderStatus.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmProductManage.resx">
+      <DependentUpon>frmProductManage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmSalesPriceManage.resx">
+      <DependentUpon>frmSalesPriceManage.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\frmPriceManagePopUp.resx">
       <DependentUpon>frmPriceManagePopUp.cs</DependentUpon>

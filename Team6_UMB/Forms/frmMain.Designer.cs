@@ -46,6 +46,9 @@ namespace Team6_UMB
             this.pnlBackPage = new System.Windows.Forms.Panel();
             this.pnlMenu = new System.Windows.Forms.Panel();
             this.pnlButtons = new System.Windows.Forms.Panel();
+            this.pnlMain2 = new System.Windows.Forms.Panel();
+            this.btn2_2 = new System.Windows.Forms.Button();
+            this.btn2_1 = new System.Windows.Forms.Button();
             this.pnlMain7 = new System.Windows.Forms.Panel();
             this.btn7_1 = new System.Windows.Forms.Button();
             this.pnlMain3 = new System.Windows.Forms.Panel();
@@ -68,9 +71,6 @@ namespace Team6_UMB
             this.btn4_3 = new System.Windows.Forms.Button();
             this.btn4_2 = new System.Windows.Forms.Button();
             this.btn4_1 = new System.Windows.Forms.Button();
-            this.pnlMain2 = new System.Windows.Forms.Panel();
-            this.btn2_2 = new System.Windows.Forms.Button();
-            this.btn2_1 = new System.Windows.Forms.Button();
             this.pnlMain1 = new System.Windows.Forms.Panel();
             this.btn1_8 = new System.Windows.Forms.Button();
             this.btn1_7 = new System.Windows.Forms.Button();
@@ -95,12 +95,12 @@ namespace Team6_UMB
             ((System.ComponentModel.ISupportInitialize)(this.pbClose)).BeginInit();
             this.pnlMenu.SuspendLayout();
             this.pnlButtons.SuspendLayout();
+            this.pnlMain2.SuspendLayout();
             this.pnlMain7.SuspendLayout();
             this.pnlMain3.SuspendLayout();
             this.pnlMain5.SuspendLayout();
             this.pnlMain6.SuspendLayout();
             this.pnlMain4.SuspendLayout();
-            this.pnlMain2.SuspendLayout();
             this.pnlMain1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -134,6 +134,7 @@ namespace Team6_UMB
             // splitContainer2.Panel1
             // 
             this.splitContainer2.Panel1.Controls.Add(this.pictureBox1);
+            this.splitContainer2.Panel1.Enabled = false;
             // 
             // splitContainer2.Panel2
             // 
@@ -146,7 +147,7 @@ namespace Team6_UMB
             this.splitContainer2.Panel2.Controls.Add(this.btnMain2);
             this.splitContainer2.Panel2.Controls.Add(this.btnMain1);
             this.splitContainer2.Size = new System.Drawing.Size(1384, 71);
-            this.splitContainer2.SplitterDistance = 150;
+            this.splitContainer2.SplitterDistance = 145;
             this.splitContainer2.SplitterWidth = 1;
             this.splitContainer2.TabIndex = 0;
             // 
@@ -168,14 +169,14 @@ namespace Team6_UMB
             this.pnlAppState.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlAppState.Location = new System.Drawing.Point(1085, 0);
             this.pnlAppState.Name = "pnlAppState";
-            this.pnlAppState.Size = new System.Drawing.Size(148, 21);
+            this.pnlAppState.Size = new System.Drawing.Size(153, 21);
             this.pnlAppState.TabIndex = 9;
             // 
             // pnMin
             // 
             this.pnMin.Dock = System.Windows.Forms.DockStyle.Right;
             this.pnMin.Image = global::Team6_UMB.Properties.Resources.Minimize;
-            this.pnMin.Location = new System.Drawing.Point(50, 0);
+            this.pnMin.Location = new System.Drawing.Point(55, 0);
             this.pnMin.Name = "pnMin";
             this.pnMin.Size = new System.Drawing.Size(35, 21);
             this.pnMin.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -187,7 +188,7 @@ namespace Team6_UMB
             // 
             this.pbMax.Dock = System.Windows.Forms.DockStyle.Right;
             this.pbMax.Image = global::Team6_UMB.Properties.Resources.Maximize;
-            this.pbMax.Location = new System.Drawing.Point(85, 0);
+            this.pbMax.Location = new System.Drawing.Point(90, 0);
             this.pbMax.Name = "pbMax";
             this.pbMax.Size = new System.Drawing.Size(27, 21);
             this.pbMax.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -199,7 +200,7 @@ namespace Team6_UMB
             // 
             this.pbClose.Dock = System.Windows.Forms.DockStyle.Right;
             this.pbClose.Image = global::Team6_UMB.Properties.Resources.Close;
-            this.pbClose.Location = new System.Drawing.Point(112, 0);
+            this.pbClose.Location = new System.Drawing.Point(117, 0);
             this.pbClose.Name = "pbClose";
             this.pbClose.Size = new System.Drawing.Size(36, 21);
             this.pbClose.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -325,6 +326,7 @@ namespace Team6_UMB
             // 
             // pnlMenu
             // 
+            this.pnlMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(52)))), ((int)(((byte)(79)))));
             this.pnlMenu.Controls.Add(this.pnlButtons);
             this.pnlMenu.Dock = System.Windows.Forms.DockStyle.Left;
             this.pnlMenu.Location = new System.Drawing.Point(0, 0);
@@ -334,18 +336,64 @@ namespace Team6_UMB
             // 
             // pnlButtons
             // 
-            this.pnlButtons.Controls.Add(this.pnlMain7);
             this.pnlButtons.Controls.Add(this.pnlMain3);
+            this.pnlButtons.Controls.Add(this.pnlMain2);
+            this.pnlButtons.Controls.Add(this.pnlMain7);
             this.pnlButtons.Controls.Add(this.pnlMain5);
             this.pnlButtons.Controls.Add(this.pnlMain6);
             this.pnlButtons.Controls.Add(this.pnlMain4);
-            this.pnlButtons.Controls.Add(this.pnlMain2);
             this.pnlButtons.Controls.Add(this.pnlMain1);
             this.pnlButtons.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlButtons.Location = new System.Drawing.Point(0, 0);
             this.pnlButtons.Name = "pnlButtons";
             this.pnlButtons.Size = new System.Drawing.Size(145, 563);
             this.pnlButtons.TabIndex = 0;
+            // 
+            // pnlMain2
+            // 
+            this.pnlMain2.BackColor = System.Drawing.Color.Transparent;
+            this.pnlMain2.Controls.Add(this.btn2_2);
+            this.pnlMain2.Controls.Add(this.btn2_1);
+            this.pnlMain2.Location = new System.Drawing.Point(3, 101);
+            this.pnlMain2.Name = "pnlMain2";
+            this.pnlMain2.Size = new System.Drawing.Size(145, 41);
+            this.pnlMain2.TabIndex = 8;
+            // 
+            // btn2_2
+            // 
+            this.btn2_2.BackColor = System.Drawing.Color.Transparent;
+            this.btn2_2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btn2_2.FlatAppearance.BorderSize = 0;
+            this.btn2_2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn2_2.Font = new System.Drawing.Font("나눔바른고딕", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.btn2_2.ForeColor = System.Drawing.Color.White;
+            this.btn2_2.Location = new System.Drawing.Point(0, 60);
+            this.btn2_2.Name = "btn2_2";
+            this.btn2_2.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
+            this.btn2_2.Size = new System.Drawing.Size(145, 60);
+            this.btn2_2.TabIndex = 1;
+            this.btn2_2.Text = "자재단가관리";
+            this.btn2_2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn2_2.UseVisualStyleBackColor = false;
+            this.btn2_2.Click += new System.EventHandler(this.btn2_2_Click);
+            // 
+            // btn2_1
+            // 
+            this.btn2_1.BackColor = System.Drawing.Color.Transparent;
+            this.btn2_1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btn2_1.FlatAppearance.BorderSize = 0;
+            this.btn2_1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn2_1.Font = new System.Drawing.Font("나눔바른고딕", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.btn2_1.ForeColor = System.Drawing.Color.White;
+            this.btn2_1.Location = new System.Drawing.Point(0, 0);
+            this.btn2_1.Name = "btn2_1";
+            this.btn2_1.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
+            this.btn2_1.Size = new System.Drawing.Size(145, 60);
+            this.btn2_1.TabIndex = 0;
+            this.btn2_1.Text = "영업단가관리";
+            this.btn2_1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn2_1.UseVisualStyleBackColor = false;
+            this.btn2_1.Click += new System.EventHandler(this.btn2_1_Click);
             // 
             // pnlMain7
             // 
@@ -379,9 +427,9 @@ namespace Team6_UMB
             this.pnlMain3.Controls.Add(this.btn3_3);
             this.pnlMain3.Controls.Add(this.btn3_2);
             this.pnlMain3.Controls.Add(this.btn3_1);
-            this.pnlMain3.Location = new System.Drawing.Point(9, 192);
+            this.pnlMain3.Location = new System.Drawing.Point(9, 202);
             this.pnlMain3.Name = "pnlMain3";
-            this.pnlMain3.Size = new System.Drawing.Size(129, 30);
+            this.pnlMain3.Size = new System.Drawing.Size(129, 37);
             this.pnlMain3.TabIndex = 9;
             // 
             // btn3_3
@@ -434,6 +482,7 @@ namespace Team6_UMB
             this.btn3_1.Text = "품목관리";
             this.btn3_1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn3_1.UseVisualStyleBackColor = false;
+            this.btn3_1.Click += new System.EventHandler(this.btn3_1_Click);
             // 
             // pnlMain5
             // 
@@ -696,50 +745,6 @@ namespace Team6_UMB
             this.btn4_1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn4_1.UseVisualStyleBackColor = false;
             // 
-            // pnlMain2
-            // 
-            this.pnlMain2.BackColor = System.Drawing.Color.Transparent;
-            this.pnlMain2.Controls.Add(this.btn2_2);
-            this.pnlMain2.Controls.Add(this.btn2_1);
-            this.pnlMain2.Location = new System.Drawing.Point(3, 102);
-            this.pnlMain2.Name = "pnlMain2";
-            this.pnlMain2.Size = new System.Drawing.Size(145, 40);
-            this.pnlMain2.TabIndex = 8;
-            // 
-            // btn2_2
-            // 
-            this.btn2_2.BackColor = System.Drawing.Color.Transparent;
-            this.btn2_2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btn2_2.FlatAppearance.BorderSize = 0;
-            this.btn2_2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn2_2.Font = new System.Drawing.Font("나눔바른고딕", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.btn2_2.ForeColor = System.Drawing.Color.White;
-            this.btn2_2.Location = new System.Drawing.Point(0, 60);
-            this.btn2_2.Name = "btn2_2";
-            this.btn2_2.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
-            this.btn2_2.Size = new System.Drawing.Size(145, 60);
-            this.btn2_2.TabIndex = 1;
-            this.btn2_2.Text = "자재단가관리";
-            this.btn2_2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn2_2.UseVisualStyleBackColor = false;
-            // 
-            // btn2_1
-            // 
-            this.btn2_1.BackColor = System.Drawing.Color.Transparent;
-            this.btn2_1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btn2_1.FlatAppearance.BorderSize = 0;
-            this.btn2_1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn2_1.Font = new System.Drawing.Font("나눔바른고딕", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.btn2_1.ForeColor = System.Drawing.Color.White;
-            this.btn2_1.Location = new System.Drawing.Point(0, 0);
-            this.btn2_1.Name = "btn2_1";
-            this.btn2_1.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
-            this.btn2_1.Size = new System.Drawing.Size(145, 60);
-            this.btn2_1.TabIndex = 0;
-            this.btn2_1.Text = "영업단가관리";
-            this.btn2_1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn2_1.UseVisualStyleBackColor = false;
-            // 
             // pnlMain1
             // 
             this.pnlMain1.BackColor = System.Drawing.Color.Transparent;
@@ -897,7 +902,7 @@ namespace Team6_UMB
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(52)))), ((int)(((byte)(78)))));
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1384, 861);
             this.Controls.Add(this.splitContainer1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -919,12 +924,12 @@ namespace Team6_UMB
             ((System.ComponentModel.ISupportInitialize)(this.pbClose)).EndInit();
             this.pnlMenu.ResumeLayout(false);
             this.pnlButtons.ResumeLayout(false);
+            this.pnlMain2.ResumeLayout(false);
             this.pnlMain7.ResumeLayout(false);
             this.pnlMain3.ResumeLayout(false);
             this.pnlMain5.ResumeLayout(false);
             this.pnlMain6.ResumeLayout(false);
             this.pnlMain4.ResumeLayout(false);
-            this.pnlMain2.ResumeLayout(false);
             this.pnlMain1.ResumeLayout(false);
             this.ResumeLayout(false);
 
