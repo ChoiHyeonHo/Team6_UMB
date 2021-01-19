@@ -8,23 +8,24 @@ using System.Windows.Forms;
 
 namespace Team6_UMB.Forms
 {
-    public partial class frmPriceManage : frmBaseList
+    public partial class frmMatPriceManage : Team6_UMB.frmBaseList
     {
-        public frmPriceManage()
+        string headerName;
+        public frmMatPriceManage()
         {
             InitializeComponent();
         }
 
         private void btnAllButtons1_btnCreate_Event(object sender, EventArgs e)
         {
-            string headerName = "단가관리 - 등록";
+            headerName = "자재단가관리 - 등록";
             frmPriceManagePopUp frm = new frmPriceManagePopUp(headerName);
             frm.ShowDialog();
         }
 
         private void btnAllButtons1_btnUpdate_Event(object sender, EventArgs e)
         {
-            string headerName = "단가관리 - 수정";
+            headerName = "자재단가관리 - 수정";
             frmPriceManagePopUp frm = new frmPriceManagePopUp(headerName);
             frm.ShowDialog();
         }
