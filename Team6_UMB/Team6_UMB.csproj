@@ -129,18 +129,6 @@
     <Compile Include="Forms\frmPriceManagePopUp.Designer.cs">
       <DependentUpon>frmPriceManagePopUp.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\frmWorkOrder.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\frmWorkOrder.Designer.cs">
-      <DependentUpon>frmWorkOrder.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Forms\frmWorkOrderRegi.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\frmWorkOrderRegi.Designer.cs">
-      <DependentUpon>frmWorkOrderRegi.cs</DependentUpon>
-    </Compile>
     <Compile Include="Util\ChamJo.cs" />
     <Compile Include="Util\CommonUtil.cs" />
     <Compile Include="Util\ExcelExportImport.cs" />
