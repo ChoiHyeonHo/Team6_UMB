@@ -135,6 +135,12 @@
     <Compile Include="Forms\frmPriceManagePopUp.Designer.cs">
       <DependentUpon>frmPriceManagePopUp.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\WorkOrderRegi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\WorkOrderRegi.Designer.cs">
+      <DependentUpon>WorkOrderRegi.cs</DependentUpon>
+    </Compile>
     <Compile Include="Util\ChamJo.cs" />
     <Compile Include="Util\CommonUtil.cs" />
     <Compile Include="Util\ExcelExportImport.cs" />
@@ -198,6 +204,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\frmPriceManagePopUp.resx">
       <DependentUpon>frmPriceManagePopUp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\WorkOrderRegi.resx">
+      <DependentUpon>WorkOrderRegi.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
