@@ -117,6 +117,18 @@
     <Compile Include="Forms\frmAuthority.Designer.cs">
       <DependentUpon>frmAuthority.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\frmBOM.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmBOM.Designer.cs">
+      <DependentUpon>frmBOM.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmBOMPopUp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmBOMPopUp.Designer.cs">
+      <DependentUpon>frmBOMPopUp.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\frmIncommingWait.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -222,6 +234,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\frmAuthority.resx">
       <DependentUpon>frmAuthority.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmBOM.resx">
+      <DependentUpon>frmBOM.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmBOMPopUp.resx">
+      <DependentUpon>frmBOMPopUp.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\frmIncommingWait.resx">
       <DependentUpon>frmIncommingWait.cs</DependentUpon>

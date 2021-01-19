@@ -16,9 +16,10 @@ namespace Team6_UMB
     public partial class frmMain : Form
     {
         #region 싱글톤 - 스태틱 선언
-        public static Forms.frmSalesPriceManage frmSalesPriceManage;
-        public static Forms.frmMatPriceManage frmMatPriceManage;
-        public static Forms.frmProductManage frmProductManage;
+        public static frmSalesPriceManage frmSalesPriceManage;
+        public static frmMatPriceManage frmMatPriceManage;
+        public static frmProductManage frmProductManage;
+        public static frmBOM frmBOM;
         #endregion
 
         public frmMain()
@@ -54,6 +55,15 @@ namespace Team6_UMB
                 frmProductManage = new frmProductManage();
             }
             return frmProductManage;
+        }
+
+        public static frmBOM CreateBOM()
+        {
+            if (frmBOM == null)
+            {
+                frmBOM = new frmBOM();
+            }
+            return frmBOM;
         }
         #endregion
 
@@ -306,6 +316,20 @@ namespace Team6_UMB
             pnlBackPage.Controls.Add(frmProductManage);
             frmProductManage.Dock = DockStyle.Fill;
             frmProductManage.Show();
+        }
+
+        private void btn3_2_Click(object sender, EventArgs e)
+        {
+            this.btn3_2.BackColor = Color.White;
+            this.btn3_1.BackColor = this.btn3_3.BackColor = Color.Transparent;
+            this.btn3_2.ForeColor = Color.Black;
+            this.btn3_1.ForeColor = this.btn3_3.ForeColor = Color.White;
+            CreateBOM();
+            frmBOM.TopLevel = false;
+            pnlBackPage.Controls.Clear();
+            pnlBackPage.Controls.Add(frmBOM);
+            frmBOM.Dock = DockStyle.Fill;
+            frmBOM.Show();
         }
         #endregion
     }
