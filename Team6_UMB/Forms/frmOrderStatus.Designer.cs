@@ -36,12 +36,13 @@
             this.button3 = new System.Windows.Forms.Button();
             this.maskedTextBox1 = new System.Windows.Forms.MaskedTextBox();
             this.dgV_Custom1 = new Team6_UMB.DGV_Custom();
+            this.btnAllButtons1 = new Team6_UMB.Controls.btnAllButtons();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.btnAllButtons1 = new Team6_UMB.Controls.btnAllButtons();
             this.panel1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgV_Custom1)).BeginInit();
@@ -49,7 +50,9 @@
             // 
             // panel1
             // 
+            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.panel1.Controls.Add(this.btnAllButtons1);
+            this.panel1.Size = new System.Drawing.Size(1510, 35);
             this.panel1.Controls.SetChildIndex(this.label1, 0);
             this.panel1.Controls.SetChildIndex(this.btnAllButtons1, 0);
             // 
@@ -60,6 +63,7 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.maskedTextBox2);
@@ -67,7 +71,7 @@
             this.groupBox1.Controls.Add(this.maskedTextBox1);
             this.groupBox1.Location = new System.Drawing.Point(12, 57);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(876, 45);
+            this.groupBox1.Size = new System.Drawing.Size(1510, 45);
             this.groupBox1.TabIndex = 24;
             this.groupBox1.TabStop = false;
             // 
@@ -119,6 +123,8 @@
             // 
             // dgV_Custom1
             // 
+            this.dgV_Custom1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.dgV_Custom1.BackgroundColor = System.Drawing.Color.White;
             this.dgV_Custom1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
@@ -135,6 +141,7 @@
             this.Column2,
             this.Column3,
             this.Column4,
+            this.Column6,
             this.Column5});
             this.dgV_Custom1.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.dgV_Custom1.GridColor = System.Drawing.Color.LightGray;
@@ -144,50 +151,58 @@
             this.dgV_Custom1.Name = "dgV_Custom1";
             this.dgV_Custom1.RowTemplate.Height = 23;
             this.dgV_Custom1.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.dgV_Custom1.Size = new System.Drawing.Size(875, 481);
+            this.dgV_Custom1.Size = new System.Drawing.Size(1510, 781);
             this.dgV_Custom1.TabIndex = 25;
+            // 
+            // btnAllButtons1
+            // 
+            this.btnAllButtons1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(52)))), ((int)(((byte)(79)))));
+            this.btnAllButtons1.Location = new System.Drawing.Point(1130, 1);
+            this.btnAllButtons1.Name = "btnAllButtons1";
+            this.btnAllButtons1.Size = new System.Drawing.Size(377, 33);
+            this.btnAllButtons1.TabIndex = 2;
             // 
             // Column1
             // 
             this.Column1.HeaderText = "발주ID";
             this.Column1.Name = "Column1";
+            this.Column1.Width = 180;
             // 
             // Column2
             // 
             this.Column2.HeaderText = "업체";
             this.Column2.Name = "Column2";
-            this.Column2.Width = 190;
+            this.Column2.Width = 330;
             // 
             // Column3
             // 
             this.Column3.HeaderText = "품목";
             this.Column3.Name = "Column3";
-            this.Column3.Width = 190;
+            this.Column3.Width = 330;
             // 
             // Column4
             // 
             this.Column4.HeaderText = "발주일";
             this.Column4.Name = "Column4";
-            this.Column4.Width = 190;
+            this.Column4.Width = 200;
+            // 
+            // Column6
+            // 
+            this.Column6.HeaderText = "납기일";
+            this.Column6.Name = "Column6";
+            this.Column6.Width = 200;
             // 
             // Column5
             // 
             this.Column5.HeaderText = "입고수량";
             this.Column5.Name = "Column5";
-            this.Column5.Width = 120;
-            // 
-            // btnAllButtons1
-            // 
-            this.btnAllButtons1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(52)))), ((int)(((byte)(79)))));
-            this.btnAllButtons1.Location = new System.Drawing.Point(499, 1);
-            this.btnAllButtons1.Name = "btnAllButtons1";
-            this.btnAllButtons1.Size = new System.Drawing.Size(377, 33);
-            this.btnAllButtons1.TabIndex = 2;
+            this.Column5.Width = 200;
             // 
             // frmOrderStatus
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
-            this.ClientSize = new System.Drawing.Size(900, 600);
+            this.BackColor = System.Drawing.Color.White;
+            this.ClientSize = new System.Drawing.Size(1535, 900);
             this.Controls.Add(this.dgV_Custom1);
             this.Controls.Add(this.groupBox1);
             this.Name = "frmOrderStatus";
@@ -212,11 +227,12 @@
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.MaskedTextBox maskedTextBox1;
         private DGV_Custom dgV_Custom1;
+        private Controls.btnAllButtons btnAllButtons1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
-        private Controls.btnAllButtons btnAllButtons1;
     }
 }
