@@ -154,6 +154,18 @@
     <Compile Include="Forms\ASB\frmCompanyPopUp.Designer.cs">
       <DependentUpon>frmCompanyPopUp.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\JSJ\frmIncommingHistory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\JSJ\frmIncommingHistory.Designer.cs">
+      <DependentUpon>frmIncommingHistory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\JSJ\frmIncommingStatus.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\JSJ\frmIncommingStatus.Designer.cs">
+      <DependentUpon>frmIncommingStatus.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\JSJ\frmIncommingWait.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -256,6 +268,30 @@
     <Compile Include="Forms\BMN\WorkOrderRegiPopUp.Designer.cs">
       <DependentUpon>WorkOrderRegiPopUp.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\JSJ\frmSalesStatus.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\JSJ\frmSalesStatus.Designer.cs">
+      <DependentUpon>frmSalesStatus.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\JSJ\frmShipment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\JSJ\frmShipment.Designer.cs">
+      <DependentUpon>frmShipment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\JSJ\frmSO.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\JSJ\frmSO.Designer.cs">
+      <DependentUpon>frmSO.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\JSJ\frmSOPopUP.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\JSJ\frmSOPopUP.Designer.cs">
+      <DependentUpon>frmSOPopUP.cs</DependentUpon>
+    </Compile>
     <Compile Include="Util\ChamJo.cs" />
     <Compile Include="Util\CommonUtil.cs" />
     <Compile Include="Util\ExcelExportImport.cs" />
@@ -323,6 +359,12 @@
     <EmbeddedResource Include="Forms\ASB\frmCompanyPopUp.resx">
       <DependentUpon>frmCompanyPopUp.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\JSJ\frmIncommingHistory.resx">
+      <DependentUpon>frmIncommingHistory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\JSJ\frmIncommingStatus.resx">
+      <DependentUpon>frmIncommingStatus.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\JSJ\frmIncommingWait.resx">
       <DependentUpon>frmIncommingWait.cs</DependentUpon>
     </EmbeddedResource>
@@ -356,6 +398,9 @@
     <EmbeddedResource Include="Forms\CHH\frmProductManagePopUp.resx">
       <DependentUpon>frmProductManagePopUp.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\JSJ\frmOrder.resx">
+      <DependentUpon>frmOrder.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\JSJ\frmOrderStatus.resx">
       <DependentUpon>frmOrderStatus.cs</DependentUpon>
     </EmbeddedResource>
@@ -373,6 +418,18 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\BMN\WorkOrderRegiPopUp.resx">
       <DependentUpon>WorkOrderRegiPopUp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\JSJ\frmSalesStatus.resx">
+      <DependentUpon>frmSalesStatus.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\JSJ\frmShipment.resx">
+      <DependentUpon>frmShipment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\JSJ\frmSO.resx">
+      <DependentUpon>frmSO.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\JSJ\frmSOPopUP.resx">
+      <DependentUpon>frmSOPopUP.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

@@ -63,6 +63,7 @@
             // 
             // splitContainer1
             // 
+            this.splitContainer1.Location = new System.Drawing.Point(12, 33);
             // 
             // splitContainer1.Panel1
             // 
@@ -74,7 +75,7 @@
             // 
             this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.panel1.Controls.Add(this.button1);
-            this.panel1.Location = new System.Drawing.Point(12, 37);
+            this.panel1.Location = new System.Drawing.Point(12, 12);
             this.panel1.Size = new System.Drawing.Size(1511, 35);
             this.panel1.Controls.SetChildIndex(this.label1, 0);
             this.panel1.Controls.SetChildIndex(this.button1, 0);
@@ -86,8 +87,8 @@
             // 
             // dgV_Custom1
             // 
-            this.dgV_Custom1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-            | System.Windows.Forms.AnchorStyles.Left)
+            this.dgV_Custom1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dgV_Custom1.BackgroundColor = System.Drawing.Color.White;
             this.dgV_Custom1.BorderStyle = System.Windows.Forms.BorderStyle.None;
@@ -112,7 +113,7 @@
             this.dgV_Custom1.Name = "dgV_Custom1";
             this.dgV_Custom1.RowTemplate.Height = 23;
             this.dgV_Custom1.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.dgV_Custom1.Size = new System.Drawing.Size(939, 714);
+            this.dgV_Custom1.Size = new System.Drawing.Size(939, 742);
             this.dgV_Custom1.TabIndex = 0;
             // 
             // Column1
@@ -135,8 +136,8 @@
             // 
             // dgvMenu
             // 
-            this.dgvMenu.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-            | System.Windows.Forms.AnchorStyles.Left)
+            this.dgvMenu.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvMenu.BackgroundColor = System.Drawing.Color.White;
             this.dgvMenu.BorderStyle = System.Windows.Forms.BorderStyle.None;
@@ -160,7 +161,7 @@
             this.dgvMenu.Name = "dgvMenu";
             this.dgvMenu.RowTemplate.Height = 23;
             this.dgvMenu.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.dgvMenu.Size = new System.Drawing.Size(553, 706);
+            this.dgvMenu.Size = new System.Drawing.Size(553, 734);
             this.dgvMenu.TabIndex = 0;
             this.dgvMenu.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvMenu_CellContentClick);
             this.dgvMenu.CellPainting += new System.Windows.Forms.DataGridViewCellPaintingEventHandler(this.dgvMenu_CellPainting);
@@ -267,9 +268,9 @@
             // 
             // splitContainer2
             // 
-            this.splitContainer2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)
+            this.splitContainer2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.splitContainer2.Location = new System.Drawing.Point(12, 145);
+            this.splitContainer2.Location = new System.Drawing.Point(12, 120);
             this.splitContainer2.Name = "splitContainer2";
             // 
             // splitContainer2.Panel1
@@ -281,7 +282,7 @@
             // 
             this.splitContainer2.Panel2.Controls.Add(this.label4);
             this.splitContainer2.Panel2.Controls.Add(this.dgvMenu);
-            this.splitContainer2.Size = new System.Drawing.Size(1511, 790);
+            this.splitContainer2.Size = new System.Drawing.Size(1511, 818);
             this.splitContainer2.SplitterDistance = 943;
             this.splitContainer2.TabIndex = 2;
             // 
