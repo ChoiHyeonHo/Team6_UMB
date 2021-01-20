@@ -38,11 +38,11 @@
             // 
             // splitContainer1
             // 
-            this.splitContainer1.Location = new System.Drawing.Point(13, 57);
+            this.splitContainer1.Location = new System.Drawing.Point(12, 113);
             this.splitContainer1.Name = "splitContainer1";
-            this.splitContainer1.Orientation = System.Windows.Forms.Orientation.Horizontal;
-            this.splitContainer1.Size = new System.Drawing.Size(876, 531);
-            this.splitContainer1.SplitterDistance = 264;
+            this.splitContainer1.Size = new System.Drawing.Size(1511, 825);
+            this.splitContainer1.SplitterDistance = 975;
+            this.splitContainer1.SplitterWidth = 1;
             this.splitContainer1.TabIndex = 6;
             // 
             // panel1
@@ -51,7 +51,7 @@
             this.panel1.Controls.Add(this.label1);
             this.panel1.Location = new System.Drawing.Point(12, 16);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(876, 35);
+            this.panel1.Size = new System.Drawing.Size(1511, 35);
             this.panel1.TabIndex = 16;
             // 
             // label1
@@ -70,7 +70,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(900, 600);
+            this.ClientSize = new System.Drawing.Size(1535, 950);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.splitContainer1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -85,8 +85,8 @@
         }
 
         #endregion
-        public System.Windows.Forms.SplitContainer splitContainer1;
         protected System.Windows.Forms.Panel panel1;
         protected System.Windows.Forms.Label label1;
+        protected System.Windows.Forms.SplitContainer splitContainer1;
     }
 }

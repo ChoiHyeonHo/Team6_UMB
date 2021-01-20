@@ -100,13 +100,13 @@ namespace Team6_UMB.Forms
             this.Column8});
             this.dgvPrice.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.dgvPrice.GridColor = System.Drawing.Color.LightGray;
-            this.dgvPrice.Location = new System.Drawing.Point(6, 111);
+            this.dgvPrice.Location = new System.Drawing.Point(12, 111);
             this.dgvPrice.Margin = new System.Windows.Forms.Padding(4, 1, 4, 1);
             this.dgvPrice.MinimumSize = new System.Drawing.Size(150, 150);
             this.dgvPrice.Name = "dgvPrice";
             this.dgvPrice.RowTemplate.Height = 23;
             this.dgvPrice.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.dgvPrice.Size = new System.Drawing.Size(1516, 879);
+            this.dgvPrice.Size = new System.Drawing.Size(1510, 879);
             this.dgvPrice.TabIndex = 23;
             // 
             // Column1

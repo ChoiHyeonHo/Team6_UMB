@@ -99,6 +99,12 @@
     <Compile Include="Controls\btnAllButtons.Designer.cs">
       <DependentUpon>btnAllButtons.cs</DependentUpon>
     </Compile>
+    <Compile Include="Controls\btnSearchExcelPrint.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\btnSearchExcelPrint.Designer.cs">
+      <DependentUpon>btnSearchExcelPrint.cs</DependentUpon>
+    </Compile>
     <Compile Include="Controls\periodSearchControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -124,6 +130,30 @@
     <Compile Include="Forms\frmAuthority.Designer.cs">
       <DependentUpon>frmAuthority.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\frmBOM.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmBOM.Designer.cs">
+      <DependentUpon>frmBOM.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmBOMPopUp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmBOMPopUp.Designer.cs">
+      <DependentUpon>frmBOMPopUp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmCompany.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmCompany.Designer.cs">
+      <DependentUpon>frmCompany.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmCompanyPopUp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmCompanyPopUp.Designer.cs">
+      <DependentUpon>frmCompanyPopUp.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\frmIncommingWait.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -136,6 +166,18 @@
     <Compile Include="Forms\frmLogIn.Designer.cs">
       <DependentUpon>frmLogIn.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\frmMachine.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmMachine.Designer.cs">
+      <DependentUpon>frmMachine.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmMachinePopUp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmMachinePopUp.Designer.cs">
+      <DependentUpon>frmMachinePopUp.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\frmMatPriceManage.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -147,6 +189,30 @@
     </Compile>
     <Compile Include="Forms\frmOrder.Designer.cs">
       <DependentUpon>frmOrder.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmPDStock.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmPDStock.Designer.cs">
+      <DependentUpon>frmPDStock.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmPDStockPopUp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmPDStockPopUp.Designer.cs">
+      <DependentUpon>frmPDStockPopUp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmProcess.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmProcess.Designer.cs">
+      <DependentUpon>frmProcess.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmProcessPopUp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmProcessPopUp.Designer.cs">
+      <DependentUpon>frmProcessPopUp.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\frmProductManagePopUp.cs">
       <SubType>Form</SubType>
@@ -233,6 +299,9 @@
     <EmbeddedResource Include="Controls\btnAllButtons.resx">
       <DependentUpon>btnAllButtons.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Controls\btnSearchExcelPrint.resx">
+      <DependentUpon>btnSearchExcelPrint.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Controls\periodSearchControl.resx">
       <DependentUpon>periodSearchControl.cs</DependentUpon>
     </EmbeddedResource>
@@ -242,17 +311,47 @@
     <EmbeddedResource Include="Forms\frmAuthority.resx">
       <DependentUpon>frmAuthority.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmBOM.resx">
+      <DependentUpon>frmBOM.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmBOMPopUp.resx">
+      <DependentUpon>frmBOMPopUp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmCompany.resx">
+      <DependentUpon>frmCompany.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmCompanyPopUp.resx">
+      <DependentUpon>frmCompanyPopUp.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\frmIncommingWait.resx">
       <DependentUpon>frmIncommingWait.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\frmLogIn.resx">
       <DependentUpon>frmLogIn.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmMachine.resx">
+      <DependentUpon>frmMachine.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmMachinePopUp.resx">
+      <DependentUpon>frmMachinePopUp.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\frmMain.resx">
       <DependentUpon>frmMain.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\frmMatPriceManage.resx">
       <DependentUpon>frmMatPriceManage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmPDStock.resx">
+      <DependentUpon>frmPDStock.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmPDStockPopUp.resx">
+      <DependentUpon>frmPDStockPopUp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmProcess.resx">
+      <DependentUpon>frmProcess.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmProcessPopUp.resx">
+      <DependentUpon>frmProcessPopUp.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\frmProductManagePopUp.resx">
       <DependentUpon>frmProductManagePopUp.cs</DependentUpon>
@@ -390,6 +489,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Create.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SearchWhite.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
