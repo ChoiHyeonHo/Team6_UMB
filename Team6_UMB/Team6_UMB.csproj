@@ -124,6 +124,36 @@
       <DependentUpon>.cs</DependentUpon>
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Forms\CHH\frmCheckHistory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\CHH\frmCheckHistory.Designer.cs">
+      <DependentUpon>frmCheckHistory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\CHH\frmImpInspecPopUp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\CHH\frmImpInspecPopUp.Designer.cs">
+      <DependentUpon>frmImpInspecPopUp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\CHH\frmImportInspection.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\CHH\frmImportInspection.Designer.cs">
+      <DependentUpon>frmImportInspection.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\CHH\frmProdInspection.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\CHH\frmProdInspection.Designer.cs">
+      <DependentUpon>frmProdInspection.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\CHH\frmProdInspPopUp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\CHH\frmProdInspPopUp.Designer.cs">
+      <DependentUpon>frmProdInspPopUp.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\JSJ\frmAuthority.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -238,11 +268,11 @@
     <Compile Include="Forms\CHH\frmSalesPriceManage.Designer.cs">
       <DependentUpon>frmSalesPriceManage.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\CHH\frmPriceManagePopUp.cs">
+    <Compile Include="Forms\CHH\frmSalesPriceManagePopUp.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\CHH\frmPriceManagePopUp.Designer.cs">
-      <DependentUpon>frmPriceManagePopUp.cs</DependentUpon>
+    <Compile Include="Forms\CHH\frmSalesPriceManagePopUp.Designer.cs">
+      <DependentUpon>frmSalesPriceManagePopUp.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\BMN\WorkOrderRegi.cs">
       <SubType>Form</SubType>
@@ -308,6 +338,21 @@
     <EmbeddedResource Include="Forms\ChamGo.resx">
       <DependentUpon>ChamGo.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\CHH\frmCheckHistory.resx">
+      <DependentUpon>frmCheckHistory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\CHH\frmImpInspecPopUp.resx">
+      <DependentUpon>frmImpInspecPopUp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\CHH\frmImportInspection.resx">
+      <DependentUpon>frmImportInspection.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\CHH\frmProdInspection.resx">
+      <DependentUpon>frmProdInspection.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\CHH\frmProdInspPopUp.resx">
+      <DependentUpon>frmProdInspPopUp.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\JSJ\frmAuthority.resx">
       <DependentUpon>frmAuthority.cs</DependentUpon>
     </EmbeddedResource>
@@ -365,8 +410,8 @@
     <EmbeddedResource Include="Forms\CHH\frmSalesPriceManage.resx">
       <DependentUpon>frmSalesPriceManage.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\CHH\frmPriceManagePopUp.resx">
-      <DependentUpon>frmPriceManagePopUp.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\CHH\frmSalesPriceManagePopUp.resx">
+      <DependentUpon>frmSalesPriceManagePopUp.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\BMN\WorkOrderRegi.resx">
       <DependentUpon>WorkOrderRegi.cs</DependentUpon>
@@ -492,6 +537,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\SearchWhite.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\check.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
