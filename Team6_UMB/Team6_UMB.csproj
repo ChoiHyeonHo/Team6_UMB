@@ -117,143 +117,143 @@
     <Compile Include="Forms\ChamGo.Designer.cs">
       <DependentUpon>ChamGo.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\.cs">
+    <Compile Include="Forms\BMN\.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\.Designer.cs">
+    <Compile Include="Forms\BMN\.Designer.cs">
       <DependentUpon>.cs</DependentUpon>
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\frmAuthority.cs">
+    <Compile Include="Forms\JSJ\frmAuthority.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\frmAuthority.Designer.cs">
+    <Compile Include="Forms\JSJ\frmAuthority.Designer.cs">
       <DependentUpon>frmAuthority.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\frmBOM.cs">
+    <Compile Include="Forms\CHH\frmBOM.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\frmBOM.Designer.cs">
+    <Compile Include="Forms\CHH\frmBOM.Designer.cs">
       <DependentUpon>frmBOM.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\frmBOMPopUp.cs">
+    <Compile Include="Forms\CHH\frmBOMPopUp.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\frmBOMPopUp.Designer.cs">
+    <Compile Include="Forms\CHH\frmBOMPopUp.Designer.cs">
       <DependentUpon>frmBOMPopUp.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\frmCompany.cs">
+    <Compile Include="Forms\ASB\frmCompany.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\frmCompany.Designer.cs">
+    <Compile Include="Forms\ASB\frmCompany.Designer.cs">
       <DependentUpon>frmCompany.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\frmCompanyPopUp.cs">
+    <Compile Include="Forms\ASB\frmCompanyPopUp.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\frmCompanyPopUp.Designer.cs">
+    <Compile Include="Forms\ASB\frmCompanyPopUp.Designer.cs">
       <DependentUpon>frmCompanyPopUp.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\frmIncommingWait.cs">
+    <Compile Include="Forms\JSJ\frmIncommingWait.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\frmIncommingWait.Designer.cs">
+    <Compile Include="Forms\JSJ\frmIncommingWait.Designer.cs">
       <DependentUpon>frmIncommingWait.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\frmLogIn.cs">
+    <Compile Include="Forms\CHH\frmLogIn.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\frmLogIn.Designer.cs">
+    <Compile Include="Forms\CHH\frmLogIn.Designer.cs">
       <DependentUpon>frmLogIn.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\frmMachine.cs">
+    <Compile Include="Forms\ASB\frmMachine.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\frmMachine.Designer.cs">
+    <Compile Include="Forms\ASB\frmMachine.Designer.cs">
       <DependentUpon>frmMachine.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\frmMachinePopUp.cs">
+    <Compile Include="Forms\ASB\frmMachinePopUp.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\frmMachinePopUp.Designer.cs">
+    <Compile Include="Forms\ASB\frmMachinePopUp.Designer.cs">
       <DependentUpon>frmMachinePopUp.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\frmMatPriceManage.cs">
+    <Compile Include="Forms\CHH\frmMatPriceManage.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\frmMatPriceManage.Designer.cs">
+    <Compile Include="Forms\CHH\frmMatPriceManage.Designer.cs">
       <DependentUpon>frmMatPriceManage.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\frmOrder.cs">
+    <Compile Include="Forms\JSJ\frmOrder.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\frmOrder.Designer.cs">
+    <Compile Include="Forms\JSJ\frmOrder.Designer.cs">
       <DependentUpon>frmOrder.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\frmPDStock.cs">
+    <Compile Include="Forms\CHH\frmPDStock.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\frmPDStock.Designer.cs">
+    <Compile Include="Forms\CHH\frmPDStock.Designer.cs">
       <DependentUpon>frmPDStock.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\frmPDStockPopUp.cs">
+    <Compile Include="Forms\CHH\frmPDStockPopUp.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\frmPDStockPopUp.Designer.cs">
+    <Compile Include="Forms\CHH\frmPDStockPopUp.Designer.cs">
       <DependentUpon>frmPDStockPopUp.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\frmProcess.cs">
+    <Compile Include="Forms\ASB\frmProcess.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\frmProcess.Designer.cs">
+    <Compile Include="Forms\ASB\frmProcess.Designer.cs">
       <DependentUpon>frmProcess.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\frmProcessPopUp.cs">
+    <Compile Include="Forms\ASB\frmProcessPopUp.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\frmProcessPopUp.Designer.cs">
+    <Compile Include="Forms\ASB\frmProcessPopUp.Designer.cs">
       <DependentUpon>frmProcessPopUp.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\frmProductManagePopUp.cs">
+    <Compile Include="Forms\CHH\frmProductManagePopUp.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\frmProductManagePopUp.Designer.cs">
+    <Compile Include="Forms\CHH\frmProductManagePopUp.Designer.cs">
       <DependentUpon>frmProductManagePopUp.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\frmOrderStatus.cs">
+    <Compile Include="Forms\JSJ\frmOrderStatus.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\frmOrderStatus.Designer.cs">
+    <Compile Include="Forms\JSJ\frmOrderStatus.Designer.cs">
       <DependentUpon>frmOrderStatus.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\frmProductManage.cs">
+    <Compile Include="Forms\CHH\frmProductManage.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\frmProductManage.Designer.cs">
+    <Compile Include="Forms\CHH\frmProductManage.Designer.cs">
       <DependentUpon>frmProductManage.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\frmSalesPriceManage.cs">
+    <Compile Include="Forms\CHH\frmSalesPriceManage.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\frmSalesPriceManage.Designer.cs">
+    <Compile Include="Forms\CHH\frmSalesPriceManage.Designer.cs">
       <DependentUpon>frmSalesPriceManage.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\frmPriceManagePopUp.cs">
+    <Compile Include="Forms\CHH\frmPriceManagePopUp.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\frmPriceManagePopUp.Designer.cs">
+    <Compile Include="Forms\CHH\frmPriceManagePopUp.Designer.cs">
       <DependentUpon>frmPriceManagePopUp.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\WorkOrderRegi.cs">
+    <Compile Include="Forms\BMN\WorkOrderRegi.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\WorkOrderRegi.Designer.cs">
+    <Compile Include="Forms\BMN\WorkOrderRegi.Designer.cs">
       <DependentUpon>WorkOrderRegi.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\WorkOrderRegiPopUp.cs">
+    <Compile Include="Forms\BMN\WorkOrderRegiPopUp.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\WorkOrderRegiPopUp.Designer.cs">
+    <Compile Include="Forms\BMN\WorkOrderRegiPopUp.Designer.cs">
       <DependentUpon>WorkOrderRegiPopUp.cs</DependentUpon>
     </Compile>
     <Compile Include="Util\ChamJo.cs" />
@@ -265,10 +265,10 @@
     <Compile Include="Controls\DGV_Custom.Designer.cs">
       <DependentUpon>DGV_Custom.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\frmMain.cs">
+    <Compile Include="Forms\CHH\frmMain.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\frmMain.Designer.cs">
+    <Compile Include="Forms\CHH\frmMain.Designer.cs">
       <DependentUpon>frmMain.cs</DependentUpon>
     </Compile>
     <Compile Include="Util\Log4Net.cs" />
@@ -308,70 +308,70 @@
     <EmbeddedResource Include="Forms\ChamGo.resx">
       <DependentUpon>ChamGo.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\frmAuthority.resx">
+    <EmbeddedResource Include="Forms\JSJ\frmAuthority.resx">
       <DependentUpon>frmAuthority.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\frmBOM.resx">
+    <EmbeddedResource Include="Forms\CHH\frmBOM.resx">
       <DependentUpon>frmBOM.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\frmBOMPopUp.resx">
+    <EmbeddedResource Include="Forms\CHH\frmBOMPopUp.resx">
       <DependentUpon>frmBOMPopUp.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\frmCompany.resx">
+    <EmbeddedResource Include="Forms\ASB\frmCompany.resx">
       <DependentUpon>frmCompany.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\frmCompanyPopUp.resx">
+    <EmbeddedResource Include="Forms\ASB\frmCompanyPopUp.resx">
       <DependentUpon>frmCompanyPopUp.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\frmIncommingWait.resx">
+    <EmbeddedResource Include="Forms\JSJ\frmIncommingWait.resx">
       <DependentUpon>frmIncommingWait.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\frmLogIn.resx">
+    <EmbeddedResource Include="Forms\CHH\frmLogIn.resx">
       <DependentUpon>frmLogIn.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\frmMachine.resx">
+    <EmbeddedResource Include="Forms\ASB\frmMachine.resx">
       <DependentUpon>frmMachine.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\frmMachinePopUp.resx">
+    <EmbeddedResource Include="Forms\ASB\frmMachinePopUp.resx">
       <DependentUpon>frmMachinePopUp.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\frmMain.resx">
+    <EmbeddedResource Include="Forms\CHH\frmMain.resx">
       <DependentUpon>frmMain.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\frmMatPriceManage.resx">
+    <EmbeddedResource Include="Forms\CHH\frmMatPriceManage.resx">
       <DependentUpon>frmMatPriceManage.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\frmPDStock.resx">
+    <EmbeddedResource Include="Forms\CHH\frmPDStock.resx">
       <DependentUpon>frmPDStock.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\frmPDStockPopUp.resx">
+    <EmbeddedResource Include="Forms\CHH\frmPDStockPopUp.resx">
       <DependentUpon>frmPDStockPopUp.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\frmProcess.resx">
+    <EmbeddedResource Include="Forms\ASB\frmProcess.resx">
       <DependentUpon>frmProcess.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\frmProcessPopUp.resx">
+    <EmbeddedResource Include="Forms\ASB\frmProcessPopUp.resx">
       <DependentUpon>frmProcessPopUp.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\frmProductManagePopUp.resx">
+    <EmbeddedResource Include="Forms\CHH\frmProductManagePopUp.resx">
       <DependentUpon>frmProductManagePopUp.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\frmOrderStatus.resx">
+    <EmbeddedResource Include="Forms\JSJ\frmOrderStatus.resx">
       <DependentUpon>frmOrderStatus.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\frmProductManage.resx">
+    <EmbeddedResource Include="Forms\CHH\frmProductManage.resx">
       <DependentUpon>frmProductManage.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\frmSalesPriceManage.resx">
+    <EmbeddedResource Include="Forms\CHH\frmSalesPriceManage.resx">
       <DependentUpon>frmSalesPriceManage.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\frmPriceManagePopUp.resx">
+    <EmbeddedResource Include="Forms\CHH\frmPriceManagePopUp.resx">
       <DependentUpon>frmPriceManagePopUp.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\WorkOrderRegi.resx">
+    <EmbeddedResource Include="Forms\BMN\WorkOrderRegi.resx">
       <DependentUpon>WorkOrderRegi.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\WorkOrderRegiPopUp.resx">
+    <EmbeddedResource Include="Forms\BMN\WorkOrderRegiPopUp.resx">
       <DependentUpon>WorkOrderRegiPopUp.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
