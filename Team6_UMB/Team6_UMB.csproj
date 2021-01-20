@@ -111,6 +111,13 @@
     <Compile Include="Forms\ChamGo.Designer.cs">
       <DependentUpon>ChamGo.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\.Designer.cs">
+      <DependentUpon>.cs</DependentUpon>
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Forms\frmAuthority.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -176,6 +183,12 @@
     </Compile>
     <Compile Include="Forms\WorkOrderRegi.Designer.cs">
       <DependentUpon>WorkOrderRegi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\WorkOrderRegiPopUp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\WorkOrderRegiPopUp.Designer.cs">
+      <DependentUpon>WorkOrderRegiPopUp.cs</DependentUpon>
     </Compile>
     <Compile Include="Util\ChamJo.cs" />
     <Compile Include="Util\CommonUtil.cs" />
@@ -258,6 +271,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\WorkOrderRegi.resx">
       <DependentUpon>WorkOrderRegi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\WorkOrderRegiPopUp.resx">
+      <DependentUpon>WorkOrderRegiPopUp.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
