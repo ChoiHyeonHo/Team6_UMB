@@ -29,17 +29,9 @@ namespace Team6_UMB.Forms
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.btnAllButtons1 = new Team6_UMB.Controls.btnAllButtons();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.dgV_Custom1 = new Team6_UMB.DGV_Custom();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.dgV_Custom2 = new Team6_UMB.DGV_Custom();
             this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -57,16 +49,24 @@ namespace Team6_UMB.Forms
             this.label2 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgV_Custom1 = new Team6_UMB.DGV_Custom();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
             this.splitContainer1.SuspendLayout();
-            this.groupBox2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgV_Custom1)).BeginInit();
             this.groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgV_Custom2)).BeginInit();
             this.groupBox1.SuspendLayout();
+            this.groupBox2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgV_Custom1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -101,83 +101,6 @@ namespace Team6_UMB.Forms
             this.btnAllButtons1.TabIndex = 2;
             this.btnAllButtons1.btnCreate_Event += new System.EventHandler(this.btnAllButtons1_btnCreate_Event);
             this.btnAllButtons1.btnUpdate_Event += new System.EventHandler(this.btnAllButtons1_btnUpdate_Event);
-            // 
-            // groupBox2
-            // 
-            this.groupBox2.Controls.Add(this.dgV_Custom1);
-            this.groupBox2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.groupBox2.Location = new System.Drawing.Point(0, 0);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(975, 825);
-            this.groupBox2.TabIndex = 0;
-            this.groupBox2.TabStop = false;
-            // 
-            // dgV_Custom1
-            // 
-            this.dgV_Custom1.BackgroundColor = System.Drawing.Color.White;
-            this.dgV_Custom1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("나눔바른고딕", 9F);
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgV_Custom1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
-            this.dgV_Custom1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgV_Custom1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Column1,
-            this.Column2,
-            this.Column3,
-            this.Column4,
-            this.Column5,
-            this.Column6});
-            this.dgV_Custom1.Cursor = System.Windows.Forms.Cursors.Arrow;
-            this.dgV_Custom1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgV_Custom1.GridColor = System.Drawing.Color.LightGray;
-            this.dgV_Custom1.Location = new System.Drawing.Point(3, 17);
-            this.dgV_Custom1.Margin = new System.Windows.Forms.Padding(4, 1, 4, 1);
-            this.dgV_Custom1.MinimumSize = new System.Drawing.Size(150, 150);
-            this.dgV_Custom1.Name = "dgV_Custom1";
-            this.dgV_Custom1.RowTemplate.Height = 23;
-            this.dgV_Custom1.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.dgV_Custom1.Size = new System.Drawing.Size(969, 805);
-            this.dgV_Custom1.TabIndex = 1;
-            // 
-            // Column1
-            // 
-            this.Column1.HeaderText = "ID";
-            this.Column1.Name = "Column1";
-            // 
-            // Column2
-            // 
-            this.Column2.HeaderText = "제품명";
-            this.Column2.Name = "Column2";
-            this.Column2.Width = 200;
-            // 
-            // Column3
-            // 
-            this.Column3.HeaderText = "단위";
-            this.Column3.Name = "Column3";
-            this.Column3.Width = 80;
-            // 
-            // Column4
-            // 
-            this.Column4.HeaderText = "제품분류";
-            this.Column4.Name = "Column4";
-            this.Column4.Width = 200;
-            // 
-            // Column5
-            // 
-            this.Column5.HeaderText = "업체명";
-            this.Column5.Name = "Column5";
-            this.Column5.Width = 180;
-            // 
-            // Column6
-            // 
-            this.Column6.HeaderText = "창고";
-            this.Column6.Name = "Column6";
-            this.Column6.Width = 160;
             // 
             // groupBox3
             // 
@@ -261,9 +184,9 @@ namespace Team6_UMB.Forms
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.textBox1);
             this.groupBox1.Controls.Add(this.label3);
-            this.groupBox1.Location = new System.Drawing.Point(12, 56);
+            this.groupBox1.Location = new System.Drawing.Point(12, 57);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(1511, 61);
+            this.groupBox1.Size = new System.Drawing.Size(1511, 50);
             this.groupBox1.TabIndex = 17;
             this.groupBox1.TabStop = false;
             // 
@@ -273,7 +196,7 @@ namespace Team6_UMB.Forms
             this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.button1.FlatAppearance.BorderSize = 0;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Location = new System.Drawing.Point(1471, 18);
+            this.button1.Location = new System.Drawing.Point(1471, 13);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(34, 30);
             this.button1.TabIndex = 32;
@@ -283,7 +206,7 @@ namespace Team6_UMB.Forms
             // 
             this.comboBox3.Font = new System.Drawing.Font("나눔바른고딕", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Location = new System.Drawing.Point(1244, 20);
+            this.comboBox3.Location = new System.Drawing.Point(1238, 13);
             this.comboBox3.Name = "comboBox3";
             this.comboBox3.Size = new System.Drawing.Size(199, 25);
             this.comboBox3.TabIndex = 31;
@@ -292,7 +215,7 @@ namespace Team6_UMB.Forms
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("나눔바른고딕", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label5.Location = new System.Drawing.Point(1191, 24);
+            this.label5.Location = new System.Drawing.Point(1185, 17);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(34, 17);
             this.label5.TabIndex = 30;
@@ -302,7 +225,7 @@ namespace Team6_UMB.Forms
             // 
             this.comboBox2.Font = new System.Drawing.Font("나눔바른고딕", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(851, 19);
+            this.comboBox2.Location = new System.Drawing.Point(845, 12);
             this.comboBox2.Name = "comboBox2";
             this.comboBox2.Size = new System.Drawing.Size(199, 25);
             this.comboBox2.TabIndex = 29;
@@ -311,7 +234,7 @@ namespace Team6_UMB.Forms
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("나눔바른고딕", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label4.Location = new System.Drawing.Point(798, 23);
+            this.label4.Location = new System.Drawing.Point(792, 16);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(47, 17);
             this.label4.TabIndex = 28;
@@ -321,7 +244,7 @@ namespace Team6_UMB.Forms
             // 
             this.comboBox1.Font = new System.Drawing.Font("나눔바른고딕", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(448, 21);
+            this.comboBox1.Location = new System.Drawing.Point(442, 14);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(199, 25);
             this.comboBox1.TabIndex = 27;
@@ -330,7 +253,7 @@ namespace Team6_UMB.Forms
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("나눔바른고딕", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label2.Location = new System.Drawing.Point(382, 24);
+            this.label2.Location = new System.Drawing.Point(376, 17);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(60, 17);
             this.label2.TabIndex = 26;
@@ -339,7 +262,7 @@ namespace Team6_UMB.Forms
             // textBox1
             // 
             this.textBox1.Font = new System.Drawing.Font("나눔바른고딕", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.textBox1.Location = new System.Drawing.Point(65, 20);
+            this.textBox1.Location = new System.Drawing.Point(59, 13);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(180, 25);
             this.textBox1.TabIndex = 25;
@@ -348,11 +271,88 @@ namespace Team6_UMB.Forms
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("나눔바른고딕", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label3.Location = new System.Drawing.Point(12, 24);
+            this.label3.Location = new System.Drawing.Point(6, 17);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(47, 17);
             this.label3.TabIndex = 24;
             this.label3.Text = "제품명";
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.dgV_Custom1);
+            this.groupBox2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.groupBox2.Location = new System.Drawing.Point(0, 0);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(975, 825);
+            this.groupBox2.TabIndex = 0;
+            this.groupBox2.TabStop = false;
+            // 
+            // Column6
+            // 
+            this.Column6.HeaderText = "창고";
+            this.Column6.Name = "Column6";
+            this.Column6.Width = 160;
+            // 
+            // Column5
+            // 
+            this.Column5.HeaderText = "업체명";
+            this.Column5.Name = "Column5";
+            this.Column5.Width = 180;
+            // 
+            // Column4
+            // 
+            this.Column4.HeaderText = "제품분류";
+            this.Column4.Name = "Column4";
+            this.Column4.Width = 200;
+            // 
+            // Column3
+            // 
+            this.Column3.HeaderText = "단위";
+            this.Column3.Name = "Column3";
+            this.Column3.Width = 80;
+            // 
+            // Column2
+            // 
+            this.Column2.HeaderText = "제품명";
+            this.Column2.Name = "Column2";
+            this.Column2.Width = 200;
+            // 
+            // Column1
+            // 
+            this.Column1.HeaderText = "ID";
+            this.Column1.Name = "Column1";
+            // 
+            // dgV_Custom1
+            // 
+            this.dgV_Custom1.BackgroundColor = System.Drawing.Color.White;
+            this.dgV_Custom1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("나눔바른고딕", 9F);
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgV_Custom1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.dgV_Custom1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgV_Custom1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Column1,
+            this.Column2,
+            this.Column3,
+            this.Column4,
+            this.Column5,
+            this.Column6});
+            this.dgV_Custom1.Cursor = System.Windows.Forms.Cursors.Arrow;
+            this.dgV_Custom1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgV_Custom1.GridColor = System.Drawing.Color.LightGray;
+            this.dgV_Custom1.Location = new System.Drawing.Point(3, 17);
+            this.dgV_Custom1.Margin = new System.Windows.Forms.Padding(4, 1, 4, 1);
+            this.dgV_Custom1.MinimumSize = new System.Drawing.Size(150, 150);
+            this.dgV_Custom1.Name = "dgV_Custom1";
+            this.dgV_Custom1.RowTemplate.Height = 23;
+            this.dgV_Custom1.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.dgV_Custom1.Size = new System.Drawing.Size(969, 805);
+            this.dgV_Custom1.TabIndex = 1;
             // 
             // frmBOM
             // 
@@ -369,12 +369,12 @@ namespace Team6_UMB.Forms
             this.splitContainer1.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
             this.splitContainer1.ResumeLayout(false);
-            this.groupBox2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dgV_Custom1)).EndInit();
             this.groupBox3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgV_Custom2)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            this.groupBox2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgV_Custom1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -382,14 +382,6 @@ namespace Team6_UMB.Forms
         #endregion
 
         private Controls.btnAllButtons btnAllButtons1;
-        private System.Windows.Forms.GroupBox groupBox2;
-        private DGV_Custom dgV_Custom1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
         private System.Windows.Forms.GroupBox groupBox3;
         private DGV_Custom dgV_Custom2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column7;
@@ -407,5 +399,13 @@ namespace Team6_UMB.Forms
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.GroupBox groupBox2;
+        private DGV_Custom dgV_Custom1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
     }
 }

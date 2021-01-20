@@ -9,6 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Team6_UMB.Forms;
+using Team6_UMB.Forms.CHH;
 using Team6_UMB.Service;
 
 namespace Team6_UMB
@@ -20,6 +21,10 @@ namespace Team6_UMB
         public static frmMatPriceManage frmMatPriceManage;
         public static frmProductManage frmProductManage;
         public static frmBOM frmBOM;
+        public static frmImportInspection frmImportInspection;
+        public static frmProdInspection frmProdInspection;
+        public static frmCheckHistory frmCheckHistory;
+        public static frmPDStock frmPDStock;
         #endregion
 
         public frmMain()
@@ -64,6 +69,41 @@ namespace Team6_UMB
                 frmBOM = new frmBOM();
             }
             return frmBOM;
+        }
+
+        public static frmImportInspection CreateImpIns()
+        {
+            if (frmImportInspection == null)
+            {
+                frmImportInspection = new frmImportInspection();
+            }
+            return frmImportInspection;
+        }
+
+        public static frmProdInspection CreateProdIns()
+        {
+            if (frmProdInspection == null)
+            {
+                frmProdInspection = new frmProdInspection();
+            }
+            return frmProdInspection;
+        }
+
+        public static frmCheckHistory CreateCkHis()
+        {
+            if (frmCheckHistory == null)
+            {
+                frmCheckHistory = new frmCheckHistory();
+            }
+            return frmCheckHistory;
+        }
+        public static frmPDStock CreatePDS()
+        {
+            if (frmPDStock == null)
+            {
+                frmPDStock = new frmPDStock();
+            }
+            return frmPDStock;
         }
         #endregion
 
@@ -331,6 +371,61 @@ namespace Team6_UMB
             frmBOM.Dock = DockStyle.Fill;
             frmBOM.Show();
         }
+        private void btn3_3_Click(object sender, EventArgs e)
+        {
+            this.btn3_3.BackColor = Color.White;
+            this.btn3_1.BackColor = this.btn3_2.BackColor = Color.Transparent;
+            this.btn3_3.ForeColor = Color.Black;
+            this.btn3_1.ForeColor = this.btn3_2.ForeColor = Color.White;
+            CreatePDS();
+            frmPDStock.TopLevel = false;
+            pnlBackPage.Controls.Clear();
+            pnlBackPage.Controls.Add(frmPDStock);
+            frmPDStock.Dock = DockStyle.Fill;
+            frmPDStock.Show();
+        }
+        private void btn4_1_Click(object sender, EventArgs e)
+        {
+            this.btn4_1.BackColor = Color.White;
+            this.btn4_2.BackColor = this.btn4_3.BackColor = Color.Transparent;
+            this.btn4_1.ForeColor = Color.Black;
+            this.btn4_2.ForeColor = this.btn4_3.ForeColor = Color.White;
+            CreateImpIns();
+            frmImportInspection.TopLevel = false;
+            pnlBackPage.Controls.Clear();
+            pnlBackPage.Controls.Add(frmImportInspection);
+            frmImportInspection.Dock = DockStyle.Fill;
+            frmImportInspection.Show();
+        }
+        private void btn4_2_Click(object sender, EventArgs e)
+        {
+            this.btn4_2.BackColor = Color.White;
+            this.btn4_1.BackColor = this.btn4_3.BackColor = Color.Transparent;
+            this.btn4_2.ForeColor = Color.Black;
+            this.btn4_1.ForeColor = this.btn4_3.ForeColor = Color.White;
+            CreateProdIns();
+            frmProdInspection.TopLevel = false;
+            pnlBackPage.Controls.Clear();
+            pnlBackPage.Controls.Add(frmProdInspection);
+            frmProdInspection.Dock = DockStyle.Fill;
+            frmProdInspection.Show();
+        }
+
+        private void btn4_3_Click(object sender, EventArgs e)
+        {
+            this.btn4_3.BackColor = Color.White;
+            this.btn4_1.BackColor = this.btn4_2.BackColor = Color.Transparent;
+            this.btn4_3.ForeColor = Color.Black;
+            this.btn4_1.ForeColor = this.btn4_2.ForeColor = Color.White;
+            CreateCkHis();
+            frmCheckHistory.TopLevel = false;
+            pnlBackPage.Controls.Clear();
+            pnlBackPage.Controls.Add(frmCheckHistory);
+            frmCheckHistory.Dock = DockStyle.Fill;
+            frmCheckHistory.Show();
+        }
         #endregion
+
+        
     }
 }
