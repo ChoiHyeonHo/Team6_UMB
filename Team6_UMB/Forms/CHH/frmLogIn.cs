@@ -41,10 +41,6 @@ namespace Team6_UMB.Forms
         {
             txtPwdFocus();
         }
-        private void textBox2_Enter(object sender, EventArgs e)
-        {
-            txtPwdFocus();
-        }
         private void txtPwdFocus()
         {
             textBox2.Clear();
@@ -58,7 +54,7 @@ namespace Team6_UMB.Forms
 
         private void btnSignIn_Click(object sender, EventArgs e)
         {
-            if (textBox1.Text == "team6" && textBox2.Text == "UMB")
+            if (textBox1.Text.ToUpper() == "TEAM6" && textBox2.Text.ToUpper() == "UMB")
             {
                 frmMain frm = new frmMain();
                 frm.Show();
@@ -93,6 +89,20 @@ namespace Team6_UMB.Forms
 
                 , this.Location.Y + (e.Y - mMyPoint.Y));
             }
+        }
+
+        private void textBox2_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == 13)
+            {
+                btnSignIn.PerformClick();
+            }
+        }
+
+        private void textBox2_Enter(object sender, EventArgs e)
+        {
+            textBox2.Clear();
+            textBox2.PasswordChar = '●';
         }
     }
 }

@@ -50,13 +50,13 @@ namespace Team6_UMB.Forms
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgV_Custom1 = new Team6_UMB.DGV_Custom();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
@@ -287,41 +287,6 @@ namespace Team6_UMB.Forms
             this.groupBox2.TabIndex = 0;
             this.groupBox2.TabStop = false;
             // 
-            // Column6
-            // 
-            this.Column6.HeaderText = "창고";
-            this.Column6.Name = "Column6";
-            this.Column6.Width = 160;
-            // 
-            // Column5
-            // 
-            this.Column5.HeaderText = "업체명";
-            this.Column5.Name = "Column5";
-            this.Column5.Width = 180;
-            // 
-            // Column4
-            // 
-            this.Column4.HeaderText = "제품분류";
-            this.Column4.Name = "Column4";
-            this.Column4.Width = 200;
-            // 
-            // Column3
-            // 
-            this.Column3.HeaderText = "단위";
-            this.Column3.Name = "Column3";
-            this.Column3.Width = 80;
-            // 
-            // Column2
-            // 
-            this.Column2.HeaderText = "제품명";
-            this.Column2.Name = "Column2";
-            this.Column2.Width = 200;
-            // 
-            // Column1
-            // 
-            this.Column1.HeaderText = "ID";
-            this.Column1.Name = "Column1";
-            // 
             // dgV_Custom1
             // 
             this.dgV_Custom1.BackgroundColor = System.Drawing.Color.White;
@@ -353,6 +318,42 @@ namespace Team6_UMB.Forms
             this.dgV_Custom1.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.dgV_Custom1.Size = new System.Drawing.Size(969, 805);
             this.dgV_Custom1.TabIndex = 1;
+            // 
+            // Column1
+            // 
+            this.Column1.HeaderText = "품목";
+            this.Column1.Name = "Column1";
+            this.Column1.Width = 140;
+            // 
+            // Column2
+            // 
+            this.Column2.HeaderText = "제품명";
+            this.Column2.Name = "Column2";
+            this.Column2.Width = 200;
+            // 
+            // Column3
+            // 
+            this.Column3.HeaderText = "단위";
+            this.Column3.Name = "Column3";
+            this.Column3.Width = 80;
+            // 
+            // Column4
+            // 
+            this.Column4.HeaderText = "제품분류";
+            this.Column4.Name = "Column4";
+            this.Column4.Width = 200;
+            // 
+            // Column5
+            // 
+            this.Column5.HeaderText = "업체명";
+            this.Column5.Name = "Column5";
+            this.Column5.Width = 180;
+            // 
+            // Column6
+            // 
+            this.Column6.HeaderText = "창고";
+            this.Column6.Name = "Column6";
+            this.Column6.Width = 120;
             // 
             // frmBOM
             // 

@@ -14,5 +14,11 @@ namespace Team6_UMB.Forms
         {
             InitializeComponent();
         }
+
+        private void btnSearchExcelPrint1_btnSearch_Event(object sender, EventArgs e)
+        {
+            frmPDStockPopUp frm = new frmPDStockPopUp();
+            frm.ShowDialog();
+        }
     }
 }

@@ -11,6 +11,7 @@ using System.Windows.Forms;
 using Team6_UMB.Forms;
 using Team6_UMB.Forms.CHH;
 using Team6_UMB.Service;
+using System.Diagnostics;
 
 namespace Team6_UMB
 {
@@ -424,8 +425,37 @@ namespace Team6_UMB
             frmCheckHistory.Dock = DockStyle.Fill;
             frmCheckHistory.Show();
         }
+
         #endregion
 
-        
+        private void btnOpenClose_Click(object sender, EventArgs e)
+        {
+            if (btnOpenClose.Text == "<<")
+            {
+                pnlMenu.Size = new Size(40, 789);
+                pnlButtons.Visible = false;
+                btnUserChange.Location = new Point(0, 75);
+                btnHome.Location = new Point(0, 30);
+                btnOpenClose.Text = ">>";
+            }
+            else if(btnOpenClose.Text == ">>")
+            {
+                pnlMenu.Size = new Size(145, 789);
+                pnlButtons.Visible = true;
+                btnUserChange.Location = new Point(49, 121);
+                btnHome.Location = new Point(95, 121);
+                btnOpenClose.Text = "<<";
+            }
+        }
+
+        private void btnUserChange_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("User Change...");
+        }
+
+        private void btnHome_Click(object sender, EventArgs e)
+        {
+            Process.Start("https://www.naver.com/");
+        }
     }
 }
