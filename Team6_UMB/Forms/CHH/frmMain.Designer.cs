@@ -45,7 +45,15 @@ namespace Team6_UMB
             this.btnMain1 = new System.Windows.Forms.Button();
             this.pnlBackPage = new System.Windows.Forms.Panel();
             this.pnlMenu = new System.Windows.Forms.Panel();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.btnHome = new System.Windows.Forms.Button();
+            this.btnUserChange = new System.Windows.Forms.Button();
+            this.btnOpenClose = new System.Windows.Forms.Button();
             this.pnlButtons = new System.Windows.Forms.Panel();
+            this.pnlMain4 = new System.Windows.Forms.Panel();
+            this.btn4_3 = new System.Windows.Forms.Button();
+            this.btn4_2 = new System.Windows.Forms.Button();
+            this.btn4_1 = new System.Windows.Forms.Button();
             this.pnlMain3 = new System.Windows.Forms.Panel();
             this.btn3_3 = new System.Windows.Forms.Button();
             this.btn3_2 = new System.Windows.Forms.Button();
@@ -53,10 +61,6 @@ namespace Team6_UMB
             this.pnlMain2 = new System.Windows.Forms.Panel();
             this.btn2_2 = new System.Windows.Forms.Button();
             this.btn2_1 = new System.Windows.Forms.Button();
-            this.pnlMain4 = new System.Windows.Forms.Panel();
-            this.btn4_3 = new System.Windows.Forms.Button();
-            this.btn4_2 = new System.Windows.Forms.Button();
-            this.btn4_1 = new System.Windows.Forms.Button();
             this.pnlMain7 = new System.Windows.Forms.Panel();
             this.btn7_1 = new System.Windows.Forms.Button();
             this.pnlMain5 = new System.Windows.Forms.Panel();
@@ -94,10 +98,11 @@ namespace Team6_UMB
             ((System.ComponentModel.ISupportInitialize)(this.pbMax)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbClose)).BeginInit();
             this.pnlMenu.SuspendLayout();
+            this.panel1.SuspendLayout();
             this.pnlButtons.SuspendLayout();
+            this.pnlMain4.SuspendLayout();
             this.pnlMain3.SuspendLayout();
             this.pnlMain2.SuspendLayout();
-            this.pnlMain4.SuspendLayout();
             this.pnlMain7.SuspendLayout();
             this.pnlMain5.SuspendLayout();
             this.pnlMain6.SuspendLayout();
@@ -327,12 +332,66 @@ namespace Team6_UMB
             // pnlMenu
             // 
             this.pnlMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(52)))), ((int)(((byte)(79)))));
+            this.pnlMenu.Controls.Add(this.panel1);
             this.pnlMenu.Controls.Add(this.pnlButtons);
             this.pnlMenu.Dock = System.Windows.Forms.DockStyle.Left;
             this.pnlMenu.Location = new System.Drawing.Point(0, 0);
             this.pnlMenu.Name = "pnlMenu";
             this.pnlMenu.Size = new System.Drawing.Size(145, 789);
             this.pnlMenu.TabIndex = 0;
+            // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.btnHome);
+            this.panel1.Controls.Add(this.btnUserChange);
+            this.panel1.Controls.Add(this.btnOpenClose);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel1.Location = new System.Drawing.Point(0, 628);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(145, 161);
+            this.panel1.TabIndex = 1;
+            // 
+            // btnHome
+            // 
+            this.btnHome.BackgroundImage = global::Team6_UMB.Properties.Resources.Home;
+            this.btnHome.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnHome.FlatAppearance.BorderSize = 0;
+            this.btnHome.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnHome.Font = new System.Drawing.Font("나눔바른고딕", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.btnHome.Location = new System.Drawing.Point(95, 121);
+            this.btnHome.Name = "btnHome";
+            this.btnHome.Size = new System.Drawing.Size(40, 40);
+            this.btnHome.TabIndex = 2;
+            this.btnHome.UseVisualStyleBackColor = true;
+            this.btnHome.Click += new System.EventHandler(this.btnHome_Click);
+            // 
+            // btnUserChange
+            // 
+            this.btnUserChange.BackgroundImage = global::Team6_UMB.Properties.Resources.ChangeUser;
+            this.btnUserChange.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnUserChange.FlatAppearance.BorderSize = 0;
+            this.btnUserChange.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnUserChange.Font = new System.Drawing.Font("나눔바른고딕", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.btnUserChange.Location = new System.Drawing.Point(49, 121);
+            this.btnUserChange.Name = "btnUserChange";
+            this.btnUserChange.Size = new System.Drawing.Size(40, 40);
+            this.btnUserChange.TabIndex = 1;
+            this.btnUserChange.UseVisualStyleBackColor = true;
+            this.btnUserChange.Click += new System.EventHandler(this.btnUserChange_Click);
+            // 
+            // btnOpenClose
+            // 
+            this.btnOpenClose.FlatAppearance.BorderSize = 0;
+            this.btnOpenClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnOpenClose.Font = new System.Drawing.Font("나눔바른고딕", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.btnOpenClose.ForeColor = System.Drawing.Color.White;
+            this.btnOpenClose.Location = new System.Drawing.Point(3, 121);
+            this.btnOpenClose.Name = "btnOpenClose";
+            this.btnOpenClose.Size = new System.Drawing.Size(40, 40);
+            this.btnOpenClose.TabIndex = 0;
+            this.btnOpenClose.Text = "<<";
+            this.btnOpenClose.UseVisualStyleBackColor = true;
+            this.btnOpenClose.Click += new System.EventHandler(this.btnOpenClose_Click);
             // 
             // pnlButtons
             // 
@@ -348,6 +407,74 @@ namespace Team6_UMB
             this.pnlButtons.Name = "pnlButtons";
             this.pnlButtons.Size = new System.Drawing.Size(145, 563);
             this.pnlButtons.TabIndex = 0;
+            // 
+            // pnlMain4
+            // 
+            this.pnlMain4.BackColor = System.Drawing.Color.Transparent;
+            this.pnlMain4.Controls.Add(this.btn4_3);
+            this.pnlMain4.Controls.Add(this.btn4_2);
+            this.pnlMain4.Controls.Add(this.btn4_1);
+            this.pnlMain4.Location = new System.Drawing.Point(9, 311);
+            this.pnlMain4.Name = "pnlMain4";
+            this.pnlMain4.Size = new System.Drawing.Size(126, 36);
+            this.pnlMain4.TabIndex = 10;
+            // 
+            // btn4_3
+            // 
+            this.btn4_3.BackColor = System.Drawing.Color.Transparent;
+            this.btn4_3.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btn4_3.FlatAppearance.BorderSize = 0;
+            this.btn4_3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn4_3.Font = new System.Drawing.Font("나눔바른고딕", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.btn4_3.ForeColor = System.Drawing.Color.White;
+            this.btn4_3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn4_3.Location = new System.Drawing.Point(0, 120);
+            this.btn4_3.Name = "btn4_3";
+            this.btn4_3.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
+            this.btn4_3.Size = new System.Drawing.Size(126, 60);
+            this.btn4_3.TabIndex = 2;
+            this.btn4_3.Text = "검사이력";
+            this.btn4_3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn4_3.UseVisualStyleBackColor = false;
+            this.btn4_3.Click += new System.EventHandler(this.btn4_3_Click);
+            // 
+            // btn4_2
+            // 
+            this.btn4_2.BackColor = System.Drawing.Color.Transparent;
+            this.btn4_2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btn4_2.FlatAppearance.BorderSize = 0;
+            this.btn4_2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn4_2.Font = new System.Drawing.Font("나눔바른고딕", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.btn4_2.ForeColor = System.Drawing.Color.White;
+            this.btn4_2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn4_2.Location = new System.Drawing.Point(0, 60);
+            this.btn4_2.Name = "btn4_2";
+            this.btn4_2.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
+            this.btn4_2.Size = new System.Drawing.Size(126, 60);
+            this.btn4_2.TabIndex = 1;
+            this.btn4_2.Text = "제품검사";
+            this.btn4_2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn4_2.UseVisualStyleBackColor = false;
+            this.btn4_2.Click += new System.EventHandler(this.btn4_2_Click);
+            // 
+            // btn4_1
+            // 
+            this.btn4_1.BackColor = System.Drawing.Color.Transparent;
+            this.btn4_1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btn4_1.FlatAppearance.BorderSize = 0;
+            this.btn4_1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn4_1.Font = new System.Drawing.Font("나눔바른고딕", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.btn4_1.ForeColor = System.Drawing.Color.White;
+            this.btn4_1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn4_1.Location = new System.Drawing.Point(0, 0);
+            this.btn4_1.Name = "btn4_1";
+            this.btn4_1.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
+            this.btn4_1.Size = new System.Drawing.Size(126, 60);
+            this.btn4_1.TabIndex = 0;
+            this.btn4_1.Text = "수입검사";
+            this.btn4_1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn4_1.UseVisualStyleBackColor = false;
+            this.btn4_1.Click += new System.EventHandler(this.btn4_1_Click);
             // 
             // pnlMain3
             // 
@@ -459,74 +586,6 @@ namespace Team6_UMB
             this.btn2_1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn2_1.UseVisualStyleBackColor = false;
             this.btn2_1.Click += new System.EventHandler(this.btn2_1_Click);
-            // 
-            // pnlMain4
-            // 
-            this.pnlMain4.BackColor = System.Drawing.Color.Transparent;
-            this.pnlMain4.Controls.Add(this.btn4_3);
-            this.pnlMain4.Controls.Add(this.btn4_2);
-            this.pnlMain4.Controls.Add(this.btn4_1);
-            this.pnlMain4.Location = new System.Drawing.Point(9, 311);
-            this.pnlMain4.Name = "pnlMain4";
-            this.pnlMain4.Size = new System.Drawing.Size(126, 36);
-            this.pnlMain4.TabIndex = 10;
-            // 
-            // btn4_3
-            // 
-            this.btn4_3.BackColor = System.Drawing.Color.Transparent;
-            this.btn4_3.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btn4_3.FlatAppearance.BorderSize = 0;
-            this.btn4_3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn4_3.Font = new System.Drawing.Font("나눔바른고딕", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.btn4_3.ForeColor = System.Drawing.Color.White;
-            this.btn4_3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn4_3.Location = new System.Drawing.Point(0, 120);
-            this.btn4_3.Name = "btn4_3";
-            this.btn4_3.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
-            this.btn4_3.Size = new System.Drawing.Size(126, 60);
-            this.btn4_3.TabIndex = 2;
-            this.btn4_3.Text = "검사이력";
-            this.btn4_3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn4_3.UseVisualStyleBackColor = false;
-            this.btn4_3.Click += new System.EventHandler(this.btn4_3_Click);
-            // 
-            // btn4_2
-            // 
-            this.btn4_2.BackColor = System.Drawing.Color.Transparent;
-            this.btn4_2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btn4_2.FlatAppearance.BorderSize = 0;
-            this.btn4_2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn4_2.Font = new System.Drawing.Font("나눔바른고딕", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.btn4_2.ForeColor = System.Drawing.Color.White;
-            this.btn4_2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn4_2.Location = new System.Drawing.Point(0, 60);
-            this.btn4_2.Name = "btn4_2";
-            this.btn4_2.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
-            this.btn4_2.Size = new System.Drawing.Size(126, 60);
-            this.btn4_2.TabIndex = 1;
-            this.btn4_2.Text = "제품검사";
-            this.btn4_2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn4_2.UseVisualStyleBackColor = false;
-            this.btn4_2.Click += new System.EventHandler(this.btn4_2_Click);
-            // 
-            // btn4_1
-            // 
-            this.btn4_1.BackColor = System.Drawing.Color.Transparent;
-            this.btn4_1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btn4_1.FlatAppearance.BorderSize = 0;
-            this.btn4_1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn4_1.Font = new System.Drawing.Font("나눔바른고딕", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.btn4_1.ForeColor = System.Drawing.Color.White;
-            this.btn4_1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn4_1.Location = new System.Drawing.Point(0, 0);
-            this.btn4_1.Name = "btn4_1";
-            this.btn4_1.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
-            this.btn4_1.Size = new System.Drawing.Size(126, 60);
-            this.btn4_1.TabIndex = 0;
-            this.btn4_1.Text = "수입검사";
-            this.btn4_1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn4_1.UseVisualStyleBackColor = false;
-            this.btn4_1.Click += new System.EventHandler(this.btn4_1_Click);
             // 
             // pnlMain7
             // 
@@ -928,10 +987,11 @@ namespace Team6_UMB
             ((System.ComponentModel.ISupportInitialize)(this.pbMax)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbClose)).EndInit();
             this.pnlMenu.ResumeLayout(false);
+            this.panel1.ResumeLayout(false);
             this.pnlButtons.ResumeLayout(false);
+            this.pnlMain4.ResumeLayout(false);
             this.pnlMain3.ResumeLayout(false);
             this.pnlMain2.ResumeLayout(false);
-            this.pnlMain4.ResumeLayout(false);
             this.pnlMain7.ResumeLayout(false);
             this.pnlMain5.ResumeLayout(false);
             this.pnlMain6.ResumeLayout(false);
@@ -993,5 +1053,9 @@ namespace Team6_UMB
         private System.Windows.Forms.Button btnMain7;
         private System.Windows.Forms.Panel pnlMain7;
         private System.Windows.Forms.Button btn7_1;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Button btnUserChange;
+        private System.Windows.Forms.Button btnOpenClose;
+        private System.Windows.Forms.Button btnHome;
     }
 }
