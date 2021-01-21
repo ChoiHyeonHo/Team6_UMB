@@ -29,35 +29,24 @@ namespace Team6_UMB.Forms.ASB
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.button1 = new System.Windows.Forms.Button();
+            this.label4 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnAllButtons1 = new Team6_UMB.Controls.btnAllButtons();
             this.label1 = new System.Windows.Forms.Label();
             this.dgvPrice = new Team6_UMB.DGV_Custom();
-            this.company_id = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.company_name = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.company_type = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.company_ceo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.company_cnum = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.company_btype = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.company_gtype = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.company_email = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.company_phone = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.company_fax = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.company_bnum = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.company_address = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.company_uadmin = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.company_udate = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.label4 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.w_id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.w_name = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.w_address = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.w_type = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.w_deleted = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.w_uadmin = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.w_udate = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox1.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPrice)).BeginInit();
@@ -65,12 +54,8 @@ namespace Team6_UMB.Forms.ASB
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.comboBox1);
-            this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Controls.Add(this.textBox3);
-            this.groupBox1.Controls.Add(this.label5);
+            this.groupBox1.Controls.Add(this.comboBox2);
             this.groupBox1.Controls.Add(this.button1);
-            this.groupBox1.Controls.Add(this.textBox2);
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.textBox1);
             this.groupBox1.Controls.Add(this.label3);
@@ -86,11 +71,21 @@ namespace Team6_UMB.Forms.ASB
             this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.button1.FlatAppearance.BorderSize = 0;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Location = new System.Drawing.Point(1083, 11);
+            this.button1.Location = new System.Drawing.Point(717, 11);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(34, 30);
             this.button1.TabIndex = 21;
             this.button1.UseVisualStyleBackColor = true;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label4.Location = new System.Drawing.Point(278, 19);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(60, 18);
+            this.label4.TabIndex = 24;
+            this.label4.Text = "창고구분";
             // 
             // textBox1
             // 
@@ -108,7 +103,7 @@ namespace Team6_UMB.Forms.ASB
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(47, 18);
             this.label3.TabIndex = 22;
-            this.label3.Text = "부서명";
+            this.label3.Text = "창고명";
             // 
             // panel1
             // 
@@ -144,30 +139,23 @@ namespace Team6_UMB.Forms.ASB
             // 
             this.dgvPrice.BackgroundColor = System.Drawing.Color.White;
             this.dgvPrice.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvPrice.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvPrice.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvPrice.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvPrice.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.company_id,
-            this.company_name,
-            this.company_type,
-            this.company_ceo,
-            this.company_cnum,
-            this.company_btype,
-            this.company_gtype,
-            this.company_email,
-            this.company_phone,
-            this.company_fax,
-            this.company_bnum,
-            this.company_address,
-            this.company_uadmin,
-            this.company_udate});
+            this.w_id,
+            this.w_name,
+            this.w_address,
+            this.w_type,
+            this.w_deleted,
+            this.w_uadmin,
+            this.w_udate});
             this.dgvPrice.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.dgvPrice.GridColor = System.Drawing.Color.LightGray;
             this.dgvPrice.Location = new System.Drawing.Point(11, 107);
@@ -179,129 +167,48 @@ namespace Team6_UMB.Forms.ASB
             this.dgvPrice.Size = new System.Drawing.Size(1511, 829);
             this.dgvPrice.TabIndex = 30;
             // 
-            // company_id
+            // comboBox2
             // 
-            this.company_id.HeaderText = "업체ID";
-            this.company_id.Name = "company_id";
+            this.comboBox2.FormattingEnabled = true;
+            this.comboBox2.Location = new System.Drawing.Point(344, 17);
+            this.comboBox2.Name = "comboBox2";
+            this.comboBox2.Size = new System.Drawing.Size(121, 20);
+            this.comboBox2.TabIndex = 30;
             // 
-            // company_name
+            // w_id
             // 
-            this.company_name.HeaderText = "업체명";
-            this.company_name.Name = "company_name";
+            this.w_id.HeaderText = "창고 ID";
+            this.w_id.Name = "w_id";
             // 
-            // company_type
+            // w_name
             // 
-            this.company_type.HeaderText = "업체구분";
-            this.company_type.Name = "company_type";
+            this.w_name.HeaderText = "창고명";
+            this.w_name.Name = "w_name";
             // 
-            // company_ceo
+            // w_address
             // 
-            this.company_ceo.HeaderText = "대표자명";
-            this.company_ceo.Name = "company_ceo";
+            this.w_address.HeaderText = "창고 주소";
+            this.w_address.Name = "w_address";
             // 
-            // company_cnum
+            // w_type
             // 
-            this.company_cnum.HeaderText = "사업자등록번호";
-            this.company_cnum.Name = "company_cnum";
+            this.w_type.HeaderText = "창고 구분";
+            this.w_type.Name = "w_type";
             // 
-            // company_btype
+            // w_deleted
             // 
-            this.company_btype.HeaderText = "업종";
-            this.company_btype.Name = "company_btype";
+            this.w_deleted.HeaderText = "삭제유무";
+            this.w_deleted.Name = "w_deleted";
             // 
-            // company_gtype
+            // w_uadmin
             // 
-            this.company_gtype.HeaderText = "업태";
-            this.company_gtype.Name = "company_gtype";
+            this.w_uadmin.HeaderText = "수정자";
+            this.w_uadmin.Name = "w_uadmin";
             // 
-            // company_email
+            // w_udate
             // 
-            this.company_email.HeaderText = "이메일";
-            this.company_email.Name = "company_email";
-            // 
-            // company_phone
-            // 
-            this.company_phone.HeaderText = "전화번호";
-            this.company_phone.Name = "company_phone";
-            // 
-            // company_fax
-            // 
-            this.company_fax.HeaderText = "팩스";
-            this.company_fax.Name = "company_fax";
-            // 
-            // company_bnum
-            // 
-            this.company_bnum.HeaderText = "법인등록번호";
-            this.company_bnum.Name = "company_bnum";
-            // 
-            // company_address
-            // 
-            this.company_address.HeaderText = "업체 주소";
-            this.company_address.Name = "company_address";
-            // 
-            // company_uadmin
-            // 
-            this.company_uadmin.HeaderText = "수정자";
-            this.company_uadmin.Name = "company_uadmin";
-            // 
-            // company_udate
-            // 
-            this.company_udate.HeaderText = "수정일";
-            this.company_udate.Name = "company_udate";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label4.Location = new System.Drawing.Point(278, 19);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(99, 18);
-            this.label4.TabIndex = 24;
-            this.label4.Text = "사업자등록번호";
-            // 
-            // textBox2
-            // 
-            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.textBox2.Location = new System.Drawing.Point(383, 16);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(164, 24);
-            this.textBox2.TabIndex = 25;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label5.Location = new System.Drawing.Point(584, 19);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(60, 18);
-            this.label5.TabIndex = 26;
-            this.label5.Text = "업체코드";
-            // 
-            // textBox3
-            // 
-            this.textBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.textBox3.Location = new System.Drawing.Point(650, 16);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(164, 24);
-            this.textBox3.TabIndex = 27;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label2.Location = new System.Drawing.Point(841, 19);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(60, 18);
-            this.label2.TabIndex = 28;
-            this.label2.Text = "업체코드";
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(907, 17);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 20);
-            this.comboBox1.TabIndex = 29;
+            this.w_udate.HeaderText = "수정일";
+            this.w_udate.Name = "w_udate";
             // 
             // frmWarehouse
             // 
@@ -334,25 +241,14 @@ namespace Team6_UMB.Forms.ASB
         private Controls.btnAllButtons btnAllButtons1;
         protected System.Windows.Forms.Label label1;
         private DGV_Custom dgvPrice;
-        private System.Windows.Forms.DataGridViewTextBoxColumn company_id;
-        private System.Windows.Forms.DataGridViewTextBoxColumn company_name;
-        private System.Windows.Forms.DataGridViewTextBoxColumn company_type;
-        private System.Windows.Forms.DataGridViewTextBoxColumn company_ceo;
-        private System.Windows.Forms.DataGridViewTextBoxColumn company_cnum;
-        private System.Windows.Forms.DataGridViewTextBoxColumn company_btype;
-        private System.Windows.Forms.DataGridViewTextBoxColumn company_gtype;
-        private System.Windows.Forms.DataGridViewTextBoxColumn company_email;
-        private System.Windows.Forms.DataGridViewTextBoxColumn company_phone;
-        private System.Windows.Forms.DataGridViewTextBoxColumn company_fax;
-        private System.Windows.Forms.DataGridViewTextBoxColumn company_bnum;
-        private System.Windows.Forms.DataGridViewTextBoxColumn company_address;
-        private System.Windows.Forms.DataGridViewTextBoxColumn company_uadmin;
-        private System.Windows.Forms.DataGridViewTextBoxColumn company_udate;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn w_id;
+        private System.Windows.Forms.DataGridViewTextBoxColumn w_name;
+        private System.Windows.Forms.DataGridViewTextBoxColumn w_address;
+        private System.Windows.Forms.DataGridViewTextBoxColumn w_type;
+        private System.Windows.Forms.DataGridViewTextBoxColumn w_deleted;
+        private System.Windows.Forms.DataGridViewTextBoxColumn w_uadmin;
+        private System.Windows.Forms.DataGridViewTextBoxColumn w_udate;
     }
 }

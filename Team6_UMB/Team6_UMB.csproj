@@ -153,6 +153,12 @@
     <Compile Include="Forms\ASB\frmWarehouse.Designer.cs">
       <DependentUpon>frmWarehouse.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\ASB\frmWarehousePopUp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ASB\frmWarehousePopUp.Designer.cs">
+      <DependentUpon>frmWarehousePopUp.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\ChamGo.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -433,6 +439,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\ASB\frmWarehouse.resx">
       <DependentUpon>frmWarehouse.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ASB\frmWarehousePopUp.resx">
+      <DependentUpon>frmWarehousePopUp.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\ChamGo.resx">
       <DependentUpon>ChamGo.cs</DependentUpon>
