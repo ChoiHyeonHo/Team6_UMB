@@ -96,6 +96,7 @@ namespace Team6_UMB.Forms
             this.btnSignIn.TabIndex = 6;
             this.btnSignIn.Text = "Sign In";
             this.btnSignIn.UseVisualStyleBackColor = true;
+            this.btnSignIn.Click += new System.EventHandler(this.btnSignIn_Click);
             // 
             // textBox2
             // 
@@ -108,6 +109,9 @@ namespace Team6_UMB.Forms
             this.textBox2.Size = new System.Drawing.Size(209, 18);
             this.textBox2.TabIndex = 9;
             this.textBox2.Text = "PassWord";
+            this.textBox2.Click += new System.EventHandler(this.textBox2_Click);
+            this.textBox2.Enter += new System.EventHandler(this.textBox2_Enter);
+            this.textBox2.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox2_KeyPress);
             // 
             // panel2
             // 
@@ -138,6 +142,7 @@ namespace Team6_UMB.Forms
             this.textBox1.Size = new System.Drawing.Size(209, 18);
             this.textBox1.TabIndex = 7;
             this.textBox1.Text = "UserID";
+            this.textBox1.Click += new System.EventHandler(this.textBox1_Click);
             // 
             // panel1
             // 
