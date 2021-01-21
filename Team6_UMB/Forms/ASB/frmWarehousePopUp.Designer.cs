@@ -41,6 +41,11 @@ namespace Team6_UMB.Forms.ASB
             this.label2 = new System.Windows.Forms.Label();
             this.textBox10 = new System.Windows.Forms.TextBox();
             this.label13 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
+            this.label4 = new System.Windows.Forms.Label();
+            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -59,7 +64,7 @@ namespace Team6_UMB.Forms.ASB
             // 
             this.panel2.Controls.Add(this.btnUpdate);
             this.panel2.Controls.Add(this.btnCreate);
-            this.panel2.Location = new System.Drawing.Point(121, 345);
+            this.panel2.Location = new System.Drawing.Point(121, 389);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(162, 44);
             this.panel2.TabIndex = 23;
@@ -92,6 +97,11 @@ namespace Team6_UMB.Forms.ASB
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.textBox4);
+            this.groupBox1.Controls.Add(this.label6);
+            this.groupBox1.Controls.Add(this.textBox3);
+            this.groupBox1.Controls.Add(this.label4);
+            this.groupBox1.Controls.Add(this.button1);
             this.groupBox1.Controls.Add(this.textBox10);
             this.groupBox1.Controls.Add(this.label13);
             this.groupBox1.Controls.Add(this.textBox2);
@@ -102,7 +112,7 @@ namespace Team6_UMB.Forms.ASB
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Location = new System.Drawing.Point(12, 57);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(376, 282);
+            this.groupBox1.Size = new System.Drawing.Size(376, 326);
             this.groupBox1.TabIndex = 22;
             this.groupBox1.TabStop = false;
             // 
@@ -111,7 +121,8 @@ namespace Team6_UMB.Forms.ASB
             this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.textBox2.Location = new System.Drawing.Point(76, 102);
             this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(285, 24);
+            this.textBox2.ReadOnly = true;
+            this.textBox2.Size = new System.Drawing.Size(195, 24);
             this.textBox2.TabIndex = 46;
             // 
             // comboBox2
@@ -135,7 +146,7 @@ namespace Team6_UMB.Forms.ASB
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(60, 18);
             this.label5.TabIndex = 29;
-            this.label5.Text = "창고주소";
+            this.label5.Text = "우편번호";
             // 
             // label3
             // 
@@ -170,10 +181,10 @@ namespace Team6_UMB.Forms.ASB
             // textBox10
             // 
             this.textBox10.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.textBox10.Location = new System.Drawing.Point(76, 145);
+            this.textBox10.Location = new System.Drawing.Point(76, 207);
             this.textBox10.Multiline = true;
             this.textBox10.Name = "textBox10";
-            this.textBox10.Size = new System.Drawing.Size(285, 120);
+            this.textBox10.Size = new System.Drawing.Size(285, 100);
             this.textBox10.TabIndex = 67;
             // 
             // label13
@@ -181,16 +192,68 @@ namespace Team6_UMB.Forms.ASB
             this.label13.AutoSize = true;
             this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.label13.ForeColor = System.Drawing.Color.Black;
-            this.label13.Location = new System.Drawing.Point(10, 145);
+            this.label13.Location = new System.Drawing.Point(12, 207);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(34, 18);
             this.label13.TabIndex = 66;
             this.label13.Text = "비고";
             // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.Gray;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.button1.ForeColor = System.Drawing.Color.White;
+            this.button1.Location = new System.Drawing.Point(277, 100);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(84, 29);
+            this.button1.TabIndex = 68;
+            this.button1.Text = "주소검색";
+            this.button1.UseVisualStyleBackColor = false;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label4.ForeColor = System.Drawing.Color.Black;
+            this.label4.Location = new System.Drawing.Point(12, 138);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(42, 18);
+            this.label4.TabIndex = 69;
+            this.label4.Text = "주소1";
+            // 
+            // textBox3
+            // 
+            this.textBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.textBox3.Location = new System.Drawing.Point(76, 135);
+            this.textBox3.Name = "textBox3";
+            this.textBox3.ReadOnly = true;
+            this.textBox3.Size = new System.Drawing.Size(285, 24);
+            this.textBox3.TabIndex = 70;
+            // 
+            // textBox4
+            // 
+            this.textBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.textBox4.Location = new System.Drawing.Point(76, 165);
+            this.textBox4.Name = "textBox4";
+            this.textBox4.Size = new System.Drawing.Size(285, 24);
+            this.textBox4.TabIndex = 72;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label6.ForeColor = System.Drawing.Color.Black;
+            this.label6.Location = new System.Drawing.Point(12, 168);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(42, 18);
+            this.label6.TabIndex = 71;
+            this.label6.Text = "주소2";
+            // 
             // frmWarehousePopUp
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
-            this.ClientSize = new System.Drawing.Size(403, 397);
+            this.ClientSize = new System.Drawing.Size(403, 438);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.groupBox1);
             this.Name = "frmWarehousePopUp";
@@ -220,5 +283,10 @@ namespace Team6_UMB.Forms.ASB
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox textBox10;
         private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Button button1;
     }
 }

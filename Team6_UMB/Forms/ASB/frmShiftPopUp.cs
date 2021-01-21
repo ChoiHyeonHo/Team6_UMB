@@ -6,11 +6,11 @@ using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
 
-namespace Team6_UMB.Forms
+namespace Team6_UMB.Forms.ASB
 {
-    public partial class frmProcessPopUp : Team6_UMB.frmPopUp
+    public partial class frmShiftPopUp : Team6_UMB.frmPopUp
     {
-        public frmProcessPopUp()
+        public frmShiftPopUp()
         {
             InitializeComponent();
         }

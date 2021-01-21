@@ -33,6 +33,9 @@ namespace Team6_UMB.Forms
             this.btnUpdate = new System.Windows.Forms.Button();
             this.btnCreate = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.textBox10 = new System.Windows.Forms.TextBox();
+            this.label13 = new System.Windows.Forms.Label();
             this.comboBox2 = new System.Windows.Forms.ComboBox();
             this.dtpEnd = new System.Windows.Forms.DateTimePicker();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
@@ -42,11 +45,6 @@ namespace Team6_UMB.Forms
             this.label3 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.comboBox5 = new System.Windows.Forms.ComboBox();
-            this.label8 = new System.Windows.Forms.Label();
-            this.textBox10 = new System.Windows.Forms.TextBox();
-            this.label13 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -65,7 +63,7 @@ namespace Team6_UMB.Forms
             // 
             this.panel2.Controls.Add(this.btnUpdate);
             this.panel2.Controls.Add(this.btnCreate);
-            this.panel2.Location = new System.Drawing.Point(184, 453);
+            this.panel2.Location = new System.Drawing.Point(167, 395);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(162, 44);
             this.panel2.TabIndex = 21;
@@ -101,8 +99,6 @@ namespace Team6_UMB.Forms
             this.groupBox1.Controls.Add(this.textBox2);
             this.groupBox1.Controls.Add(this.textBox10);
             this.groupBox1.Controls.Add(this.label13);
-            this.groupBox1.Controls.Add(this.comboBox5);
-            this.groupBox1.Controls.Add(this.label8);
             this.groupBox1.Controls.Add(this.comboBox2);
             this.groupBox1.Controls.Add(this.dtpEnd);
             this.groupBox1.Controls.Add(this.comboBox1);
@@ -114,9 +110,37 @@ namespace Team6_UMB.Forms
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Location = new System.Drawing.Point(12, 57);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(489, 390);
+            this.groupBox1.Size = new System.Drawing.Size(489, 332);
             this.groupBox1.TabIndex = 20;
             this.groupBox1.TabStop = false;
+            // 
+            // textBox2
+            // 
+            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.textBox2.Location = new System.Drawing.Point(76, 102);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(394, 24);
+            this.textBox2.TabIndex = 66;
+            // 
+            // textBox10
+            // 
+            this.textBox10.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.textBox10.Location = new System.Drawing.Point(76, 235);
+            this.textBox10.Multiline = true;
+            this.textBox10.Name = "textBox10";
+            this.textBox10.Size = new System.Drawing.Size(394, 82);
+            this.textBox10.TabIndex = 65;
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label13.ForeColor = System.Drawing.Color.Black;
+            this.label13.Location = new System.Drawing.Point(12, 238);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(34, 18);
+            this.label13.TabIndex = 64;
+            this.label13.Text = "비고";
             // 
             // comboBox2
             // 
@@ -133,7 +157,7 @@ namespace Team6_UMB.Forms
             // dtpEnd
             // 
             this.dtpEnd.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.dtpEnd.Location = new System.Drawing.Point(76, 191);
+            this.dtpEnd.Location = new System.Drawing.Point(76, 148);
             this.dtpEnd.Name = "dtpEnd";
             this.dtpEnd.Size = new System.Drawing.Size(394, 24);
             this.dtpEnd.TabIndex = 41;
@@ -145,7 +169,7 @@ namespace Team6_UMB.Forms
             this.comboBox1.Items.AddRange(new object[] {
             "Y",
             "N"});
-            this.comboBox1.Location = new System.Drawing.Point(76, 235);
+            this.comboBox1.Location = new System.Drawing.Point(76, 192);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(394, 26);
             this.comboBox1.TabIndex = 37;
@@ -155,7 +179,7 @@ namespace Team6_UMB.Forms
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.label7.ForeColor = System.Drawing.Color.RoyalBlue;
-            this.label7.Location = new System.Drawing.Point(10, 238);
+            this.label7.Location = new System.Drawing.Point(10, 195);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(60, 18);
             this.label7.TabIndex = 33;
@@ -166,7 +190,7 @@ namespace Team6_UMB.Forms
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.label6.ForeColor = System.Drawing.Color.RoyalBlue;
-            this.label6.Location = new System.Drawing.Point(10, 194);
+            this.label6.Location = new System.Drawing.Point(10, 151);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(47, 18);
             this.label6.TabIndex = 31;
@@ -213,61 +237,10 @@ namespace Team6_UMB.Forms
             this.label2.TabIndex = 22;
             this.label2.Text = "설비ID";
             // 
-            // comboBox5
-            // 
-            this.comboBox5.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.comboBox5.FormattingEnabled = true;
-            this.comboBox5.Items.AddRange(new object[] {
-            "Y",
-            "N"});
-            this.comboBox5.Location = new System.Drawing.Point(76, 144);
-            this.comboBox5.Name = "comboBox5";
-            this.comboBox5.Size = new System.Drawing.Size(394, 26);
-            this.comboBox5.TabIndex = 47;
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label8.ForeColor = System.Drawing.Color.RoyalBlue;
-            this.label8.Location = new System.Drawing.Point(10, 147);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(60, 18);
-            this.label8.TabIndex = 46;
-            this.label8.Text = "공정코드";
-            // 
-            // textBox10
-            // 
-            this.textBox10.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.textBox10.Location = new System.Drawing.Point(76, 278);
-            this.textBox10.Multiline = true;
-            this.textBox10.Name = "textBox10";
-            this.textBox10.Size = new System.Drawing.Size(394, 82);
-            this.textBox10.TabIndex = 65;
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label13.ForeColor = System.Drawing.Color.Black;
-            this.label13.Location = new System.Drawing.Point(12, 281);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(34, 18);
-            this.label13.TabIndex = 64;
-            this.label13.Text = "비고";
-            // 
-            // textBox2
-            // 
-            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.textBox2.Location = new System.Drawing.Point(76, 102);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(394, 24);
-            this.textBox2.TabIndex = 66;
-            // 
             // frmMachinePopUp
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
-            this.ClientSize = new System.Drawing.Size(510, 505);
+            this.ClientSize = new System.Drawing.Size(510, 451);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.groupBox1);
             this.Name = "frmMachinePopUp";
@@ -299,8 +272,6 @@ namespace Team6_UMB.Forms
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.ComboBox comboBox5;
-        private System.Windows.Forms.Label label8;
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.TextBox textBox10;
         private System.Windows.Forms.Label label13;

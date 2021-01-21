@@ -111,6 +111,18 @@
     <Compile Include="Controls\periodSearchControl.designer.cs">
       <DependentUpon>periodSearchControl.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\ASB\frmBOR.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ASB\frmBOR.Designer.cs">
+      <DependentUpon>frmBOR.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ASB\frmBORPopup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ASB\frmBORPopup.Designer.cs">
+      <DependentUpon>frmBORPopup.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\ASB\frmCheckListPopUp.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -122,6 +134,18 @@
     </Compile>
     <Compile Include="Forms\ASB\frmDepartmentPopUp.Designer.cs">
       <DependentUpon>frmDepartmentPopUp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ASB\frmShift.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ASB\frmShift.Designer.cs">
+      <DependentUpon>frmShift.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ASB\frmShiftPopUp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ASB\frmShiftPopUp.Designer.cs">
+      <DependentUpon>frmShiftPopUp.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\ASB\frmUserPopUp.cs">
       <SubType>Form</SubType>
@@ -292,18 +316,6 @@
     <Compile Include="Forms\CHH\frmPDStockPopUp.Designer.cs">
       <DependentUpon>frmPDStockPopUp.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\ASB\frmProcess.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\ASB\frmProcess.Designer.cs">
-      <DependentUpon>frmProcess.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Forms\ASB\frmProcessPopUp.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\ASB\frmProcessPopUp.Designer.cs">
-      <DependentUpon>frmProcessPopUp.cs</DependentUpon>
-    </Compile>
     <Compile Include="Forms\CHH\frmProductManagePopUp.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -419,11 +431,23 @@
     <EmbeddedResource Include="Controls\periodSearchControl.resx">
       <DependentUpon>periodSearchControl.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ASB\frmBOR.resx">
+      <DependentUpon>frmBOR.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ASB\frmBORPopup.resx">
+      <DependentUpon>frmBORPopup.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\ASB\frmCheckListPopUp.resx">
       <DependentUpon>frmCheckListPopUp.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\ASB\frmDepartmentPopUp.resx">
       <DependentUpon>frmDepartmentPopUp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ASB\frmShift.resx">
+      <DependentUpon>frmShift.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ASB\frmShiftPopUp.resx">
+      <DependentUpon>frmShiftPopUp.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\ASB\frmUserPopUp.resx">
       <DependentUpon>frmUserPopUp.cs</DependentUpon>
@@ -505,12 +529,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\CHH\frmPDStockPopUp.resx">
       <DependentUpon>frmPDStockPopUp.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Forms\ASB\frmProcess.resx">
-      <DependentUpon>frmProcess.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Forms\ASB\frmProcessPopUp.resx">
-      <DependentUpon>frmProcessPopUp.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\CHH\frmProductManagePopUp.resx">
       <DependentUpon>frmProductManagePopUp.cs</DependentUpon>

@@ -31,6 +31,7 @@ namespace Team6_UMB.Forms.ASB
         {
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.comboBox2 = new System.Windows.Forms.ComboBox();
             this.button1 = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
@@ -39,7 +40,6 @@ namespace Team6_UMB.Forms.ASB
             this.btnAllButtons1 = new Team6_UMB.Controls.btnAllButtons();
             this.label1 = new System.Windows.Forms.Label();
             this.dgvPrice = new Team6_UMB.DGV_Custom();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
             this.w_id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.w_name = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.w_address = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -64,6 +64,14 @@ namespace Team6_UMB.Forms.ASB
             this.groupBox1.Size = new System.Drawing.Size(1511, 50);
             this.groupBox1.TabIndex = 29;
             this.groupBox1.TabStop = false;
+            // 
+            // comboBox2
+            // 
+            this.comboBox2.FormattingEnabled = true;
+            this.comboBox2.Location = new System.Drawing.Point(344, 17);
+            this.comboBox2.Name = "comboBox2";
+            this.comboBox2.Size = new System.Drawing.Size(121, 20);
+            this.comboBox2.TabIndex = 30;
             // 
             // button1
             // 
@@ -167,14 +175,6 @@ namespace Team6_UMB.Forms.ASB
             this.dgvPrice.Size = new System.Drawing.Size(1511, 829);
             this.dgvPrice.TabIndex = 30;
             // 
-            // comboBox2
-            // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(344, 17);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(121, 20);
-            this.comboBox2.TabIndex = 30;
-            // 
             // w_id
             // 
             this.w_id.HeaderText = "창고 ID";
@@ -215,7 +215,7 @@ namespace Team6_UMB.Forms.ASB
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1503, 872);
+            this.ClientSize = new System.Drawing.Size(1535, 950);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.dgvPrice);

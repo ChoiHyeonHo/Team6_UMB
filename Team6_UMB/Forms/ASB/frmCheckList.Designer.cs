@@ -31,6 +31,8 @@ namespace Team6_UMB.Forms.ASB
         {
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.comboBox3 = new System.Windows.Forms.ComboBox();
+            this.comboBox2 = new System.Windows.Forms.ComboBox();
             this.button1 = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -38,8 +40,6 @@ namespace Team6_UMB.Forms.ASB
             this.btnAllButtons1 = new Team6_UMB.Controls.btnAllButtons();
             this.label1 = new System.Windows.Forms.Label();
             this.dgvPrice = new Team6_UMB.DGV_Custom();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.comboBox3 = new System.Windows.Forms.ComboBox();
             this.cl_id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cl_name = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.product_id = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -64,6 +64,22 @@ namespace Team6_UMB.Forms.ASB
             this.groupBox1.Size = new System.Drawing.Size(1511, 50);
             this.groupBox1.TabIndex = 26;
             this.groupBox1.TabStop = false;
+            // 
+            // comboBox3
+            // 
+            this.comboBox3.FormattingEnabled = true;
+            this.comboBox3.Location = new System.Drawing.Point(358, 17);
+            this.comboBox3.Name = "comboBox3";
+            this.comboBox3.Size = new System.Drawing.Size(145, 20);
+            this.comboBox3.TabIndex = 31;
+            // 
+            // comboBox2
+            // 
+            this.comboBox2.FormattingEnabled = true;
+            this.comboBox2.Location = new System.Drawing.Point(89, 17);
+            this.comboBox2.Name = "comboBox2";
+            this.comboBox2.Size = new System.Drawing.Size(145, 20);
+            this.comboBox2.TabIndex = 30;
             // 
             // button1
             // 
@@ -159,22 +175,6 @@ namespace Team6_UMB.Forms.ASB
             this.dgvPrice.Size = new System.Drawing.Size(1511, 829);
             this.dgvPrice.TabIndex = 27;
             // 
-            // comboBox2
-            // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(89, 17);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(145, 20);
-            this.comboBox2.TabIndex = 30;
-            // 
-            // comboBox3
-            // 
-            this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Location = new System.Drawing.Point(358, 17);
-            this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(145, 20);
-            this.comboBox3.TabIndex = 31;
-            // 
             // cl_id
             // 
             this.cl_id.HeaderText = "검사항목ID";
@@ -215,7 +215,7 @@ namespace Team6_UMB.Forms.ASB
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1519, 911);
+            this.ClientSize = new System.Drawing.Size(1535, 950);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.dgvPrice);

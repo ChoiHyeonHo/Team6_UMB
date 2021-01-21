@@ -43,8 +43,6 @@ namespace Team6_UMB.Forms
             this.m_id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.m_name = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.m_info = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.m_time = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.process_id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.m_comment = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.m_yn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.m_uadmin = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -162,8 +160,6 @@ namespace Team6_UMB.Forms
             this.m_id,
             this.m_name,
             this.m_info,
-            this.m_time,
-            this.process_id,
             this.m_comment,
             this.m_yn,
             this.m_uadmin,
@@ -193,16 +189,6 @@ namespace Team6_UMB.Forms
             // 
             this.m_info.HeaderText = "설비정보";
             this.m_info.Name = "m_info";
-            // 
-            // m_time
-            // 
-            this.m_time.HeaderText = "TACTTIME(sec)";
-            this.m_time.Name = "m_time";
-            // 
-            // process_id
-            // 
-            this.process_id.HeaderText = "공정코드 ID";
-            this.process_id.Name = "process_id";
             // 
             // m_comment
             // 
@@ -260,8 +246,6 @@ namespace Team6_UMB.Forms
         private System.Windows.Forms.DataGridViewTextBoxColumn m_id;
         private System.Windows.Forms.DataGridViewTextBoxColumn m_name;
         private System.Windows.Forms.DataGridViewTextBoxColumn m_info;
-        private System.Windows.Forms.DataGridViewTextBoxColumn m_time;
-        private System.Windows.Forms.DataGridViewTextBoxColumn process_id;
         private System.Windows.Forms.DataGridViewTextBoxColumn m_comment;
         private System.Windows.Forms.DataGridViewTextBoxColumn m_yn;
         private System.Windows.Forms.DataGridViewTextBoxColumn m_uadmin;

@@ -8,11 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Team6_UMB.Forms
+namespace Team6_UMB.Forms.ASB
 {
-    public partial class frmProcess : Form
+    public partial class frmShift : Form
     {
-        public frmProcess()
+        public frmShift()
         {
             InitializeComponent();
         }
