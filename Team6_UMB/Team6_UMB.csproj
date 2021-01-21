@@ -111,6 +111,48 @@
     <Compile Include="Controls\periodSearchControl.designer.cs">
       <DependentUpon>periodSearchControl.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\ASB\frmCheckListPopUp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ASB\frmCheckListPopUp.Designer.cs">
+      <DependentUpon>frmCheckListPopUp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ASB\frmDepartmentPopUp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ASB\frmDepartmentPopUp.Designer.cs">
+      <DependentUpon>frmDepartmentPopUp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ASB\frmUserPopUp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ASB\frmUserPopUp.Designer.cs">
+      <DependentUpon>frmUserPopUp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ASB\frmCheckList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ASB\frmCheckList.Designer.cs">
+      <DependentUpon>frmCheckList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ASB\frmDepartment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ASB\frmDepartment.Designer.cs">
+      <DependentUpon>frmDepartment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ASB\frmUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ASB\frmUser.Designer.cs">
+      <DependentUpon>frmUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ASB\frmWarehouse.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ASB\frmWarehouse.Designer.cs">
+      <DependentUpon>frmWarehouse.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\ChamGo.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -370,6 +412,27 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Controls\periodSearchControl.resx">
       <DependentUpon>periodSearchControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ASB\frmCheckListPopUp.resx">
+      <DependentUpon>frmCheckListPopUp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ASB\frmDepartmentPopUp.resx">
+      <DependentUpon>frmDepartmentPopUp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ASB\frmUserPopUp.resx">
+      <DependentUpon>frmUserPopUp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ASB\frmCheckList.resx">
+      <DependentUpon>frmCheckList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ASB\frmDepartment.resx">
+      <DependentUpon>frmDepartment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ASB\frmUser.resx">
+      <DependentUpon>frmUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ASB\frmWarehouse.resx">
+      <DependentUpon>frmWarehouse.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\ChamGo.resx">
       <DependentUpon>ChamGo.cs</DependentUpon>
