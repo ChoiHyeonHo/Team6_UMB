@@ -262,6 +262,7 @@ namespace Team6_UMB.Forms
             this.btnSearchExcelPrint1.Name = "btnSearchExcelPrint1";
             this.btnSearchExcelPrint1.Size = new System.Drawing.Size(226, 35);
             this.btnSearchExcelPrint1.TabIndex = 2;
+            this.btnSearchExcelPrint1.btnSearch_Event += new System.EventHandler(this.btnSearchExcelPrint1_btnSearch_Event);
             // 
             // frmPDStock
             // 
