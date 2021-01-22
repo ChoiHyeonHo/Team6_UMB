@@ -1,0 +1,71 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    <!-- 합쳐지고 최소화된 최신 CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+    <!-- 부가적인 테마 -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
+    <!-- 합쳐지고 최소화된 최신 자바스크립트 -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+</head>
+<body>
+    <nav class="navbar navbar-light" style="background-color: #0B173B;">
+        <div class="container-fluid">
+            <a class="navbar-brand" style="color:white;" href="#">TEAM6_UMB</a>
+        </div>
+    </nav>
+
+    <div class="container">
+
+        <h2>좌측 탭</h2>
+
+        <div class="col-sm-3">
+            <ul id="myTab2" class="nav nav-tabs tabs-left" role="tablist">
+                <li role="presentation" class=""><a href="#home2" id="home-tab2" role="tab" data-toggle="tab" aria-controls="home2" aria-expanded="false">홈</a></li>
+                <li role="presentation" class="active"><a href="#profile2" role="tab" id="profile-tab2" data-toggle="tab" aria-controls="profile2" aria-expanded="true">프로필</a></li>
+                <li role="presentation" class="dropdown">
+                    <a href="#" id="myTabDrop2" class="dropdown-toggle" data-toggle="dropdown" aria-controls="myTabDrop1-contents2">Dropdown <span class="caret"></span></a>
+                    <ul class="dropdown-menu" role="menu" aria-labelledby="myTabDrop2" id="myTabDrop1-contents2">
+                    </ul>
+                </li>
+            </ul>
+        </div>
+
+        <div class="col-xs-3">
+            <!-- required for floating -->
+            <!-- Nav tabs -->
+            <ul class="nav nav-tabs tabs-left">
+                <li class="active"><a href="#home" data-toggle="tab">Home</a></li>
+                <li><a href="#profile" data-toggle="tab">Profile</a></li>
+                <li><a href="#messages" data-toggle="tab">Messages</a></li>
+                <li><a href="#settings" data-toggle="tab">Settings</a></li>
+            </ul>
+        </div>
+
+        <div class="col-xs-9">
+            <!-- Tab panes -->
+            <div class="tab-content">
+                <div class="tab-pane active" id="home">Home Tab.</div>
+                <div class="tab-pane" id="profile">Profile Tab.</div>
+                <div class="tab-pane" id="messages">Messages Tab.</div>
+                <div class="tab-pane" id="settings">Settings Tab.</div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="btn-group-vertical">
+                <button type="button" class="btn btn-secondary">Main</button>
+                <button type="button" class="btn btn-secondary">Working</button>
+                <button type="button" class="btn btn-secondary">Order</button>
+            </div>
+            <div class="row panel">
+                <div class="col-xs-9">
+                    @RenderBody()
+                </div>
+            </div>
+        </div>
+</body>
+</html>

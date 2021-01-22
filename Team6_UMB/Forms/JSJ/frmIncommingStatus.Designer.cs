@@ -29,9 +29,14 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmIncommingStatus));
             this.dgV_Custom1 = new Team6_UMB.DGV_Custom();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
@@ -42,13 +47,9 @@
             this.maskedTextBox2 = new System.Windows.Forms.MaskedTextBox();
             this.button3 = new System.Windows.Forms.Button();
             this.maskedTextBox1 = new System.Windows.Forms.MaskedTextBox();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
             this.btnExcel = new System.Windows.Forms.Button();
+            this.btnCreate = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgV_Custom1)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -56,10 +57,12 @@
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.btnCreate);
             this.panel1.Controls.Add(this.btnExcel);
             this.panel1.Size = new System.Drawing.Size(1510, 35);
             this.panel1.Controls.SetChildIndex(this.label1, 0);
             this.panel1.Controls.SetChildIndex(this.btnExcel, 0);
+            this.panel1.Controls.SetChildIndex(this.btnCreate, 0);
             // 
             // label1
             // 
@@ -72,14 +75,14 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dgV_Custom1.BackgroundColor = System.Drawing.Color.White;
             this.dgV_Custom1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("나눔바른고딕", 9F);
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgV_Custom1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("나눔바른고딕", 9F);
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgV_Custom1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgV_Custom1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgV_Custom1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column1,
@@ -97,6 +100,36 @@
             this.dgV_Custom1.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.dgV_Custom1.Size = new System.Drawing.Size(1510, 826);
             this.dgV_Custom1.TabIndex = 33;
+            // 
+            // Column1
+            // 
+            this.Column1.HeaderText = "입고ID";
+            this.Column1.Name = "Column1";
+            this.Column1.Width = 200;
+            // 
+            // Column2
+            // 
+            this.Column2.HeaderText = "업체";
+            this.Column2.Name = "Column2";
+            this.Column2.Width = 300;
+            // 
+            // Column3
+            // 
+            this.Column3.HeaderText = "품목";
+            this.Column3.Name = "Column3";
+            this.Column3.Width = 300;
+            // 
+            // Column5
+            // 
+            this.Column5.HeaderText = "입고수량";
+            this.Column5.Name = "Column5";
+            this.Column5.Width = 200;
+            // 
+            // Column6
+            // 
+            this.Column6.HeaderText = "입고일";
+            this.Column6.Name = "Column6";
+            this.Column6.Width = 250;
             // 
             // groupBox1
             // 
@@ -202,36 +235,6 @@
             this.maskedTextBox1.Size = new System.Drawing.Size(176, 22);
             this.maskedTextBox1.TabIndex = 1;
             // 
-            // Column1
-            // 
-            this.Column1.HeaderText = "입고ID";
-            this.Column1.Name = "Column1";
-            this.Column1.Width = 200;
-            // 
-            // Column2
-            // 
-            this.Column2.HeaderText = "업체";
-            this.Column2.Name = "Column2";
-            this.Column2.Width = 300;
-            // 
-            // Column3
-            // 
-            this.Column3.HeaderText = "품목";
-            this.Column3.Name = "Column3";
-            this.Column3.Width = 300;
-            // 
-            // Column5
-            // 
-            this.Column5.HeaderText = "입고수량";
-            this.Column5.Name = "Column5";
-            this.Column5.Width = 200;
-            // 
-            // Column6
-            // 
-            this.Column6.HeaderText = "입고일";
-            this.Column6.Name = "Column6";
-            this.Column6.Width = 250;
-            // 
             // imageList1
             // 
             this.imageList1.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imageList1.ImageStream")));
@@ -258,6 +261,23 @@
             this.btnExcel.Text = "엑셀";
             this.btnExcel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnExcel.UseVisualStyleBackColor = true;
+            // 
+            // btnCreate
+            // 
+            this.btnCreate.FlatAppearance.BorderColor = System.Drawing.Color.DimGray;
+            this.btnCreate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCreate.Font = new System.Drawing.Font("나눔바른고딕", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.btnCreate.ForeColor = System.Drawing.Color.White;
+            this.btnCreate.ImageAlign = System.Drawing.ContentAlignment.BottomRight;
+            this.btnCreate.ImageIndex = 2;
+            this.btnCreate.ImageList = this.imageList1;
+            this.btnCreate.Location = new System.Drawing.Point(1338, 3);
+            this.btnCreate.Name = "btnCreate";
+            this.btnCreate.Size = new System.Drawing.Size(94, 28);
+            this.btnCreate.TabIndex = 34;
+            this.btnCreate.Text = "이력조회";
+            this.btnCreate.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnCreate.UseVisualStyleBackColor = true;
             // 
             // frmIncommingStatus
             // 
@@ -299,5 +319,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
         private System.Windows.Forms.ImageList imageList1;
         private System.Windows.Forms.Button btnExcel;
+        private System.Windows.Forms.Button btnCreate;
     }
 }
