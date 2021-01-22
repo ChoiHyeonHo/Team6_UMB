@@ -43,17 +43,20 @@
             this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnAllButtons1 = new Team6_UMB.Controls.btnAllButtons();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.label6 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgV_Custom1)).BeginInit();
+            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
-            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.panel1.Controls.Add(this.btnAllButtons1);
-            this.panel1.Location = new System.Drawing.Point(12, 12);
-            this.panel1.Size = new System.Drawing.Size(1510, 35);
+            this.panel1.Size = new System.Drawing.Size(1511, 35);
             this.panel1.Controls.SetChildIndex(this.label1, 0);
             this.panel1.Controls.SetChildIndex(this.btnAllButtons1, 0);
             // 
@@ -64,52 +67,56 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.maskedTextBox2);
             this.groupBox1.Controls.Add(this.button3);
             this.groupBox1.Controls.Add(this.maskedTextBox1);
-            this.groupBox1.Location = new System.Drawing.Point(12, 53);
+            this.groupBox1.Location = new System.Drawing.Point(12, 57);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(1510, 45);
+            this.groupBox1.Size = new System.Drawing.Size(1511, 50);
             this.groupBox1.TabIndex = 24;
             this.groupBox1.TabStop = false;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("나눔바른고딕", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label3.Location = new System.Drawing.Point(240, 18);
+            this.label3.Font = new System.Drawing.Font("나눔바른고딕", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label3.Location = new System.Drawing.Point(240, 19);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(43, 15);
+            this.label3.Size = new System.Drawing.Size(49, 17);
             this.label3.TabIndex = 0;
             this.label3.Text = "발주ID";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("나눔바른고딕", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label2.Location = new System.Drawing.Point(6, 18);
+            this.label2.Font = new System.Drawing.Font("나눔바른고딕", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label2.Location = new System.Drawing.Point(6, 19);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(31, 15);
+            this.label2.Size = new System.Drawing.Size(34, 17);
             this.label2.TabIndex = 0;
             this.label2.Text = "업체";
             // 
             // maskedTextBox2
             // 
-            this.maskedTextBox2.Location = new System.Drawing.Point(289, 16);
+            this.maskedTextBox2.Font = new System.Drawing.Font("나눔바른고딕", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.maskedTextBox2.Location = new System.Drawing.Point(289, 15);
             this.maskedTextBox2.Name = "maskedTextBox2";
-            this.maskedTextBox2.Size = new System.Drawing.Size(176, 21);
+            this.maskedTextBox2.Size = new System.Drawing.Size(176, 25);
             this.maskedTextBox2.TabIndex = 1;
             // 
             // button3
             // 
+            this.button3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.button3.BackgroundImage = global::Team6_UMB.Properties.Resources.Search;
             this.button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.button3.FlatAppearance.BorderSize = 0;
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Location = new System.Drawing.Point(471, 10);
+            this.button3.Location = new System.Drawing.Point(471, 13);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(34, 30);
             this.button3.TabIndex = 22;
@@ -117,14 +124,16 @@
             // 
             // maskedTextBox1
             // 
-            this.maskedTextBox1.Location = new System.Drawing.Point(43, 16);
+            this.maskedTextBox1.Font = new System.Drawing.Font("나눔바른고딕", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.maskedTextBox1.Location = new System.Drawing.Point(43, 15);
             this.maskedTextBox1.Name = "maskedTextBox1";
-            this.maskedTextBox1.Size = new System.Drawing.Size(176, 21);
+            this.maskedTextBox1.Size = new System.Drawing.Size(176, 25);
             this.maskedTextBox1.TabIndex = 1;
             // 
             // dgV_Custom1
             // 
-            this.dgV_Custom1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            this.dgV_Custom1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dgV_Custom1.BackgroundColor = System.Drawing.Color.White;
             this.dgV_Custom1.BorderStyle = System.Windows.Forms.BorderStyle.None;
@@ -146,13 +155,13 @@
             this.Column5});
             this.dgV_Custom1.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.dgV_Custom1.GridColor = System.Drawing.Color.LightGray;
-            this.dgV_Custom1.Location = new System.Drawing.Point(12, 114);
+            this.dgV_Custom1.Location = new System.Drawing.Point(12, 141);
             this.dgV_Custom1.Margin = new System.Windows.Forms.Padding(4, 1, 4, 1);
             this.dgV_Custom1.MinimumSize = new System.Drawing.Size(150, 150);
             this.dgV_Custom1.Name = "dgV_Custom1";
             this.dgV_Custom1.RowTemplate.Height = 23;
             this.dgV_Custom1.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.dgV_Custom1.Size = new System.Drawing.Size(1510, 826);
+            this.dgV_Custom1.Size = new System.Drawing.Size(1510, 800);
             this.dgV_Custom1.TabIndex = 25;
             // 
             // Column1
@@ -199,22 +208,47 @@
             this.btnAllButtons1.Size = new System.Drawing.Size(377, 33);
             this.btnAllButtons1.TabIndex = 2;
             // 
+            // panel2
+            // 
+            this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel2.BackColor = System.Drawing.Color.Gainsboro;
+            this.panel2.Controls.Add(this.label6);
+            this.panel2.Location = new System.Drawing.Point(12, 106);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(1511, 35);
+            this.panel2.TabIndex = 45;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("나눔바른고딕", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label6.Location = new System.Drawing.Point(12, 9);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(70, 17);
+            this.label6.TabIndex = 22;
+            this.label6.Text = "BOM 목록";
+            // 
             // frmOrderStatus
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1535, 950);
+            this.Controls.Add(this.panel2);
             this.Controls.Add(this.dgV_Custom1);
             this.Controls.Add(this.groupBox1);
             this.Name = "frmOrderStatus";
             this.Controls.SetChildIndex(this.panel1, 0);
             this.Controls.SetChildIndex(this.groupBox1, 0);
             this.Controls.SetChildIndex(this.dgV_Custom1, 0);
+            this.Controls.SetChildIndex(this.panel2, 0);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgV_Custom1)).EndInit();
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -235,5 +269,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Label label6;
     }
 }

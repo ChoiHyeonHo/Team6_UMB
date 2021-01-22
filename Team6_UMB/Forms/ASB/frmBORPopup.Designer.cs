@@ -45,6 +45,7 @@ namespace Team6_UMB.Forms.ASB
             this.comboBox4 = new System.Windows.Forms.ComboBox();
             this.comboBox2 = new System.Windows.Forms.ComboBox();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.button3 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -52,7 +53,10 @@ namespace Team6_UMB.Forms.ASB
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.button3);
             this.panel1.Size = new System.Drawing.Size(425, 35);
+            this.panel1.Controls.SetChildIndex(this.label1, 0);
+            this.panel1.Controls.SetChildIndex(this.button3, 0);
             // 
             // label1
             // 
@@ -245,6 +249,19 @@ namespace Team6_UMB.Forms.ASB
             this.comboBox1.Size = new System.Drawing.Size(263, 26);
             this.comboBox1.TabIndex = 64;
             // 
+            // button3
+            // 
+            this.button3.BackColor = System.Drawing.Color.Transparent;
+            this.button3.BackgroundImage = global::Team6_UMB.Properties.Resources.Close;
+            this.button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.button3.FlatAppearance.BorderSize = 0;
+            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button3.Location = new System.Drawing.Point(393, 7);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(29, 23);
+            this.button3.TabIndex = 46;
+            this.button3.UseVisualStyleBackColor = false;
+            // 
             // frmBORPopup
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
@@ -252,6 +269,7 @@ namespace Team6_UMB.Forms.ASB
             this.ClientSize = new System.Drawing.Size(452, 501);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.groupBox1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmBORPopup";
             this.Text = "frmBorPopUp";
             this.Controls.SetChildIndex(this.groupBox1, 0);
@@ -284,5 +302,6 @@ namespace Team6_UMB.Forms.ASB
         private System.Windows.Forms.ComboBox comboBox4;
         private System.Windows.Forms.ComboBox comboBox2;
         private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.Button button3;
     }
 }

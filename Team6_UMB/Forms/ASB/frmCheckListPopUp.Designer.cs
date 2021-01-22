@@ -33,14 +33,15 @@ namespace Team6_UMB.Forms.ASB
             this.btnUpdate = new System.Windows.Forms.Button();
             this.btnCreate = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.textBox10 = new System.Windows.Forms.TextBox();
+            this.label13 = new System.Windows.Forms.Label();
+            this.textBox2 = new System.Windows.Forms.TextBox();
             this.comboBox2 = new System.Windows.Forms.ComboBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox10 = new System.Windows.Forms.TextBox();
-            this.label13 = new System.Windows.Forms.Label();
+            this.button3 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -48,11 +49,14 @@ namespace Team6_UMB.Forms.ASB
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.button3);
             this.panel1.Size = new System.Drawing.Size(397, 35);
+            this.panel1.Controls.SetChildIndex(this.label1, 0);
+            this.panel1.Controls.SetChildIndex(this.button3, 0);
             // 
             // label1
             // 
-            this.label1.Size = new System.Drawing.Size(108, 25);
+            this.label1.Size = new System.Drawing.Size(124, 24);
             this.label1.Text = "검사항목정보";
             // 
             // panel2
@@ -105,6 +109,34 @@ namespace Team6_UMB.Forms.ASB
             this.groupBox1.Size = new System.Drawing.Size(397, 288);
             this.groupBox1.TabIndex = 20;
             this.groupBox1.TabStop = false;
+            // 
+            // textBox10
+            // 
+            this.textBox10.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.textBox10.Location = new System.Drawing.Point(89, 148);
+            this.textBox10.Multiline = true;
+            this.textBox10.Name = "textBox10";
+            this.textBox10.Size = new System.Drawing.Size(285, 120);
+            this.textBox10.TabIndex = 65;
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label13.ForeColor = System.Drawing.Color.Black;
+            this.label13.Location = new System.Drawing.Point(12, 148);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(34, 18);
+            this.label13.TabIndex = 64;
+            this.label13.Text = "비고";
+            // 
+            // textBox2
+            // 
+            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.textBox2.Location = new System.Drawing.Point(89, 102);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(285, 24);
+            this.textBox2.TabIndex = 43;
             // 
             // comboBox2
             // 
@@ -159,33 +191,18 @@ namespace Team6_UMB.Forms.ASB
             this.label2.TabIndex = 22;
             this.label2.Text = "검사항목명";
             // 
-            // textBox2
+            // button3
             // 
-            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.textBox2.Location = new System.Drawing.Point(89, 102);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(285, 24);
-            this.textBox2.TabIndex = 43;
-            // 
-            // textBox10
-            // 
-            this.textBox10.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.textBox10.Location = new System.Drawing.Point(89, 148);
-            this.textBox10.Multiline = true;
-            this.textBox10.Name = "textBox10";
-            this.textBox10.Size = new System.Drawing.Size(285, 120);
-            this.textBox10.TabIndex = 65;
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label13.ForeColor = System.Drawing.Color.Black;
-            this.label13.Location = new System.Drawing.Point(12, 148);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(34, 18);
-            this.label13.TabIndex = 64;
-            this.label13.Text = "비고";
+            this.button3.BackColor = System.Drawing.Color.Transparent;
+            this.button3.BackgroundImage = global::Team6_UMB.Properties.Resources.Close;
+            this.button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.button3.FlatAppearance.BorderSize = 0;
+            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button3.Location = new System.Drawing.Point(365, 7);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(29, 23);
+            this.button3.TabIndex = 46;
+            this.button3.UseVisualStyleBackColor = false;
             // 
             // frmCheckListPopUp
             // 
@@ -193,6 +210,7 @@ namespace Team6_UMB.Forms.ASB
             this.ClientSize = new System.Drawing.Size(421, 410);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.groupBox1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmCheckListPopUp";
             this.Text = "frmCheckListPopUp";
             this.Controls.SetChildIndex(this.panel1, 0);
@@ -221,5 +239,6 @@ namespace Team6_UMB.Forms.ASB
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.TextBox textBox10;
         private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Button button3;
     }
 }

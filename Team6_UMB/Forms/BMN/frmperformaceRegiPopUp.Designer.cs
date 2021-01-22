@@ -52,14 +52,15 @@ namespace Team6_UMB.Forms.BMN
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
+            this.button3 = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.btnUpdate = new System.Windows.Forms.Button();
             this.btnCreate = new System.Windows.Forms.Button();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
-            this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
+            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -318,44 +319,10 @@ namespace Team6_UMB.Forms.BMN
             this.label2.TabIndex = 25;
             this.label2.Text = "제품명";
             // 
-            // panel2
-            // 
-            this.panel2.Controls.Add(this.btnUpdate);
-            this.panel2.Controls.Add(this.btnCreate);
-            this.panel2.Location = new System.Drawing.Point(231, 318);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(162, 40);
-            this.panel2.TabIndex = 18;
-            // 
-            // btnUpdate
-            // 
-            this.btnUpdate.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(52)))), ((int)(((byte)(79)))));
-            this.btnUpdate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnUpdate.Font = new System.Drawing.Font("나눔바른고딕", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.btnUpdate.ForeColor = System.Drawing.Color.White;
-            this.btnUpdate.Location = new System.Drawing.Point(84, 7);
-            this.btnUpdate.Name = "btnUpdate";
-            this.btnUpdate.Size = new System.Drawing.Size(75, 30);
-            this.btnUpdate.TabIndex = 18;
-            this.btnUpdate.Text = "수정";
-            this.btnUpdate.UseVisualStyleBackColor = false;
-            // 
-            // btnCreate
-            // 
-            this.btnCreate.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(52)))), ((int)(((byte)(79)))));
-            this.btnCreate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCreate.Font = new System.Drawing.Font("나눔바른고딕", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.btnCreate.ForeColor = System.Drawing.Color.White;
-            this.btnCreate.Location = new System.Drawing.Point(3, 7);
-            this.btnCreate.Name = "btnCreate";
-            this.btnCreate.Size = new System.Drawing.Size(75, 30);
-            this.btnCreate.TabIndex = 0;
-            this.btnCreate.Text = "등록";
-            this.btnCreate.UseVisualStyleBackColor = false;
-            // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(52)))), ((int)(((byte)(79)))));
+            this.panel1.Controls.Add(this.button3);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Location = new System.Drawing.Point(12, 12);
             this.panel1.Name = "panel1";
@@ -373,24 +340,72 @@ namespace Team6_UMB.Forms.BMN
             this.label1.TabIndex = 1;
             this.label1.Text = "생산실적 등록/수정";
             // 
+            // button3
+            // 
+            this.button3.BackColor = System.Drawing.Color.Transparent;
+            this.button3.BackgroundImage = global::Team6_UMB.Properties.Resources.Close;
+            this.button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.button3.FlatAppearance.BorderSize = 0;
+            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button3.Location = new System.Drawing.Point(548, 7);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(29, 23);
+            this.button3.TabIndex = 46;
+            this.button3.UseVisualStyleBackColor = false;
+            // 
+            // panel2
+            // 
+            this.panel2.Controls.Add(this.btnUpdate);
+            this.panel2.Controls.Add(this.btnCreate);
+            this.panel2.Location = new System.Drawing.Point(219, 321);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(162, 40);
+            this.panel2.TabIndex = 47;
+            // 
+            // btnUpdate
+            // 
+            this.btnUpdate.BackColor = System.Drawing.Color.Gray;
+            this.btnUpdate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnUpdate.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.btnUpdate.ForeColor = System.Drawing.Color.White;
+            this.btnUpdate.Location = new System.Drawing.Point(84, 4);
+            this.btnUpdate.Name = "btnUpdate";
+            this.btnUpdate.Size = new System.Drawing.Size(75, 34);
+            this.btnUpdate.TabIndex = 18;
+            this.btnUpdate.Text = "취소";
+            this.btnUpdate.UseVisualStyleBackColor = false;
+            // 
+            // btnCreate
+            // 
+            this.btnCreate.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(52)))), ((int)(((byte)(79)))));
+            this.btnCreate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCreate.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.btnCreate.ForeColor = System.Drawing.Color.White;
+            this.btnCreate.Location = new System.Drawing.Point(3, 4);
+            this.btnCreate.Name = "btnCreate";
+            this.btnCreate.Size = new System.Drawing.Size(75, 34);
+            this.btnCreate.TabIndex = 0;
+            this.btnCreate.Text = "저장";
+            this.btnCreate.UseVisualStyleBackColor = false;
+            // 
             // frmperformaceRegiPopUp
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.White;
+            this.BackColor = System.Drawing.Color.WhiteSmoke;
             this.ClientSize = new System.Drawing.Size(610, 370);
+            this.Controls.Add(this.panel2);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.panel2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmperformaceRegiPopUp";
             this.Text = "frmperformaceRegipop";
             this.Load += new System.EventHandler(this.frmperformaceRegiPopUp_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            this.panel2.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            this.panel2.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -413,9 +428,6 @@ namespace Team6_UMB.Forms.BMN
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Button btnUpdate;
-        private System.Windows.Forms.Button btnCreate;
         protected System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DateTimePicker dateTimePicker3;
@@ -425,5 +437,9 @@ namespace Team6_UMB.Forms.BMN
         private System.Windows.Forms.DateTimePicker dateTimePicker5;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Button btnUpdate;
+        private System.Windows.Forms.Button btnCreate;
     }
 }

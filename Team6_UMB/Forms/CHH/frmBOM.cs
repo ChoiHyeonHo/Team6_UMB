@@ -8,7 +8,7 @@ using System.Windows.Forms;
 
 namespace Team6_UMB.Forms
 {
-    public partial class frmBOM : Team6_UMB.frmDetail
+    public partial class frmBOM : Team6_UMB.frmBaseList
     {
         string headerName;
         public frmBOM()

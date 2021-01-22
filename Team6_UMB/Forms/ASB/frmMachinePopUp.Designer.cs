@@ -45,6 +45,7 @@ namespace Team6_UMB.Forms
             this.label3 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
+            this.button3 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -52,11 +53,14 @@ namespace Team6_UMB.Forms
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.button3);
             this.panel1.Size = new System.Drawing.Size(489, 35);
+            this.panel1.Controls.SetChildIndex(this.label1, 0);
+            this.panel1.Controls.SetChildIndex(this.button3, 0);
             // 
             // label1
             // 
-            this.label1.Size = new System.Drawing.Size(82, 25);
+            this.label1.Size = new System.Drawing.Size(91, 24);
             this.label1.Text = "설비 정보";
             // 
             // panel2
@@ -134,11 +138,11 @@ namespace Team6_UMB.Forms
             // label13
             // 
             this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label13.Font = new System.Drawing.Font("나눔바른고딕", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label13.ForeColor = System.Drawing.Color.Black;
             this.label13.Location = new System.Drawing.Point(12, 238);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(34, 18);
+            this.label13.Size = new System.Drawing.Size(34, 17);
             this.label13.TabIndex = 64;
             this.label13.Text = "비고";
             // 
@@ -177,44 +181,44 @@ namespace Team6_UMB.Forms
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label7.Font = new System.Drawing.Font("나눔바른고딕", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.RoyalBlue;
             this.label7.Location = new System.Drawing.Point(10, 195);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(60, 18);
+            this.label7.Size = new System.Drawing.Size(60, 17);
             this.label7.TabIndex = 33;
             this.label7.Text = "사용유무";
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label6.Font = new System.Drawing.Font("나눔바른고딕", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.RoyalBlue;
             this.label6.Location = new System.Drawing.Point(10, 151);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(47, 18);
+            this.label6.Size = new System.Drawing.Size(47, 17);
             this.label6.TabIndex = 31;
             this.label6.Text = "수정일";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label5.Font = new System.Drawing.Font("나눔바른고딕", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.RoyalBlue;
             this.label5.Location = new System.Drawing.Point(10, 105);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(47, 18);
+            this.label5.Size = new System.Drawing.Size(47, 17);
             this.label5.TabIndex = 29;
             this.label5.Text = "설비명";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label3.Font = new System.Drawing.Font("나눔바른고딕", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.RoyalBlue;
             this.label3.Location = new System.Drawing.Point(10, 60);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(60, 18);
+            this.label3.Size = new System.Drawing.Size(60, 17);
             this.label3.TabIndex = 25;
             this.label3.Text = "설비정보";
             // 
@@ -229,20 +233,35 @@ namespace Team6_UMB.Forms
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label2.Font = new System.Drawing.Font("나눔바른고딕", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.RoyalBlue;
             this.label2.Location = new System.Drawing.Point(10, 17);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(48, 18);
+            this.label2.Size = new System.Drawing.Size(49, 17);
             this.label2.TabIndex = 22;
             this.label2.Text = "설비ID";
+            // 
+            // button3
+            // 
+            this.button3.BackColor = System.Drawing.Color.Transparent;
+            this.button3.BackgroundImage = global::Team6_UMB.Properties.Resources.Close;
+            this.button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.button3.FlatAppearance.BorderSize = 0;
+            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button3.Location = new System.Drawing.Point(457, 7);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(29, 23);
+            this.button3.TabIndex = 46;
+            this.button3.UseVisualStyleBackColor = false;
             // 
             // frmMachinePopUp
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
+            this.BackColor = System.Drawing.Color.WhiteSmoke;
             this.ClientSize = new System.Drawing.Size(510, 451);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.groupBox1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmMachinePopUp";
             this.Text = "frmMachinePopUp";
             this.Controls.SetChildIndex(this.panel1, 0);
@@ -275,5 +294,6 @@ namespace Team6_UMB.Forms
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.TextBox textBox10;
         private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Button button3;
     }
 }

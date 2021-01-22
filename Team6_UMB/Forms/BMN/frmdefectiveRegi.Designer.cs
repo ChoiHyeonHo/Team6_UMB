@@ -59,10 +59,12 @@ namespace Team6_UMB.Forms.BMN
             // 
             // panel1
             // 
+            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(52)))), ((int)(((byte)(79)))));
             this.panel1.Controls.Add(this.btnAllButtons1);
             this.panel1.Controls.Add(this.label1);
-            this.panel1.Location = new System.Drawing.Point(11, 11);
+            this.panel1.Location = new System.Drawing.Point(12, 16);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1511, 35);
             this.panel1.TabIndex = 40;
@@ -90,19 +92,23 @@ namespace Team6_UMB.Forms.BMN
             // 
             // panel2
             // 
+            this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.panel2.BackColor = System.Drawing.Color.Gainsboro;
             this.panel2.Controls.Add(this.label5);
-            this.panel2.Location = new System.Drawing.Point(12, 95);
+            this.panel2.Location = new System.Drawing.Point(12, 106);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1511, 35);
             this.panel2.TabIndex = 42;
             // 
             // groupBox1
             // 
+            this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox1.Controls.Add(this.button1);
             this.groupBox1.Controls.Add(this.textBox2);
             this.groupBox1.Controls.Add(this.label4);
-            this.groupBox1.Location = new System.Drawing.Point(12, 48);
+            this.groupBox1.Location = new System.Drawing.Point(12, 57);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(1511, 50);
             this.groupBox1.TabIndex = 41;
@@ -156,13 +162,13 @@ namespace Team6_UMB.Forms.BMN
             this.Column2});
             this.dgV_Custom1.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.dgV_Custom1.GridColor = System.Drawing.Color.LightGray;
-            this.dgV_Custom1.Location = new System.Drawing.Point(12, 134);
+            this.dgV_Custom1.Location = new System.Drawing.Point(12, 141);
             this.dgV_Custom1.Margin = new System.Windows.Forms.Padding(4, 1, 4, 1);
             this.dgV_Custom1.MinimumSize = new System.Drawing.Size(150, 150);
             this.dgV_Custom1.Name = "dgV_Custom1";
             this.dgV_Custom1.RowTemplate.Height = 23;
             this.dgV_Custom1.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.dgV_Custom1.Size = new System.Drawing.Size(1511, 805);
+            this.dgV_Custom1.Size = new System.Drawing.Size(1510, 800);
             this.dgV_Custom1.TabIndex = 43;
             // 
             // Column1

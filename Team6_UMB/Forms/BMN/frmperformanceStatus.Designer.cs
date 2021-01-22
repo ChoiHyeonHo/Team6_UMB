@@ -48,14 +48,12 @@ namespace Team6_UMB.Forms.BMN
             this.label1 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.button2 = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnUpdate = new System.Windows.Forms.Button();
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
             this.btnDelete = new System.Windows.Forms.Button();
             this.btnExcel = new System.Windows.Forms.Button();
             this.btnPrint = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -72,6 +70,9 @@ namespace Team6_UMB.Forms.BMN
             // 
             // dgV_Custom1
             // 
+            this.dgV_Custom1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.dgV_Custom1.BackgroundColor = System.Drawing.Color.White;
             this.dgV_Custom1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
@@ -98,13 +99,13 @@ namespace Team6_UMB.Forms.BMN
             this.Column8});
             this.dgV_Custom1.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.dgV_Custom1.GridColor = System.Drawing.Color.LightGray;
-            this.dgV_Custom1.Location = new System.Drawing.Point(12, 135);
+            this.dgV_Custom1.Location = new System.Drawing.Point(12, 141);
             this.dgV_Custom1.Margin = new System.Windows.Forms.Padding(4, 1, 4, 1);
             this.dgV_Custom1.MinimumSize = new System.Drawing.Size(150, 150);
             this.dgV_Custom1.Name = "dgV_Custom1";
             this.dgV_Custom1.RowTemplate.Height = 23;
             this.dgV_Custom1.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.dgV_Custom1.Size = new System.Drawing.Size(1511, 805);
+            this.dgV_Custom1.Size = new System.Drawing.Size(1510, 800);
             this.dgV_Custom1.TabIndex = 38;
             // 
             // Column3
@@ -190,34 +191,26 @@ namespace Team6_UMB.Forms.BMN
             // 
             // panel2
             // 
+            this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.panel2.BackColor = System.Drawing.Color.Gainsboro;
             this.panel2.Controls.Add(this.label5);
-            this.panel2.Location = new System.Drawing.Point(13, 96);
+            this.panel2.Location = new System.Drawing.Point(12, 106);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1511, 35);
             this.panel2.TabIndex = 37;
             // 
-            // button2
-            // 
-            this.button2.BackgroundImage = global::Team6_UMB.Properties.Resources.Search;
-            this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Location = new System.Drawing.Point(353, 13);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(34, 30);
-            this.button2.TabIndex = 21;
-            this.button2.UseVisualStyleBackColor = true;
-            // 
             // panel1
             // 
+            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(52)))), ((int)(((byte)(79)))));
             this.panel1.Controls.Add(this.btnUpdate);
             this.panel1.Controls.Add(this.btnDelete);
             this.panel1.Controls.Add(this.btnExcel);
             this.panel1.Controls.Add(this.btnPrint);
             this.panel1.Controls.Add(this.label1);
-            this.panel1.Location = new System.Drawing.Point(12, 12);
+            this.panel1.Location = new System.Drawing.Point(12, 16);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1511, 35);
             this.panel1.TabIndex = 35;
@@ -300,22 +293,10 @@ namespace Team6_UMB.Forms.BMN
             this.btnPrint.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnPrint.UseVisualStyleBackColor = true;
             // 
-            // button1
-            // 
-            this.button1.BackgroundImage = global::Team6_UMB.Properties.Resources.Search;
-            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Location = new System.Drawing.Point(650, 12);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(34, 30);
-            this.button1.TabIndex = 21;
-            this.button1.UseVisualStyleBackColor = true;
-            // 
             // textBox2
             // 
             this.textBox2.Font = new System.Drawing.Font("나눔바른고딕", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.textBox2.Location = new System.Drawing.Point(478, 15);
+            this.textBox2.Location = new System.Drawing.Point(472, 15);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(164, 25);
             this.textBox2.TabIndex = 25;
@@ -324,7 +305,7 @@ namespace Team6_UMB.Forms.BMN
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("나눔바른고딕", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label4.Location = new System.Drawing.Point(412, 18);
+            this.label4.Location = new System.Drawing.Point(412, 19);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(47, 17);
             this.label4.TabIndex = 24;
@@ -334,7 +315,7 @@ namespace Team6_UMB.Forms.BMN
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("나눔바른고딕", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label2.Location = new System.Drawing.Point(14, 18);
+            this.label2.Location = new System.Drawing.Point(6, 19);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(34, 17);
             this.label2.TabIndex = 21;
@@ -346,23 +327,23 @@ namespace Team6_UMB.Forms.BMN
             this.periodSearchControl1.dtFrom = "2021-01-11";
             this.periodSearchControl1.dtTo = "2021-01-18";
             this.periodSearchControl1.Font = new System.Drawing.Font("돋움", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.periodSearchControl1.Location = new System.Drawing.Point(46, 13);
+            this.periodSearchControl1.Location = new System.Drawing.Point(46, 14);
             this.periodSearchControl1.Name = "periodSearchControl1";
             this.periodSearchControl1.Size = new System.Drawing.Size(301, 29);
             this.periodSearchControl1.TabIndex = 0;
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.button2);
+            this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox1.Controls.Add(this.button3);
-            this.groupBox1.Controls.Add(this.button1);
             this.groupBox1.Controls.Add(this.textBox1);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.textBox2);
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.periodSearchControl1);
-            this.groupBox1.Location = new System.Drawing.Point(13, 49);
+            this.groupBox1.Location = new System.Drawing.Point(12, 57);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(1511, 50);
             this.groupBox1.TabIndex = 36;
@@ -383,7 +364,7 @@ namespace Team6_UMB.Forms.BMN
             // textBox1
             // 
             this.textBox1.Font = new System.Drawing.Font("나눔바른고딕", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.textBox1.Location = new System.Drawing.Point(763, 15);
+            this.textBox1.Location = new System.Drawing.Point(761, 15);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(164, 25);
             this.textBox1.TabIndex = 25;
@@ -392,7 +373,7 @@ namespace Team6_UMB.Forms.BMN
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("나눔바른고딕", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label3.Location = new System.Drawing.Point(697, 18);
+            this.label3.Location = new System.Drawing.Point(697, 19);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(47, 17);
             this.label3.TabIndex = 24;
@@ -428,9 +409,7 @@ namespace Team6_UMB.Forms.BMN
         protected System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Button button2;
         protected System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label2;

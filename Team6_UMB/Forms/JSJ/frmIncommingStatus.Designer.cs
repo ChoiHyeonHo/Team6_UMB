@@ -38,9 +38,7 @@
             this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.label4 = new System.Windows.Forms.Label();
+            this.periodSearchControl1 = new PJT_Olive.Control.PeriodSearchControl();
             this.label3 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -50,16 +48,21 @@
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
             this.btnExcel = new System.Windows.Forms.Button();
             this.btnCreate = new System.Windows.Forms.Button();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.label6 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgV_Custom1)).BeginInit();
             this.groupBox1.SuspendLayout();
+            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
+            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.panel1.Controls.Add(this.btnCreate);
             this.panel1.Controls.Add(this.btnExcel);
-            this.panel1.Size = new System.Drawing.Size(1510, 35);
+            this.panel1.Size = new System.Drawing.Size(1511, 35);
             this.panel1.Controls.SetChildIndex(this.label1, 0);
             this.panel1.Controls.SetChildIndex(this.btnExcel, 0);
             this.panel1.Controls.SetChildIndex(this.btnCreate, 0);
@@ -71,7 +74,8 @@
             // 
             // dgV_Custom1
             // 
-            this.dgV_Custom1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            this.dgV_Custom1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dgV_Custom1.BackgroundColor = System.Drawing.Color.White;
             this.dgV_Custom1.BorderStyle = System.Windows.Forms.BorderStyle.None;
@@ -92,13 +96,13 @@
             this.Column6});
             this.dgV_Custom1.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.dgV_Custom1.GridColor = System.Drawing.Color.LightGray;
-            this.dgV_Custom1.Location = new System.Drawing.Point(12, 118);
+            this.dgV_Custom1.Location = new System.Drawing.Point(12, 141);
             this.dgV_Custom1.Margin = new System.Windows.Forms.Padding(4, 1, 4, 1);
             this.dgV_Custom1.MinimumSize = new System.Drawing.Size(150, 150);
             this.dgV_Custom1.Name = "dgV_Custom1";
             this.dgV_Custom1.RowTemplate.Height = 23;
             this.dgV_Custom1.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.dgV_Custom1.Size = new System.Drawing.Size(1510, 826);
+            this.dgV_Custom1.Size = new System.Drawing.Size(1510, 800);
             this.dgV_Custom1.TabIndex = 33;
             // 
             // Column1
@@ -133,10 +137,9 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.groupBox1.Controls.Add(this.dateTimePicker2);
-            this.groupBox1.Controls.Add(this.dateTimePicker1);
-            this.groupBox1.Controls.Add(this.label4);
+            this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupBox1.Controls.Add(this.periodSearchControl1);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.label5);
             this.groupBox1.Controls.Add(this.label2);
@@ -145,83 +148,68 @@
             this.groupBox1.Controls.Add(this.maskedTextBox1);
             this.groupBox1.Location = new System.Drawing.Point(12, 57);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(1510, 45);
+            this.groupBox1.Size = new System.Drawing.Size(1511, 50);
             this.groupBox1.TabIndex = 32;
             this.groupBox1.TabStop = false;
             // 
-            // dateTimePicker2
+            // periodSearchControl1
             // 
-            this.dateTimePicker2.Font = new System.Drawing.Font("나눔바른고딕", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.dateTimePicker2.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker2.Location = new System.Drawing.Point(666, 16);
-            this.dateTimePicker2.Name = "dateTimePicker2";
-            this.dateTimePicker2.Size = new System.Drawing.Size(100, 22);
-            this.dateTimePicker2.TabIndex = 23;
-            // 
-            // dateTimePicker1
-            // 
-            this.dateTimePicker1.Font = new System.Drawing.Font("나눔바른고딕", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker1.Location = new System.Drawing.Point(538, 16);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(100, 22);
-            this.dateTimePicker1.TabIndex = 23;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("나눔바른고딕", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label4.Location = new System.Drawing.Point(644, 19);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(16, 15);
-            this.label4.TabIndex = 0;
-            this.label4.Text = "~";
+            this.periodSearchControl1.DateType = "";
+            this.periodSearchControl1.dtFrom = "2021-01-11";
+            this.periodSearchControl1.dtTo = "2021-01-18";
+            this.periodSearchControl1.Font = new System.Drawing.Font("돋움", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.periodSearchControl1.Location = new System.Drawing.Point(530, 14);
+            this.periodSearchControl1.Name = "periodSearchControl1";
+            this.periodSearchControl1.Size = new System.Drawing.Size(301, 29);
+            this.periodSearchControl1.TabIndex = 23;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("나눔바른고딕", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label3.Location = new System.Drawing.Point(477, 18);
+            this.label3.Font = new System.Drawing.Font("나눔바른고딕", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label3.Location = new System.Drawing.Point(477, 19);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(43, 15);
+            this.label3.Size = new System.Drawing.Size(47, 17);
             this.label3.TabIndex = 0;
             this.label3.Text = "입고일";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("나눔바른고딕", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label5.Font = new System.Drawing.Font("나눔바른고딕", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.label5.Location = new System.Drawing.Point(243, 17);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(31, 15);
+            this.label5.Size = new System.Drawing.Size(34, 17);
             this.label5.TabIndex = 0;
             this.label5.Text = "품목";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("나눔바른고딕", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label2.Location = new System.Drawing.Point(10, 17);
+            this.label2.Font = new System.Drawing.Font("나눔바른고딕", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label2.Location = new System.Drawing.Point(6, 19);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(31, 15);
+            this.label2.Size = new System.Drawing.Size(34, 17);
             this.label2.TabIndex = 0;
             this.label2.Text = "업체";
             // 
             // maskedTextBox2
             // 
-            this.maskedTextBox2.Font = new System.Drawing.Font("나눔바른고딕", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.maskedTextBox2.Font = new System.Drawing.Font("나눔바른고딕", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.maskedTextBox2.Location = new System.Drawing.Point(280, 15);
             this.maskedTextBox2.Name = "maskedTextBox2";
-            this.maskedTextBox2.Size = new System.Drawing.Size(176, 22);
+            this.maskedTextBox2.Size = new System.Drawing.Size(176, 25);
             this.maskedTextBox2.TabIndex = 1;
             // 
             // button3
             // 
+            this.button3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.button3.BackgroundImage = global::Team6_UMB.Properties.Resources.Search;
             this.button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.button3.FlatAppearance.BorderSize = 0;
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Location = new System.Drawing.Point(783, 10);
+            this.button3.Location = new System.Drawing.Point(834, 13);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(34, 30);
             this.button3.TabIndex = 22;
@@ -229,10 +217,10 @@
             // 
             // maskedTextBox1
             // 
-            this.maskedTextBox1.Font = new System.Drawing.Font("나눔바른고딕", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.maskedTextBox1.Location = new System.Drawing.Point(47, 15);
+            this.maskedTextBox1.Font = new System.Drawing.Font("나눔바른고딕", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.maskedTextBox1.Location = new System.Drawing.Point(41, 15);
             this.maskedTextBox1.Name = "maskedTextBox1";
-            this.maskedTextBox1.Size = new System.Drawing.Size(176, 22);
+            this.maskedTextBox1.Size = new System.Drawing.Size(176, 25);
             this.maskedTextBox1.TabIndex = 1;
             // 
             // imageList1
@@ -279,22 +267,47 @@
             this.btnCreate.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnCreate.UseVisualStyleBackColor = true;
             // 
+            // panel2
+            // 
+            this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel2.BackColor = System.Drawing.Color.Gainsboro;
+            this.panel2.Controls.Add(this.label6);
+            this.panel2.Location = new System.Drawing.Point(12, 106);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(1511, 35);
+            this.panel2.TabIndex = 45;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("나눔바른고딕", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label6.Location = new System.Drawing.Point(12, 9);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(70, 17);
+            this.label6.TabIndex = 22;
+            this.label6.Text = "BOM 목록";
+            // 
             // frmIncommingStatus
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1535, 950);
+            this.Controls.Add(this.panel2);
             this.Controls.Add(this.dgV_Custom1);
             this.Controls.Add(this.groupBox1);
             this.Name = "frmIncommingStatus";
             this.Controls.SetChildIndex(this.panel1, 0);
             this.Controls.SetChildIndex(this.groupBox1, 0);
             this.Controls.SetChildIndex(this.dgV_Custom1, 0);
+            this.Controls.SetChildIndex(this.panel2, 0);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgV_Custom1)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -303,9 +316,6 @@
 
         private DGV_Custom dgV_Custom1;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.DateTimePicker dateTimePicker2;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
-        private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label2;
@@ -320,5 +330,8 @@
         private System.Windows.Forms.ImageList imageList1;
         private System.Windows.Forms.Button btnExcel;
         private System.Windows.Forms.Button btnCreate;
+        private PJT_Olive.Control.PeriodSearchControl periodSearchControl1;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Label label6;
     }
 }

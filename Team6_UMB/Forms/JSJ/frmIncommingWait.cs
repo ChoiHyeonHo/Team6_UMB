@@ -8,7 +8,7 @@ using System.Windows.Forms;
 
 namespace Team6_UMB.Forms
 {
-    public partial class frmIncommingWait : Team6_UMB.BaseForm.frmList
+    public partial class frmIncommingWait : Team6_UMB.frmBaseList
     {
         public frmIncommingWait()
         {

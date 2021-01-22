@@ -57,13 +57,18 @@ namespace Team6_UMB.Forms
             this.label4 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.label8 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgV_Custom1)).BeginInit();
             this.groupBox1.SuspendLayout();
+            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
+            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.panel1.Controls.Add(this.btnAllButtons1);
             this.panel1.Size = new System.Drawing.Size(1511, 35);
             this.panel1.Controls.SetChildIndex(this.label1, 0);
@@ -87,6 +92,9 @@ namespace Team6_UMB.Forms
             // 
             // dgV_Custom1
             // 
+            this.dgV_Custom1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.dgV_Custom1.BackgroundColor = System.Drawing.Color.White;
             this.dgV_Custom1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
@@ -112,13 +120,13 @@ namespace Team6_UMB.Forms
             this.Column10});
             this.dgV_Custom1.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.dgV_Custom1.GridColor = System.Drawing.Color.LightGray;
-            this.dgV_Custom1.Location = new System.Drawing.Point(11, 111);
+            this.dgV_Custom1.Location = new System.Drawing.Point(12, 141);
             this.dgV_Custom1.Margin = new System.Windows.Forms.Padding(4, 1, 4, 1);
             this.dgV_Custom1.MinimumSize = new System.Drawing.Size(150, 150);
             this.dgV_Custom1.Name = "dgV_Custom1";
             this.dgV_Custom1.RowTemplate.Height = 23;
             this.dgV_Custom1.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.dgV_Custom1.Size = new System.Drawing.Size(1511, 829);
+            this.dgV_Custom1.Size = new System.Drawing.Size(1510, 800);
             this.dgV_Custom1.TabIndex = 17;
             // 
             // Column1
@@ -188,6 +196,8 @@ namespace Team6_UMB.Forms
             // 
             // groupBox1
             // 
+            this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox1.Controls.Add(this.comboBox4);
             this.groupBox1.Controls.Add(this.label7);
             this.groupBox1.Controls.Add(this.comboBox3);
@@ -211,7 +221,7 @@ namespace Team6_UMB.Forms
             // 
             this.comboBox4.Font = new System.Drawing.Font("나눔바른고딕", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.comboBox4.FormattingEnabled = true;
-            this.comboBox4.Location = new System.Drawing.Point(1328, 14);
+            this.comboBox4.Location = new System.Drawing.Point(1328, 15);
             this.comboBox4.Name = "comboBox4";
             this.comboBox4.Size = new System.Drawing.Size(137, 25);
             this.comboBox4.TabIndex = 33;
@@ -220,7 +230,7 @@ namespace Team6_UMB.Forms
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("나눔바른고딕", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label7.Location = new System.Drawing.Point(1262, 18);
+            this.label7.Location = new System.Drawing.Point(1262, 19);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(60, 17);
             this.label7.TabIndex = 32;
@@ -230,7 +240,7 @@ namespace Team6_UMB.Forms
             // 
             this.comboBox3.Font = new System.Drawing.Font("나눔바른고딕", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Location = new System.Drawing.Point(1065, 14);
+            this.comboBox3.Location = new System.Drawing.Point(1065, 15);
             this.comboBox3.Name = "comboBox3";
             this.comboBox3.Size = new System.Drawing.Size(162, 25);
             this.comboBox3.TabIndex = 31;
@@ -239,7 +249,7 @@ namespace Team6_UMB.Forms
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("나눔바른고딕", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label6.Location = new System.Drawing.Point(1024, 18);
+            this.label6.Location = new System.Drawing.Point(1024, 19);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(34, 17);
             this.label6.TabIndex = 30;
@@ -249,7 +259,7 @@ namespace Team6_UMB.Forms
             // 
             this.comboBox2.Font = new System.Drawing.Font("나눔바른고딕", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(818, 14);
+            this.comboBox2.Location = new System.Drawing.Point(818, 15);
             this.comboBox2.Name = "comboBox2";
             this.comboBox2.Size = new System.Drawing.Size(162, 25);
             this.comboBox2.TabIndex = 29;
@@ -258,7 +268,7 @@ namespace Team6_UMB.Forms
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("나눔바른고딕", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label5.Location = new System.Drawing.Point(777, 18);
+            this.label5.Location = new System.Drawing.Point(777, 19);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(34, 17);
             this.label5.TabIndex = 28;
@@ -268,7 +278,7 @@ namespace Team6_UMB.Forms
             // 
             this.comboBox1.Font = new System.Drawing.Font("나눔바른고딕", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(335, 14);
+            this.comboBox1.Location = new System.Drawing.Point(334, 15);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(162, 25);
             this.comboBox1.TabIndex = 27;
@@ -277,7 +287,7 @@ namespace Team6_UMB.Forms
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("나눔바른고딕", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label2.Location = new System.Drawing.Point(269, 18);
+            this.label2.Location = new System.Drawing.Point(265, 19);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(60, 17);
             this.label2.TabIndex = 26;
@@ -285,6 +295,8 @@ namespace Team6_UMB.Forms
             // 
             // button1
             // 
+            this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.button1.BackgroundImage = global::Team6_UMB.Properties.Resources.Search;
             this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.button1.FlatAppearance.BorderSize = 0;
@@ -298,7 +310,7 @@ namespace Team6_UMB.Forms
             // textBox2
             // 
             this.textBox2.Font = new System.Drawing.Font("나눔바른고딕", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.textBox2.Location = new System.Drawing.Point(573, 14);
+            this.textBox2.Location = new System.Drawing.Point(573, 15);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(164, 25);
             this.textBox2.TabIndex = 25;
@@ -307,7 +319,7 @@ namespace Team6_UMB.Forms
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("나눔바른고딕", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label4.Location = new System.Drawing.Point(520, 17);
+            this.label4.Location = new System.Drawing.Point(520, 19);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(47, 17);
             this.label4.TabIndex = 24;
@@ -316,7 +328,7 @@ namespace Team6_UMB.Forms
             // textBox1
             // 
             this.textBox1.Font = new System.Drawing.Font("나눔바른고딕", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.textBox1.Location = new System.Drawing.Point(65, 14);
+            this.textBox1.Location = new System.Drawing.Point(60, 15);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(180, 25);
             this.textBox1.TabIndex = 23;
@@ -325,16 +337,38 @@ namespace Team6_UMB.Forms
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("나눔바른고딕", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label3.Location = new System.Drawing.Point(12, 18);
+            this.label3.Location = new System.Drawing.Point(6, 19);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(47, 17);
             this.label3.TabIndex = 22;
             this.label3.Text = "제품명";
             // 
+            // panel2
+            // 
+            this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel2.BackColor = System.Drawing.Color.Gainsboro;
+            this.panel2.Controls.Add(this.label8);
+            this.panel2.Location = new System.Drawing.Point(12, 106);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(1511, 35);
+            this.panel2.TabIndex = 43;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("나눔바른고딕", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label8.Location = new System.Drawing.Point(12, 9);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(115, 17);
+            this.label8.TabIndex = 22;
+            this.label8.Text = "불량관리 등록내역";
+            // 
             // frmProductManage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.ClientSize = new System.Drawing.Size(1535, 950);
+            this.Controls.Add(this.panel2);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.dgV_Custom1);
             this.Name = "frmProductManage";
@@ -342,11 +376,14 @@ namespace Team6_UMB.Forms
             this.Controls.SetChildIndex(this.panel1, 0);
             this.Controls.SetChildIndex(this.dgV_Custom1, 0);
             this.Controls.SetChildIndex(this.groupBox1, 0);
+            this.Controls.SetChildIndex(this.panel2, 0);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgV_Custom1)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -380,5 +417,7 @@ namespace Team6_UMB.Forms
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Label label8;
     }
 }

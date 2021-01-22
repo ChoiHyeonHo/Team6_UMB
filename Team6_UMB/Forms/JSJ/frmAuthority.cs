@@ -8,7 +8,7 @@ using System.Windows.Forms;
 
 namespace Team6_UMB.Forms
 {
-    public partial class frmAuthority : Team6_UMB.frmListList
+    public partial class frmAuthority : Team6_UMB.frmBaseList
     {
         public frmAuthority()
         {

@@ -11,7 +11,6 @@ namespace Team6_UMB.Forms
     public partial class frmProductManage : Team6_UMB.frmBaseList
     {
         string headerName;
-        bool bFlag;
         public frmProductManage()
         {
             InitializeComponent();
@@ -34,10 +33,7 @@ namespace Team6_UMB.Forms
 
         private void frmProductManage_Load(object sender, EventArgs e)
         {
-            if (bFlag)
-            {
-                btnAllButtons1.btnCreate.Visible = false;
-            }
+
         }
     }
 }

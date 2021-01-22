@@ -38,11 +38,12 @@ namespace Team6_UMB.Forms.CHH
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.btnCreate = new System.Windows.Forms.Button();
             this.btnPrint = new System.Windows.Forms.Button();
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
             this.button3 = new System.Windows.Forms.Button();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.btnUpdate = new System.Windows.Forms.Button();
+            this.btnCreate = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_CheckList)).BeginInit();
             this.panel2.SuspendLayout();
@@ -122,28 +123,6 @@ namespace Team6_UMB.Forms.CHH
             this.Column5.Name = "Column5";
             this.Column5.Width = 130;
             // 
-            // panel2
-            // 
-            this.panel2.Controls.Add(this.btnCreate);
-            this.panel2.Location = new System.Drawing.Point(315, 434);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(162, 33);
-            this.panel2.TabIndex = 20;
-            // 
-            // btnCreate
-            // 
-            this.btnCreate.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(52)))), ((int)(((byte)(79)))));
-            this.btnCreate.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnCreate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCreate.Font = new System.Drawing.Font("나눔바른고딕", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.btnCreate.ForeColor = System.Drawing.Color.White;
-            this.btnCreate.Location = new System.Drawing.Point(0, 0);
-            this.btnCreate.Name = "btnCreate";
-            this.btnCreate.Size = new System.Drawing.Size(162, 33);
-            this.btnCreate.TabIndex = 0;
-            this.btnCreate.Text = "확인";
-            this.btnCreate.UseVisualStyleBackColor = false;
-            // 
             // btnPrint
             // 
             this.btnPrint.FlatAppearance.BorderColor = System.Drawing.Color.DimGray;
@@ -181,6 +160,41 @@ namespace Team6_UMB.Forms.CHH
             this.button3.UseVisualStyleBackColor = false;
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
+            // panel2
+            // 
+            this.panel2.Controls.Add(this.btnUpdate);
+            this.panel2.Controls.Add(this.btnCreate);
+            this.panel2.Location = new System.Drawing.Point(321, 429);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(162, 40);
+            this.panel2.TabIndex = 25;
+            // 
+            // btnUpdate
+            // 
+            this.btnUpdate.BackColor = System.Drawing.Color.Gray;
+            this.btnUpdate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnUpdate.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.btnUpdate.ForeColor = System.Drawing.Color.White;
+            this.btnUpdate.Location = new System.Drawing.Point(84, 4);
+            this.btnUpdate.Name = "btnUpdate";
+            this.btnUpdate.Size = new System.Drawing.Size(75, 34);
+            this.btnUpdate.TabIndex = 18;
+            this.btnUpdate.Text = "취소";
+            this.btnUpdate.UseVisualStyleBackColor = false;
+            // 
+            // btnCreate
+            // 
+            this.btnCreate.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(52)))), ((int)(((byte)(79)))));
+            this.btnCreate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCreate.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.btnCreate.ForeColor = System.Drawing.Color.White;
+            this.btnCreate.Location = new System.Drawing.Point(3, 4);
+            this.btnCreate.Name = "btnCreate";
+            this.btnCreate.Size = new System.Drawing.Size(75, 34);
+            this.btnCreate.TabIndex = 0;
+            this.btnCreate.Text = "저장";
+            this.btnCreate.UseVisualStyleBackColor = false;
+            // 
             // frmImpInspecPopUp
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
@@ -209,10 +223,11 @@ namespace Team6_UMB.Forms.CHH
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
-        private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Button btnCreate;
         private System.Windows.Forms.Button btnPrint;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.ImageList imageList1;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Button btnUpdate;
+        private System.Windows.Forms.Button btnCreate;
     }
 }

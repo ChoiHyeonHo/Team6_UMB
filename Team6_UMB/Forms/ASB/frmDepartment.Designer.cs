@@ -42,17 +42,22 @@ namespace Team6_UMB.Forms.ASB
             this.department_name = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.department_uadmin = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.department_udate = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.label6 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPrice)).BeginInit();
+            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
+            this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox1.Controls.Add(this.button1);
             this.groupBox1.Controls.Add(this.textBox1);
             this.groupBox1.Controls.Add(this.label3);
-            this.groupBox1.Location = new System.Drawing.Point(12, 53);
+            this.groupBox1.Location = new System.Drawing.Point(12, 57);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(1511, 50);
             this.groupBox1.TabIndex = 29;
@@ -60,11 +65,13 @@ namespace Team6_UMB.Forms.ASB
             // 
             // button1
             // 
+            this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.button1.BackgroundImage = global::Team6_UMB.Properties.Resources.Search;
             this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.button1.FlatAppearance.BorderSize = 0;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Location = new System.Drawing.Point(249, 10);
+            this.button1.Location = new System.Drawing.Point(249, 13);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(34, 30);
             this.button1.TabIndex = 21;
@@ -72,28 +79,30 @@ namespace Team6_UMB.Forms.ASB
             // 
             // textBox1
             // 
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.textBox1.Location = new System.Drawing.Point(63, 16);
+            this.textBox1.Font = new System.Drawing.Font("나눔바른고딕", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox1.Location = new System.Drawing.Point(63, 15);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(180, 24);
+            this.textBox1.Size = new System.Drawing.Size(180, 25);
             this.textBox1.TabIndex = 23;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label3.Location = new System.Drawing.Point(10, 19);
+            this.label3.Font = new System.Drawing.Font("나눔바른고딕", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(6, 19);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(47, 18);
+            this.label3.Size = new System.Drawing.Size(47, 17);
             this.label3.TabIndex = 22;
             this.label3.Text = "부서명";
             // 
             // panel1
             // 
+            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(52)))), ((int)(((byte)(79)))));
             this.panel1.Controls.Add(this.btnAllButtons1);
             this.panel1.Controls.Add(this.label1);
-            this.panel1.Location = new System.Drawing.Point(12, 12);
+            this.panel1.Location = new System.Drawing.Point(12, 16);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1511, 35);
             this.panel1.TabIndex = 28;
@@ -110,16 +119,19 @@ namespace Team6_UMB.Forms.ASB
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label1.Font = new System.Drawing.Font("나눔바른고딕", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.Location = new System.Drawing.Point(10, 7);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(76, 25);
+            this.label1.Size = new System.Drawing.Size(86, 24);
             this.label1.TabIndex = 1;
             this.label1.Text = "부서관리";
             // 
             // dgvPrice
             // 
+            this.dgvPrice.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvPrice.BackgroundColor = System.Drawing.Color.White;
             this.dgvPrice.BorderStyle = System.Windows.Forms.BorderStyle.None;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
@@ -138,13 +150,13 @@ namespace Team6_UMB.Forms.ASB
             this.department_udate});
             this.dgvPrice.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.dgvPrice.GridColor = System.Drawing.Color.LightGray;
-            this.dgvPrice.Location = new System.Drawing.Point(11, 107);
+            this.dgvPrice.Location = new System.Drawing.Point(12, 141);
             this.dgvPrice.Margin = new System.Windows.Forms.Padding(4, 1, 4, 1);
             this.dgvPrice.MinimumSize = new System.Drawing.Size(150, 150);
             this.dgvPrice.Name = "dgvPrice";
             this.dgvPrice.RowTemplate.Height = 23;
             this.dgvPrice.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.dgvPrice.Size = new System.Drawing.Size(1511, 829);
+            this.dgvPrice.Size = new System.Drawing.Size(1510, 800);
             this.dgvPrice.TabIndex = 30;
             // 
             // department_id
@@ -167,12 +179,34 @@ namespace Team6_UMB.Forms.ASB
             this.department_udate.HeaderText = "수정일";
             this.department_udate.Name = "department_udate";
             // 
+            // panel2
+            // 
+            this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel2.BackColor = System.Drawing.Color.Gainsboro;
+            this.panel2.Controls.Add(this.label6);
+            this.panel2.Location = new System.Drawing.Point(12, 106);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(1511, 35);
+            this.panel2.TabIndex = 45;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("나눔바른고딕", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label6.Location = new System.Drawing.Point(12, 9);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(70, 17);
+            this.label6.TabIndex = 22;
+            this.label6.Text = "BOM 목록";
+            // 
             // frmDepartment
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1535, 950);
+            this.Controls.Add(this.panel2);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.dgvPrice);
@@ -184,6 +218,8 @@ namespace Team6_UMB.Forms.ASB
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPrice)).EndInit();
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -202,5 +238,7 @@ namespace Team6_UMB.Forms.ASB
         private System.Windows.Forms.DataGridViewTextBoxColumn department_name;
         private System.Windows.Forms.DataGridViewTextBoxColumn department_uadmin;
         private System.Windows.Forms.DataGridViewTextBoxColumn department_udate;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Label label6;
     }
 }

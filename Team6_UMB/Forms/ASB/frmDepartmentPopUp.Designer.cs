@@ -37,6 +37,7 @@ namespace Team6_UMB.Forms.ASB
             this.label13 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
+            this.button3 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -44,18 +45,21 @@ namespace Team6_UMB.Forms.ASB
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.button3);
             this.panel1.Size = new System.Drawing.Size(397, 35);
+            this.panel1.Controls.SetChildIndex(this.label1, 0);
+            this.panel1.Controls.SetChildIndex(this.button3, 0);
             // 
             // label1
             // 
-            this.label1.Size = new System.Drawing.Size(82, 25);
+            this.label1.Size = new System.Drawing.Size(91, 24);
             this.label1.Text = "부서 정보";
             // 
             // panel2
             // 
             this.panel2.Controls.Add(this.btnUpdate);
             this.panel2.Controls.Add(this.btnCreate);
-            this.panel2.Location = new System.Drawing.Point(112, 250);
+            this.panel2.Location = new System.Drawing.Point(130, 250);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(162, 44);
             this.panel2.TabIndex = 23;
@@ -137,12 +141,27 @@ namespace Team6_UMB.Forms.ASB
             this.label2.TabIndex = 22;
             this.label2.Text = "부서명";
             // 
+            // button3
+            // 
+            this.button3.BackColor = System.Drawing.Color.Transparent;
+            this.button3.BackgroundImage = global::Team6_UMB.Properties.Resources.Close;
+            this.button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.button3.FlatAppearance.BorderSize = 0;
+            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button3.Location = new System.Drawing.Point(365, 7);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(29, 23);
+            this.button3.TabIndex = 46;
+            this.button3.UseVisualStyleBackColor = false;
+            // 
             // frmDepartmentPopUp
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
-            this.ClientSize = new System.Drawing.Size(423, 310);
+            this.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.ClientSize = new System.Drawing.Size(420, 305);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.groupBox1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmDepartmentPopUp";
             this.Controls.SetChildIndex(this.panel1, 0);
             this.Controls.SetChildIndex(this.groupBox1, 0);
@@ -166,5 +185,6 @@ namespace Team6_UMB.Forms.ASB
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Button button3;
     }
 }

@@ -53,15 +53,20 @@ namespace Team6_UMB.Forms.CHH
             this.btnCheck = new System.Windows.Forms.Button();
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
             this.label5 = new System.Windows.Forms.Label();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.label6 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvIncommingList)).BeginInit();
+            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
+            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.panel1.Controls.Add(this.btnCheck);
-            this.panel1.Size = new System.Drawing.Size(1510, 35);
+            this.panel1.Size = new System.Drawing.Size(1511, 35);
             this.panel1.Controls.SetChildIndex(this.label1, 0);
             this.panel1.Controls.SetChildIndex(this.btnCheck, 0);
             // 
@@ -72,6 +77,8 @@ namespace Team6_UMB.Forms.CHH
             // 
             // groupBox1
             // 
+            this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox1.Controls.Add(this.comboBox1);
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.button1);
@@ -92,7 +99,7 @@ namespace Team6_UMB.Forms.CHH
             this.comboBox1.Items.AddRange(new object[] {
             "합격",
             "불합격"});
-            this.comboBox1.Location = new System.Drawing.Point(696, 14);
+            this.comboBox1.Location = new System.Drawing.Point(689, 15);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(121, 25);
             this.comboBox1.TabIndex = 25;
@@ -101,7 +108,7 @@ namespace Team6_UMB.Forms.CHH
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("나눔바른고딕", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label4.Location = new System.Drawing.Point(630, 17);
+            this.label4.Location = new System.Drawing.Point(622, 19);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(60, 17);
             this.label4.TabIndex = 24;
@@ -109,11 +116,13 @@ namespace Team6_UMB.Forms.CHH
             // 
             // button1
             // 
+            this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.button1.BackgroundImage = global::Team6_UMB.Properties.Resources.Search;
             this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.button1.FlatAppearance.BorderSize = 0;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Location = new System.Drawing.Point(1471, 13);
+            this.button1.Location = new System.Drawing.Point(816, 14);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(34, 30);
             this.button1.TabIndex = 21;
@@ -122,7 +131,7 @@ namespace Team6_UMB.Forms.CHH
             // textBox1
             // 
             this.textBox1.Font = new System.Drawing.Font("나눔바른고딕", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.textBox1.Location = new System.Drawing.Point(412, 14);
+            this.textBox1.Location = new System.Drawing.Point(414, 15);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(180, 25);
             this.textBox1.TabIndex = 23;
@@ -131,7 +140,7 @@ namespace Team6_UMB.Forms.CHH
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("나눔바른고딕", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label3.Location = new System.Drawing.Point(359, 17);
+            this.label3.Location = new System.Drawing.Point(361, 19);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(47, 17);
             this.label3.TabIndex = 22;
@@ -141,7 +150,7 @@ namespace Team6_UMB.Forms.CHH
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("나눔바른고딕", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label2.Location = new System.Drawing.Point(6, 17);
+            this.label2.Location = new System.Drawing.Point(6, 19);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(34, 17);
             this.label2.TabIndex = 21;
@@ -153,13 +162,16 @@ namespace Team6_UMB.Forms.CHH
             this.periodSearchControl1.dtFrom = "2021-01-11";
             this.periodSearchControl1.dtTo = "2021-01-18";
             this.periodSearchControl1.Font = new System.Drawing.Font("돋움", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.periodSearchControl1.Location = new System.Drawing.Point(41, 12);
+            this.periodSearchControl1.Location = new System.Drawing.Point(41, 15);
             this.periodSearchControl1.Name = "periodSearchControl1";
             this.periodSearchControl1.Size = new System.Drawing.Size(301, 29);
             this.periodSearchControl1.TabIndex = 0;
             // 
             // dgvIncommingList
             // 
+            this.dgvIncommingList.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvIncommingList.BackgroundColor = System.Drawing.Color.White;
             this.dgvIncommingList.BorderStyle = System.Windows.Forms.BorderStyle.None;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
@@ -183,13 +195,13 @@ namespace Team6_UMB.Forms.CHH
             this.Column8});
             this.dgvIncommingList.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.dgvIncommingList.GridColor = System.Drawing.Color.LightGray;
-            this.dgvIncommingList.Location = new System.Drawing.Point(12, 111);
+            this.dgvIncommingList.Location = new System.Drawing.Point(12, 141);
             this.dgvIncommingList.Margin = new System.Windows.Forms.Padding(4, 1, 4, 1);
             this.dgvIncommingList.MinimumSize = new System.Drawing.Size(150, 150);
             this.dgvIncommingList.Name = "dgvIncommingList";
             this.dgvIncommingList.RowTemplate.Height = 23;
             this.dgvIncommingList.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.dgvIncommingList.Size = new System.Drawing.Size(1510, 829);
+            this.dgvIncommingList.Size = new System.Drawing.Size(1510, 800);
             this.dgvIncommingList.TabIndex = 25;
             // 
             // Column1
@@ -255,7 +267,7 @@ namespace Team6_UMB.Forms.CHH
             this.btnCheck.ImageAlign = System.Drawing.ContentAlignment.BottomRight;
             this.btnCheck.ImageIndex = 0;
             this.btnCheck.ImageList = this.imageList1;
-            this.btnCheck.Location = new System.Drawing.Point(1441, 0);
+            this.btnCheck.Location = new System.Drawing.Point(1442, 0);
             this.btnCheck.Name = "btnCheck";
             this.btnCheck.Size = new System.Drawing.Size(69, 35);
             this.btnCheck.TabIndex = 26;
@@ -274,16 +286,38 @@ namespace Team6_UMB.Forms.CHH
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("나눔바른고딕", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label5.Location = new System.Drawing.Point(400, 205);
+            this.label5.Location = new System.Drawing.Point(406, 384);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(191, 24);
             this.label5.TabIndex = 26;
             this.label5.Text = "입고 대기상태인 것만";
             // 
+            // panel2
+            // 
+            this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel2.BackColor = System.Drawing.Color.Gainsboro;
+            this.panel2.Controls.Add(this.label6);
+            this.panel2.Location = new System.Drawing.Point(12, 106);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(1511, 35);
+            this.panel2.TabIndex = 43;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("나눔바른고딕", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label6.Location = new System.Drawing.Point(12, 9);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(115, 17);
+            this.label6.TabIndex = 22;
+            this.label6.Text = "불량관리 등록내역";
+            // 
             // frmImportInspection
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.ClientSize = new System.Drawing.Size(1535, 950);
+            this.Controls.Add(this.panel2);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.dgvIncommingList);
@@ -292,11 +326,14 @@ namespace Team6_UMB.Forms.CHH
             this.Controls.SetChildIndex(this.dgvIncommingList, 0);
             this.Controls.SetChildIndex(this.groupBox1, 0);
             this.Controls.SetChildIndex(this.label5, 0);
+            this.Controls.SetChildIndex(this.panel2, 0);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvIncommingList)).EndInit();
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -325,5 +362,7 @@ namespace Team6_UMB.Forms.CHH
         private System.Windows.Forms.Button btnCheck;
         private System.Windows.Forms.ImageList imageList1;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Label label6;
     }
 }
