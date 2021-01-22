@@ -31,7 +31,6 @@ namespace Team6_UMB.Forms
         {
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            this.btnAllButtons1 = new Team6_UMB.Controls.btnAllButtons();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.button1 = new System.Windows.Forms.Button();
@@ -58,6 +57,7 @@ namespace Team6_UMB.Forms
             this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label6 = new System.Windows.Forms.Label();
+            this.newBtns1 = new Team6_UMB.Controls.NewBtns();
             this.panel1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgV_Custom2)).BeginInit();
@@ -69,26 +69,15 @@ namespace Team6_UMB.Forms
             // 
             this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel1.Controls.Add(this.btnAllButtons1);
+            this.panel1.Controls.Add(this.newBtns1);
             this.panel1.Size = new System.Drawing.Size(1511, 35);
             this.panel1.Controls.SetChildIndex(this.label1, 0);
-            this.panel1.Controls.SetChildIndex(this.btnAllButtons1, 0);
+            this.panel1.Controls.SetChildIndex(this.newBtns1, 0);
             // 
             // label1
             // 
             this.label1.Size = new System.Drawing.Size(58, 24);
             this.label1.Text = "BOM";
-            // 
-            // btnAllButtons1
-            // 
-            this.btnAllButtons1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(52)))), ((int)(((byte)(79)))));
-            this.btnAllButtons1.Dock = System.Windows.Forms.DockStyle.Right;
-            this.btnAllButtons1.Location = new System.Drawing.Point(1134, 0);
-            this.btnAllButtons1.Name = "btnAllButtons1";
-            this.btnAllButtons1.Size = new System.Drawing.Size(377, 35);
-            this.btnAllButtons1.TabIndex = 2;
-            this.btnAllButtons1.btnCreate_Event += new System.EventHandler(this.btnAllButtons1_btnCreate_Event);
-            this.btnAllButtons1.btnUpdate_Event += new System.EventHandler(this.btnAllButtons1_btnUpdate_Event);
             // 
             // groupBox3
             // 
@@ -358,6 +347,15 @@ namespace Team6_UMB.Forms
             this.label6.TabIndex = 22;
             this.label6.Text = "BOM 목록";
             // 
+            // newBtns1
+            // 
+            this.newBtns1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(52)))), ((int)(((byte)(79)))));
+            this.newBtns1.Dock = System.Windows.Forms.DockStyle.Right;
+            this.newBtns1.Location = new System.Drawing.Point(741, 0);
+            this.newBtns1.Name = "newBtns1";
+            this.newBtns1.Size = new System.Drawing.Size(770, 35);
+            this.newBtns1.TabIndex = 2;
+            // 
             // frmBOM
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
@@ -385,8 +383,6 @@ namespace Team6_UMB.Forms
         }
 
         #endregion
-
-        private Controls.btnAllButtons btnAllButtons1;
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.ComboBox comboBox3;
@@ -413,5 +409,6 @@ namespace Team6_UMB.Forms
         private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label6;
+        private Controls.NewBtns newBtns1;
     }
 }

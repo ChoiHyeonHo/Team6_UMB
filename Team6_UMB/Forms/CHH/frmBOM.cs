@@ -14,6 +14,14 @@ namespace Team6_UMB.Forms
         public frmBOM()
         {
             InitializeComponent();
+            newBtns1.btnBarCode.Visible = false;
+            newBtns1.btnShipment.Visible = false;
+            newBtns1.btnDocument.Visible = false;
+            newBtns1.btnSearch.Visible = false;
+            newBtns1.btnWait.Visible = false;
+            newBtns1.btnRefresh.Visible = false;
+            newBtns1.btnExcel.Visible = false;
+            newBtns1.btnDelete.Visible = false;
         }
 
         private void btnAllButtons1_btnCreate_Event(object sender, EventArgs e)

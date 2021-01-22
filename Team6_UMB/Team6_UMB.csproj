@@ -105,6 +105,12 @@
     <Compile Include="Controls\btnSearchExcelPrint.Designer.cs">
       <DependentUpon>btnSearchExcelPrint.cs</DependentUpon>
     </Compile>
+    <Compile Include="Controls\NewBtns.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\NewBtns.Designer.cs">
+      <DependentUpon>NewBtns.cs</DependentUpon>
+    </Compile>
     <Compile Include="Controls\periodSearchControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -463,6 +469,9 @@
     <EmbeddedResource Include="Controls\btnSearchExcelPrint.resx">
       <DependentUpon>btnSearchExcelPrint.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Controls\NewBtns.resx">
+      <DependentUpon>NewBtns.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Controls\periodSearchControl.resx">
       <DependentUpon>periodSearchControl.cs</DependentUpon>
     </EmbeddedResource>
@@ -746,6 +755,21 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Home.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\barCode.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Refresh.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Carrying.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Shipment.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Document.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
