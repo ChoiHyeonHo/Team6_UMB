@@ -8,11 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Team6_UMB.Forms
+namespace Team6_UMB.Forms.BMN
 {
-    public partial class Form1 : Form
+    public partial class frmperformanceStatus : Form
     {
-        public Form1()
+        public frmperformanceStatus()
         {
             InitializeComponent();
         }

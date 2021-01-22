@@ -8,18 +8,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Team6_UMB.Forms
+namespace Team6_UMB.Forms.BMN
 {
-    public partial class WorkOrderRegiPopUp : Form
+    public partial class frmperformanceRegi : Form
     {
-        public WorkOrderRegiPopUp()
+        public frmperformanceRegi()
         {
             InitializeComponent();
-        }
-
-        private void WorkOrderRegiPopUp_Load(object sender, EventArgs e)
-        {
-
         }
     }
 }

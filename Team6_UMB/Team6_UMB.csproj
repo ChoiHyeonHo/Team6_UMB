@@ -183,18 +183,62 @@
     <Compile Include="Forms\ASB\frmWarehousePopUp.Designer.cs">
       <DependentUpon>frmWarehousePopUp.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\BMN\frmdefectiveRegi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\BMN\frmdefectiveRegi.Designer.cs">
+      <DependentUpon>frmdefectiveRegi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\BMN\frmdefectiveRegiPopUp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\BMN\frmdefectiveRegiPopUp.Designer.cs">
+      <DependentUpon>frmdefectiveRegiPopUp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\BMN\frmdefectiveStatus.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\BMN\frmdefectiveStatus.Designer.cs">
+      <DependentUpon>frmdefectiveStatus.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\BMN\frmperformaceRegiPopUp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\BMN\frmperformaceRegiPopUp.Designer.cs">
+      <DependentUpon>frmperformaceRegiPopUp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\BMN\frmperformanceRegi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\BMN\frmperformanceRegi.Designer.cs">
+      <DependentUpon>frmperformanceRegi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\BMN\frmperformanceStatus.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\BMN\frmperformanceStatus.Designer.cs">
+      <DependentUpon>frmperformanceStatus.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\BMN\frmWorkOrderRegi .cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\BMN\frmWorkOrderRegi .Designer.cs">
+      <DependentUpon>frmWorkOrderRegi .cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\BMN\frmWorkOrderRegiPopUp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\BMN\frmWorkOrderRegiPopUp.Designer.cs">
+      <DependentUpon>frmWorkOrderRegiPopUp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\BMN\frmWorkOrderStatus.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Forms\ChamGo.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Forms\ChamGo.Designer.cs">
       <DependentUpon>ChamGo.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Forms\BMN\.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\BMN\.Designer.cs">
-      <DependentUpon>.cs</DependentUpon>
-      <SubType>Form</SubType>
     </Compile>
     <Compile Include="Forms\CHH\frmCheckHistory.cs">
       <SubType>Form</SubType>
@@ -346,18 +390,6 @@
     <Compile Include="Forms\CHH\frmSalesPriceManagePopUp.Designer.cs">
       <DependentUpon>frmSalesPriceManagePopUp.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\BMN\WorkOrderRegi.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\BMN\WorkOrderRegi.Designer.cs">
-      <DependentUpon>WorkOrderRegi.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Forms\BMN\WorkOrderRegiPopUp.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\BMN\WorkOrderRegiPopUp.Designer.cs">
-      <DependentUpon>WorkOrderRegiPopUp.cs</DependentUpon>
-    </Compile>
     <Compile Include="Forms\JSJ\frmSalesStatus.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -467,6 +499,33 @@
     <EmbeddedResource Include="Forms\ASB\frmWarehousePopUp.resx">
       <DependentUpon>frmWarehousePopUp.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\BMN\frmdefectiveRegi.resx">
+      <DependentUpon>frmdefectiveRegi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\BMN\frmdefectiveRegiPopUp.resx">
+      <DependentUpon>frmdefectiveRegiPopUp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\BMN\frmdefectiveStatus.resx">
+      <DependentUpon>frmdefectiveStatus.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\BMN\frmperformaceRegiPopUp.resx">
+      <DependentUpon>frmperformaceRegiPopUp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\BMN\frmperformanceRegi.resx">
+      <DependentUpon>frmperformanceRegi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\BMN\frmperformanceStatus.resx">
+      <DependentUpon>frmperformanceStatus.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\BMN\frmWorkOrderRegi .resx">
+      <DependentUpon>frmWorkOrderRegi .cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\BMN\frmWorkOrderRegiPopUp.resx">
+      <DependentUpon>frmWorkOrderRegiPopUp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\BMN\frmWorkOrderStatus.resx">
+      <DependentUpon>frmWorkOrderStatus.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\ChamGo.resx">
       <DependentUpon>ChamGo.cs</DependentUpon>
     </EmbeddedResource>
@@ -547,12 +606,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\CHH\frmSalesPriceManagePopUp.resx">
       <DependentUpon>frmSalesPriceManagePopUp.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Forms\BMN\WorkOrderRegi.resx">
-      <DependentUpon>WorkOrderRegi.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Forms\BMN\WorkOrderRegiPopUp.resx">
-      <DependentUpon>WorkOrderRegiPopUp.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\JSJ\frmSalesStatus.resx">
       <DependentUpon>frmSalesStatus.cs</DependentUpon>

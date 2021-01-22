@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Team6_UMB.Forms
 {
-    public partial class WorkOrderRegi : Form
+    public partial class frmWorkOrderRegi : Form
     {
-        public WorkOrderRegi()
+        public frmWorkOrderRegi()
         {
             InitializeComponent();
         }
