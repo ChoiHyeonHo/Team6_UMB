@@ -338,6 +338,7 @@ namespace Team6_UMB.Forms
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.dgV_Custom1);
             this.Name = "frmProductManage";
+            this.Load += new System.EventHandler(this.frmProductManage_Load);
             this.Controls.SetChildIndex(this.panel1, 0);
             this.Controls.SetChildIndex(this.dgV_Custom1, 0);
             this.Controls.SetChildIndex(this.groupBox1, 0);

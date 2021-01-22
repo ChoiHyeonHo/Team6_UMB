@@ -58,6 +58,8 @@ namespace Team6_UMB.Forms.CHH
             // 
             // panel1
             // 
+            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.panel1.Controls.Add(this.btnExcel);
             this.panel1.Controls.Add(this.btnPrint);
             this.panel1.Size = new System.Drawing.Size(1511, 35);
@@ -72,6 +74,8 @@ namespace Team6_UMB.Forms.CHH
             // 
             // groupBox1
             // 
+            this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox1.Controls.Add(this.comboBox1);
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.button1);
@@ -113,7 +117,7 @@ namespace Team6_UMB.Forms.CHH
             this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.button1.FlatAppearance.BorderSize = 0;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Location = new System.Drawing.Point(1471, 13);
+            this.button1.Location = new System.Drawing.Point(823, 11);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(34, 30);
             this.button1.TabIndex = 21;
@@ -160,6 +164,8 @@ namespace Team6_UMB.Forms.CHH
             // 
             // dgvIncommingList
             // 
+            this.dgvIncommingList.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvIncommingList.BackgroundColor = System.Drawing.Color.White;
             this.dgvIncommingList.BorderStyle = System.Windows.Forms.BorderStyle.None;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
@@ -256,6 +262,7 @@ namespace Team6_UMB.Forms.CHH
             this.imageList1.TransparentColor = System.Drawing.Color.Transparent;
             this.imageList1.Images.SetKeyName(0, "Excel.png");
             this.imageList1.Images.SetKeyName(1, "Print.png");
+            this.imageList1.Images.SetKeyName(2, "SearchWhite.png");
             // 
             // btnPrint
             // 

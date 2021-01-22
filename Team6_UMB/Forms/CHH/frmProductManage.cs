@@ -11,9 +11,11 @@ namespace Team6_UMB.Forms
     public partial class frmProductManage : Team6_UMB.frmBaseList
     {
         string headerName;
+        bool bFlag;
         public frmProductManage()
         {
             InitializeComponent();
+            
         }
 
         private void btnAllButtons1_btnCreate_Event(object sender, EventArgs e)
@@ -28,6 +30,14 @@ namespace Team6_UMB.Forms
             headerName = "품목관리 - 수정";
             frmProductManagePopUp frm = new frmProductManagePopUp(headerName);
             frm.ShowDialog();
+        }
+
+        private void frmProductManage_Load(object sender, EventArgs e)
+        {
+            if (bFlag)
+            {
+                btnAllButtons1.btnCreate.Visible = false;
+            }
         }
     }
 }
