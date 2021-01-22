@@ -123,7 +123,7 @@
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 25);
             this.button1.TabIndex = 17;
-            this.button1.Text = "등록";
+            this.button1.Text = "저장";
             this.button1.UseVisualStyleBackColor = false;
             // 
             // button2

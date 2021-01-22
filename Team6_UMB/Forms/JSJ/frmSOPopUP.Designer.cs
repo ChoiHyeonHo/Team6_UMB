@@ -36,15 +36,15 @@
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.label4 = new System.Windows.Forms.Label();
             this.dgV_Custom2 = new Team6_UMB.DGV_Custom();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label3 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.dgV_Custom1 = new Team6_UMB.DGV_Custom();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label2 = new System.Windows.Forms.Label();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgV_Custom2)).BeginInit();
@@ -84,7 +84,7 @@
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 25);
             this.button1.TabIndex = 21;
-            this.button1.Text = "등록";
+            this.button1.Text = "저장";
             this.button1.UseVisualStyleBackColor = false;
             // 
             // groupBox2
@@ -147,6 +147,30 @@
             this.dgV_Custom2.Size = new System.Drawing.Size(699, 361);
             this.dgV_Custom2.TabIndex = 0;
             // 
+            // Column1
+            // 
+            this.Column1.HeaderText = "업체";
+            this.Column1.Name = "Column1";
+            this.Column1.Width = 200;
+            // 
+            // Column3
+            // 
+            this.Column3.HeaderText = "품목";
+            this.Column3.Name = "Column3";
+            this.Column3.Width = 200;
+            // 
+            // Column4
+            // 
+            this.Column4.HeaderText = "현재고";
+            this.Column4.Name = "Column4";
+            this.Column4.Width = 120;
+            // 
+            // Column5
+            // 
+            this.Column5.HeaderText = "수주수량";
+            this.Column5.Name = "Column5";
+            this.Column5.Width = 120;
+            // 
             // label3
             // 
             this.label3.AutoSize = true;
@@ -208,30 +232,6 @@
             this.label2.Size = new System.Drawing.Size(31, 15);
             this.label2.TabIndex = 0;
             this.label2.Text = "업체";
-            // 
-            // Column1
-            // 
-            this.Column1.HeaderText = "업체";
-            this.Column1.Name = "Column1";
-            this.Column1.Width = 200;
-            // 
-            // Column3
-            // 
-            this.Column3.HeaderText = "품목";
-            this.Column3.Name = "Column3";
-            this.Column3.Width = 200;
-            // 
-            // Column4
-            // 
-            this.Column4.HeaderText = "현재고";
-            this.Column4.Name = "Column4";
-            this.Column4.Width = 120;
-            // 
-            // Column5
-            // 
-            this.Column5.HeaderText = "수주수량";
-            this.Column5.Name = "Column5";
-            this.Column5.Width = 120;
             // 
             // frmSOPopUP
             // 
