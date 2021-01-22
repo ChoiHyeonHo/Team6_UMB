@@ -298,6 +298,7 @@ namespace Team6_UMB.Forms
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(610, 394);
             this.Controls.Add(this.dateTimePicker2);
             this.Controls.Add(this.panel1);

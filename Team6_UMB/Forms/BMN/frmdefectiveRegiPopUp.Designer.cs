@@ -30,6 +30,8 @@ namespace Team6_UMB.Forms.BMN
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
@@ -37,8 +39,6 @@ namespace Team6_UMB.Forms.BMN
             this.btnCreate = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -55,6 +55,21 @@ namespace Team6_UMB.Forms.BMN
             this.groupBox1.Size = new System.Drawing.Size(381, 214);
             this.groupBox1.TabIndex = 17;
             this.groupBox1.TabStop = false;
+            // 
+            // textBox2
+            // 
+            this.textBox2.Location = new System.Drawing.Point(106, 19);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(256, 21);
+            this.textBox2.TabIndex = 64;
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(109, 76);
+            this.textBox1.Multiline = true;
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(253, 106);
+            this.textBox1.TabIndex = 63;
             // 
             // label3
             // 
@@ -133,25 +148,11 @@ namespace Team6_UMB.Forms.BMN
             this.label1.TabIndex = 1;
             this.label1.Text = "불량관리 등록/수정";
             // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(109, 76);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(253, 106);
-            this.textBox1.TabIndex = 63;
-            // 
-            // textBox2
-            // 
-            this.textBox2.Location = new System.Drawing.Point(106, 19);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(256, 21);
-            this.textBox2.TabIndex = 64;
-            // 
             // frmdefectiveRegiPopUp
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(401, 322);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);

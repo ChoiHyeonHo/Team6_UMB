@@ -234,6 +234,9 @@
     <Compile Include="Forms\BMN\frmWorkOrderStatus.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Forms\BMN\frmWorkOrderStatus.Designer.cs">
+      <DependentUpon>frmWorkOrderStatus.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\ChamGo.cs">
       <SubType>Form</SubType>
     </Compile>

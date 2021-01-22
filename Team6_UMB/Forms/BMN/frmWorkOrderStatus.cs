@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Team6_UMB.Forms
+namespace Team6_UMB.Forms.BMN
 {
     public partial class frmWorkOrderStatus : Form
     {

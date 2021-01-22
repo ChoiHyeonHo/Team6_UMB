@@ -30,8 +30,8 @@ namespace Team6_UMB.Forms.BMN
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmdefectiveStatus));
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.button3 = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
@@ -43,7 +43,12 @@ namespace Team6_UMB.Forms.BMN
             this.label2 = new System.Windows.Forms.Label();
             this.periodSearchControl1 = new PJT_Olive.Control.PeriodSearchControl();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnUpdate = new System.Windows.Forms.Button();
+            this.imageList1 = new System.Windows.Forms.ImageList(this.components);
             this.label1 = new System.Windows.Forms.Label();
+            this.btnDelete = new System.Windows.Forms.Button();
+            this.btnPrint = new System.Windows.Forms.Button();
+            this.btnExcel = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label5 = new System.Windows.Forms.Label();
             this.dgV_Custom1 = new Team6_UMB.DGV_Custom();
@@ -55,11 +60,6 @@ namespace Team6_UMB.Forms.BMN
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.imageList1 = new System.Windows.Forms.ImageList(this.components);
-            this.btnUpdate = new System.Windows.Forms.Button();
-            this.btnDelete = new System.Windows.Forms.Button();
-            this.btnExcel = new System.Windows.Forms.Button();
-            this.btnPrint = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -189,6 +189,33 @@ namespace Team6_UMB.Forms.BMN
             this.panel1.Size = new System.Drawing.Size(1511, 35);
             this.panel1.TabIndex = 39;
             // 
+            // btnUpdate
+            // 
+            this.btnUpdate.FlatAppearance.BorderColor = System.Drawing.Color.DimGray;
+            this.btnUpdate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnUpdate.Font = new System.Drawing.Font("나눔바른고딕", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.btnUpdate.ForeColor = System.Drawing.Color.White;
+            this.btnUpdate.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnUpdate.ImageIndex = 1;
+            this.btnUpdate.ImageList = this.imageList1;
+            this.btnUpdate.Location = new System.Drawing.Point(1214, 4);
+            this.btnUpdate.Name = "btnUpdate";
+            this.btnUpdate.Size = new System.Drawing.Size(69, 28);
+            this.btnUpdate.TabIndex = 43;
+            this.btnUpdate.Text = "수정";
+            this.btnUpdate.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnUpdate.UseVisualStyleBackColor = true;
+            // 
+            // imageList1
+            // 
+            this.imageList1.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imageList1.ImageStream")));
+            this.imageList1.TransparentColor = System.Drawing.Color.Transparent;
+            this.imageList1.Images.SetKeyName(0, "delete.png");
+            this.imageList1.Images.SetKeyName(1, "erase.png");
+            this.imageList1.Images.SetKeyName(2, "Create.png");
+            this.imageList1.Images.SetKeyName(3, "Excel.png");
+            this.imageList1.Images.SetKeyName(4, "Print.png");
+            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -199,6 +226,57 @@ namespace Team6_UMB.Forms.BMN
             this.label1.Size = new System.Drawing.Size(129, 24);
             this.label1.TabIndex = 1;
             this.label1.Text = "불량처리 현황";
+            // 
+            // btnDelete
+            // 
+            this.btnDelete.FlatAppearance.BorderColor = System.Drawing.Color.DimGray;
+            this.btnDelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDelete.Font = new System.Drawing.Font("나눔바른고딕", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.btnDelete.ForeColor = System.Drawing.Color.White;
+            this.btnDelete.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnDelete.ImageIndex = 0;
+            this.btnDelete.ImageList = this.imageList1;
+            this.btnDelete.Location = new System.Drawing.Point(1289, 4);
+            this.btnDelete.Name = "btnDelete";
+            this.btnDelete.Size = new System.Drawing.Size(69, 28);
+            this.btnDelete.TabIndex = 44;
+            this.btnDelete.Text = "삭제";
+            this.btnDelete.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnDelete.UseVisualStyleBackColor = true;
+            // 
+            // btnPrint
+            // 
+            this.btnPrint.FlatAppearance.BorderColor = System.Drawing.Color.DimGray;
+            this.btnPrint.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPrint.Font = new System.Drawing.Font("나눔바른고딕", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.btnPrint.ForeColor = System.Drawing.Color.White;
+            this.btnPrint.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnPrint.ImageIndex = 4;
+            this.btnPrint.ImageList = this.imageList1;
+            this.btnPrint.Location = new System.Drawing.Point(1439, 4);
+            this.btnPrint.Name = "btnPrint";
+            this.btnPrint.Size = new System.Drawing.Size(69, 28);
+            this.btnPrint.TabIndex = 46;
+            this.btnPrint.Text = "출력";
+            this.btnPrint.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnPrint.UseVisualStyleBackColor = true;
+            // 
+            // btnExcel
+            // 
+            this.btnExcel.FlatAppearance.BorderColor = System.Drawing.Color.DimGray;
+            this.btnExcel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnExcel.Font = new System.Drawing.Font("나눔바른고딕", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.btnExcel.ForeColor = System.Drawing.Color.White;
+            this.btnExcel.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnExcel.ImageIndex = 3;
+            this.btnExcel.ImageList = this.imageList1;
+            this.btnExcel.Location = new System.Drawing.Point(1364, 4);
+            this.btnExcel.Name = "btnExcel";
+            this.btnExcel.Size = new System.Drawing.Size(69, 28);
+            this.btnExcel.TabIndex = 45;
+            this.btnExcel.Text = "엑셀";
+            this.btnExcel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnExcel.UseVisualStyleBackColor = true;
             // 
             // panel2
             // 
@@ -223,14 +301,14 @@ namespace Team6_UMB.Forms.BMN
             // 
             this.dgV_Custom1.BackgroundColor = System.Drawing.Color.White;
             this.dgV_Custom1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("나눔바른고딕", 9F);
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgV_Custom1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("나눔바른고딕", 9F);
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgV_Custom1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgV_Custom1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgV_Custom1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column3,
@@ -292,88 +370,11 @@ namespace Team6_UMB.Forms.BMN
             this.Column6.HeaderText = "처리날짜";
             this.Column6.Name = "Column6";
             // 
-            // imageList1
-            // 
-            this.imageList1.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imageList1.ImageStream")));
-            this.imageList1.TransparentColor = System.Drawing.Color.Transparent;
-            this.imageList1.Images.SetKeyName(0, "delete.png");
-            this.imageList1.Images.SetKeyName(1, "erase.png");
-            this.imageList1.Images.SetKeyName(2, "Create.png");
-            this.imageList1.Images.SetKeyName(3, "Excel.png");
-            this.imageList1.Images.SetKeyName(4, "Print.png");
-            // 
-            // btnUpdate
-            // 
-            this.btnUpdate.FlatAppearance.BorderColor = System.Drawing.Color.DimGray;
-            this.btnUpdate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnUpdate.Font = new System.Drawing.Font("나눔바른고딕", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.btnUpdate.ForeColor = System.Drawing.Color.White;
-            this.btnUpdate.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnUpdate.ImageIndex = 1;
-            this.btnUpdate.ImageList = this.imageList1;
-            this.btnUpdate.Location = new System.Drawing.Point(1214, 4);
-            this.btnUpdate.Name = "btnUpdate";
-            this.btnUpdate.Size = new System.Drawing.Size(69, 28);
-            this.btnUpdate.TabIndex = 43;
-            this.btnUpdate.Text = "수정";
-            this.btnUpdate.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnUpdate.UseVisualStyleBackColor = true;
-            // 
-            // btnDelete
-            // 
-            this.btnDelete.FlatAppearance.BorderColor = System.Drawing.Color.DimGray;
-            this.btnDelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDelete.Font = new System.Drawing.Font("나눔바른고딕", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.btnDelete.ForeColor = System.Drawing.Color.White;
-            this.btnDelete.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnDelete.ImageIndex = 0;
-            this.btnDelete.ImageList = this.imageList1;
-            this.btnDelete.Location = new System.Drawing.Point(1289, 4);
-            this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(69, 28);
-            this.btnDelete.TabIndex = 44;
-            this.btnDelete.Text = "삭제";
-            this.btnDelete.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnDelete.UseVisualStyleBackColor = true;
-            // 
-            // btnExcel
-            // 
-            this.btnExcel.FlatAppearance.BorderColor = System.Drawing.Color.DimGray;
-            this.btnExcel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnExcel.Font = new System.Drawing.Font("나눔바른고딕", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.btnExcel.ForeColor = System.Drawing.Color.White;
-            this.btnExcel.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnExcel.ImageIndex = 3;
-            this.btnExcel.ImageList = this.imageList1;
-            this.btnExcel.Location = new System.Drawing.Point(1364, 4);
-            this.btnExcel.Name = "btnExcel";
-            this.btnExcel.Size = new System.Drawing.Size(69, 28);
-            this.btnExcel.TabIndex = 45;
-            this.btnExcel.Text = "엑셀";
-            this.btnExcel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnExcel.UseVisualStyleBackColor = true;
-            // 
-            // btnPrint
-            // 
-            this.btnPrint.FlatAppearance.BorderColor = System.Drawing.Color.DimGray;
-            this.btnPrint.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnPrint.Font = new System.Drawing.Font("나눔바른고딕", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.btnPrint.ForeColor = System.Drawing.Color.White;
-            this.btnPrint.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnPrint.ImageIndex = 4;
-            this.btnPrint.ImageList = this.imageList1;
-            this.btnPrint.Location = new System.Drawing.Point(1439, 4);
-            this.btnPrint.Name = "btnPrint";
-            this.btnPrint.Size = new System.Drawing.Size(69, 28);
-            this.btnPrint.TabIndex = 46;
-            this.btnPrint.Text = "출력";
-            this.btnPrint.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnPrint.UseVisualStyleBackColor = true;
-            // 
             // frmdefectiveStatus
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1535, 950);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.panel1);
