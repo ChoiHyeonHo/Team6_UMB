@@ -10,6 +10,9 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Team6_UMB.Forms;
 using Team6_UMB.Forms.CHH;
+using Team6_UMB.Forms.ASB;
+using Team6_UMB.Forms.JSJ;
+using Team6_UMB.Forms.BMN;
 using Team6_UMB.Service;
 using System.Diagnostics;
 
@@ -26,6 +29,27 @@ namespace Team6_UMB
         public static frmProdInspection frmProdInspection;
         public static frmCheckHistory frmCheckHistory;
         public static frmPDStock frmPDStock;
+        public static frmShift frmShift;
+        public static frmBOR frmBOR;
+        public static frmCheckList frmCheckList;
+        public static frmCompany frmCompany;
+        public static frmDepartment frmDepartment;
+        public static frmMachine frmMachine;
+        public static frmUser frmUser;
+        public static frmWarehouse frmWarehouse;
+        public static frmIncommingStatus frmIcStatus;
+        public static frmIncommingWait frmIcWait;
+        public static frmOrderStatus frmOStatus;
+        public static frmSalesStatus frmSales;
+        public static frmShipment frmShipment;
+        public static frmSO frmSO;
+        public static frmperformanceStatus frmPS; //생산실적 현황
+        public static frmperformanceRegi frmPR; //생산실적등록 / 수정
+        public static frmWorkOrderRegi frmWOR; //작업지시 등록
+        public static frmWorkOrderStatus frmWOS; //작업지시 현황
+        public static frmdefectiveRegi frmDR; //불량관리 등록/수정
+        public static frmdefectiveStatus frmDS; //불량처리현황
+        public static frmAuthority frmAuthority; //권한관리
         #endregion
 
         public frmMain()
@@ -36,76 +60,192 @@ namespace Team6_UMB
         }
 
         #region 싱글톤 - 메서드를 통한 폼 유무 체크
+        #region CHH 싱글톤
         public static frmSalesPriceManage CreateSalesPriceManage()
         {
             if (frmSalesPriceManage == null)
-            {
                 frmSalesPriceManage = new frmSalesPriceManage();
-            }
             return frmSalesPriceManage;
         }
-        
         public static frmMatPriceManage CreateMatPriceManage()
         {
             if (frmMatPriceManage == null)
-            {
                 frmMatPriceManage = new frmMatPriceManage();
-            }
             return frmMatPriceManage;
         }
-
         public static frmProductManage CreateProductManage()
         {
             if (frmProductManage == null)
-            {
                 frmProductManage = new frmProductManage();
-            }
             return frmProductManage;
         }
-
         public static frmBOM CreateBOM()
         {
             if (frmBOM == null)
-            {
                 frmBOM = new frmBOM();
-            }
             return frmBOM;
         }
-
         public static frmImportInspection CreateImpIns()
         {
             if (frmImportInspection == null)
-            {
                 frmImportInspection = new frmImportInspection();
-            }
             return frmImportInspection;
         }
-
         public static frmProdInspection CreateProdIns()
         {
             if (frmProdInspection == null)
-            {
                 frmProdInspection = new frmProdInspection();
-            }
             return frmProdInspection;
         }
-
         public static frmCheckHistory CreateCkHis()
         {
             if (frmCheckHistory == null)
-            {
                 frmCheckHistory = new frmCheckHistory();
-            }
             return frmCheckHistory;
         }
         public static frmPDStock CreatePDS()
         {
             if (frmPDStock == null)
-            {
                 frmPDStock = new frmPDStock();
-            }
             return frmPDStock;
         }
+        #endregion
+
+        #region ASB 싱글톤
+        public static frmShift CreateShift()
+        {
+            if (frmShift == null)
+                frmShift = new frmShift();
+            return frmShift;
+        }
+        public static frmMachine CreateMachine()
+        {
+            if (frmMachine == null)
+                frmMachine = new frmMachine();
+            return frmMachine;
+        }
+        public static frmCompany CreateCompany()
+        {
+            if (frmCompany == null)
+                frmCompany = new frmCompany();
+            return frmCompany;
+        }
+        public static frmBOR CreateBOR()
+        {
+            if (frmBOR == null)
+                frmBOR = new frmBOR();
+            return frmBOR;
+        }
+        public static frmUser CreateUser()
+        {
+            if (frmUser == null)
+                frmUser = new frmUser();
+            return frmUser;
+        }
+        public static frmDepartment CreateDepartment()
+        {
+            if (frmDepartment == null)
+                frmDepartment = new frmDepartment();
+            return frmDepartment;
+        }
+        public static frmWarehouse CreateWarehouse()
+        {
+            if (frmWarehouse == null)
+                frmWarehouse = new frmWarehouse();
+            return frmWarehouse;
+        }
+        public static frmCheckList CreateCheckList()
+        {
+            if (frmCheckList == null)
+                frmCheckList = new frmCheckList();
+            return frmCheckList;
+        }
+        #endregion
+
+        #region JSJ 싱글톤
+        public static frmOrderStatus CreateOrderStatus()
+        {
+            if (frmOStatus == null)
+                frmOStatus = new frmOrderStatus();
+            return frmOStatus;
+        }
+        public static frmShipment CreateShipment()
+        {
+            if (frmShipment == null)
+                frmShipment = new frmShipment();
+            return frmShipment;
+        }
+        public static frmSO CreateSO()
+        {
+            if (frmSO == null)
+                frmSO = new frmSO();
+            return frmSO;
+        }
+        public static frmIncommingStatus CreateIcStatus()
+        {
+            if (frmIcStatus == null)
+                frmIcStatus = new frmIncommingStatus();
+            return frmIcStatus;
+        }
+        public static frmIncommingWait CreateIcWait()
+        {
+            if (frmIcWait == null)
+                frmIcWait = new frmIncommingWait();
+            return frmIcWait;
+        }
+        public static frmSalesStatus CreateSales()
+        {
+            if (frmSales == null)
+                frmSales = new frmSalesStatus();
+            return frmSales;
+        }
+        public static frmAuthority CreateAuthority()
+        {
+            if (frmAuthority == null)
+                frmAuthority = new frmAuthority();
+            return frmAuthority;
+        }
+        #endregion
+
+        #region BMN 싱글톤
+        public static frmperformanceStatus CreatePS()
+        {
+            if (frmPS == null)
+                frmPS = new frmperformanceStatus();
+            return frmPS;
+        }
+        public static frmperformanceRegi CreatePR()
+        {
+            if (frmPR == null)
+                frmPR = new frmperformanceRegi();
+            return frmPR;
+        }
+        public static frmWorkOrderRegi CreateWOR()
+        {
+            if (frmWOR == null)
+                frmWOR = new frmWorkOrderRegi();
+            return frmWOR;
+        }
+        public static frmWorkOrderStatus CreateWOS()
+        {
+            if (frmWOS == null)
+                frmWOS = new frmWorkOrderStatus();
+            return frmWOS;
+        }
+        public static frmdefectiveRegi CreateDR()
+        {
+            if (frmDR == null)
+                frmDR = new frmdefectiveRegi();
+            return frmDR;
+        }
+        public static frmdefectiveStatus CreateDS()
+        {
+            if (frmDS == null)
+                frmDS = new frmdefectiveStatus();
+            return frmDS;
+        }
+        #endregion
+
         #endregion
 
         #region 상단 메뉴 클릭
@@ -290,11 +430,7 @@ namespace Team6_UMB
         }
         #endregion
 
-        private void btn1_1_Click(object sender, EventArgs e)
-        {
-            this.btn1_1.BackColor = System.Drawing.Color.White;
-            this.btn1_1.ForeColor = System.Drawing.Color.Black;
-        }
+        
 
         #region 최소, 최대, 닫기
         private void pnMin_Click(object sender, EventArgs e)
@@ -317,6 +453,115 @@ namespace Team6_UMB
         #endregion
 
         #region 폼 생성 및 Docking
+
+        #region ASB 폼
+        private void btn1_1_Click(object sender, EventArgs e)
+        {
+            this.btn1_1.BackColor = Color.White;
+            this.btn1_1.ForeColor = Color.Black;
+            this.btn1_2.BackColor = this.btn1_3.BackColor = this.btn1_4.BackColor = this.btn1_5.BackColor = this.btn1_6.BackColor = this.btn1_7.BackColor = this.btn1_8.BackColor = Color.Transparent;
+            this.btn1_2.ForeColor = this.btn1_3.ForeColor = this.btn1_4.ForeColor = this.btn1_5.ForeColor = this.btn1_6.ForeColor = this.btn1_7.ForeColor = this.btn1_8.ForeColor = Color.White;
+            CreateShift();
+            frmShift.TopLevel = false;
+            pnlBackPage.Controls.Clear();
+            pnlBackPage.Controls.Add(frmShift);
+            frmShift.Dock = DockStyle.Fill;
+            frmShift.Show();
+        }
+        private void btn1_2_Click(object sender, EventArgs e)
+        {
+            this.btn1_2.BackColor = Color.White;
+            this.btn1_2.ForeColor = Color.Black;
+            this.btn1_1.BackColor = this.btn1_3.BackColor = this.btn1_4.BackColor = this.btn1_5.BackColor = this.btn1_6.BackColor = this.btn1_7.BackColor = this.btn1_8.BackColor = Color.Transparent;
+            this.btn1_1.ForeColor = this.btn1_3.ForeColor = this.btn1_4.ForeColor = this.btn1_5.ForeColor = this.btn1_6.ForeColor = this.btn1_7.ForeColor = this.btn1_8.ForeColor = Color.White;
+            CreateMachine();
+            frmMachine.TopLevel = false;
+            pnlBackPage.Controls.Clear();
+            pnlBackPage.Controls.Add(frmMachine);
+            frmMachine.Dock = DockStyle.Fill;
+            frmMachine.Show();
+        }
+        private void btn1_3_Click(object sender, EventArgs e)
+        {
+            this.btn1_3.BackColor = Color.White;
+            this.btn1_3.ForeColor = Color.Black;
+            this.btn1_1.BackColor = this.btn1_2.BackColor = this.btn1_4.BackColor = this.btn1_5.BackColor = this.btn1_6.BackColor = this.btn1_7.BackColor = this.btn1_8.BackColor = Color.Transparent;
+            this.btn1_1.ForeColor = this.btn1_2.ForeColor = this.btn1_4.ForeColor = this.btn1_5.ForeColor = this.btn1_6.ForeColor = this.btn1_7.ForeColor = this.btn1_8.ForeColor = Color.White;
+            CreateCompany();
+            frmCompany.TopLevel = false;
+            pnlBackPage.Controls.Clear();
+            pnlBackPage.Controls.Add(frmCompany);
+            frmCompany.Dock = DockStyle.Fill;
+            frmCompany.Show();
+        }
+        private void btn1_4_Click(object sender, EventArgs e)
+        {
+            this.btn1_4.BackColor = Color.White;
+            this.btn1_4.ForeColor = Color.Black;
+            this.btn1_1.BackColor = this.btn1_2.BackColor = this.btn1_3.BackColor = this.btn1_5.BackColor = this.btn1_6.BackColor = this.btn1_7.BackColor = this.btn1_8.BackColor = Color.Transparent;
+            this.btn1_1.ForeColor = this.btn1_2.ForeColor = this.btn1_3.ForeColor = this.btn1_5.ForeColor = this.btn1_6.ForeColor = this.btn1_7.ForeColor = this.btn1_8.ForeColor = Color.White;
+            CreateBOR();
+            frmBOR.TopLevel = false;
+            pnlBackPage.Controls.Clear();
+            pnlBackPage.Controls.Add(frmBOR);
+            frmBOR.Dock = DockStyle.Fill;
+            frmBOR.Show();
+        }
+        private void btn1_5_Click(object sender, EventArgs e)
+        {
+            this.btn1_5.BackColor = Color.White;
+            this.btn1_5.ForeColor = Color.Black;
+            this.btn1_1.BackColor = this.btn1_2.BackColor = this.btn1_3.BackColor = this.btn1_4.BackColor = this.btn1_6.BackColor = this.btn1_7.BackColor = this.btn1_8.BackColor = Color.Transparent;
+            this.btn1_1.ForeColor = this.btn1_2.ForeColor = this.btn1_3.ForeColor = this.btn1_4.ForeColor = this.btn1_6.ForeColor = this.btn1_7.ForeColor = this.btn1_8.ForeColor = Color.White;
+            CreateUser();
+            frmUser.TopLevel = false;
+            pnlBackPage.Controls.Clear();
+            pnlBackPage.Controls.Add(frmUser);
+            frmUser.Dock = DockStyle.Fill;
+            frmUser.Show();
+        }
+        private void btn1_6_Click(object sender, EventArgs e)
+        {
+            this.btn1_6.BackColor = Color.White;
+            this.btn1_6.ForeColor = Color.Black;
+            this.btn1_1.BackColor = this.btn1_2.BackColor = this.btn1_3.BackColor = this.btn1_4.BackColor = this.btn1_5.BackColor = this.btn1_7.BackColor = this.btn1_8.BackColor = Color.Transparent;
+            this.btn1_1.ForeColor = this.btn1_2.ForeColor = this.btn1_3.ForeColor = this.btn1_4.ForeColor = this.btn1_5.ForeColor = this.btn1_7.ForeColor = this.btn1_8.ForeColor = Color.White;
+            CreateDepartment();
+            frmDepartment.TopLevel = false;
+            pnlBackPage.Controls.Clear();
+            pnlBackPage.Controls.Add(frmDepartment);
+            frmDepartment.Dock = DockStyle.Fill;
+            frmDepartment.Show();
+        }
+        private void btn1_7_Click(object sender, EventArgs e)
+        {
+            this.btn1_7.BackColor = Color.White;
+            this.btn1_7.ForeColor = Color.Black;
+            this.btn1_1.BackColor = this.btn1_2.BackColor = this.btn1_3.BackColor = this.btn1_4.BackColor = this.btn1_5.BackColor = this.btn1_6.BackColor = this.btn1_8.BackColor = Color.Transparent;
+            this.btn1_1.ForeColor = this.btn1_2.ForeColor = this.btn1_3.ForeColor = this.btn1_4.ForeColor = this.btn1_5.ForeColor = this.btn1_6.ForeColor = this.btn1_8.ForeColor = Color.White;
+            CreateWarehouse();
+            frmWarehouse.TopLevel = false;
+            pnlBackPage.Controls.Clear();
+            pnlBackPage.Controls.Add(frmWarehouse);
+            frmWarehouse.Dock = DockStyle.Fill;
+            frmWarehouse.Show();
+        }
+        private void btn1_8_Click(object sender, EventArgs e)
+        {
+            this.btn1_8.BackColor = Color.White;
+            this.btn1_8.ForeColor = Color.Black;
+            this.btn1_1.BackColor = this.btn1_2.BackColor = this.btn1_3.BackColor = this.btn1_4.BackColor = this.btn1_5.BackColor = this.btn1_6.BackColor = this.btn1_7.BackColor = Color.Transparent;
+            this.btn1_1.ForeColor = this.btn1_2.ForeColor = this.btn1_3.ForeColor = this.btn1_4.ForeColor = this.btn1_5.ForeColor = this.btn1_6.ForeColor = this.btn1_7.ForeColor = Color.White;
+            CreateCheckList();
+            frmCheckList.TopLevel = false;
+            pnlBackPage.Controls.Clear();
+            pnlBackPage.Controls.Add(frmCheckList);
+            frmCheckList.Dock = DockStyle.Fill;
+            frmCheckList.Show();
+        }
+        #endregion
+
+        #region CHH폼
         private void btn2_1_Click(object sender, EventArgs e)
         {
             this.btn2_1.BackColor = Color.White;
@@ -330,7 +575,6 @@ namespace Team6_UMB
             frmSalesPriceManage.Dock = DockStyle.Fill;
             frmSalesPriceManage.Show();
         }
-
         private void btn2_2_Click(object sender, EventArgs e)
         {
             this.btn2_1.BackColor = Color.Transparent;
@@ -344,7 +588,6 @@ namespace Team6_UMB
             frmMatPriceManage.Dock = DockStyle.Fill;
             frmMatPriceManage.Show();
         }
-
         private void btn3_1_Click(object sender, EventArgs e)
         {
             this.btn3_1.BackColor = Color.White;
@@ -358,7 +601,6 @@ namespace Team6_UMB
             frmProductManage.Dock = DockStyle.Fill;
             frmProductManage.Show();
         }
-
         private void btn3_2_Click(object sender, EventArgs e)
         {
             this.btn3_2.BackColor = Color.White;
@@ -411,7 +653,6 @@ namespace Team6_UMB
             frmProdInspection.Dock = DockStyle.Fill;
             frmProdInspection.Show();
         }
-
         private void btn4_3_Click(object sender, EventArgs e)
         {
             this.btn4_3.BackColor = Color.White;
@@ -425,9 +666,184 @@ namespace Team6_UMB
             frmCheckHistory.Dock = DockStyle.Fill;
             frmCheckHistory.Show();
         }
+        #endregion
+
+        #region JSJ 폼
+        private void btn5_2_Click(object sender, EventArgs e)
+        {
+            this.btn5_2.BackColor = Color.White;
+            this.btn5_2.ForeColor = Color.Black;
+            this.btn5_3.BackColor = this.btn5_4.BackColor = this.btn5_5.BackColor = this.btn5_6.BackColor = this.btn5_7.BackColor = Color.Transparent;
+            this.btn5_3.ForeColor = this.btn5_4.ForeColor = this.btn5_5.ForeColor = this.btn5_6.ForeColor = this.btn5_7.ForeColor = Color.White;
+            CreateOrderStatus();
+            frmOStatus.TopLevel = false;
+            pnlBackPage.Controls.Clear();
+            pnlBackPage.Controls.Add(frmOStatus);
+            frmOStatus.Dock = DockStyle.Fill;
+            frmOStatus.Show();
+        }
+        private void btn5_3_Click(object sender, EventArgs e)
+        {
+            this.btn5_3.BackColor = Color.White;
+            this.btn5_3.ForeColor = Color.Black;
+            this.btn5_2.BackColor = this.btn5_4.BackColor = this.btn5_5.BackColor = this.btn5_6.BackColor = this.btn5_7.BackColor = Color.Transparent;
+            this.btn5_2.ForeColor = this.btn5_4.ForeColor = this.btn5_5.ForeColor = this.btn5_6.ForeColor = this.btn5_7.ForeColor = Color.White;
+            CreateShipment();
+            frmShipment.TopLevel = false;
+            pnlBackPage.Controls.Clear();
+            pnlBackPage.Controls.Add(frmShipment);
+            frmShipment.Dock = DockStyle.Fill;
+            frmShipment.Show();
+        }
+        private void btn5_4_Click(object sender, EventArgs e)
+        {
+            this.btn5_4.BackColor = Color.White;
+            this.btn5_4.ForeColor = Color.Black;
+            this.btn5_2.BackColor = this.btn5_3.BackColor = this.btn5_5.BackColor = this.btn5_6.BackColor = this.btn5_7.BackColor = Color.Transparent;
+            this.btn5_2.ForeColor = this.btn5_3.ForeColor = this.btn5_5.ForeColor = this.btn5_6.ForeColor = this.btn5_7.ForeColor = Color.White;
+            CreateSO();
+            frmSO.TopLevel = false;
+            pnlBackPage.Controls.Clear();
+            pnlBackPage.Controls.Add(frmSO);
+            frmSO.Dock = DockStyle.Fill;
+            frmSO.Show();
+        }
+        private void btn5_5_Click(object sender, EventArgs e)
+        {
+            this.btn5_5.BackColor = Color.White;
+            this.btn5_5.ForeColor = Color.Black;
+            this.btn5_2.BackColor = this.btn5_3.BackColor = this.btn5_4.BackColor = this.btn5_6.BackColor = this.btn5_7.BackColor = Color.Transparent;
+            this.btn5_2.ForeColor = this.btn5_3.ForeColor = this.btn5_4.ForeColor = this.btn5_6.ForeColor = this.btn5_7.ForeColor = Color.White;
+            CreateIcStatus();
+            frmIcStatus.TopLevel = false;
+            pnlBackPage.Controls.Clear();
+            pnlBackPage.Controls.Add(frmIcStatus);
+            frmIcStatus.Dock = DockStyle.Fill;
+            frmIcStatus.Show();
+        }
+        private void btn5_6_Click(object sender, EventArgs e)
+        {
+            this.btn5_6.BackColor = Color.White;
+            this.btn5_6.ForeColor = Color.Black;
+            this.btn5_2.BackColor = this.btn5_3.BackColor = this.btn5_4.BackColor = this.btn5_5.BackColor = this.btn5_7.BackColor = Color.Transparent;
+            this.btn5_2.ForeColor = this.btn5_3.ForeColor = this.btn5_4.ForeColor = this.btn5_5.ForeColor = this.btn5_7.ForeColor = Color.White;
+            CreateIcWait();
+            frmIcWait.TopLevel = false;
+            pnlBackPage.Controls.Clear();
+            pnlBackPage.Controls.Add(frmIcWait);
+            frmIcWait.Dock = DockStyle.Fill;
+            frmIcWait.Show();
+        }
+        private void btn5_7_Click(object sender, EventArgs e)
+        {
+            this.btn5_7.BackColor = Color.White;
+            this.btn5_7.ForeColor = Color.Black;
+            this.btn5_2.BackColor = this.btn5_3.BackColor = this.btn5_4.BackColor = this.btn5_5.BackColor = this.btn5_6.BackColor = Color.Transparent;
+            this.btn5_2.ForeColor = this.btn5_3.ForeColor = this.btn5_4.ForeColor = this.btn5_5.ForeColor = this.btn5_6.ForeColor = Color.White;
+            CreateSales();
+            frmSales.TopLevel = false;
+            pnlBackPage.Controls.Clear();
+            pnlBackPage.Controls.Add(frmSales);
+            frmSales.Dock = DockStyle.Fill;
+            frmSales.Show();
+        }
+        private void btn7_1_Click(object sender, EventArgs e)
+        {
+            this.btn7_1.BackColor = Color.White;
+            this.btn7_1.ForeColor = Color.Black;
+            CreateAuthority();
+            frmAuthority.TopLevel = false;
+            pnlBackPage.Controls.Clear();
+            pnlBackPage.Controls.Add(frmAuthority);
+            frmAuthority.Dock = DockStyle.Fill;
+            frmAuthority.Show();
+        }
+        #endregion
+
+        #region BMN 폼
+        private void btn6_1_Click(object sender, EventArgs e)
+        {
+            this.btn6_1.BackColor = Color.White;
+            this.btn6_1.ForeColor = Color.Black;
+            this.btn6_2.BackColor = this.btn6_3.BackColor = this.btn6_4.BackColor = this.btn6_5.BackColor = this.btn6_6.BackColor = Color.Transparent;
+            this.btn6_2.ForeColor = this.btn6_3.ForeColor = this.btn6_4.ForeColor = this.btn6_5.ForeColor = this.btn6_6.ForeColor = Color.White;
+            CreatePS();
+            frmPS.TopLevel = false;
+            pnlBackPage.Controls.Clear();
+            pnlBackPage.Controls.Add(frmPS);
+            frmPS.Dock = DockStyle.Fill;
+            frmPS.Show();
+        }
+        private void btn6_2_Click(object sender, EventArgs e)
+        {
+            this.btn6_2.BackColor = Color.White;
+            this.btn6_2.ForeColor = Color.Black;
+            this.btn6_1.BackColor = this.btn6_3.BackColor = this.btn6_4.BackColor = this.btn6_5.BackColor = this.btn6_6.BackColor = Color.Transparent;
+            this.btn6_1.ForeColor = this.btn6_3.ForeColor = this.btn6_4.ForeColor = this.btn6_5.ForeColor = this.btn6_6.ForeColor = Color.White;
+            CreatePR();
+            frmPR.TopLevel = false;
+            pnlBackPage.Controls.Clear();
+            pnlBackPage.Controls.Add(frmPR);
+            frmPR.Dock = DockStyle.Fill;
+            frmPR.Show();
+        }
+        private void btn6_3_Click(object sender, EventArgs e)
+        {
+            this.btn6_3.BackColor = Color.White;
+            this.btn6_3.ForeColor = Color.Black;
+            this.btn6_1.BackColor = this.btn6_2.BackColor = this.btn6_4.BackColor = this.btn6_5.BackColor = this.btn6_6.BackColor = Color.Transparent;
+            this.btn6_1.ForeColor = this.btn6_2.ForeColor = this.btn6_4.ForeColor = this.btn6_5.ForeColor = this.btn6_6.ForeColor = Color.White;
+            CreateWOR();
+            frmWOR.TopLevel = false;
+            pnlBackPage.Controls.Clear();
+            pnlBackPage.Controls.Add(frmWOR);
+            frmWOR.Dock = DockStyle.Fill;
+            frmWOR.Show();
+        }
+        private void btn6_4_Click(object sender, EventArgs e)
+        {
+            this.btn6_4.BackColor = Color.White;
+            this.btn6_4.ForeColor = Color.Black;
+            this.btn6_1.BackColor = this.btn6_2.BackColor = this.btn6_3.BackColor = this.btn6_5.BackColor = this.btn6_6.BackColor = Color.Transparent;
+            this.btn6_1.ForeColor = this.btn6_2.ForeColor = this.btn6_3.ForeColor = this.btn6_5.ForeColor = this.btn6_6.ForeColor = Color.White;
+            CreateWOS();
+            frmWOS.TopLevel = false;
+            pnlBackPage.Controls.Clear();
+            pnlBackPage.Controls.Add(frmWOS);
+            frmWOS.Dock = DockStyle.Fill;
+            frmWOS.Show();
+        }
+        private void btn6_5_Click(object sender, EventArgs e)
+        {
+            this.btn6_5.BackColor = Color.White;
+            this.btn6_5.ForeColor = Color.Black;
+            this.btn6_1.BackColor = this.btn6_2.BackColor = this.btn6_3.BackColor = this.btn6_4.BackColor = this.btn6_6.BackColor = Color.Transparent;
+            this.btn6_1.ForeColor = this.btn6_2.ForeColor = this.btn6_3.ForeColor = this.btn6_4.ForeColor = this.btn6_6.ForeColor = Color.White;
+            CreateDR();
+            frmDR.TopLevel = false;
+            pnlBackPage.Controls.Clear();
+            pnlBackPage.Controls.Add(frmDR);
+            frmDR.Dock = DockStyle.Fill;
+            frmDR.Show();
+        }
+        private void btn6_6_Click(object sender, EventArgs e)
+        {
+            this.btn6_6.BackColor = Color.White;
+            this.btn6_6.ForeColor = Color.Black;
+            this.btn6_1.BackColor = this.btn6_2.BackColor = this.btn6_3.BackColor = this.btn6_4.BackColor = this.btn6_5.BackColor = Color.Transparent;
+            this.btn6_1.ForeColor = this.btn6_2.ForeColor = this.btn6_3.ForeColor = this.btn6_4.ForeColor = this.btn6_5.ForeColor = Color.White;
+            CreateDS();
+            frmDS.TopLevel = false;
+            pnlBackPage.Controls.Clear();
+            pnlBackPage.Controls.Add(frmDS);
+            frmDS.Dock = DockStyle.Fill;
+            frmDS.Show();
+        }
+        #endregion
 
         #endregion
 
+        #region 네비게이션 패널
         private void btnOpenClose_Click(object sender, EventArgs e)
         {
             if (btnOpenClose.Text == "<<")
@@ -457,5 +873,7 @@ namespace Team6_UMB
         {
             Process.Start("https://www.naver.com/");
         }
+
+        #endregion
     }
 }
