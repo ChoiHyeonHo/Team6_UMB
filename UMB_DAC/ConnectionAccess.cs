@@ -9,52 +9,53 @@ namespace UMB_DAC
 {
     public class ConnectionAccess
     {
-        public static string strConn;
+        //public static string strConn;
 
-        //protected string ConnectionString
-        //{
-        //    get
-        //    {
-        //        string currentPath = System.IO.Directory.GetCurrentDirectory();
-        //        string strConn = string.Empty;
-        //        XmlDocument configXml = new XmlDocument();
-        //        string path = currentPath + "/Sample_DEV.xml";
-        //        configXml.Load(path);
-
-        //        XmlNodeList addNodes = configXml.SelectNodes("configuration/settings/add");
-
-        //        foreach (XmlNode node in addNodes)
-        //        {
-        //            if (node.Attributes["key"].InnerText == "Team6")
-        //            {
-        //                EncrytLibrary.AES aes = new EncrytLibrary.();
-        //                strConn = enc.AESDecrypt256((node.ChildNodes[0]).InnerText);
-        //                break;
-        //            }
-        //        }
-
-        //        return strConn;
-        //    }
-        //}
-
-        public void Connect()
+        protected string ConnectionString
         {
-            string currentPath = System.IO.Directory.GetCurrentDirectory();
-            XmlDocument configXml = new XmlDocument();
-            string path = currentPath + "/Sample_DEV.xml";
-            configXml.Load(path);
-
-            XmlNodeList addNodes = configXml.SelectNodes("configuration/settings/add");
-
-            foreach (XmlNode node in addNodes)
+            get
             {
-                if (node.Attributes["key"].InnerText == "Team6")
+                string currentPath = System.IO.Directory.GetCurrentDirectory();
+                string strConn = string.Empty;
+                XmlDocument configXml = new XmlDocument();
+                string path = currentPath + "/DBConnection.xml";
+                configXml.Load(path);
+
+                XmlNodeList addNodes = configXml.SelectNodes("configuration/settings/add");
+
+                foreach (XmlNode node in addNodes)
                 {
-                    EncrytLibrary.AES aes = new EncrytLibrary.AES();
-                    strConn = aes.AESDecrypt256((node.ChildNodes[0]).InnerText);
-                    break;
+                    if (node.Attributes["key"].InnerText == "Team6")
+                    {
+                        EncrytLibrary.AES aes = new EncrytLibrary.AES();
+                        strConn = aes.AESDecrypt256((node.ChildNodes[0]).InnerText);
+                        break;
+                    }
                 }
+
+                return strConn;
             }
         }
+
+        //public string Connect()
+        //{
+        //    string currentPath = System.IO.Directory.GetCurrentDirectory();
+        //    XmlDocument configXml = new XmlDocument();
+        //    string path = currentPath + "/DBConnection.xml";
+        //    configXml.Load(path);
+
+        //    XmlNodeList addNodes = configXml.SelectNodes("configuration/settings/add");
+
+        //    foreach (XmlNode node in addNodes)
+        //    {
+        //        if (node.Attributes["key"].InnerText == "Team6")
+        //        {
+        //            EncrytLibrary.AES aes = new EncrytLibrary.AES();
+        //            strConn = aes.AESDecrypt256((node.ChildNodes[0]).InnerText);
+        //            break;
+        //        }
+        //    }
+        //    return strConn;
+        //}
     }
 }

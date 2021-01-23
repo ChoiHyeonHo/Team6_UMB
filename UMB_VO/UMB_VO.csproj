@@ -43,8 +43,10 @@
   <ItemGroup>
     <Compile Include="BOMVO.cs" />
     <Compile Include="BORVO.cs" />
+    <Compile Include="CHH\SalesPriceVO.cs" />
     <Compile Include="ProcessVO.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

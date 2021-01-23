@@ -52,6 +52,7 @@
   <ItemGroup>
     <Compile Include="BOMDAC.cs" />
     <Compile Include="BORDAC.cs" />
+    <Compile Include="CHH\SalesPriceDAC.cs" />
     <Compile Include="Class\Helper.cs" />
     <Compile Include="ConnectionAccess.cs" />
     <Compile Include="ProcessDAC.cs" />
@@ -65,6 +66,13 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\UMB_VO\UMB_VO.csproj">
+      <Project>{35dbb28e-b923-48c0-acc6-68811c8b72bd}</Project>
+      <Name>UMB_VO</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

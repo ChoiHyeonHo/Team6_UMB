@@ -9,10 +9,10 @@ namespace Team6_UMB.Service
 {
     class BOMService
     {
-        public string enc()
-        {
-            BOMDAC asdf = new BOMDAC();
-            return asdf.enc();
-        }
+        //public string enc()
+        //{
+        //    BOMDAC asdf = new BOMDAC();
+        //    return asdf.enc();
+        //}
     }
 }

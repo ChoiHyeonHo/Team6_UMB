@@ -29,17 +29,8 @@ namespace Team6_UMB.Forms
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            this.btnAllButtons1 = new Team6_UMB.Controls.btnAllButtons();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dgvPrice = new Team6_UMB.DGV_Custom();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.button1 = new System.Windows.Forms.Button();
             this.textBox2 = new System.Windows.Forms.TextBox();
@@ -47,9 +38,10 @@ namespace Team6_UMB.Forms
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.periodSearchControl1 = new PJT_Olive.Control.PeriodSearchControl();
+            this.periodSearchControl = new PJT_Olive.Control.PeriodSearchControl();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label5 = new System.Windows.Forms.Label();
+            this.newBtns = new Team6_UMB.Controls.NewBtns();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPrice)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -60,26 +52,15 @@ namespace Team6_UMB.Forms
             // 
             this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel1.Controls.Add(this.btnAllButtons1);
+            this.panel1.Controls.Add(this.newBtns);
             this.panel1.Size = new System.Drawing.Size(1511, 35);
             this.panel1.Controls.SetChildIndex(this.label1, 0);
-            this.panel1.Controls.SetChildIndex(this.btnAllButtons1, 0);
+            this.panel1.Controls.SetChildIndex(this.newBtns, 0);
             // 
             // label1
             // 
             this.label1.Size = new System.Drawing.Size(124, 24);
             this.label1.Text = "영업단가관리";
-            // 
-            // btnAllButtons1
-            // 
-            this.btnAllButtons1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(52)))), ((int)(((byte)(79)))));
-            this.btnAllButtons1.Dock = System.Windows.Forms.DockStyle.Right;
-            this.btnAllButtons1.Location = new System.Drawing.Point(1134, 0);
-            this.btnAllButtons1.Name = "btnAllButtons1";
-            this.btnAllButtons1.Size = new System.Drawing.Size(377, 35);
-            this.btnAllButtons1.TabIndex = 2;
-            this.btnAllButtons1.btnCreate_Event += new System.EventHandler(this.btnAllButtons1_btnCreate_Event);
-            this.btnAllButtons1.btnUpdate_Event += new System.EventHandler(this.btnAllButtons1_btnUpdate_Event);
             // 
             // dgvPrice
             // 
@@ -88,24 +69,15 @@ namespace Team6_UMB.Forms
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvPrice.BackgroundColor = System.Drawing.Color.White;
             this.dgvPrice.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("나눔바른고딕", 9F);
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvPrice.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("나눔바른고딕", 9F);
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvPrice.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.dgvPrice.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvPrice.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Column1,
-            this.Column2,
-            this.Column3,
-            this.Column4,
-            this.Column5,
-            this.Column6,
-            this.Column7,
-            this.Column8});
             this.dgvPrice.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.dgvPrice.GridColor = System.Drawing.Color.LightGray;
             this.dgvPrice.Location = new System.Drawing.Point(12, 141);
@@ -117,54 +89,6 @@ namespace Team6_UMB.Forms
             this.dgvPrice.Size = new System.Drawing.Size(1510, 800);
             this.dgvPrice.TabIndex = 21;
             // 
-            // Column1
-            // 
-            this.Column1.HeaderText = "ID";
-            this.Column1.Name = "Column1";
-            this.Column1.Width = 60;
-            // 
-            // Column2
-            // 
-            this.Column2.HeaderText = "제품명";
-            this.Column2.Name = "Column2";
-            this.Column2.Width = 260;
-            // 
-            // Column3
-            // 
-            this.Column3.HeaderText = "거래처명";
-            this.Column3.Name = "Column3";
-            this.Column3.Width = 260;
-            // 
-            // Column4
-            // 
-            this.Column4.HeaderText = "현재단가";
-            this.Column4.Name = "Column4";
-            this.Column4.Width = 180;
-            // 
-            // Column5
-            // 
-            this.Column5.HeaderText = "이전단가";
-            this.Column5.Name = "Column5";
-            this.Column5.Width = 180;
-            // 
-            // Column6
-            // 
-            this.Column6.HeaderText = "시작일";
-            this.Column6.Name = "Column6";
-            this.Column6.Width = 200;
-            // 
-            // Column7
-            // 
-            this.Column7.HeaderText = "종료일";
-            this.Column7.Name = "Column7";
-            this.Column7.Width = 200;
-            // 
-            // Column8
-            // 
-            this.Column8.HeaderText = "사용유무";
-            this.Column8.Name = "Column8";
-            this.Column8.Width = 120;
-            // 
             // groupBox1
             // 
             this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
@@ -175,7 +99,7 @@ namespace Team6_UMB.Forms
             this.groupBox1.Controls.Add(this.textBox1);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Controls.Add(this.periodSearchControl1);
+            this.groupBox1.Controls.Add(this.periodSearchControl);
             this.groupBox1.Location = new System.Drawing.Point(12, 57);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(1511, 50);
@@ -242,16 +166,16 @@ namespace Team6_UMB.Forms
             this.label2.TabIndex = 21;
             this.label2.Text = "기간";
             // 
-            // periodSearchControl1
+            // periodSearchControl
             // 
-            this.periodSearchControl1.DateType = "";
-            this.periodSearchControl1.dtFrom = "2021-01-11";
-            this.periodSearchControl1.dtTo = "2021-01-18";
-            this.periodSearchControl1.Font = new System.Drawing.Font("돋움", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.periodSearchControl1.Location = new System.Drawing.Point(41, 15);
-            this.periodSearchControl1.Name = "periodSearchControl1";
-            this.periodSearchControl1.Size = new System.Drawing.Size(301, 29);
-            this.periodSearchControl1.TabIndex = 0;
+            this.periodSearchControl.DateType = "";
+            this.periodSearchControl.dtFrom = "2021-01-11";
+            this.periodSearchControl.dtTo = "2021-01-18";
+            this.periodSearchControl.Font = new System.Drawing.Font("돋움", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.periodSearchControl.Location = new System.Drawing.Point(41, 15);
+            this.periodSearchControl.Name = "periodSearchControl";
+            this.periodSearchControl.Size = new System.Drawing.Size(301, 29);
+            this.periodSearchControl.TabIndex = 0;
             // 
             // panel2
             // 
@@ -270,9 +194,21 @@ namespace Team6_UMB.Forms
             this.label5.Font = new System.Drawing.Font("나눔바른고딕", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.label5.Location = new System.Drawing.Point(12, 9);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(115, 17);
+            this.label5.Size = new System.Drawing.Size(102, 17);
             this.label5.TabIndex = 22;
-            this.label5.Text = "불량관리 등록내역";
+            this.label5.Text = "영업단가 리스트";
+            // 
+            // newBtns
+            // 
+            this.newBtns.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(52)))), ((int)(((byte)(79)))));
+            this.newBtns.Dock = System.Windows.Forms.DockStyle.Right;
+            this.newBtns.Location = new System.Drawing.Point(741, 0);
+            this.newBtns.Name = "newBtns";
+            this.newBtns.Size = new System.Drawing.Size(770, 35);
+            this.newBtns.TabIndex = 2;
+            this.newBtns.btnRefresh_Event += new System.EventHandler(this.newBtns_btnRefresh_Event);
+            this.newBtns.btnCreate_Event += new System.EventHandler(this.newBtns_btnCreate_Event);
+            this.newBtns.btnUpdate_Event += new System.EventHandler(this.newBtns_btnUpdate_Event);
             // 
             // frmSalesPriceManage
             // 
@@ -282,6 +218,7 @@ namespace Team6_UMB.Forms
             this.Controls.Add(this.dgvPrice);
             this.Controls.Add(this.groupBox1);
             this.Name = "frmSalesPriceManage";
+            this.Load += new System.EventHandler(this.frmSalesPriceManage_Load);
             this.Controls.SetChildIndex(this.panel1, 0);
             this.Controls.SetChildIndex(this.groupBox1, 0);
             this.Controls.SetChildIndex(this.dgvPrice, 0);
@@ -298,7 +235,6 @@ namespace Team6_UMB.Forms
         }
 
         #endregion
-        private Controls.btnAllButtons btnAllButtons1;
         private DGV_Custom dgvPrice;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Button button1;
@@ -307,16 +243,9 @@ namespace Team6_UMB.Forms
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
-        private PJT_Olive.Control.PeriodSearchControl periodSearchControl1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column7;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column8;
+        private PJT_Olive.Control.PeriodSearchControl periodSearchControl;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label5;
+        private Controls.NewBtns newBtns;
     }
 }

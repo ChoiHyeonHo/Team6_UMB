@@ -7,23 +7,23 @@ using System.Threading.Tasks;
 
 namespace UMB_DAC
 {
-    public class BORDAC : ConnectionAccess, IDisposable
+    public class BORDAC : ConnectionAccess //IDisposable
     {
         SqlConnection conn;
         //ㅁㄴㅇ
-        public BORDAC()
-        {
-            conn = new SqlConnection(strConn);
-            conn.Open();
-        }
+        //public BORDAC()
+        //{
+        //    conn = new SqlConnection(strConn);
+        //    conn.Open();
+        //}
 
-        public void Dispose()
-        {
-            if (conn != null)
-            {
-                conn.Close();
-            }
-        }
+        //public void Dispose()
+        //{
+        //    if (conn != null)
+        //    {
+        //        conn.Close();
+        //    }
+        //}
 
         #region EXAMPLE CRUD        
         //public List<VO> SELECT()

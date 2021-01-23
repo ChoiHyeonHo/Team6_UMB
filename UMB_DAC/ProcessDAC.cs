@@ -11,11 +11,11 @@ namespace UMB_DAC
     {
         SqlConnection conn;
 
-        public ProcessDAC()
-        {
-            conn = new SqlConnection(strConn);
-            conn.Open();
-        }
+        //public ProcessDAC()
+        //{
+        //    conn = new SqlConnection(strConn);
+        //    conn.Open();
+        //}
 
         public void Dispose()
         {

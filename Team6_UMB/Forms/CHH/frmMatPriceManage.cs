@@ -19,14 +19,14 @@ namespace Team6_UMB.Forms
         private void btnAllButtons1_btnCreate_Event(object sender, EventArgs e)
         {
             headerName = "자재단가관리 - 등록";
-            frmPriceManagePopUp frm = new frmPriceManagePopUp(headerName);
+            frmSalesPricePopUp frm = new frmSalesPricePopUp(headerName);
             frm.ShowDialog();
         }
 
         private void btnAllButtons1_btnUpdate_Event(object sender, EventArgs e)
         {
             headerName = "자재단가관리 - 수정";
-            frmPriceManagePopUp frm = new frmPriceManagePopUp(headerName);
+            frmSalesPricePopUp frm = new frmSalesPricePopUp(headerName);
             frm.ShowDialog();
         }
     }

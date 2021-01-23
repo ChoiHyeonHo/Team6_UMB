@@ -11,16 +11,16 @@ namespace UMB_DAC
     {
         SqlConnection conn;
 
-        public BOMDAC()
-        {
-            conn = new SqlConnection(strConn);
-            conn.Open();
-        }
+        //public BOMDAC()
+        //{
+        //    conn = new SqlConnection(strConn);
+        //    conn.Open();
+        //}
 
-        public string enc()
-        {
-            return strConn;
-        }
+        //public string enc()
+        //{
+        //    return strConn;
+        //}
 
         public void Dispose()
         {

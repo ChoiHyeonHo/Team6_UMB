@@ -423,6 +423,7 @@
     <Compile Include="Forms\JSJ\frmSOPopUP.Designer.cs">
       <DependentUpon>frmSOPopUP.cs</DependentUpon>
     </Compile>
+    <Compile Include="Service\SalesPriceService.cs" />
     <Compile Include="Util\ChamJo.cs" />
     <Compile Include="Util\CommonUtil.cs" />
     <Compile Include="Util\ExcelExportImport.cs" />
@@ -671,6 +672,10 @@
     <ProjectReference Include="..\UMB_DAC\UMB_DAC.csproj">
       <Project>{8F8B5EDA-BF7D-4853-A6AC-F200F018366B}</Project>
       <Name>UMB_DAC</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\UMB_VO\UMB_VO.csproj">
+      <Project>{35dbb28e-b923-48c0-acc6-68811c8b72bd}</Project>
+      <Name>UMB_VO</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
