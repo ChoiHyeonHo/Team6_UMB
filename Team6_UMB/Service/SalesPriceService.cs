@@ -15,5 +15,23 @@ namespace Team6_UMB.Service
             SalesPriceDAC dac = new SalesPriceDAC();
             return dac.GetSalesPriceInfo();
         }
+
+        public List<ProdCBOBindingVO> GetProdName()
+        {
+            SalesPriceDAC dac = new SalesPriceDAC();
+            return dac.GetProdName();
+        }
+
+        public List<CompanyCBOBindingVO> GetCompanyName()
+        {
+            SalesPriceDAC dac = new SalesPriceDAC();
+            return dac.GetCompanyName();
+        }
+
+        public bool Insert(SalesPriceVO vo)
+        {
+            SalesPriceDAC dac = new SalesPriceDAC();
+            return dac.Insert(vo);
+        }
     }
 }
