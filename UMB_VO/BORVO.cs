@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace UMB_VO
 {
-    class BORVO
+    public class BORVO
     {
     }
 }

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace UMB_VO
 {
-    class ProcessVO
+    public class ProcessVO
     {
     }
 }

@@ -7,27 +7,44 @@ using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using UMB_VO.CHH;
 using Excel = Microsoft.Office.Interop.Excel;
 
 namespace Team6_UMB
 {
     public class CommonUtil
     {
-        //public static void ProdNameDBinding(ComboBox cbo, List<ProdNameVO> list, bool blankItem = true, string blankText = "")
-        //{
-        //    var codeList = (from item in list
-        //                    select item).ToList();
+        public static void ProdNameBinding(ComboBox cbo, List<ProdCBOBindingVO> list, bool blankItem = true, string blankText = "")
+        {
+            var codeList = (from item in list
+                            select item).ToList();
 
-        //    if (blankItem)
-        //    {
-        //        ProdNameVO blank = new ProdNameVO
-        //        { ProdID = null, ProdName = blankText };
-        //        codeList.Insert(0, blank);
-        //    }
-        //    cbo.DisplayMember = "ProdName";
-        //    cbo.ValueMember = "ProdID";
-        //    cbo.DataSource = codeList;
-        //}
+            if (blankItem)
+            {
+                ProdCBOBindingVO blank = new ProdCBOBindingVO
+                { product_id = null, product_name = blankText };
+                codeList.Insert(0, blank);
+            }
+            cbo.DisplayMember = "product_name";
+            cbo.ValueMember = "product_id";
+            cbo.DataSource = codeList;
+        }
+
+        public static void CompanyNameBinding(ComboBox cbo, List<CompanyCBOBindingVO> list, bool blankItem = true, string blankText = "")
+        {
+            var codeList = (from item in list
+                            select item).ToList();
+
+            if (blankItem)
+            {
+                CompanyCBOBindingVO blank = new CompanyCBOBindingVO
+                { company_id = null, company_name = blankText };
+                codeList.Insert(0, blank);
+            }
+            cbo.DisplayMember = "company_name";
+            cbo.ValueMember = "company_id";
+            cbo.DataSource = codeList;
+        }
 
         #region 데이터그리드뷰
         public static void SetInitGridView(DataGridView dgv)

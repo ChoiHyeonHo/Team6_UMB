@@ -55,6 +55,7 @@
     <Compile Include="CHH\SalesPriceDAC.cs" />
     <Compile Include="Class\Helper.cs" />
     <Compile Include="ConnectionAccess.cs" />
+    <Compile Include="LoginDAC.cs" />
     <Compile Include="ProcessDAC.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
