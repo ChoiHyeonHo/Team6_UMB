@@ -173,6 +173,9 @@
     <value>정말로 삭제하시겠습니까?</value>
     <comment>사용법: string msg = Properties.Resources.msgDelete</comment>
   </data>
+  <data name="msgError" xml:space="preserve">
+    <value>작업 수행중 오류 발생. 확인 후 다시 시도하여 주십시오.</value>
+  </data>
   <data name="msgOK" xml:space="preserve">
     <value>정상적으로 처리되었습니다.</value>
   </data>

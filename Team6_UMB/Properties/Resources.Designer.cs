@@ -250,6 +250,15 @@ namespace Team6_UMB.Properties {
         }
         
         /// <summary>
+        ///   작업 수행중 오류 발생. 확인 후 다시 시도하여 주십시오.과(와) 유사한 지역화된 문자열을 찾습니다.
+        /// </summary>
+        internal static string msgError {
+            get {
+                return ResourceManager.GetString("msgError", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   정상적으로 처리되었습니다.과(와) 유사한 지역화된 문자열을 찾습니다.
         /// </summary>
         internal static string msgOK {
