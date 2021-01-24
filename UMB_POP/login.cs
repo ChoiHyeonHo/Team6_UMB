@@ -8,11 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Team6_UMB.Forms.BMN
+namespace UMB_POP
 {
-    public partial class frmperformanceRegi : Form
+    public partial class login : Form
     {
-        public frmperformanceRegi()
+        public login()
         {
             InitializeComponent();
         }

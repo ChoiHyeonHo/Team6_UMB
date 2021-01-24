@@ -53,8 +53,8 @@ namespace Team6_UMB.Forms.BMN
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
             this.button3 = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.btnUpdate = new System.Windows.Forms.Button();
             this.btnCreate = new System.Windows.Forms.Button();
@@ -317,7 +317,7 @@ namespace Team6_UMB.Forms.BMN
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(47, 17);
             this.label2.TabIndex = 25;
-            this.label2.Text = "제품명";
+            this.label2.Text = "품목명";
             // 
             // panel1
             // 
@@ -328,17 +328,6 @@ namespace Team6_UMB.Forms.BMN
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(580, 35);
             this.panel1.TabIndex = 15;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("나눔바른고딕", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(10, 7);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(176, 24);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "생산실적 등록/수정";
             // 
             // button3
             // 
@@ -352,6 +341,17 @@ namespace Team6_UMB.Forms.BMN
             this.button3.Size = new System.Drawing.Size(29, 23);
             this.button3.TabIndex = 46;
             this.button3.UseVisualStyleBackColor = false;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("나눔바른고딕", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(10, 7);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(129, 24);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "생산실적 수정";
             // 
             // panel2
             // 

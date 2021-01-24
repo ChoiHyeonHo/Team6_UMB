@@ -1,7 +1,7 @@
 ﻿
 namespace Team6_UMB.Forms.BMN
 {
-    partial class frmperformanceRegi
+    partial class frmperformanceRegixx
     {
         /// <summary>
         /// Required designer variable.
@@ -237,7 +237,7 @@ namespace Team6_UMB.Forms.BMN
             // 
             // Column12
             // 
-            this.Column12.HeaderText = "제품명";
+            this.Column12.HeaderText = "품목명";
             this.Column12.Name = "Column12";
             // 
             // Column11
@@ -325,6 +325,9 @@ namespace Team6_UMB.Forms.BMN
         protected System.Windows.Forms.Label label1;
         protected System.Windows.Forms.Panel panel1;
         private DGV_Custom dgV_Custom1;
+        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Label label3;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column12;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column11;
@@ -337,8 +340,5 @@ namespace Team6_UMB.Forms.BMN
         private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column7;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column8;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Label label3;
     }
 }

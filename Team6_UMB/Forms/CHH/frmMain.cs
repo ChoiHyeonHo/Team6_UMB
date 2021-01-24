@@ -44,7 +44,7 @@ namespace Team6_UMB
         public static frmShipment frmShipment;
         public static frmSO frmSO;
         public static frmperformanceStatus frmPS; //생산실적 현황
-        public static frmperformanceRegi frmPR; //생산실적등록 / 수정
+        public static frmperformanceRegixx frmPR; //생산실적등록 / 수정
         public static frmWorkOrderRegi frmWOR; //작업지시 등록
         public static frmWorkOrderStatus frmWOS; //작업지시 현황
         public static frmdefectiveRegi frmDR; //불량관리 등록/수정
@@ -214,10 +214,10 @@ namespace Team6_UMB
                 frmPS = new frmperformanceStatus();
             return frmPS;
         }
-        public static frmperformanceRegi CreatePR()
+        public static frmperformanceRegixx CreatePR()
         {
             if (frmPR == null)
-                frmPR = new frmperformanceRegi();
+                frmPR = new frmperformanceRegixx();
             return frmPR;
         }
         public static frmWorkOrderRegi CreateWOR()

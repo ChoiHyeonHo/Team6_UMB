@@ -65,7 +65,7 @@ namespace UMB_RealTimeMonitor
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(360, 55);
             this.label1.TabIndex = 0;
-            this.label1.Text = "       투입대기     ";
+            this.label1.Text = "       작업대기     ";
             // 
             // label2
             // 
@@ -87,7 +87,7 @@ namespace UMB_RealTimeMonitor
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(360, 55);
             this.label3.TabIndex = 0;
-            this.label3.Text = "      출하대기      ";
+            this.label3.Text = "      검사대기      ";
             // 
             // dataGridView2
             // 
@@ -231,7 +231,7 @@ namespace UMB_RealTimeMonitor
             this.label4.TabIndex = 0;
             this.label4.Text = "   생산현황 모니터링   ";
             // 
-            // Form1
+            // frmRealTimeMonitor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -245,7 +245,7 @@ namespace UMB_RealTimeMonitor
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label1);
             this.ForeColor = System.Drawing.Color.White;
-            this.Name = "Form1";
+            this.Name = "frmRealTimeMonitor";
             this.Text = "생산현황 모니터링";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).EndInit();
