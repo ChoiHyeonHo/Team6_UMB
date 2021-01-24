@@ -8,6 +8,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Runtime.InteropServices;
+using Team6_UMB.Service;
+using UMB_VO;
 
 namespace Team6_UMB.Forms
 {
@@ -34,7 +36,7 @@ namespace Team6_UMB.Forms
 
         private void textBox1_Click(object sender, EventArgs e)
         {
-            textBox1.Clear();
+            txtID.Clear();
         }
 
         private void textBox2_Click(object sender, EventArgs e)
@@ -43,8 +45,8 @@ namespace Team6_UMB.Forms
         }
         private void txtPwdFocus()
         {
-            textBox2.Clear();
-            textBox2.PasswordChar = '●';
+            txtPwd.Clear();
+            txtPwd.PasswordChar = '●';
         }
 
         private void frmLogIn_Load(object sender, EventArgs e)
@@ -54,15 +56,26 @@ namespace Team6_UMB.Forms
 
         private void btnSignIn_Click(object sender, EventArgs e)
         {
-            if (textBox1.Text.ToUpper() == "TEAM6" && textBox2.Text.ToUpper() == "UMB")
+            LoginService service = new LoginService();
+            service.Login(int.Parse(txtID.Text), int.Parse(txtPwd.Text));
+            if(LoginVO.user.ID != 0)
             {
                 frmMain frm = new frmMain();
-                frm.Show();
+                frm.Show();                
             }
             else
             {
-                MessageBox.Show("에엥엥ㅇ에 틀렸대요 다시하셈");
+                MessageBox.Show("아이디와 비밀번호를 확인해주세요.");
             }
+            //if (textBox1.Text.ToUpper() == "TEAM6" && textBox2.Text.ToUpper() == "UMB")
+            //{
+            //    frmMain frm = new frmMain();
+            //    frm.Show();
+            //}
+            //else
+            //{
+            //    MessageBox.Show("에엥엥ㅇ에 틀렸대요 다시하셈");
+            //}
         }
 
         private void pictureBox4_Click(object sender, EventArgs e)
@@ -101,8 +114,8 @@ namespace Team6_UMB.Forms
 
         private void textBox2_Enter(object sender, EventArgs e)
         {
-            textBox2.Clear();
-            textBox2.PasswordChar = '●';
+            txtPwd.Clear();
+            txtPwd.PasswordChar = '●';
         }
     }
 }

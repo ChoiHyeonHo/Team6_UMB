@@ -423,6 +423,7 @@
     <Compile Include="Forms\JSJ\frmSOPopUP.Designer.cs">
       <DependentUpon>frmSOPopUP.cs</DependentUpon>
     </Compile>
+    <Compile Include="Service\LoginService.cs" />
     <Compile Include="Service\SalesPriceService.cs" />
     <Compile Include="Util\ChamJo.cs" />
     <Compile Include="Util\CommonUtil.cs" />
