@@ -427,7 +427,6 @@
     <Compile Include="Service\SalesPriceService.cs" />
     <Compile Include="Util\ChamJo.cs" />
     <Compile Include="Util\CommonUtil.cs" />
-    <Compile Include="Util\ExcelExportImport.cs" />
     <Compile Include="Controls\DGV_Custom.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -439,6 +438,13 @@
     </Compile>
     <Compile Include="Forms\CHH\frmMain.Designer.cs">
       <DependentUpon>frmMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Util\ExcelExportImport.cs" />
+    <Compile Include="Util\frmLoading.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Util\frmLoading.Designer.cs">
+      <DependentUpon>frmLoading.cs</DependentUpon>
     </Compile>
     <Compile Include="Util\Log4Net.cs" />
     <Compile Include="Program.cs" />
@@ -643,6 +649,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="Util\frmLoading.resx">
+      <DependentUpon>frmLoading.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -776,6 +785,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Document.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Loading.gif" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

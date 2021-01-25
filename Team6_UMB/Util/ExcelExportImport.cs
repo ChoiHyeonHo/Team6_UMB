@@ -11,7 +11,7 @@ namespace Team6_UMB
 {
     public class ExcelExportImport
     {
-        public static string ExportToDataGridView<T>(List<T> dataList, string exceptColumns, int colorA, int colorR, int colorG, int colorB)
+        public static string ExportToDataGridView<T>(List<T> dataList, string exceptColumns)
         {
             Excel.Application excel = null;
             Excel.Workbook workBook = null;
@@ -49,7 +49,6 @@ namespace Team6_UMB
 
                 range.set_Value(optionalValue, objHeaders.Values.ToArray());
                 range.BorderAround(Type.Missing, Excel.XlBorderWeight.xlThin, Excel.XlColorIndex.xlColorIndexAutomatic, Type.Missing);
-                range.Interior.Color = Color.FromArgb(colorA, colorR, colorG, colorB);
                 range.Font.Color = Color.White;
 
                 int rowIndex = 0;

@@ -31,7 +31,7 @@ namespace Team6_UMB.Forms
         {
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dgvPrice = new Team6_UMB.DGV_Custom();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.temp6 = new System.Windows.Forms.GroupBox();
             this.button1 = new System.Windows.Forms.Button();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
@@ -40,11 +40,12 @@ namespace Team6_UMB.Forms
             this.label2 = new System.Windows.Forms.Label();
             this.periodSearchControl = new PJT_Olive.Control.PeriodSearchControl();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.cheView = new System.Windows.Forms.CheckBox();
             this.label5 = new System.Windows.Forms.Label();
             this.newBtns = new Team6_UMB.Controls.NewBtns();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPrice)).BeginInit();
-            this.groupBox1.SuspendLayout();
+            this.temp6.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -88,23 +89,24 @@ namespace Team6_UMB.Forms
             this.dgvPrice.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.dgvPrice.Size = new System.Drawing.Size(1510, 800);
             this.dgvPrice.TabIndex = 21;
+            this.dgvPrice.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvPrice_CellDoubleClick);
             // 
-            // groupBox1
+            // temp6
             // 
-            this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.temp6.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.groupBox1.Controls.Add(this.button1);
-            this.groupBox1.Controls.Add(this.textBox2);
-            this.groupBox1.Controls.Add(this.label4);
-            this.groupBox1.Controls.Add(this.textBox1);
-            this.groupBox1.Controls.Add(this.label3);
-            this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Controls.Add(this.periodSearchControl);
-            this.groupBox1.Location = new System.Drawing.Point(12, 57);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(1511, 50);
-            this.groupBox1.TabIndex = 17;
-            this.groupBox1.TabStop = false;
+            this.temp6.Controls.Add(this.button1);
+            this.temp6.Controls.Add(this.textBox2);
+            this.temp6.Controls.Add(this.label4);
+            this.temp6.Controls.Add(this.textBox1);
+            this.temp6.Controls.Add(this.label3);
+            this.temp6.Controls.Add(this.label2);
+            this.temp6.Controls.Add(this.periodSearchControl);
+            this.temp6.Location = new System.Drawing.Point(12, 57);
+            this.temp6.Name = "temp6";
+            this.temp6.Size = new System.Drawing.Size(1511, 50);
+            this.temp6.TabIndex = 17;
+            this.temp6.TabStop = false;
             // 
             // button1
             // 
@@ -182,11 +184,25 @@ namespace Team6_UMB.Forms
             this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel2.BackColor = System.Drawing.Color.Gainsboro;
+            this.panel2.Controls.Add(this.cheView);
             this.panel2.Controls.Add(this.label5);
             this.panel2.Location = new System.Drawing.Point(12, 106);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1511, 35);
             this.panel2.TabIndex = 43;
+            // 
+            // cheView
+            // 
+            this.cheView.AutoSize = true;
+            this.cheView.Dock = System.Windows.Forms.DockStyle.Right;
+            this.cheView.Font = new System.Drawing.Font("나눔바른고딕", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.cheView.Location = new System.Drawing.Point(1432, 0);
+            this.cheView.Name = "cheView";
+            this.cheView.Size = new System.Drawing.Size(79, 35);
+            this.cheView.TabIndex = 23;
+            this.cheView.Text = "전체보기";
+            this.cheView.UseVisualStyleBackColor = true;
+            this.cheView.CheckedChanged += new System.EventHandler(this.cheView_CheckedChanged);
             // 
             // label5
             // 
@@ -209,6 +225,8 @@ namespace Team6_UMB.Forms
             this.newBtns.btnRefresh_Event += new System.EventHandler(this.newBtns_btnRefresh_Event);
             this.newBtns.btnCreate_Event += new System.EventHandler(this.newBtns_btnCreate_Event);
             this.newBtns.btnUpdate_Event += new System.EventHandler(this.newBtns_btnUpdate_Event);
+            this.newBtns.btnDelete_Event += new System.EventHandler(this.newBtns_btnDelete_Event);
+            this.newBtns.btnExcel_Event += new System.EventHandler(this.newBtns_btnExcel_Event);
             // 
             // frmSalesPriceManage
             // 
@@ -216,18 +234,18 @@ namespace Team6_UMB.Forms
             this.ClientSize = new System.Drawing.Size(1535, 950);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.dgvPrice);
-            this.Controls.Add(this.groupBox1);
+            this.Controls.Add(this.temp6);
             this.Name = "frmSalesPriceManage";
             this.Load += new System.EventHandler(this.frmSalesPriceManage_Load);
             this.Controls.SetChildIndex(this.panel1, 0);
-            this.Controls.SetChildIndex(this.groupBox1, 0);
+            this.Controls.SetChildIndex(this.temp6, 0);
             this.Controls.SetChildIndex(this.dgvPrice, 0);
             this.Controls.SetChildIndex(this.panel2, 0);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPrice)).EndInit();
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
+            this.temp6.ResumeLayout(false);
+            this.temp6.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.ResumeLayout(false);
@@ -236,7 +254,7 @@ namespace Team6_UMB.Forms
 
         #endregion
         private DGV_Custom dgvPrice;
-        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.GroupBox temp6;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.Label label4;
@@ -247,5 +265,6 @@ namespace Team6_UMB.Forms
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label5;
         private Controls.NewBtns newBtns;
+        private System.Windows.Forms.CheckBox cheView;
     }
 }
