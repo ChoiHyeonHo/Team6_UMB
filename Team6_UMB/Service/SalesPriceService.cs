@@ -10,10 +10,15 @@ namespace Team6_UMB.Service
 {
     class SalesPriceService
     {
-        public List<SalesPriceVO> GetRegistOrderInfo()
+        public List<SalesPriceVO> GetSalesPriceNInfo()
         {
             SalesPriceDAC dac = new SalesPriceDAC();
-            return dac.GetSalesPriceInfo();
+            return dac.GetSalesPriceNInfo();
+        }
+        public List<SalesPriceVO> GetSalesPriceYInfo()
+        {
+            SalesPriceDAC dac = new SalesPriceDAC();
+            return dac.GetSalesPriceYInfo();
         }
 
         public List<ProdCBOBindingVO> GetProdName()
@@ -32,6 +37,18 @@ namespace Team6_UMB.Service
         {
             SalesPriceDAC dac = new SalesPriceDAC();
             return dac.Insert(vo);
+        }
+
+        public bool Update(SalesPriceVO vo)
+        {
+            SalesPriceDAC dac = new SalesPriceDAC();
+            return dac.Update(vo);
+        }
+
+        public bool Delete(int priceID)
+        {
+            SalesPriceDAC dac = new SalesPriceDAC();
+            return dac.Delete(priceID);
         }
     }
 }

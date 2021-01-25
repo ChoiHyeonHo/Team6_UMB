@@ -23,6 +23,23 @@ namespace Team6_UMB.Forms
             cboBinding();
         }
 
+        public frmSalesPricePopUp(string headerName, int priceID, string productID, string productName, int companyID, string companyName, int Present, string sDate, string eDate, string yn, string comment)
+        {
+            InitializeComponent();
+            cboBinding();
+            this.label1.Text = headerName;
+
+            label1.Tag = priceID;
+            cbProductName.Text = productName;
+            cbProductName.Tag = productID;
+            cbCompanyName.Text = companyName;
+            cbCompanyName.Tag = companyID;
+            dtpStart.Value = Convert.ToDateTime(sDate);
+            dtpEnd.Value = Convert.ToDateTime(eDate);
+            cbYN.Text = yn;
+            txtPricePresent.Text = Present.ToString();
+            txtComment.Text = comment;
+        }
 
         #region 제품명, 콤보박스 바인딩
         /// <summary>
@@ -69,7 +86,7 @@ namespace Team6_UMB.Forms
         {
             cbProductName.SelectedIndex = cbCompanyName.SelectedIndex = cbYN.SelectedIndex = 0;
             dtpStart.Value = DateTime.Now;
-            dtpEnd.Value = new DateTime(9999 - 12 - 30);
+            //dtpEnd.Value = new DateTime(9999 - 12 - 30);
             txtPricePresent.Text = txtComment.Text = string.Empty;
         }
 
@@ -82,10 +99,10 @@ namespace Team6_UMB.Forms
                 {
                     SalesPriceVO vo = new SalesPriceVO
                     {
-                        product_name = cbProductName.ValueMember,
-                        company_name = cbCompanyName.ValueMember,
+                        product_name = cbProductName.Tag.ToString(),
+                        company_name = cbCompanyName.Tag.ToString(),
                         price_sdate = dtpStart.Value.ToString(),
-                        price_edate = dtpEnd.Value.ToString(),
+                        price_edate = dtpEnd.Value.ToString(), 
                         price_yn = cbYN.Text,
                         price_present = int.Parse(txtPricePresent.Text),
                         price_comment = txtComment.Text
@@ -105,7 +122,36 @@ namespace Team6_UMB.Forms
             }
             else if (label1.Text == "단가관리 수정")
             {
+                try
+                {
+                    SalesPriceVO vo = new SalesPriceVO
+                    {
+                        price_id = int.Parse(label1.Tag.ToString()),
+                        product_name = cbProductName.Text,
+                        company_name = cbCompanyName.Text,
+                        price_present = int.Parse(txtPricePresent.Text),
+                        price_sdate = Convert.ToDateTime(dtpStart.Value).ToString(),
+                        price_edate = Convert.ToDateTime(dtpEnd.Value).ToString(),
+                        price_yn = cbYN.Text,
+                        price_comment = txtComment.Text
+                    };
+                    service = new SalesPriceService();
+                    bool result = service.Update(vo);
 
+                    if (result)
+                    {
+                        MessageBox.Show(Properties.Resources.msgOK);
+                        cboBinding();
+                        ClearTB();
+                    }
+                    else
+                        MessageBox.Show(Properties.Resources.msgError);
+                }
+                catch (Exception err)
+                {
+                    MessageBox.Show(err.Message);
+                }
+                
             }
         }
     }
