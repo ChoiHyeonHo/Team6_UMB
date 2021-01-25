@@ -30,16 +30,16 @@ namespace Team6_UMB.Forms.BMN
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtdefname = new System.Windows.Forms.TextBox();
+            this.txtdefcomment = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnClose = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.btnUpdate = new System.Windows.Forms.Button();
+            this.btnCancel = new System.Windows.Forms.Button();
             this.btnCreate = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -47,8 +47,8 @@ namespace Team6_UMB.Forms.BMN
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.textBox2);
-            this.groupBox1.Controls.Add(this.textBox1);
+            this.groupBox1.Controls.Add(this.txtdefname);
+            this.groupBox1.Controls.Add(this.txtdefcomment);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Location = new System.Drawing.Point(12, 56);
@@ -57,20 +57,20 @@ namespace Team6_UMB.Forms.BMN
             this.groupBox1.TabIndex = 17;
             this.groupBox1.TabStop = false;
             // 
-            // textBox2
+            // txtdefname
             // 
-            this.textBox2.Location = new System.Drawing.Point(106, 19);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(256, 21);
-            this.textBox2.TabIndex = 64;
+            this.txtdefname.Location = new System.Drawing.Point(106, 19);
+            this.txtdefname.Name = "txtdefname";
+            this.txtdefname.Size = new System.Drawing.Size(256, 21);
+            this.txtdefname.TabIndex = 64;
             // 
-            // textBox1
+            // txtdefcomment
             // 
-            this.textBox1.Location = new System.Drawing.Point(109, 76);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(253, 106);
-            this.textBox1.TabIndex = 63;
+            this.txtdefcomment.Location = new System.Drawing.Point(109, 76);
+            this.txtdefcomment.Multiline = true;
+            this.txtdefcomment.Name = "txtdefcomment";
+            this.txtdefcomment.Size = new System.Drawing.Size(253, 106);
+            this.txtdefcomment.TabIndex = 63;
             // 
             // label3
             // 
@@ -97,12 +97,25 @@ namespace Team6_UMB.Forms.BMN
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(52)))), ((int)(((byte)(79)))));
-            this.panel1.Controls.Add(this.button3);
+            this.panel1.Controls.Add(this.btnClose);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Location = new System.Drawing.Point(12, 15);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(377, 35);
             this.panel1.TabIndex = 15;
+            // 
+            // btnClose
+            // 
+            this.btnClose.BackColor = System.Drawing.Color.Transparent;
+            this.btnClose.BackgroundImage = global::Team6_UMB.Properties.Resources.Close;
+            this.btnClose.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnClose.FlatAppearance.BorderSize = 0;
+            this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnClose.Location = new System.Drawing.Point(345, 7);
+            this.btnClose.Name = "btnClose";
+            this.btnClose.Size = new System.Drawing.Size(29, 23);
+            this.btnClose.TabIndex = 48;
+            this.btnClose.UseVisualStyleBackColor = false;
             // 
             // label1
             // 
@@ -117,25 +130,25 @@ namespace Team6_UMB.Forms.BMN
             // 
             // panel2
             // 
-            this.panel2.Controls.Add(this.btnUpdate);
+            this.panel2.Controls.Add(this.btnCancel);
             this.panel2.Controls.Add(this.btnCreate);
             this.panel2.Location = new System.Drawing.Point(118, 276);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(162, 40);
             this.panel2.TabIndex = 47;
             // 
-            // btnUpdate
+            // btnCancel
             // 
-            this.btnUpdate.BackColor = System.Drawing.Color.Gray;
-            this.btnUpdate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnUpdate.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.btnUpdate.ForeColor = System.Drawing.Color.White;
-            this.btnUpdate.Location = new System.Drawing.Point(84, 4);
-            this.btnUpdate.Name = "btnUpdate";
-            this.btnUpdate.Size = new System.Drawing.Size(75, 34);
-            this.btnUpdate.TabIndex = 18;
-            this.btnUpdate.Text = "취소";
-            this.btnUpdate.UseVisualStyleBackColor = false;
+            this.btnCancel.BackColor = System.Drawing.Color.Gray;
+            this.btnCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCancel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.btnCancel.ForeColor = System.Drawing.Color.White;
+            this.btnCancel.Location = new System.Drawing.Point(84, 4);
+            this.btnCancel.Name = "btnCancel";
+            this.btnCancel.Size = new System.Drawing.Size(75, 34);
+            this.btnCancel.TabIndex = 18;
+            this.btnCancel.Text = "취소";
+            this.btnCancel.UseVisualStyleBackColor = false;
             // 
             // btnCreate
             // 
@@ -149,19 +162,6 @@ namespace Team6_UMB.Forms.BMN
             this.btnCreate.TabIndex = 0;
             this.btnCreate.Text = "저장";
             this.btnCreate.UseVisualStyleBackColor = false;
-            // 
-            // button3
-            // 
-            this.button3.BackColor = System.Drawing.Color.Transparent;
-            this.button3.BackgroundImage = global::Team6_UMB.Properties.Resources.Close;
-            this.button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.button3.FlatAppearance.BorderSize = 0;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Location = new System.Drawing.Point(345, 7);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(29, 23);
-            this.button3.TabIndex = 48;
-            this.button3.UseVisualStyleBackColor = false;
             // 
             // frmdefectiveRegiPopUp
             // 
@@ -191,11 +191,11 @@ namespace Team6_UMB.Forms.BMN
         private System.Windows.Forms.Label label2;
         protected System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txtdefcomment;
+        private System.Windows.Forms.TextBox txtdefname;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Button btnUpdate;
+        private System.Windows.Forms.Button btnCancel;
         private System.Windows.Forms.Button btnCreate;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button btnClose;
     }
 }

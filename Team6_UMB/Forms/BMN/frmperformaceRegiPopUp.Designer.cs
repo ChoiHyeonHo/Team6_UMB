@@ -30,34 +30,34 @@ namespace Team6_UMB.Forms.BMN
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.dateTimePicker3 = new System.Windows.Forms.DateTimePicker();
-            this.dateTimePicker5 = new System.Windows.Forms.DateTimePicker();
-            this.dateTimePicker4 = new System.Windows.Forms.DateTimePicker();
-            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
+            this.dtpEndDate = new System.Windows.Forms.DateTimePicker();
+            this.dtpEndTime = new System.Windows.Forms.DateTimePicker();
+            this.dtpStartTime = new System.Windows.Forms.DateTimePicker();
+            this.dtpStartDate = new System.Windows.Forms.DateTimePicker();
             this.label7 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
-            this.comboBox4 = new System.Windows.Forms.ComboBox();
             this.label10 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.txtcount = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
-            this.comboBox3 = new System.Windows.Forms.ComboBox();
+            this.cbprocess = new System.Windows.Forms.ComboBox();
             this.label8 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.cbmachine = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtWorker = new System.Windows.Forms.TextBox();
+            this.txtprod = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.button3 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.btnUpdate = new System.Windows.Forms.Button();
+            this.btnCancel = new System.Windows.Forms.Button();
             this.btnCreate = new System.Windows.Forms.Button();
+            this.txtokcount = new System.Windows.Forms.TextBox();
+            this.txtngcount = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -65,27 +65,27 @@ namespace Team6_UMB.Forms.BMN
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.dateTimePicker3);
-            this.groupBox1.Controls.Add(this.dateTimePicker5);
-            this.groupBox1.Controls.Add(this.dateTimePicker4);
-            this.groupBox1.Controls.Add(this.dateTimePicker2);
+            this.groupBox1.Controls.Add(this.dtpEndDate);
+            this.groupBox1.Controls.Add(this.dtpEndTime);
+            this.groupBox1.Controls.Add(this.dtpStartTime);
+            this.groupBox1.Controls.Add(this.dtpStartDate);
             this.groupBox1.Controls.Add(this.label7);
             this.groupBox1.Controls.Add(this.label12);
             this.groupBox1.Controls.Add(this.label11);
-            this.groupBox1.Controls.Add(this.comboBox4);
             this.groupBox1.Controls.Add(this.label10);
-            this.groupBox1.Controls.Add(this.textBox3);
+            this.groupBox1.Controls.Add(this.txtngcount);
+            this.groupBox1.Controls.Add(this.txtokcount);
+            this.groupBox1.Controls.Add(this.txtcount);
             this.groupBox1.Controls.Add(this.label9);
-            this.groupBox1.Controls.Add(this.comboBox3);
+            this.groupBox1.Controls.Add(this.cbprocess);
             this.groupBox1.Controls.Add(this.label8);
             this.groupBox1.Controls.Add(this.label6);
             this.groupBox1.Controls.Add(this.label5);
-            this.groupBox1.Controls.Add(this.comboBox2);
             this.groupBox1.Controls.Add(this.label4);
-            this.groupBox1.Controls.Add(this.comboBox1);
+            this.groupBox1.Controls.Add(this.cbmachine);
             this.groupBox1.Controls.Add(this.label3);
-            this.groupBox1.Controls.Add(this.textBox2);
-            this.groupBox1.Controls.Add(this.textBox1);
+            this.groupBox1.Controls.Add(this.txtWorker);
+            this.groupBox1.Controls.Add(this.txtprod);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Location = new System.Drawing.Point(12, 63);
             this.groupBox1.Name = "groupBox1";
@@ -93,39 +93,39 @@ namespace Team6_UMB.Forms.BMN
             this.groupBox1.TabIndex = 16;
             this.groupBox1.TabStop = false;
             // 
-            // dateTimePicker3
+            // dtpEndDate
             // 
-            this.dateTimePicker3.Font = new System.Drawing.Font("나눔바른고딕", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.dateTimePicker3.Location = new System.Drawing.Point(91, 168);
-            this.dateTimePicker3.Name = "dateTimePicker3";
-            this.dateTimePicker3.Size = new System.Drawing.Size(138, 25);
-            this.dateTimePicker3.TabIndex = 59;
+            this.dtpEndDate.Font = new System.Drawing.Font("나눔바른고딕", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.dtpEndDate.Location = new System.Drawing.Point(91, 168);
+            this.dtpEndDate.Name = "dtpEndDate";
+            this.dtpEndDate.Size = new System.Drawing.Size(138, 25);
+            this.dtpEndDate.TabIndex = 59;
             // 
-            // dateTimePicker5
+            // dtpEndTime
             // 
-            this.dateTimePicker5.Font = new System.Drawing.Font("나눔바른고딕", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.dateTimePicker5.Format = System.Windows.Forms.DateTimePickerFormat.Time;
-            this.dateTimePicker5.Location = new System.Drawing.Point(382, 168);
-            this.dateTimePicker5.Name = "dateTimePicker5";
-            this.dateTimePicker5.Size = new System.Drawing.Size(138, 25);
-            this.dateTimePicker5.TabIndex = 59;
+            this.dtpEndTime.Font = new System.Drawing.Font("나눔바른고딕", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.dtpEndTime.Format = System.Windows.Forms.DateTimePickerFormat.Time;
+            this.dtpEndTime.Location = new System.Drawing.Point(382, 168);
+            this.dtpEndTime.Name = "dtpEndTime";
+            this.dtpEndTime.Size = new System.Drawing.Size(138, 25);
+            this.dtpEndTime.TabIndex = 59;
             // 
-            // dateTimePicker4
+            // dtpStartTime
             // 
-            this.dateTimePicker4.Font = new System.Drawing.Font("나눔바른고딕", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.dateTimePicker4.Format = System.Windows.Forms.DateTimePickerFormat.Time;
-            this.dateTimePicker4.Location = new System.Drawing.Point(382, 129);
-            this.dateTimePicker4.Name = "dateTimePicker4";
-            this.dateTimePicker4.Size = new System.Drawing.Size(138, 25);
-            this.dateTimePicker4.TabIndex = 59;
+            this.dtpStartTime.Font = new System.Drawing.Font("나눔바른고딕", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.dtpStartTime.Format = System.Windows.Forms.DateTimePickerFormat.Time;
+            this.dtpStartTime.Location = new System.Drawing.Point(382, 129);
+            this.dtpStartTime.Name = "dtpStartTime";
+            this.dtpStartTime.Size = new System.Drawing.Size(138, 25);
+            this.dtpStartTime.TabIndex = 59;
             // 
-            // dateTimePicker2
+            // dtpStartDate
             // 
-            this.dateTimePicker2.Font = new System.Drawing.Font("나눔바른고딕", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.dateTimePicker2.Location = new System.Drawing.Point(91, 129);
-            this.dateTimePicker2.Name = "dateTimePicker2";
-            this.dateTimePicker2.Size = new System.Drawing.Size(138, 25);
-            this.dateTimePicker2.TabIndex = 59;
+            this.dtpStartDate.Font = new System.Drawing.Font("나눔바른고딕", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.dtpStartDate.Location = new System.Drawing.Point(91, 129);
+            this.dtpStartDate.Name = "dtpStartDate";
+            this.dtpStartDate.Size = new System.Drawing.Size(138, 25);
+            this.dtpStartDate.TabIndex = 59;
             // 
             // label7
             // 
@@ -160,18 +160,6 @@ namespace Team6_UMB.Forms.BMN
             this.label11.TabIndex = 54;
             this.label11.Text = "종료시간";
             // 
-            // comboBox4
-            // 
-            this.comboBox4.Font = new System.Drawing.Font("나눔바른고딕", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.comboBox4.FormattingEnabled = true;
-            this.comboBox4.Items.AddRange(new object[] {
-            "Y",
-            "N"});
-            this.comboBox4.Location = new System.Drawing.Point(382, 90);
-            this.comboBox4.Name = "comboBox4";
-            this.comboBox4.Size = new System.Drawing.Size(198, 25);
-            this.comboBox4.TabIndex = 52;
-            // 
             // label10
             // 
             this.label10.AutoSize = true;
@@ -183,13 +171,13 @@ namespace Team6_UMB.Forms.BMN
             this.label10.TabIndex = 51;
             this.label10.Text = "불량수량";
             // 
-            // textBox3
+            // txtcount
             // 
-            this.textBox3.Font = new System.Drawing.Font("나눔바른고딕", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.textBox3.Location = new System.Drawing.Point(382, 51);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(198, 25);
-            this.textBox3.TabIndex = 50;
+            this.txtcount.Font = new System.Drawing.Font("나눔바른고딕", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.txtcount.Location = new System.Drawing.Point(382, 51);
+            this.txtcount.Name = "txtcount";
+            this.txtcount.Size = new System.Drawing.Size(198, 25);
+            this.txtcount.TabIndex = 50;
             // 
             // label9
             // 
@@ -201,17 +189,17 @@ namespace Team6_UMB.Forms.BMN
             this.label9.TabIndex = 49;
             this.label9.Text = "지시수량";
             // 
-            // comboBox3
+            // cbprocess
             // 
-            this.comboBox3.Font = new System.Drawing.Font("나눔바른고딕", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Items.AddRange(new object[] {
+            this.cbprocess.Font = new System.Drawing.Font("나눔바른고딕", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.cbprocess.FormattingEnabled = true;
+            this.cbprocess.Items.AddRange(new object[] {
             "Y",
             "N"});
-            this.comboBox3.Location = new System.Drawing.Point(382, 12);
-            this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(198, 25);
-            this.comboBox3.TabIndex = 48;
+            this.cbprocess.Location = new System.Drawing.Point(382, 12);
+            this.cbprocess.Name = "cbprocess";
+            this.cbprocess.Size = new System.Drawing.Size(198, 25);
+            this.cbprocess.TabIndex = 48;
             // 
             // label8
             // 
@@ -246,18 +234,6 @@ namespace Team6_UMB.Forms.BMN
             this.label5.TabIndex = 41;
             this.label5.Text = "생산시작일";
             // 
-            // comboBox2
-            // 
-            this.comboBox2.Font = new System.Drawing.Font("나눔바른고딕", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Items.AddRange(new object[] {
-            "Y",
-            "N"});
-            this.comboBox2.Location = new System.Drawing.Point(91, 90);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(198, 25);
-            this.comboBox2.TabIndex = 40;
-            // 
             // label4
             // 
             this.label4.AutoSize = true;
@@ -269,17 +245,17 @@ namespace Team6_UMB.Forms.BMN
             this.label4.TabIndex = 39;
             this.label4.Text = "양품수량";
             // 
-            // comboBox1
+            // cbmachine
             // 
-            this.comboBox1.Font = new System.Drawing.Font("나눔바른고딕", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
+            this.cbmachine.Font = new System.Drawing.Font("나눔바른고딕", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.cbmachine.FormattingEnabled = true;
+            this.cbmachine.Items.AddRange(new object[] {
             "Y",
             "N"});
-            this.comboBox1.Location = new System.Drawing.Point(91, 51);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(198, 25);
-            this.comboBox1.TabIndex = 38;
+            this.cbmachine.Location = new System.Drawing.Point(91, 51);
+            this.cbmachine.Name = "cbmachine";
+            this.cbmachine.Size = new System.Drawing.Size(198, 25);
+            this.cbmachine.TabIndex = 38;
             // 
             // label3
             // 
@@ -292,21 +268,21 @@ namespace Team6_UMB.Forms.BMN
             this.label3.TabIndex = 27;
             this.label3.Text = "설비명";
             // 
-            // textBox2
+            // txtWorker
             // 
-            this.textBox2.Font = new System.Drawing.Font("나눔바른고딕", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.textBox2.Location = new System.Drawing.Point(91, 207);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(198, 25);
-            this.textBox2.TabIndex = 26;
+            this.txtWorker.Font = new System.Drawing.Font("나눔바른고딕", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.txtWorker.Location = new System.Drawing.Point(91, 207);
+            this.txtWorker.Name = "txtWorker";
+            this.txtWorker.Size = new System.Drawing.Size(198, 25);
+            this.txtWorker.TabIndex = 26;
             // 
-            // textBox1
+            // txtprod
             // 
-            this.textBox1.Font = new System.Drawing.Font("나눔바른고딕", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.textBox1.Location = new System.Drawing.Point(91, 12);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(198, 25);
-            this.textBox1.TabIndex = 26;
+            this.txtprod.Font = new System.Drawing.Font("나눔바른고딕", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.txtprod.Location = new System.Drawing.Point(91, 12);
+            this.txtprod.Name = "txtprod";
+            this.txtprod.Size = new System.Drawing.Size(198, 25);
+            this.txtprod.TabIndex = 26;
             // 
             // label2
             // 
@@ -355,25 +331,25 @@ namespace Team6_UMB.Forms.BMN
             // 
             // panel2
             // 
-            this.panel2.Controls.Add(this.btnUpdate);
+            this.panel2.Controls.Add(this.btnCancel);
             this.panel2.Controls.Add(this.btnCreate);
             this.panel2.Location = new System.Drawing.Point(219, 321);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(162, 40);
             this.panel2.TabIndex = 47;
             // 
-            // btnUpdate
+            // btnCancel
             // 
-            this.btnUpdate.BackColor = System.Drawing.Color.Gray;
-            this.btnUpdate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnUpdate.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.btnUpdate.ForeColor = System.Drawing.Color.White;
-            this.btnUpdate.Location = new System.Drawing.Point(84, 4);
-            this.btnUpdate.Name = "btnUpdate";
-            this.btnUpdate.Size = new System.Drawing.Size(75, 34);
-            this.btnUpdate.TabIndex = 18;
-            this.btnUpdate.Text = "취소";
-            this.btnUpdate.UseVisualStyleBackColor = false;
+            this.btnCancel.BackColor = System.Drawing.Color.Gray;
+            this.btnCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCancel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.btnCancel.ForeColor = System.Drawing.Color.White;
+            this.btnCancel.Location = new System.Drawing.Point(84, 4);
+            this.btnCancel.Name = "btnCancel";
+            this.btnCancel.Size = new System.Drawing.Size(75, 34);
+            this.btnCancel.TabIndex = 18;
+            this.btnCancel.Text = "취소";
+            this.btnCancel.UseVisualStyleBackColor = false;
             // 
             // btnCreate
             // 
@@ -387,6 +363,22 @@ namespace Team6_UMB.Forms.BMN
             this.btnCreate.TabIndex = 0;
             this.btnCreate.Text = "저장";
             this.btnCreate.UseVisualStyleBackColor = false;
+            // 
+            // txtokcount
+            // 
+            this.txtokcount.Font = new System.Drawing.Font("나눔바른고딕", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.txtokcount.Location = new System.Drawing.Point(91, 91);
+            this.txtokcount.Name = "txtokcount";
+            this.txtokcount.Size = new System.Drawing.Size(198, 25);
+            this.txtokcount.TabIndex = 50;
+            // 
+            // txtngcount
+            // 
+            this.txtngcount.Font = new System.Drawing.Font("나눔바른고딕", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.txtngcount.Location = new System.Drawing.Point(382, 91);
+            this.txtngcount.Name = "txtngcount";
+            this.txtngcount.Size = new System.Drawing.Size(198, 25);
+            this.txtngcount.TabIndex = 50;
             // 
             // frmperformaceRegiPopUp
             // 
@@ -415,31 +407,31 @@ namespace Team6_UMB.Forms.BMN
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.ComboBox comboBox4;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox txtcount;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.ComboBox comboBox3;
+        private System.Windows.Forms.ComboBox cbprocess;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.ComboBox comboBox2;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox cbmachine;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtprod;
         private System.Windows.Forms.Label label2;
         protected System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.DateTimePicker dateTimePicker3;
-        private System.Windows.Forms.DateTimePicker dateTimePicker2;
+        private System.Windows.Forms.DateTimePicker dtpEndDate;
+        private System.Windows.Forms.DateTimePicker dtpStartDate;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.DateTimePicker dateTimePicker4;
-        private System.Windows.Forms.DateTimePicker dateTimePicker5;
+        private System.Windows.Forms.DateTimePicker dtpStartTime;
+        private System.Windows.Forms.DateTimePicker dtpEndTime;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txtWorker;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Button btnUpdate;
+        private System.Windows.Forms.Button btnCancel;
         private System.Windows.Forms.Button btnCreate;
+        private System.Windows.Forms.TextBox txtngcount;
+        private System.Windows.Forms.TextBox txtokcount;
     }
 }

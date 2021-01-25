@@ -32,7 +32,7 @@ namespace Team6_UMB.Forms.BMN
             this.components = new System.ComponentModel.Container();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmperformanceStatus));
-            this.dgV_Custom1 = new Team6_UMB.DGV_Custom();
+            this.dgvStatus = new Team6_UMB.DGV_Custom();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column12 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -51,27 +51,27 @@ namespace Team6_UMB.Forms.BMN
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnAllButtons1 = new Team6_UMB.Controls.btnAllButtons();
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txtprod = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.periodSearchControl1 = new PJT_Olive.Control.PeriodSearchControl();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.button3 = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtprocess = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.dgV_Custom1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvStatus)).BeginInit();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // dgV_Custom1
+            // dgvStatus
             // 
-            this.dgV_Custom1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.dgvStatus.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.dgV_Custom1.BackgroundColor = System.Drawing.Color.White;
-            this.dgV_Custom1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dgvStatus.BackgroundColor = System.Drawing.Color.White;
+            this.dgvStatus.BorderStyle = System.Windows.Forms.BorderStyle.None;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
             dataGridViewCellStyle1.Font = new System.Drawing.Font("나눔바른고딕", 9F);
@@ -79,9 +79,9 @@ namespace Team6_UMB.Forms.BMN
             dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgV_Custom1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
-            this.dgV_Custom1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgV_Custom1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dgvStatus.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.dgvStatus.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvStatus.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column3,
             this.Column12,
             this.Column11,
@@ -94,16 +94,16 @@ namespace Team6_UMB.Forms.BMN
             this.Column6,
             this.Column7,
             this.Column8});
-            this.dgV_Custom1.Cursor = System.Windows.Forms.Cursors.Arrow;
-            this.dgV_Custom1.GridColor = System.Drawing.Color.LightGray;
-            this.dgV_Custom1.Location = new System.Drawing.Point(12, 141);
-            this.dgV_Custom1.Margin = new System.Windows.Forms.Padding(4, 1, 4, 1);
-            this.dgV_Custom1.MinimumSize = new System.Drawing.Size(150, 150);
-            this.dgV_Custom1.Name = "dgV_Custom1";
-            this.dgV_Custom1.RowTemplate.Height = 23;
-            this.dgV_Custom1.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.dgV_Custom1.Size = new System.Drawing.Size(1510, 800);
-            this.dgV_Custom1.TabIndex = 38;
+            this.dgvStatus.Cursor = System.Windows.Forms.Cursors.Arrow;
+            this.dgvStatus.GridColor = System.Drawing.Color.LightGray;
+            this.dgvStatus.Location = new System.Drawing.Point(12, 141);
+            this.dgvStatus.Margin = new System.Windows.Forms.Padding(4, 1, 4, 1);
+            this.dgvStatus.MinimumSize = new System.Drawing.Size(150, 150);
+            this.dgvStatus.Name = "dgvStatus";
+            this.dgvStatus.RowTemplate.Height = 23;
+            this.dgvStatus.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.dgvStatus.Size = new System.Drawing.Size(1510, 800);
+            this.dgvStatus.TabIndex = 38;
             // 
             // Column3
             // 
@@ -228,13 +228,13 @@ namespace Team6_UMB.Forms.BMN
             this.imageList1.Images.SetKeyName(3, "Excel.png");
             this.imageList1.Images.SetKeyName(4, "Print.png");
             // 
-            // textBox2
+            // txtprod
             // 
-            this.textBox2.Font = new System.Drawing.Font("나눔바른고딕", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.textBox2.Location = new System.Drawing.Point(472, 15);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(164, 25);
-            this.textBox2.TabIndex = 25;
+            this.txtprod.Font = new System.Drawing.Font("나눔바른고딕", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.txtprod.Location = new System.Drawing.Point(472, 15);
+            this.txtprod.Name = "txtprod";
+            this.txtprod.Size = new System.Drawing.Size(164, 25);
+            this.txtprod.TabIndex = 25;
             // 
             // label4
             // 
@@ -272,9 +272,9 @@ namespace Team6_UMB.Forms.BMN
             this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox1.Controls.Add(this.button3);
-            this.groupBox1.Controls.Add(this.textBox1);
+            this.groupBox1.Controls.Add(this.txtprocess);
             this.groupBox1.Controls.Add(this.label3);
-            this.groupBox1.Controls.Add(this.textBox2);
+            this.groupBox1.Controls.Add(this.txtprod);
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.periodSearchControl1);
@@ -296,13 +296,13 @@ namespace Team6_UMB.Forms.BMN
             this.button3.TabIndex = 21;
             this.button3.UseVisualStyleBackColor = true;
             // 
-            // textBox1
+            // txtprocess
             // 
-            this.textBox1.Font = new System.Drawing.Font("나눔바른고딕", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.textBox1.Location = new System.Drawing.Point(761, 15);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(164, 25);
-            this.textBox1.TabIndex = 25;
+            this.txtprocess.Font = new System.Drawing.Font("나눔바른고딕", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.txtprocess.Location = new System.Drawing.Point(761, 15);
+            this.txtprocess.Name = "txtprocess";
+            this.txtprocess.Size = new System.Drawing.Size(164, 25);
+            this.txtprocess.TabIndex = 25;
             // 
             // label3
             // 
@@ -320,14 +320,14 @@ namespace Team6_UMB.Forms.BMN
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1535, 950);
-            this.Controls.Add(this.dgV_Custom1);
+            this.Controls.Add(this.dgvStatus);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.groupBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmperformanceStatus";
             this.Text = "frmperformanceStatus";
-            ((System.ComponentModel.ISupportInitialize)(this.dgV_Custom1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvStatus)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.panel1.ResumeLayout(false);
@@ -340,18 +340,18 @@ namespace Team6_UMB.Forms.BMN
 
         #endregion
 
-        private DGV_Custom dgV_Custom1;
+        private DGV_Custom dgvStatus;
         protected System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Panel panel2;
         protected System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txtprod;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label2;
         private PJT_Olive.Control.PeriodSearchControl periodSearchControl1;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtprocess;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.ImageList imageList1;
         private Controls.btnAllButtons btnAllButtons1;
