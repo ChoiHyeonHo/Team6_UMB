@@ -25,11 +25,13 @@ namespace Team6_UMB.Forms.ASB
         {
             CommonUtil.SetInitGridView(dgvBOR);
             CommonUtil.AddGridTextColumn(dgvBOR, "BOR_ID", "bor_id", 60);
-            CommonUtil.AddGridTextColumn(dgvBOR, "품목명", "product_name", 260);
-            CommonUtil.AddGridTextColumn(dgvBOR, "공정명", "process_name", 260);
-            CommonUtil.AddGridTextColumn(dgvBOR, "설비명", "m_name", 180);
-            CommonUtil.AddGridTextColumn(dgvBOR, "Tact_Time", "bor_tattime", 180);
-            CommonUtil.AddGridTextColumn(dgvBOR, "사용유무", "bor_yn", 200);
+            CommonUtil.AddGridTextColumn(dgvBOR, "품목ID", "product_id", 150);
+            CommonUtil.AddGridTextColumn(dgvBOR, "품목명", "product_name", 150);
+            CommonUtil.AddGridTextColumn(dgvBOR, "공정명", "process_name", 150);
+            CommonUtil.AddGridTextColumn(dgvBOR, "설비ID", "m_id", 150);
+            CommonUtil.AddGridTextColumn(dgvBOR, "설비명", "m_name", 150);
+            CommonUtil.AddGridTextColumn(dgvBOR, "Tact_Time", "bor_tattime", 150);
+            CommonUtil.AddGridTextColumn(dgvBOR, "사용유무", "bor_yn", 60);
             CommonUtil.AddGridTextColumn(dgvBOR, "비고", "bor_comment", 200);
             CommonUtil.AddGridTextColumn(dgvBOR, "수정자", "bor_uadmin", 120);
             CommonUtil.AddGridTextColumn(dgvBOR, "수정일", "bor_udate", 120);
@@ -40,8 +42,13 @@ namespace Team6_UMB.Forms.ASB
         private void DGV_Binding()
         {
             BORService service = new BORService();
-            //borList = service.
+            borList = service.GetBORList();
             dgvBOR.DataSource = borList;
+        }
+
+        private void newBtns1_btnRefresh_Event(object sender, EventArgs e)
+        {
+            DGV_Binding();
         }
     }
 }

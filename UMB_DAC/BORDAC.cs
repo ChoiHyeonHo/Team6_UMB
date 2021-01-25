@@ -4,26 +4,49 @@ using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using UMB_VO;
 
 namespace UMB_DAC
 {
-    public class BORDAC : ConnectionAccess //IDisposable
+    public class BORDAC : ConnectionAccess, IDisposable
     {
+        string strConn;
         SqlConnection conn;
-        //ㅁㄴㅇ
-        //public BORDAC()
-        //{
-        //    conn = new SqlConnection(strConn);
-        //    conn.Open();
-        //}
 
-        //public void Dispose()
-        //{
-        //    if (conn != null)
-        //    {
-        //        conn.Close();
-        //    }
-        //}
+        public BORDAC()
+        {
+            strConn = this.ConnectionString;
+            conn = new SqlConnection(strConn);
+            conn.Open();
+        }
+
+        public List<BORVO> GetBORList()
+        {
+            string sql = @"select bor_id, bor.product_id product_id, product_name, process_name, bor.m_id m_id, m_name, bor_tacttime, bor_yn, bor_comment, bor_uadmin, bor_udate 
+                            from TBL_BOR bor 
+                            inner join TBL_PRODUCT pro
+                            on bor.product_id = pro.product_id
+                            inner join TBL_MACHINE mac
+                            on bor.m_id = mac.m_id";
+
+            using (SqlCommand cmd = new SqlCommand(sql, conn))
+            {
+                SqlDataReader reader = cmd.ExecuteReader();
+                
+                List<BORVO> list = Helper.DataReaderMapToList<BORVO>(reader);
+                Dispose();
+                return list;
+            }
+        }
+
+        public void Dispose()
+        {
+            if (conn != null)
+            {
+                conn.Close();
+            }
+        }
+
 
         #region EXAMPLE CRUD        
         //public List<VO> SELECT()
@@ -85,6 +108,6 @@ namespace UMB_DAC
         //        return iRowAffect > 0;
         //    }
         //}
-        #endregion   
+        #endregion
     }
 }

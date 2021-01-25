@@ -29,9 +29,9 @@ namespace Team6_UMB.Forms.ASB
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label3 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.cboProcess = new System.Windows.Forms.ComboBox();
@@ -42,23 +42,14 @@ namespace Team6_UMB.Forms.ASB
             this.cboMachine = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.dgvBOR = new Team6_UMB.DGV_Custom();
+            this.newBtns1 = new Team6_UMB.Controls.NewBtns();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label6 = new System.Windows.Forms.Label();
-            this.bor_id = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.product_name = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.process_name = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.m_name = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.bor_tacttime = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.bor_yn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.bor_comment = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.bor_uadmin = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.bor_udate = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.newBtns1 = new Team6_UMB.Controls.NewBtns();
+            this.dgvBOR = new Team6_UMB.DGV_Custom();
             this.groupBox1.SuspendLayout();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvBOR)).BeginInit();
             this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvBOR)).BeginInit();
             this.SuspendLayout();
             // 
             // label3
@@ -170,55 +161,15 @@ namespace Team6_UMB.Forms.ASB
             this.panel1.Size = new System.Drawing.Size(1511, 35);
             this.panel1.TabIndex = 28;
             // 
-            // dgvBOR
+            // newBtns1
             // 
-            this.dgvBOR.BackgroundColor = System.Drawing.Color.White;
-            this.dgvBOR.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
-            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvBOR.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
-            this.dgvBOR.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvBOR.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.bor_id,
-            this.product_name,
-            this.process_name,
-            this.m_name,
-            this.bor_tacttime,
-            this.bor_yn,
-            this.bor_comment,
-            this.bor_uadmin,
-            this.bor_udate});
-            this.dgvBOR.Cursor = System.Windows.Forms.Cursors.Arrow;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("굴림", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvBOR.DefaultCellStyle = dataGridViewCellStyle5;
-            this.dgvBOR.GridColor = System.Drawing.Color.LightGray;
-            this.dgvBOR.Location = new System.Drawing.Point(12, 141);
-            this.dgvBOR.Margin = new System.Windows.Forms.Padding(4, 1, 4, 1);
-            this.dgvBOR.MinimumSize = new System.Drawing.Size(150, 150);
-            this.dgvBOR.Name = "dgvBOR";
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("굴림", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvBOR.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
-            this.dgvBOR.RowTemplate.Height = 23;
-            this.dgvBOR.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.dgvBOR.Size = new System.Drawing.Size(1510, 800);
-            this.dgvBOR.TabIndex = 30;
+            this.newBtns1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(52)))), ((int)(((byte)(79)))));
+            this.newBtns1.Dock = System.Windows.Forms.DockStyle.Right;
+            this.newBtns1.Location = new System.Drawing.Point(638, 0);
+            this.newBtns1.Name = "newBtns1";
+            this.newBtns1.Size = new System.Drawing.Size(873, 35);
+            this.newBtns1.TabIndex = 3;
+            this.newBtns1.btnRefresh_Event += new System.EventHandler(this.newBtns1_btnRefresh_Event);
             // 
             // panel2
             // 
@@ -237,63 +188,49 @@ namespace Team6_UMB.Forms.ASB
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.label6.Location = new System.Drawing.Point(12, 9);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(73, 18);
+            this.label6.Size = new System.Drawing.Size(71, 18);
             this.label6.TabIndex = 22;
-            this.label6.Text = "BOM 목록";
+            this.label6.Text = "BOR 목록";
             // 
-            // bor_id
+            // dgvBOR
             // 
-            this.bor_id.HeaderText = "bor_id";
-            this.bor_id.Name = "bor_id";
-            // 
-            // product_name
-            // 
-            this.product_name.HeaderText = "품목명";
-            this.product_name.Name = "product_name";
-            // 
-            // process_name
-            // 
-            this.process_name.HeaderText = "공정";
-            this.process_name.Name = "process_name";
-            // 
-            // m_name
-            // 
-            this.m_name.HeaderText = "설비명";
-            this.m_name.Name = "m_name";
-            // 
-            // bor_tacttime
-            // 
-            this.bor_tacttime.HeaderText = "Tact Time(sec)";
-            this.bor_tacttime.Name = "bor_tacttime";
-            // 
-            // bor_yn
-            // 
-            this.bor_yn.HeaderText = "사용유무(y/n)";
-            this.bor_yn.Name = "bor_yn";
-            // 
-            // bor_comment
-            // 
-            this.bor_comment.HeaderText = "비고";
-            this.bor_comment.Name = "bor_comment";
-            // 
-            // bor_uadmin
-            // 
-            this.bor_uadmin.HeaderText = "수정자";
-            this.bor_uadmin.Name = "bor_uadmin";
-            // 
-            // bor_udate
-            // 
-            this.bor_udate.HeaderText = "수정일";
-            this.bor_udate.Name = "bor_udate";
-            // 
-            // newBtns1
-            // 
-            this.newBtns1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(52)))), ((int)(((byte)(79)))));
-            this.newBtns1.Dock = System.Windows.Forms.DockStyle.Right;
-            this.newBtns1.Location = new System.Drawing.Point(638, 0);
-            this.newBtns1.Name = "newBtns1";
-            this.newBtns1.Size = new System.Drawing.Size(873, 35);
-            this.newBtns1.TabIndex = 3;
+            this.dgvBOR.BackgroundColor = System.Drawing.Color.White;
+            this.dgvBOR.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvBOR.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.dgvBOR.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvBOR.Cursor = System.Windows.Forms.Cursors.Arrow;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("굴림", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvBOR.DefaultCellStyle = dataGridViewCellStyle2;
+            this.dgvBOR.GridColor = System.Drawing.Color.LightGray;
+            this.dgvBOR.Location = new System.Drawing.Point(12, 141);
+            this.dgvBOR.Margin = new System.Windows.Forms.Padding(4, 1, 4, 1);
+            this.dgvBOR.MinimumSize = new System.Drawing.Size(150, 150);
+            this.dgvBOR.Name = "dgvBOR";
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("굴림", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvBOR.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            this.dgvBOR.RowTemplate.Height = 23;
+            this.dgvBOR.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.dgvBOR.Size = new System.Drawing.Size(1510, 800);
+            this.dgvBOR.TabIndex = 30;
             // 
             // frmBOR
             // 
@@ -313,9 +250,9 @@ namespace Team6_UMB.Forms.ASB
             this.groupBox1.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvBOR)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvBOR)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -334,15 +271,6 @@ namespace Team6_UMB.Forms.ASB
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.DataGridViewTextBoxColumn bor_id;
-        private System.Windows.Forms.DataGridViewTextBoxColumn product_name;
-        private System.Windows.Forms.DataGridViewTextBoxColumn process_name;
-        private System.Windows.Forms.DataGridViewTextBoxColumn m_name;
-        private System.Windows.Forms.DataGridViewTextBoxColumn bor_tacttime;
-        private System.Windows.Forms.DataGridViewTextBoxColumn bor_yn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn bor_comment;
-        private System.Windows.Forms.DataGridViewTextBoxColumn bor_uadmin;
-        private System.Windows.Forms.DataGridViewTextBoxColumn bor_udate;
         private Controls.NewBtns newBtns1;
     }
 }
