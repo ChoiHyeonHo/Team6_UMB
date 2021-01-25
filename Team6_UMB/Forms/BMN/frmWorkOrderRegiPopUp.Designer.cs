@@ -30,31 +30,31 @@ namespace Team6_UMB.Forms
         private void InitializeComponent()
         {
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtprod = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.txtunit = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txtuadmin = new System.Windows.Forms.TextBox();
             this.label13 = new System.Windows.Forms.Label();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.dtpUdate = new System.Windows.Forms.DateTimePicker();
             this.label14 = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.txtComment = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.button3 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
-            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.dtpOrderDate = new System.Windows.Forms.DateTimePicker();
+            this.txtcount = new System.Windows.Forms.TextBox();
             this.label15 = new System.Windows.Forms.Label();
             this.textBox6 = new System.Windows.Forms.TextBox();
-            this.textBox7 = new System.Windows.Forms.TextBox();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.btnUpdate = new System.Windows.Forms.Button();
+            this.btnCancel = new System.Windows.Forms.Button();
             this.btnCreate = new System.Windows.Forms.Button();
+            this.cbmachine = new System.Windows.Forms.ComboBox();
+            this.cbProcess = new System.Windows.Forms.ComboBox();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
@@ -70,13 +70,13 @@ namespace Team6_UMB.Forms
             this.label2.TabIndex = 25;
             this.label2.Text = "품목명";
             // 
-            // textBox1
+            // txtprod
             // 
-            this.textBox1.Font = new System.Drawing.Font("나눔바른고딕", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.textBox1.Location = new System.Drawing.Point(109, 80);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(183, 25);
-            this.textBox1.TabIndex = 26;
+            this.txtprod.Font = new System.Drawing.Font("나눔바른고딕", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.txtprod.Location = new System.Drawing.Point(109, 80);
+            this.txtprod.Name = "txtprod";
+            this.txtprod.Size = new System.Drawing.Size(183, 25);
+            this.txtprod.TabIndex = 26;
             // 
             // label3
             // 
@@ -88,18 +88,6 @@ namespace Team6_UMB.Forms
             this.label3.Size = new System.Drawing.Size(47, 17);
             this.label3.TabIndex = 27;
             this.label3.Text = "설비명";
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.Font = new System.Drawing.Font("나눔바른고딕", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
-            "Y",
-            "N"});
-            this.comboBox1.Location = new System.Drawing.Point(109, 154);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(183, 25);
-            this.comboBox1.TabIndex = 38;
             // 
             // label4
             // 
@@ -134,13 +122,13 @@ namespace Team6_UMB.Forms
             this.label9.TabIndex = 49;
             this.label9.Text = "규격";
             // 
-            // textBox3
+            // txtunit
             // 
-            this.textBox3.Font = new System.Drawing.Font("나눔바른고딕", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.textBox3.Location = new System.Drawing.Point(391, 117);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(198, 25);
-            this.textBox3.TabIndex = 50;
+            this.txtunit.Font = new System.Drawing.Font("나눔바른고딕", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.txtunit.Location = new System.Drawing.Point(391, 117);
+            this.txtunit.Name = "txtunit";
+            this.txtunit.Size = new System.Drawing.Size(198, 25);
+            this.txtunit.TabIndex = 50;
             // 
             // label10
             // 
@@ -163,13 +151,13 @@ namespace Team6_UMB.Forms
             this.label12.TabIndex = 56;
             this.label12.Text = "수정자";
             // 
-            // textBox2
+            // txtuadmin
             // 
-            this.textBox2.Font = new System.Drawing.Font("나눔바른고딕", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.textBox2.Location = new System.Drawing.Point(391, 195);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(198, 25);
-            this.textBox2.TabIndex = 57;
+            this.txtuadmin.Font = new System.Drawing.Font("나눔바른고딕", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.txtuadmin.Location = new System.Drawing.Point(391, 195);
+            this.txtuadmin.Name = "txtuadmin";
+            this.txtuadmin.Size = new System.Drawing.Size(198, 25);
+            this.txtuadmin.TabIndex = 57;
             // 
             // label13
             // 
@@ -181,13 +169,13 @@ namespace Team6_UMB.Forms
             this.label13.TabIndex = 58;
             this.label13.Text = "수정일";
             // 
-            // dateTimePicker1
+            // dtpUdate
             // 
-            this.dateTimePicker1.Font = new System.Drawing.Font("나눔바른고딕", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.dateTimePicker1.Location = new System.Drawing.Point(391, 237);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(198, 25);
-            this.dateTimePicker1.TabIndex = 59;
+            this.dtpUdate.Font = new System.Drawing.Font("나눔바른고딕", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.dtpUdate.Location = new System.Drawing.Point(391, 237);
+            this.dtpUdate.Name = "dtpUdate";
+            this.dtpUdate.Size = new System.Drawing.Size(198, 25);
+            this.dtpUdate.TabIndex = 59;
             // 
             // label14
             // 
@@ -199,14 +187,14 @@ namespace Team6_UMB.Forms
             this.label14.TabIndex = 60;
             this.label14.Text = "비고";
             // 
-            // textBox4
+            // txtComment
             // 
-            this.textBox4.Font = new System.Drawing.Font("나눔바른고딕", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.textBox4.Location = new System.Drawing.Point(83, 273);
-            this.textBox4.Multiline = true;
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(506, 67);
-            this.textBox4.TabIndex = 61;
+            this.txtComment.Font = new System.Drawing.Font("나눔바른고딕", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.txtComment.Location = new System.Drawing.Point(83, 273);
+            this.txtComment.Multiline = true;
+            this.txtComment.Name = "txtComment";
+            this.txtComment.Size = new System.Drawing.Size(506, 67);
+            this.txtComment.TabIndex = 61;
             // 
             // panel1
             // 
@@ -242,21 +230,21 @@ namespace Team6_UMB.Forms
             this.label1.TabIndex = 1;
             this.label1.Text = "작업지시 등록/수정";
             // 
-            // dateTimePicker2
+            // dtpOrderDate
             // 
-            this.dateTimePicker2.Location = new System.Drawing.Point(391, 156);
-            this.dateTimePicker2.Name = "dateTimePicker2";
-            this.dateTimePicker2.Size = new System.Drawing.Size(117, 21);
-            this.dateTimePicker2.TabIndex = 62;
+            this.dtpOrderDate.Location = new System.Drawing.Point(391, 156);
+            this.dtpOrderDate.Name = "dtpOrderDate";
+            this.dtpOrderDate.Size = new System.Drawing.Size(117, 21);
+            this.dtpOrderDate.TabIndex = 62;
             // 
-            // textBox5
+            // txtcount
             // 
-            this.textBox5.Font = new System.Drawing.Font("나눔바른고딕", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.textBox5.Location = new System.Drawing.Point(391, 80);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(198, 25);
-            this.textBox5.TabIndex = 50;
-            this.textBox5.Text = "수주수량";
+            this.txtcount.Font = new System.Drawing.Font("나눔바른고딕", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.txtcount.Location = new System.Drawing.Point(391, 80);
+            this.txtcount.Name = "txtcount";
+            this.txtcount.Size = new System.Drawing.Size(198, 25);
+            this.txtcount.TabIndex = 50;
+            this.txtcount.Text = "수주수량";
             // 
             // label15
             // 
@@ -277,35 +265,27 @@ namespace Team6_UMB.Forms
             this.textBox6.Size = new System.Drawing.Size(183, 25);
             this.textBox6.TabIndex = 50;
             // 
-            // textBox7
-            // 
-            this.textBox7.Font = new System.Drawing.Font("나눔바른고딕", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.textBox7.Location = new System.Drawing.Point(109, 117);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(183, 25);
-            this.textBox7.TabIndex = 26;
-            // 
             // panel2
             // 
-            this.panel2.Controls.Add(this.btnUpdate);
+            this.panel2.Controls.Add(this.btnCancel);
             this.panel2.Controls.Add(this.btnCreate);
             this.panel2.Location = new System.Drawing.Point(223, 346);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(162, 40);
             this.panel2.TabIndex = 63;
             // 
-            // btnUpdate
+            // btnCancel
             // 
-            this.btnUpdate.BackColor = System.Drawing.Color.Gray;
-            this.btnUpdate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnUpdate.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.btnUpdate.ForeColor = System.Drawing.Color.White;
-            this.btnUpdate.Location = new System.Drawing.Point(84, 4);
-            this.btnUpdate.Name = "btnUpdate";
-            this.btnUpdate.Size = new System.Drawing.Size(75, 34);
-            this.btnUpdate.TabIndex = 18;
-            this.btnUpdate.Text = "취소";
-            this.btnUpdate.UseVisualStyleBackColor = false;
+            this.btnCancel.BackColor = System.Drawing.Color.Gray;
+            this.btnCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCancel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.btnCancel.ForeColor = System.Drawing.Color.White;
+            this.btnCancel.Location = new System.Drawing.Point(84, 4);
+            this.btnCancel.Name = "btnCancel";
+            this.btnCancel.Size = new System.Drawing.Size(75, 34);
+            this.btnCancel.TabIndex = 18;
+            this.btnCancel.Text = "취소";
+            this.btnCancel.UseVisualStyleBackColor = false;
             // 
             // btnCreate
             // 
@@ -320,6 +300,30 @@ namespace Team6_UMB.Forms
             this.btnCreate.Text = "저장";
             this.btnCreate.UseVisualStyleBackColor = false;
             // 
+            // cbmachine
+            // 
+            this.cbmachine.Font = new System.Drawing.Font("나눔바른고딕", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.cbmachine.FormattingEnabled = true;
+            this.cbmachine.Items.AddRange(new object[] {
+            "Y",
+            "N"});
+            this.cbmachine.Location = new System.Drawing.Point(109, 154);
+            this.cbmachine.Name = "cbmachine";
+            this.cbmachine.Size = new System.Drawing.Size(183, 25);
+            this.cbmachine.TabIndex = 38;
+            // 
+            // cbProcess
+            // 
+            this.cbProcess.Font = new System.Drawing.Font("나눔바른고딕", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.cbProcess.FormattingEnabled = true;
+            this.cbProcess.Items.AddRange(new object[] {
+            "Y",
+            "N"});
+            this.cbProcess.Location = new System.Drawing.Point(109, 117);
+            this.cbProcess.Name = "cbProcess";
+            this.cbProcess.Size = new System.Drawing.Size(183, 25);
+            this.cbProcess.TabIndex = 38;
+            // 
             // frmWorkOrderRegiPopUp
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
@@ -327,25 +331,25 @@ namespace Team6_UMB.Forms
             this.BackColor = System.Drawing.Color.WhiteSmoke;
             this.ClientSize = new System.Drawing.Size(610, 394);
             this.Controls.Add(this.panel2);
-            this.Controls.Add(this.dateTimePicker2);
+            this.Controls.Add(this.dtpOrderDate);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.textBox4);
+            this.Controls.Add(this.txtComment);
             this.Controls.Add(this.label14);
-            this.Controls.Add(this.dateTimePicker1);
+            this.Controls.Add(this.dtpUdate);
             this.Controls.Add(this.label13);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox7);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtuadmin);
+            this.Controls.Add(this.txtprod);
             this.Controls.Add(this.label12);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.cbProcess);
+            this.Controls.Add(this.cbmachine);
             this.Controls.Add(this.label15);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label10);
-            this.Controls.Add(this.textBox5);
+            this.Controls.Add(this.txtcount);
             this.Controls.Add(this.textBox6);
-            this.Controls.Add(this.textBox3);
+            this.Controls.Add(this.txtunit);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.label8);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -362,30 +366,30 @@ namespace Team6_UMB.Forms
 
         #endregion
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtprod;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox txtunit;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txtuadmin;
         private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.DateTimePicker dtpUdate;
         private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox txtComment;
         protected System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.DateTimePicker dateTimePicker2;
-        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.DateTimePicker dtpOrderDate;
+        private System.Windows.Forms.TextBox txtcount;
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.TextBox textBox7;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Button btnUpdate;
+        private System.Windows.Forms.Button btnCancel;
         private System.Windows.Forms.Button btnCreate;
         private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.ComboBox cbmachine;
+        private System.Windows.Forms.ComboBox cbProcess;
     }
 }
