@@ -57,15 +57,23 @@ namespace Team6_UMB.Forms
         private void btnSignIn_Click(object sender, EventArgs e)
         {
             LoginService service = new LoginService();
-            service.Login(int.Parse(txtID.Text), int.Parse(txtPwd.Text));
-            if(LoginVO.user.ID != 0)
+            //로그인 유효성검사 null or 기본값
+            if (txtID.Text == null || txtPwd.Text == null || txtID.Text == "UserID" || txtPwd.Text == "PassWord")
             {
-                frmMain frm = new frmMain();
-                frm.Show();                
+                MessageBox.Show(Properties.Resources.msgLoginNull);
             }
             else
             {
-                MessageBox.Show("아이디와 비밀번호를 확인해주세요.");
+                service.Login(int.Parse(txtID.Text), int.Parse(txtPwd.Text));
+                if (LoginVO.user.ID != 0)
+                {
+                    frmMain frm = new frmMain();
+                    frm.Show();
+                }
+                else
+                {
+                    MessageBox.Show(Properties.Resources.msgLoginCheck);
+                }
             }
             //if (textBox1.Text.ToUpper() == "TEAM6" && textBox2.Text.ToUpper() == "UMB")
             //{
@@ -106,6 +114,12 @@ namespace Team6_UMB.Forms
 
         private void textBox2_KeyPress(object sender, KeyPressEventArgs e)
         {
+            //숫자만 입력되도록 필터링
+            if (!(char.IsDigit(e.KeyChar) || e.KeyChar == Convert.ToChar(Keys.Back)))    //숫자와 백스페이스를 제외한 나머지를 바로 처리
+            {
+                e.Handled = true;
+            }
+            
             if (e.KeyChar == 13)
             {
                 btnSignIn.PerformClick();
@@ -116,6 +130,15 @@ namespace Team6_UMB.Forms
         {
             txtPwd.Clear();
             txtPwd.PasswordChar = '●';
+        }
+
+        private void txtID_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            //숫자만 입력되도록 필터링
+            if (!(char.IsDigit(e.KeyChar) || e.KeyChar == Convert.ToChar(Keys.Back)))    //숫자와 백스페이스를 제외한 나머지를 바로 처리
+            {
+                e.Handled = true;
+            }
         }
     }
 }

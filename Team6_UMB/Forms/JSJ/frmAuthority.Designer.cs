@@ -41,13 +41,12 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.label6 = new System.Windows.Forms.Label();
             this.dgV_Custom1 = new Team6_UMB.DGV_Custom();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgvMenu = new Team6_UMB.DGV_Custom();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column4 = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -117,12 +116,10 @@
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(31, 15);
             this.label2.TabIndex = 0;
-            this.label2.Text = "사원";
+            this.label2.Text = "부서";
             // 
             // button3
             // 
-            this.button3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.button3.BackgroundImage = global::Team6_UMB.Properties.Resources.Search;
             this.button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.button3.FlatAppearance.BorderSize = 0;
@@ -158,9 +155,9 @@
             this.label6.Font = new System.Drawing.Font("나눔바른고딕", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.label6.Location = new System.Drawing.Point(12, 9);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(70, 17);
+            this.label6.Size = new System.Drawing.Size(63, 17);
             this.label6.TabIndex = 22;
-            this.label6.Text = "BOM 목록";
+            this.label6.Text = "부서 목록";
             // 
             // dgV_Custom1
             // 
@@ -180,7 +177,6 @@
             this.dgV_Custom1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgV_Custom1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column1,
-            this.Column2,
             this.Column5,
             this.Column6});
             this.dgV_Custom1.Cursor = System.Windows.Forms.Cursors.Arrow;
@@ -193,30 +189,6 @@
             this.dgV_Custom1.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.dgV_Custom1.Size = new System.Drawing.Size(1094, 800);
             this.dgV_Custom1.TabIndex = 46;
-            // 
-            // Column1
-            // 
-            this.Column1.HeaderText = "사원ID";
-            this.Column1.Name = "Column1";
-            this.Column1.Width = 150;
-            // 
-            // Column2
-            // 
-            this.Column2.HeaderText = "사원명";
-            this.Column2.Name = "Column2";
-            this.Column2.Width = 300;
-            // 
-            // Column5
-            // 
-            this.Column5.HeaderText = "부서명";
-            this.Column5.Name = "Column5";
-            this.Column5.Width = 300;
-            // 
-            // Column6
-            // 
-            this.Column6.HeaderText = "비고";
-            this.Column6.Name = "Column6";
-            this.Column6.Width = 300;
             // 
             // dgvMenu
             // 
@@ -260,6 +232,24 @@
             this.Column4.Name = "Column4";
             this.Column4.Width = 50;
             // 
+            // Column1
+            // 
+            this.Column1.HeaderText = "부서번호";
+            this.Column1.Name = "Column1";
+            this.Column1.Width = 150;
+            // 
+            // Column5
+            // 
+            this.Column5.HeaderText = "부서명";
+            this.Column5.Name = "Column5";
+            this.Column5.Width = 300;
+            // 
+            // Column6
+            // 
+            this.Column6.HeaderText = "비고";
+            this.Column6.Name = "Column6";
+            this.Column6.Width = 300;
+            // 
             // frmAuthority
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
@@ -296,12 +286,11 @@
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label6;
         private DGV_Custom dgV_Custom1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
         private DGV_Custom dgvMenu;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
         private System.Windows.Forms.DataGridViewCheckBoxColumn Column4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
     }
 }

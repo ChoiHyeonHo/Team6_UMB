@@ -179,6 +179,12 @@
   <data name="msgError" xml:space="preserve">
     <value>작업 수행중 오류 발생. 확인 후 다시 시도하여 주십시오.</value>
   </data>
+  <data name="msgLoginCheck" xml:space="preserve">
+    <value>아이디 비밀번호를 확인해 주십시오.</value>
+  </data>
+  <data name="msgLoginNull" xml:space="preserve">
+    <value>아이디 비밀번호를 입력해 주십시오.</value>
+  </data>
   <data name="msgOK" xml:space="preserve">
     <value>정상적으로 처리되었습니다.</value>
   </data>

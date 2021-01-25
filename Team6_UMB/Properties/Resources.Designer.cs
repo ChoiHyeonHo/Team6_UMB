@@ -269,6 +269,24 @@ namespace Team6_UMB.Properties {
         }
         
         /// <summary>
+        ///   아이디 비밀번호를 확인해 주십시오.과(와) 유사한 지역화된 문자열을 찾습니다.
+        /// </summary>
+        internal static string msgLoginCheck {
+            get {
+                return ResourceManager.GetString("msgLoginCheck", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   아이디 비밀번호를 입력해 주십시오.과(와) 유사한 지역화된 문자열을 찾습니다.
+        /// </summary>
+        internal static string msgLoginNull {
+            get {
+                return ResourceManager.GetString("msgLoginNull", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   정상적으로 처리되었습니다.과(와) 유사한 지역화된 문자열을 찾습니다.
         /// </summary>
         internal static string msgOK {

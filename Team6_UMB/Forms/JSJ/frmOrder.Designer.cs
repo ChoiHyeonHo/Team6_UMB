@@ -176,7 +176,7 @@
             this.dgV_Custom2.Name = "dgV_Custom2";
             this.dgV_Custom2.RowTemplate.Height = 23;
             this.dgV_Custom2.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.dgV_Custom2.Size = new System.Drawing.Size(699, 150);
+            this.dgV_Custom2.Size = new System.Drawing.Size(699, 361);
             this.dgV_Custom2.TabIndex = 0;
             // 
             // Column1

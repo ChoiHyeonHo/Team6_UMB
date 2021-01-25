@@ -137,9 +137,9 @@ namespace Team6_UMB.Forms.ASB
             this.label8.ForeColor = System.Drawing.Color.RoyalBlue;
             this.label8.Location = new System.Drawing.Point(10, 287);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(60, 17);
+            this.label8.Size = new System.Drawing.Size(47, 17);
             this.label8.TabIndex = 49;
-            this.label8.Text = "전화번호";
+            this.label8.Text = "퇴사일";
             // 
             // textBox4
             // 

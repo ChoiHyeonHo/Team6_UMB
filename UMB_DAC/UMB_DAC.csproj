@@ -50,12 +50,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="JSJ\AuthorityDAC.cs" />
     <Compile Include="BOMDAC.cs" />
     <Compile Include="BORDAC.cs" />
     <Compile Include="CHH\SalesPriceDAC.cs" />
     <Compile Include="Class\Helper.cs" />
     <Compile Include="ConnectionAccess.cs" />
-    <Compile Include="LoginDAC.cs" />
+    <Compile Include="JSJ\LoginDAC.cs" />
+    <Compile Include="JSJ\UserDAC.cs" />
     <Compile Include="ProcessDAC.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
