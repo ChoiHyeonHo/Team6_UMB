@@ -14,6 +14,8 @@ namespace Team6_UMB.Forms
     {
         List<ProdCBOBindingVO> prodName;
         List<CompanyCBOBindingVO> companyName;
+        List<Mat_ProdCBOBindingVO> matprodName;
+        List<Mat_CompanyCBOBindingVO> matcompanyName;
 
         public frmSalesPricePopUp(string headerName)
         {
@@ -50,13 +52,26 @@ namespace Team6_UMB.Forms
         /// </summary>
         private void cboBinding()
         {
-            SalesPriceService service = new SalesPriceService();
-            prodName = service.GetProdName();
-            CommonUtil.ProdNameBinding(cbProductName, prodName);
+            if (label1.Text == "영업단가관리 등록" || label1.Text == "영업단가관리 수정")
+            {
+                SalesPriceService service = new SalesPriceService();
+                prodName = service.GetProdName();
+                CommonUtil.ProdNameBinding(cbProductName, prodName);
 
-            service = new SalesPriceService();
-            companyName = service.GetCompanyName();
-            CommonUtil.CompanyNameBinding(cbCompanyName, companyName);
+                service = new SalesPriceService();
+                companyName = service.GetCompanyName();
+                CommonUtil.CompanyNameBinding(cbCompanyName, companyName);
+            }
+            else if (label1.Text == "자재단가관리 등록" || label1.Text == "자재단가관리 수정")
+            {
+                MatPriceService Mservice = new MatPriceService();
+                matprodName = Mservice.GetProdName();
+                CommonUtil.Mat_ProdNameBinding(cbProductName, matprodName);
+
+                Mservice = new MatPriceService();
+                matcompanyName = Mservice.GetCompanyNameName();
+                CommonUtil.Mat_CompanyNameBinding(cbCompanyName, matcompanyName);
+            }
         }
         #endregion
 
@@ -92,8 +107,9 @@ namespace Team6_UMB.Forms
 
         private void btnEdit_Click(object sender, EventArgs e)
         {
-            SalesPriceService service;
-            if (label1.Text == "단가관리 등록")
+            SalesPriceService Sservice;
+            MatPriceService Mservice;
+            if (label1.Text == "영업단가관리 등록")
             {
                 if (cbProductName.SelectedIndex != 0 || cbCompanyName.SelectedIndex != 0 || cbYN.SelectedIndex != 0 || txtPricePresent.Text != null)
                 {
@@ -107,8 +123,8 @@ namespace Team6_UMB.Forms
                         price_present = int.Parse(txtPricePresent.Text),
                         price_comment = txtComment.Text
                     };
-                    service = new SalesPriceService();
-                    bool result = service.Insert(vo);
+                    Sservice = new SalesPriceService();
+                    bool result = Sservice.Insert(vo);
 
                     if (result)
                     {
@@ -120,7 +136,7 @@ namespace Team6_UMB.Forms
                         MessageBox.Show(Properties.Resources.msgError);
                 }
             }
-            else if (label1.Text == "단가관리 수정")
+            else if (label1.Text == "영업단가관리 수정")
             {
                 try
                 {
@@ -135,8 +151,8 @@ namespace Team6_UMB.Forms
                         price_yn = cbYN.Text,
                         price_comment = txtComment.Text
                     };
-                    service = new SalesPriceService();
-                    bool result = service.Update(vo);
+                    Sservice = new SalesPriceService();
+                    bool result = Sservice.Update(vo);
 
                     if (result)
                     {
@@ -152,6 +168,65 @@ namespace Team6_UMB.Forms
                     MessageBox.Show(err.Message);
                 }
                 
+            }
+            else if (label1.Text == "자재단가관리 등록")
+            {
+                if (cbProductName.SelectedIndex != 0 || cbCompanyName.SelectedIndex != 0 || cbYN.SelectedIndex != 0 || txtPricePresent.Text != null)
+                {
+                    MatPriceVO vo = new MatPriceVO()
+                    {
+                        product_name = cbProductName.Text,
+                        company_name = cbCompanyName.Text,
+                        price_sdate = dtpStart.Value.ToString(),
+                        price_edate = dtpEnd.Value.ToString(),
+                        price_yn = cbYN.Text,
+                        price_present = int.Parse(txtPricePresent.Text),
+                        price_comment = txtComment.Text
+                    };
+                    Mservice = new MatPriceService();
+                    bool result = Mservice.Insert(vo);
+
+                    if (result)
+                    {
+                        MessageBox.Show(Properties.Resources.msgOK);
+                        cboBinding();
+                        ClearTB();
+                    }
+                    else
+                        MessageBox.Show(Properties.Resources.msgError);
+                }
+            }
+            else if (label1.Text == "자재단가관리 수정")
+            {
+                try
+                {
+                    MatPriceVO vo = new MatPriceVO
+                    {
+                        price_id = int.Parse(label1.Tag.ToString()),
+                        product_name = cbProductName.Text,
+                        company_name = cbCompanyName.Text,
+                        price_present = int.Parse(txtPricePresent.Text),
+                        price_sdate = Convert.ToDateTime(dtpStart.Value).ToString(),
+                        price_edate = Convert.ToDateTime(dtpEnd.Value).ToString(),
+                        price_yn = cbYN.Text,
+                        price_comment = txtComment.Text
+                    };
+                    Mservice = new MatPriceService();
+                    bool result = Mservice.Update(vo);
+
+                    if (result)
+                    {
+                        MessageBox.Show(Properties.Resources.msgOK);
+                        cboBinding();
+                        ClearTB();
+                    }
+                    else
+                        MessageBox.Show(Properties.Resources.msgError);
+                }
+                catch (Exception err)
+                {
+                    MessageBox.Show(err.Message);
+                }
             }
         }
     }

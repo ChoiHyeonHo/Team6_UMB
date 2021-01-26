@@ -15,6 +15,38 @@ namespace Team6_UMB
 {
     public class CommonUtil
     {
+        public static void Mat_CompanyNameBinding(ComboBox cbo, List<Mat_CompanyCBOBindingVO> list, bool blankItem = true, string blankText = "")
+        {
+            var codeList = (from item in list
+                            select item).ToList();
+
+            if (blankItem)
+            {
+                Mat_CompanyCBOBindingVO blank = new Mat_CompanyCBOBindingVO
+                { company_id = null, company_name = blankText };
+                codeList.Insert(0, blank);
+            }
+            cbo.DisplayMember = "company_name";
+            cbo.ValueMember = "company_name";
+            cbo.DataSource = codeList;
+        }
+
+        public static void Mat_ProdNameBinding(ComboBox cbo, List<Mat_ProdCBOBindingVO> list, bool blankItem = true, string blankText = "")
+        {
+            var codeList = (from item in list
+                            select item).ToList();
+
+            if (blankItem)
+            {
+                Mat_ProdCBOBindingVO blank = new Mat_ProdCBOBindingVO
+                { product_id = null, product_name = blankText };
+                codeList.Insert(0, blank);
+            }
+            cbo.DisplayMember = "product_name";
+            cbo.ValueMember = "product_id";
+            cbo.DataSource = codeList;
+        }
+
         public static void ProdNameBinding(ComboBox cbo, List<ProdCBOBindingVO> list, bool blankItem = true, string blankText = "")
         {
             var codeList = (from item in list

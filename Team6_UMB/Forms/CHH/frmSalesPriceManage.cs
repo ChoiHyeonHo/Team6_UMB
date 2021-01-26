@@ -26,6 +26,23 @@ namespace Team6_UMB.Forms
             newBtns.btnBarCode.Visible = newBtns.btnDocument.Visible = newBtns.btnShipment.Visible = newBtns.btnWait.Visible = newBtns.btnSearch.Visible = false;
             periodSearchControl.dtFrom = DateTime.Now.AddDays(-7).ToString();
             periodSearchControl.dtTo = DateTime.Now.ToString();
+            cheView.Checked = true;
+        }
+        private void periodSearchControl_ChangedPeriod(object sender, EventArgs e)
+        {
+            if (dgvPrice.DataSource != null)
+            {
+                if (periodSearchControl.dtFrom != DateTime.Now.ToShortDateString())
+                {
+                    string FromDate = periodSearchControl.dtFrom;
+                    string ToDate = periodSearchControl.dtTo;
+
+                    List<SalesPriceVO> periodList = (from period in allList
+                                                     where Convert.ToDateTime(FromDate) <= Convert.ToDateTime(period.price_sdate) && Convert.ToDateTime(period.price_edate) <= Convert.ToDateTime(ToDate)
+                                                     select period).ToList();
+                    dgvPrice.DataSource = periodList;
+                }
+            }
         }
 
         private void frmSalesPriceManage_Load(object sender, EventArgs e)
@@ -98,7 +115,7 @@ namespace Team6_UMB.Forms
 
         private void newBtns_btnCreate_Event(object sender, EventArgs e)
         {
-            string headerName = "단가관리 등록";
+            string headerName = "영업단가관리 등록";
             frmSalesPricePopUp pop = new frmSalesPricePopUp(headerName);
             pop.ShowDialog();
         }
@@ -106,7 +123,7 @@ namespace Team6_UMB.Forms
         private void newBtns_btnUpdate_Event(object sender, EventArgs e)
         {
 
-            string headerName = "단가관리 수정";
+            string headerName = "영업단가관리 수정";
             frmSalesPricePopUp pop = new frmSalesPricePopUp(headerName, priceID, productID, productName, companyID, companyName, Present, sDate, eDate, yn, comment);
             pop.ShowDialog();
         }
@@ -155,21 +172,6 @@ namespace Team6_UMB.Forms
             }
         }
 
-        private void periodSearchControl_ChangedPeriod(object sender, EventArgs e)
-        {
-            if (dgvPrice.DataSource != null)
-            {
-                if (periodSearchControl.dtFrom != DateTime.Now.ToShortDateString())
-                {
-                    string FromDate = periodSearchControl.dtFrom;
-                    string ToDate = periodSearchControl.dtTo;
-
-                    List<SalesPriceVO> periodList = (from period in allList
-                                                     where Convert.ToDateTime(FromDate) <= Convert.ToDateTime(period.price_sdate) && Convert.ToDateTime(period.price_edate) <= Convert.ToDateTime(ToDate)
-                                                     select period).ToList();
-                    dgvPrice.DataSource = periodList;
-                }
-            }
-        }
+        
     }
 }

@@ -8,87 +8,52 @@ using UMB_VO.CHH;
 
 namespace UMB_DAC.CHH
 {
-    public class SalesPriceDAC : ConnectionAccess, IDisposable
+    public class MatPriceDAC : ConnectionAccess, IDisposable
     {
         string strConn;
         SqlConnection conn;
 
-        public SalesPriceDAC()
+        public MatPriceDAC()
         {
             strConn = this.ConnectionString;
             conn = new SqlConnection(strConn);
             conn.Open();
         }
 
-        public List<SalesPriceVO> GetSalesPriceNInfo()
+
+        public List<MatPriceVO> GetMatInfo()
         {
             string sql = @"select price_id, P.product_id, P.product_name, C.company_id, C.company_name, price_present, price_past, 
 	   price_sdate, price_edate, price_yn, price_comment
 from TBL_P_PRICE as PP inner join TBL_PRODUCT as P on PP.product_id = P.product_id 
 					   inner join TBL_COMPANY as C on PP.company_id = C.company_id
-where P.product_type = '완제품'";
+where P.product_type = '원자재'";
 
             using (SqlCommand cmd = new SqlCommand(sql, conn))
             {
                 SqlDataReader reader = cmd.ExecuteReader();
-                List<SalesPriceVO> list = Helper.DataReaderMapToList<SalesPriceVO>(reader);
+                List<MatPriceVO> list = Helper.DataReaderMapToList<MatPriceVO>(reader);
                 return list;
             }
         }
 
-        public List<SalesPriceVO> GetWhereInfo(string prodName, string companyName)
+        public List<MatPriceVO> GetMatNInfo()
         {
-            string sql = @"select price_id, P.product_id, P.product_name, C.company_id, C.company_name, price_present, price_past, price_sdate, price_edate, price_yn, price_comment
-from TBL_P_PRICE as PP inner join TBL_PRODUCT as P on PP.product_id = P.product_id inner join TBL_COMPANY as C on PP.company_id = C.company_id
-where product_name = @product_name and company_name = @company_name";
-
-            using (SqlCommand cmd = new SqlCommand(sql, conn))
-            {
-                cmd.Parameters.AddWithValue("@product_name", prodName);
-                cmd.Parameters.AddWithValue("@company_name", companyName);
-                SqlDataReader reader = cmd.ExecuteReader();
-                List<SalesPriceVO> list = Helper.DataReaderMapToList<SalesPriceVO>(reader);
-                return list;
-            }
-        }
-        public List<SalesPriceVO> GetSalesPriceYInfo()
-        {
-            string sql = @"select price_id, P.product_id, P.product_name, C.company_id, C.company_name, price_present, price_past, price_sdate, price_edate, price_yn, price_comment
-from TBL_P_PRICE as PP inner join TBL_PRODUCT as P on PP.product_id = P.product_id inner join TBL_COMPANY as C on PP.company_id = C.company_id where price_yn = 'Y' and P.product_type = '완제품'";
+            string sql = @"select price_id, P.product_id, P.product_name, C.company_id, C.company_name, price_present, price_past, 
+	   price_sdate, price_edate, price_yn, price_comment
+from TBL_P_PRICE as PP inner join TBL_PRODUCT as P on PP.product_id = P.product_id 
+					   inner join TBL_COMPANY as C on PP.company_id = C.company_id
+where P.product_type = '원자재' and price_yn = 'Y'";
 
             using (SqlCommand cmd = new SqlCommand(sql, conn))
             {
                 SqlDataReader reader = cmd.ExecuteReader();
-                List<SalesPriceVO> list = Helper.DataReaderMapToList<SalesPriceVO>(reader);
+                List<MatPriceVO> list = Helper.DataReaderMapToList<MatPriceVO>(reader);
                 return list;
             }
         }
 
-        public List<ProdCBOBindingVO> GetProdName()
-        {
-            string sql = @"select product_id, product_name from TBL_PRODUCT where product_type = '완제품'";
-
-            using (SqlCommand cmd = new SqlCommand(sql, conn))
-            {
-                SqlDataReader reader = cmd.ExecuteReader();
-                List<ProdCBOBindingVO> list = Helper.DataReaderMapToList<ProdCBOBindingVO>(reader);
-                return list;
-            }
-        }
-
-        public List<CompanyCBOBindingVO> GetCompanyName()
-        {
-            string sql = @"select company_id, company_name from TBL_COMPANY where company_type = '납품'";
-
-            using (SqlCommand cmd = new SqlCommand(sql, conn))
-            {
-                SqlDataReader reader = cmd.ExecuteReader();
-                List<CompanyCBOBindingVO> list = Helper.DataReaderMapToList<CompanyCBOBindingVO>(reader);
-                return list;
-            }
-        }
-
-        public bool Insert(SalesPriceVO vo)
+        public bool Insert(MatPriceVO vo)
         {
             string sql = @"EXEC InsertOrUpdate @product_name, @company_name, @price_present, @price_sdate, @price_edate, @price_yn, @price_comment";
             using (SqlCommand cmd = new SqlCommand(sql, conn))
@@ -108,7 +73,7 @@ from TBL_P_PRICE as PP inner join TBL_PRODUCT as P on PP.product_id = P.product_
             }
         }
 
-        public bool Update(SalesPriceVO vo)
+        public bool Update(MatPriceVO vo)
         {
             string sql = @"EXEC SP_sPriceUpdate @price_id, @product_id, @company_id, @price_present, @price_sdate, @price_edate, @price_yn, @price_comment";
             using (SqlCommand cmd = new SqlCommand(sql, conn))
@@ -142,12 +107,34 @@ from TBL_P_PRICE as PP inner join TBL_PRODUCT as P on PP.product_id = P.product_
                 return iRowAffect > 0;
             }
         }
+
+        public List<Mat_ProdCBOBindingVO> GetProdName()
+        {
+            string sql = @"select product_id, product_name from TBL_PRODUCT where product_type = '원자재'";
+
+            using (SqlCommand cmd = new SqlCommand(sql, conn))
+            {
+                SqlDataReader reader = cmd.ExecuteReader();
+                List<Mat_ProdCBOBindingVO> list = Helper.DataReaderMapToList<Mat_ProdCBOBindingVO>(reader);
+                return list;
+            }
+        }
+
+        public List<Mat_CompanyCBOBindingVO> GetCompanyNameName()
+        {
+            string sql = @"select company_id, company_name from TBL_COMPANY where company_type = '발품'";
+
+            using (SqlCommand cmd = new SqlCommand(sql, conn))
+            {
+                SqlDataReader reader = cmd.ExecuteReader();
+                List<Mat_CompanyCBOBindingVO> list = Helper.DataReaderMapToList<Mat_CompanyCBOBindingVO>(reader);
+                return list;
+            }
+        }
+
         public void Dispose()
         {
-            if (conn != null)
-            {
-                conn.Close();
-            }
+            conn.Close();
         }
     }
 }
