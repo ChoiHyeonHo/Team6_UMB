@@ -59,7 +59,7 @@ namespace Team6_UMB
         {
             //common_id, common_type, common_name, common_value
             var codeList = (from item in list
-                            where item.common_id.Equals(gubun)
+                            where item.common_type.Equals(gubun)
                             select item).ToList();
 
             if (blankItem)
