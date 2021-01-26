@@ -99,8 +99,8 @@ namespace Team6_UMB.Forms
                 {
                     SalesPriceVO vo = new SalesPriceVO
                     {
-                        product_id = cbProductName.Tag.ToString(),
-                        company_id = int.Parse(cbCompanyName.Tag.ToString()),
+                        product_name = cbProductName.Text,
+                        company_name = cbCompanyName.Text,
                         price_sdate = dtpStart.Value.ToString(),
                         price_edate = dtpEnd.Value.ToString(), 
                         price_yn = cbYN.Text,
@@ -153,20 +153,6 @@ namespace Team6_UMB.Forms
                 }
                 
             }
-        }
-
-        private void cbProductName_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            SalesPriceService service;
-            service = new SalesPriceService();
-            cbProductName.Tag = service.SearchProdID(cbProductName.Text);
-        }
-
-        private void cbCompanyName_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            SalesPriceService service;
-            service = new SalesPriceService();
-            cbCompanyName.Tag = service.SearchCompanyID(cbCompanyName.Text);
         }
     }
 }

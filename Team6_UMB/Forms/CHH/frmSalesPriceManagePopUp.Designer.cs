@@ -95,7 +95,6 @@ namespace Team6_UMB.Forms
             this.cbCompanyName.Name = "cbCompanyName";
             this.cbCompanyName.Size = new System.Drawing.Size(285, 25);
             this.cbCompanyName.TabIndex = 49;
-            this.cbCompanyName.SelectedIndexChanged += new System.EventHandler(this.cbCompanyName_SelectedIndexChanged);
             // 
             // label2
             // 
@@ -140,7 +139,6 @@ namespace Team6_UMB.Forms
             this.cbProductName.Name = "cbProductName";
             this.cbProductName.Size = new System.Drawing.Size(285, 25);
             this.cbProductName.TabIndex = 48;
-            this.cbProductName.SelectedIndexChanged += new System.EventHandler(this.cbProductName_SelectedIndexChanged);
             // 
             // label8
             // 

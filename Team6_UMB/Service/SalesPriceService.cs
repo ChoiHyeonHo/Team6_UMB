@@ -57,15 +57,5 @@ namespace Team6_UMB.Service
             SalesPriceDAC dac = new SalesPriceDAC();
             return dac.Delete(priceID);
         }
-        public List<SalesPriceVO> SearchProdID(string prodName)
-        {
-            SalesPriceDAC dac = new SalesPriceDAC();
-            return dac.SearchProdID(prodName);
-        }
-        public List<SalesPriceVO> SearchCompanyID(string companyName)
-        {
-            SalesPriceDAC dac = new SalesPriceDAC();
-            return dac.SearchCompanyID(companyName);
-        }
     }
 }
