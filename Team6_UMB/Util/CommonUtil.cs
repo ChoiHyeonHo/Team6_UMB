@@ -7,6 +7,7 @@ using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using UMB_VO;
 using UMB_VO.CHH;
 using Excel = Microsoft.Office.Interop.Excel;
 
@@ -43,6 +44,32 @@ namespace Team6_UMB
             }
             cbo.DisplayMember = "company_name";
             cbo.ValueMember = "company_id";
+            cbo.DataSource = codeList;
+        }
+
+        /// <summary>
+        /// 콤보박스 바인딩
+        /// </summary>
+        /// <param name="cbo"></param>
+        /// <param name="list"></param>
+        /// <param name="gubun"></param>
+        /// <param name="blankItem"></param>
+        /// <param name="blankText"></param>
+        public static void ComboBinding(ComboBox cbo, List<ComboItemVO> list, string gubun, bool blankItem = true, string blankText = "")
+        {
+            //common_id, common_type, common_name, common_value
+            var codeList = (from item in list
+                            where item.common_id.Equals(gubun)
+                            select item).ToList();
+
+            if (blankItem)
+            {
+                ComboItemVO blank = new ComboItemVO
+                { common_id = null, common_name = blankText };
+                codeList.Insert(0, blank);
+            }
+            cbo.DisplayMember = "common_name";
+            cbo.ValueMember = "common_id";
             cbo.DataSource = codeList;
         }
 
