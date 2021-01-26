@@ -15,6 +15,13 @@ namespace Team6_UMB.Service
             SalesPriceDAC dac = new SalesPriceDAC();
             return dac.GetSalesPriceNInfo();
         }
+
+        public List<SalesPriceVO> GetWhereInfo(string prodName, string companyName)
+        {
+            SalesPriceDAC dac = new SalesPriceDAC();
+            return dac.GetWhereInfo(prodName, companyName);
+        }
+
         public List<SalesPriceVO> GetSalesPriceYInfo()
         {
             SalesPriceDAC dac = new SalesPriceDAC();
@@ -49,6 +56,16 @@ namespace Team6_UMB.Service
         {
             SalesPriceDAC dac = new SalesPriceDAC();
             return dac.Delete(priceID);
+        }
+        public List<SalesPriceVO> SearchProdID(string prodName)
+        {
+            SalesPriceDAC dac = new SalesPriceDAC();
+            return dac.SearchProdID(prodName);
+        }
+        public List<SalesPriceVO> SearchCompanyID(string companyName)
+        {
+            SalesPriceDAC dac = new SalesPriceDAC();
+            return dac.SearchCompanyID(companyName);
         }
     }
 }
