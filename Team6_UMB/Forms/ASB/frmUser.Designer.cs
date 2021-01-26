@@ -39,15 +39,15 @@ namespace Team6_UMB.Forms.ASB
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
+            this.periodSearchControl1 = new PJT_Olive.Control.PeriodSearchControl();
             this.label2 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnAllButtons1 = new Team6_UMB.Controls.btnAllButtons();
             this.label1 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             this.label7 = new System.Windows.Forms.Label();
-            this.periodSearchControl1 = new PJT_Olive.Control.PeriodSearchControl();
-            this.btnAllButtons1 = new Team6_UMB.Controls.btnAllButtons();
             this.dgvUser = new Team6_UMB.DGV_Custom();
             this.groupBox1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -78,8 +78,6 @@ namespace Team6_UMB.Forms.ASB
             // 
             // button1
             // 
-            this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.button1.BackgroundImage = global::Team6_UMB.Properties.Resources.Search;
             this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.button1.FlatAppearance.BorderSize = 0;
@@ -161,6 +159,17 @@ namespace Team6_UMB.Forms.ASB
             this.label4.TabIndex = 31;
             this.label4.Text = "입사일";
             // 
+            // periodSearchControl1
+            // 
+            this.periodSearchControl1.DateType = "";
+            this.periodSearchControl1.dtFrom = "2021-01-11";
+            this.periodSearchControl1.dtTo = "2021-01-18";
+            this.periodSearchControl1.Font = new System.Drawing.Font("돋움", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.periodSearchControl1.Location = new System.Drawing.Point(628, 14);
+            this.periodSearchControl1.Name = "periodSearchControl1";
+            this.periodSearchControl1.Size = new System.Drawing.Size(301, 29);
+            this.periodSearchControl1.TabIndex = 30;
+            // 
             // label2
             // 
             this.label2.AutoSize = true;
@@ -201,6 +210,15 @@ namespace Team6_UMB.Forms.ASB
             this.panel1.Size = new System.Drawing.Size(1511, 35);
             this.panel1.TabIndex = 28;
             // 
+            // btnAllButtons1
+            // 
+            this.btnAllButtons1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(52)))), ((int)(((byte)(79)))));
+            this.btnAllButtons1.Dock = System.Windows.Forms.DockStyle.Right;
+            this.btnAllButtons1.Location = new System.Drawing.Point(1134, 0);
+            this.btnAllButtons1.Name = "btnAllButtons1";
+            this.btnAllButtons1.Size = new System.Drawing.Size(377, 35);
+            this.btnAllButtons1.TabIndex = 2;
+            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -232,26 +250,6 @@ namespace Team6_UMB.Forms.ASB
             this.label7.Size = new System.Drawing.Size(60, 17);
             this.label7.TabIndex = 22;
             this.label7.Text = "사원목록";
-            // 
-            // periodSearchControl1
-            // 
-            this.periodSearchControl1.DateType = "";
-            this.periodSearchControl1.dtFrom = "2021-01-11";
-            this.periodSearchControl1.dtTo = "2021-01-18";
-            this.periodSearchControl1.Font = new System.Drawing.Font("돋움", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.periodSearchControl1.Location = new System.Drawing.Point(628, 14);
-            this.periodSearchControl1.Name = "periodSearchControl1";
-            this.periodSearchControl1.Size = new System.Drawing.Size(301, 29);
-            this.periodSearchControl1.TabIndex = 30;
-            // 
-            // btnAllButtons1
-            // 
-            this.btnAllButtons1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(52)))), ((int)(((byte)(79)))));
-            this.btnAllButtons1.Dock = System.Windows.Forms.DockStyle.Right;
-            this.btnAllButtons1.Location = new System.Drawing.Point(1134, 0);
-            this.btnAllButtons1.Name = "btnAllButtons1";
-            this.btnAllButtons1.Size = new System.Drawing.Size(377, 35);
-            this.btnAllButtons1.TabIndex = 2;
             // 
             // dgvUser
             // 
