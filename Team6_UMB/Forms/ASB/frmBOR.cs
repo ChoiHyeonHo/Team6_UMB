@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Team6_UMB.Service;
 using UMB_VO;
+using UMB_VO.CHH;
 
 namespace Team6_UMB.Forms.ASB
 {
@@ -18,11 +19,21 @@ namespace Team6_UMB.Forms.ASB
         public frmBOR()
         {
             InitializeComponent();
+            newBtns.btnBarCode.Visible = newBtns.btnDocument.Visible = newBtns.btnShipment.Visible =
+                newBtns.btnWait.Visible = newBtns.btnSearch.Visible = newBtns.btnPrint.Visible = false;
         }
 
 
         private void frmBOR_Load(object sender, EventArgs e)
         {
+            string[] gubun = { "공정명" };
+            ProductService pService = new ProductService();
+            List<ComboItemVO> allProcessItem = pService.GetProcessInfoByCodeTypes(gubun);
+            List<ProdCBOBindingVO> allProItem = pService.GetProductInfo();
+
+            CommonUtil.ComboBinding(cboProcess, allProcessItem, "공정명");
+            CommonUtil.ProdNameBinding(cboProduct, allProItem);
+
             CommonUtil.SetInitGridView(dgvBOR);
             CommonUtil.AddGridTextColumn(dgvBOR, "BOR_ID", "bor_id", 60);
             CommonUtil.AddGridTextColumn(dgvBOR, "품목ID", "product_id", 150);

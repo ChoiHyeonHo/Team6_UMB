@@ -4,18 +4,37 @@ using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using UMB_VO;
 
 namespace UMB_DAC
 {
     public class ProcessDAC : ConnectionAccess, IDisposable
     {
         SqlConnection conn;
+        string strConn;
 
-        //public ProcessDAC()
-        //{
-        //    conn = new SqlConnection(strConn);
-        //    conn.Open();
-        //}
+        public ProcessDAC()
+        {
+            strConn = this.ConnectionString;
+            conn = new SqlConnection(strConn);
+            conn.Open();
+        }
+
+        public List<ComboItemVO> GetProcessInfoByCodeTypes(string[] gubun)
+        {
+            string type = string.Join("','", gubun);
+            string sql = @"select common_id, common_type, common_name
+    from TBL_COMMON_CODE
+    where common_type in ('" + type + "')";
+
+            using (SqlCommand cmd = new SqlCommand(sql, conn))
+            {
+                SqlDataReader reader = cmd.ExecuteReader();
+                List<ComboItemVO> list = Helper.DataReaderMapToList<ComboItemVO>(reader);
+                return list;
+            }
+        }
+
 
         public void Dispose()
         {

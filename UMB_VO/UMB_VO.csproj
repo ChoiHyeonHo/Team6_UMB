@@ -41,14 +41,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ASB\MachineVO.cs" />
+    <Compile Include="ASB\ProductVO.cs" />
+    <Compile Include="ComboItemVO.cs" />
     <Compile Include="JSJ\AuthorityVO.cs" />
     <Compile Include="BOMVO.cs" />
-    <Compile Include="BORVO.cs" />
+    <Compile Include="ASB\BORVO.cs" />
     <Compile Include="CHH\SalesPriceVO.cs" />
     <Compile Include="JSJ\DepartmentVO.cs" />
     <Compile Include="JSJ\LoginVO.cs" />
     <Compile Include="JSJ\UserVO.cs" />
-    <Compile Include="ProcessVO.cs" />
+    <Compile Include="ASB\ProcessVO.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup />
