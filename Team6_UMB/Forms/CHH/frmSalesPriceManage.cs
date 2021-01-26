@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 using Team6_UMB.Service;
@@ -17,37 +18,7 @@ namespace Team6_UMB.Forms
         string productID, productName, companyName, sDate, eDate, yn, comment;
         int priceID, companyID, Present, Past;
 
-        
-
         SalesPriceService service;
-
-        private void newBtns_btnExcel_Event(object sender, EventArgs e)
-        {
-            try
-            {
-                frmLoading frm = new frmLoading(ExportCustomerList);
-                frm.ShowDialog(this);
-            }
-            catch (Exception err)
-            {
-                MessageBox.Show(err.Message);
-            }
-        }
-        private void ExportCustomerList()
-        {
-            try
-            {
-                string sResult = ExcelExportImport.ExportToDataGridView<SalesPriceVO>((List<SalesPriceVO>)dgvPrice.DataSource, "");
-                if (sResult.Length > 0)
-                {
-                    MessageBox.Show(sResult);
-                }
-            }
-            catch (Exception err)
-            {
-                MessageBox.Show(err.Message);
-            }
-        }
 
         public frmSalesPriceManage()
         {
@@ -81,6 +52,14 @@ namespace Team6_UMB.Forms
             allList = service.GetSalesPriceNInfo();
             dgvPrice.DataSource = allList;
         }
+
+        private void btnWhere_Click(object sender, EventArgs e)
+        {
+            service = new SalesPriceService();
+            allList = service.GetWhereInfo(txtProdName.Text, txtCompanyName.Text);
+            dgvPrice.DataSource = allList;
+        }
+
         private void cheView_CheckedChanged(object sender, EventArgs e)
         {
             if (cheView.Checked)
@@ -126,6 +105,7 @@ namespace Team6_UMB.Forms
 
         private void newBtns_btnUpdate_Event(object sender, EventArgs e)
         {
+
             string headerName = "단가관리 수정";
             frmSalesPricePopUp pop = new frmSalesPricePopUp(headerName, priceID, productID, productName, companyID, companyName, Present, sDate, eDate, yn, comment);
             pop.ShowDialog();
@@ -145,6 +125,50 @@ namespace Team6_UMB.Forms
                 else
                     MessageBox.Show(Properties.Resources.msgError);
 
+            }
+        }
+        private void newBtns_btnExcel_Event(object sender, EventArgs e)
+        {
+            try
+            {
+                frmLoading frm = new frmLoading(ExportCustomerList);
+                frm.ShowDialog(this);
+            }
+            catch (Exception err)
+            {
+                MessageBox.Show(err.Message);
+            }
+        }
+        private void ExportCustomerList()
+        {
+            try
+            {
+                string sResult = ExcelExportImport.ExportToDataGridView<SalesPriceVO>((List<SalesPriceVO>)dgvPrice.DataSource, "");
+                if (sResult.Length > 0)
+                {
+                    MessageBox.Show(sResult);
+                }
+            }
+            catch (Exception err)
+            {
+                MessageBox.Show(err.Message);
+            }
+        }
+
+        private void periodSearchControl_ChangedPeriod(object sender, EventArgs e)
+        {
+            if (dgvPrice.DataSource != null)
+            {
+                if (periodSearchControl.dtFrom != DateTime.Now.ToShortDateString())
+                {
+                    string FromDate = periodSearchControl.dtFrom;
+                    string ToDate = periodSearchControl.dtTo;
+
+                    List<SalesPriceVO> periodList = (from period in allList
+                                                     where Convert.ToDateTime(FromDate) <= Convert.ToDateTime(period.price_sdate) && Convert.ToDateTime(period.price_edate) <= Convert.ToDateTime(ToDate)
+                                                     select period).ToList();
+                    dgvPrice.DataSource = periodList;
+                }
             }
         }
     }
