@@ -105,6 +105,29 @@ namespace Team6_UMB
             cbo.DataSource = codeList;
         }
 
+        /// <summary>
+        /// 부서 콤보박스 바인딩
+        /// </summary>
+        /// <param name="cbo"></param>
+        /// <param name="list"></param>
+        /// <param name="blankItem"></param>
+        /// <param name="blankText"></param>
+        public void DepartmentBinding(ComboBox cbo, List<DepartmentVO> list, bool blankItem = true, string blankText = "")
+        {
+            var codeList = (from item in list
+                            select item).ToList();
+
+            if (blankItem)
+            {
+                DepartmentVO blank = new DepartmentVO
+                { department_id = 0, department_name = blankText };
+                codeList.Insert(0, blank);
+            }
+            cbo.DisplayMember = "department_name";
+            cbo.ValueMember = "department_id";
+            cbo.DataSource = codeList;
+        }
+
         #region 데이터그리드뷰
         public static void SetInitGridView(DataGridView dgv)
         {
