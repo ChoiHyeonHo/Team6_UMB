@@ -424,9 +424,11 @@
       <DependentUpon>frmSOPopUP.cs</DependentUpon>
     </Compile>
     <Compile Include="Service\BORService.cs" />
+    <Compile Include="Service\DepartmentService.cs" />
     <Compile Include="Service\LoginService.cs" />
     <Compile Include="Service\MachineService.cs" />
     <Compile Include="Service\MatPriceService.cs" />
+    <Compile Include="Service\ProdStatusService.cs" />
     <Compile Include="Service\ProductService.cs" />
     <Compile Include="Service\SalesPriceService.cs" />
     <Compile Include="Service\UserService.cs" />

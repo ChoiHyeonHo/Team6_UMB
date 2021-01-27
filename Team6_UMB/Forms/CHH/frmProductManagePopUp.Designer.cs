@@ -38,23 +38,23 @@ namespace Team6_UMB.Forms
             this.label12 = new System.Windows.Forms.Label();
             this.comboBox6 = new System.Windows.Forms.ComboBox();
             this.label11 = new System.Windows.Forms.Label();
-            this.comboBox5 = new System.Windows.Forms.ComboBox();
-            this.comboBox4 = new System.Windows.Forms.ComboBox();
+            this.cbCompany = new System.Windows.Forms.ComboBox();
+            this.cbWHouse = new System.Windows.Forms.ComboBox();
             this.label10 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.txtStnd = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
-            this.comboBox3 = new System.Windows.Forms.ComboBox();
+            this.cbYN = new System.Windows.Forms.ComboBox();
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.numericUpDown2 = new System.Windows.Forms.NumericUpDown();
+            this.nuSafeCount = new System.Windows.Forms.NumericUpDown();
             this.label6 = new System.Windows.Forms.Label();
-            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
+            this.nuMinOrder = new System.Windows.Forms.NumericUpDown();
             this.label5 = new System.Windows.Forms.Label();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.cbUnit = new System.Windows.Forms.ComboBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.cbProdType = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtProdName = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.button3 = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
@@ -62,8 +62,8 @@ namespace Team6_UMB.Forms
             this.btnCreate = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nuSafeCount)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nuMinOrder)).BeginInit();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -89,23 +89,23 @@ namespace Team6_UMB.Forms
             this.groupBox1.Controls.Add(this.label12);
             this.groupBox1.Controls.Add(this.comboBox6);
             this.groupBox1.Controls.Add(this.label11);
-            this.groupBox1.Controls.Add(this.comboBox5);
-            this.groupBox1.Controls.Add(this.comboBox4);
+            this.groupBox1.Controls.Add(this.cbCompany);
+            this.groupBox1.Controls.Add(this.cbWHouse);
             this.groupBox1.Controls.Add(this.label10);
-            this.groupBox1.Controls.Add(this.textBox3);
+            this.groupBox1.Controls.Add(this.txtStnd);
             this.groupBox1.Controls.Add(this.label9);
-            this.groupBox1.Controls.Add(this.comboBox3);
+            this.groupBox1.Controls.Add(this.cbYN);
             this.groupBox1.Controls.Add(this.label8);
             this.groupBox1.Controls.Add(this.label7);
-            this.groupBox1.Controls.Add(this.numericUpDown2);
+            this.groupBox1.Controls.Add(this.nuSafeCount);
             this.groupBox1.Controls.Add(this.label6);
-            this.groupBox1.Controls.Add(this.numericUpDown1);
+            this.groupBox1.Controls.Add(this.nuMinOrder);
             this.groupBox1.Controls.Add(this.label5);
-            this.groupBox1.Controls.Add(this.comboBox2);
+            this.groupBox1.Controls.Add(this.cbUnit);
             this.groupBox1.Controls.Add(this.label4);
-            this.groupBox1.Controls.Add(this.comboBox1);
+            this.groupBox1.Controls.Add(this.cbProdType);
             this.groupBox1.Controls.Add(this.label3);
-            this.groupBox1.Controls.Add(this.textBox1);
+            this.groupBox1.Controls.Add(this.txtProdName);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Location = new System.Drawing.Point(12, 57);
             this.groupBox1.Name = "groupBox1";
@@ -184,36 +184,36 @@ namespace Team6_UMB.Forms
             // 
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("나눔바른고딕", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label11.ForeColor = System.Drawing.Color.RoyalBlue;
+            this.label11.ForeColor = System.Drawing.SystemColors.ControlText;
             this.label11.Location = new System.Drawing.Point(314, 111);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(60, 17);
+            this.label11.Size = new System.Drawing.Size(34, 17);
             this.label11.TabIndex = 54;
-            this.label11.Text = "공정코드";
+            this.label11.Text = "규격";
             // 
-            // comboBox5
+            // cbCompany
             // 
-            this.comboBox5.Font = new System.Drawing.Font("나눔바른고딕", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.comboBox5.FormattingEnabled = true;
-            this.comboBox5.Items.AddRange(new object[] {
+            this.cbCompany.Font = new System.Drawing.Font("나눔바른고딕", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.cbCompany.FormattingEnabled = true;
+            this.cbCompany.Items.AddRange(new object[] {
             "Y",
             "N"});
-            this.comboBox5.Location = new System.Drawing.Point(72, 170);
-            this.comboBox5.Name = "comboBox5";
-            this.comboBox5.Size = new System.Drawing.Size(198, 25);
-            this.comboBox5.TabIndex = 53;
+            this.cbCompany.Location = new System.Drawing.Point(72, 170);
+            this.cbCompany.Name = "cbCompany";
+            this.cbCompany.Size = new System.Drawing.Size(198, 25);
+            this.cbCompany.TabIndex = 53;
             // 
-            // comboBox4
+            // cbWHouse
             // 
-            this.comboBox4.Font = new System.Drawing.Font("나눔바른고딕", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.comboBox4.FormattingEnabled = true;
-            this.comboBox4.Items.AddRange(new object[] {
+            this.cbWHouse.Font = new System.Drawing.Font("나눔바른고딕", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.cbWHouse.FormattingEnabled = true;
+            this.cbWHouse.Items.AddRange(new object[] {
             "Y",
             "N"});
-            this.comboBox4.Location = new System.Drawing.Point(380, 75);
-            this.comboBox4.Name = "comboBox4";
-            this.comboBox4.Size = new System.Drawing.Size(198, 25);
-            this.comboBox4.TabIndex = 52;
+            this.cbWHouse.Location = new System.Drawing.Point(380, 75);
+            this.cbWHouse.Name = "cbWHouse";
+            this.cbWHouse.Size = new System.Drawing.Size(198, 25);
+            this.cbWHouse.TabIndex = 52;
             // 
             // label10
             // 
@@ -226,13 +226,13 @@ namespace Team6_UMB.Forms
             this.label10.TabIndex = 51;
             this.label10.Text = "창고";
             // 
-            // textBox3
+            // txtStnd
             // 
-            this.textBox3.Font = new System.Drawing.Font("나눔바른고딕", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.textBox3.Location = new System.Drawing.Point(380, 44);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(198, 25);
-            this.textBox3.TabIndex = 50;
+            this.txtStnd.Font = new System.Drawing.Font("나눔바른고딕", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.txtStnd.Location = new System.Drawing.Point(380, 44);
+            this.txtStnd.Name = "txtStnd";
+            this.txtStnd.Size = new System.Drawing.Size(198, 25);
+            this.txtStnd.TabIndex = 50;
             // 
             // label9
             // 
@@ -244,17 +244,17 @@ namespace Team6_UMB.Forms
             this.label9.TabIndex = 49;
             this.label9.Text = "규격";
             // 
-            // comboBox3
+            // cbYN
             // 
-            this.comboBox3.Font = new System.Drawing.Font("나눔바른고딕", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Items.AddRange(new object[] {
+            this.cbYN.Font = new System.Drawing.Font("나눔바른고딕", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.cbYN.FormattingEnabled = true;
+            this.cbYN.Items.AddRange(new object[] {
             "Y",
             "N"});
-            this.comboBox3.Location = new System.Drawing.Point(382, 12);
-            this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(198, 25);
-            this.comboBox3.TabIndex = 48;
+            this.cbYN.Location = new System.Drawing.Point(382, 12);
+            this.cbYN.Name = "cbYN";
+            this.cbYN.Size = new System.Drawing.Size(198, 25);
+            this.cbYN.TabIndex = 48;
             // 
             // label8
             // 
@@ -278,13 +278,13 @@ namespace Team6_UMB.Forms
             this.label7.TabIndex = 45;
             this.label7.Text = "업체명";
             // 
-            // numericUpDown2
+            // nuSafeCount
             // 
-            this.numericUpDown2.Font = new System.Drawing.Font("나눔바른고딕", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.numericUpDown2.Location = new System.Drawing.Point(72, 138);
-            this.numericUpDown2.Name = "numericUpDown2";
-            this.numericUpDown2.Size = new System.Drawing.Size(198, 25);
-            this.numericUpDown2.TabIndex = 44;
+            this.nuSafeCount.Font = new System.Drawing.Font("나눔바른고딕", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.nuSafeCount.Location = new System.Drawing.Point(72, 138);
+            this.nuSafeCount.Name = "nuSafeCount";
+            this.nuSafeCount.Size = new System.Drawing.Size(198, 25);
+            this.nuSafeCount.TabIndex = 44;
             // 
             // label6
             // 
@@ -296,13 +296,13 @@ namespace Team6_UMB.Forms
             this.label6.TabIndex = 43;
             this.label6.Text = "안전재고";
             // 
-            // numericUpDown1
+            // nuMinOrder
             // 
-            this.numericUpDown1.Font = new System.Drawing.Font("나눔바른고딕", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.numericUpDown1.Location = new System.Drawing.Point(72, 106);
-            this.numericUpDown1.Name = "numericUpDown1";
-            this.numericUpDown1.Size = new System.Drawing.Size(198, 25);
-            this.numericUpDown1.TabIndex = 42;
+            this.nuMinOrder.Font = new System.Drawing.Font("나눔바른고딕", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.nuMinOrder.Location = new System.Drawing.Point(72, 106);
+            this.nuMinOrder.Name = "nuMinOrder";
+            this.nuMinOrder.Size = new System.Drawing.Size(198, 25);
+            this.nuMinOrder.TabIndex = 42;
             // 
             // label5
             // 
@@ -314,17 +314,17 @@ namespace Team6_UMB.Forms
             this.label5.TabIndex = 41;
             this.label5.Text = "최소발주";
             // 
-            // comboBox2
+            // cbUnit
             // 
-            this.comboBox2.Font = new System.Drawing.Font("나눔바른고딕", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Items.AddRange(new object[] {
+            this.cbUnit.Font = new System.Drawing.Font("나눔바른고딕", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.cbUnit.FormattingEnabled = true;
+            this.cbUnit.Items.AddRange(new object[] {
             "Y",
             "N"});
-            this.comboBox2.Location = new System.Drawing.Point(72, 75);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(198, 25);
-            this.comboBox2.TabIndex = 40;
+            this.cbUnit.Location = new System.Drawing.Point(72, 75);
+            this.cbUnit.Name = "cbUnit";
+            this.cbUnit.Size = new System.Drawing.Size(198, 25);
+            this.cbUnit.TabIndex = 40;
             // 
             // label4
             // 
@@ -337,17 +337,17 @@ namespace Team6_UMB.Forms
             this.label4.TabIndex = 39;
             this.label4.Text = "단위";
             // 
-            // comboBox1
+            // cbProdType
             // 
-            this.comboBox1.Font = new System.Drawing.Font("나눔바른고딕", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
+            this.cbProdType.Font = new System.Drawing.Font("나눔바른고딕", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.cbProdType.FormattingEnabled = true;
+            this.cbProdType.Items.AddRange(new object[] {
             "Y",
             "N"});
-            this.comboBox1.Location = new System.Drawing.Point(72, 44);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(198, 25);
-            this.comboBox1.TabIndex = 38;
+            this.cbProdType.Location = new System.Drawing.Point(72, 44);
+            this.cbProdType.Name = "cbProdType";
+            this.cbProdType.Size = new System.Drawing.Size(198, 25);
+            this.cbProdType.TabIndex = 38;
             // 
             // label3
             // 
@@ -360,13 +360,13 @@ namespace Team6_UMB.Forms
             this.label3.TabIndex = 27;
             this.label3.Text = "제품분류";
             // 
-            // textBox1
+            // txtProdName
             // 
-            this.textBox1.Font = new System.Drawing.Font("나눔바른고딕", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.textBox1.Location = new System.Drawing.Point(72, 12);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(198, 25);
-            this.textBox1.TabIndex = 26;
+            this.txtProdName.Font = new System.Drawing.Font("나눔바른고딕", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.txtProdName.Location = new System.Drawing.Point(72, 12);
+            this.txtProdName.Name = "txtProdName";
+            this.txtProdName.Size = new System.Drawing.Size(198, 25);
+            this.txtProdName.TabIndex = 26;
             // 
             // label2
             // 
@@ -445,8 +445,8 @@ namespace Team6_UMB.Forms
             this.panel1.PerformLayout();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nuSafeCount)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nuMinOrder)).EndInit();
             this.panel2.ResumeLayout(false);
             this.ResumeLayout(false);
 
@@ -455,11 +455,11 @@ namespace Team6_UMB.Forms
         #endregion
 
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtProdName;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.ComboBox cbProdType;
+        private System.Windows.Forms.ComboBox cbUnit;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox textBox4;
         private System.Windows.Forms.Label label14;
@@ -469,17 +469,17 @@ namespace Team6_UMB.Forms
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.ComboBox comboBox6;
         private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.ComboBox comboBox5;
-        private System.Windows.Forms.ComboBox comboBox4;
+        private System.Windows.Forms.ComboBox cbCompany;
+        private System.Windows.Forms.ComboBox cbWHouse;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox txtStnd;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.ComboBox comboBox3;
+        private System.Windows.Forms.ComboBox cbYN;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.NumericUpDown numericUpDown2;
+        private System.Windows.Forms.NumericUpDown nuSafeCount;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.NumericUpDown numericUpDown1;
+        private System.Windows.Forms.NumericUpDown nuMinOrder;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Panel panel2;

@@ -44,6 +44,7 @@
     <Compile Include="ASB\MachineVO.cs" />
     <Compile Include="ASB\ProductVO.cs" />
     <Compile Include="CHH\MatPriceVO.cs" />
+    <Compile Include="CHH\ProdStatusVO.cs" />
     <Compile Include="ComboItemVO.cs" />
     <Compile Include="JSJ\AuthorityVO.cs" />
     <Compile Include="BOMVO.cs" />
