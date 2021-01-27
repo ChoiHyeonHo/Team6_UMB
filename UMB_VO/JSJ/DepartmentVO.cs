@@ -12,5 +12,6 @@ namespace UMB_VO
         public string department_name { get; set; }
         public string department_uadmin { get; set; }
         public string department_udate { get; set; }
+        public string department_comment { get; set; }
     }
 }

@@ -32,7 +32,7 @@ namespace UMB_DAC
         {
             LoginVO.User user = new LoginVO.User();
 
-            string sql = $"select user_id, department_id from TBL_USER where user_id = @user_id and user_pwd = @user_pwd";
+            string sql = $"select user_id, user_name, department_id from TBL_USER where user_id = @user_id and user_pwd = @user_pwd";
 
             using (SqlCommand cmd = new SqlCommand(sql, conn))
             {
@@ -46,6 +46,7 @@ namespace UMB_DAC
                 {
                     user.ID = int.Parse(reader["user_id"].ToString());
                     user.Department = int.Parse(reader["department_id"].ToString());
+                    user.Name = reader["user_name"].ToString();
                 }
                 LoginVO.user = user;
             }
