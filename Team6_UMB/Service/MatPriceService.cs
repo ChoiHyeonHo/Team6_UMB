@@ -45,5 +45,10 @@ namespace Team6_UMB.Service
             MatPriceDAC dac = new MatPriceDAC();
             return dac.Delete(priceID);
         }
+        public List<MatPriceVO> GetWhereInfo(string prodName, string companyName)
+        {
+            MatPriceDAC dac = new MatPriceDAC();
+            return dac.GetWhereInfo(prodName, companyName);
+        }
     }
 }

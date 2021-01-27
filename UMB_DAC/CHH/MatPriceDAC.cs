@@ -132,6 +132,22 @@ where P.product_type = '원자재' and price_yn = 'Y'";
             }
         }
 
+        public List<MatPriceVO> GetWhereInfo(string prodName, string companyName)
+        {
+            string sql = @"select price_id, P.product_id, P.product_name, C.company_id, C.company_name, price_present, price_past, price_sdate, price_edate, price_yn, price_comment
+from TBL_P_PRICE as PP inner join TBL_PRODUCT as P on PP.product_id = P.product_id inner join TBL_COMPANY as C on PP.company_id = C.company_id
+where product_name = @product_name and company_name = @company_name and P.product_type = '원자재'";
+
+            using (SqlCommand cmd = new SqlCommand(sql, conn))
+            {
+                cmd.Parameters.AddWithValue("@product_name", prodName);
+                cmd.Parameters.AddWithValue("@company_name", companyName);
+                SqlDataReader reader = cmd.ExecuteReader();
+                List<MatPriceVO> list = Helper.DataReaderMapToList<MatPriceVO>(reader);
+                return list;
+            }
+        }
+
         public void Dispose()
         {
             conn.Close();

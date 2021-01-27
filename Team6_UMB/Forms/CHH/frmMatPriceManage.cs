@@ -78,6 +78,13 @@ namespace Team6_UMB.Forms
             }
         }
 
+        private void btnWhere_Click(object sender, EventArgs e)
+        {
+            service = new MatPriceService();
+            allList = service.GetWhereInfo(txtProdName.Text, txtCompanyName.Text);
+            dgvMatPrice.DataSource = allList;
+        }
+
         private void frmMatPriceManage_Load(object sender, EventArgs e)
         {
             CommonUtil.SetInitGridView(dgvMatPrice);
