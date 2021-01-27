@@ -70,14 +70,7 @@ namespace Team6_UMB.Forms
             dgvPrice.DataSource = allList;
         }
 
-        private void btnWhere_Click(object sender, EventArgs e)
-        {
-            service = new SalesPriceService();
-            allList = service.GetWhereInfo(txtProdName.Text, txtCompanyName.Text);
-            dgvPrice.DataSource = allList;
-        }
-
-        private void cheView_CheckedChanged(object sender, EventArgs e)
+        private void cheView_Click(object sender, EventArgs e)
         {
             if (cheView.Checked)
             {
@@ -91,6 +84,13 @@ namespace Team6_UMB.Forms
                 allList = service.GetSalesPriceYInfo();
                 dgvPrice.DataSource = allList;
             }
+        }
+
+        private void btnWhere_Click(object sender, EventArgs e)
+        {
+            service = new SalesPriceService();
+            allList = service.GetWhereInfo(txtProdName.Text, txtCompanyName.Text);
+            dgvPrice.DataSource = allList;
         }
 
         private void newBtns_btnRefresh_Event(object sender, EventArgs e)
@@ -171,7 +171,5 @@ namespace Team6_UMB.Forms
                 MessageBox.Show(err.Message);
             }
         }
-
-        
     }
 }

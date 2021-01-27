@@ -44,6 +44,23 @@ namespace Team6_UMB.Forms
                 }
             }
         }
+        private void frmMatPriceManage_Load(object sender, EventArgs e)
+        {
+            CommonUtil.SetInitGridView(dgvMatPrice);
+            CommonUtil.AddGridTextColumn(dgvMatPrice, "번호", "price_id", 60);                 //0
+            CommonUtil.AddGridTextColumn(dgvMatPrice, "품목id", "product_id", 10, false);      //1
+            CommonUtil.AddGridTextColumn(dgvMatPrice, "품목명", "product_name", 260);          //2
+            CommonUtil.AddGridTextColumn(dgvMatPrice, "거래처id", "company_id", 10, false);    //3
+            CommonUtil.AddGridTextColumn(dgvMatPrice, "거래처명", "company_name", 260);        //4
+            CommonUtil.AddGridTextColumn(dgvMatPrice, "현재단가", "price_present", 180);       //5
+            CommonUtil.AddGridTextColumn(dgvMatPrice, "이전단가", "price_past", 180);          //6
+            CommonUtil.AddGridTextColumn(dgvMatPrice, "시작일", "price_sdate", 200);           //7
+            CommonUtil.AddGridTextColumn(dgvMatPrice, "종료일", "price_edate", 200);           //8
+            CommonUtil.AddGridTextColumn(dgvMatPrice, "사용유무", "price_yn", 120);            //9
+            CommonUtil.AddGridTextColumn(dgvMatPrice, "비고", "price_comment", 10, false);     //10
+
+            DGV_Binding();
+        }
 
         private void newBtns_btnDelete_Event(object sender, EventArgs e)
         {
@@ -83,24 +100,6 @@ namespace Team6_UMB.Forms
             service = new MatPriceService();
             allList = service.GetWhereInfo(txtProdName.Text, txtCompanyName.Text);
             dgvMatPrice.DataSource = allList;
-        }
-
-        private void frmMatPriceManage_Load(object sender, EventArgs e)
-        {
-            CommonUtil.SetInitGridView(dgvMatPrice);
-            CommonUtil.AddGridTextColumn(dgvMatPrice, "번호", "price_id", 60);                 //0
-            CommonUtil.AddGridTextColumn(dgvMatPrice, "품목id", "product_id", 10, false);      //1
-            CommonUtil.AddGridTextColumn(dgvMatPrice, "품목명", "product_name", 260);          //2
-            CommonUtil.AddGridTextColumn(dgvMatPrice, "거래처id", "company_id", 10, false);    //3
-            CommonUtil.AddGridTextColumn(dgvMatPrice, "거래처명", "company_name", 260);        //4
-            CommonUtil.AddGridTextColumn(dgvMatPrice, "현재단가", "price_present", 180);       //5
-            CommonUtil.AddGridTextColumn(dgvMatPrice, "이전단가", "price_past", 180);          //6
-            CommonUtil.AddGridTextColumn(dgvMatPrice, "시작일", "price_sdate", 200);           //7
-            CommonUtil.AddGridTextColumn(dgvMatPrice, "종료일", "price_edate", 200);           //8
-            CommonUtil.AddGridTextColumn(dgvMatPrice, "사용유무", "price_yn", 120);            //9
-            CommonUtil.AddGridTextColumn(dgvMatPrice, "비고", "price_comment", 10, false);     //10
-
-            DGV_Binding();
         }
 
         private void DGV_Binding()
