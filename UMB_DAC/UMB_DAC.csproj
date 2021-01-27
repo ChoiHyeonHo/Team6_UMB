@@ -52,6 +52,7 @@
   <ItemGroup>
     <Compile Include="ASB\MachineDAC.cs" />
     <Compile Include="CHH\MatPriceDAC.cs" />
+    <Compile Include="CHH\ProdStatusDAC.cs" />
     <Compile Include="JSJ\AuthorityDAC.cs" />
     <Compile Include="BOMDAC.cs" />
     <Compile Include="ASB\BORDAC.cs" />

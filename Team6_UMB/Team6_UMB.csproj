@@ -427,6 +427,7 @@
     <Compile Include="Service\LoginService.cs" />
     <Compile Include="Service\MachineService.cs" />
     <Compile Include="Service\MatPriceService.cs" />
+    <Compile Include="Service\ProdStatusService.cs" />
     <Compile Include="Service\ProductService.cs" />
     <Compile Include="Service\SalesPriceService.cs" />
     <Compile Include="Service\UserService.cs" />
