@@ -42,9 +42,9 @@ namespace Team6_UMB.Forms.ASB
             this.cboMachine = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.newBtns = new Team6_UMB.Controls.NewBtns();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label6 = new System.Windows.Forms.Label();
-            this.newBtns = new Team6_UMB.Controls.NewBtns();
             this.dgvBOR = new Team6_UMB.DGV_Custom();
             this.check = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.groupBox1.SuspendLayout();
@@ -170,6 +170,20 @@ namespace Team6_UMB.Forms.ASB
             this.panel1.Size = new System.Drawing.Size(1727, 44);
             this.panel1.TabIndex = 28;
             // 
+            // newBtns
+            // 
+            this.newBtns.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(52)))), ((int)(((byte)(79)))));
+            this.newBtns.Dock = System.Windows.Forms.DockStyle.Right;
+            this.newBtns.Location = new System.Drawing.Point(729, 0);
+            this.newBtns.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
+            this.newBtns.Name = "newBtns";
+            this.newBtns.Size = new System.Drawing.Size(998, 44);
+            this.newBtns.TabIndex = 3;
+            this.newBtns.btnRefresh_Event += new System.EventHandler(this.newBtns1_btnRefresh_Event);
+            this.newBtns.btnCreate_Event += new System.EventHandler(this.newBtns_btnCreate_Event);
+            this.newBtns.btnUpdate_Event += new System.EventHandler(this.newBtns_btnUpdate_Event);
+            this.newBtns.btnExcel_Event += new System.EventHandler(this.newBtns_btnExcel_Event);
+            // 
             // panel2
             // 
             this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
@@ -191,20 +205,6 @@ namespace Team6_UMB.Forms.ASB
             this.label6.Size = new System.Drawing.Size(71, 18);
             this.label6.TabIndex = 22;
             this.label6.Text = "BOR 목록";
-            // 
-            // newBtns
-            // 
-            this.newBtns.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(52)))), ((int)(((byte)(79)))));
-            this.newBtns.Dock = System.Windows.Forms.DockStyle.Right;
-            this.newBtns.Location = new System.Drawing.Point(729, 0);
-            this.newBtns.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
-            this.newBtns.Name = "newBtns";
-            this.newBtns.Size = new System.Drawing.Size(998, 44);
-            this.newBtns.TabIndex = 3;
-            this.newBtns.btnRefresh_Event += new System.EventHandler(this.newBtns1_btnRefresh_Event);
-            this.newBtns.btnCreate_Event += new System.EventHandler(this.newBtns_btnCreate_Event);
-            this.newBtns.btnUpdate_Event += new System.EventHandler(this.newBtns_btnUpdate_Event);
-            this.newBtns.btnExcel_Event += new System.EventHandler(this.newBtns_btnExcel_Event);
             // 
             // dgvBOR
             // 
@@ -251,9 +251,8 @@ namespace Team6_UMB.Forms.ASB
             // 
             // check
             // 
-            this.check.HeaderText = "";
+            this.check.HeaderText = "선택";
             this.check.Name = "check";
-            this.check.ToolTipText = "선택";
             // 
             // frmBOR
             // 
