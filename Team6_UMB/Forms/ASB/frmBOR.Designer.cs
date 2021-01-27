@@ -42,11 +42,10 @@ namespace Team6_UMB.Forms.ASB
             this.cboMachine = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.newBtns = new Team6_UMB.Controls.NewBtns();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label6 = new System.Windows.Forms.Label();
             this.dgvBOR = new Team6_UMB.DGV_Custom();
-            this.check = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.newBtns = new Team6_UMB.Controls.NewBtns();
             this.groupBox1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -170,20 +169,6 @@ namespace Team6_UMB.Forms.ASB
             this.panel1.Size = new System.Drawing.Size(1727, 44);
             this.panel1.TabIndex = 28;
             // 
-            // newBtns
-            // 
-            this.newBtns.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(52)))), ((int)(((byte)(79)))));
-            this.newBtns.Dock = System.Windows.Forms.DockStyle.Right;
-            this.newBtns.Location = new System.Drawing.Point(729, 0);
-            this.newBtns.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
-            this.newBtns.Name = "newBtns";
-            this.newBtns.Size = new System.Drawing.Size(998, 44);
-            this.newBtns.TabIndex = 3;
-            this.newBtns.btnRefresh_Event += new System.EventHandler(this.newBtns1_btnRefresh_Event);
-            this.newBtns.btnCreate_Event += new System.EventHandler(this.newBtns_btnCreate_Event);
-            this.newBtns.btnUpdate_Event += new System.EventHandler(this.newBtns_btnUpdate_Event);
-            this.newBtns.btnExcel_Event += new System.EventHandler(this.newBtns_btnExcel_Event);
-            // 
             // panel2
             // 
             this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
@@ -219,8 +204,6 @@ namespace Team6_UMB.Forms.ASB
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dgvBOR.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvBOR.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvBOR.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.check});
             this.dgvBOR.Cursor = System.Windows.Forms.Cursors.Arrow;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
@@ -249,10 +232,20 @@ namespace Team6_UMB.Forms.ASB
             this.dgvBOR.TabIndex = 30;
             this.dgvBOR.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvBOR_CellClick);
             // 
-            // check
+            // newBtns
             // 
-            this.check.HeaderText = "선택";
-            this.check.Name = "check";
+            this.newBtns.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(52)))), ((int)(((byte)(79)))));
+            this.newBtns.Dock = System.Windows.Forms.DockStyle.Right;
+            this.newBtns.Location = new System.Drawing.Point(729, 0);
+            this.newBtns.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
+            this.newBtns.Name = "newBtns";
+            this.newBtns.Size = new System.Drawing.Size(998, 44);
+            this.newBtns.TabIndex = 3;
+            this.newBtns.btnRefresh_Event += new System.EventHandler(this.newBtns1_btnRefresh_Event);
+            this.newBtns.btnCreate_Event += new System.EventHandler(this.newBtns_btnCreate_Event);
+            this.newBtns.btnUpdate_Event += new System.EventHandler(this.newBtns_btnUpdate_Event);
+            this.newBtns.btnDelete_Event += new System.EventHandler(this.newBtns_btnDelete_Event);
+            this.newBtns.btnExcel_Event += new System.EventHandler(this.newBtns_btnExcel_Event);
             // 
             // frmBOR
             // 
@@ -295,6 +288,5 @@ namespace Team6_UMB.Forms.ASB
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label6;
         private Controls.NewBtns newBtns;
-        private System.Windows.Forms.DataGridViewCheckBoxColumn check;
     }
 }

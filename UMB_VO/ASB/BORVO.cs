@@ -12,7 +12,7 @@ namespace UMB_VO
         public string product_id { get; set; } // 품목 아이디
         public string process_name { get; set; } // 공정명
         public int m_id { get; set; } // 설비 아이디
-        public int bor_tattime { get; set; } // Tact_Time
+        public int bor_tacttime { get; set; } // Tact_Time
         public string bor_yn { get; set; } // 사용유무
         public string bor_comment { get; set; } // 비고
         public string bor_uadmin { get; set; } // 수정자

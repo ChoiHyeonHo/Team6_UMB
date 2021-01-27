@@ -30,22 +30,24 @@ namespace Team6_UMB.Forms.ASB
         private void InitializeComponent()
         {
             this.panel2 = new System.Windows.Forms.Panel();
-            this.btnUpdate = new System.Windows.Forms.Button();
+            this.btnCancle = new System.Windows.Forms.Button();
             this.btnCreate = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.comboBox3 = new System.Windows.Forms.ComboBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.cboMachine = new System.Windows.Forms.ComboBox();
+            this.txtTactTime = new System.Windows.Forms.TextBox();
             this.label13 = new System.Windows.Forms.Label();
-            this.textBox10 = new System.Windows.Forms.TextBox();
+            this.txtComment = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.comboBox4 = new System.Windows.Forms.ComboBox();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.button3 = new System.Windows.Forms.Button();
+            this.cboYN = new System.Windows.Forms.ComboBox();
+            this.cboProductName = new System.Windows.Forms.ComboBox();
+            this.cboProcessName = new System.Windows.Forms.ComboBox();
+            this.btnClose = new System.Windows.Forms.Button();
+            this.label4 = new System.Windows.Forms.Label();
+            this.txtUadmin = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -53,11 +55,11 @@ namespace Team6_UMB.Forms.ASB
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.button3);
+            this.panel1.Controls.Add(this.btnClose);
             this.panel1.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.panel1.Size = new System.Drawing.Size(486, 44);
             this.panel1.Controls.SetChildIndex(this.label1, 0);
-            this.panel1.Controls.SetChildIndex(this.button3, 0);
+            this.panel1.Controls.SetChildIndex(this.btnClose, 0);
             // 
             // label1
             // 
@@ -66,28 +68,28 @@ namespace Team6_UMB.Forms.ASB
             // 
             // panel2
             // 
-            this.panel2.Controls.Add(this.btnUpdate);
+            this.panel2.Controls.Add(this.btnCancle);
             this.panel2.Controls.Add(this.btnCreate);
-            this.panel2.Location = new System.Drawing.Point(158, 555);
+            this.panel2.Location = new System.Drawing.Point(159, 614);
             this.panel2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(185, 55);
             this.panel2.TabIndex = 23;
             // 
-            // btnUpdate
+            // btnCancle
             // 
-            this.btnUpdate.BackColor = System.Drawing.Color.Gray;
-            this.btnUpdate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnUpdate.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.btnUpdate.ForeColor = System.Drawing.Color.White;
-            this.btnUpdate.Location = new System.Drawing.Point(96, 9);
-            this.btnUpdate.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.btnUpdate.Name = "btnUpdate";
-            this.btnUpdate.Size = new System.Drawing.Size(86, 42);
-            this.btnUpdate.TabIndex = 18;
-            this.btnUpdate.Text = "취소";
-            this.btnUpdate.UseVisualStyleBackColor = false;
-            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
+            this.btnCancle.BackColor = System.Drawing.Color.Gray;
+            this.btnCancle.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCancle.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.btnCancle.ForeColor = System.Drawing.Color.White;
+            this.btnCancle.Location = new System.Drawing.Point(96, 9);
+            this.btnCancle.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnCancle.Name = "btnCancle";
+            this.btnCancle.Size = new System.Drawing.Size(86, 42);
+            this.btnCancle.TabIndex = 18;
+            this.btnCancle.Text = "취소";
+            this.btnCancle.UseVisualStyleBackColor = false;
+            this.btnCancle.Click += new System.EventHandler(this.btnCancle_Click);
             // 
             // btnCreate
             // 
@@ -153,64 +155,67 @@ namespace Team6_UMB.Forms.ASB
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.label7.ForeColor = System.Drawing.Color.RoyalBlue;
-            this.label7.Location = new System.Drawing.Point(11, 240);
+            this.label7.Location = new System.Drawing.Point(11, 239);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(60, 18);
             this.label7.TabIndex = 33;
             this.label7.Text = "사용유무";
             // 
-            // comboBox3
+            // cboMachine
             // 
-            this.comboBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Items.AddRange(new object[] {
+            this.cboMachine.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.cboMachine.FormattingEnabled = true;
+            this.cboMachine.Items.AddRange(new object[] {
             "Y",
             "N"});
-            this.comboBox3.Location = new System.Drawing.Point(154, 129);
-            this.comboBox3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(300, 26);
-            this.comboBox3.TabIndex = 43;
+            this.cboMachine.Location = new System.Drawing.Point(154, 129);
+            this.cboMachine.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.cboMachine.Name = "cboMachine";
+            this.cboMachine.Size = new System.Drawing.Size(300, 26);
+            this.cboMachine.TabIndex = 43;
             // 
-            // textBox3
+            // txtTactTime
             // 
-            this.textBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.textBox3.Location = new System.Drawing.Point(154, 182);
-            this.textBox3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(300, 24);
-            this.textBox3.TabIndex = 49;
+            this.txtTactTime.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.txtTactTime.Location = new System.Drawing.Point(154, 182);
+            this.txtTactTime.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtTactTime.Name = "txtTactTime";
+            this.txtTactTime.Size = new System.Drawing.Size(300, 24);
+            this.txtTactTime.TabIndex = 49;
+            this.txtTactTime.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtTactTime_KeyPress);
             // 
             // label13
             // 
             this.label13.AutoSize = true;
             this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.label13.ForeColor = System.Drawing.Color.Black;
-            this.label13.Location = new System.Drawing.Point(14, 294);
+            this.label13.Location = new System.Drawing.Point(11, 370);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(34, 18);
             this.label13.TabIndex = 62;
             this.label13.Text = "비고";
             // 
-            // textBox10
+            // txtComment
             // 
-            this.textBox10.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.textBox10.Location = new System.Drawing.Point(154, 294);
-            this.textBox10.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.textBox10.Multiline = true;
-            this.textBox10.Name = "textBox10";
-            this.textBox10.Size = new System.Drawing.Size(300, 145);
-            this.textBox10.TabIndex = 63;
+            this.txtComment.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.txtComment.Location = new System.Drawing.Point(154, 370);
+            this.txtComment.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtComment.Multiline = true;
+            this.txtComment.Name = "txtComment";
+            this.txtComment.Size = new System.Drawing.Size(300, 145);
+            this.txtComment.TabIndex = 63;
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.comboBox4);
-            this.groupBox1.Controls.Add(this.comboBox2);
-            this.groupBox1.Controls.Add(this.comboBox1);
-            this.groupBox1.Controls.Add(this.textBox10);
+            this.groupBox1.Controls.Add(this.txtUadmin);
+            this.groupBox1.Controls.Add(this.cboYN);
+            this.groupBox1.Controls.Add(this.cboProductName);
+            this.groupBox1.Controls.Add(this.cboProcessName);
+            this.groupBox1.Controls.Add(this.txtComment);
+            this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.label13);
-            this.groupBox1.Controls.Add(this.textBox3);
-            this.groupBox1.Controls.Add(this.comboBox3);
+            this.groupBox1.Controls.Add(this.txtTactTime);
+            this.groupBox1.Controls.Add(this.cboMachine);
             this.groupBox1.Controls.Add(this.label7);
             this.groupBox1.Controls.Add(this.label6);
             this.groupBox1.Controls.Add(this.label5);
@@ -220,75 +225,97 @@ namespace Team6_UMB.Forms.ASB
             this.groupBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Padding = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.groupBox1.Size = new System.Drawing.Size(486, 476);
+            this.groupBox1.Size = new System.Drawing.Size(486, 523);
             this.groupBox1.TabIndex = 22;
             this.groupBox1.TabStop = false;
             // 
-            // comboBox4
+            // cboYN
             // 
-            this.comboBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.comboBox4.FormattingEnabled = true;
-            this.comboBox4.Items.AddRange(new object[] {
+            this.cboYN.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.cboYN.FormattingEnabled = true;
+            this.cboYN.Items.AddRange(new object[] {
+            "",
+            "y",
+            "n"});
+            this.cboYN.Location = new System.Drawing.Point(154, 236);
+            this.cboYN.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.cboYN.Name = "cboYN";
+            this.cboYN.Size = new System.Drawing.Size(300, 26);
+            this.cboYN.TabIndex = 66;
+            // 
+            // cboProductName
+            // 
+            this.cboProductName.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.cboProductName.FormattingEnabled = true;
+            this.cboProductName.Items.AddRange(new object[] {
             "Y",
             "N"});
-            this.comboBox4.Location = new System.Drawing.Point(154, 236);
-            this.comboBox4.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.comboBox4.Name = "comboBox4";
-            this.comboBox4.Size = new System.Drawing.Size(300, 26);
-            this.comboBox4.TabIndex = 66;
+            this.cboProductName.Location = new System.Drawing.Point(154, 18);
+            this.cboProductName.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.cboProductName.Name = "cboProductName";
+            this.cboProductName.Size = new System.Drawing.Size(300, 26);
+            this.cboProductName.TabIndex = 65;
             // 
-            // comboBox2
+            // cboProcessName
             // 
-            this.comboBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Items.AddRange(new object[] {
+            this.cboProcessName.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.cboProcessName.FormattingEnabled = true;
+            this.cboProcessName.Items.AddRange(new object[] {
             "Y",
             "N"});
-            this.comboBox2.Location = new System.Drawing.Point(154, 18);
-            this.comboBox2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(300, 26);
-            this.comboBox2.TabIndex = 65;
+            this.cboProcessName.Location = new System.Drawing.Point(154, 71);
+            this.cboProcessName.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.cboProcessName.Name = "cboProcessName";
+            this.cboProcessName.Size = new System.Drawing.Size(300, 26);
+            this.cboProcessName.TabIndex = 64;
             // 
-            // comboBox1
+            // btnClose
             // 
-            this.comboBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
-            "Y",
-            "N"});
-            this.comboBox1.Location = new System.Drawing.Point(154, 71);
-            this.comboBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(300, 26);
-            this.comboBox1.TabIndex = 64;
+            this.btnClose.BackColor = System.Drawing.Color.Transparent;
+            this.btnClose.BackgroundImage = global::Team6_UMB.Properties.Resources.Close;
+            this.btnClose.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnClose.FlatAppearance.BorderSize = 0;
+            this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnClose.Location = new System.Drawing.Point(449, 9);
+            this.btnClose.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnClose.Name = "btnClose";
+            this.btnClose.Size = new System.Drawing.Size(33, 29);
+            this.btnClose.TabIndex = 46;
+            this.btnClose.UseVisualStyleBackColor = false;
+            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
-            // button3
+            // label4
             // 
-            this.button3.BackColor = System.Drawing.Color.Transparent;
-            this.button3.BackgroundImage = global::Team6_UMB.Properties.Resources.Close;
-            this.button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.button3.FlatAppearance.BorderSize = 0;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Location = new System.Drawing.Point(449, 9);
-            this.button3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(33, 29);
-            this.button3.TabIndex = 46;
-            this.button3.UseVisualStyleBackColor = false;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label4.ForeColor = System.Drawing.Color.Black;
+            this.label4.Location = new System.Drawing.Point(11, 307);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(47, 18);
+            this.label4.TabIndex = 62;
+            this.label4.Text = "수정자";
+            // 
+            // txtUadmin
+            // 
+            this.txtUadmin.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.txtUadmin.Location = new System.Drawing.Point(154, 304);
+            this.txtUadmin.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtUadmin.Name = "txtUadmin";
+            this.txtUadmin.Size = new System.Drawing.Size(300, 24);
+            this.txtUadmin.TabIndex = 67;
             // 
             // frmBORPopup
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.ClientSize = new System.Drawing.Size(517, 626);
+            this.ClientSize = new System.Drawing.Size(517, 682);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.groupBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.Name = "frmBORPopup";
             this.Text = "frmBorPopUp";
+            this.Load += new System.EventHandler(this.frmBORPopup_Load);
             this.Controls.SetChildIndex(this.groupBox1, 0);
             this.Controls.SetChildIndex(this.panel2, 0);
             this.Controls.SetChildIndex(this.panel1, 0);
@@ -304,21 +331,23 @@ namespace Team6_UMB.Forms.ASB
         #endregion
 
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Button btnUpdate;
+        private System.Windows.Forms.Button btnCancle;
         private System.Windows.Forms.Button btnCreate;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.ComboBox comboBox3;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.ComboBox cboMachine;
+        private System.Windows.Forms.TextBox txtTactTime;
         private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.TextBox textBox10;
+        private System.Windows.Forms.TextBox txtComment;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.ComboBox comboBox4;
-        private System.Windows.Forms.ComboBox comboBox2;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.ComboBox cboYN;
+        private System.Windows.Forms.ComboBox cboProductName;
+        private System.Windows.Forms.ComboBox cboProcessName;
+        private System.Windows.Forms.Button btnClose;
+        private System.Windows.Forms.TextBox txtUadmin;
+        private System.Windows.Forms.Label label4;
     }
 }

@@ -16,10 +16,30 @@ namespace Team6_UMB.Service
             return dac.GetBORList();
         }
 
-        internal void BORInsert()
+        
+
+        public List<BORVO> SearchBorList(string product_id, int m_id, string process_name)
         {
             BORDAC dac = new BORDAC();
-            //return dac.BORInsert();
+            return dac.SearchBorList(product_id, m_id, process_name);
+        }
+
+        public bool BORInsert(BORVO bor)
+        {
+            BORDAC dac = new BORDAC();
+            return dac.BORInsert(bor);
+        }
+
+        public bool BORUpdate(BORVO bor)
+        {
+            BORDAC dac = new BORDAC();
+            return dac.BORUpdate(bor);
+        }
+
+        public bool BORDelete(int BOR_id)
+        {
+            BORDAC dac = new BORDAC();
+            return dac.BORDelete(BOR_id);
         }
     }
 }
