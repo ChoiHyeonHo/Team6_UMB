@@ -47,6 +47,22 @@ namespace Team6_UMB
             cbo.DataSource = codeList;
         }
 
+        public static void MachineNameBinding(ComboBox cbo, List<MachineVO> list, bool blankItem = true, string blankText = "")
+        {
+            var codeList = (from item in list
+                            select item).ToList();
+
+            if (blankItem)
+            {
+                MachineVO blank = new MachineVO
+                { m_id = null, m_name = blankText };
+                codeList.Insert(0, blank);
+            }
+            cbo.DisplayMember = "m_name";
+            cbo.ValueMember = "m_id";
+            cbo.DataSource = codeList;
+        }
+
         public static void ProdNameBinding(ComboBox cbo, List<ProdCBOBindingVO> list, bool blankItem = true, string blankText = "")
         {
             var codeList = (from item in list

@@ -15,5 +15,11 @@ namespace Team6_UMB.Service
             BORDAC dac = new BORDAC();
             return dac.GetBORList();
         }
+
+        internal void BORInsert()
+        {
+            BORDAC dac = new BORDAC();
+            //return dac.BORInsert();
+        }
     }
 }

@@ -42,10 +42,11 @@ namespace Team6_UMB.Forms.ASB
             this.cboMachine = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.newBtns = new Team6_UMB.Controls.NewBtns();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label6 = new System.Windows.Forms.Label();
+            this.newBtns = new Team6_UMB.Controls.NewBtns();
             this.dgvBOR = new Team6_UMB.DGV_Custom();
+            this.check = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.groupBox1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -105,6 +106,7 @@ namespace Team6_UMB.Forms.ASB
             this.btnSearch.Size = new System.Drawing.Size(39, 38);
             this.btnSearch.TabIndex = 21;
             this.btnSearch.UseVisualStyleBackColor = true;
+            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
             // 
             // label4
             // 
@@ -168,17 +170,6 @@ namespace Team6_UMB.Forms.ASB
             this.panel1.Size = new System.Drawing.Size(1727, 44);
             this.panel1.TabIndex = 28;
             // 
-            // newBtns
-            // 
-            this.newBtns.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(52)))), ((int)(((byte)(79)))));
-            this.newBtns.Dock = System.Windows.Forms.DockStyle.Right;
-            this.newBtns.Location = new System.Drawing.Point(729, 0);
-            this.newBtns.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
-            this.newBtns.Name = "newBtns";
-            this.newBtns.Size = new System.Drawing.Size(998, 44);
-            this.newBtns.TabIndex = 3;
-            this.newBtns.btnRefresh_Event += new System.EventHandler(this.newBtns1_btnRefresh_Event);
-            // 
             // panel2
             // 
             this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
@@ -201,6 +192,20 @@ namespace Team6_UMB.Forms.ASB
             this.label6.TabIndex = 22;
             this.label6.Text = "BOR 목록";
             // 
+            // newBtns
+            // 
+            this.newBtns.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(52)))), ((int)(((byte)(79)))));
+            this.newBtns.Dock = System.Windows.Forms.DockStyle.Right;
+            this.newBtns.Location = new System.Drawing.Point(729, 0);
+            this.newBtns.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
+            this.newBtns.Name = "newBtns";
+            this.newBtns.Size = new System.Drawing.Size(998, 44);
+            this.newBtns.TabIndex = 3;
+            this.newBtns.btnRefresh_Event += new System.EventHandler(this.newBtns1_btnRefresh_Event);
+            this.newBtns.btnCreate_Event += new System.EventHandler(this.newBtns_btnCreate_Event);
+            this.newBtns.btnUpdate_Event += new System.EventHandler(this.newBtns_btnUpdate_Event);
+            this.newBtns.btnExcel_Event += new System.EventHandler(this.newBtns_btnExcel_Event);
+            // 
             // dgvBOR
             // 
             this.dgvBOR.BackgroundColor = System.Drawing.Color.White;
@@ -214,6 +219,8 @@ namespace Team6_UMB.Forms.ASB
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dgvBOR.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvBOR.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvBOR.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.check});
             this.dgvBOR.Cursor = System.Windows.Forms.Cursors.Arrow;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
@@ -224,7 +231,7 @@ namespace Team6_UMB.Forms.ASB
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dgvBOR.DefaultCellStyle = dataGridViewCellStyle2;
             this.dgvBOR.GridColor = System.Drawing.Color.LightGray;
-            this.dgvBOR.Location = new System.Drawing.Point(14, 176);
+            this.dgvBOR.Location = new System.Drawing.Point(16, 178);
             this.dgvBOR.Margin = new System.Windows.Forms.Padding(5, 1, 5, 1);
             this.dgvBOR.MinimumSize = new System.Drawing.Size(171, 188);
             this.dgvBOR.Name = "dgvBOR";
@@ -238,8 +245,15 @@ namespace Team6_UMB.Forms.ASB
             this.dgvBOR.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.dgvBOR.RowTemplate.Height = 23;
             this.dgvBOR.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.dgvBOR.Size = new System.Drawing.Size(1726, 1000);
+            this.dgvBOR.Size = new System.Drawing.Size(1726, 965);
             this.dgvBOR.TabIndex = 30;
+            this.dgvBOR.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvBOR_CellClick);
+            // 
+            // check
+            // 
+            this.check.HeaderText = "";
+            this.check.Name = "check";
+            this.check.ToolTipText = "선택";
             // 
             // frmBOR
             // 
@@ -247,10 +261,10 @@ namespace Team6_UMB.Forms.ASB
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1754, 1126);
+            this.Controls.Add(this.dgvBOR);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.dgvBOR);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "frmBOR";
@@ -282,5 +296,6 @@ namespace Team6_UMB.Forms.ASB
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label6;
         private Controls.NewBtns newBtns;
+        private System.Windows.Forms.DataGridViewCheckBoxColumn check;
     }
 }

@@ -20,6 +20,11 @@ namespace UMB_DAC
             conn.Open();
         }
 
+        public void BORInsert()
+        {
+            throw new NotImplementedException();
+        }
+
         public List<BORVO> GetBORList()
         {
             string sql = @"select bor_id, bor.product_id product_id, product_name, process_name, bor.m_id m_id, m_name, bor_tacttime, bor_yn, bor_comment, bor_uadmin, bor_udate 

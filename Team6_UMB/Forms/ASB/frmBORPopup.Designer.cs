@@ -54,22 +54,24 @@ namespace Team6_UMB.Forms.ASB
             // panel1
             // 
             this.panel1.Controls.Add(this.button3);
-            this.panel1.Size = new System.Drawing.Size(425, 35);
+            this.panel1.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
+            this.panel1.Size = new System.Drawing.Size(486, 44);
             this.panel1.Controls.SetChildIndex(this.label1, 0);
             this.panel1.Controls.SetChildIndex(this.button3, 0);
             // 
             // label1
             // 
-            this.label1.Size = new System.Drawing.Size(149, 24);
+            this.label1.Size = new System.Drawing.Size(155, 25);
             this.label1.Text = "BillOfResource";
             // 
             // panel2
             // 
             this.panel2.Controls.Add(this.btnUpdate);
             this.panel2.Controls.Add(this.btnCreate);
-            this.panel2.Location = new System.Drawing.Point(138, 444);
+            this.panel2.Location = new System.Drawing.Point(158, 555);
+            this.panel2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(162, 44);
+            this.panel2.Size = new System.Drawing.Size(185, 55);
             this.panel2.TabIndex = 23;
             // 
             // btnUpdate
@@ -78,12 +80,14 @@ namespace Team6_UMB.Forms.ASB
             this.btnUpdate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnUpdate.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.btnUpdate.ForeColor = System.Drawing.Color.White;
-            this.btnUpdate.Location = new System.Drawing.Point(84, 7);
+            this.btnUpdate.Location = new System.Drawing.Point(96, 9);
+            this.btnUpdate.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnUpdate.Name = "btnUpdate";
-            this.btnUpdate.Size = new System.Drawing.Size(75, 34);
+            this.btnUpdate.Size = new System.Drawing.Size(86, 42);
             this.btnUpdate.TabIndex = 18;
             this.btnUpdate.Text = "취소";
             this.btnUpdate.UseVisualStyleBackColor = false;
+            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
             // 
             // btnCreate
             // 
@@ -91,19 +95,21 @@ namespace Team6_UMB.Forms.ASB
             this.btnCreate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCreate.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.btnCreate.ForeColor = System.Drawing.Color.White;
-            this.btnCreate.Location = new System.Drawing.Point(3, 7);
+            this.btnCreate.Location = new System.Drawing.Point(3, 9);
+            this.btnCreate.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnCreate.Name = "btnCreate";
-            this.btnCreate.Size = new System.Drawing.Size(75, 34);
+            this.btnCreate.Size = new System.Drawing.Size(86, 42);
             this.btnCreate.TabIndex = 0;
             this.btnCreate.Text = "저장";
             this.btnCreate.UseVisualStyleBackColor = false;
+            this.btnCreate.Click += new System.EventHandler(this.btnCreate_Click);
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.label2.ForeColor = System.Drawing.Color.RoyalBlue;
-            this.label2.Location = new System.Drawing.Point(10, 17);
+            this.label2.Location = new System.Drawing.Point(11, 21);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(34, 18);
             this.label2.TabIndex = 22;
@@ -114,7 +120,7 @@ namespace Team6_UMB.Forms.ASB
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.label3.ForeColor = System.Drawing.Color.RoyalBlue;
-            this.label3.Location = new System.Drawing.Point(10, 60);
+            this.label3.Location = new System.Drawing.Point(11, 75);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(34, 18);
             this.label3.TabIndex = 25;
@@ -125,7 +131,7 @@ namespace Team6_UMB.Forms.ASB
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.label5.ForeColor = System.Drawing.Color.RoyalBlue;
-            this.label5.Location = new System.Drawing.Point(10, 105);
+            this.label5.Location = new System.Drawing.Point(11, 131);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(34, 18);
             this.label5.TabIndex = 29;
@@ -136,7 +142,7 @@ namespace Team6_UMB.Forms.ASB
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.label6.ForeColor = System.Drawing.Color.RoyalBlue;
-            this.label6.Location = new System.Drawing.Point(10, 148);
+            this.label6.Location = new System.Drawing.Point(11, 185);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(106, 18);
             this.label6.TabIndex = 31;
@@ -147,7 +153,7 @@ namespace Team6_UMB.Forms.ASB
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.label7.ForeColor = System.Drawing.Color.RoyalBlue;
-            this.label7.Location = new System.Drawing.Point(10, 192);
+            this.label7.Location = new System.Drawing.Point(11, 240);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(60, 18);
             this.label7.TabIndex = 33;
@@ -160,17 +166,19 @@ namespace Team6_UMB.Forms.ASB
             this.comboBox3.Items.AddRange(new object[] {
             "Y",
             "N"});
-            this.comboBox3.Location = new System.Drawing.Point(135, 103);
+            this.comboBox3.Location = new System.Drawing.Point(154, 129);
+            this.comboBox3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(263, 26);
+            this.comboBox3.Size = new System.Drawing.Size(300, 26);
             this.comboBox3.TabIndex = 43;
             // 
             // textBox3
             // 
             this.textBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.textBox3.Location = new System.Drawing.Point(135, 146);
+            this.textBox3.Location = new System.Drawing.Point(154, 182);
+            this.textBox3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(263, 24);
+            this.textBox3.Size = new System.Drawing.Size(300, 24);
             this.textBox3.TabIndex = 49;
             // 
             // label13
@@ -178,7 +186,7 @@ namespace Team6_UMB.Forms.ASB
             this.label13.AutoSize = true;
             this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.label13.ForeColor = System.Drawing.Color.Black;
-            this.label13.Location = new System.Drawing.Point(12, 235);
+            this.label13.Location = new System.Drawing.Point(14, 294);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(34, 18);
             this.label13.TabIndex = 62;
@@ -187,10 +195,11 @@ namespace Team6_UMB.Forms.ASB
             // textBox10
             // 
             this.textBox10.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.textBox10.Location = new System.Drawing.Point(135, 235);
+            this.textBox10.Location = new System.Drawing.Point(154, 294);
+            this.textBox10.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.textBox10.Multiline = true;
             this.textBox10.Name = "textBox10";
-            this.textBox10.Size = new System.Drawing.Size(263, 117);
+            this.textBox10.Size = new System.Drawing.Size(300, 145);
             this.textBox10.TabIndex = 63;
             // 
             // groupBox1
@@ -207,9 +216,11 @@ namespace Team6_UMB.Forms.ASB
             this.groupBox1.Controls.Add(this.label5);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Location = new System.Drawing.Point(12, 57);
+            this.groupBox1.Location = new System.Drawing.Point(14, 71);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(425, 381);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.groupBox1.Size = new System.Drawing.Size(486, 476);
             this.groupBox1.TabIndex = 22;
             this.groupBox1.TabStop = false;
             // 
@@ -220,9 +231,10 @@ namespace Team6_UMB.Forms.ASB
             this.comboBox4.Items.AddRange(new object[] {
             "Y",
             "N"});
-            this.comboBox4.Location = new System.Drawing.Point(135, 189);
+            this.comboBox4.Location = new System.Drawing.Point(154, 236);
+            this.comboBox4.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.comboBox4.Name = "comboBox4";
-            this.comboBox4.Size = new System.Drawing.Size(263, 26);
+            this.comboBox4.Size = new System.Drawing.Size(300, 26);
             this.comboBox4.TabIndex = 66;
             // 
             // comboBox2
@@ -232,9 +244,10 @@ namespace Team6_UMB.Forms.ASB
             this.comboBox2.Items.AddRange(new object[] {
             "Y",
             "N"});
-            this.comboBox2.Location = new System.Drawing.Point(135, 14);
+            this.comboBox2.Location = new System.Drawing.Point(154, 18);
+            this.comboBox2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(263, 26);
+            this.comboBox2.Size = new System.Drawing.Size(300, 26);
             this.comboBox2.TabIndex = 65;
             // 
             // comboBox1
@@ -244,9 +257,10 @@ namespace Team6_UMB.Forms.ASB
             this.comboBox1.Items.AddRange(new object[] {
             "Y",
             "N"});
-            this.comboBox1.Location = new System.Drawing.Point(135, 57);
+            this.comboBox1.Location = new System.Drawing.Point(154, 71);
+            this.comboBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(263, 26);
+            this.comboBox1.Size = new System.Drawing.Size(300, 26);
             this.comboBox1.TabIndex = 64;
             // 
             // button3
@@ -256,20 +270,23 @@ namespace Team6_UMB.Forms.ASB
             this.button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.button3.FlatAppearance.BorderSize = 0;
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Location = new System.Drawing.Point(393, 7);
+            this.button3.Location = new System.Drawing.Point(449, 9);
+            this.button3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(29, 23);
+            this.button3.Size = new System.Drawing.Size(33, 29);
             this.button3.TabIndex = 46;
             this.button3.UseVisualStyleBackColor = false;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // frmBORPopup
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.ClientSize = new System.Drawing.Size(452, 501);
+            this.ClientSize = new System.Drawing.Size(517, 626);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.groupBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.Name = "frmBORPopup";
             this.Text = "frmBorPopUp";
             this.Controls.SetChildIndex(this.groupBox1, 0);
