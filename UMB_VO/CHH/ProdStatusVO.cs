@@ -25,4 +25,22 @@ namespace UMB_VO.CHH
         public string product_comment { get; set; }
         public string product_deleted { get; set; }
     }
+
+    public class GetProdNameVO
+    {
+        public string product_id { get; set; }
+        public string product_name { get; set; }
+    }
+
+    public class GetCompanyNameVO
+    {
+        public int? company_id { get; set; }
+        public string company_name { get; set; }
+    }
+
+    public class GetWHNameVO
+    {
+        public int? w_id { get; set; }
+        public string w_name { get; set; }
+    }
 }

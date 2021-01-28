@@ -79,6 +79,53 @@ namespace Team6_UMB
             cbo.DataSource = codeList;
         }
 
+        public static void ProdStatus_ProdNameBinding(ComboBox cbo, List<GetProdNameVO> list, bool blankItem = true, string blankText = "")
+        {
+            var codeList = (from item in list
+                            select item).ToList();
+
+            if (blankItem)
+            {
+                GetProdNameVO blank = new GetProdNameVO
+                { product_id = null, product_name = blankText };
+                codeList.Insert(0, blank);
+            }
+            cbo.DisplayMember = "product_name";
+            cbo.ValueMember = "product_id";
+            cbo.DataSource = codeList;
+        }
+
+        public static void ProdStatus_CompanyNameBinding(ComboBox cbo, List<GetCompanyNameVO> list, bool blankItem = true, string blankText = "")
+        {
+            var codeList = (from item in list
+                            select item).ToList();
+
+            if (blankItem)
+            {
+                GetCompanyNameVO blank = new GetCompanyNameVO
+                { company_id = null, company_name = blankText };
+                codeList.Insert(0, blank);
+            }
+            cbo.DisplayMember = "company_name";
+            cbo.ValueMember = "company_id";
+            cbo.DataSource = codeList;
+        }
+        public static void ProdStatus_WHNameBinding(ComboBox cbo, List<GetWHNameVO> list, bool blankItem = true, string blankText = "")
+        {
+            var codeList = (from item in list
+                            select item).ToList();
+
+            if (blankItem)
+            {
+                GetWHNameVO blank = new GetWHNameVO
+                { w_id = null, w_name = blankText };
+                codeList.Insert(0, blank);
+            }
+            cbo.DisplayMember = "w_name";
+            cbo.ValueMember = "w_id";
+            cbo.DataSource = codeList;
+        }
+
         public static void CompanyNameBinding(ComboBox cbo, List<CompanyCBOBindingVO> list, bool blankItem = true, string blankText = "")
         {
             var codeList = (from item in list

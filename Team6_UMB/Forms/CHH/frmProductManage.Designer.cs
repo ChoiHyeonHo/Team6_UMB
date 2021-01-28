@@ -277,6 +277,7 @@ namespace Team6_UMB.Forms
             this.newBtns.btnRefresh_Event += new System.EventHandler(this.newBtns_btnRefresh_Event);
             this.newBtns.btnCreate_Event += new System.EventHandler(this.newBtns_btnCreate_Event);
             this.newBtns.btnUpdate_Event += new System.EventHandler(this.newBtns_btnUpdate_Event);
+            this.newBtns.btnDelete_Event += new System.EventHandler(this.newBtns_btnDelete_Event);
             // 
             // frmProductManage
             // 
