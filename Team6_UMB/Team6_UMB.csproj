@@ -433,6 +433,7 @@
     <Compile Include="Service\ProdStatusService.cs" />
     <Compile Include="Service\ProductService.cs" />
     <Compile Include="Service\SalesPriceService.cs" />
+    <Compile Include="Service\SOService.cs" />
     <Compile Include="Service\UserService.cs" />
     <Compile Include="Util\ChamJo.cs" />
     <Compile Include="Util\CommonUtil.cs" />

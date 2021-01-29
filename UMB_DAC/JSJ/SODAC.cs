@@ -1,0 +1,108 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Data;
+using System.Data.SqlClient;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using UMB_VO;
+
+namespace UMB_DAC
+{
+    public class SODAC : ConnectionAccess, IDisposable
+    {
+        string strConn;
+        SqlConnection conn;
+
+        public SODAC()
+        {
+            strConn = this.ConnectionString;
+            conn = new SqlConnection(strConn);
+            conn.Open();
+        }
+
+        public void Dispose()
+        {
+            if (conn != null)
+            {
+                conn.Close();
+            }
+        }
+
+        public List<SOListVO> SOList()
+        {
+            string sql = "select so_id, company_name, product_name, so_edate, so_ocount, so_rep from SOList";
+
+            using(SqlCommand cmd = new SqlCommand(sql, conn))
+            {
+                SqlDataReader reader = cmd.ExecuteReader();
+                List<SOListVO> list = Helper.DataReaderMapToList<SOListVO>(reader);
+                return list;
+            }
+        }
+
+        public List<SOCompanyVO> CompanyList()
+        {
+            string sql = "select company_name from TBL_COMPANY where company_type = '납품'";
+
+            using (SqlCommand cmd = new SqlCommand(sql, conn))
+            {
+                SqlDataReader reader = cmd.ExecuteReader();
+                List<SOCompanyVO> list = Helper.DataReaderMapToList<SOCompanyVO>(reader);
+                return list;
+            }
+        }
+
+        public List<SOPListVO> OrderPList()
+        {
+            string sql = "select company_id, product_id, product_name, company_name from OrderPList where product_type = '완제품'";
+
+            using (SqlCommand cmd = new SqlCommand(sql, conn))
+            {
+                SqlDataReader reader = cmd.ExecuteReader();
+                List<SOPListVO> list = Helper.DataReaderMapToList<SOPListVO>(reader);
+                return list;
+            }
+        }
+
+        public int RegistSO(List<SOVO> list)
+        {
+            string sql = "insert into TBL_SO_MASTER (product_id, so_ocount, company_id, so_rep, so_edate, so_comment) values(@product_id, @so_ocount, @company_id, @so_rep, @so_edate, @so_comment)";
+
+            using (SqlCommand cmd = new SqlCommand(sql, conn))
+            {
+                SqlTransaction trans = conn.BeginTransaction();
+
+                cmd.Transaction = trans;
+
+                try
+                {
+                    cmd.Parameters.Add("@product_id", SqlDbType.NVarChar);
+                    cmd.Parameters.Add("@so_ocount", SqlDbType.Int);
+                    cmd.Parameters.AddWithValue("@so_rep", list[0].so_rep);
+                    cmd.Parameters.AddWithValue("@company_id", list[0].company_id);
+                    cmd.Parameters.AddWithValue("@so_edate", list[0].so_edate);
+                    cmd.Parameters.AddWithValue("@so_comment", list[0].so_comment);
+                    foreach (SOVO SO in list)
+                    {
+                        cmd.Parameters["@product_id"].Value = SO.product_id;
+                        cmd.Parameters["@so_ocount"].Value = SO.so_ocount;
+
+                        cmd.ExecuteNonQuery();
+                    }
+
+                    trans.Commit();
+                    conn.Close();
+                    return 1;
+                }
+                catch (Exception err)
+                {
+                    string msg = err.Message;
+                    trans.Rollback();
+                    conn.Close();
+                    return 0;
+                }
+            }
+        }
+    }
+}
