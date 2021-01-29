@@ -28,37 +28,7 @@ namespace Team6_UMB.Forms.ASB
                 newBtns.btnWait.Visible = newBtns.btnSearch.Visible = newBtns.btnPrint.Visible = false;
         }
 
-        /// <summary>
-        /// 삭제
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        private void newBtns_btnDelete_Event(object sender, EventArgs e)
-        {
-            if(BOR_id == 0)
-            {
-                MessageBox.Show("선택된 항목이 없습니다");
-                return;
-            }
-
-            try
-            {
-                BORService service = new BORService();
-                bool bResult = service.BORDelete(BOR_id);
-                if (bResult)
-                {
-                    MessageBox.Show("선택항목이 삭제되었습니다");
-                }
-                else
-                {
-                    MessageBox.Show("삭제중 오류가 발생했습니다 다시 시도해주세요");
-                }
-            }
-            catch(Exception err)
-            {
-                MessageBox.Show(err.Message);
-            }
-        }
+        
 
         private void frmBOR_Load(object sender, EventArgs e)
         {
@@ -138,6 +108,38 @@ namespace Team6_UMB.Forms.ASB
         }
 
         /// <summary>
+        /// 삭제
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void newBtns_btnDelete_Event(object sender, EventArgs e)
+        {
+            if (BOR_id == 0)
+            {
+                MessageBox.Show("선택된 항목이 없습니다");
+                return;
+            }
+
+            try
+            {
+                BORService service = new BORService();
+                bool bResult = service.BORDelete(BOR_id);
+                if (bResult)
+                {
+                    MessageBox.Show("선택항목이 삭제되었습니다");
+                }
+                else
+                {
+                    MessageBox.Show("삭제중 오류가 발생했습니다 다시 시도해주세요");
+                }
+            }
+            catch (Exception err)
+            {
+                MessageBox.Show(err.Message);
+            }
+        }
+
+        /// <summary>
         /// 엑셀
         /// </summary>
         /// <param name="sender"></param>
@@ -194,7 +196,7 @@ namespace Team6_UMB.Forms.ASB
             if (cboMachine.SelectedIndex > 0)
                 mid = Convert.ToInt32(cboMachine.SelectedValue);
             if (cboProcess.SelectedIndex > 0)
-                pname = cboProcess.SelectedText;
+                pname = cboProcess.Text;
             try
             {
                 BORService service = new BORService();
