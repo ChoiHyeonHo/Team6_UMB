@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.dgvCompany = new Team6_UMB.DGV_Custom();
             this.label2 = new System.Windows.Forms.Label();
@@ -38,9 +38,9 @@
             this.label4 = new System.Windows.Forms.Label();
             this.dgvProduct = new Team6_UMB.DGV_Custom();
             this.label3 = new System.Windows.Forms.Label();
-            this.button3 = new System.Windows.Forms.Button();
+            this.btnExit = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.btnUpdate = new System.Windows.Forms.Button();
+            this.btnCancel = new System.Windows.Forms.Button();
             this.btnCreate = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -52,10 +52,10 @@
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.button3);
+            this.panel1.Controls.Add(this.btnExit);
             this.panel1.Size = new System.Drawing.Size(992, 35);
             this.panel1.Controls.SetChildIndex(this.label1, 0);
-            this.panel1.Controls.SetChildIndex(this.button3, 0);
+            this.panel1.Controls.SetChildIndex(this.btnExit, 0);
             // 
             // label1
             // 
@@ -76,14 +76,14 @@
             // 
             this.dgvCompany.BackgroundColor = System.Drawing.Color.White;
             this.dgvCompany.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("나눔바른고딕", 9F);
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvCompany.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("나눔바른고딕", 9F);
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvCompany.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.dgvCompany.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvCompany.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.dgvCompany.GridColor = System.Drawing.Color.LightGray;
@@ -142,14 +142,14 @@
             // 
             this.dgvProduct.BackgroundColor = System.Drawing.Color.White;
             this.dgvProduct.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("나눔바른고딕", 9F);
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvProduct.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("나눔바른고딕", 9F);
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvProduct.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.dgvProduct.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvProduct.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.dgvProduct.GridColor = System.Drawing.Color.LightGray;
@@ -162,7 +162,7 @@
             this.dgvProduct.Size = new System.Drawing.Size(699, 361);
             this.dgvProduct.TabIndex = 0;
             this.dgvProduct.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvProduct_CellClick);
-            this.dgvProduct.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.dgvProduct_KeyPress);
+            this.dgvProduct.KeyUp += new System.Windows.Forms.KeyEventHandler(this.dgvProduct_KeyUp);
             // 
             // label3
             // 
@@ -174,40 +174,42 @@
             this.label3.TabIndex = 0;
             this.label3.Text = "품목";
             // 
-            // button3
+            // btnExit
             // 
-            this.button3.BackColor = System.Drawing.Color.Transparent;
-            this.button3.BackgroundImage = global::Team6_UMB.Properties.Resources.Close;
-            this.button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.button3.FlatAppearance.BorderSize = 0;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Location = new System.Drawing.Point(960, 7);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(29, 23);
-            this.button3.TabIndex = 46;
-            this.button3.UseVisualStyleBackColor = false;
+            this.btnExit.BackColor = System.Drawing.Color.Transparent;
+            this.btnExit.BackgroundImage = global::Team6_UMB.Properties.Resources.Close;
+            this.btnExit.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnExit.FlatAppearance.BorderSize = 0;
+            this.btnExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnExit.Location = new System.Drawing.Point(960, 7);
+            this.btnExit.Name = "btnExit";
+            this.btnExit.Size = new System.Drawing.Size(29, 23);
+            this.btnExit.TabIndex = 46;
+            this.btnExit.UseVisualStyleBackColor = false;
+            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
             // panel2
             // 
-            this.panel2.Controls.Add(this.btnUpdate);
+            this.panel2.Controls.Add(this.btnCancel);
             this.panel2.Controls.Add(this.btnCreate);
             this.panel2.Location = new System.Drawing.Point(446, 487);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(162, 40);
             this.panel2.TabIndex = 47;
             // 
-            // btnUpdate
+            // btnCancel
             // 
-            this.btnUpdate.BackColor = System.Drawing.Color.Gray;
-            this.btnUpdate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnUpdate.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.btnUpdate.ForeColor = System.Drawing.Color.White;
-            this.btnUpdate.Location = new System.Drawing.Point(84, 4);
-            this.btnUpdate.Name = "btnUpdate";
-            this.btnUpdate.Size = new System.Drawing.Size(75, 34);
-            this.btnUpdate.TabIndex = 18;
-            this.btnUpdate.Text = "취소";
-            this.btnUpdate.UseVisualStyleBackColor = false;
+            this.btnCancel.BackColor = System.Drawing.Color.Gray;
+            this.btnCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCancel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.btnCancel.ForeColor = System.Drawing.Color.White;
+            this.btnCancel.Location = new System.Drawing.Point(84, 4);
+            this.btnCancel.Name = "btnCancel";
+            this.btnCancel.Size = new System.Drawing.Size(75, 34);
+            this.btnCancel.TabIndex = 18;
+            this.btnCancel.Text = "취소";
+            this.btnCancel.UseVisualStyleBackColor = false;
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
             // btnCreate
             // 
@@ -262,9 +264,9 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.DateTimePicker dtpEdate;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button btnExit;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Button btnUpdate;
+        private System.Windows.Forms.Button btnCancel;
         private System.Windows.Forms.Button btnCreate;
     }
 }
