@@ -24,6 +24,7 @@ namespace UMB_VO.CHH
         public string product_stnd { get; set; }
         public string product_comment { get; set; }
         public string product_deleted { get; set; }
+        public int product_num { get; set; }
     }
 
     public class GetProdNameVO

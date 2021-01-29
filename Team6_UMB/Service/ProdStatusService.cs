@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -44,6 +45,16 @@ namespace Team6_UMB.Service
         {
             ProdStatusDAC dac = new ProdStatusDAC();
             return dac.Delete(product_id);
+        }
+        public List<ProdStatusVO> GetWhereInfo(string cbpName, string cbpType, string cbpCompany, string cbpWH, string cbpExam)
+        {
+            ProdStatusDAC dac = new ProdStatusDAC();
+            return dac.GetWhereInfo(cbpName, cbpType, cbpCompany, cbpWH, cbpExam);
+        }
+        public DataTable GetBarCode(string temp)
+        {
+            ProdStatusDAC dac = new ProdStatusDAC();
+            return dac.GetBarCode(temp);
         }
     }
 }
