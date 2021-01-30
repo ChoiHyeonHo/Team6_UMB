@@ -130,21 +130,20 @@ namespace Team6_UMB.Forms
 
             #region 그리드뷰 컬럼헤더 바인딩
             CommonUtil.SetInitGridView(dgvProduct);
-            CommonUtil.AddGridTextColumn(dgvProduct, "번호", "product_id", 60);                   //0
-            CommonUtil.AddGridTextColumn(dgvProduct, "품목명", "product_name", 150);              //1
-            CommonUtil.AddGridTextColumn(dgvProduct, "제품분류", "product_type", 100);            //2
-            CommonUtil.AddGridTextColumn(dgvProduct, "단위", "product_unit", 100);                //3
-            CommonUtil.AddGridTextColumn(dgvProduct, "창고명", "w_name", 150);                    //4
-            CommonUtil.AddGridTextColumn(dgvProduct, "최소발주량", "product_lorder_count", 100);  //5
-            CommonUtil.AddGridTextColumn(dgvProduct, "안전재고량", "product_safety_count", 100);  //6
-            CommonUtil.AddGridTextColumn(dgvProduct, "업체명", "company_name", 170);              //7
-            CommonUtil.AddGridTextColumn(dgvProduct, "검사여부", "product_exam", 90);             //8
-            CommonUtil.AddGridTextColumn(dgvProduct, "규격", "product_stnd", 130);               //9
-            CommonUtil.AddGridTextColumn(dgvProduct, "비고", "product_comment", 10, false);      //10
-            CommonUtil.AddGridTextColumn(dgvProduct, "삭제여부", "product_deleted", 90);          //11
-            CommonUtil.AddGridTextColumn(dgvProduct, "거래처id", "company_id", 10, false);        //12
-            CommonUtil.AddGridTextColumn(dgvProduct, "창고id", "w_id", 10, false);                //13
-            CommonUtil.AddGridTextColumn(dgvProduct, "품목번호", "product_num", 10, false);        //13
+            CommonUtil.AddGridTextColumn(dgvProduct, "번호", "product_id", 60);                   //1
+            CommonUtil.AddGridTextColumn(dgvProduct, "품목명", "product_name", 150);              //2
+            CommonUtil.AddGridTextColumn(dgvProduct, "제품분류", "product_type", 100);            //3
+            CommonUtil.AddGridTextColumn(dgvProduct, "단위", "product_unit", 100);                //4
+            CommonUtil.AddGridTextColumn(dgvProduct, "창고명", "w_name", 150);                    //5
+            CommonUtil.AddGridTextColumn(dgvProduct, "최소발주량", "product_lorder_count", 100);  //6
+            CommonUtil.AddGridTextColumn(dgvProduct, "안전재고량", "product_safety_count", 100);  //7
+            CommonUtil.AddGridTextColumn(dgvProduct, "업체명", "company_name", 170);              //8
+            CommonUtil.AddGridTextColumn(dgvProduct, "검사여부", "product_exam", 90);             //9
+            CommonUtil.AddGridTextColumn(dgvProduct, "규격", "product_stnd", 130);               //10
+            CommonUtil.AddGridTextColumn(dgvProduct, "비고", "product_comment", 10, false);      //11
+            CommonUtil.AddGridTextColumn(dgvProduct, "삭제여부", "product_deleted", 90);          //12
+            CommonUtil.AddGridTextColumn(dgvProduct, "거래처id", "company_id", 10, false);        //13
+            CommonUtil.AddGridTextColumn(dgvProduct, "창고id", "w_id", 10, false);                //14
             #endregion
 
             SearchCBBinding();
@@ -223,20 +222,20 @@ namespace Team6_UMB.Forms
 
         private void dgvProduct_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
-            product_id = dgvProduct.Rows[e.RowIndex].Cells[0].Value.ToString();
-            product_name = dgvProduct.Rows[e.RowIndex].Cells[1].Value.ToString();
-            product_type = dgvProduct.Rows[e.RowIndex].Cells[2].Value.ToString();
-            product_unit = dgvProduct.Rows[e.RowIndex].Cells[3].Value.ToString();
-            w_name = dgvProduct.Rows[e.RowIndex].Cells[4].Value.ToString();
-            product_lorder_count = int.Parse(dgvProduct.Rows[e.RowIndex].Cells[5].Value.ToString());
-            product_safety_count = int.Parse(dgvProduct.Rows[e.RowIndex].Cells[6].Value.ToString());
-            company_name = dgvProduct.Rows[e.RowIndex].Cells[7].Value.ToString();
-            product_exam = dgvProduct.Rows[e.RowIndex].Cells[8].Value.ToString();
-            product_stnd = dgvProduct.Rows[e.RowIndex].Cells[9].Value.ToString();
-            product_comment = dgvProduct.Rows[e.RowIndex].Cells[10].Value.ToString();
-            company_id = int.Parse(dgvProduct.Rows[e.RowIndex].Cells[12].Value.ToString());
-            w_id = int.Parse(dgvProduct.Rows[e.RowIndex].Cells[13].Value.ToString());
-            product_deleted = dgvProduct.Rows[e.RowIndex].Cells[11].Value.ToString();
+            product_id = dgvProduct.Rows[e.RowIndex].Cells[1].Value.ToString();
+            product_name = dgvProduct.Rows[e.RowIndex].Cells[2].Value.ToString();
+            product_type = dgvProduct.Rows[e.RowIndex].Cells[3].Value.ToString();
+            product_unit = dgvProduct.Rows[e.RowIndex].Cells[4].Value.ToString();
+            w_name = dgvProduct.Rows[e.RowIndex].Cells[5].Value.ToString();
+            product_lorder_count = int.Parse(dgvProduct.Rows[e.RowIndex].Cells[6].Value.ToString());
+            product_safety_count = int.Parse(dgvProduct.Rows[e.RowIndex].Cells[7].Value.ToString());
+            company_name = dgvProduct.Rows[e.RowIndex].Cells[8].Value.ToString();
+            product_exam = dgvProduct.Rows[e.RowIndex].Cells[9].Value.ToString();
+            product_stnd = dgvProduct.Rows[e.RowIndex].Cells[10].Value.ToString();
+            product_comment = dgvProduct.Rows[e.RowIndex].Cells[11].Value.ToString();
+            product_deleted = dgvProduct.Rows[e.RowIndex].Cells[12].Value.ToString();
+            company_id = int.Parse(dgvProduct.Rows[e.RowIndex].Cells[13].Value.ToString());
+            w_id = int.Parse(dgvProduct.Rows[e.RowIndex].Cells[14].Value.ToString());
         }
     }
 }

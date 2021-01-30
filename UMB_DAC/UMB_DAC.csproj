@@ -52,10 +52,10 @@
   <ItemGroup>
     <Compile Include="ASB\CheckListDAC.cs" />
     <Compile Include="ASB\MachineDAC.cs" />
+    <Compile Include="CHH\BOMDAC.cs" />
     <Compile Include="CHH\MatPriceDAC.cs" />
     <Compile Include="CHH\ProdStatusDAC.cs" />
     <Compile Include="JSJ\AuthorityDAC.cs" />
-    <Compile Include="BOMDAC.cs" />
     <Compile Include="ASB\BORDAC.cs" />
     <Compile Include="CHH\SalesPriceDAC.cs" />
     <Compile Include="Class\Helper.cs" />
