@@ -138,12 +138,6 @@
     <Compile Include="Controls\periodSearchControl.designer.cs">
       <DependentUpon>periodSearchControl.cs</DependentUpon>
     </Compile>
-    <Compile Include="Dev\frmBOM.cs">
-      <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="Dev\frmBOM.Designer.cs">
-      <DependentUpon>frmBOM.cs</DependentUpon>
-    </Compile>
     <Compile Include="Dev\frmReportPreview.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -537,9 +531,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Controls\periodSearchControl.resx">
       <DependentUpon>periodSearchControl.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Dev\frmBOM.resx">
-      <DependentUpon>frmBOM.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Dev\ProdStatusBarCode.resx">
       <DependentUpon>ProdStatusBarCode.cs</DependentUpon>

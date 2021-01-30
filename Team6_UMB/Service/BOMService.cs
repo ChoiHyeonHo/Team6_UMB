@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -21,10 +22,15 @@ namespace Team6_UMB.Service
             BOMDAC dac = new BOMDAC();
             return dac.GetBOMInfoLv(bomID);
         }
-        public List<BOMVO> GetBOMPreView(int bomPreView)
+        public List<BOMVO> GetBOMPreView(int bomID)
         {
             BOMDAC dac = new BOMDAC();
-            return dac.GetBOMPreView(bomPreView);
+            return dac.GetBOMPreView(bomID);
+        }
+        public List<BOMVO> GetBOMComboBoxCall(int lv)
+        {
+            BOMDAC dac = new BOMDAC();
+            return dac.GetBOMComboBoxCall(lv);
         }
     }
 }

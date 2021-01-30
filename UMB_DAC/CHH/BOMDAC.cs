@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
@@ -32,6 +33,20 @@ from TBL_BOM B join TBL_PRODUCT P on B.product_id = P.product_id where bom_level
                 return list;
             }
         }
+        public List<BOMVO> GetBOMComboBoxCall(int lv)
+        {
+            string sql = @"select bom_id, product_name, product_type, product_unit, bom_use_count, bom_level 
+from TBL_BOM B join TBL_PRODUCT P on B.product_id = P.product_id where bom_level = @bom_level";
+
+            using (SqlCommand cmd = new SqlCommand(sql, conn))
+            {
+                cmd.Parameters.AddWithValue("@bom_level", lv);
+                SqlDataReader reader = cmd.ExecuteReader();
+                List<BOMVO> list = Helper.DataReaderMapToList<BOMVO>(reader);
+                return list;
+            }
+        }
+
         public List<BOMVO> GetBOMInfoLv(int bomID)
         {
             string sql = @"select bom_id, product_name, product_type, product_unit, bom_use_count, bom_level 
@@ -45,13 +60,13 @@ from TBL_BOM B join TBL_PRODUCT P on B.product_id = P.product_id where bom_paren
                 return list;
             }
         }
-        public List<BOMVO> GetBOMPreView(int bomPreView)
+        public List<BOMVO> GetBOMPreView(int bomID)
         {
-            string sql = @"EXEC SP_BOM @bom_id";
+            string sql = $@"EXEC SP_BOM @bom_id";
 
             using (SqlCommand cmd = new SqlCommand(sql, conn))
             {
-                cmd.Parameters.AddWithValue("@bom_id", bomPreView);
+                cmd.Parameters.AddWithValue("@bom_id", bomID);
                 SqlDataReader reader = cmd.ExecuteReader();
                 List<BOMVO> list = Helper.DataReaderMapToList<BOMVO>(reader);
                 return list;
