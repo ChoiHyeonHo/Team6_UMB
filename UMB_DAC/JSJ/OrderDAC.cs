@@ -62,7 +62,7 @@ namespace UMB_DAC
 
         public List<OrderPlistVO> OrderPList()
         {
-            string sql = "select * from OrderPList";
+            string sql = "select company_id, company_name, product_id, product_name from OrderPList where product_type = '원자재'";
 
             using (SqlCommand cmd = new SqlCommand(sql, conn))
             {
@@ -74,7 +74,7 @@ namespace UMB_DAC
         
         public List<OrderCompanyVO> CompanyList()
         {
-            string sql = "select company_name from TBL_COMPANY";
+            string sql = "select company_name from TBL_COMPANY where company_type = '발품'";
 
             using (SqlCommand cmd = new SqlCommand(sql, conn))
             {
@@ -86,7 +86,7 @@ namespace UMB_DAC
 
         public int RegistOrder(List<OrderVO> list)
         {
-            string sql = "insert into TBL_ORDER (product_id, order_count, company_id, user_id, order_date, order_edate) values(@product_id, @order_count, @company_id, @user_id, replace(convert(varchar(10), getdate(), 120), @order_edate)";
+            string sql = "insert into TBL_ORDER (product_id, order_count, company_id, user_id, order_date, order_edate) values(@product_id, @order_count, @company_id, @user_id, replace(convert(varchar(10), getdate(), 120), '-', '-'), @order_edate)";
 
             using (SqlCommand cmd = new SqlCommand(sql, conn))
             {

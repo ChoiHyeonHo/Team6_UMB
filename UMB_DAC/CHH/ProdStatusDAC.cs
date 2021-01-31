@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
@@ -21,7 +22,7 @@ namespace UMB_DAC.CHH
 
         public List<ProdStatusVO> GetProdInfo()
         {
-            string sql = @"select * from ProductStatus";
+            string sql = @"select * from ProductStatus where product_deleted = 'N'";
 
             using (SqlCommand cmd = new SqlCommand(sql, conn))
             {
@@ -33,7 +34,7 @@ namespace UMB_DAC.CHH
 
         public List<GetProdNameVO> GetProdName()
         {
-            string sql = @"select product_id, product_name from TBL_PRODUCT";
+            string sql = @"select product_id, product_name from TBL_PRODUCT where product_deleted = 'N'";
             using (SqlCommand cmd = new SqlCommand(sql, conn))
             {
                 SqlDataReader reader = cmd.ExecuteReader();
@@ -124,6 +125,57 @@ namespace UMB_DAC.CHH
                 conn.Close();
 
                 return iRowAffect > 0;
+            }
+        }
+
+        public List<ProdStatusVO> GetWhereInfo(string cbpName, string cbpType, string cbpCompany, string cbpWH, string cbpExam)
+        {
+            StringBuilder sb = new StringBuilder();
+            sb.Append(@"select * from ProductStatus where product_deleted = 'N' and 1=1 ");
+            if (cbpName.Trim().Length > 0)
+                sb.Append("and product_name = @product_name ");
+            if (cbpType.Trim().Length > 0)
+                sb.Append("and product_type = @product_type ");
+            if (cbpCompany.Trim().Length > 0)
+                sb.Append("and company_name = @company_name ");
+            if (cbpWH.Trim().Length > 0)
+                sb.Append("and w_name = @w_name ");
+            if (cbpExam.Trim().Length > 0)
+                sb.Append("and product_exam = @product_exam ");
+
+            string sql = sb.ToString();
+
+            using (SqlCommand cmd = new SqlCommand(sql, conn))
+            {
+                cmd.Parameters.AddWithValue("@product_name", cbpName);
+                cmd.Parameters.AddWithValue("@product_type", cbpType);
+                cmd.Parameters.AddWithValue("@company_name", cbpCompany);
+                cmd.Parameters.AddWithValue("@w_name", cbpWH);
+                cmd.Parameters.AddWithValue("@product_exam", cbpExam);
+
+
+                SqlDataReader reader = cmd.ExecuteReader();
+
+                List<ProdStatusVO> list = Helper.DataReaderMapToList<ProdStatusVO>(reader);
+                Dispose();
+
+                return list;
+            }
+        }
+
+
+        public DataTable GetBarCode(string temp)
+        {
+            string sql = $@"select product_id, product_name, company_name, product_exam
+from TBL_PRODUCT P join TBL_COMPANY C on P.company_id = C.company_id
+                                where product_id in ('" + temp + "')";
+            using (SqlCommand cmd = new SqlCommand(sql, conn))
+            {
+                SqlDataAdapter da = new SqlDataAdapter(sql, conn);
+                DataTable dt = new DataTable();
+                da.Fill(dt);
+
+                return dt;
             }
         }
 

@@ -25,6 +25,7 @@ namespace Team6_UMB.Forms
         {
             frmOrder frm = new frmOrder();
             frm.ShowDialog();
+            OrderList();
         }
 
         private void newBtns1_btnDelete_Event(object sender, EventArgs e)
@@ -73,13 +74,13 @@ namespace Team6_UMB.Forms
             newBtns1.btnWait.Visible = false;
 
             CommonUtil.SetInitGridView(dgvOrder);
-            CommonUtil.AddGridTextColumn(dgvOrder, "발주번호", "order_id", 80);
-            CommonUtil.AddGridTextColumn(dgvOrder, "업체명", "company_name", 80);
-            CommonUtil.AddGridTextColumn(dgvOrder, "품목명", "product_name", 80);
-            CommonUtil.AddGridTextColumn(dgvOrder, "발주수량", "order_count", 80);
-            CommonUtil.AddGridTextColumn(dgvOrder, "발주일", "order_date", 80);
-            CommonUtil.AddGridTextColumn(dgvOrder, "납기일", "order_edate", 80);
-            CommonUtil.AddGridTextColumn(dgvOrder, "담당자", "user_name", 80);
+            CommonUtil.AddGridTextColumn(dgvOrder, "발주번호", "order_id", 200);
+            CommonUtil.AddGridTextColumn(dgvOrder, "업체명", "company_name", 300);
+            CommonUtil.AddGridTextColumn(dgvOrder, "품목명", "product_name", 300);
+            CommonUtil.AddGridTextColumn(dgvOrder, "발주수량", "order_count", 200);
+            CommonUtil.AddGridTextColumn(dgvOrder, "발주일", "order_date", 200);
+            CommonUtil.AddGridTextColumn(dgvOrder, "납기일", "order_edate", 200);
+            CommonUtil.AddGridTextColumn(dgvOrder, "담당자", "user_name", 200);
 
             OrderList();
         }
@@ -89,6 +90,11 @@ namespace Team6_UMB.Forms
             OrderService service = new OrderService();
             list = service.OrderList();
             dgvOrder.DataSource = list;
+        }
+
+        private void newBtns1_btnRefresh_Event(object sender, EventArgs e)
+        {
+            OrderList();
         }
     }
 }
