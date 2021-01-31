@@ -33,5 +33,11 @@ namespace Team6_UMB.Service
             SODAC dac = new SODAC();
             return dac.RegistSO(list);
         }
+
+        public int DeleteSO(int so_id)
+        {
+            SODAC dac = new SODAC();
+            return dac.DeleteSO(so_id);
+        }
     }
 }

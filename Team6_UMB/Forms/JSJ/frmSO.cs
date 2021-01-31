@@ -14,6 +14,7 @@ namespace Team6_UMB.Forms.JSJ
     public partial class frmSO : Team6_UMB.BaseForm.frmList
     {
         List<SOListVO> list;
+        int so_id;
 
         public frmSO()
         {
@@ -48,7 +49,16 @@ namespace Team6_UMB.Forms.JSJ
 
         private void newBtns1_btnDelete_Event(object sender, EventArgs e)
         {
-
+            string msg = Properties.Resources.msgDelete;
+            SOService service = new SOService();            
+            if(MessageBox.Show(msg, "삭제확인", MessageBoxButtons.YesNo) == DialogResult.Yes)
+            {
+                if(service.DeleteSO(so_id) != 0)
+                {
+                    MessageBox.Show("삭제완료");
+                    SOList();
+                }
+            }
         }
 
         private void newBtns1_btnExcel_Event(object sender, EventArgs e)
@@ -58,7 +68,7 @@ namespace Team6_UMB.Forms.JSJ
 
         private void newBtns1_btnRefresh_Event(object sender, EventArgs e)
         {
-
+            SOList();
         }
 
         private void newBtns1_btnUpdate_Event(object sender, EventArgs e)
@@ -87,6 +97,11 @@ namespace Team6_UMB.Forms.JSJ
                         && Convert.ToDateTime(periodSearchControl.dtFrom) <= Convert.ToDateTime(item.so_edate) && Convert.ToDateTime(periodSearchControl.dtTo) >= Convert.ToDateTime(item.so_edate)
                         select item).ToList();
             return list;
+        }
+
+        private void dgvSO_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            so_id = Convert.ToInt32(dgvSO[0, e.RowIndex].Value);
         }
     }
 }

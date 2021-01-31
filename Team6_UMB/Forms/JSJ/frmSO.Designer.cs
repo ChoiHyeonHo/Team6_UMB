@@ -85,6 +85,7 @@
             this.dgvSO.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.dgvSO.Size = new System.Drawing.Size(1510, 800);
             this.dgvSO.TabIndex = 27;
+            this.dgvSO.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvSO_CellClick);
             // 
             // groupBox1
             // 

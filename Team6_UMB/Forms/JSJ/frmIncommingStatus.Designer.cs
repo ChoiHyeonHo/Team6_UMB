@@ -282,9 +282,9 @@
             this.label6.Font = new System.Drawing.Font("나눔바른고딕", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.label6.Location = new System.Drawing.Point(12, 9);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(70, 17);
+            this.label6.Size = new System.Drawing.Size(63, 17);
             this.label6.TabIndex = 22;
-            this.label6.Text = "BOM 목록";
+            this.label6.Text = "입고 목록";
             // 
             // frmIncommingStatus
             // 
