@@ -32,15 +32,12 @@ namespace Team6_UMB.Forms
             this.label2 = new System.Windows.Forms.Label();
             this.txtprod = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.txtunit = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.txtuadmin = new System.Windows.Forms.TextBox();
-            this.label13 = new System.Windows.Forms.Label();
-            this.dtpUdate = new System.Windows.Forms.DateTimePicker();
             this.label14 = new System.Windows.Forms.Label();
             this.txtComment = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -54,7 +51,6 @@ namespace Team6_UMB.Forms
             this.btnCancel = new System.Windows.Forms.Button();
             this.btnCreate = new System.Windows.Forms.Button();
             this.cbmachine = new System.Windows.Forms.ComboBox();
-            this.cbProcess = new System.Windows.Forms.ComboBox();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
@@ -62,138 +58,109 @@ namespace Team6_UMB.Forms
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("나눔바른고딕", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.label2.ForeColor = System.Drawing.Color.Black;
             this.label2.Location = new System.Drawing.Point(17, 84);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(47, 17);
+            this.label2.Size = new System.Drawing.Size(47, 18);
             this.label2.TabIndex = 25;
             this.label2.Text = "품목명";
             // 
             // txtprod
             // 
-            this.txtprod.Font = new System.Drawing.Font("나눔바른고딕", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.txtprod.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.txtprod.Location = new System.Drawing.Point(109, 80);
             this.txtprod.Name = "txtprod";
-            this.txtprod.Size = new System.Drawing.Size(183, 25);
+            this.txtprod.Size = new System.Drawing.Size(183, 24);
             this.txtprod.TabIndex = 26;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("나눔바른고딕", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.label3.ForeColor = System.Drawing.Color.Black;
-            this.label3.Location = new System.Drawing.Point(17, 158);
+            this.label3.Location = new System.Drawing.Point(17, 121);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(47, 17);
+            this.label3.Size = new System.Drawing.Size(47, 18);
             this.label3.TabIndex = 27;
             this.label3.Text = "설비명";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("나눔바른고딕", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label4.ForeColor = System.Drawing.Color.Black;
-            this.label4.Location = new System.Drawing.Point(17, 121);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(47, 17);
-            this.label4.TabIndex = 39;
-            this.label4.Text = "공정명";
             // 
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("나눔바른고딕", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.label8.ForeColor = System.Drawing.Color.RoyalBlue;
             this.label8.Location = new System.Drawing.Point(325, 158);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(60, 17);
+            this.label8.Size = new System.Drawing.Size(60, 18);
             this.label8.TabIndex = 47;
             this.label8.Text = "지시일자";
             // 
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("나눔바른고딕", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.label9.ForeColor = System.Drawing.Color.Black;
             this.label9.Location = new System.Drawing.Point(325, 121);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(34, 17);
+            this.label9.Size = new System.Drawing.Size(34, 18);
             this.label9.TabIndex = 49;
             this.label9.Text = "규격";
             // 
             // txtunit
             // 
-            this.txtunit.Font = new System.Drawing.Font("나눔바른고딕", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.txtunit.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.txtunit.Location = new System.Drawing.Point(391, 117);
             this.txtunit.Name = "txtunit";
-            this.txtunit.Size = new System.Drawing.Size(198, 25);
+            this.txtunit.Size = new System.Drawing.Size(198, 24);
             this.txtunit.TabIndex = 50;
             // 
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("나눔바른고딕", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.label10.ForeColor = System.Drawing.Color.Black;
             this.label10.Location = new System.Drawing.Point(325, 84);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(60, 17);
+            this.label10.Size = new System.Drawing.Size(60, 18);
             this.label10.TabIndex = 51;
             this.label10.Text = "계획수량";
             // 
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("나눔바른고딕", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label12.Location = new System.Drawing.Point(325, 199);
+            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label12.Location = new System.Drawing.Point(17, 200);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(47, 17);
+            this.label12.Size = new System.Drawing.Size(47, 18);
             this.label12.TabIndex = 56;
             this.label12.Text = "수정자";
             // 
             // txtuadmin
             // 
-            this.txtuadmin.Font = new System.Drawing.Font("나눔바른고딕", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.txtuadmin.Location = new System.Drawing.Point(391, 195);
+            this.txtuadmin.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.txtuadmin.Location = new System.Drawing.Point(109, 197);
             this.txtuadmin.Name = "txtuadmin";
-            this.txtuadmin.Size = new System.Drawing.Size(198, 25);
+            this.txtuadmin.Size = new System.Drawing.Size(183, 24);
             this.txtuadmin.TabIndex = 57;
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("나눔바른고딕", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label13.Location = new System.Drawing.Point(325, 242);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(47, 17);
-            this.label13.TabIndex = 58;
-            this.label13.Text = "수정일";
-            // 
-            // dtpUdate
-            // 
-            this.dtpUdate.Font = new System.Drawing.Font("나눔바른고딕", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.dtpUdate.Location = new System.Drawing.Point(391, 237);
-            this.dtpUdate.Name = "dtpUdate";
-            this.dtpUdate.Size = new System.Drawing.Size(198, 25);
-            this.dtpUdate.TabIndex = 59;
             // 
             // label14
             // 
             this.label14.AutoSize = true;
-            this.label14.Font = new System.Drawing.Font("나눔바른고딕", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label14.Location = new System.Drawing.Point(17, 276);
+            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label14.Location = new System.Drawing.Point(17, 244);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(34, 17);
+            this.label14.Size = new System.Drawing.Size(34, 18);
             this.label14.TabIndex = 60;
             this.label14.Text = "비고";
             // 
             // txtComment
             // 
-            this.txtComment.Font = new System.Drawing.Font("나눔바른고딕", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.txtComment.Location = new System.Drawing.Point(83, 273);
+            this.txtComment.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.txtComment.Location = new System.Drawing.Point(109, 241);
             this.txtComment.Multiline = true;
             this.txtComment.Name = "txtComment";
-            this.txtComment.Size = new System.Drawing.Size(506, 67);
+            this.txtComment.Size = new System.Drawing.Size(480, 99);
             this.txtComment.TabIndex = 61;
             // 
             // panel1
@@ -222,11 +189,11 @@ namespace Team6_UMB.Forms
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("나눔바른고딕", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.Location = new System.Drawing.Point(10, 7);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(176, 24);
+            this.label1.Size = new System.Drawing.Size(152, 25);
             this.label1.TabIndex = 1;
             this.label1.Text = "작업지시 등록/수정";
             // 
@@ -234,42 +201,42 @@ namespace Team6_UMB.Forms
             // 
             this.dtpOrderDate.Location = new System.Drawing.Point(391, 156);
             this.dtpOrderDate.Name = "dtpOrderDate";
-            this.dtpOrderDate.Size = new System.Drawing.Size(117, 21);
+            this.dtpOrderDate.Size = new System.Drawing.Size(198, 21);
             this.dtpOrderDate.TabIndex = 62;
             // 
             // txtcount
             // 
-            this.txtcount.Font = new System.Drawing.Font("나눔바른고딕", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.txtcount.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.txtcount.Location = new System.Drawing.Point(391, 80);
             this.txtcount.Name = "txtcount";
-            this.txtcount.Size = new System.Drawing.Size(198, 25);
+            this.txtcount.Size = new System.Drawing.Size(198, 24);
             this.txtcount.TabIndex = 50;
             this.txtcount.Text = "수주수량";
             // 
             // label15
             // 
             this.label15.AutoSize = true;
-            this.label15.Font = new System.Drawing.Font("나눔바른고딕", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.label15.ForeColor = System.Drawing.Color.RoyalBlue;
-            this.label15.Location = new System.Drawing.Point(17, 195);
+            this.label15.Location = new System.Drawing.Point(17, 158);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(86, 17);
+            this.label15.Size = new System.Drawing.Size(86, 18);
             this.label15.TabIndex = 39;
             this.label15.Text = "작업지시수량";
             // 
             // textBox6
             // 
-            this.textBox6.Font = new System.Drawing.Font("나눔바른고딕", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.textBox6.Location = new System.Drawing.Point(109, 192);
+            this.textBox6.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.textBox6.Location = new System.Drawing.Point(109, 155);
             this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(183, 25);
+            this.textBox6.Size = new System.Drawing.Size(183, 24);
             this.textBox6.TabIndex = 50;
             // 
             // panel2
             // 
             this.panel2.Controls.Add(this.btnCancel);
             this.panel2.Controls.Add(this.btnCreate);
-            this.panel2.Location = new System.Drawing.Point(223, 346);
+            this.panel2.Location = new System.Drawing.Point(240, 346);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(162, 40);
             this.panel2.TabIndex = 63;
@@ -302,27 +269,15 @@ namespace Team6_UMB.Forms
             // 
             // cbmachine
             // 
-            this.cbmachine.Font = new System.Drawing.Font("나눔바른고딕", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.cbmachine.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.cbmachine.FormattingEnabled = true;
             this.cbmachine.Items.AddRange(new object[] {
             "Y",
             "N"});
-            this.cbmachine.Location = new System.Drawing.Point(109, 154);
+            this.cbmachine.Location = new System.Drawing.Point(109, 117);
             this.cbmachine.Name = "cbmachine";
-            this.cbmachine.Size = new System.Drawing.Size(183, 25);
+            this.cbmachine.Size = new System.Drawing.Size(183, 26);
             this.cbmachine.TabIndex = 38;
-            // 
-            // cbProcess
-            // 
-            this.cbProcess.Font = new System.Drawing.Font("나눔바른고딕", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.cbProcess.FormattingEnabled = true;
-            this.cbProcess.Items.AddRange(new object[] {
-            "Y",
-            "N"});
-            this.cbProcess.Location = new System.Drawing.Point(109, 117);
-            this.cbProcess.Name = "cbProcess";
-            this.cbProcess.Size = new System.Drawing.Size(183, 25);
-            this.cbProcess.TabIndex = 38;
             // 
             // frmWorkOrderRegiPopUp
             // 
@@ -335,17 +290,13 @@ namespace Team6_UMB.Forms
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.txtComment);
             this.Controls.Add(this.label14);
-            this.Controls.Add(this.dtpUdate);
-            this.Controls.Add(this.label13);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.txtuadmin);
             this.Controls.Add(this.txtprod);
             this.Controls.Add(this.label12);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.cbProcess);
             this.Controls.Add(this.cbmachine);
             this.Controls.Add(this.label15);
-            this.Controls.Add(this.label4);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.txtcount);
             this.Controls.Add(this.textBox6);
@@ -368,15 +319,12 @@ namespace Team6_UMB.Forms
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txtprod;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.TextBox txtunit;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.TextBox txtuadmin;
-        private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.DateTimePicker dtpUdate;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.TextBox txtComment;
         protected System.Windows.Forms.Panel panel1;
@@ -390,6 +338,5 @@ namespace Team6_UMB.Forms
         private System.Windows.Forms.Button btnCreate;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.ComboBox cbmachine;
-        private System.Windows.Forms.ComboBox cbProcess;
     }
 }
