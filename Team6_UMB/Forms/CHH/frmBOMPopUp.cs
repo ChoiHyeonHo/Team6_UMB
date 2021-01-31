@@ -20,19 +20,23 @@ namespace Team6_UMB.Forms
             CBBinding();
             label1.Text = HeaderName;
         }
-        public frmBOMPopUp(string headerName, int bomID, string product_name, string product_type, string product_unit, int bom_use_count, int bom_level, string bom_comment, string bom_parent_id)
+        public frmBOMPopUp(string headerName, int bomID, string bom_parent_id, string prod_parent_id, string prod_parent_name, string product_id, string product_name, string product_type, string product_unit, int bom_use_count, int bom_level, string bom_comment)
         {
             InitializeComponent();
             CBBinding();
 
             label1.Text = headerName;
             lblBOMID.Text = bomID.ToString();
+            lblBOMParentID.Text = bom_parent_id;
+            lblProdParentID.Text = prod_parent_id;
+            cbParent.Text = prod_parent_name;
+            lblProdID.Text = product_id;
             cbProd.Text = product_name;
-            nuUseCount.Text = bom_use_count.ToString();
-            nuLevel.Text = bom_level.ToString();
+            lblProdType.Text = product_type;
+            lblProdUnit.Text = product_unit;
+            nuUseCount.Value = bom_use_count;
+            nuLevel.Value = bom_level;
             txtComment.Text = bom_comment;
-            lblParentProdID.Text = bom_parent_id;
-
         }
         private void CBBinding()
         {

@@ -44,9 +44,12 @@ namespace Team6_UMB.Forms
             this.panel2 = new System.Windows.Forms.Panel();
             this.btnUpdate = new System.Windows.Forms.Button();
             this.btnCreate = new System.Windows.Forms.Button();
-            this.lblParentProdID = new System.Windows.Forms.Label();
+            this.lblBOMParentID = new System.Windows.Forms.Label();
+            this.lblProdParentID = new System.Windows.Forms.Label();
             this.lblProdID = new System.Windows.Forms.Label();
             this.lblBOMID = new System.Windows.Forms.Label();
+            this.lblProdType = new System.Windows.Forms.Label();
+            this.lblProdUnit = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nuUseCount)).BeginInit();
@@ -231,41 +234,77 @@ namespace Team6_UMB.Forms
             this.btnCreate.Text = "저장";
             this.btnCreate.UseVisualStyleBackColor = false;
             // 
-            // lblParentProdID
+            // lblBOMParentID
             // 
-            this.lblParentProdID.AutoSize = true;
-            this.lblParentProdID.Location = new System.Drawing.Point(12, 285);
-            this.lblParentProdID.Name = "lblParentProdID";
-            this.lblParentProdID.Size = new System.Drawing.Size(64, 12);
-            this.lblParentProdID.TabIndex = 65;
-            this.lblParentProdID.Text = "상위품목ID";
+            this.lblBOMParentID.AutoSize = true;
+            this.lblBOMParentID.Location = new System.Drawing.Point(12, 294);
+            this.lblBOMParentID.Name = "lblBOMParentID";
+            this.lblBOMParentID.Size = new System.Drawing.Size(72, 12);
+            this.lblBOMParentID.TabIndex = 65;
+            this.lblBOMParentID.Text = "상위BOM ID";
+            this.lblBOMParentID.Visible = false;
+            // 
+            // lblProdParentID
+            // 
+            this.lblProdParentID.AutoSize = true;
+            this.lblProdParentID.Location = new System.Drawing.Point(12, 310);
+            this.lblProdParentID.Name = "lblProdParentID";
+            this.lblProdParentID.Size = new System.Drawing.Size(64, 12);
+            this.lblProdParentID.TabIndex = 66;
+            this.lblProdParentID.Text = "상위품목ID";
+            this.lblProdParentID.Visible = false;
             // 
             // lblProdID
             // 
             this.lblProdID.AutoSize = true;
-            this.lblProdID.Location = new System.Drawing.Point(12, 302);
+            this.lblProdID.Location = new System.Drawing.Point(304, 282);
             this.lblProdID.Name = "lblProdID";
-            this.lblProdID.Size = new System.Drawing.Size(52, 12);
-            this.lblProdID.TabIndex = 66;
-            this.lblProdID.Text = "제품명ID";
+            this.lblProdID.Size = new System.Drawing.Size(40, 12);
+            this.lblProdID.TabIndex = 67;
+            this.lblProdID.Text = "제품ID";
+            this.lblProdID.Visible = false;
             // 
             // lblBOMID
             // 
             this.lblBOMID.AutoSize = true;
-            this.lblBOMID.Location = new System.Drawing.Point(12, 314);
+            this.lblBOMID.Location = new System.Drawing.Point(12, 282);
             this.lblBOMID.Name = "lblBOMID";
-            this.lblBOMID.Size = new System.Drawing.Size(44, 12);
-            this.lblBOMID.TabIndex = 67;
-            this.lblBOMID.Text = "BOMID";
+            this.lblBOMID.Size = new System.Drawing.Size(48, 12);
+            this.lblBOMID.TabIndex = 68;
+            this.lblBOMID.Text = "BOM ID";
+            this.lblBOMID.Visible = false;
+            // 
+            // lblProdType
+            // 
+            this.lblProdType.AutoSize = true;
+            this.lblProdType.Location = new System.Drawing.Point(304, 294);
+            this.lblProdType.Name = "lblProdType";
+            this.lblProdType.Size = new System.Drawing.Size(29, 12);
+            this.lblProdType.TabIndex = 69;
+            this.lblProdType.Text = "분류";
+            this.lblProdType.Visible = false;
+            // 
+            // lblProdUnit
+            // 
+            this.lblProdUnit.AutoSize = true;
+            this.lblProdUnit.Location = new System.Drawing.Point(304, 310);
+            this.lblProdUnit.Name = "lblProdUnit";
+            this.lblProdUnit.Size = new System.Drawing.Size(29, 12);
+            this.lblProdUnit.TabIndex = 70;
+            this.lblProdUnit.Text = "단위";
+            this.lblProdUnit.Visible = false;
             // 
             // frmBOMPopUp
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.BackColor = System.Drawing.Color.WhiteSmoke;
             this.ClientSize = new System.Drawing.Size(401, 332);
+            this.Controls.Add(this.lblProdUnit);
+            this.Controls.Add(this.lblProdType);
             this.Controls.Add(this.lblBOMID);
             this.Controls.Add(this.lblProdID);
-            this.Controls.Add(this.lblParentProdID);
+            this.Controls.Add(this.lblProdParentID);
+            this.Controls.Add(this.lblBOMParentID);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.groupBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -274,9 +313,12 @@ namespace Team6_UMB.Forms
             this.Controls.SetChildIndex(this.panel1, 0);
             this.Controls.SetChildIndex(this.groupBox1, 0);
             this.Controls.SetChildIndex(this.panel2, 0);
-            this.Controls.SetChildIndex(this.lblParentProdID, 0);
+            this.Controls.SetChildIndex(this.lblBOMParentID, 0);
+            this.Controls.SetChildIndex(this.lblProdParentID, 0);
             this.Controls.SetChildIndex(this.lblProdID, 0);
             this.Controls.SetChildIndex(this.lblBOMID, 0);
+            this.Controls.SetChildIndex(this.lblProdType, 0);
+            this.Controls.SetChildIndex(this.lblProdUnit, 0);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.groupBox1.ResumeLayout(false);
@@ -306,8 +348,11 @@ namespace Team6_UMB.Forms
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Button btnUpdate;
         private System.Windows.Forms.Button btnCreate;
-        private System.Windows.Forms.Label lblParentProdID;
+        private System.Windows.Forms.Label lblBOMParentID;
+        private System.Windows.Forms.Label lblProdParentID;
         private System.Windows.Forms.Label lblProdID;
         private System.Windows.Forms.Label lblBOMID;
+        private System.Windows.Forms.Label lblProdType;
+        private System.Windows.Forms.Label lblProdUnit;
     }
 }
