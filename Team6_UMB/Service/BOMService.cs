@@ -32,5 +32,15 @@ namespace Team6_UMB.Service
             BOMDAC dac = new BOMDAC();
             return dac.GetBOMComboBoxCall(lv);
         }
+        public List<BOMVO> GetBOMCBProdName()
+        {
+            BOMDAC dac = new BOMDAC();
+            return dac.GetBOMCBProdName();
+        }
+        public List<BOMVO> GetBOMWhereInfo(int level, string prodName, string prodType)
+        {
+            BOMDAC dac = new BOMDAC();
+            return dac.GetBOMWhereInfo(level, prodName, prodType);
+        }
     }
 }

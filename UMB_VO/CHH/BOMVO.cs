@@ -15,5 +15,7 @@ namespace UMB_VO.CHH
         public string product_unit { get; set; }
         public int bom_use_count { get; set; }
         public int bom_level { get; set; }
+        public string bom_comment { get; set; }
+        public string bom_parent_id { get; set; }
     }
 }

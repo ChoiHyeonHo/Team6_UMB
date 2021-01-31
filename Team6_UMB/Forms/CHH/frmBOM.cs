@@ -16,7 +16,12 @@ namespace Team6_UMB.Forms
     {
         BOMService service = new BOMService();
         List<BOMVO> allList;
-        int bomID, bomPreview;
+        int bomID, bom_use_count, bom_level;
+        string product_name, product_type, product_unit, bom_comment, bom_parent_id;
+
+        string prodName, prodType;
+        int level;
+        
         public frmBOM()
         {
             InitializeComponent();
@@ -25,9 +30,8 @@ namespace Team6_UMB.Forms
             newBtns1.btnDocument.Visible = false;
             newBtns1.btnSearch.Visible = false;
             newBtns1.btnWait.Visible = false;
-            newBtns1.btnRefresh.Visible = false;
             newBtns1.btnExcel.Visible = false;
-            newBtns1.btnDelete.Visible = false;
+            newBtns1.btnPrint.Visible = false;
         }
 
         private void frmBOM_Load(object sender, EventArgs e)
@@ -40,6 +44,8 @@ namespace Team6_UMB.Forms
             CommonUtil.AddGridTextColumn(dgvBOM_Lv0, "단위", "product_unit", 60);         //3
             CommonUtil.AddGridTextColumn(dgvBOM_Lv0, "소요량", "bom_use_count", 70);      //4
             CommonUtil.AddGridTextColumn(dgvBOM_Lv0, "레벨", "bom_level", 70);            //5
+            CommonUtil.AddGridTextColumn(dgvBOM_Lv0, "비고", "bom_comment", 10, false);   //6
+            CommonUtil.AddGridTextColumn(dgvBOM_Lv0, "상위", "bom_parent_id", 10, false); //7
             #endregion
 
             #region BOMAll GridView
@@ -55,7 +61,19 @@ namespace Team6_UMB.Forms
 
             gbBOM.Visible = false;
 
+            allList = service.GetBOMCBProdName();
+            CommonUtil.BOMProdName(cbProdName, allList);
+
             DGV_Binding_Lv0();
+
+//            ; WITH temp as
+// (
+//     select bom_id, B.product_id, product_name, product_type, product_unit, bom_use_count, bom_level, bom_comment, bom_parent_id
+//     from TBL_BOM B join TBL_PRODUCT P on B.product_id = P.product_id where bom_level = 3
+//)
+//select a.bom_id, a.product_id, a.product_name, a.product_type, a.product_unit, a.bom_use_count, a.bom_level, a.bom_comment, a.bom_parent_id, b.product_id pp, tp.product_name pn
+//from temp a inner join TBL_BOM b on a.bom_parent_id = b.bom_id inner join TBL_PRODUCT tp on b.product_id = tp.product_id;
+
         }
 
         private void DGV_Binding_Lv0()
@@ -66,7 +84,14 @@ namespace Team6_UMB.Forms
 
         private void dgvBOM_Lv0_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
-            bomID = bomPreview = int.Parse(dgvBOM_Lv0.Rows[e.RowIndex].Cells[0].Value.ToString());
+            bomID = int.Parse(dgvBOM_Lv0.Rows[e.RowIndex].Cells[0].Value.ToString());           //BOMID
+            product_name = dgvBOM_Lv0.Rows[e.RowIndex].Cells[1].Value.ToString();               //제품명
+            product_type = dgvBOM_Lv0.Rows[e.RowIndex].Cells[2].Value.ToString();               //분류
+            product_unit = dgvBOM_Lv0.Rows[e.RowIndex].Cells[3].Value.ToString();               //단위
+            bom_use_count = int.Parse(dgvBOM_Lv0.Rows[e.RowIndex].Cells[4].Value.ToString());   //소요량
+            bom_level = int.Parse(dgvBOM_Lv0.Rows[e.RowIndex].Cells[5].Value.ToString());       //레벨
+            bom_comment = dgvBOM_Lv0.Rows[e.RowIndex].Cells[6].Value.ToString();                //비고
+            bom_parent_id = dgvBOM_Lv0.Rows[e.RowIndex].Cells[7].Value.ToString();              //상위품목ID
             btnPreView.PerformClick();
         }
 
@@ -77,6 +102,35 @@ namespace Team6_UMB.Forms
                 allList = service.GetBOMComboBoxCall(int.Parse(cbLevel.Text));
                 dgvBOM_Lv0.DataSource = allList;
             }
+        }
+
+        private void btnWhere_Click(object sender, EventArgs e)
+        {
+            if (cbLevel.SelectedIndex > 0)
+                level = int.Parse(cbLevel.Text);
+            if (cbProdName.SelectedIndex > 0)
+                prodName = cbProdName.Text;
+            if (cbProdType.SelectedIndex > 0)
+                prodType = cbProdType.Text;
+            allList = service.GetBOMWhereInfo(level, prodName, prodType);
+            dgvBOM_Lv0.DataSource = allList;
+        }
+
+        private void newBtns1_btnCreate_Event(object sender, EventArgs e)
+        {
+            string headerName = "BOM 등록";
+            frmBOMPopUp frm = new frmBOMPopUp(headerName);
+            frm.ShowDialog();
+        }
+
+        private void newBtns1_btnUpdate_Event(object sender, EventArgs e)
+        {
+            string headerName = "BOM 수정";
+
+
+
+            frmBOMPopUp frm = new frmBOMPopUp(headerName, bomID, product_name, product_type, product_unit, bom_use_count, bom_level, bom_comment, bom_parent_id);
+            frm.ShowDialog();
         }
 
         private void btnPreView_Click(object sender, EventArgs e)
