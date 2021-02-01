@@ -459,6 +459,7 @@
     <Compile Include="Service\BORService.cs" />
     <Compile Include="Service\CheckListService.cs" />
     <Compile Include="Service\DepartmentService.cs" />
+    <Compile Include="Service\IncommingService.cs" />
     <Compile Include="Service\LoginService.cs" />
     <Compile Include="Service\MachineService.cs" />
     <Compile Include="Service\MatPriceService.cs" />

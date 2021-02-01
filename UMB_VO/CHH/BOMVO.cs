@@ -9,6 +9,9 @@ namespace UMB_VO.CHH
     public class BOMVO
     {
         public int bom_id { get; set; }
+        public string bom_parent_id { get; set; }
+        public string prod_parent_id { get; set; }
+        public string prod_parent_name { get; set; }
         public string product_id { get; set; }
         public string product_name { get; set; }
         public string product_type { get; set; }
@@ -16,6 +19,6 @@ namespace UMB_VO.CHH
         public int bom_use_count { get; set; }
         public int bom_level { get; set; }
         public string bom_comment { get; set; }
-        public string bom_parent_id { get; set; }
+        
     }
 }

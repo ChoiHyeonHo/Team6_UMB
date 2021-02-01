@@ -54,6 +54,7 @@
     <Compile Include="ASB\BORVO.cs" />
     <Compile Include="CHH\SalesPriceVO.cs" />
     <Compile Include="JSJ\DepartmentVO.cs" />
+    <Compile Include="JSJ\IncommingVO.cs" />
     <Compile Include="JSJ\LoginVO.cs" />
     <Compile Include="JSJ\OrderVO.cs" />
     <Compile Include="JSJ\SOVO.cs" />

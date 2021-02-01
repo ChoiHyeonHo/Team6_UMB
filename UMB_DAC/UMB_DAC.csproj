@@ -61,6 +61,7 @@
     <Compile Include="Class\Helper.cs" />
     <Compile Include="ConnectionAccess.cs" />
     <Compile Include="JSJ\DepartmentDAC.cs" />
+    <Compile Include="JSJ\IncommingDAC.cs" />
     <Compile Include="JSJ\LoginDAC.cs" />
     <Compile Include="JSJ\OrderDAC.cs" />
     <Compile Include="JSJ\SODAC.cs" />
