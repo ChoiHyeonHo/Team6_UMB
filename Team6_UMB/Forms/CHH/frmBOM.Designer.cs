@@ -29,8 +29,8 @@ namespace Team6_UMB.Forms
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.cbProdName = new System.Windows.Forms.ComboBox();
@@ -43,13 +43,13 @@ namespace Team6_UMB.Forms
             this.dgvBOM_Lv0 = new Team6_UMB.DGV_Custom();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label6 = new System.Windows.Forms.Label();
-            this.newBtns1 = new Team6_UMB.Controls.NewBtns();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.btnPreView = new System.Windows.Forms.Button();
             this.gbBOM = new System.Windows.Forms.GroupBox();
             this.dgvBOMAll = new Team6_UMB.DGV_Custom();
             this.panel3 = new System.Windows.Forms.Panel();
             this.label7 = new System.Windows.Forms.Label();
+            this.newBtns1 = new Team6_UMB.Controls.NewBtns();
             this.panel1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvBOM_Lv0)).BeginInit();
@@ -108,6 +108,7 @@ namespace Team6_UMB.Forms
             this.cbProdName.Name = "cbProdName";
             this.cbProdName.Size = new System.Drawing.Size(199, 25);
             this.cbProdName.TabIndex = 35;
+            this.cbProdName.SelectedIndexChanged += new System.EventHandler(this.cbProdName_SelectedIndexChanged);
             // 
             // cbLevel
             // 
@@ -163,6 +164,7 @@ namespace Team6_UMB.Forms
             this.cbProdType.Name = "cbProdType";
             this.cbProdType.Size = new System.Drawing.Size(199, 25);
             this.cbProdType.TabIndex = 27;
+            this.cbProdType.SelectedIndexChanged += new System.EventHandler(this.cbProdType_SelectedIndexChanged);
             // 
             // label2
             // 
@@ -188,14 +190,14 @@ namespace Team6_UMB.Forms
             // 
             this.dgvBOM_Lv0.BackgroundColor = System.Drawing.Color.White;
             this.dgvBOM_Lv0.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("나눔바른고딕", 9F);
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvBOM_Lv0.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle11.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle11.Font = new System.Drawing.Font("나눔바른고딕", 9F);
+            dataGridViewCellStyle11.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvBOM_Lv0.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle11;
             this.dgvBOM_Lv0.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvBOM_Lv0.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.dgvBOM_Lv0.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -230,17 +232,6 @@ namespace Team6_UMB.Forms
             this.label6.Size = new System.Drawing.Size(70, 17);
             this.label6.TabIndex = 22;
             this.label6.Text = "BOM 목록";
-            // 
-            // newBtns1
-            // 
-            this.newBtns1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(52)))), ((int)(((byte)(79)))));
-            this.newBtns1.Dock = System.Windows.Forms.DockStyle.Right;
-            this.newBtns1.Location = new System.Drawing.Point(741, 0);
-            this.newBtns1.Name = "newBtns1";
-            this.newBtns1.Size = new System.Drawing.Size(770, 35);
-            this.newBtns1.TabIndex = 2;
-            this.newBtns1.btnCreate_Event += new System.EventHandler(this.newBtns1_btnCreate_Event);
-            this.newBtns1.btnUpdate_Event += new System.EventHandler(this.newBtns1_btnUpdate_Event);
             // 
             // groupBox2
             // 
@@ -279,14 +270,14 @@ namespace Team6_UMB.Forms
             // 
             this.dgvBOMAll.BackgroundColor = System.Drawing.Color.White;
             this.dgvBOMAll.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("나눔바른고딕", 9F);
-            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvBOMAll.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle12.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle12.Font = new System.Drawing.Font("나눔바른고딕", 9F);
+            dataGridViewCellStyle12.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvBOMAll.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle12;
             this.dgvBOMAll.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvBOMAll.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.dgvBOMAll.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -321,6 +312,19 @@ namespace Team6_UMB.Forms
             this.label7.TabIndex = 0;
             this.label7.Text = "BOM 구성";
             this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // newBtns1
+            // 
+            this.newBtns1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(52)))), ((int)(((byte)(79)))));
+            this.newBtns1.Dock = System.Windows.Forms.DockStyle.Right;
+            this.newBtns1.Location = new System.Drawing.Point(741, 0);
+            this.newBtns1.Name = "newBtns1";
+            this.newBtns1.Size = new System.Drawing.Size(770, 35);
+            this.newBtns1.TabIndex = 2;
+            this.newBtns1.btnRefresh_Event += new System.EventHandler(this.newBtns1_btnRefresh_Event);
+            this.newBtns1.btnCreate_Event += new System.EventHandler(this.newBtns1_btnCreate_Event);
+            this.newBtns1.btnUpdate_Event += new System.EventHandler(this.newBtns1_btnUpdate_Event);
+            this.newBtns1.btnDelete_Event += new System.EventHandler(this.newBtns1_btnDelete_Event);
             // 
             // frmBOM
             // 
@@ -364,7 +368,6 @@ namespace Team6_UMB.Forms
         private DGV_Custom dgvBOM_Lv0;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label6;
-        private Controls.NewBtns newBtns1;
         private System.Windows.Forms.ComboBox cbProdName;
         private System.Windows.Forms.ComboBox cbLevel;
         private System.Windows.Forms.Label label4;
@@ -374,5 +377,6 @@ namespace Team6_UMB.Forms
         private DGV_Custom dgvBOMAll;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Label label7;
+        private Controls.NewBtns newBtns1;
     }
 }

@@ -52,7 +52,50 @@ namespace Team6_UMB.Forms
 
         private void cbParent_SelectedIndexChanged(object sender, EventArgs e)
         {
+            //
+        }
 
+        private void btnEdit_Click(object sender, EventArgs e)
+        {
+            if (label1.Text == "BOM 등록")
+            {
+                BOMVO vo = new BOMVO
+                {
+                    prod_parent_name = cbParent.Text,
+                    product_name = cbProd.Text,
+                    bom_use_count = (int)nuUseCount.Value,
+                    bom_level = (int)nuLevel.Value,
+                    bom_comment = txtComment.Text
+                };
+
+                bool result = service.Insert(vo);
+                if (result)
+                {
+                    MessageBox.Show(Properties.Resources.msgOK);
+                }
+                else
+                    MessageBox.Show(Properties.Resources.msgError);
+            }
+            else if (label1.Text == "BOM 수정")
+            {
+                BOMVO vo = new BOMVO
+                {
+                    bom_id = int.Parse(lblBOMID.Text),
+                    prod_parent_name = cbParent.Text,
+                    product_name = cbProd.Text,
+                    bom_use_count = (int)nuUseCount.Value,
+                    bom_level = (int)nuLevel.Value,
+                    bom_comment = txtComment.Text
+                };
+
+                bool result = service.Update(vo);
+                if (result)
+                {
+                    MessageBox.Show(Properties.Resources.msgOK);
+                }
+                else
+                    MessageBox.Show(Properties.Resources.msgError);
+            }
         }
     }
 }

@@ -21,7 +21,24 @@ namespace Team6_UMB.Forms
 
         string prodName, prodType;
         int level;
-        
+
+        private void cbProdName_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            prodName = cbProdName.Text;
+        }
+
+        private void cbProdType_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            prodType = cbProdType.Text;
+        }
+
+        private void newBtns1_btnRefresh_Event(object sender, EventArgs e)
+        {
+            cbLevel.SelectedIndex = cbProdName.SelectedIndex = cbProdType.SelectedIndex = 0;
+            gbBOM.Visible = false;
+            DGV_Binding_Lv0();
+        }
+
         public frmBOM()
         {
             InitializeComponent();
@@ -68,9 +85,6 @@ namespace Team6_UMB.Forms
             CommonUtil.BOMProdName(cbProdName, allList);
 
             DGV_Binding_Lv0();
-
-
-
         }
 
         private void DGV_Binding_Lv0()
@@ -129,6 +143,23 @@ namespace Team6_UMB.Forms
             string headerName = "BOM 수정";
             frmBOMPopUp frm = new frmBOMPopUp(headerName, bomID, bom_parent_id, prod_parent_id, prod_parent_name, product_id, product_name, product_type, product_unit, bom_use_count, bom_level, bom_comment);
             frm.ShowDialog();
+        }
+
+        private void newBtns1_btnDelete_Event(object sender, EventArgs e)
+        {
+            if (MessageBox.Show(Properties.Resources.msgDelete, "삭제확인 ", MessageBoxButtons.YesNo) == DialogResult.Yes)
+            {
+                bool result = service.Delete(bomID);
+
+                if (result)
+                {
+                    MessageBox.Show(Properties.Resources.msgOK);
+                    DGV_Binding_Lv0();
+                }
+                else
+                    MessageBox.Show(Properties.Resources.msgError);
+
+            }
         }
 
         private void btnPreView_Click(object sender, EventArgs e)

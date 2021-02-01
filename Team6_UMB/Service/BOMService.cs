@@ -37,5 +37,20 @@ namespace Team6_UMB.Service
             BOMDAC dac = new BOMDAC();
             return dac.GetBOMWhereInfo(level, prodName, prodType);
         }
+        public bool Insert(BOMVO vo)
+        {
+            BOMDAC dac = new BOMDAC();
+            return dac.Insert(vo);
+        }
+        public bool Update(BOMVO vo)
+        {
+            BOMDAC dac = new BOMDAC();
+            return dac.Update(vo);
+        }
+        public bool Delete(int BOMID)
+        {
+            BOMDAC dac = new BOMDAC();
+            return dac.Delete(BOMID);
+        }
     }
 }
