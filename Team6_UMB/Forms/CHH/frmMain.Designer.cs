@@ -624,7 +624,7 @@ namespace Team6_UMB
             this.btn6_2.Text = "생산실적관리";
             this.btn6_2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn6_2.UseVisualStyleBackColor = false;
-            this.btn6_2.Click += new System.EventHandler(this.btn6_2_Click);
+            
             // 
             // btn6_1
             // 

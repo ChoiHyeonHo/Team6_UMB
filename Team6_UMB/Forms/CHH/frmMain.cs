@@ -44,7 +44,7 @@ namespace Team6_UMB
         public static frmShipment frmShipment;
         public static frmSO frmSO;
         public static frmperformanceStatus frmPS; //생산실적 현황
-        public static frmperformanceRegixx frmPR; //생산실적등록 / 수정
+        
         public static frmWorkOrderRegi frmWOR; //작업지시 등록
         public static frmWorkOrderStatus frmWOS; //작업지시 현황
         public static frmdefectiveRegi frmDR; //불량관리 등록/수정
@@ -214,12 +214,7 @@ namespace Team6_UMB
                 frmPS = new frmperformanceStatus();
             return frmPS;
         }
-        public static frmperformanceRegixx CreatePR()
-        {
-            if (frmPR == null)
-                frmPR = new frmperformanceRegixx();
-            return frmPR;
-        }
+        
         public static frmWorkOrderRegi CreateWOR()
         {
             if (frmWOR == null)
@@ -774,19 +769,7 @@ namespace Team6_UMB
             frmPS.Dock = DockStyle.Fill;
             frmPS.Show();
         }
-        private void btn6_2_Click(object sender, EventArgs e)
-        {
-            this.btn6_2.BackColor = Color.White;
-            this.btn6_2.ForeColor = Color.Black;
-            this.btn6_1.BackColor = this.btn6_3.BackColor = this.btn6_4.BackColor = this.btn6_5.BackColor = this.btn6_6.BackColor = Color.Transparent;
-            this.btn6_1.ForeColor = this.btn6_3.ForeColor = this.btn6_4.ForeColor = this.btn6_5.ForeColor = this.btn6_6.ForeColor = Color.White;
-            CreatePR();
-            frmPR.TopLevel = false;
-            pnlBackPage.Controls.Clear();
-            pnlBackPage.Controls.Add(frmPR);
-            frmPR.Dock = DockStyle.Fill;
-            frmPR.Show();
-        }
+        
         private void btn6_3_Click(object sender, EventArgs e)
         {
             this.btn6_3.BackColor = Color.White;
