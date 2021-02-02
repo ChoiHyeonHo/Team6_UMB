@@ -171,7 +171,7 @@
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(31, 15);
             this.label3.TabIndex = 0;
-            this.label3.Text = "발주";
+            this.label3.Text = "품목";
             // 
             // groupBox1
             // 
