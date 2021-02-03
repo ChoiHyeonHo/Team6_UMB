@@ -24,4 +24,12 @@ namespace UMB_VO
         public string product_name { get; set; }
         public string orderexam_result { get; set; }
     }
+
+    public class IncommingHistoryVO
+    {
+        public string product_name { get; set; }
+        public int incomming_count { get; set; }
+        public string incomming_date { get; set; }
+        public string orderexam_result { get; set; }
+    }
 }

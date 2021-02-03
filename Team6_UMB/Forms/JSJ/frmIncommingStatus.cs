@@ -14,6 +14,7 @@ namespace Team6_UMB.Forms.JSJ
     public partial class frmIncommingStatus : Team6_UMB.BaseForm.frmList
     {
         List<IncommingStatusVO> list = new List<IncommingStatusVO>();
+        string product_name = null;
 
         public frmIncommingStatus()
         {
@@ -22,6 +23,16 @@ namespace Team6_UMB.Forms.JSJ
 
         private void frmIncommingStatus_Load(object sender, EventArgs e)
         {
+            newBtns1.btnBarCode.Visible = false;
+            newBtns1.btnDocument.Visible = false;
+            newBtns1.btnShipment.Visible = false;
+            newBtns1.btnCreate.Visible = false;
+            newBtns1.btnDelete.Visible = false;
+            newBtns1.btnExcel.Visible = false;
+            newBtns1.btnPrint.Visible = false;
+            newBtns1.btnUpdate.Visible = false;
+            newBtns1.btnWait.Visible = false;
+
             CommonUtil.SetInitGridView(dgvIncomming);
             CommonUtil.AddGridTextColumn(dgvIncomming, "입고번호", "incomming_ID", 200);
             CommonUtil.AddGridTextColumn(dgvIncomming, "입고상태", "incomming_state", 200);
@@ -54,6 +65,24 @@ namespace Team6_UMB.Forms.JSJ
                         && Convert.ToDateTime(periodSearchControl.dtFrom) <= Convert.ToDateTime(item.incomming_date) && Convert.ToDateTime(periodSearchControl.dtTo) >= Convert.ToDateTime(item.incomming_date)
                         select item).ToList();
             return SearchList;
+        }
+
+        private void newBtns1_btnSearch_Event(object sender, EventArgs e)
+        {
+            if (product_name == null)
+            {
+                MessageBox.Show("항목을 선택해주십시오.");
+            }
+            else
+            {
+                frmIncommingHistory frm = new frmIncommingHistory(product_name);
+                frm.Show();
+            }
+        }
+
+        private void dgvIncomming_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            product_name = dgvIncomming[5, e.RowIndex].Value.ToString();
         }
     }
 }

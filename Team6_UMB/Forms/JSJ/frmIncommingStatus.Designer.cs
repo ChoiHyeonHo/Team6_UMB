@@ -29,21 +29,21 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmIncommingStatus));
             this.dgvIncomming = new Team6_UMB.DGV_Custom();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.txtProduct = new System.Windows.Forms.TextBox();
+            this.txtCompany = new System.Windows.Forms.TextBox();
             this.periodSearchControl = new PJT_Olive.Control.PeriodSearchControl();
             this.label3 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             this.btnSearch = new System.Windows.Forms.Button();
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
             this.panel2 = new System.Windows.Forms.Panel();
             this.label6 = new System.Windows.Forms.Label();
             this.newBtns1 = new Team6_UMB.Controls.NewBtns();
-            this.txtProduct = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.txtCompany = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvIncomming)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -71,14 +71,14 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvIncomming.BackgroundColor = System.Drawing.Color.White;
             this.dgvIncomming.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("나눔바른고딕", 9F);
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvIncomming.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("나눔바른고딕", 9F);
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvIncomming.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvIncomming.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvIncomming.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.dgvIncomming.GridColor = System.Drawing.Color.LightGray;
@@ -90,6 +90,7 @@
             this.dgvIncomming.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.dgvIncomming.Size = new System.Drawing.Size(1510, 800);
             this.dgvIncomming.TabIndex = 33;
+            this.dgvIncomming.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvIncomming_CellClick);
             // 
             // groupBox1
             // 
@@ -107,6 +108,22 @@
             this.groupBox1.Size = new System.Drawing.Size(1511, 50);
             this.groupBox1.TabIndex = 32;
             this.groupBox1.TabStop = false;
+            // 
+            // txtProduct
+            // 
+            this.txtProduct.Font = new System.Drawing.Font("나눔바른고딕", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.txtProduct.Location = new System.Drawing.Point(283, 16);
+            this.txtProduct.Name = "txtProduct";
+            this.txtProduct.Size = new System.Drawing.Size(160, 22);
+            this.txtProduct.TabIndex = 24;
+            // 
+            // txtCompany
+            // 
+            this.txtCompany.Font = new System.Drawing.Font("나눔바른고딕", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.txtCompany.Location = new System.Drawing.Point(46, 17);
+            this.txtCompany.Name = "txtCompany";
+            this.txtCompany.Size = new System.Drawing.Size(160, 22);
+            this.txtCompany.TabIndex = 24;
             // 
             // periodSearchControl
             // 
@@ -138,6 +155,16 @@
             this.label5.Size = new System.Drawing.Size(34, 17);
             this.label5.TabIndex = 0;
             this.label5.Text = "품목";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("나눔바른고딕", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label2.Location = new System.Drawing.Point(6, 19);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(34, 17);
+            this.label2.TabIndex = 0;
+            this.label2.Text = "업체";
             // 
             // btnSearch
             // 
@@ -187,36 +214,11 @@
             // 
             this.newBtns1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.newBtns1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(52)))), ((int)(((byte)(79)))));
-            this.newBtns1.Location = new System.Drawing.Point(738, 0);
+            this.newBtns1.Location = new System.Drawing.Point(740, 1);
             this.newBtns1.Name = "newBtns1";
             this.newBtns1.Size = new System.Drawing.Size(770, 33);
             this.newBtns1.TabIndex = 35;
-            // 
-            // txtProduct
-            // 
-            this.txtProduct.Font = new System.Drawing.Font("나눔바른고딕", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.txtProduct.Location = new System.Drawing.Point(283, 16);
-            this.txtProduct.Name = "txtProduct";
-            this.txtProduct.Size = new System.Drawing.Size(160, 22);
-            this.txtProduct.TabIndex = 24;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("나눔바른고딕", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label2.Location = new System.Drawing.Point(6, 19);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(34, 17);
-            this.label2.TabIndex = 0;
-            this.label2.Text = "업체";
-            // 
-            // txtCompany
-            // 
-            this.txtCompany.Font = new System.Drawing.Font("나눔바른고딕", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.txtCompany.Location = new System.Drawing.Point(46, 17);
-            this.txtCompany.Name = "txtCompany";
-            this.txtCompany.Size = new System.Drawing.Size(160, 22);
-            this.txtCompany.TabIndex = 24;
+            this.newBtns1.btnSearch_Event += new System.EventHandler(this.newBtns1_btnSearch_Event);
             // 
             // frmIncommingStatus
             // 

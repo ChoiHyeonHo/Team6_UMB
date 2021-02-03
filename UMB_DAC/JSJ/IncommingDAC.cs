@@ -78,5 +78,19 @@ namespace UMB_DAC
                 return list;
             }
         }
+
+        public List<IncommingHistoryVO> IncommingHistory(string product_name)
+        {
+            string sql = "select product_name, incomming_count, incomming_date, orderexam_result from IncommingStatus where product_name = @product_name";
+
+            using (SqlCommand cmd = new SqlCommand(sql, conn))
+            {
+                cmd.Parameters.AddWithValue("@product_name", product_name);
+
+                SqlDataReader reader = cmd.ExecuteReader();
+                List<IncommingHistoryVO> list = Helper.DataReaderMapToList<IncommingHistoryVO>(reader);
+                return list;
+            }
+        }
     }
 }

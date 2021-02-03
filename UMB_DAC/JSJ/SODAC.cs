@@ -31,7 +31,7 @@ namespace UMB_DAC
 
         public List<SOListVO> SOList()
         {
-            string sql = "select so_id, company_name, product_name, so_edate, so_ocount, so_rep from SOList where wh_deleted = 'N'";
+            string sql = "select so_id, company_name, product_name, so_edate, so_ocount, so_rep from SOList where so_deleted = 'N'";
 
             using(SqlCommand cmd = new SqlCommand(sql, conn))
             {
@@ -112,7 +112,7 @@ namespace UMB_DAC
 
         public int DeleteSO(int so_id)
         {
-            string sql = "update TBL_SO_MASTER set wh_deleted = 'Y' where so_id = @so_id";
+            string sql = "update TBL_SO_MASTER set so_deleted = 'Y' where so_id = @so_id";
 
             using (SqlCommand cmd = new SqlCommand(sql, conn))
             {
