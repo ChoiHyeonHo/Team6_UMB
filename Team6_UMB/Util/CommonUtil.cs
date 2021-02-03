@@ -141,6 +141,21 @@ namespace Team6_UMB
             cbo.ValueMember = "w_id";
             cbo.DataSource = codeList;
         }
+        public static void ProdTypeBinding(ComboBox cbo, List<GetProdTypeVO> list, bool blankItem = true, string blankText = "")
+        {
+            var codeList = (from item in list
+                            select item).ToList();
+
+            if (blankItem)
+            {
+                GetProdTypeVO blank = new GetProdTypeVO
+                { common_id = null, common_name = blankText };
+                codeList.Insert(0, blank);
+            }
+            cbo.DisplayMember = "common_name";
+            cbo.ValueMember = "common_id";
+            cbo.DataSource = codeList;
+        }
 
         public static void CompanyNameBinding(ComboBox cbo, List<CompanyCBOBindingVO> list, bool blankItem = true, string blankText = "")
         {

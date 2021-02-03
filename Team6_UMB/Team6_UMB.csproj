@@ -300,6 +300,12 @@
     <Compile Include="Forms\CHH\frmImportInspection.Designer.cs">
       <DependentUpon>frmImportInspection.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\CHH\frmPDSPopUpUpdate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\CHH\frmPDSPopUpUpdate.Designer.cs">
+      <DependentUpon>frmPDSPopUpUpdate.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\CHH\frmProdInspection.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -464,6 +470,7 @@
     <Compile Include="Service\MachineService.cs" />
     <Compile Include="Service\MatPriceService.cs" />
     <Compile Include="Service\OrderService.cs" />
+    <Compile Include="Service\PDStockService.cs" />
     <Compile Include="Service\ProdStatusService.cs" />
     <Compile Include="Service\ProductService.cs" />
     <Compile Include="Service\SalesPriceService.cs" />
@@ -604,6 +611,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\CHH\frmImportInspection.resx">
       <DependentUpon>frmImportInspection.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\CHH\frmPDSPopUpUpdate.resx">
+      <DependentUpon>frmPDSPopUpUpdate.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\CHH\frmProdInspection.resx">
       <DependentUpon>frmProdInspection.cs</DependentUpon>

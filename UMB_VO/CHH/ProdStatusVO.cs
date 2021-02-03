@@ -44,4 +44,9 @@ namespace UMB_VO.CHH
         public int? w_id { get; set; }
         public string w_name { get; set; }
     }
+    public class GetProdTypeVO
+    {
+        public int? common_id { get; set; }
+        public string common_name { get; set; }
+    }
 }

@@ -64,6 +64,18 @@ namespace UMB_DAC.CHH
                 return list;
             }
         }
+
+        public List<GetProdTypeVO> GetProdType()
+        {
+            string sql = @"select common_id, common_name from TBL_COMMON_CODE where common_type = '제품분류'";
+            using (SqlCommand cmd = new SqlCommand(sql, conn))
+            {
+                SqlDataReader reader = cmd.ExecuteReader();
+                List<GetProdTypeVO> list = Helper.DataReaderMapToList<GetProdTypeVO>(reader);
+                return list;
+            }
+        }
+
         public bool Insert(ProdStatusVO vo)
         {
             string sql = @"EXEC SP_ProductStatus @product_id, @product_name, @product_unit, @product_type, @product_lorder_count, @product_safety_count,
