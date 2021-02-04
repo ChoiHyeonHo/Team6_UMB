@@ -8,8 +8,9 @@ namespace UMB_VO.ASB
 {
     public class WorkOrderVO
     {
-        //wo_id, wo_date, wo_pcount, m_id, so_id, wo_count, wo_uadmin, wo_udate, wo_state, product_id, wo_sdate
+        // wo_id, so_id, product_id, product_name, m_id, m_name, wo_pcount, wo_count, wo_date, wo_sdate, wo_state, wo_uadmin, wo_udate
         public int wo_id { get; set; }
+        public int so_id { get; set; }
         public string product_id { get; set; }
         public string product_name { get; set; }
         public int m_id { get; set; }
@@ -19,7 +20,7 @@ namespace UMB_VO.ASB
         public string wo_date { get; set; }
         public string wo_sdate { get; set; }
         public string wo_state { get; set; }
-        public string wo_uadminv { get; set; }
+        public string wo_uadmin { get; set; }
         public string wo_udate { get; set; }
     }
 }
