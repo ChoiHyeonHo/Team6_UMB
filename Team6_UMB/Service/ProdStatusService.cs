@@ -31,6 +31,11 @@ namespace Team6_UMB.Service
             ProdStatusDAC dac = new ProdStatusDAC();
             return dac.GetWHName();
         }
+        public List<GetProdTypeVO> GetProdType()
+        {
+            ProdStatusDAC dac = new ProdStatusDAC();
+            return dac.GetProdType();
+        }
         public bool Insert(ProdStatusVO vo)
         {
             ProdStatusDAC dac = new ProdStatusDAC();

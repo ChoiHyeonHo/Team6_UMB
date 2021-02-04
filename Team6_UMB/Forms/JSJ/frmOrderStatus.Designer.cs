@@ -180,6 +180,7 @@
             this.newBtns1.Name = "newBtns1";
             this.newBtns1.Size = new System.Drawing.Size(770, 33);
             this.newBtns1.TabIndex = 0;
+            this.newBtns1.btnWait_Event += new System.EventHandler(this.newBtns1_btnWait_Event);
             this.newBtns1.btnRefresh_Event += new System.EventHandler(this.newBtns1_btnRefresh_Event);
             this.newBtns1.btnCreate_Event += new System.EventHandler(this.newBtns1_btnCreate_Event);
             this.newBtns1.btnDelete_Event += new System.EventHandler(this.newBtns1_btnDelete_Event);

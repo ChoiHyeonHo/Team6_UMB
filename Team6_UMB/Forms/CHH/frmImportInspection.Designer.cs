@@ -29,9 +29,7 @@ namespace Team6_UMB.Forms.CHH
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmImportInspection));
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.label4 = new System.Windows.Forms.Label();
@@ -40,24 +38,13 @@ namespace Team6_UMB.Forms.CHH
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.periodSearchControl1 = new PJT_Olive.Control.PeriodSearchControl();
-            this.dgvIncommingList = new Team6_UMB.DGV_Custom();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.btnCheck = new System.Windows.Forms.Button();
-            this.imageList1 = new System.Windows.Forms.ImageList(this.components);
-            this.label5 = new System.Windows.Forms.Label();
+            this.dgvIncomming = new Team6_UMB.DGV_Custom();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label6 = new System.Windows.Forms.Label();
+            this.newBtns1 = new Team6_UMB.Controls.NewBtns();
             this.panel1.SuspendLayout();
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvIncommingList)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvIncomming)).BeginInit();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -65,10 +52,10 @@ namespace Team6_UMB.Forms.CHH
             // 
             this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel1.Controls.Add(this.btnCheck);
+            this.panel1.Controls.Add(this.newBtns1);
             this.panel1.Size = new System.Drawing.Size(1511, 35);
             this.panel1.Controls.SetChildIndex(this.label1, 0);
-            this.panel1.Controls.SetChildIndex(this.btnCheck, 0);
+            this.panel1.Controls.SetChildIndex(this.newBtns1, 0);
             // 
             // label1
             // 
@@ -167,130 +154,32 @@ namespace Team6_UMB.Forms.CHH
             this.periodSearchControl1.Size = new System.Drawing.Size(301, 29);
             this.periodSearchControl1.TabIndex = 0;
             // 
-            // dgvIncommingList
+            // dgvIncomming
             // 
-            this.dgvIncommingList.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.dgvIncomming.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.dgvIncommingList.BackgroundColor = System.Drawing.Color.White;
-            this.dgvIncommingList.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("나눔바른고딕", 9F);
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvIncommingList.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
-            this.dgvIncommingList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvIncommingList.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Column1,
-            this.Column2,
-            this.Column3,
-            this.Column4,
-            this.Column5,
-            this.Column6,
-            this.Column9,
-            this.Column7,
-            this.Column8});
-            this.dgvIncommingList.Cursor = System.Windows.Forms.Cursors.Arrow;
-            this.dgvIncommingList.GridColor = System.Drawing.Color.LightGray;
-            this.dgvIncommingList.Location = new System.Drawing.Point(12, 141);
-            this.dgvIncommingList.Margin = new System.Windows.Forms.Padding(4, 1, 4, 1);
-            this.dgvIncommingList.MinimumSize = new System.Drawing.Size(150, 150);
-            this.dgvIncommingList.Name = "dgvIncommingList";
-            this.dgvIncommingList.RowTemplate.Height = 23;
-            this.dgvIncommingList.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.dgvIncommingList.Size = new System.Drawing.Size(1510, 800);
-            this.dgvIncommingList.TabIndex = 25;
-            // 
-            // Column1
-            // 
-            this.Column1.HeaderText = "ID";
-            this.Column1.Name = "Column1";
-            this.Column1.Width = 60;
-            // 
-            // Column2
-            // 
-            this.Column2.HeaderText = "입고상태";
-            this.Column2.Name = "Column2";
-            this.Column2.Width = 150;
-            // 
-            // Column3
-            // 
-            this.Column3.HeaderText = "입고일";
-            this.Column3.Name = "Column3";
-            this.Column3.Width = 200;
-            // 
-            // Column4
-            // 
-            this.Column4.HeaderText = "담당자";
-            this.Column4.Name = "Column4";
-            this.Column4.Width = 200;
-            // 
-            // Column5
-            // 
-            this.Column5.HeaderText = "입고량";
-            this.Column5.Name = "Column5";
-            this.Column5.Width = 200;
-            // 
-            // Column6
-            // 
-            this.Column6.HeaderText = "품목명";
-            this.Column6.Name = "Column6";
-            this.Column6.Width = 200;
-            // 
-            // Column9
-            // 
-            this.Column9.HeaderText = "발주번호";
-            this.Column9.Name = "Column9";
-            this.Column9.Width = 150;
-            // 
-            // Column7
-            // 
-            this.Column7.HeaderText = "검사ID";
-            this.Column7.Name = "Column7";
-            this.Column7.Width = 150;
-            // 
-            // Column8
-            // 
-            this.Column8.HeaderText = "합불판정";
-            this.Column8.Name = "Column8";
-            // 
-            // btnCheck
-            // 
-            this.btnCheck.Dock = System.Windows.Forms.DockStyle.Right;
-            this.btnCheck.FlatAppearance.BorderColor = System.Drawing.Color.DimGray;
-            this.btnCheck.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCheck.Font = new System.Drawing.Font("나눔바른고딕", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.btnCheck.ForeColor = System.Drawing.Color.White;
-            this.btnCheck.ImageAlign = System.Drawing.ContentAlignment.BottomRight;
-            this.btnCheck.ImageIndex = 0;
-            this.btnCheck.ImageList = this.imageList1;
-            this.btnCheck.Location = new System.Drawing.Point(1442, 0);
-            this.btnCheck.Name = "btnCheck";
-            this.btnCheck.Size = new System.Drawing.Size(69, 35);
-            this.btnCheck.TabIndex = 26;
-            this.btnCheck.Text = "검사";
-            this.btnCheck.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCheck.UseVisualStyleBackColor = true;
-            this.btnCheck.Click += new System.EventHandler(this.btnCheck_Click);
-            // 
-            // imageList1
-            // 
-            this.imageList1.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imageList1.ImageStream")));
-            this.imageList1.TransparentColor = System.Drawing.Color.Transparent;
-            this.imageList1.Images.SetKeyName(0, "check.png");
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("나눔바른고딕", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label5.Location = new System.Drawing.Point(406, 384);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(191, 24);
-            this.label5.TabIndex = 26;
-            this.label5.Text = "입고 대기상태인 것만";
+            this.dgvIncomming.BackgroundColor = System.Drawing.Color.White;
+            this.dgvIncomming.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("나눔바른고딕", 9F);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvIncomming.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            this.dgvIncomming.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvIncomming.Cursor = System.Windows.Forms.Cursors.Arrow;
+            this.dgvIncomming.GridColor = System.Drawing.Color.LightGray;
+            this.dgvIncomming.Location = new System.Drawing.Point(12, 141);
+            this.dgvIncomming.Margin = new System.Windows.Forms.Padding(4, 1, 4, 1);
+            this.dgvIncomming.MinimumSize = new System.Drawing.Size(150, 150);
+            this.dgvIncomming.Name = "dgvIncomming";
+            this.dgvIncomming.RowTemplate.Height = 23;
+            this.dgvIncomming.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.dgvIncomming.Size = new System.Drawing.Size(1510, 800);
+            this.dgvIncomming.TabIndex = 25;
             // 
             // panel2
             // 
@@ -309,33 +198,41 @@ namespace Team6_UMB.Forms.CHH
             this.label6.Font = new System.Drawing.Font("나눔바른고딕", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.label6.Location = new System.Drawing.Point(12, 9);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(115, 17);
+            this.label6.Size = new System.Drawing.Size(102, 17);
             this.label6.TabIndex = 22;
-            this.label6.Text = "불량관리 등록내역";
+            this.label6.Text = "수입검사 리스트";
+            // 
+            // newBtns1
+            // 
+            this.newBtns1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(52)))), ((int)(((byte)(79)))));
+            this.newBtns1.Dock = System.Windows.Forms.DockStyle.Right;
+            this.newBtns1.Location = new System.Drawing.Point(741, 0);
+            this.newBtns1.Name = "newBtns1";
+            this.newBtns1.Size = new System.Drawing.Size(770, 35);
+            this.newBtns1.TabIndex = 2;
+            this.newBtns1.btnCreate_Event += new System.EventHandler(this.newBtns1_btnCreate_Event);
             // 
             // frmImportInspection
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.ClientSize = new System.Drawing.Size(1535, 950);
             this.Controls.Add(this.panel2);
-            this.Controls.Add(this.label5);
             this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.dgvIncommingList);
+            this.Controls.Add(this.dgvIncomming);
             this.Name = "frmImportInspection";
+            this.Load += new System.EventHandler(this.frmImportInspection_Load);
             this.Controls.SetChildIndex(this.panel1, 0);
-            this.Controls.SetChildIndex(this.dgvIncommingList, 0);
+            this.Controls.SetChildIndex(this.dgvIncomming, 0);
             this.Controls.SetChildIndex(this.groupBox1, 0);
-            this.Controls.SetChildIndex(this.label5, 0);
             this.Controls.SetChildIndex(this.panel2, 0);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvIncommingList)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvIncomming)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -347,22 +244,11 @@ namespace Team6_UMB.Forms.CHH
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private PJT_Olive.Control.PeriodSearchControl periodSearchControl1;
-        private DGV_Custom dgvIncommingList;
+        private DGV_Custom dgvIncomming;
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column9;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column7;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column8;
-        private System.Windows.Forms.Button btnCheck;
-        private System.Windows.Forms.ImageList imageList1;
-        private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label6;
+        private Controls.NewBtns newBtns1;
     }
 }

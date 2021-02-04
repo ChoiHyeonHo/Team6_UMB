@@ -12,4 +12,24 @@ namespace UMB_VO
         public int incomming_count { get; set; }
         public int order_id { get; set; }
     }
+
+    public class IncommingStatusVO
+    {
+        public int incomming_ID { get; set; }
+        public string incomming_state { get; set; }
+        public string incomming_date { get; set; }
+        public string company_name { get; set; }
+        public string incomming_rep { get; set; }
+        public int incomming_count { get; set; }
+        public string product_name { get; set; }
+        public string orderexam_result { get; set; }
+    }
+
+    public class IncommingHistoryVO
+    {
+        public string product_name { get; set; }
+        public int incomming_count { get; set; }
+        public string incomming_date { get; set; }
+        public string orderexam_result { get; set; }
+    }
 }

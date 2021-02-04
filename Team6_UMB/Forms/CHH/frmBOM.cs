@@ -16,6 +16,8 @@ namespace Team6_UMB.Forms
     {
         BOMService service = new BOMService();
         List<BOMVO> allList;
+        List<GetProdTypeVO> GetProdType;
+
         int bomID, bom_use_count, bom_level;
         string bom_parent_id, prod_parent_id, prod_parent_name, product_id, product_name, product_type, product_unit, bom_comment;
 
@@ -42,13 +44,7 @@ namespace Team6_UMB.Forms
         public frmBOM()
         {
             InitializeComponent();
-            newBtns1.btnBarCode.Visible = false;
-            newBtns1.btnShipment.Visible = false;
-            newBtns1.btnDocument.Visible = false;
-            newBtns1.btnSearch.Visible = false;
-            newBtns1.btnWait.Visible = false;
-            newBtns1.btnExcel.Visible = false;
-            newBtns1.btnPrint.Visible = false;
+            newBtns1.btnBarCode.Visible = newBtns1.btnShipment.Visible = newBtns1.btnDocument.Visible = newBtns1.btnSearch.Visible = newBtns1.btnWait.Visible = newBtns1.btnExcel.Visible = newBtns1.btnPrint.Visible = false;
         }
 
         private void frmBOM_Load(object sender, EventArgs e)
@@ -84,6 +80,10 @@ namespace Team6_UMB.Forms
             allList = service.GetBOMCBProdName();
             CommonUtil.BOMProdName(cbProdName, allList);
 
+            ProdStatusService service2 = new ProdStatusService();
+            GetProdType = service2.GetProdType();
+            CommonUtil.ProdTypeBinding(cbProdType, GetProdType);
+
             DGV_Binding_Lv0();
         }
 
@@ -110,14 +110,14 @@ namespace Team6_UMB.Forms
             btnPreView.PerformClick();
         }
 
-        private void cbLevel_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            if (cbLevel.SelectedIndex > 0)
-            {
-                allList = service.GetBOMComboBoxCall(int.Parse(cbLevel.Text));
-                dgvBOM_Lv0.DataSource = allList;
-            }
-        }
+        //private void cbLevel_SelectedIndexChanged(object sender, EventArgs e)
+        //{
+        //    if (cbLevel.SelectedIndex > 0)
+        //    {
+        //        allList = service.GetBOMComboBoxCall(int.Parse(cbLevel.Text));
+        //        dgvBOM_Lv0.DataSource = allList;
+        //    }
+        //}
 
         private void btnWhere_Click(object sender, EventArgs e)
         {

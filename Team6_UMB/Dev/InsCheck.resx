@@ -117,4 +117,19 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <metadata name="sqlDataSource1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
+  <data name="customSqlQuery1.Sql" xml:space="preserve">
+    <value>select cl_inc_id, incomming_ID, 
+		isnull(cl_inc_Color, ' ') as cl_inc_Color,
+		isnull(cl_inc_Torn, ' ') as  cl_inc_Torn, 
+		isnull(cl_inc_Length, ' ') as cl_inc_Length,
+		isnull(cl_inc_Crack, ' ') as cl_inc_Crack,
+		isnull(etc, ' ') as etc
+from TBL_INC_CHECKLIST where incomming_ID in (1, 2)</value>
+  </data>
+  <data name="sqlDataSource1.ResultSchemaSerializable" xml:space="preserve">
+    <value>PERhdGFTZXQgTmFtZT0ic3FsRGF0YVNvdXJjZTEiPjxWaWV3IE5hbWU9IlF1ZXJ5Ij48RmllbGQgTmFtZT0iY2xfaW5jX2lkIiBUeXBlPSJJbnQzMiIgLz48RmllbGQgTmFtZT0iaW5jb21taW5nX0lEIiBUeXBlPSJJbnQzMiIgLz48RmllbGQgTmFtZT0iY2xfaW5jX0NvbG9yIiBUeXBlPSJTdHJpbmciIC8+PEZpZWxkIE5hbWU9ImNsX2luY19Ub3JuIiBUeXBlPSJTdHJpbmciIC8+PEZpZWxkIE5hbWU9ImNsX2luY19MZW5ndGgiIFR5cGU9IlN0cmluZyIgLz48RmllbGQgTmFtZT0iY2xfaW5jX0NyYWNrIiBUeXBlPSJTdHJpbmciIC8+PEZpZWxkIE5hbWU9ImV0YyIgVHlwZT0iU3RyaW5nIiAvPjwvVmlldz48L0RhdGFTZXQ+</value>
+  </data>
 </root>

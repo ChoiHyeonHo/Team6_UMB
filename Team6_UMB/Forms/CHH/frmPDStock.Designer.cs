@@ -31,30 +31,22 @@ namespace Team6_UMB.Forms
         {
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.cbProdName = new System.Windows.Forms.ComboBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.periodSearchControl1 = new PJT_Olive.Control.PeriodSearchControl();
-            this.comboBox3 = new System.Windows.Forms.ComboBox();
+            this.periodSearchControl = new PJT_Olive.Control.PeriodSearchControl();
+            this.cbWHName = new System.Windows.Forms.ComboBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.btnSearch = new System.Windows.Forms.Button();
+            this.cbProdType = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.dgV_Custom1 = new Team6_UMB.DGV_Custom();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.btnSearchExcelPrint1 = new Team6_UMB.Controls.btnSearchExcelPrint();
+            this.dgv_PDStock = new Team6_UMB.DGV_Custom();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label6 = new System.Windows.Forms.Label();
+            this.newBtns1 = new Team6_UMB.Controls.NewBtns();
             this.panel1.SuspendLayout();
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgV_Custom1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_PDStock)).BeginInit();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -62,10 +54,10 @@ namespace Team6_UMB.Forms
             // 
             this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel1.Controls.Add(this.btnSearchExcelPrint1);
+            this.panel1.Controls.Add(this.newBtns1);
             this.panel1.Size = new System.Drawing.Size(1511, 35);
             this.panel1.Controls.SetChildIndex(this.label1, 0);
-            this.panel1.Controls.SetChildIndex(this.btnSearchExcelPrint1, 0);
+            this.panel1.Controls.SetChildIndex(this.newBtns1, 0);
             // 
             // label1
             // 
@@ -76,20 +68,30 @@ namespace Team6_UMB.Forms
             // 
             this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupBox1.Controls.Add(this.cbProdName);
             this.groupBox1.Controls.Add(this.label4);
-            this.groupBox1.Controls.Add(this.periodSearchControl1);
-            this.groupBox1.Controls.Add(this.comboBox3);
+            this.groupBox1.Controls.Add(this.periodSearchControl);
+            this.groupBox1.Controls.Add(this.cbWHName);
             this.groupBox1.Controls.Add(this.label5);
-            this.groupBox1.Controls.Add(this.button1);
-            this.groupBox1.Controls.Add(this.comboBox1);
+            this.groupBox1.Controls.Add(this.btnSearch);
+            this.groupBox1.Controls.Add(this.cbProdType);
             this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Controls.Add(this.textBox1);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Location = new System.Drawing.Point(12, 57);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(1511, 50);
             this.groupBox1.TabIndex = 18;
             this.groupBox1.TabStop = false;
+            // 
+            // cbProdName
+            // 
+            this.cbProdName.Font = new System.Drawing.Font("나눔바른고딕", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.cbProdName.FormattingEnabled = true;
+            this.cbProdName.Location = new System.Drawing.Point(414, 16);
+            this.cbProdName.Name = "cbProdName";
+            this.cbProdName.Size = new System.Drawing.Size(178, 25);
+            this.cbProdName.TabIndex = 37;
+            this.cbProdName.SelectedIndexChanged += new System.EventHandler(this.cbProdName_SelectedIndexChanged);
             // 
             // label4
             // 
@@ -101,25 +103,27 @@ namespace Team6_UMB.Forms
             this.label4.TabIndex = 36;
             this.label4.Text = "기간";
             // 
-            // periodSearchControl1
+            // periodSearchControl
             // 
-            this.periodSearchControl1.DateType = "";
-            this.periodSearchControl1.dtFrom = "2021-01-12";
-            this.periodSearchControl1.dtTo = "2021-01-19";
-            this.periodSearchControl1.Font = new System.Drawing.Font("돋움", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.periodSearchControl1.Location = new System.Drawing.Point(41, 15);
-            this.periodSearchControl1.Name = "periodSearchControl1";
-            this.periodSearchControl1.Size = new System.Drawing.Size(301, 29);
-            this.periodSearchControl1.TabIndex = 35;
+            this.periodSearchControl.DateType = "";
+            this.periodSearchControl.dtFrom = "2021-01-12";
+            this.periodSearchControl.dtTo = "2021-01-19";
+            this.periodSearchControl.Font = new System.Drawing.Font("돋움", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.periodSearchControl.Location = new System.Drawing.Point(41, 15);
+            this.periodSearchControl.Name = "periodSearchControl";
+            this.periodSearchControl.Size = new System.Drawing.Size(301, 29);
+            this.periodSearchControl.TabIndex = 35;
+            this.periodSearchControl.ChangedPeriod += new System.EventHandler(this.periodSearchControl1_ChangedPeriod);
             // 
-            // comboBox3
+            // cbWHName
             // 
-            this.comboBox3.Font = new System.Drawing.Font("나눔바른고딕", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Location = new System.Drawing.Point(969, 15);
-            this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(199, 25);
-            this.comboBox3.TabIndex = 34;
+            this.cbWHName.Font = new System.Drawing.Font("나눔바른고딕", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.cbWHName.FormattingEnabled = true;
+            this.cbWHName.Location = new System.Drawing.Point(969, 15);
+            this.cbWHName.Name = "cbWHName";
+            this.cbWHName.Size = new System.Drawing.Size(199, 25);
+            this.cbWHName.TabIndex = 34;
+            this.cbWHName.SelectedIndexChanged += new System.EventHandler(this.cbWHName_SelectedIndexChanged);
             // 
             // label5
             // 
@@ -131,28 +135,30 @@ namespace Team6_UMB.Forms
             this.label5.TabIndex = 33;
             this.label5.Text = "창고";
             // 
-            // button1
+            // btnSearch
             // 
-            this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.btnSearch.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.button1.BackgroundImage = global::Team6_UMB.Properties.Resources.Search;
-            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Location = new System.Drawing.Point(1174, 13);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(34, 30);
-            this.button1.TabIndex = 32;
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnSearch.BackgroundImage = global::Team6_UMB.Properties.Resources.Search;
+            this.btnSearch.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnSearch.FlatAppearance.BorderSize = 0;
+            this.btnSearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSearch.Location = new System.Drawing.Point(1174, 13);
+            this.btnSearch.Name = "btnSearch";
+            this.btnSearch.Size = new System.Drawing.Size(34, 30);
+            this.btnSearch.TabIndex = 32;
+            this.btnSearch.UseVisualStyleBackColor = true;
+            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
             // 
-            // comboBox1
+            // cbProdType
             // 
-            this.comboBox1.Font = new System.Drawing.Font("나눔바른고딕", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(689, 15);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(199, 25);
-            this.comboBox1.TabIndex = 27;
+            this.cbProdType.Font = new System.Drawing.Font("나눔바른고딕", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.cbProdType.FormattingEnabled = true;
+            this.cbProdType.Location = new System.Drawing.Point(689, 15);
+            this.cbProdType.Name = "cbProdType";
+            this.cbProdType.Size = new System.Drawing.Size(199, 25);
+            this.cbProdType.TabIndex = 27;
+            this.cbProdType.SelectedIndexChanged += new System.EventHandler(this.cbProdType_SelectedIndexChanged);
             // 
             // label2
             // 
@@ -164,14 +170,6 @@ namespace Team6_UMB.Forms
             this.label2.TabIndex = 26;
             this.label2.Text = "제품분류";
             // 
-            // textBox1
-            // 
-            this.textBox1.Font = new System.Drawing.Font("나눔바른고딕", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.textBox1.Location = new System.Drawing.Point(414, 15);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(180, 25);
-            this.textBox1.TabIndex = 25;
-            // 
             // label3
             // 
             this.label3.AutoSize = true;
@@ -182,13 +180,13 @@ namespace Team6_UMB.Forms
             this.label3.TabIndex = 24;
             this.label3.Text = "제품명";
             // 
-            // dgV_Custom1
+            // dgv_PDStock
             // 
-            this.dgV_Custom1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.dgv_PDStock.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.dgV_Custom1.BackgroundColor = System.Drawing.Color.White;
-            this.dgV_Custom1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dgv_PDStock.BackgroundColor = System.Drawing.Color.White;
+            this.dgv_PDStock.BorderStyle = System.Windows.Forms.BorderStyle.None;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
             dataGridViewCellStyle1.Font = new System.Drawing.Font("나눔바른고딕", 9F);
@@ -196,85 +194,19 @@ namespace Team6_UMB.Forms
             dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgV_Custom1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
-            this.dgV_Custom1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgV_Custom1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Column1,
-            this.Column2,
-            this.Column3,
-            this.Column4,
-            this.Column5,
-            this.Column8,
-            this.Column6,
-            this.Column7});
-            this.dgV_Custom1.Cursor = System.Windows.Forms.Cursors.Arrow;
-            this.dgV_Custom1.GridColor = System.Drawing.Color.LightGray;
-            this.dgV_Custom1.Location = new System.Drawing.Point(12, 141);
-            this.dgV_Custom1.Margin = new System.Windows.Forms.Padding(4, 1, 4, 1);
-            this.dgV_Custom1.MinimumSize = new System.Drawing.Size(150, 150);
-            this.dgV_Custom1.Name = "dgV_Custom1";
-            this.dgV_Custom1.RowTemplate.Height = 23;
-            this.dgV_Custom1.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.dgV_Custom1.Size = new System.Drawing.Size(1510, 800);
-            this.dgV_Custom1.TabIndex = 19;
-            // 
-            // Column1
-            // 
-            this.Column1.HeaderText = "ID";
-            this.Column1.Name = "Column1";
-            this.Column1.Width = 80;
-            // 
-            // Column2
-            // 
-            this.Column2.HeaderText = "제품명";
-            this.Column2.Name = "Column2";
-            this.Column2.Width = 250;
-            // 
-            // Column3
-            // 
-            this.Column3.HeaderText = "제품유형";
-            this.Column3.Name = "Column3";
-            this.Column3.Width = 250;
-            // 
-            // Column4
-            // 
-            this.Column4.HeaderText = "창고";
-            this.Column4.Name = "Column4";
-            this.Column4.Width = 200;
-            // 
-            // Column5
-            // 
-            this.Column5.HeaderText = "재고량";
-            this.Column5.Name = "Column5";
-            this.Column5.Width = 150;
-            // 
-            // Column8
-            // 
-            this.Column8.HeaderText = "업체명";
-            this.Column8.Name = "Column8";
-            this.Column8.Width = 200;
-            // 
-            // Column6
-            // 
-            this.Column6.HeaderText = "입고일";
-            this.Column6.Name = "Column6";
-            this.Column6.Width = 150;
-            // 
-            // Column7
-            // 
-            this.Column7.HeaderText = "출고일";
-            this.Column7.Name = "Column7";
-            this.Column7.Width = 150;
-            // 
-            // btnSearchExcelPrint1
-            // 
-            this.btnSearchExcelPrint1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(52)))), ((int)(((byte)(79)))));
-            this.btnSearchExcelPrint1.Dock = System.Windows.Forms.DockStyle.Right;
-            this.btnSearchExcelPrint1.Location = new System.Drawing.Point(1285, 0);
-            this.btnSearchExcelPrint1.Name = "btnSearchExcelPrint1";
-            this.btnSearchExcelPrint1.Size = new System.Drawing.Size(226, 35);
-            this.btnSearchExcelPrint1.TabIndex = 2;
-            this.btnSearchExcelPrint1.btnSearch_Event += new System.EventHandler(this.btnSearchExcelPrint1_btnSearch_Event);
+            this.dgv_PDStock.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.dgv_PDStock.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgv_PDStock.Cursor = System.Windows.Forms.Cursors.Arrow;
+            this.dgv_PDStock.GridColor = System.Drawing.Color.LightGray;
+            this.dgv_PDStock.Location = new System.Drawing.Point(12, 141);
+            this.dgv_PDStock.Margin = new System.Windows.Forms.Padding(4, 1, 4, 1);
+            this.dgv_PDStock.MinimumSize = new System.Drawing.Size(150, 150);
+            this.dgv_PDStock.Name = "dgv_PDStock";
+            this.dgv_PDStock.RowTemplate.Height = 23;
+            this.dgv_PDStock.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.dgv_PDStock.Size = new System.Drawing.Size(1510, 800);
+            this.dgv_PDStock.TabIndex = 19;
+            this.dgv_PDStock.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_PDStock_CellDoubleClick);
             // 
             // panel2
             // 
@@ -293,27 +225,38 @@ namespace Team6_UMB.Forms
             this.label6.Font = new System.Drawing.Font("나눔바른고딕", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.label6.Location = new System.Drawing.Point(12, 9);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(115, 17);
+            this.label6.Size = new System.Drawing.Size(102, 17);
             this.label6.TabIndex = 22;
-            this.label6.Text = "불량관리 등록내역";
+            this.label6.Text = "재고현황 리스트";
+            // 
+            // newBtns1
+            // 
+            this.newBtns1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(52)))), ((int)(((byte)(79)))));
+            this.newBtns1.Dock = System.Windows.Forms.DockStyle.Right;
+            this.newBtns1.Location = new System.Drawing.Point(741, 0);
+            this.newBtns1.Name = "newBtns1";
+            this.newBtns1.Size = new System.Drawing.Size(770, 35);
+            this.newBtns1.TabIndex = 2;
+            this.newBtns1.btnRefresh_Event += new System.EventHandler(this.newBtns1_btnRefresh_Event);
             // 
             // frmPDStock
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.ClientSize = new System.Drawing.Size(1535, 950);
             this.Controls.Add(this.panel2);
-            this.Controls.Add(this.dgV_Custom1);
+            this.Controls.Add(this.dgv_PDStock);
             this.Controls.Add(this.groupBox1);
             this.Name = "frmPDStock";
+            this.Load += new System.EventHandler(this.frmPDStock_Load);
             this.Controls.SetChildIndex(this.panel1, 0);
             this.Controls.SetChildIndex(this.groupBox1, 0);
-            this.Controls.SetChildIndex(this.dgV_Custom1, 0);
+            this.Controls.SetChildIndex(this.dgv_PDStock, 0);
             this.Controls.SetChildIndex(this.panel2, 0);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgV_Custom1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_PDStock)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.ResumeLayout(false);
@@ -322,26 +265,18 @@ namespace Team6_UMB.Forms
 
         #endregion
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.Button btnSearch;
+        private System.Windows.Forms.ComboBox cbProdType;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label3;
-        private PJT_Olive.Control.PeriodSearchControl periodSearchControl1;
-        private System.Windows.Forms.ComboBox comboBox3;
+        private PJT_Olive.Control.PeriodSearchControl periodSearchControl;
+        private System.Windows.Forms.ComboBox cbWHName;
         private System.Windows.Forms.Label label5;
-        private DGV_Custom dgV_Custom1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column8;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column7;
+        private DGV_Custom dgv_PDStock;
         private System.Windows.Forms.Label label4;
-        private Controls.btnSearchExcelPrint btnSearchExcelPrint1;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label6;
+        private Controls.NewBtns newBtns1;
+        private System.Windows.Forms.ComboBox cbProdName;
     }
 }

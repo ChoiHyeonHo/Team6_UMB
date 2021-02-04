@@ -16,10 +16,22 @@ namespace Team6_UMB.Service
             return dac.OrderList();
         }
 
-        public int IncommingWait(IncommingVO vo)
+        public int IncommingWait(List<IncommingVO> list)
         {
             IncommingDAC dac = new IncommingDAC();
-            return dac.IncommingWait(vo);
+            return dac.IncommingWait(list);
+        }
+
+        public List<IncommingStatusVO> IncommingStatus()
+        {
+            IncommingDAC dac = new IncommingDAC();
+            return dac.IncommingStatus();
+        }
+
+        public List<IncommingHistoryVO> IncommingHistory(string product_name)
+        {
+            IncommingDAC dac = new IncommingDAC();
+            return dac.IncommingHistory(product_name);
         }
     }
 }

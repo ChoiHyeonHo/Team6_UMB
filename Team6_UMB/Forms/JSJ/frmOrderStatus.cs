@@ -14,6 +14,7 @@ namespace Team6_UMB.Forms
     public partial class frmOrderStatus : Team6_UMB.BaseForm.frmList
     {
         List<OrderListVO> list = new List<OrderListVO>();
+        CheckBox headerCheck = new CheckBox();
         int Order_id;
 
         public frmOrderStatus()
@@ -71,7 +72,20 @@ namespace Team6_UMB.Forms
             newBtns1.btnDocument.Visible = false;
             newBtns1.btnSearch.Visible = false;
             newBtns1.btnShipment.Visible = false;
-            newBtns1.btnWait.Visible = false;
+
+            DataGridViewCheckBoxColumn chk = new DataGridViewCheckBoxColumn();
+            chk.HeaderText = "";
+            chk.Name = "chk";
+            chk.Width = 30;
+            dgvOrder.Columns.Add(chk);
+
+            //Header체크 속성추가
+            Point point = dgvOrder.GetCellDisplayRectangle(0, -1, true).Location;
+            headerCheck.Location = new Point(point.X + 8, point.Y + 2);
+            headerCheck.BackColor = Color.White;
+            headerCheck.Size = new Size(18, 18);
+            headerCheck.Click += HeaderCheck_Click;
+            dgvOrder.Controls.Add(headerCheck);
 
             CommonUtil.SetInitGridView(dgvOrder);
             CommonUtil.AddGridTextColumn(dgvOrder, "발주번호", "order_id", 200);
@@ -85,6 +99,17 @@ namespace Team6_UMB.Forms
             OrderList();
         }
 
+        private void HeaderCheck_Click(object sender, EventArgs e)
+        {
+            dgvOrder.EndEdit(); //현재 포커스가 있는 셀의 편집을 종료 (다른 셀로 이동시킨 것과 같은 효과)
+
+            foreach (DataGridViewRow row in dgvOrder.Rows)
+            {
+                DataGridViewCheckBoxCell chk = (DataGridViewCheckBoxCell)row.Cells["chk"];
+                chk.Value = headerCheck.Checked;
+            }
+        }
+
         public void OrderList()
         {
             OrderService service = new OrderService();
@@ -95,6 +120,38 @@ namespace Team6_UMB.Forms
         private void newBtns1_btnRefresh_Event(object sender, EventArgs e)
         {
             OrderList();
+        }
+
+        private void newBtns1_btnWait_Event(object sender, EventArgs e)
+        {
+            IncommingService service = new IncommingService();
+            List<IncommingVO> list = new List<IncommingVO>();
+            IncommingVO vo;
+
+            foreach(DataGridViewRow row in dgvOrder.Rows)
+            {
+                bool bCheck = (bool)row.Cells["chk"].EditedFormattedValue;
+                if(bCheck)
+                {
+                    vo = new IncommingVO();
+                    vo.incomming_count = Convert.ToInt32(row.Cells["order_count"].Value);
+                    vo.incomming_rep = row.Cells["user_name"].Value.ToString();
+                    vo.order_id = Convert.ToInt32(row.Cells["order_id"].Value);
+                    list.Add(vo);
+                }
+            }
+            if (list.Count == 0)
+            {
+                MessageBox.Show("입고대기 목록을 선택해주십시오.");
+            }
+            else
+            {
+                if (service.IncommingWait(list) == 1)
+                {
+                    MessageBox.Show("입고대기 처리완료");
+                    OrderList();
+                }
+            }
         }
     }
 }
