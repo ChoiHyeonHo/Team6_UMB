@@ -55,6 +55,7 @@
     <Compile Include="CHH\BOMDAC.cs" />
     <Compile Include="CHH\MatPriceDAC.cs" />
     <Compile Include="CHH\PDStockDAC.cs" />
+    <Compile Include="CHH\ProdImpInsDAC.cs" />
     <Compile Include="CHH\ProdStatusDAC.cs" />
     <Compile Include="JSJ\AuthorityDAC.cs" />
     <Compile Include="ASB\BORDAC.cs" />

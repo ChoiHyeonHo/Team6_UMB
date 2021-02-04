@@ -19,8 +19,6 @@ namespace Team6_UMB.Dev
 
             using (ReportPrintTool printTool = new ReportPrintTool(rpt))
             {
-                //printTool.ShowPreviewDialog();
-                printTool.PreviewForm.Dock = DockStyle.Fill;
                 printTool.ShowPreviewDialog();
             }
         }

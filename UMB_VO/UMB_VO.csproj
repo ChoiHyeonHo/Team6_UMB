@@ -48,6 +48,7 @@
     <Compile Include="CHH\BOMVO.cs" />
     <Compile Include="CHH\MatPriceVO.cs" />
     <Compile Include="CHH\PDStockVO.cs" />
+    <Compile Include="CHH\ProdImpInsVO.cs" />
     <Compile Include="CHH\ProdStatusVO.cs" />
     <Compile Include="ComboItemVO.cs" />
     <Compile Include="JSJ\AuthorityVO.cs" />

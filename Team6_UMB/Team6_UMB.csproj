@@ -144,6 +144,12 @@
     <Compile Include="Dev\frmReportPreview.Designer.cs">
       <DependentUpon>frmReportPreview.cs</DependentUpon>
     </Compile>
+    <Compile Include="Dev\InsCheck.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Dev\InsCheck.Designer.cs">
+      <DependentUpon>InsCheck.cs</DependentUpon>
+    </Compile>
     <Compile Include="Dev\ProdStatusBarCode.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -287,6 +293,12 @@
     </Compile>
     <Compile Include="Forms\CHH\frmCheckHistory.Designer.cs">
       <DependentUpon>frmCheckHistory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\CHH\frmImpInsComment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\CHH\frmImpInsComment.Designer.cs">
+      <DependentUpon>frmImpInsComment.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\CHH\frmImpInspecPopUp.cs">
       <SubType>Form</SubType>
@@ -472,6 +484,7 @@
     <Compile Include="Service\MatPriceService.cs" />
     <Compile Include="Service\OrderService.cs" />
     <Compile Include="Service\PDStockService.cs" />
+    <Compile Include="Service\ProdImpInsService.cs" />
     <Compile Include="Service\ProdStatusService.cs" />
     <Compile Include="Service\ProductService.cs" />
     <Compile Include="Service\SalesPriceService.cs" />
@@ -534,6 +547,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Controls\periodSearchControl.resx">
       <DependentUpon>periodSearchControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dev\InsCheck.resx">
+      <DependentUpon>InsCheck.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Dev\ProdStatusBarCode.resx">
       <DependentUpon>ProdStatusBarCode.cs</DependentUpon>
@@ -606,6 +622,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\CHH\frmCheckHistory.resx">
       <DependentUpon>frmCheckHistory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\CHH\frmImpInsComment.resx">
+      <DependentUpon>frmImpInsComment.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\CHH\frmImpInspecPopUp.resx">
       <DependentUpon>frmImpInspecPopUp.cs</DependentUpon>

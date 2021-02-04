@@ -13,7 +13,7 @@ namespace Team6_UMB.Forms
     public partial class frmPDStockPopUp : Team6_UMB.frmPopUp
     {
         PDStockService service = new PDStockService();
-        List<PDStockVO> allList;
+        //List<PDStockVO> allList;
 
         int ps_id, ps_stock;
         string product_id, product_name, product_type, w_name, company_name, ps_idate, ps_odate;
