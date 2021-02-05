@@ -28,11 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmAuthority));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            this.imageList1 = new System.Windows.Forms.ImageList(this.components);
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.label2 = new System.Windows.Forms.Label();
             this.btnSearch = new System.Windows.Forms.Button();
@@ -62,16 +59,6 @@
             // 
             this.label1.Size = new System.Drawing.Size(153, 24);
             this.label1.Text = "사용자 권한 관리";
-            // 
-            // imageList1
-            // 
-            this.imageList1.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imageList1.ImageStream")));
-            this.imageList1.TransparentColor = System.Drawing.Color.Transparent;
-            this.imageList1.Images.SetKeyName(0, "delete.png");
-            this.imageList1.Images.SetKeyName(1, "erase.png");
-            this.imageList1.Images.SetKeyName(2, "Create.png");
-            this.imageList1.Images.SetKeyName(3, "Excel.png");
-            this.imageList1.Images.SetKeyName(4, "Print.png");
             // 
             // groupBox1
             // 
@@ -163,6 +150,7 @@
             this.dgvDepartment.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.dgvDepartment.Size = new System.Drawing.Size(1094, 800);
             this.dgvDepartment.TabIndex = 46;
+            this.dgvDepartment.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvDepartment_CellClick);
             // 
             // dgvMenu
             // 
@@ -229,7 +217,6 @@
         }
 
         #endregion
-        private System.Windows.Forms.ImageList imageList1;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button btnSearch;

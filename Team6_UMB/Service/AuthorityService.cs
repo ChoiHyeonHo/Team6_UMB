@@ -15,5 +15,23 @@ namespace Team6_UMB.Service
             AuthorityDAC dac = new AuthorityDAC();
             return dac.DepartmentList();
         }
+
+        public int UpdateAuthority(List<AuthorityVO> list, int department_id)
+        {
+            AuthorityDAC dac = new AuthorityDAC();
+            return dac.UpdateAuthority(list, department_id);
+        }
+
+        public List<string> MenuCheck(int department_id)
+        {
+            AuthorityDAC dac = new AuthorityDAC();
+            return dac.MenuCheck(department_id);
+        }
+
+        //public List<AuthorityVO> MenuCheck(int department_id)
+        //{
+        //    AuthorityDAC dac = new AuthorityDAC();
+        //    return dac.MenuCheck(department_id);
+        //}
     }
 }
