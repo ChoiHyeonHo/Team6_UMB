@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 using Team6_UMB.Service;
@@ -14,6 +15,7 @@ namespace Team6_UMB.Forms
     {
         CheckBox headerCheck = new CheckBox();
         (List<DepartmentVO>, List<MenuVO>) list;
+        int department_id;
 
         public frmAuthority()
         {
@@ -55,7 +57,6 @@ namespace Team6_UMB.Forms
             CommonUtil.SetInitGridView(dgvMenu);
             CommonUtil.AddGridTextColumn(dgvMenu, "메뉴명", "common_name", 300);
 
-
             List();   
         }
 
@@ -80,7 +81,60 @@ namespace Team6_UMB.Forms
 
         private void newBtns1_btnUpdate_Event(object sender, EventArgs e)
         {
+            AuthorityService service = new AuthorityService();
+            List<AuthorityVO> list = new List<AuthorityVO>();
+            AuthorityVO vo;
 
+            foreach (DataGridViewRow row in dgvMenu.Rows)
+            {
+                bool bCheck = (bool)row.Cells["chk"].EditedFormattedValue;
+                if (bCheck)
+                {
+                    vo = new AuthorityVO();
+                    vo.auth_formname = row.Cells["common_name"].Value.ToString();
+                    list.Add(vo);
+                }
+            }
+            if (list.Count == 0)
+            {
+                MessageBox.Show("메뉴를 선택해 주십시오.");
+            }
+            else
+            {
+                if (service.UpdateAuthority(list, department_id) == 1)
+                {
+                    MessageBox.Show("권한 수정 완료");
+                }
+            }
+        }
+
+        private void dgvDepartment_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            department_id = Convert.ToInt32(dgvDepartment[0, e.RowIndex].Value);
+
+            AuthorityService service = new AuthorityService();
+            //List<AuthorityVO> MenuList = service.MenuCheck(department_id);
+            List<string> MenuList = service.MenuCheck(department_id);
+
+            foreach(DataGridViewRow row in dgvMenu.Rows)
+            {
+                //AuthorityVO Menu = new AuthorityVO() {auth_formname = row.Cells["common_name"].Value.ToString()};
+                //if (MenuList.Contains(Menu))
+                //{
+                //    row.Cells["chk"].Value = true;
+                //}
+
+                string Menu = row.Cells["common_name"].Value.ToString();
+                if(MenuList.Contains(Menu))
+                {
+                    row.Cells["chk"].Value = true;
+                }
+                else
+
+                {
+                    row.Cells["chk"].Value = false;
+                }
+            }
         }
     }
 }
