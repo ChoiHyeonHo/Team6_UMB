@@ -37,17 +37,14 @@ where incomming_state = '대기' and (orderexam_result = '미실시' or orderexa
         }
         public List<InsCheckVO> GetInsCheckInfo(string temp)
         {
-            string sql = $@"select cl_inc_id, incomming_ID, 
-                                    isnull(cl_inc_Color, '미실시') as cl_inc_Color,
-                                    isnull(cl_inc_Torn, '미실시') as  cl_inc_Torn, 
-                                    isnull(cl_inc_Length, '미실시') as cl_inc_Length,
-                                    isnull(cl_inc_Crack, '미실시') as cl_inc_Crack,
-                                    isnull(etc, '없음') as etc
-                            from TBL_INC_CHECKLIST where incomming_ID in ({temp})
-                            and (not cl_inc_Color in ('양호')
-                            or not cl_inc_Torn in ('양호')
-                            or not cl_inc_Length in ('양호')
-                            or not cl_inc_Crack in ('양호'))";
+            string sql = $@"select cl_inc_id, IC.incomming_ID,
+		                        isnull(cl_inc_Color, '미실시') as cl_inc_Color,
+		                        isnull(cl_inc_Torn, '미실시') as  cl_inc_Torn, 
+		                        isnull(cl_inc_Length, '미실시') as cl_inc_Length,
+		                        isnull(cl_inc_Crack, '미실시') as cl_inc_Crack,
+		                        isnull(etc, '없음') as etc
+                        from TBL_INC_CHECKLIST IC join TBL_INCOMMING I on IC.incomming_ID = I.incomming_ID 
+                        where IC.incomming_ID in ({temp}) and orderexam_result = '미실시'";
 
             using (SqlCommand cmd = new SqlCommand(sql, conn))
             {

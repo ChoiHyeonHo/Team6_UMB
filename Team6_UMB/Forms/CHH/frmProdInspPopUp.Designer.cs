@@ -31,34 +31,36 @@ namespace Team6_UMB.Forms.CHH
         {
             this.components = new System.ComponentModel.Container();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmProdInspPopUp));
             this.dgv_CheckList = new Team6_UMB.DGV_Custom();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.button3 = new System.Windows.Forms.Button();
-            this.btnPrint = new System.Windows.Forms.Button();
-            this.imageList1 = new System.Windows.Forms.ImageList(this.components);
+            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.구성품ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.양품ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.불량ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.포장ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.양품ToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.불량ToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.비고ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.btnUpdate = new System.Windows.Forms.Button();
-            this.btnCreate = new System.Windows.Forms.Button();
+            this.btnCancle = new System.Windows.Forms.Button();
+            this.btnEdit = new System.Windows.Forms.Button();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.btnClose = new System.Windows.Forms.Button();
+            this.newBtns1 = new Team6_UMB.Controls.NewBtns();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_CheckList)).BeginInit();
+            this.contextMenuStrip1.SuspendLayout();
             this.panel2.SuspendLayout();
+            this.panel3.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.button3);
-            this.panel1.Controls.Add(this.btnPrint);
+            this.panel1.Controls.Add(this.newBtns1);
+            this.panel1.Controls.Add(this.panel3);
             this.panel1.Size = new System.Drawing.Size(770, 35);
-            this.panel1.Controls.SetChildIndex(this.btnPrint, 0);
+            this.panel1.Controls.SetChildIndex(this.panel3, 0);
+            this.panel1.Controls.SetChildIndex(this.newBtns1, 0);
             this.panel1.Controls.SetChildIndex(this.label1, 0);
-            this.panel1.Controls.SetChildIndex(this.button3, 0);
             // 
             // label1
             // 
@@ -78,14 +80,7 @@ namespace Team6_UMB.Forms.CHH
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dgv_CheckList.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgv_CheckList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgv_CheckList.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Column1,
-            this.Column2,
-            this.Column3,
-            this.Column4,
-            this.Column5,
-            this.Column6,
-            this.Column7});
+            this.dgv_CheckList.ContextMenuStrip = this.contextMenuStrip1;
             this.dgv_CheckList.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.dgv_CheckList.GridColor = System.Drawing.Color.LightGray;
             this.dgv_CheckList.Location = new System.Drawing.Point(12, 55);
@@ -97,116 +92,137 @@ namespace Team6_UMB.Forms.CHH
             this.dgv_CheckList.Size = new System.Drawing.Size(770, 366);
             this.dgv_CheckList.TabIndex = 17;
             // 
-            // Column1
+            // contextMenuStrip1
             // 
-            this.Column1.HeaderText = "ID";
-            this.Column1.Name = "Column1";
-            this.Column1.Width = 50;
+            this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.구성품ToolStripMenuItem,
+            this.포장ToolStripMenuItem,
+            this.비고ToolStripMenuItem});
+            this.contextMenuStrip1.Name = "contextMenuStrip1";
+            this.contextMenuStrip1.Size = new System.Drawing.Size(111, 70);
             // 
-            // Column2
+            // 구성품ToolStripMenuItem
             // 
-            this.Column2.HeaderText = "검사항목명";
-            this.Column2.Name = "Column2";
+            this.구성품ToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.양품ToolStripMenuItem,
+            this.불량ToolStripMenuItem});
+            this.구성품ToolStripMenuItem.Name = "구성품ToolStripMenuItem";
+            this.구성품ToolStripMenuItem.Size = new System.Drawing.Size(110, 22);
+            this.구성품ToolStripMenuItem.Text = "구성품";
             // 
-            // Column3
+            // 양품ToolStripMenuItem
             // 
-            this.Column3.HeaderText = "제품명";
-            this.Column3.Name = "Column3";
-            this.Column3.Width = 200;
+            this.양품ToolStripMenuItem.Name = "양품ToolStripMenuItem";
+            this.양품ToolStripMenuItem.Size = new System.Drawing.Size(98, 22);
+            this.양품ToolStripMenuItem.Text = "양품";
+            this.양품ToolStripMenuItem.Click += new System.EventHandler(this.양품ToolStripMenuItem_Click);
             // 
-            // Column4
+            // 불량ToolStripMenuItem
             // 
-            this.Column4.HeaderText = "검사기준";
-            this.Column4.Name = "Column4";
+            this.불량ToolStripMenuItem.Name = "불량ToolStripMenuItem";
+            this.불량ToolStripMenuItem.Size = new System.Drawing.Size(98, 22);
+            this.불량ToolStripMenuItem.Text = "불량";
+            this.불량ToolStripMenuItem.Click += new System.EventHandler(this.불량ToolStripMenuItem_Click);
             // 
-            // Column5
+            // 포장ToolStripMenuItem
             // 
-            this.Column5.HeaderText = "양품수량";
-            this.Column5.Name = "Column5";
-            this.Column5.Width = 80;
+            this.포장ToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.양품ToolStripMenuItem1,
+            this.불량ToolStripMenuItem1});
+            this.포장ToolStripMenuItem.Name = "포장ToolStripMenuItem";
+            this.포장ToolStripMenuItem.Size = new System.Drawing.Size(110, 22);
+            this.포장ToolStripMenuItem.Text = "포장";
             // 
-            // Column6
+            // 양품ToolStripMenuItem1
             // 
-            this.Column6.HeaderText = "불량수량";
-            this.Column6.Name = "Column6";
-            this.Column6.Width = 80;
+            this.양품ToolStripMenuItem1.Name = "양품ToolStripMenuItem1";
+            this.양품ToolStripMenuItem1.Size = new System.Drawing.Size(98, 22);
+            this.양품ToolStripMenuItem1.Text = "양품";
+            this.양품ToolStripMenuItem1.Click += new System.EventHandler(this.양품ToolStripMenuItem1_Click);
             // 
-            // Column7
+            // 불량ToolStripMenuItem1
             // 
-            this.Column7.HeaderText = "비고";
-            this.Column7.Name = "Column7";
+            this.불량ToolStripMenuItem1.Name = "불량ToolStripMenuItem1";
+            this.불량ToolStripMenuItem1.Size = new System.Drawing.Size(98, 22);
+            this.불량ToolStripMenuItem1.Text = "불량";
+            this.불량ToolStripMenuItem1.Click += new System.EventHandler(this.불량ToolStripMenuItem1_Click);
             // 
-            // button3
+            // 비고ToolStripMenuItem
             // 
-            this.button3.BackColor = System.Drawing.Color.Transparent;
-            this.button3.BackgroundImage = global::Team6_UMB.Properties.Resources.Close;
-            this.button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.button3.FlatAppearance.BorderSize = 0;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Location = new System.Drawing.Point(738, 7);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(29, 23);
-            this.button3.TabIndex = 24;
-            this.button3.UseVisualStyleBackColor = false;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
-            // 
-            // btnPrint
-            // 
-            this.btnPrint.FlatAppearance.BorderColor = System.Drawing.Color.DimGray;
-            this.btnPrint.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnPrint.Font = new System.Drawing.Font("나눔바른고딕", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.btnPrint.ForeColor = System.Drawing.Color.White;
-            this.btnPrint.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnPrint.ImageIndex = 0;
-            this.btnPrint.ImageList = this.imageList1;
-            this.btnPrint.Location = new System.Drawing.Point(663, 4);
-            this.btnPrint.Name = "btnPrint";
-            this.btnPrint.Size = new System.Drawing.Size(69, 28);
-            this.btnPrint.TabIndex = 23;
-            this.btnPrint.Text = "출력";
-            this.btnPrint.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnPrint.UseVisualStyleBackColor = true;
-            // 
-            // imageList1
-            // 
-            this.imageList1.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imageList1.ImageStream")));
-            this.imageList1.TransparentColor = System.Drawing.Color.Transparent;
-            this.imageList1.Images.SetKeyName(0, "Print.png");
+            this.비고ToolStripMenuItem.Name = "비고ToolStripMenuItem";
+            this.비고ToolStripMenuItem.Size = new System.Drawing.Size(110, 22);
+            this.비고ToolStripMenuItem.Text = "비고";
             // 
             // panel2
             // 
-            this.panel2.Controls.Add(this.btnUpdate);
-            this.panel2.Controls.Add(this.btnCreate);
+            this.panel2.Controls.Add(this.btnCancle);
+            this.panel2.Controls.Add(this.btnEdit);
             this.panel2.Location = new System.Drawing.Point(329, 429);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(162, 40);
             this.panel2.TabIndex = 25;
             // 
-            // btnUpdate
+            // btnCancle
             // 
-            this.btnUpdate.BackColor = System.Drawing.Color.Gray;
-            this.btnUpdate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnUpdate.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.btnUpdate.ForeColor = System.Drawing.Color.White;
-            this.btnUpdate.Location = new System.Drawing.Point(84, 4);
-            this.btnUpdate.Name = "btnUpdate";
-            this.btnUpdate.Size = new System.Drawing.Size(75, 34);
-            this.btnUpdate.TabIndex = 18;
-            this.btnUpdate.Text = "취소";
-            this.btnUpdate.UseVisualStyleBackColor = false;
+            this.btnCancle.BackColor = System.Drawing.Color.Gray;
+            this.btnCancle.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCancle.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.btnCancle.ForeColor = System.Drawing.Color.White;
+            this.btnCancle.Location = new System.Drawing.Point(84, 4);
+            this.btnCancle.Name = "btnCancle";
+            this.btnCancle.Size = new System.Drawing.Size(75, 34);
+            this.btnCancle.TabIndex = 18;
+            this.btnCancle.Text = "취소";
+            this.btnCancle.UseVisualStyleBackColor = false;
+            this.btnCancle.Click += new System.EventHandler(this.btnCancle_Click);
             // 
-            // btnCreate
+            // btnEdit
             // 
-            this.btnCreate.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(52)))), ((int)(((byte)(79)))));
-            this.btnCreate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCreate.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.btnCreate.ForeColor = System.Drawing.Color.White;
-            this.btnCreate.Location = new System.Drawing.Point(3, 4);
-            this.btnCreate.Name = "btnCreate";
-            this.btnCreate.Size = new System.Drawing.Size(75, 34);
-            this.btnCreate.TabIndex = 0;
-            this.btnCreate.Text = "저장";
-            this.btnCreate.UseVisualStyleBackColor = false;
+            this.btnEdit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(52)))), ((int)(((byte)(79)))));
+            this.btnEdit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEdit.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.btnEdit.ForeColor = System.Drawing.Color.White;
+            this.btnEdit.Location = new System.Drawing.Point(3, 4);
+            this.btnEdit.Name = "btnEdit";
+            this.btnEdit.Size = new System.Drawing.Size(75, 34);
+            this.btnEdit.TabIndex = 0;
+            this.btnEdit.Text = "저장";
+            this.btnEdit.UseVisualStyleBackColor = false;
+            // 
+            // panel3
+            // 
+            this.panel3.Controls.Add(this.btnClose);
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Right;
+            this.panel3.Location = new System.Drawing.Point(735, 0);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(35, 35);
+            this.panel3.TabIndex = 27;
+            // 
+            // btnClose
+            // 
+            this.btnClose.BackColor = System.Drawing.Color.Transparent;
+            this.btnClose.BackgroundImage = global::Team6_UMB.Properties.Resources.Close;
+            this.btnClose.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnClose.FlatAppearance.BorderSize = 0;
+            this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnClose.Location = new System.Drawing.Point(3, 6);
+            this.btnClose.Name = "btnClose";
+            this.btnClose.Size = new System.Drawing.Size(29, 23);
+            this.btnClose.TabIndex = 22;
+            this.btnClose.UseVisualStyleBackColor = false;
+            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
+            // 
+            // newBtns1
+            // 
+            this.newBtns1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(52)))), ((int)(((byte)(79)))));
+            this.newBtns1.Dock = System.Windows.Forms.DockStyle.Right;
+            this.newBtns1.Location = new System.Drawing.Point(-35, 0);
+            this.newBtns1.Name = "newBtns1";
+            this.newBtns1.Size = new System.Drawing.Size(770, 35);
+            this.newBtns1.TabIndex = 28;
+            this.newBtns1.btnShipment_Event += new System.EventHandler(this.newBtns1_btnShipment_Event);
+            this.newBtns1.btnDocument_Event += new System.EventHandler(this.newBtns1_btnDocument_Event);
+            this.newBtns1.btnRefresh_Event += new System.EventHandler(this.newBtns1_btnRefresh_Event);
             // 
             // frmProdInspPopUp
             // 
@@ -217,13 +233,16 @@ namespace Team6_UMB.Forms.CHH
             this.Controls.Add(this.dgv_CheckList);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmProdInspPopUp";
+            this.Load += new System.EventHandler(this.frmProdInspPopUp_Load);
             this.Controls.SetChildIndex(this.panel1, 0);
             this.Controls.SetChildIndex(this.dgv_CheckList, 0);
             this.Controls.SetChildIndex(this.panel2, 0);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_CheckList)).EndInit();
+            this.contextMenuStrip1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
+            this.panel3.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -231,18 +250,19 @@ namespace Team6_UMB.Forms.CHH
         #endregion
 
         private DGV_Custom dgv_CheckList;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column7;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button btnPrint;
-        private System.Windows.Forms.ImageList imageList1;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Button btnUpdate;
-        private System.Windows.Forms.Button btnCreate;
+        private System.Windows.Forms.Button btnCancle;
+        private System.Windows.Forms.Button btnEdit;
+        private Controls.NewBtns newBtns1;
+        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Button btnClose;
+        private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem 구성품ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem 양품ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem 불량ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem 포장ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem 양품ToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem 불량ToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem 비고ToolStripMenuItem;
     }
 }

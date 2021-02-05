@@ -117,4 +117,17 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <metadata name="sqlDataSource1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
+  <data name="customSqlQuery1.Sql" xml:space="preserve">
+    <value>select cl_ship_id, S.ship_id, P.product_name, cl_ship_Components, cl_ship_Packing, etc, production_state
+                        from TBL_SHIP_CHECKLIST S join ProdCheck P on S.ship_id = P.ship_id
+                        where S.ship_id in (1, 2, 3, 4) and production_state = '작업종료' 
+                        and (cl_ship_Components = '미실시' or cl_ship_Components = '불량')
+                        or (cl_ship_Packing = '미실시' or cl_ship_Packing = '불량')</value>
+  </data>
+  <data name="sqlDataSource1.ResultSchemaSerializable" xml:space="preserve">
+    <value>PERhdGFTZXQgTmFtZT0ic3FsRGF0YVNvdXJjZTEiPjxWaWV3IE5hbWU9IlF1ZXJ5Ij48RmllbGQgTmFtZT0iY2xfc2hpcF9pZCIgVHlwZT0iSW50MzIiIC8+PEZpZWxkIE5hbWU9InNoaXBfaWQiIFR5cGU9IkludDMyIiAvPjxGaWVsZCBOYW1lPSJwcm9kdWN0X25hbWUiIFR5cGU9IlN0cmluZyIgLz48RmllbGQgTmFtZT0iY2xfc2hpcF9Db21wb25lbnRzIiBUeXBlPSJTdHJpbmciIC8+PEZpZWxkIE5hbWU9ImNsX3NoaXBfUGFja2luZyIgVHlwZT0iU3RyaW5nIiAvPjxGaWVsZCBOYW1lPSJldGMiIFR5cGU9IlN0cmluZyIgLz48RmllbGQgTmFtZT0icHJvZHVjdGlvbl9zdGF0ZSIgVHlwZT0iU3RyaW5nIiAvPjwvVmlldz48L0RhdGFTZXQ+</value>
+  </data>
 </root>

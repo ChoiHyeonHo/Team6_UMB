@@ -150,6 +150,12 @@
     <Compile Include="Dev\InsCheck.Designer.cs">
       <DependentUpon>InsCheck.cs</DependentUpon>
     </Compile>
+    <Compile Include="Dev\ProdCheck.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Dev\ProdCheck.Designer.cs">
+      <DependentUpon>ProdCheck.cs</DependentUpon>
+    </Compile>
     <Compile Include="Dev\ProdStatusBarCode.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -485,6 +491,7 @@
     <Compile Include="Service\OrderService.cs" />
     <Compile Include="Service\PDStockService.cs" />
     <Compile Include="Service\ProdImpInsService.cs" />
+    <Compile Include="Service\ProdInsService.cs" />
     <Compile Include="Service\ProdStatusService.cs" />
     <Compile Include="Service\ProductService.cs" />
     <Compile Include="Service\SalesPriceService.cs" />
@@ -551,6 +558,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Dev\InsCheck.resx">
       <DependentUpon>InsCheck.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dev\ProdCheck.resx">
+      <DependentUpon>ProdCheck.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Dev\ProdStatusBarCode.resx">
       <DependentUpon>ProdStatusBarCode.cs</DependentUpon>

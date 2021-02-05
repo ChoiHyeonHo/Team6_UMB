@@ -29,9 +29,7 @@ namespace Team6_UMB.Forms.CHH
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmProdInspection));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
@@ -44,22 +42,13 @@ namespace Team6_UMB.Forms.CHH
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.periodSearchControl1 = new PJT_Olive.Control.PeriodSearchControl();
-            this.dgvIncommingList = new Team6_UMB.DGV_Custom();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.btnCheck = new System.Windows.Forms.Button();
-            this.imageList1 = new System.Windows.Forms.ImageList(this.components);
-            this.label7 = new System.Windows.Forms.Label();
+            this.dgvProdCheck = new Team6_UMB.DGV_Custom();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label8 = new System.Windows.Forms.Label();
+            this.newBtns1 = new Team6_UMB.Controls.NewBtns();
             this.panel1.SuspendLayout();
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvIncommingList)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvProdCheck)).BeginInit();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -67,10 +56,10 @@ namespace Team6_UMB.Forms.CHH
             // 
             this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel1.Controls.Add(this.btnCheck);
+            this.panel1.Controls.Add(this.newBtns1);
             this.panel1.Size = new System.Drawing.Size(1511, 35);
             this.panel1.Controls.SetChildIndex(this.label1, 0);
-            this.panel1.Controls.SetChildIndex(this.btnCheck, 0);
+            this.panel1.Controls.SetChildIndex(this.newBtns1, 0);
             // 
             // label1
             // 
@@ -212,13 +201,13 @@ namespace Team6_UMB.Forms.CHH
             this.periodSearchControl1.Size = new System.Drawing.Size(301, 29);
             this.periodSearchControl1.TabIndex = 0;
             // 
-            // dgvIncommingList
+            // dgvProdCheck
             // 
-            this.dgvIncommingList.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.dgvProdCheck.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.dgvIncommingList.BackgroundColor = System.Drawing.Color.White;
-            this.dgvIncommingList.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dgvProdCheck.BackgroundColor = System.Drawing.Color.White;
+            this.dgvProdCheck.BorderStyle = System.Windows.Forms.BorderStyle.None;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
             dataGridViewCellStyle1.Font = new System.Drawing.Font("나눔바른고딕", 9F);
@@ -226,103 +215,18 @@ namespace Team6_UMB.Forms.CHH
             dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvIncommingList.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
-            this.dgvIncommingList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvIncommingList.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Column1,
-            this.Column2,
-            this.Column3,
-            this.Column4,
-            this.Column5,
-            this.Column6,
-            this.Column7});
-            this.dgvIncommingList.Cursor = System.Windows.Forms.Cursors.Arrow;
-            this.dgvIncommingList.GridColor = System.Drawing.Color.LightGray;
-            this.dgvIncommingList.Location = new System.Drawing.Point(12, 141);
-            this.dgvIncommingList.Margin = new System.Windows.Forms.Padding(4, 1, 4, 1);
-            this.dgvIncommingList.MinimumSize = new System.Drawing.Size(150, 150);
-            this.dgvIncommingList.Name = "dgvIncommingList";
-            this.dgvIncommingList.RowTemplate.Height = 23;
-            this.dgvIncommingList.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.dgvIncommingList.Size = new System.Drawing.Size(1510, 800);
-            this.dgvIncommingList.TabIndex = 27;
-            // 
-            // Column1
-            // 
-            this.Column1.HeaderText = "ID";
-            this.Column1.Name = "Column1";
-            this.Column1.Width = 60;
-            // 
-            // Column2
-            // 
-            this.Column2.HeaderText = "생산번호";
-            this.Column2.Name = "Column2";
-            this.Column2.Width = 150;
-            // 
-            // Column3
-            // 
-            this.Column3.HeaderText = "작업지시번호";
-            this.Column3.Name = "Column3";
-            this.Column3.Width = 200;
-            // 
-            // Column4
-            // 
-            this.Column4.HeaderText = "제품명";
-            this.Column4.Name = "Column4";
-            this.Column4.Width = 200;
-            // 
-            // Column5
-            // 
-            this.Column5.HeaderText = "출하ID";
-            this.Column5.Name = "Column5";
-            this.Column5.Width = 150;
-            // 
-            // Column6
-            // 
-            this.Column6.HeaderText = "생산수량";
-            this.Column6.Name = "Column6";
-            this.Column6.Width = 150;
-            // 
-            // Column7
-            // 
-            this.Column7.HeaderText = "비고";
-            this.Column7.Name = "Column7";
-            this.Column7.Width = 550;
-            // 
-            // btnCheck
-            // 
-            this.btnCheck.Dock = System.Windows.Forms.DockStyle.Right;
-            this.btnCheck.FlatAppearance.BorderColor = System.Drawing.Color.DimGray;
-            this.btnCheck.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCheck.Font = new System.Drawing.Font("나눔바른고딕", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.btnCheck.ForeColor = System.Drawing.Color.White;
-            this.btnCheck.ImageAlign = System.Drawing.ContentAlignment.BottomRight;
-            this.btnCheck.ImageIndex = 0;
-            this.btnCheck.ImageList = this.imageList1;
-            this.btnCheck.Location = new System.Drawing.Point(1442, 0);
-            this.btnCheck.Name = "btnCheck";
-            this.btnCheck.Size = new System.Drawing.Size(69, 35);
-            this.btnCheck.TabIndex = 27;
-            this.btnCheck.Text = "검사";
-            this.btnCheck.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCheck.UseVisualStyleBackColor = true;
-            this.btnCheck.Click += new System.EventHandler(this.btnCheck_Click);
-            // 
-            // imageList1
-            // 
-            this.imageList1.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imageList1.ImageStream")));
-            this.imageList1.TransparentColor = System.Drawing.Color.Transparent;
-            this.imageList1.Images.SetKeyName(0, "check.png");
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("나눔바른고딕", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label7.Location = new System.Drawing.Point(486, 270);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(248, 24);
-            this.label7.TabIndex = 28;
-            this.label7.Text = "생산상태가 생산완료인 것만";
+            this.dgvProdCheck.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.dgvProdCheck.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvProdCheck.Cursor = System.Windows.Forms.Cursors.Arrow;
+            this.dgvProdCheck.GridColor = System.Drawing.Color.LightGray;
+            this.dgvProdCheck.Location = new System.Drawing.Point(12, 141);
+            this.dgvProdCheck.Margin = new System.Windows.Forms.Padding(4, 1, 4, 1);
+            this.dgvProdCheck.MinimumSize = new System.Drawing.Size(150, 150);
+            this.dgvProdCheck.Name = "dgvProdCheck";
+            this.dgvProdCheck.RowTemplate.Height = 23;
+            this.dgvProdCheck.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.dgvProdCheck.Size = new System.Drawing.Size(1510, 800);
+            this.dgvProdCheck.TabIndex = 27;
             // 
             // panel2
             // 
@@ -345,29 +249,38 @@ namespace Team6_UMB.Forms.CHH
             this.label8.TabIndex = 22;
             this.label8.Text = "불량관리 등록내역";
             // 
+            // newBtns1
+            // 
+            this.newBtns1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(52)))), ((int)(((byte)(79)))));
+            this.newBtns1.Dock = System.Windows.Forms.DockStyle.Right;
+            this.newBtns1.Location = new System.Drawing.Point(741, 0);
+            this.newBtns1.Name = "newBtns1";
+            this.newBtns1.Size = new System.Drawing.Size(770, 35);
+            this.newBtns1.TabIndex = 2;
+            this.newBtns1.btnRefresh_Event += new System.EventHandler(this.newBtns1_btnRefresh_Event);
+            this.newBtns1.btnCreate_Event += new System.EventHandler(this.newBtns1_btnCreate_Event);
+            // 
             // frmProdInspection
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.ClientSize = new System.Drawing.Size(1535, 950);
             this.Controls.Add(this.panel2);
-            this.Controls.Add(this.label7);
             this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.dgvIncommingList);
+            this.Controls.Add(this.dgvProdCheck);
             this.Name = "frmProdInspection";
+            this.Load += new System.EventHandler(this.frmProdInspection_Load);
             this.Controls.SetChildIndex(this.panel1, 0);
-            this.Controls.SetChildIndex(this.dgvIncommingList, 0);
+            this.Controls.SetChildIndex(this.dgvProdCheck, 0);
             this.Controls.SetChildIndex(this.groupBox1, 0);
-            this.Controls.SetChildIndex(this.label7, 0);
             this.Controls.SetChildIndex(this.panel2, 0);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvIncommingList)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvProdCheck)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -381,22 +294,13 @@ namespace Team6_UMB.Forms.CHH
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private PJT_Olive.Control.PeriodSearchControl periodSearchControl1;
-        private DGV_Custom dgvIncommingList;
+        private DGV_Custom dgvProdCheck;
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
         private PJT_Olive.Control.PeriodSearchControl periodSearchControl2;
-        private System.Windows.Forms.Button btnCheck;
-        private System.Windows.Forms.ImageList imageList1;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column7;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label8;
+        private Controls.NewBtns newBtns1;
     }
 }

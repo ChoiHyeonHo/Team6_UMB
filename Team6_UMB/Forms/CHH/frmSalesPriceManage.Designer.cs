@@ -54,14 +54,14 @@ namespace Team6_UMB.Forms
             this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel1.Controls.Add(this.newBtns);
-            this.panel1.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
-            this.panel1.Size = new System.Drawing.Size(1727, 44);
+            this.panel1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.panel1.Size = new System.Drawing.Size(1511, 35);
             this.panel1.Controls.SetChildIndex(this.label1, 0);
             this.panel1.Controls.SetChildIndex(this.newBtns, 0);
             // 
             // label1
             // 
-            this.label1.Size = new System.Drawing.Size(108, 25);
+            this.label1.Size = new System.Drawing.Size(124, 24);
             this.label1.Text = "영업단가관리";
             // 
             // dgvPrice
@@ -82,13 +82,13 @@ namespace Team6_UMB.Forms
             this.dgvPrice.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvPrice.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.dgvPrice.GridColor = System.Drawing.Color.LightGray;
-            this.dgvPrice.Location = new System.Drawing.Point(14, 176);
-            this.dgvPrice.Margin = new System.Windows.Forms.Padding(5, 1, 5, 1);
-            this.dgvPrice.MinimumSize = new System.Drawing.Size(171, 188);
+            this.dgvPrice.Location = new System.Drawing.Point(12, 141);
+            this.dgvPrice.Margin = new System.Windows.Forms.Padding(4, 1, 4, 1);
+            this.dgvPrice.MinimumSize = new System.Drawing.Size(150, 150);
             this.dgvPrice.Name = "dgvPrice";
             this.dgvPrice.RowTemplate.Height = 23;
             this.dgvPrice.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.dgvPrice.Size = new System.Drawing.Size(1726, 1000);
+            this.dgvPrice.Size = new System.Drawing.Size(1510, 800);
             this.dgvPrice.TabIndex = 21;
             this.dgvPrice.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvPrice_CellDoubleClick);
             // 
@@ -103,11 +103,9 @@ namespace Team6_UMB.Forms
             this.temp6.Controls.Add(this.label3);
             this.temp6.Controls.Add(this.label2);
             this.temp6.Controls.Add(this.periodSearchControl);
-            this.temp6.Location = new System.Drawing.Point(14, 71);
-            this.temp6.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.temp6.Location = new System.Drawing.Point(12, 57);
             this.temp6.Name = "temp6";
-            this.temp6.Padding = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.temp6.Size = new System.Drawing.Size(1727, 62);
+            this.temp6.Size = new System.Drawing.Size(1511, 50);
             this.temp6.TabIndex = 17;
             this.temp6.TabStop = false;
             // 
@@ -119,10 +117,9 @@ namespace Team6_UMB.Forms
             this.btnWhere.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btnWhere.FlatAppearance.BorderSize = 0;
             this.btnWhere.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnWhere.Location = new System.Drawing.Point(982, 15);
-            this.btnWhere.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnWhere.Location = new System.Drawing.Point(859, 12);
             this.btnWhere.Name = "btnWhere";
-            this.btnWhere.Size = new System.Drawing.Size(39, 38);
+            this.btnWhere.Size = new System.Drawing.Size(34, 30);
             this.btnWhere.TabIndex = 21;
             this.btnWhere.UseVisualStyleBackColor = true;
             this.btnWhere.Click += new System.EventHandler(this.btnWhere_Click);
@@ -130,17 +127,16 @@ namespace Team6_UMB.Forms
             // txtCompanyName
             // 
             this.txtCompanyName.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.txtCompanyName.Location = new System.Drawing.Point(787, 19);
-            this.txtCompanyName.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtCompanyName.Location = new System.Drawing.Point(689, 15);
             this.txtCompanyName.Name = "txtCompanyName";
-            this.txtCompanyName.Size = new System.Drawing.Size(187, 24);
+            this.txtCompanyName.Size = new System.Drawing.Size(164, 24);
             this.txtCompanyName.TabIndex = 25;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label4.Location = new System.Drawing.Point(711, 24);
+            this.label4.Location = new System.Drawing.Point(622, 19);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(60, 18);
             this.label4.TabIndex = 24;
@@ -149,17 +145,16 @@ namespace Team6_UMB.Forms
             // txtProdName
             // 
             this.txtProdName.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.txtProdName.Location = new System.Drawing.Point(473, 19);
-            this.txtProdName.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtProdName.Location = new System.Drawing.Point(414, 15);
             this.txtProdName.Name = "txtProdName";
-            this.txtProdName.Size = new System.Drawing.Size(205, 24);
+            this.txtProdName.Size = new System.Drawing.Size(180, 24);
             this.txtProdName.TabIndex = 23;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label3.Location = new System.Drawing.Point(413, 24);
+            this.label3.Location = new System.Drawing.Point(361, 19);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(47, 18);
             this.label3.TabIndex = 22;
@@ -169,7 +164,7 @@ namespace Team6_UMB.Forms
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label2.Location = new System.Drawing.Point(7, 24);
+            this.label2.Location = new System.Drawing.Point(6, 19);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(34, 18);
             this.label2.TabIndex = 21;
@@ -181,10 +176,9 @@ namespace Team6_UMB.Forms
             this.periodSearchControl.dtFrom = "2021-01-11";
             this.periodSearchControl.dtTo = "2021-01-18";
             this.periodSearchControl.Font = new System.Drawing.Font("돋움", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.periodSearchControl.Location = new System.Drawing.Point(47, 19);
-            this.periodSearchControl.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.periodSearchControl.Location = new System.Drawing.Point(41, 15);
             this.periodSearchControl.Name = "periodSearchControl";
-            this.periodSearchControl.Size = new System.Drawing.Size(344, 36);
+            this.periodSearchControl.Size = new System.Drawing.Size(301, 29);
             this.periodSearchControl.TabIndex = 0;
             this.periodSearchControl.ChangedPeriod += new System.EventHandler(this.periodSearchControl_ChangedPeriod);
             // 
@@ -195,10 +189,9 @@ namespace Team6_UMB.Forms
             this.panel2.BackColor = System.Drawing.Color.Gainsboro;
             this.panel2.Controls.Add(this.cheView);
             this.panel2.Controls.Add(this.label5);
-            this.panel2.Location = new System.Drawing.Point(14, 132);
-            this.panel2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.panel2.Location = new System.Drawing.Point(12, 106);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1727, 44);
+            this.panel2.Size = new System.Drawing.Size(1511, 35);
             this.panel2.TabIndex = 43;
             // 
             // cheView
@@ -206,10 +199,9 @@ namespace Team6_UMB.Forms
             this.cheView.AutoSize = true;
             this.cheView.Dock = System.Windows.Forms.DockStyle.Right;
             this.cheView.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.cheView.Location = new System.Drawing.Point(1648, 0);
-            this.cheView.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.cheView.Location = new System.Drawing.Point(1432, 0);
             this.cheView.Name = "cheView";
-            this.cheView.Size = new System.Drawing.Size(79, 44);
+            this.cheView.Size = new System.Drawing.Size(79, 35);
             this.cheView.TabIndex = 23;
             this.cheView.Text = "전체보기";
             this.cheView.UseVisualStyleBackColor = true;
@@ -219,7 +211,7 @@ namespace Team6_UMB.Forms
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label5.Location = new System.Drawing.Point(14, 11);
+            this.label5.Location = new System.Drawing.Point(12, 9);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(103, 18);
             this.label5.TabIndex = 22;
@@ -229,10 +221,10 @@ namespace Team6_UMB.Forms
             // 
             this.newBtns.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(52)))), ((int)(((byte)(79)))));
             this.newBtns.Dock = System.Windows.Forms.DockStyle.Right;
-            this.newBtns.Location = new System.Drawing.Point(847, 0);
-            this.newBtns.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
+            this.newBtns.Location = new System.Drawing.Point(741, 0);
+            this.newBtns.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.newBtns.Name = "newBtns";
-            this.newBtns.Size = new System.Drawing.Size(880, 44);
+            this.newBtns.Size = new System.Drawing.Size(770, 35);
             this.newBtns.TabIndex = 2;
             this.newBtns.btnRefresh_Event += new System.EventHandler(this.newBtns_btnRefresh_Event);
             this.newBtns.btnCreate_Event += new System.EventHandler(this.newBtns_btnCreate_Event);
@@ -242,12 +234,12 @@ namespace Team6_UMB.Forms
             // 
             // frmSalesPriceManage
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
-            this.ClientSize = new System.Drawing.Size(1754, 1100);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
+            this.ClientSize = new System.Drawing.Size(1488, 856);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.dgvPrice);
             this.Controls.Add(this.temp6);
-            this.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "frmSalesPriceManage";
             this.Load += new System.EventHandler(this.frmSalesPriceManage_Load);
             this.Controls.SetChildIndex(this.panel1, 0);
@@ -273,11 +265,11 @@ namespace Team6_UMB.Forms
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox txtProdName;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label2;
-        private PJT_Olive.Control.PeriodSearchControl periodSearchControl;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label5;
         private Controls.NewBtns newBtns;
         private System.Windows.Forms.CheckBox cheView;
+        private System.Windows.Forms.Label label2;
+        private PJT_Olive.Control.PeriodSearchControl periodSearchControl;
     }
 }
