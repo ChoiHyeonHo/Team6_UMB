@@ -31,10 +31,12 @@ namespace UMB_DAC
 
         public int IncommingWait(List<IncommingVO> list)
         {
-            string sql = "insert into TBL_INCOMMING (incomming_date, incomming_rep, incomming_count, order_id) values(replace(convert(varchar(10), getdate(), 120), '-', '-'), @incomming_rep, @incomming_count, @order_id)";
+            //string sql = @"insert into TBL_INCOMMING (incomming_date, incomming_rep, incomming_count, order_id) values(replace(convert(varchar(10), getdate(), 120), '-', '-'), @incomming_rep, @incomming_count, @order_id);
+            //                update TBL_ORDER set order_deleted = 'Y' where order_id = @order_id";
 
-            using (SqlCommand cmd = new SqlCommand(sql, conn))
+            using (SqlCommand cmd = new SqlCommand())
             {
+                cmd.Connection = conn;
                 SqlTransaction trans = conn.BeginTransaction();
 
                 cmd.Transaction = trans;
@@ -46,13 +48,19 @@ namespace UMB_DAC
                     cmd.Parameters.Add("@order_id", SqlDbType.Int);
                     foreach (IncommingVO vo in list)
                     {
+                        cmd.CommandText = @"insert into TBL_INCOMMING (incomming_date, incomming_rep, incomming_count, order_id, orderexam_result) values(replace(convert(varchar(10), getdate(), 120), '-', '-'), @incomming_rep, @incomming_count, @order_id, '미실시');
+                                            update TBL_ORDER set order_deleted = 'Y' where order_id = @order_id";
+
                         cmd.Parameters["@incomming_rep"].Value = vo.incomming_rep;
                         cmd.Parameters["@incomming_count"].Value = vo.incomming_count;
                         cmd.Parameters["@order_id"].Value = vo.order_id;
 
                         cmd.ExecuteNonQuery();
-                    }
 
+                        cmd.CommandText = @"insert into TBL_INC_CHECKLIST (incomming_ID) select IDENT_CURRENT('TBL_INCOMMING')";
+                        cmd.ExecuteNonQuery();
+
+                    }
                     trans.Commit();
                     conn.Close();
                     return 1;

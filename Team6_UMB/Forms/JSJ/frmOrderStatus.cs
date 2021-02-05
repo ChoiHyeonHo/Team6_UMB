@@ -126,13 +126,14 @@ namespace Team6_UMB.Forms
         {
             IncommingService service = new IncommingService();
             List<IncommingVO> list = new List<IncommingVO>();
-            IncommingVO vo = new IncommingVO();
+            IncommingVO vo;
 
             foreach(DataGridViewRow row in dgvOrder.Rows)
             {
                 bool bCheck = (bool)row.Cells["chk"].EditedFormattedValue;
                 if(bCheck)
                 {
+                    vo = new IncommingVO();
                     vo.incomming_count = Convert.ToInt32(row.Cells["order_count"].Value);
                     vo.incomming_rep = row.Cells["user_name"].Value.ToString();
                     vo.order_id = Convert.ToInt32(row.Cells["order_id"].Value);

@@ -219,6 +219,7 @@
             this.newBtns1.Size = new System.Drawing.Size(770, 33);
             this.newBtns1.TabIndex = 35;
             this.newBtns1.btnSearch_Event += new System.EventHandler(this.newBtns1_btnSearch_Event);
+            this.newBtns1.btnRefresh_Event += new System.EventHandler(this.newBtns1_btnRefresh_Event);
             // 
             // frmIncommingStatus
             // 

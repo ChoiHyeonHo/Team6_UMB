@@ -236,23 +236,18 @@ namespace Team6_UMB.Forms.ASB
             // 
             this.newBtns.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(52)))), ((int)(((byte)(79)))));
             this.newBtns.Dock = System.Windows.Forms.DockStyle.Right;
-            this.newBtns.Location = new System.Drawing.Point(729, 0);
-            this.newBtns.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
+            this.newBtns.Location = new System.Drawing.Point(730, 0);
+            this.newBtns.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.newBtns.Name = "newBtns";
-            this.newBtns.Size = new System.Drawing.Size(998, 44);
-            this.newBtns.TabIndex = 3;
-            this.newBtns.btnRefresh_Event += new System.EventHandler(this.newBtns1_btnRefresh_Event);
-            this.newBtns.btnCreate_Event += new System.EventHandler(this.newBtns_btnCreate_Event);
-            this.newBtns.btnUpdate_Event += new System.EventHandler(this.newBtns_btnUpdate_Event);
-            this.newBtns.btnDelete_Event += new System.EventHandler(this.newBtns_btnDelete_Event);
-            this.newBtns.btnExcel_Event += new System.EventHandler(this.newBtns_btnExcel_Event);
+            this.newBtns.Size = new System.Drawing.Size(997, 44);
+            this.newBtns.TabIndex = 2;
             // 
             // frmBOR
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1754, 1126);
+            this.ClientSize = new System.Drawing.Size(1754, 1100);
             this.Controls.Add(this.dgvBOR);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.groupBox1);

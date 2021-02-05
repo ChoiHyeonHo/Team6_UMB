@@ -84,5 +84,10 @@ namespace Team6_UMB.Forms.JSJ
         {
             product_name = dgvIncomming[5, e.RowIndex].Value.ToString();
         }
+
+        private void newBtns1_btnRefresh_Event(object sender, EventArgs e)
+        {
+            Incomming();
+        }
     }
 }

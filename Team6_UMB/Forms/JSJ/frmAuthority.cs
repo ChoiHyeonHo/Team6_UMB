@@ -22,6 +22,16 @@ namespace Team6_UMB.Forms
 
         private void frmAuthority_Load(object sender, EventArgs e)
         {
+            newBtns1.btnBarCode.Visible = false;
+            newBtns1.btnDocument.Visible = false;
+            newBtns1.btnShipment.Visible = false;
+            newBtns1.btnCreate.Visible = false;
+            newBtns1.btnDelete.Visible = false;
+            newBtns1.btnExcel.Visible = false;
+            newBtns1.btnPrint.Visible = false;
+            newBtns1.btnWait.Visible = false;
+            newBtns1.btnSearch.Visible = false;
+
             CommonUtil.SetInitGridView(dgvDepartment);
             CommonUtil.AddGridTextColumn(dgvDepartment, "부서번호", "department_id", 150);
             CommonUtil.AddGridTextColumn(dgvDepartment, "부서명", "department_name", 300);
@@ -66,6 +76,11 @@ namespace Team6_UMB.Forms
             list = service.DepartmentList();
             dgvDepartment.DataSource = list.Item1;
             dgvMenu.DataSource = list.Item2;
+        }
+
+        private void newBtns1_btnUpdate_Event(object sender, EventArgs e)
+        {
+
         }
     }
 }

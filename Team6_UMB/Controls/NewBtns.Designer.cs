@@ -55,9 +55,10 @@ namespace Team6_UMB.Controls
             this.btnCreate.ImageAlign = System.Drawing.ContentAlignment.BottomRight;
             this.btnCreate.ImageIndex = 2;
             this.btnCreate.ImageList = this.imageList1;
-            this.btnCreate.Location = new System.Drawing.Point(425, 0);
+            this.btnCreate.Location = new System.Drawing.Point(485, 0);
+            this.btnCreate.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnCreate.Name = "btnCreate";
-            this.btnCreate.Size = new System.Drawing.Size(69, 33);
+            this.btnCreate.Size = new System.Drawing.Size(79, 41);
             this.btnCreate.TabIndex = 12;
             this.btnCreate.Text = "등록";
             this.btnCreate.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -90,9 +91,10 @@ namespace Team6_UMB.Controls
             this.btnUpdate.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnUpdate.ImageIndex = 6;
             this.btnUpdate.ImageList = this.imageList1;
-            this.btnUpdate.Location = new System.Drawing.Point(494, 0);
+            this.btnUpdate.Location = new System.Drawing.Point(564, 0);
+            this.btnUpdate.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnUpdate.Name = "btnUpdate";
-            this.btnUpdate.Size = new System.Drawing.Size(69, 33);
+            this.btnUpdate.Size = new System.Drawing.Size(79, 41);
             this.btnUpdate.TabIndex = 13;
             this.btnUpdate.Text = "수정";
             this.btnUpdate.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -108,9 +110,10 @@ namespace Team6_UMB.Controls
             this.btnDelete.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnDelete.ImageIndex = 4;
             this.btnDelete.ImageList = this.imageList1;
-            this.btnDelete.Location = new System.Drawing.Point(563, 0);
+            this.btnDelete.Location = new System.Drawing.Point(643, 0);
+            this.btnDelete.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(69, 33);
+            this.btnDelete.Size = new System.Drawing.Size(79, 41);
             this.btnDelete.TabIndex = 14;
             this.btnDelete.Text = "삭제";
             this.btnDelete.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -126,9 +129,10 @@ namespace Team6_UMB.Controls
             this.btnExcel.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnExcel.ImageIndex = 7;
             this.btnExcel.ImageList = this.imageList1;
-            this.btnExcel.Location = new System.Drawing.Point(632, 0);
+            this.btnExcel.Location = new System.Drawing.Point(722, 0);
+            this.btnExcel.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnExcel.Name = "btnExcel";
-            this.btnExcel.Size = new System.Drawing.Size(69, 33);
+            this.btnExcel.Size = new System.Drawing.Size(79, 41);
             this.btnExcel.TabIndex = 15;
             this.btnExcel.Text = "엑셀";
             this.btnExcel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -144,9 +148,10 @@ namespace Team6_UMB.Controls
             this.btnPrint.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnPrint.ImageIndex = 8;
             this.btnPrint.ImageList = this.imageList1;
-            this.btnPrint.Location = new System.Drawing.Point(701, 0);
+            this.btnPrint.Location = new System.Drawing.Point(801, 0);
+            this.btnPrint.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnPrint.Name = "btnPrint";
-            this.btnPrint.Size = new System.Drawing.Size(69, 33);
+            this.btnPrint.Size = new System.Drawing.Size(79, 41);
             this.btnPrint.TabIndex = 16;
             this.btnPrint.Text = "출력";
             this.btnPrint.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -162,9 +167,10 @@ namespace Team6_UMB.Controls
             this.btnRefresh.ImageAlign = System.Drawing.ContentAlignment.BottomRight;
             this.btnRefresh.ImageIndex = 9;
             this.btnRefresh.ImageList = this.imageList1;
-            this.btnRefresh.Location = new System.Drawing.Point(356, 0);
+            this.btnRefresh.Location = new System.Drawing.Point(406, 0);
+            this.btnRefresh.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnRefresh.Name = "btnRefresh";
-            this.btnRefresh.Size = new System.Drawing.Size(69, 33);
+            this.btnRefresh.Size = new System.Drawing.Size(79, 41);
             this.btnRefresh.TabIndex = 17;
             this.btnRefresh.Text = "Re";
             this.btnRefresh.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -180,9 +186,10 @@ namespace Team6_UMB.Controls
             this.btnWait.ImageAlign = System.Drawing.ContentAlignment.BottomRight;
             this.btnWait.ImageIndex = 1;
             this.btnWait.ImageList = this.imageList1;
-            this.btnWait.Location = new System.Drawing.Point(287, 0);
+            this.btnWait.Location = new System.Drawing.Point(327, 0);
+            this.btnWait.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnWait.Name = "btnWait";
-            this.btnWait.Size = new System.Drawing.Size(69, 33);
+            this.btnWait.Size = new System.Drawing.Size(79, 41);
             this.btnWait.TabIndex = 18;
             this.btnWait.Text = "대기";
             this.btnWait.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -198,9 +205,10 @@ namespace Team6_UMB.Controls
             this.btnSearch.ImageAlign = System.Drawing.ContentAlignment.BottomRight;
             this.btnSearch.ImageIndex = 10;
             this.btnSearch.ImageList = this.imageList1;
-            this.btnSearch.Location = new System.Drawing.Point(218, 0);
+            this.btnSearch.Location = new System.Drawing.Point(248, 0);
+            this.btnSearch.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnSearch.Name = "btnSearch";
-            this.btnSearch.Size = new System.Drawing.Size(69, 33);
+            this.btnSearch.Size = new System.Drawing.Size(79, 41);
             this.btnSearch.TabIndex = 19;
             this.btnSearch.Text = "조회";
             this.btnSearch.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -216,9 +224,10 @@ namespace Team6_UMB.Controls
             this.btnDocument.ImageAlign = System.Drawing.ContentAlignment.BottomRight;
             this.btnDocument.ImageIndex = 5;
             this.btnDocument.ImageList = this.imageList1;
-            this.btnDocument.Location = new System.Drawing.Point(138, 0);
+            this.btnDocument.Location = new System.Drawing.Point(157, 0);
+            this.btnDocument.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnDocument.Name = "btnDocument";
-            this.btnDocument.Size = new System.Drawing.Size(80, 33);
+            this.btnDocument.Size = new System.Drawing.Size(91, 41);
             this.btnDocument.TabIndex = 20;
             this.btnDocument.Text = "명세서";
             this.btnDocument.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -234,9 +243,10 @@ namespace Team6_UMB.Controls
             this.btnShipment.ImageAlign = System.Drawing.ContentAlignment.BottomRight;
             this.btnShipment.ImageIndex = 11;
             this.btnShipment.ImageList = this.imageList1;
-            this.btnShipment.Location = new System.Drawing.Point(69, 0);
+            this.btnShipment.Location = new System.Drawing.Point(78, 0);
+            this.btnShipment.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnShipment.Name = "btnShipment";
-            this.btnShipment.Size = new System.Drawing.Size(69, 33);
+            this.btnShipment.Size = new System.Drawing.Size(79, 41);
             this.btnShipment.TabIndex = 21;
             this.btnShipment.Text = "출하";
             this.btnShipment.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -252,9 +262,10 @@ namespace Team6_UMB.Controls
             this.btnBarCode.ImageAlign = System.Drawing.ContentAlignment.BottomRight;
             this.btnBarCode.ImageIndex = 0;
             this.btnBarCode.ImageList = this.imageList1;
-            this.btnBarCode.Location = new System.Drawing.Point(0, 0);
+            this.btnBarCode.Location = new System.Drawing.Point(-1, 0);
+            this.btnBarCode.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnBarCode.Name = "btnBarCode";
-            this.btnBarCode.Size = new System.Drawing.Size(69, 33);
+            this.btnBarCode.Size = new System.Drawing.Size(79, 41);
             this.btnBarCode.TabIndex = 22;
             this.btnBarCode.Text = "BC";
             this.btnBarCode.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -262,7 +273,7 @@ namespace Team6_UMB.Controls
             // 
             // NewBtns
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(52)))), ((int)(((byte)(79)))));
             this.Controls.Add(this.btnBarCode);
@@ -276,8 +287,9 @@ namespace Team6_UMB.Controls
             this.Controls.Add(this.btnDelete);
             this.Controls.Add(this.btnExcel);
             this.Controls.Add(this.btnPrint);
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "NewBtns";
-            this.Size = new System.Drawing.Size(770, 33);
+            this.Size = new System.Drawing.Size(880, 41);
             this.ResumeLayout(false);
 
         }

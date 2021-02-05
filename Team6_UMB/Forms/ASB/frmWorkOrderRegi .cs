@@ -7,19 +7,53 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Team6_UMB.Service;
+using UMB_VO.ASB;
+using UMB_VO.CHH;
 
 namespace Team6_UMB.Forms
 {
     public partial class frmWorkOrderRegi : Form
     {
+        // wo_id, so_id, product_id, product_name, m_id, m_name, wo_pcount, wo_count, wo_date, wo_sdate, wo_state, wo_uadmin, wo_udate
+        List<WorkOrderVO> woList = null;
         CheckBox headerCheck = new CheckBox();
+        string nstate = "N";
+        string cstate = "작업확정";
+
         public frmWorkOrderRegi()
         {
             InitializeComponent();
+            
+            newBtns1.btnBarCode.Visible = newBtns1.btnDocument.Visible = newBtns1.btnShipment.Visible = newBtns1.btnWait.Visible = newBtns1.btnSearch.Visible = false;
+            periodSearchControl.dtFrom = DateTime.Now.AddDays(-7).ToString();
+            periodSearchControl.dtTo = DateTime.Now.ToString();
+        }
+        private void periodSearchControl_ChangedPeriod(object sender, EventArgs e)
+        {
+            if (dgvOrder.DataSource != null)
+            {
+                if (periodSearchControl.dtFrom != DateTime.Now.ToShortDateString())
+                {
+                    string FromDate = periodSearchControl.dtFrom;
+                    string ToDate = periodSearchControl.dtTo;
+
+                    List<WorkOrderVO> WorkOrderList = (from wo in woList
+                                                        where Convert.ToDateTime(FromDate) <= Convert.ToDateTime(wo.wo_date) &&
+                                                        Convert.ToDateTime(wo.wo_date) <= Convert.ToDateTime(ToDate)
+                                                        select wo).ToList();
+                    dgvOrder.DataSource = WorkOrderList;
+                }
+            }
         }
 
         private void frmWorkOrderRegi_Load(object sender, EventArgs e)
         {
+            //품목명바인딩
+            ProductService pService = new ProductService();
+            List<ProdCBOBindingVO> allProItem = pService.GetProductInfo();
+            CommonUtil.ProdNameBinding(cboProductName, allProItem);
+
             //데이터그리드뷰 컬럼 추가
             dgvOrder.AutoGenerateColumns = false;
             dgvOrder.AllowUserToAddRows = false;
@@ -40,9 +74,47 @@ namespace Team6_UMB.Forms
             headerCheck.Click += HeaderCheck_Click;
             dgvOrder.Controls.Add(headerCheck);
 
+            
             CommonUtil.SetInitGridView(dgvOrder);
-            CommonUtil.AddGridTextColumn(dgvOrder, "수주번호", "wo_id", 100);
-            CommonUtil.AddGridTextColumn(dgvOrder, "제품명", "", 150);
+            CommonUtil.AddGridTextColumn(dgvOrder, "WO_NUM", "wo_id", 80);
+            CommonUtil.AddGridTextColumn(dgvOrder, "수주번호", "so_id", 80);
+            CommonUtil.AddGridTextColumn(dgvOrder, "제품ID", "product_id", 150);
+            CommonUtil.AddGridTextColumn(dgvOrder, "제품명", "product_name", 150);
+            CommonUtil.AddGridTextColumn(dgvOrder, "설비ID", "m_id", 80);
+            CommonUtil.AddGridTextColumn(dgvOrder, "설비명", "m_name", 150);
+            CommonUtil.AddGridTextColumn(dgvOrder, "수주량", "wo_pcount", 100);
+            CommonUtil.AddGridTextColumn(dgvOrder, "지시량", "wo_count", 100);
+            CommonUtil.AddGridTextColumn(dgvOrder, "지시일", "wo_date", 150);
+            CommonUtil.AddGridTextColumn(dgvOrder, "작업시작일", "wo_sdate", 150);
+            CommonUtil.AddGridTextColumn(dgvOrder, "상태", "wo_state", 80);
+            CommonUtil.AddGridTextColumn(dgvOrder, "수정자", "wo_uadmin", 100);
+            CommonUtil.AddGridTextColumn(dgvOrder, "수정일", "wo_udate", 120);
+
+            CommonUtil.SetInitGridView(dgvCWOList);
+            CommonUtil.AddGridTextColumn(dgvCWOList, "WO_NUM", "wo_id", 80);
+            CommonUtil.AddGridTextColumn(dgvCWOList, "수주번호", "so_id", 80);
+            CommonUtil.AddGridTextColumn(dgvCWOList, "제품ID", "product_id", 150);
+            CommonUtil.AddGridTextColumn(dgvCWOList, "제품명", "product_name", 150);
+            CommonUtil.AddGridTextColumn(dgvCWOList, "설비ID", "m_id", 80);
+            CommonUtil.AddGridTextColumn(dgvCWOList, "설비명", "m_name", 150);
+            CommonUtil.AddGridTextColumn(dgvCWOList, "수주량", "wo_pcount", 100);
+            CommonUtil.AddGridTextColumn(dgvCWOList, "지시량", "wo_count", 100);
+            CommonUtil.AddGridTextColumn(dgvCWOList, "지시일", "wo_date", 150);
+            CommonUtil.AddGridTextColumn(dgvCWOList, "작업시작일", "wo_sdate", 150);
+            CommonUtil.AddGridTextColumn(dgvCWOList, "상태", "wo_state", 80);
+            CommonUtil.AddGridTextColumn(dgvCWOList, "수정자", "wo_uadmin", 100);
+            CommonUtil.AddGridTextColumn(dgvCWOList, "수정일", "wo_udate", 120);
+
+            
+            DGV_Binding(nstate, dgvOrder);
+            DGV_Binding(cstate, dgvCWOList);
+        }
+
+        private void DGV_Binding(string state, DataGridView dgv)
+        {
+            WorkOrderService service = new WorkOrderService();
+            woList = service.GetWoList(state);
+            dgv.DataSource = woList;
         }
 
         private void HeaderCheck_Click(object sender, EventArgs e)
@@ -54,6 +126,68 @@ namespace Team6_UMB.Forms
                 DataGridViewCheckBoxCell chk = (DataGridViewCheckBoxCell)row.Cells["chk"];
                 chk.Value = headerCheck.Checked;
             }
+        }
+
+        private void btnSearch_Click(object sender, EventArgs e)
+        {
+            string pid = "";            
+            
+            if (cboProductName.SelectedIndex > 0)
+                pid = cboProductName.SelectedValue.ToString();
+
+            try
+            {
+                WorkOrderService service = new WorkOrderService();
+                woList = service.SearchWOList(pid);
+                if(woList.Count == 0)
+                {
+                    MessageBox.Show("조회 결과가 없습니다.");
+                    return;
+                }
+                string FromDate = periodSearchControl.dtFrom;
+                string ToDate = periodSearchControl.dtTo;
+
+                List<WorkOrderVO> WorkOrderList = (from wo in woList
+                                                   where Convert.ToDateTime(FromDate) <= Convert.ToDateTime(wo.wo_date) &&
+                                                   Convert.ToDateTime(wo.wo_date) <= Convert.ToDateTime(ToDate)
+                                                   select wo).ToList();
+                dgvOrder.DataSource = WorkOrderList;
+                
+            }
+            catch(Exception err)
+            {
+                MessageBox.Show(err.Message);
+            }
+        }
+
+        private void btnOrderComplete_Click(object sender, EventArgs e)
+        {
+            List<int> chkWOList = new List<int>();
+
+            foreach (DataGridViewRow row in dgvOrder.Rows)
+            {
+                bool bCheck = (bool)row.Cells["chk"].EditedFormattedValue;
+                if (bCheck)
+                {
+                    chkWOList.Add(Convert.ToInt32(row.Cells["wo_id"].Value));
+                }
+            }
+
+            WorkOrderService service = new WorkOrderService();
+            bool bResult = service.updateWOState(chkWOList);
+            
+            
+
+
+        }
+
+        private void newBtns1_btnRefresh_Event(object sender, EventArgs e)
+        {
+            periodSearchControl.dtFrom = DateTime.Now.AddDays(-7).ToString();
+            periodSearchControl.dtTo = DateTime.Now.ToString();
+            cboProductName.SelectedIndex = 0;
+            DGV_Binding(nstate, dgvOrder);
+            DGV_Binding(cstate, dgvCWOList);
         }
     }
 }
