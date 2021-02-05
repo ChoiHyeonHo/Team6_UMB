@@ -45,13 +45,13 @@ namespace Team6_UMB.Forms.CHH
             this.찍힘ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.양호ToolStripMenuItem4 = new System.Windows.Forms.ToolStripMenuItem();
             this.불량ToolStripMenuItem4 = new System.Windows.Forms.ToolStripMenuItem();
+            this.비고ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.btnClose = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.btnCancle = new System.Windows.Forms.Button();
             this.btnEdit = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
             this.newBtns1 = new Team6_UMB.Controls.NewBtns();
-            this.비고ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCheckList)).BeginInit();
             this.contextMenuStrip1.SuspendLayout();
@@ -107,7 +107,7 @@ namespace Team6_UMB.Forms.CHH
             this.찍힘ToolStripMenuItem,
             this.비고ToolStripMenuItem});
             this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(181, 136);
+            this.contextMenuStrip1.Size = new System.Drawing.Size(111, 114);
             // 
             // 양호ToolStripMenuItem
             // 
@@ -115,7 +115,7 @@ namespace Team6_UMB.Forms.CHH
             this.양호ToolStripMenuItem1,
             this.불량ToolStripMenuItem1});
             this.양호ToolStripMenuItem.Name = "양호ToolStripMenuItem";
-            this.양호ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.양호ToolStripMenuItem.Size = new System.Drawing.Size(110, 22);
             this.양호ToolStripMenuItem.Text = "색";
             // 
             // 양호ToolStripMenuItem1
@@ -138,7 +138,7 @@ namespace Team6_UMB.Forms.CHH
             this.양호ToolStripMenuItem2,
             this.불량ToolStripMenuItem2});
             this.불량ToolStripMenuItem.Name = "불량ToolStripMenuItem";
-            this.불량ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.불량ToolStripMenuItem.Size = new System.Drawing.Size(110, 22);
             this.불량ToolStripMenuItem.Text = "찢어짐";
             // 
             // 양호ToolStripMenuItem2
@@ -161,7 +161,7 @@ namespace Team6_UMB.Forms.CHH
             this.양호ToolStripMenuItem3,
             this.불량ToolStripMenuItem3});
             this.길이ToolStripMenuItem.Name = "길이ToolStripMenuItem";
-            this.길이ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.길이ToolStripMenuItem.Size = new System.Drawing.Size(110, 22);
             this.길이ToolStripMenuItem.Text = "길이";
             // 
             // 양호ToolStripMenuItem3
@@ -184,22 +184,29 @@ namespace Team6_UMB.Forms.CHH
             this.양호ToolStripMenuItem4,
             this.불량ToolStripMenuItem4});
             this.찍힘ToolStripMenuItem.Name = "찍힘ToolStripMenuItem";
-            this.찍힘ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.찍힘ToolStripMenuItem.Size = new System.Drawing.Size(110, 22);
             this.찍힘ToolStripMenuItem.Text = "찍힘";
             // 
             // 양호ToolStripMenuItem4
             // 
             this.양호ToolStripMenuItem4.Name = "양호ToolStripMenuItem4";
-            this.양호ToolStripMenuItem4.Size = new System.Drawing.Size(180, 22);
+            this.양호ToolStripMenuItem4.Size = new System.Drawing.Size(98, 22);
             this.양호ToolStripMenuItem4.Text = "양호";
             this.양호ToolStripMenuItem4.Click += new System.EventHandler(this.양호ToolStripMenuItem4_Click);
             // 
             // 불량ToolStripMenuItem4
             // 
             this.불량ToolStripMenuItem4.Name = "불량ToolStripMenuItem4";
-            this.불량ToolStripMenuItem4.Size = new System.Drawing.Size(180, 22);
+            this.불량ToolStripMenuItem4.Size = new System.Drawing.Size(98, 22);
             this.불량ToolStripMenuItem4.Text = "불량";
             this.불량ToolStripMenuItem4.Click += new System.EventHandler(this.불량ToolStripMenuItem4_Click);
+            // 
+            // 비고ToolStripMenuItem
+            // 
+            this.비고ToolStripMenuItem.Name = "비고ToolStripMenuItem";
+            this.비고ToolStripMenuItem.Size = new System.Drawing.Size(110, 22);
+            this.비고ToolStripMenuItem.Text = "비고";
+            this.비고ToolStripMenuItem.Click += new System.EventHandler(this.비고ToolStripMenuItem_Click);
             // 
             // btnClose
             // 
@@ -269,14 +276,8 @@ namespace Team6_UMB.Forms.CHH
             this.newBtns1.Size = new System.Drawing.Size(770, 35);
             this.newBtns1.TabIndex = 27;
             this.newBtns1.btnDocument_Event += new System.EventHandler(this.newBtns1_btnDocument_Event);
+            this.newBtns1.btnWait_Event += new System.EventHandler(this.newBtns1_btnWait_Event);
             this.newBtns1.btnRefresh_Event += new System.EventHandler(this.newBtns1_btnRefresh_Event);
-            // 
-            // 비고ToolStripMenuItem
-            // 
-            this.비고ToolStripMenuItem.Name = "비고ToolStripMenuItem";
-            this.비고ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.비고ToolStripMenuItem.Text = "비고";
-            this.비고ToolStripMenuItem.Click += new System.EventHandler(this.비고ToolStripMenuItem_Click);
             // 
             // frmImpInspecPopUp
             // 

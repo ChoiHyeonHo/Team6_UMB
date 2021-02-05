@@ -37,5 +37,10 @@ namespace Team6_UMB.Service
             ProdImpInsDAC dac = new ProdImpInsDAC();
             return dac.Comment(pEtc, comment, pID);
         }
+        public bool UpdateAll(string temp, string incTemp, string userName, string alphaTemp)
+        {
+            ProdImpInsDAC dac = new ProdImpInsDAC();
+            return dac.UpdateAll(temp, incTemp, userName, alphaTemp);
+        }
     }
 }

@@ -46,15 +46,21 @@ namespace Team6_UMB.Forms.CHH
 
             CommonUtil.SetInitGridView(dgvIncomming);
             CommonUtil.AddGridTextColumn(dgvIncomming, "입고번호", "incomming_ID", 80);
-            CommonUtil.AddGridTextColumn(dgvIncomming, "입고상태", "incomming_state", 150);
-            CommonUtil.AddGridTextColumn(dgvIncomming, "입고일", "incomming_date", 200);
-            CommonUtil.AddGridTextColumn(dgvIncomming, "담당자", "incomming_rep", 200);
-            CommonUtil.AddGridTextColumn(dgvIncomming, "입고량", "incomming_count", 200);
-            CommonUtil.AddGridTextColumn(dgvIncomming, "발주번호", "order_id", 150);
+            CommonUtil.AddGridTextColumn(dgvIncomming, "발주번호", "order_id", 100);
+            CommonUtil.AddGridTextColumn(dgvIncomming, "품목코드", "product_id", 100);
+            CommonUtil.AddGridTextColumn(dgvIncomming, "품목명", "product_name", 100);
+            CommonUtil.AddGridTextColumn(dgvIncomming, "입고상태", "incomming_state", 100);
+            CommonUtil.AddGridTextColumn(dgvIncomming, "입고일", "incomming_date", 150);
+            CommonUtil.AddGridTextColumn(dgvIncomming, "담당자", "incomming_rep", 150);
+            CommonUtil.AddGridTextColumn(dgvIncomming, "입고량", "incomming_count", 150);
             CommonUtil.AddGridTextColumn(dgvIncomming, "합불판정", "orderexam_result", 100);
             CommonUtil.AddGridTextColumn(dgvIncomming, "수정자", "incomming_uadmin", 150);
             CommonUtil.AddGridTextColumn(dgvIncomming, "수정일", "incomming_udate", 150);
+            DGVBinding();
+        }
 
+        private void DGVBinding()
+        {
             allList = service.GetIncomminInfo();
             dgvIncomming.DataSource = allList;
         }
@@ -73,7 +79,6 @@ namespace Team6_UMB.Forms.CHH
         private void newBtns1_btnCreate_Event(object sender, EventArgs e)
         {
             List<int> chkBarCodeList = new List<int>();
-
             foreach (DataGridViewRow row in dgvIncomming.Rows)
             {
                 bool bCheck = (bool)row.Cells["chk"].EditedFormattedValue;
@@ -85,6 +90,11 @@ namespace Team6_UMB.Forms.CHH
             string temp = string.Join(",", chkBarCodeList);
             frmImpInspecPopUp frm = new frmImpInspecPopUp(temp);
             frm.Show();
+        }
+
+        private void newBtns1_btnRefresh_Event(object sender, EventArgs e)
+        {
+            DGVBinding();
         }
     }
 }

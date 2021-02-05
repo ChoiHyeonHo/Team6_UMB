@@ -7,6 +7,7 @@ using System.Text;
 using System.Windows.Forms;
 using Team6_UMB.Dev;
 using Team6_UMB.Service;
+using UMB_VO;
 using UMB_VO.CHH;
 
 namespace Team6_UMB.Forms.CHH
@@ -24,8 +25,9 @@ namespace Team6_UMB.Forms.CHH
         {
             InitializeComponent();
             dTemp = temp;
-            newBtns1.btnBarCode.Visible = newBtns1.btnCreate.Visible = newBtns1.btnDelete.Visible = newBtns1.btnExcel.Visible = newBtns1.btnPrint.Visible = newBtns1.btnSearch.Visible = newBtns1.btnShipment.Visible = newBtns1.btnUpdate.Visible = newBtns1.btnWait.Visible = false;
+            newBtns1.btnBarCode.Visible = newBtns1.btnCreate.Visible = newBtns1.btnDelete.Visible = newBtns1.btnExcel.Visible = newBtns1.btnPrint.Visible = newBtns1.btnSearch.Visible = newBtns1.btnShipment.Visible = newBtns1.btnUpdate.Visible = false;
             newBtns1.btnDocument.Text = "검사지";
+            newBtns1.btnWait.Text = "입고";
         }
 
         private void frmImpInspecPopUp_Load(object sender, EventArgs e)
@@ -62,7 +64,7 @@ namespace Team6_UMB.Forms.CHH
         private void HeaderCheck_Click(object sender, EventArgs e)
         {
             dgvCheckList.EndEdit(); //현재 포커스가 있는 셀의 편집을 종료(다른 셀로 이동시키는것과 같은 효과)
-
+            List<int> index = new List<int>();
             foreach (DataGridViewRow row in dgvCheckList.Rows)
             {
                 DataGridViewCheckBoxCell chk = (DataGridViewCheckBoxCell)row.Cells["chk"];
@@ -80,37 +82,29 @@ namespace Team6_UMB.Forms.CHH
             List<int> CheckList = new List<int>();
             foreach (DataGridViewRow row in dgvCheckList.Rows)
             {
-                CheckList.Add(int.Parse(row.Cells["cl_inc_id"].Value.ToString()));
+                bool bCheck = (bool)row.Cells["chk"].EditedFormattedValue;
+                if (bCheck)
+                {
+                    CheckList.Add(int.Parse(row.Cells["cl_inc_id"].Value.ToString()));
+                }
             }
             string temp = string.Join(",", CheckList);
             InsCheck rpt = new InsCheck();
             rpt.DataSource = service.GetInsCheckInfoDEV(temp);
             frmReportPreview frm = new frmReportPreview(rpt);
         }
-
-        
-
         private void btnClose_Click(object sender, EventArgs e)
         {
             this.Close();
         }
-
-        
-
         private void btnCancle_Click(object sender, EventArgs e)
         {
             btnClose.PerformClick();
         }
-
-        
-
         private void newBtns1_btnRefresh_Event(object sender, EventArgs e)
         {
             DGVBinding();
         }
-
-        
-
         #region 컨텍스트 메뉴 스트립
 
         #region 색 양호
@@ -172,6 +166,33 @@ namespace Team6_UMB.Forms.CHH
 
             frmImpInsComment frm = new frmImpInsComment(cl_inc_id, etc);
             frm.Show();
+        }
+
+        private void newBtns1_btnWait_Event(object sender, EventArgs e)
+        {
+            List<int> CheckList = new List<int>();
+            List<int> IncommingID = new List<int>();
+            foreach (DataGridViewRow row in dgvCheckList.Rows)
+            {
+                bool bCheck = (bool)row.Cells["chk"].EditedFormattedValue;
+                if (bCheck)
+                {
+                    CheckList.Add(int.Parse(row.Cells["cl_inc_id"].Value.ToString()));
+                    IncommingID.Add(int.Parse(row.Cells["incomming_ID"].Value.ToString()));
+                }
+            }
+            string temp = string.Join(",", CheckList);
+            string incTemp = string.Join(",", IncommingID);
+            string alphaTemp = string.Join("@", CheckList);
+            string userName = LoginVO.user.Name;
+            bool result = service.UpdateAll(temp, incTemp, userName, alphaTemp);
+            if (result)
+            {
+                MessageBox.Show(Properties.Resources.msgOK);
+                DGVBinding();
+            }
+            else
+                MessageBox.Show(Properties.Resources.msgError);
         }
         #endregion
         #region 찢어짐 불량

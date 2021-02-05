@@ -9,11 +9,13 @@ namespace UMB_VO.CHH
     public class ProdImpInsVO
     {
         public int incomming_ID { get; set; } //입고ID
+        public int order_id { get; set; } // 발주번호
+        public string product_id { get; set; }
+        public string product_name { get; set; }
         public string incomming_state { get; set; } //입고상태 (대기 / 확정)
         public string incomming_date { get; set; } //입고일
         public string incomming_rep { get; set; } // 담당자
         public int incomming_count { get; set; } // 입고량
-        public string order_id { get; set; } // 발주번호
         public string orderexam_result { get; set; } // 합불판정 (합 / 불합 / 자동발주)
         public string incomming_uadmin { get; set; } // 수정자
         public string incomming_udate { get; set; } // 수정일
