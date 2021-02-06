@@ -155,9 +155,9 @@ namespace Team6_UMB.Forms.CHH
             this.label8.Font = new System.Drawing.Font("나눔바른고딕", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.label8.Location = new System.Drawing.Point(12, 9);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(115, 17);
+            this.label8.Size = new System.Drawing.Size(102, 17);
             this.label8.TabIndex = 22;
-            this.label8.Text = "불량관리 등록내역";
+            this.label8.Text = "제품검사 리스트";
             // 
             // newBtns1
             // 
