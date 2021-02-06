@@ -63,7 +63,10 @@ namespace Team6_UMB.Forms
 
         private void dgvOrder_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            Order_id = Convert.ToInt32(dgvOrder[0, e.RowIndex].Value);
+            if (e.RowIndex > 0)
+            {
+                Order_id = Convert.ToInt32(dgvOrder[0, e.RowIndex].Value);
+            }
         }
 
         private void frmOrderStatus_Load(object sender, EventArgs e)
