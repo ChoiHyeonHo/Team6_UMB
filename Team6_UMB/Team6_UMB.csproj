@@ -482,6 +482,7 @@
     </Compile>
     <Compile Include="Service\AuthorityService.cs" />
     <Compile Include="Service\BORService.cs" />
+    <Compile Include="Service\CheckHistoryService.cs" />
     <Compile Include="Service\CheckListService.cs" />
     <Compile Include="Service\DepartmentService.cs" />
     <Compile Include="Service\IncommingService.cs" />

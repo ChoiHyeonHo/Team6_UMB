@@ -36,5 +36,15 @@ namespace Team6_UMB.Service
             ProdInsDAC dac = new ProdInsDAC();
             return dac.GetProdCheckInfoDEV(temp);
         }
+        public bool Comment(string pEtc, string comment, int pID)
+        {
+            ProdInsDAC dac = new ProdInsDAC();
+            return dac.Comment(pEtc, comment, pID);
+        }
+        public bool InsertCheckHistory(string ctemp)
+        {
+            ProdInsDAC dac = new ProdInsDAC();
+            return dac.InsertCheckHistory(ctemp);
+        }
     }
 }

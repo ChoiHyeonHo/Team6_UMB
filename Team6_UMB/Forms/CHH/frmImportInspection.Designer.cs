@@ -29,15 +29,15 @@ namespace Team6_UMB.Forms.CHH
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.periodSearchControl = new PJT_Olive.Control.PeriodSearchControl();
             this.button1 = new System.Windows.Forms.Button();
             this.dgvIncomming = new Team6_UMB.DGV_Custom();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label6 = new System.Windows.Forms.Label();
             this.newBtns1 = new Team6_UMB.Controls.NewBtns();
-            this.periodSearchControl = new PJT_Olive.Control.PeriodSearchControl();
-            this.label2 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvIncomming)).BeginInit();
@@ -71,10 +71,36 @@ namespace Team6_UMB.Forms.CHH
             this.groupBox1.TabIndex = 24;
             this.groupBox1.TabStop = false;
             // 
+            // label2
+            // 
+            this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("나눔바른고딕", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label2.Location = new System.Drawing.Point(12, 19);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(34, 17);
+            this.label2.TabIndex = 28;
+            this.label2.Text = "기간";
+            // 
+            // periodSearchControl
+            // 
+            this.periodSearchControl.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this.periodSearchControl.DateType = "";
+            this.periodSearchControl.dtFrom = "2021-01-29";
+            this.periodSearchControl.dtTo = "2021-02-05";
+            this.periodSearchControl.Font = new System.Drawing.Font("돋움", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.periodSearchControl.Location = new System.Drawing.Point(52, 14);
+            this.periodSearchControl.Name = "periodSearchControl";
+            this.periodSearchControl.Size = new System.Drawing.Size(301, 29);
+            this.periodSearchControl.TabIndex = 27;
+            this.periodSearchControl.ChangedPeriod += new System.EventHandler(this.periodSearchControl_ChangedPeriod);
+            // 
             // button1
             // 
             this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            | System.Windows.Forms.AnchorStyles.Left)));
             this.button1.BackgroundImage = global::Team6_UMB.Properties.Resources.Search;
             this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.button1.FlatAppearance.BorderSize = 0;
@@ -92,14 +118,14 @@ namespace Team6_UMB.Forms.CHH
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvIncomming.BackgroundColor = System.Drawing.Color.White;
             this.dgvIncomming.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("나눔바른고딕", 9F);
-            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvIncomming.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("나눔바른고딕", 9F);
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvIncomming.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvIncomming.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvIncomming.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.dgvIncomming.GridColor = System.Drawing.Color.LightGray;
@@ -143,28 +169,6 @@ namespace Team6_UMB.Forms.CHH
             this.newBtns1.TabIndex = 2;
             this.newBtns1.btnRefresh_Event += new System.EventHandler(this.newBtns1_btnRefresh_Event);
             this.newBtns1.btnCreate_Event += new System.EventHandler(this.newBtns1_btnCreate_Event);
-            // 
-            // periodSearchControl
-            // 
-            this.periodSearchControl.DateType = "";
-            this.periodSearchControl.dtFrom = "2021-01-29";
-            this.periodSearchControl.dtTo = "2021-02-05";
-            this.periodSearchControl.Font = new System.Drawing.Font("돋움", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.periodSearchControl.Location = new System.Drawing.Point(52, 14);
-            this.periodSearchControl.Name = "periodSearchControl";
-            this.periodSearchControl.Size = new System.Drawing.Size(301, 29);
-            this.periodSearchControl.TabIndex = 27;
-            this.periodSearchControl.ChangedPeriod += new System.EventHandler(this.periodSearchControl_ChangedPeriod);
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("나눔바른고딕", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label2.Location = new System.Drawing.Point(12, 19);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(34, 17);
-            this.label2.TabIndex = 28;
-            this.label2.Text = "기간";
             // 
             // frmImportInspection
             // 

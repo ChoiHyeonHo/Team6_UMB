@@ -94,6 +94,20 @@ namespace UMB_DAC.CHH
                 return iRowAffect > 0;
             }
         }
+
+        public bool InsertCheckHistory(string ctemp)
+        {
+            string sql = $@"EXEC SP_InsertCheckHistory_Ship @temp";
+            using (SqlCommand cmd = new SqlCommand(sql, conn))
+            {
+                cmd.Parameters.AddWithValue("@temp", ctemp);
+                int iRowAffect = cmd.ExecuteNonQuery();
+                conn.Close();
+
+                return iRowAffect > 0;
+            }
+        }
+
         public DataTable GetProdCheckInfoDEV(string temp)
         {
             string sql = $@"select cl_ship_id, 
@@ -115,6 +129,19 @@ namespace UMB_DAC.CHH
                 da.Fill(dt);
 
                 return dt;
+            }
+        }
+        public bool Comment(string pEtc, string comment, int pID)
+        {
+            string sql = $@"update TBL_SHIP_CHECKLIST set {pEtc} = @temp where cl_ship_id = @cl_ship_id";
+            using (SqlCommand cmd = new SqlCommand(sql, conn))
+            {
+                cmd.Parameters.AddWithValue("@temp", comment);
+                cmd.Parameters.AddWithValue("@cl_ship_id", pID);
+                int iRowAffect = cmd.ExecuteNonQuery();
+                conn.Close();
+
+                return iRowAffect > 0;
             }
         }
 

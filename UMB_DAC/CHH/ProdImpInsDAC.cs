@@ -104,6 +104,8 @@ where incomming_state = '대기' and (orderexam_result = '미실시' or orderexa
         {
             string incToProd = $@"EXEC SP_IncToProd @alphaTemp";
 
+            string insert_Check_History = $@"EXEC SP_InsertCheckHistory @alphaTemp";
+
             string checkSql = $@"update TBL_INC_CHECKLIST 
                                 set cl_inc_Color = '양호', 
                                  cl_inc_Torn = '양호', 
@@ -126,6 +128,10 @@ where incomming_state = '대기' and (orderexam_result = '미실시' or orderexa
 
             try
             {
+                //cmd.CommandText = insert_Check_History;
+                //cmd.Parameters.AddWithValue("@alphaTemp", alphaTemp);
+                //cmd.ExecuteNonQuery();
+
                 cmd.CommandText = incToProd;
                 cmd.Parameters.AddWithValue("@alphaTemp", alphaTemp);
                 cmd.ExecuteNonQuery();
@@ -143,6 +149,19 @@ where incomming_state = '대기' and (orderexam_result = '미실시' or orderexa
             {
                 tran.Rollback();
                 return false;
+            }
+        }
+
+        public bool InsertCheckHistory(string alphaTemp)
+        {
+            string sql = $@"EXEC SP_InsertCheckHistory @temp";
+            using (SqlCommand cmd = new SqlCommand(sql, conn))
+            {
+                cmd.Parameters.AddWithValue("@temp", alphaTemp);
+                int iRowAffect = cmd.ExecuteNonQuery();
+                conn.Close();
+
+                return iRowAffect > 0;
             }
         }
 

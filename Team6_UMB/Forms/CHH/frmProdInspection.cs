@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 using Team6_UMB.Service;
@@ -21,6 +22,9 @@ namespace Team6_UMB.Forms.CHH
             InitializeComponent();
             newBtns1.btnCreate.Text = "검사";
             newBtns1.btnBarCode.Visible = newBtns1.btnDelete.Visible = newBtns1.btnDocument.Visible = newBtns1.btnExcel.Visible = newBtns1.btnPrint.Visible = newBtns1.btnSearch.Visible = newBtns1.btnShipment.Visible = newBtns1.btnUpdate.Visible = newBtns1.btnWait.Visible = false;
+
+            periodSearchControl.dtFrom = DateTime.Now.AddDays(-7).ToString();
+            periodSearchControl.dtTo = DateTime.Now.ToString();
         }
         private void frmProdInspection_Load(object sender, EventArgs e)
         {
@@ -93,6 +97,23 @@ namespace Team6_UMB.Forms.CHH
         private void newBtns1_btnRefresh_Event(object sender, EventArgs e)
         {
             DGVBinding();
+        }
+
+        private void periodSearchControl2_ChangedPeriod(object sender, EventArgs e)
+        {
+            if (dgvProdCheck.DataSource != null)
+            {
+                if (periodSearchControl.dtFrom != DateTime.Now.ToShortDateString())
+                {
+                    string FromDate = periodSearchControl.dtFrom;
+                    string ToDate = periodSearchControl.dtTo;
+
+                    List<ProdInsVO> periodList = (from period in allList
+                                                     where Convert.ToDateTime(FromDate) <= Convert.ToDateTime(period.so_edate) && Convert.ToDateTime(period.so_edate) <= Convert.ToDateTime(ToDate)
+                                                     select period).ToList();
+                    dgvProdCheck.DataSource = periodList;
+                }
+            }
         }
     }
 }

@@ -17,7 +17,7 @@ namespace Team6_UMB.Forms.CHH
         CheckBox headerCheck = new CheckBox();
         ProdInsService service = new ProdInsService();
         List<ProdInsPopUpVO> allList;
-        string dTemp, componentTemp, state;
+        string dTemp, componentTemp, state, etc;
         int clPK;
 
         public frmProdInspPopUp(string temp)
@@ -98,8 +98,9 @@ namespace Team6_UMB.Forms.CHH
             string ctemp = string.Join(",", clShipID);
             string stemp = string.Join(",", shipID);
             string userName = LoginVO.user.Name;
-            bool result = service.UpdateAll(ctemp, stemp, userName);
-            if (result)
+            bool result = service.UpdateAll(ctemp, stemp, userName); // ctemp = PK
+            bool result2 = service.InsertCheckHistory(ctemp);
+            if (result && result2)
             {
                 MessageBox.Show(Properties.Resources.msgOK);
                 DGVBinding();
@@ -138,6 +139,18 @@ namespace Team6_UMB.Forms.CHH
         }
 
         #region 컨텍스트 메뉴스트립
+        #region 비고
+        private void 비고ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            string headerName = "제품검사 비고";
+            clPK = int.Parse(dgv_CheckList.Rows[dgv_CheckList.CurrentRow.Index].Cells[1].Value.ToString());
+            etc = "etc";
+
+            frmImpInsComment frm = new frmImpInsComment(headerName, clPK, etc);
+            frm.Show();
+        }
+        #endregion
+
         #region 구성품 양품
         private void 양품ToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -171,6 +184,8 @@ namespace Team6_UMB.Forms.CHH
             else
                 MessageBox.Show(Properties.Resources.msgError);
         }
+
+        
         #endregion
 
         #region 포장 양품

@@ -95,6 +95,22 @@ namespace Team6_UMB
             cbo.DataSource = codeList;
         }
 
+        public static void CheckHis_CheckTypeBinding(ComboBox cbo, List<GetCheckTypeVO> list, bool blankItem = true, string blankText = "")
+        {
+            var codeList = (from item in list
+                            select item).ToList();
+
+            if (blankItem)
+            {
+                GetCheckTypeVO blank = new GetCheckTypeVO
+                { common_id = null, common_name = blankText };
+                codeList.Insert(0, blank);
+            }
+            cbo.DisplayMember = "common_name";
+            cbo.ValueMember = "common_id";
+            cbo.DataSource = codeList;
+        }
+
         public static void ProdStatus_ProdNameBinding(ComboBox cbo, List<GetProdNameVO> list, bool blankItem = true, string blankText = "")
         {
             var codeList = (from item in list
