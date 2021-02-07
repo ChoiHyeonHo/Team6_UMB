@@ -294,6 +294,12 @@
     <Compile Include="Forms\ChamGo.Designer.cs">
       <DependentUpon>ChamGo.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\CHH\frmAddressAPI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\CHH\frmAddressAPI.Designer.cs">
+      <DependentUpon>frmAddressAPI.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\CHH\frmCheckHistory.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -632,6 +638,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\ChamGo.resx">
       <DependentUpon>ChamGo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\CHH\frmAddressAPI.resx">
+      <DependentUpon>frmAddressAPI.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\CHH\frmCheckHistory.resx">
       <DependentUpon>frmCheckHistory.cs</DependentUpon>

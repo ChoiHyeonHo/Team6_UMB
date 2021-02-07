@@ -18,9 +18,17 @@ namespace UMB_VO.CHH
         public string company_email { get; set; }
         public string company_phone { get; set; }
         public string company_fax { get; set; }
-        public string company_address { get; set; }
+        public string company_ZipCode { get; set; }
+        public string company_Address { get; set; }
+        public string company_DetAddress { get; set; }
         public string company_uadmin { get; set; }
         public string company_udate { get; set; }
         public string company_comment { get; set; }
+    }
+
+    public class CompanyTypeVO
+    {
+        public int? common_id { get; set; }
+        public string common_name { get; set; }
     }
 }

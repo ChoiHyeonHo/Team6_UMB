@@ -188,6 +188,21 @@ namespace Team6_UMB
             cbo.ValueMember = "company_id";
             cbo.DataSource = codeList;
         }
+        public static void CompanyTypeBinding(ComboBox cbo, List<CompanyTypeVO> list, bool blankItem = true, string blankText = "")
+        {
+            var codeList = (from item in list
+                            select item).ToList();
+
+            if (blankItem)
+            {
+                CompanyTypeVO blank = new CompanyTypeVO
+                { common_id = null, common_name = blankText };
+                codeList.Insert(0, blank);
+            }
+            cbo.DisplayMember = "common_name";
+            cbo.ValueMember = "common_id";
+            cbo.DataSource = codeList;
+        }
 
         /// <summary>
         /// 콤보박스 바인딩
