@@ -62,6 +62,7 @@
     <Compile Include="JSJ\IncommingVO.cs" />
     <Compile Include="JSJ\LoginVO.cs" />
     <Compile Include="JSJ\OrderVO.cs" />
+    <Compile Include="JSJ\ShipmentVO.cs" />
     <Compile Include="JSJ\SOVO.cs" />
     <Compile Include="JSJ\UserVO.cs" />
     <Compile Include="ASB\ProcessVO.cs" />
