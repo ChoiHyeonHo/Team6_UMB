@@ -16,10 +16,10 @@ namespace Team6_UMB.Service
             return dac.GetWoList();
         }
 
-        internal List<WorkOrderVO> SearchWOList(string pid)
+        internal List<WorkOrderVO> SearchWOList(string pid, string state)
         {
             WorkOrderDAC dac = new WorkOrderDAC();
-            return dac.SearchWOList(pid);
+            return dac.SearchWOList(pid, state);
         }
 
         internal bool updateWOState(List<int> chkWOList)

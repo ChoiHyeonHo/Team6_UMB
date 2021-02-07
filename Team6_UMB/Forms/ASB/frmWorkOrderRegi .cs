@@ -8,6 +8,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Team6_UMB.Service;
+using Team6_UMB.Util;
+using UMB_VO;
 using UMB_VO.ASB;
 using UMB_VO.CHH;
 
@@ -56,10 +58,13 @@ namespace Team6_UMB.Forms
 
         private void frmWorkOrderRegi_Load(object sender, EventArgs e)
         {
-            //품목명바인딩
+            //품목명바인딩, 생산상태 바인딩
+            string[] gubun = { "생산상태" };
             ProductService pService = new ProductService();
+            List<ComboItemVO> allState = pService.GetProcessInfoByCodeTypes(gubun);
             List<ProdCBOBindingVO> allProItem = pService.GetProductInfo();
             CommonUtil.ProdNameBinding(cboProductName, allProItem);
+            CommonUtil.ComboBinding(cboState, allState, "생산상태");
 
             //데이터그리드뷰 컬럼 추가
             dgvOrder.AutoGenerateColumns = false;
@@ -124,15 +129,18 @@ namespace Team6_UMB.Forms
 
         private void btnSearch_Click(object sender, EventArgs e)
         {
-            string pid = "";            
+            string pid = "";
+            string state = "";
             
             if (cboProductName.SelectedIndex > 0)
                 pid = cboProductName.SelectedValue.ToString();
+            if (cboState.SelectedIndex > 0)
+                state = cboState.Text;
 
             try
             {
                 WorkOrderService service = new WorkOrderService();
-                woList = service.SearchWOList(pid);
+                woList = service.SearchWOList(pid, state);
                 
                 string FromDate = periodSearchControl.dtFrom;
                 string ToDate = periodSearchControl.dtTo;
@@ -198,7 +206,31 @@ namespace Team6_UMB.Forms
 
         private void newBtns1_btnExcel_Event(object sender, EventArgs e)
         {
+            try
+            {
+                frmLoading frm = new frmLoading(ExportWorkList);
+                frm.ShowDialog(this);
+            }
+            catch (Exception err)
+            {
+                MessageBox.Show(err.Message);
+            }
+        }
 
+        private void ExportWorkList()
+        {
+            try
+            {
+                string sResult = ExcelExportImport.ExportToDataGridView<WorkOrderVO>((List<WorkOrderVO>)dgvOrder.DataSource, "");
+                if (sResult.Length > 0)
+                {
+                    MessageBox.Show(sResult);
+                }
+            }
+            catch (Exception err)
+            {
+                MessageBox.Show(err.Message);
+            }
         }
 
         private void newBtns1_btnPrint_Event(object sender, EventArgs e)

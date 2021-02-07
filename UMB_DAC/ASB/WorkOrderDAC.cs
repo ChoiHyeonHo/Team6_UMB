@@ -28,7 +28,7 @@ namespace UMB_DAC.ASB
             }
         }
 
-        public List<WorkOrderVO> SearchWOList(string pid)
+        public List<WorkOrderVO> SearchWOList(string pid, string state)
         {
             StringBuilder sb = new StringBuilder();
             sb.Append(@"select wo_id, so_id, wo.product_id, product_name, wo.m_id, m_name, wo_pcount, wo_count,  CONVERT(CHAR(10), wo_date, 23) wo_date,CONVERT(CHAR(10), wo_sdate, 23) wo_sdate, wo_state, wo_uadmin, wo_udate
@@ -36,12 +36,15 @@ namespace UMB_DAC.ASB
                         inner join TBL_MACHINE m on wo.m_id = m.m_id
                         where 1=1 ");
             if (pid.Trim().Length > 0)
-                sb.Append("and wo.product_id = @pid ");            
+                sb.Append("and wo.product_id = @pid ");
+            if (state.Trim().Length > 0 && state != "전체")
+                sb.Append("and wo_state = @state ");
             string sql = sb.ToString();
 
             using (SqlCommand cmd = new SqlCommand(sql, conn))
             {
-                cmd.Parameters.AddWithValue("@pid", pid);                
+                cmd.Parameters.AddWithValue("@pid", pid);
+                cmd.Parameters.AddWithValue("@state", state);
 
                 SqlDataReader reader = cmd.ExecuteReader();
 

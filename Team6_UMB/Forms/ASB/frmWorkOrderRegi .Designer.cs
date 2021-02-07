@@ -31,14 +31,13 @@ namespace Team6_UMB.Forms
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmWorkOrderRegi));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.btnSearch = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.periodSearchControl = new PJT_Olive.Control.PeriodSearchControl();
             this.cboProductName = new System.Windows.Forms.ComboBox();
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
             this.label1 = new System.Windows.Forms.Label();
@@ -46,8 +45,11 @@ namespace Team6_UMB.Forms
             this.btnOrderComplete1 = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label5 = new System.Windows.Forms.Label();
-            this.dgvOrder = new Team6_UMB.DGV_Custom();
+            this.cboState = new System.Windows.Forms.ComboBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.periodSearchControl = new PJT_Olive.Control.PeriodSearchControl();
             this.newBtns1 = new Team6_UMB.Controls.NewBtns();
+            this.dgvOrder = new Team6_UMB.DGV_Custom();
             this.groupBox1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -60,7 +62,7 @@ namespace Team6_UMB.Forms
             this.btnSearch.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btnSearch.FlatAppearance.BorderSize = 0;
             this.btnSearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSearch.Location = new System.Drawing.Point(574, 12);
+            this.btnSearch.Location = new System.Drawing.Point(823, 13);
             this.btnSearch.Name = "btnSearch";
             this.btnSearch.Size = new System.Drawing.Size(34, 30);
             this.btnSearch.TabIndex = 21;
@@ -92,6 +94,8 @@ namespace Team6_UMB.Forms
             this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox1.BackColor = System.Drawing.Color.White;
+            this.groupBox1.Controls.Add(this.label3);
+            this.groupBox1.Controls.Add(this.cboState);
             this.groupBox1.Controls.Add(this.periodSearchControl);
             this.groupBox1.Controls.Add(this.cboProductName);
             this.groupBox1.Controls.Add(this.btnSearch);
@@ -102,17 +106,6 @@ namespace Team6_UMB.Forms
             this.groupBox1.Size = new System.Drawing.Size(1511, 50);
             this.groupBox1.TabIndex = 23;
             this.groupBox1.TabStop = false;
-            // 
-            // periodSearchControl
-            // 
-            this.periodSearchControl.DateType = "";
-            this.periodSearchControl.dtFrom = "2021-01-31";
-            this.periodSearchControl.dtTo = "2021-02-07";
-            this.periodSearchControl.Font = new System.Drawing.Font("돋움", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.periodSearchControl.Location = new System.Drawing.Point(43, 14);
-            this.periodSearchControl.Name = "periodSearchControl";
-            this.periodSearchControl.Size = new System.Drawing.Size(301, 29);
-            this.periodSearchControl.TabIndex = 26;
             // 
             // cboProductName
             // 
@@ -195,47 +188,34 @@ namespace Team6_UMB.Forms
             this.label5.TabIndex = 22;
             this.label5.Text = "미등록작업지시내역";
             // 
-            // dgvOrder
+            // cboState
             // 
-            this.dgvOrder.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.dgvOrder.BackgroundColor = System.Drawing.Color.White;
-            this.dgvOrder.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle10.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle10.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
-            dataGridViewCellStyle10.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle10.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvOrder.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle10;
-            this.dgvOrder.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvOrder.Cursor = System.Windows.Forms.Cursors.Arrow;
-            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle11.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle11.Font = new System.Drawing.Font("굴림", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            dataGridViewCellStyle11.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvOrder.DefaultCellStyle = dataGridViewCellStyle11;
-            this.dgvOrder.GridColor = System.Drawing.Color.LightGray;
-            this.dgvOrder.Location = new System.Drawing.Point(15, 141);
-            this.dgvOrder.Margin = new System.Windows.Forms.Padding(4, 1, 4, 1);
-            this.dgvOrder.MinimumSize = new System.Drawing.Size(150, 150);
-            this.dgvOrder.Name = "dgvOrder";
-            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle12.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle12.Font = new System.Drawing.Font("굴림", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            dataGridViewCellStyle12.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvOrder.RowHeadersDefaultCellStyle = dataGridViewCellStyle12;
-            this.dgvOrder.RowTemplate.Height = 23;
-            this.dgvOrder.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.dgvOrder.Size = new System.Drawing.Size(1511, 729);
-            this.dgvOrder.TabIndex = 24;
+            this.cboState.FormattingEnabled = true;
+            this.cboState.Location = new System.Drawing.Point(622, 18);
+            this.cboState.Name = "cboState";
+            this.cboState.Size = new System.Drawing.Size(159, 20);
+            this.cboState.TabIndex = 27;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label3.Location = new System.Drawing.Point(582, 20);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(34, 18);
+            this.label3.TabIndex = 28;
+            this.label3.Text = "상태";
+            // 
+            // periodSearchControl
+            // 
+            this.periodSearchControl.DateType = "";
+            this.periodSearchControl.dtFrom = "2021-01-31";
+            this.periodSearchControl.dtTo = "2021-02-07";
+            this.periodSearchControl.Font = new System.Drawing.Font("돋움", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.periodSearchControl.Location = new System.Drawing.Point(43, 14);
+            this.periodSearchControl.Name = "periodSearchControl";
+            this.periodSearchControl.Size = new System.Drawing.Size(301, 29);
+            this.periodSearchControl.TabIndex = 26;
             // 
             // newBtns1
             // 
@@ -248,6 +228,48 @@ namespace Team6_UMB.Forms
             this.newBtns1.btnRefresh_Event += new System.EventHandler(this.newBtns1_btnRefresh_Event);
             this.newBtns1.btnExcel_Event += new System.EventHandler(this.newBtns1_btnExcel_Event);
             this.newBtns1.btnPrint_Event += new System.EventHandler(this.newBtns1_btnPrint_Event);
+            // 
+            // dgvOrder
+            // 
+            this.dgvOrder.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dgvOrder.BackgroundColor = System.Drawing.Color.White;
+            this.dgvOrder.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvOrder.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.dgvOrder.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvOrder.Cursor = System.Windows.Forms.Cursors.Arrow;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("굴림", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvOrder.DefaultCellStyle = dataGridViewCellStyle2;
+            this.dgvOrder.GridColor = System.Drawing.Color.LightGray;
+            this.dgvOrder.Location = new System.Drawing.Point(15, 141);
+            this.dgvOrder.Margin = new System.Windows.Forms.Padding(4, 1, 4, 1);
+            this.dgvOrder.MinimumSize = new System.Drawing.Size(150, 150);
+            this.dgvOrder.Name = "dgvOrder";
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("굴림", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvOrder.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            this.dgvOrder.RowTemplate.Height = 23;
+            this.dgvOrder.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.dgvOrder.Size = new System.Drawing.Size(1511, 729);
+            this.dgvOrder.TabIndex = 24;
             // 
             // frmWorkOrderRegi
             // 
@@ -289,5 +311,7 @@ namespace Team6_UMB.Forms
         private PJT_Olive.Control.PeriodSearchControl periodSearchControl;
         private System.Windows.Forms.Button btnOrderComplete1;
         private Controls.NewBtns newBtns1;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.ComboBox cboState;
     }
 }
