@@ -29,7 +29,7 @@ namespace Team6_UMB.Forms
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.button1 = new System.Windows.Forms.Button();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
@@ -40,30 +40,16 @@ namespace Team6_UMB.Forms
             this.label2 = new System.Windows.Forms.Label();
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.btnAllButtons1 = new Team6_UMB.Controls.btnAllButtons();
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.dgvPrice = new Team6_UMB.DGV_Custom();
-            this.company_id = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.company_name = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.company_type = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.company_ceo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.company_cnum = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.company_btype = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.company_gtype = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.company_email = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.company_phone = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.company_fax = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.company_bnum = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.company_address = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.company_uadmin = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.company_udate = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label6 = new System.Windows.Forms.Label();
+            this.newBtns1 = new Team6_UMB.Controls.NewBtns();
+            this.dgvCompany = new Team6_UMB.DGV_Custom();
             this.groupBox1.SuspendLayout();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvPrice)).BeginInit();
             this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvCompany)).BeginInit();
             this.SuspendLayout();
             // 
             // button1
@@ -170,15 +156,6 @@ namespace Team6_UMB.Forms
             this.label5.TabIndex = 26;
             this.label5.Text = "업체코드";
             // 
-            // btnAllButtons1
-            // 
-            this.btnAllButtons1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(52)))), ((int)(((byte)(79)))));
-            this.btnAllButtons1.Dock = System.Windows.Forms.DockStyle.Right;
-            this.btnAllButtons1.Location = new System.Drawing.Point(1134, 0);
-            this.btnAllButtons1.Name = "btnAllButtons1";
-            this.btnAllButtons1.Size = new System.Drawing.Size(377, 35);
-            this.btnAllButtons1.TabIndex = 2;
-            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -195,124 +172,12 @@ namespace Team6_UMB.Forms
             this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(52)))), ((int)(((byte)(79)))));
-            this.panel1.Controls.Add(this.btnAllButtons1);
+            this.panel1.Controls.Add(this.newBtns1);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Location = new System.Drawing.Point(12, 16);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1511, 35);
             this.panel1.TabIndex = 22;
-            // 
-            // dgvPrice
-            // 
-            this.dgvPrice.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.dgvPrice.BackgroundColor = System.Drawing.Color.White;
-            this.dgvPrice.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvPrice.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
-            this.dgvPrice.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvPrice.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.company_id,
-            this.company_name,
-            this.company_type,
-            this.company_ceo,
-            this.company_cnum,
-            this.company_btype,
-            this.company_gtype,
-            this.company_email,
-            this.company_phone,
-            this.company_fax,
-            this.company_bnum,
-            this.company_address,
-            this.company_uadmin,
-            this.company_udate});
-            this.dgvPrice.Cursor = System.Windows.Forms.Cursors.Arrow;
-            this.dgvPrice.GridColor = System.Drawing.Color.LightGray;
-            this.dgvPrice.Location = new System.Drawing.Point(12, 141);
-            this.dgvPrice.Margin = new System.Windows.Forms.Padding(4, 1, 4, 1);
-            this.dgvPrice.MinimumSize = new System.Drawing.Size(150, 150);
-            this.dgvPrice.Name = "dgvPrice";
-            this.dgvPrice.RowTemplate.Height = 23;
-            this.dgvPrice.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.dgvPrice.Size = new System.Drawing.Size(1510, 800);
-            this.dgvPrice.TabIndex = 24;
-            // 
-            // company_id
-            // 
-            this.company_id.HeaderText = "업체ID";
-            this.company_id.Name = "company_id";
-            // 
-            // company_name
-            // 
-            this.company_name.HeaderText = "업체명";
-            this.company_name.Name = "company_name";
-            // 
-            // company_type
-            // 
-            this.company_type.HeaderText = "업체구분";
-            this.company_type.Name = "company_type";
-            // 
-            // company_ceo
-            // 
-            this.company_ceo.HeaderText = "대표자명";
-            this.company_ceo.Name = "company_ceo";
-            // 
-            // company_cnum
-            // 
-            this.company_cnum.HeaderText = "사업자등록번호";
-            this.company_cnum.Name = "company_cnum";
-            // 
-            // company_btype
-            // 
-            this.company_btype.HeaderText = "업종";
-            this.company_btype.Name = "company_btype";
-            // 
-            // company_gtype
-            // 
-            this.company_gtype.HeaderText = "업태";
-            this.company_gtype.Name = "company_gtype";
-            // 
-            // company_email
-            // 
-            this.company_email.HeaderText = "이메일";
-            this.company_email.Name = "company_email";
-            // 
-            // company_phone
-            // 
-            this.company_phone.HeaderText = "전화번호";
-            this.company_phone.Name = "company_phone";
-            // 
-            // company_fax
-            // 
-            this.company_fax.HeaderText = "팩스";
-            this.company_fax.Name = "company_fax";
-            // 
-            // company_bnum
-            // 
-            this.company_bnum.HeaderText = "법인등록번호";
-            this.company_bnum.Name = "company_bnum";
-            // 
-            // company_address
-            // 
-            this.company_address.HeaderText = "업체 주소";
-            this.company_address.Name = "company_address";
-            // 
-            // company_uadmin
-            // 
-            this.company_uadmin.HeaderText = "수정자";
-            this.company_uadmin.Name = "company_uadmin";
-            // 
-            // company_udate
-            // 
-            this.company_udate.HeaderText = "수정일";
-            this.company_udate.Name = "company_udate";
             // 
             // panel2
             // 
@@ -331,9 +196,49 @@ namespace Team6_UMB.Forms
             this.label6.Font = new System.Drawing.Font("나눔바른고딕", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.label6.Location = new System.Drawing.Point(12, 9);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(70, 17);
+            this.label6.Size = new System.Drawing.Size(76, 17);
             this.label6.TabIndex = 22;
-            this.label6.Text = "BOM 목록";
+            this.label6.Text = "업체 리스트";
+            // 
+            // newBtns1
+            // 
+            this.newBtns1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(52)))), ((int)(((byte)(79)))));
+            this.newBtns1.Dock = System.Windows.Forms.DockStyle.Right;
+            this.newBtns1.Location = new System.Drawing.Point(741, 0);
+            this.newBtns1.Name = "newBtns1";
+            this.newBtns1.Size = new System.Drawing.Size(770, 35);
+            this.newBtns1.TabIndex = 2;
+            this.newBtns1.btnRefresh_Event += new System.EventHandler(this.newBtns1_btnRefresh_Event);
+            this.newBtns1.btnCreate_Event += new System.EventHandler(this.newBtns1_btnCreate_Event);
+            this.newBtns1.btnUpdate_Event += new System.EventHandler(this.newBtns1_btnUpdate_Event);
+            // 
+            // dgvCompany
+            // 
+            this.dgvCompany.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dgvCompany.BackgroundColor = System.Drawing.Color.White;
+            this.dgvCompany.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvCompany.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            this.dgvCompany.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvCompany.Cursor = System.Windows.Forms.Cursors.Arrow;
+            this.dgvCompany.GridColor = System.Drawing.Color.LightGray;
+            this.dgvCompany.Location = new System.Drawing.Point(12, 141);
+            this.dgvCompany.Margin = new System.Windows.Forms.Padding(4, 1, 4, 1);
+            this.dgvCompany.MinimumSize = new System.Drawing.Size(150, 150);
+            this.dgvCompany.Name = "dgvCompany";
+            this.dgvCompany.RowTemplate.Height = 23;
+            this.dgvCompany.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.dgvCompany.Size = new System.Drawing.Size(1510, 800);
+            this.dgvCompany.TabIndex = 24;
+            this.dgvCompany.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvCompany_CellClick);
             // 
             // frmCompany
             // 
@@ -344,17 +249,18 @@ namespace Team6_UMB.Forms
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.dgvPrice);
+            this.Controls.Add(this.dgvCompany);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmCompany";
             this.Text = "frmCompany";
+            this.Load += new System.EventHandler(this.frmCompany_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvPrice)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvCompany)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -366,29 +272,15 @@ namespace Team6_UMB.Forms
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.GroupBox groupBox1;
-        private Controls.btnAllButtons btnAllButtons1;
         protected System.Windows.Forms.Label label1;
         protected System.Windows.Forms.Panel panel1;
-        private DGV_Custom dgvPrice;
+        private DGV_Custom dgvCompany;
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.DataGridViewTextBoxColumn company_id;
-        private System.Windows.Forms.DataGridViewTextBoxColumn company_name;
-        private System.Windows.Forms.DataGridViewTextBoxColumn company_type;
-        private System.Windows.Forms.DataGridViewTextBoxColumn company_ceo;
-        private System.Windows.Forms.DataGridViewTextBoxColumn company_cnum;
-        private System.Windows.Forms.DataGridViewTextBoxColumn company_btype;
-        private System.Windows.Forms.DataGridViewTextBoxColumn company_gtype;
-        private System.Windows.Forms.DataGridViewTextBoxColumn company_email;
-        private System.Windows.Forms.DataGridViewTextBoxColumn company_phone;
-        private System.Windows.Forms.DataGridViewTextBoxColumn company_fax;
-        private System.Windows.Forms.DataGridViewTextBoxColumn company_bnum;
-        private System.Windows.Forms.DataGridViewTextBoxColumn company_address;
-        private System.Windows.Forms.DataGridViewTextBoxColumn company_uadmin;
-        private System.Windows.Forms.DataGridViewTextBoxColumn company_udate;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label6;
+        private Controls.NewBtns newBtns1;
     }
 }

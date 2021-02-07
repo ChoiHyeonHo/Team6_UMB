@@ -55,6 +55,7 @@
     <Compile Include="ASB\WorkOrderDAC.cs" />
     <Compile Include="CHH\BOMDAC.cs" />
     <Compile Include="CHH\CheckHistoryDAC.cs" />
+    <Compile Include="CHH\CompanyDAC.cs" />
     <Compile Include="CHH\MatPriceDAC.cs" />
     <Compile Include="CHH\PDStockDAC.cs" />
     <Compile Include="CHH\ProdImpInsDAC.cs" />

@@ -47,6 +47,7 @@
     <Compile Include="ASB\WorkOrderVO.cs" />
     <Compile Include="CHH\BOMVO.cs" />
     <Compile Include="CHH\CheckHistoryVO.cs" />
+    <Compile Include="CHH\CompanyVO.cs" />
     <Compile Include="CHH\MatPriceVO.cs" />
     <Compile Include="CHH\PDStockVO.cs" />
     <Compile Include="CHH\ProdImpInsVO.cs" />
