@@ -12,7 +12,7 @@ namespace UMB_DAC
     public static class Helper
     {
         /// <summary>
-        /// DataReader 객체로부터 List<VO> 객체로 변환 응애
+        /// DataReader 객체로부터 List<VO> 객체로 변환
         /// </summary>
         /// <typeparam name="T">VO객체타입</typeparam>
         /// <param name="dr">DataReader</param>

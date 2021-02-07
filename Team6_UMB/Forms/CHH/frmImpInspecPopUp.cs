@@ -161,10 +161,11 @@ namespace Team6_UMB.Forms.CHH
 
         private void 비고ToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            string headerName = "수입검사 비고";
             cl_inc_id = int.Parse(dgvCheckList.Rows[dgvCheckList.CurrentRow.Index].Cells[1].Value.ToString());
             etc = "etc";
 
-            frmImpInsComment frm = new frmImpInsComment(cl_inc_id, etc);
+            frmImpInsComment frm = new frmImpInsComment(headerName, cl_inc_id, etc);
             frm.Show();
         }
 
@@ -186,7 +187,8 @@ namespace Team6_UMB.Forms.CHH
             string alphaTemp = string.Join("@", CheckList);
             string userName = LoginVO.user.Name;
             bool result = service.UpdateAll(temp, incTemp, userName, alphaTemp);
-            if (result)
+            bool result2 = service.InsertCheckHistory(alphaTemp);
+            if (result && result2)
             {
                 MessageBox.Show(Properties.Resources.msgOK);
                 DGVBinding();

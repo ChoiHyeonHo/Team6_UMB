@@ -37,17 +37,14 @@ where incomming_state = '대기' and (orderexam_result = '미실시' or orderexa
         }
         public List<InsCheckVO> GetInsCheckInfo(string temp)
         {
-            string sql = $@"select cl_inc_id, incomming_ID, 
-                                    isnull(cl_inc_Color, '미실시') as cl_inc_Color,
-                                    isnull(cl_inc_Torn, '미실시') as  cl_inc_Torn, 
-                                    isnull(cl_inc_Length, '미실시') as cl_inc_Length,
-                                    isnull(cl_inc_Crack, '미실시') as cl_inc_Crack,
-                                    isnull(etc, '없음') as etc
-                            from TBL_INC_CHECKLIST where incomming_ID in ({temp})
-                            and (not cl_inc_Color in ('양호')
-                            or not cl_inc_Torn in ('양호')
-                            or not cl_inc_Length in ('양호')
-                            or not cl_inc_Crack in ('양호'))";
+            string sql = $@"select cl_inc_id, IC.incomming_ID,
+		                        isnull(cl_inc_Color, '미실시') as cl_inc_Color,
+		                        isnull(cl_inc_Torn, '미실시') as  cl_inc_Torn, 
+		                        isnull(cl_inc_Length, '미실시') as cl_inc_Length,
+		                        isnull(cl_inc_Crack, '미실시') as cl_inc_Crack,
+		                        isnull(etc, '없음') as etc
+                        from TBL_INC_CHECKLIST IC join TBL_INCOMMING I on IC.incomming_ID = I.incomming_ID 
+                        where IC.incomming_ID in ({temp}) and orderexam_result = '미실시'";
 
             using (SqlCommand cmd = new SqlCommand(sql, conn))
             {
@@ -107,6 +104,8 @@ where incomming_state = '대기' and (orderexam_result = '미실시' or orderexa
         {
             string incToProd = $@"EXEC SP_IncToProd @alphaTemp";
 
+            string insert_Check_History = $@"EXEC SP_InsertCheckHistory @alphaTemp";
+
             string checkSql = $@"update TBL_INC_CHECKLIST 
                                 set cl_inc_Color = '양호', 
                                  cl_inc_Torn = '양호', 
@@ -129,6 +128,10 @@ where incomming_state = '대기' and (orderexam_result = '미실시' or orderexa
 
             try
             {
+                //cmd.CommandText = insert_Check_History;
+                //cmd.Parameters.AddWithValue("@alphaTemp", alphaTemp);
+                //cmd.ExecuteNonQuery();
+
                 cmd.CommandText = incToProd;
                 cmd.Parameters.AddWithValue("@alphaTemp", alphaTemp);
                 cmd.ExecuteNonQuery();
@@ -146,6 +149,19 @@ where incomming_state = '대기' and (orderexam_result = '미실시' or orderexa
             {
                 tran.Rollback();
                 return false;
+            }
+        }
+
+        public bool InsertCheckHistory(string alphaTemp)
+        {
+            string sql = $@"EXEC SP_InsertCheckHistory @temp";
+            using (SqlCommand cmd = new SqlCommand(sql, conn))
+            {
+                cmd.Parameters.AddWithValue("@temp", alphaTemp);
+                int iRowAffect = cmd.ExecuteNonQuery();
+                conn.Close();
+
+                return iRowAffect > 0;
             }
         }
 

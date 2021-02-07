@@ -8,11 +8,7 @@ namespace UMB_VO
 {
     public class AuthorityVO
     {
-        public int department_id { get; set; }
         public string auth_formname { get; set; }
-        public string auth_comment { get; set; }
-        public string auth_uadmin { get; set; }
-        public string auth_udate { get; set; }
     }
 
     public class MenuVO

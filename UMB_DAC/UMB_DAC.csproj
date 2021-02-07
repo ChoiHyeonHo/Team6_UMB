@@ -54,9 +54,12 @@
     <Compile Include="ASB\MachineDAC.cs" />
     <Compile Include="ASB\WorkOrderDAC.cs" />
     <Compile Include="CHH\BOMDAC.cs" />
+    <Compile Include="CHH\CheckHistoryDAC.cs" />
+    <Compile Include="CHH\CompanyDAC.cs" />
     <Compile Include="CHH\MatPriceDAC.cs" />
     <Compile Include="CHH\PDStockDAC.cs" />
     <Compile Include="CHH\ProdImpInsDAC.cs" />
+    <Compile Include="CHH\ProdInsDAC.cs" />
     <Compile Include="CHH\ProdStatusDAC.cs" />
     <Compile Include="JSJ\AuthorityDAC.cs" />
     <Compile Include="ASB\BORDAC.cs" />

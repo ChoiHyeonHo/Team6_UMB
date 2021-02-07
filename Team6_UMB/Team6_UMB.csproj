@@ -150,6 +150,12 @@
     <Compile Include="Dev\InsCheck.Designer.cs">
       <DependentUpon>InsCheck.cs</DependentUpon>
     </Compile>
+    <Compile Include="Dev\ProdCheck.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Dev\ProdCheck.Designer.cs">
+      <DependentUpon>ProdCheck.cs</DependentUpon>
+    </Compile>
     <Compile Include="Dev\ProdStatusBarCode.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -276,6 +282,12 @@
     <Compile Include="Forms\ChamGo.Designer.cs">
       <DependentUpon>ChamGo.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\CHH\frmAddressAPI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\CHH\frmAddressAPI.Designer.cs">
+      <DependentUpon>frmAddressAPI.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\CHH\frmCheckHistory.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -336,16 +348,16 @@
     <Compile Include="Forms\CHH\frmBOMPopUp.Designer.cs">
       <DependentUpon>frmBOMPopUp.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\ASB\frmCompany.cs">
+    <Compile Include="Forms\CHH\frmCompany.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\ASB\frmCompany.Designer.cs">
+    <Compile Include="Forms\CHH\frmCompany.Designer.cs">
       <DependentUpon>frmCompany.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\ASB\frmCompanyPopUp.cs">
+    <Compile Include="Forms\CHH\frmCompanyPopUp.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\ASB\frmCompanyPopUp.Designer.cs">
+    <Compile Include="Forms\CHH\frmCompanyPopUp.Designer.cs">
       <DependentUpon>frmCompanyPopUp.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\JSJ\frmIncommingHistory.cs">
@@ -372,16 +384,16 @@
     <Compile Include="Forms\CHH\frmLogIn.Designer.cs">
       <DependentUpon>frmLogIn.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\ASB\frmMachine.cs">
+    <Compile Include="Forms\CHH\frmMachine.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\ASB\frmMachine.Designer.cs">
+    <Compile Include="Forms\CHH\frmMachine.Designer.cs">
       <DependentUpon>frmMachine.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\ASB\frmMachinePopUp.cs">
+    <Compile Include="Forms\CHH\frmMachinePopUp.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\ASB\frmMachinePopUp.Designer.cs">
+    <Compile Include="Forms\CHH\frmMachinePopUp.Designer.cs">
       <DependentUpon>frmMachinePopUp.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\CHH\frmMatPriceManage.cs">
@@ -464,7 +476,9 @@
     </Compile>
     <Compile Include="Service\AuthorityService.cs" />
     <Compile Include="Service\BORService.cs" />
+    <Compile Include="Service\CheckHistoryService.cs" />
     <Compile Include="Service\CheckListService.cs" />
+    <Compile Include="Service\CompanyService.cs" />
     <Compile Include="Service\DepartmentService.cs" />
     <Compile Include="Service\IncommingService.cs" />
     <Compile Include="Service\LoginService.cs" />
@@ -473,6 +487,7 @@
     <Compile Include="Service\OrderService.cs" />
     <Compile Include="Service\PDStockService.cs" />
     <Compile Include="Service\ProdImpInsService.cs" />
+    <Compile Include="Service\ProdInsService.cs" />
     <Compile Include="Service\ProdStatusService.cs" />
     <Compile Include="Service\ProductService.cs" />
     <Compile Include="Service\SalesPriceService.cs" />
@@ -540,6 +555,9 @@
     <EmbeddedResource Include="Dev\InsCheck.resx">
       <DependentUpon>InsCheck.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Dev\ProdCheck.resx">
+      <DependentUpon>ProdCheck.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Dev\ProdStatusBarCode.resx">
       <DependentUpon>ProdStatusBarCode.cs</DependentUpon>
     </EmbeddedResource>
@@ -603,6 +621,9 @@
     <EmbeddedResource Include="Forms\ChamGo.resx">
       <DependentUpon>ChamGo.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\CHH\frmAddressAPI.resx">
+      <DependentUpon>frmAddressAPI.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\CHH\frmCheckHistory.resx">
       <DependentUpon>frmCheckHistory.cs</DependentUpon>
     </EmbeddedResource>
@@ -633,10 +654,10 @@
     <EmbeddedResource Include="Forms\CHH\frmBOMPopUp.resx">
       <DependentUpon>frmBOMPopUp.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\ASB\frmCompany.resx">
+    <EmbeddedResource Include="Forms\CHH\frmCompany.resx">
       <DependentUpon>frmCompany.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\ASB\frmCompanyPopUp.resx">
+    <EmbeddedResource Include="Forms\CHH\frmCompanyPopUp.resx">
       <DependentUpon>frmCompanyPopUp.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\JSJ\frmIncommingHistory.resx">
@@ -651,10 +672,10 @@
     <EmbeddedResource Include="Forms\CHH\frmLogIn.resx">
       <DependentUpon>frmLogIn.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\ASB\frmMachine.resx">
+    <EmbeddedResource Include="Forms\CHH\frmMachine.resx">
       <DependentUpon>frmMachine.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\ASB\frmMachinePopUp.resx">
+    <EmbeddedResource Include="Forms\CHH\frmMachinePopUp.resx">
       <DependentUpon>frmMachinePopUp.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\CHH\frmMain.resx">

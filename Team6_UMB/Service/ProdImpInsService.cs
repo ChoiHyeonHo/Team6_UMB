@@ -42,5 +42,10 @@ namespace Team6_UMB.Service
             ProdImpInsDAC dac = new ProdImpInsDAC();
             return dac.UpdateAll(temp, incTemp, userName, alphaTemp);
         }
+        public bool InsertCheckHistory(string alphaTemp)
+        {
+            ProdImpInsDAC dac = new ProdImpInsDAC();
+            return dac.InsertCheckHistory(alphaTemp);
+        }
     }
 }
