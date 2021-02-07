@@ -10,10 +10,10 @@ namespace Team6_UMB.Service
 {
     public class WorkOrderService
     {
-        public List<WorkOrderVO> GetWoList(string state)
+        public List<WorkOrderVO> GetWoList()
         {
             WorkOrderDAC dac = new WorkOrderDAC();
-            return dac.GetWoList(state);
+            return dac.GetWoList();
         }
 
         internal List<WorkOrderVO> SearchWOList(string pid)

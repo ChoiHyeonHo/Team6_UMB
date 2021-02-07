@@ -270,18 +270,6 @@
     <Compile Include="Forms\ASB\frmWorkOrderRegi .Designer.cs">
       <DependentUpon>frmWorkOrderRegi .cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\ASB\frmWorkOrderRegiPopUp.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\ASB\frmWorkOrderRegiPopUp.Designer.cs">
-      <DependentUpon>frmWorkOrderRegiPopUp.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Forms\ASB\frmWorkOrderStatus.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\ASB\frmWorkOrderStatus.Designer.cs">
-      <DependentUpon>frmWorkOrderStatus.cs</DependentUpon>
-    </Compile>
     <Compile Include="Forms\ChamGo.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -611,12 +599,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\ASB\frmWorkOrderRegi .resx">
       <DependentUpon>frmWorkOrderRegi .cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Forms\ASB\frmWorkOrderRegiPopUp.resx">
-      <DependentUpon>frmWorkOrderRegiPopUp.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Forms\ASB\frmWorkOrderStatus.resx">
-      <DependentUpon>frmWorkOrderStatus.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\ChamGo.resx">
       <DependentUpon>ChamGo.cs</DependentUpon>

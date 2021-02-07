@@ -15,19 +15,26 @@ namespace Team6_UMB.Forms
 {
     public partial class frmWorkOrderRegi : Form
     {
+
+
         // wo_id, so_id, product_id, product_name, m_id, m_name, wo_pcount, wo_count, wo_date, wo_sdate, wo_state, wo_uadmin, wo_udate
         List<WorkOrderVO> woList = null;
         CheckBox headerCheck = new CheckBox();
-        string nstate = "N";
-        string cstate = "작업확정";
+        string nstate = "작업지시대기";
+        string cstate = "작업대기";
 
         public frmWorkOrderRegi()
         {
             InitializeComponent();
-            
-            newBtns1.btnBarCode.Visible = newBtns1.btnDocument.Visible = newBtns1.btnShipment.Visible = newBtns1.btnWait.Visible = newBtns1.btnSearch.Visible = false;
+
+            newBtns1.btnCreate.Visible = newBtns1.btnDelete.Visible = newBtns1.btnUpdate.Visible =
+                newBtns1.btnBarCode.Visible = newBtns1.btnDocument.Visible = newBtns1.btnSearch.Visible = newBtns1.btnBarCode.Visible =
+                newBtns1.btnShipment.Visible = newBtns1.btnWait.Visible = false;
+
+
             periodSearchControl.dtFrom = DateTime.Now.AddDays(-7).ToString();
             periodSearchControl.dtTo = DateTime.Now.ToString();
+            
         }
         private void periodSearchControl_ChangedPeriod(object sender, EventArgs e)
         {
@@ -86,34 +93,21 @@ namespace Team6_UMB.Forms
             CommonUtil.AddGridTextColumn(dgvOrder, "지시량", "wo_count", 100);
             CommonUtil.AddGridTextColumn(dgvOrder, "지시일", "wo_date", 150);
             CommonUtil.AddGridTextColumn(dgvOrder, "작업시작일", "wo_sdate", 150);
-            CommonUtil.AddGridTextColumn(dgvOrder, "상태", "wo_state", 80);
+            CommonUtil.AddGridTextColumn(dgvOrder, "상태", "wo_state", 100);
             CommonUtil.AddGridTextColumn(dgvOrder, "수정자", "wo_uadmin", 100);
             CommonUtil.AddGridTextColumn(dgvOrder, "수정일", "wo_udate", 120);
 
-            CommonUtil.SetInitGridView(dgvCWOList);
-            CommonUtil.AddGridTextColumn(dgvCWOList, "WO_NUM", "wo_id", 80);
-            CommonUtil.AddGridTextColumn(dgvCWOList, "수주번호", "so_id", 80);
-            CommonUtil.AddGridTextColumn(dgvCWOList, "제품ID", "product_id", 150);
-            CommonUtil.AddGridTextColumn(dgvCWOList, "제품명", "product_name", 150);
-            CommonUtil.AddGridTextColumn(dgvCWOList, "설비ID", "m_id", 80);
-            CommonUtil.AddGridTextColumn(dgvCWOList, "설비명", "m_name", 150);
-            CommonUtil.AddGridTextColumn(dgvCWOList, "수주량", "wo_pcount", 100);
-            CommonUtil.AddGridTextColumn(dgvCWOList, "지시량", "wo_count", 100);
-            CommonUtil.AddGridTextColumn(dgvCWOList, "지시일", "wo_date", 150);
-            CommonUtil.AddGridTextColumn(dgvCWOList, "작업시작일", "wo_sdate", 150);
-            CommonUtil.AddGridTextColumn(dgvCWOList, "상태", "wo_state", 80);
-            CommonUtil.AddGridTextColumn(dgvCWOList, "수정자", "wo_uadmin", 100);
-            CommonUtil.AddGridTextColumn(dgvCWOList, "수정일", "wo_udate", 120);
+            
 
             
-            DGV_Binding(nstate, dgvOrder);
-            DGV_Binding(cstate, dgvCWOList);
+            DGV_Binding(dgvOrder);
+            
         }
 
-        private void DGV_Binding(string state, DataGridView dgv)
+        private void DGV_Binding(DataGridView dgv)
         {
             WorkOrderService service = new WorkOrderService();
-            woList = service.GetWoList(state);
+            woList = service.GetWoList();
             dgv.DataSource = woList;
         }
 
@@ -139,11 +133,7 @@ namespace Team6_UMB.Forms
             {
                 WorkOrderService service = new WorkOrderService();
                 woList = service.SearchWOList(pid);
-                if(woList.Count == 0)
-                {
-                    MessageBox.Show("조회 결과가 없습니다.");
-                    return;
-                }
+                
                 string FromDate = periodSearchControl.dtFrom;
                 string ToDate = periodSearchControl.dtTo;
 
@@ -169,16 +159,32 @@ namespace Team6_UMB.Forms
                 bool bCheck = (bool)row.Cells["chk"].EditedFormattedValue;
                 if (bCheck)
                 {
-                    chkWOList.Add(Convert.ToInt32(row.Cells["wo_id"].Value));
+                    //wo_state
+                    if (row.Cells["wo_state"].Value.ToString() == "작업지시대기")
+                    {
+                        chkWOList.Add(Convert.ToInt32(row.Cells["wo_id"].Value));
+                    }
+                    else
+                    {
+                        MessageBox.Show("작업지시대기상태만 확정시킬 수 있습니다. ");
+                        return;
+                    }
+                    
                 }
             }
 
             WorkOrderService service = new WorkOrderService();
             bool bResult = service.updateWOState(chkWOList);
-            
-            
+            if (bResult)
+            {
+                MessageBox.Show($"{chkWOList.Count}개의 작업지시를 확정하였습니다.");
+            }
+            else
+            {
+                MessageBox.Show("작업지시가 확정되지 않았습니다 다시 시도하여주세요.");
+            }
 
-
+            DGV_Binding(dgvOrder);
         }
 
         private void newBtns1_btnRefresh_Event(object sender, EventArgs e)
@@ -186,8 +192,18 @@ namespace Team6_UMB.Forms
             periodSearchControl.dtFrom = DateTime.Now.AddDays(-7).ToString();
             periodSearchControl.dtTo = DateTime.Now.ToString();
             cboProductName.SelectedIndex = 0;
-            DGV_Binding(nstate, dgvOrder);
-            DGV_Binding(cstate, dgvCWOList);
+            DGV_Binding(dgvOrder);
+            
+        }
+
+        private void newBtns1_btnExcel_Event(object sender, EventArgs e)
+        {
+
+        }
+
+        private void newBtns1_btnPrint_Event(object sender, EventArgs e)
+        {
+
         }
     }
 }

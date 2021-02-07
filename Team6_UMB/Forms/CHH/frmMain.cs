@@ -46,7 +46,7 @@ namespace Team6_UMB
         public static frmperformanceStatus frmPS; //생산실적 현황
         
         public static frmWorkOrderRegi frmWOR; //작업지시 등록
-        public static frmWorkOrderStatus frmWOS; //작업지시 현황
+        
         public static frmdefectiveRegi frmDR; //불량관리 등록/수정
         public static frmdefectiveStatus frmDS; //불량처리현황
         public static frmAuthority frmAuthority; //권한관리
@@ -221,12 +221,7 @@ namespace Team6_UMB
                 frmWOR = new frmWorkOrderRegi();
             return frmWOR;
         }
-        public static frmWorkOrderStatus CreateWOS()
-        {
-            if (frmWOS == null)
-                frmWOS = new frmWorkOrderStatus();
-            return frmWOS;
-        }
+        
         public static frmdefectiveRegi CreateDR()
         {
             if (frmDR == null)
@@ -789,12 +784,7 @@ namespace Team6_UMB
             this.btn6_4.ForeColor = Color.Black;
             this.btn6_1.BackColor = this.btn6_2.BackColor = this.btn6_3.BackColor = this.btn6_5.BackColor = this.btn6_6.BackColor = Color.Transparent;
             this.btn6_1.ForeColor = this.btn6_2.ForeColor = this.btn6_3.ForeColor = this.btn6_5.ForeColor = this.btn6_6.ForeColor = Color.White;
-            CreateWOS();
-            frmWOS.TopLevel = false;
-            pnlBackPage.Controls.Clear();
-            pnlBackPage.Controls.Add(frmWOS);
-            frmWOS.Dock = DockStyle.Fill;
-            frmWOS.Show();
+            
         }
         private void btn6_5_Click(object sender, EventArgs e)
         {
