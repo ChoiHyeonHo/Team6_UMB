@@ -74,7 +74,7 @@ namespace UMB_DAC
         
         public List<OrderCompanyVO> CompanyList()
         {
-            string sql = "select company_name from TBL_COMPANY where company_type = '발품'";
+            string sql = "select company_name from TBL_COMPANY where company_type = '매출거래처'";
 
             using (SqlCommand cmd = new SqlCommand(sql, conn))
             {
