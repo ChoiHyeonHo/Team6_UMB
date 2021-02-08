@@ -240,22 +240,22 @@
     <Compile Include="Forms\ASB\frmWarehousePopUp.Designer.cs">
       <DependentUpon>frmWarehousePopUp.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\BMN\frmdefectiveRegi.cs">
+    <Compile Include="Forms\ASB\frmdefectiveRegi.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\BMN\frmdefectiveRegi.Designer.cs">
+    <Compile Include="Forms\ASB\frmdefectiveRegi.Designer.cs">
       <DependentUpon>frmdefectiveRegi.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\BMN\frmdefectiveRegiPopUp.cs">
+    <Compile Include="Forms\ASB\frmdefectiveRegiPopUp.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\BMN\frmdefectiveRegiPopUp.Designer.cs">
+    <Compile Include="Forms\ASB\frmdefectiveRegiPopUp.Designer.cs">
       <DependentUpon>frmdefectiveRegiPopUp.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\BMN\frmdefectiveStatus.cs">
+    <Compile Include="Forms\ASB\frmdefectiveStatus.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\BMN\frmdefectiveStatus.Designer.cs">
+    <Compile Include="Forms\ASB\frmdefectiveStatus.Designer.cs">
       <DependentUpon>frmdefectiveStatus.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\ASB\frmperformanceStatus.cs">
@@ -596,13 +596,13 @@
     <EmbeddedResource Include="Forms\ASB\frmWarehousePopUp.resx">
       <DependentUpon>frmWarehousePopUp.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\BMN\frmdefectiveRegi.resx">
+    <EmbeddedResource Include="Forms\ASB\frmdefectiveRegi.resx">
       <DependentUpon>frmdefectiveRegi.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\BMN\frmdefectiveRegiPopUp.resx">
+    <EmbeddedResource Include="Forms\ASB\frmdefectiveRegiPopUp.resx">
       <DependentUpon>frmdefectiveRegiPopUp.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\BMN\frmdefectiveStatus.resx">
+    <EmbeddedResource Include="Forms\ASB\frmdefectiveStatus.resx">
       <DependentUpon>frmdefectiveStatus.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\ASB\frmperformanceStatus.resx">
@@ -863,6 +863,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Loading.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Forms\BMN\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
