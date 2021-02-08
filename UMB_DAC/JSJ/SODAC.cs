@@ -43,7 +43,7 @@ namespace UMB_DAC
 
         public List<SOCompanyVO> CompanyList()
         {
-            string sql = "select company_name from TBL_COMPANY where company_type = '납품'";
+            string sql = "select company_name from TBL_COMPANY where company_type = '매입거래처'";
 
             using (SqlCommand cmd = new SqlCommand(sql, conn))
             {
@@ -67,10 +67,10 @@ namespace UMB_DAC
 
         public int RegistSO(List<SOVO> list)
         {
-            string sql = "insert into TBL_SO_MASTER (product_id, so_ocount, company_id, so_rep, so_edate, so_comment) values(@product_id, @so_ocount, @company_id, @so_rep, @so_edate, @so_comment)";
+            using (SqlCommand cmd = new SqlCommand())
+            {                
+                cmd.Connection = conn;
 
-            using (SqlCommand cmd = new SqlCommand(sql, conn))
-            {
                 SqlTransaction trans = conn.BeginTransaction();
 
                 cmd.Transaction = trans;
@@ -85,9 +85,16 @@ namespace UMB_DAC
                     cmd.Parameters.AddWithValue("@so_comment", list[0].so_comment);
                     foreach (SOVO SO in list)
                     {
+                        cmd.CommandText = "insert into TBL_SO_MASTER (product_id, so_ocount, company_id, so_rep, so_edate, so_comment) values(@product_id, @so_ocount, @company_id, @so_rep, @so_edate, @so_comment)";
                         cmd.Parameters["@product_id"].Value = SO.product_id;
                         cmd.Parameters["@so_ocount"].Value = SO.so_ocount;
 
+                        cmd.ExecuteNonQuery();
+
+                        cmd.CommandText = "select IDENT_CURRENT('TBL_SO_MASTER')";
+                        int so_id = Convert.ToInt32(cmd.ExecuteScalar());
+                        cmd.CommandText = "EXEC SP_InsertWO @so_id, @product_id, @so_ocount";
+                        cmd.Parameters.AddWithValue("@so_id", so_id);
                         cmd.ExecuteNonQuery();
                     }
 
