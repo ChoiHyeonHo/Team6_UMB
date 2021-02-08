@@ -258,12 +258,6 @@
     <Compile Include="Forms\BMN\frmdefectiveStatus.Designer.cs">
       <DependentUpon>frmdefectiveStatus.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\ASB\frmperformaceRegiPopUp.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\ASB\frmperformaceRegiPopUp.Designer.cs">
-      <DependentUpon>frmperformaceRegiPopUp.cs</DependentUpon>
-    </Compile>
     <Compile Include="Forms\ASB\frmperformanceStatus.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -486,6 +480,7 @@
     <Compile Include="Service\MatPriceService.cs" />
     <Compile Include="Service\OrderService.cs" />
     <Compile Include="Service\PDStockService.cs" />
+    <Compile Include="Service\PerformanceService.cs" />
     <Compile Include="Service\ProdImpInsService.cs" />
     <Compile Include="Service\ProdInsService.cs" />
     <Compile Include="Service\ProdStatusService.cs" />
@@ -608,9 +603,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\BMN\frmdefectiveStatus.resx">
       <DependentUpon>frmdefectiveStatus.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Forms\ASB\frmperformaceRegiPopUp.resx">
-      <DependentUpon>frmperformaceRegiPopUp.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\ASB\frmperformanceStatus.resx">
       <DependentUpon>frmperformanceStatus.cs</DependentUpon>

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
@@ -55,19 +56,57 @@ namespace UMB_DAC.ASB
             }
         }
 
+        /// <summary>
+        /// 작업지시확정
+        /// </summary>
+        /// <param name="chkWOList"></param>
+        /// <returns></returns>
         public bool updateWOState(List<int> chkWOList)
         {
-            string temp = string.Join(",", chkWOList);
-
-            string sql = @"update TBL_WORK_ORDER set wo_state = '작업대기'
-                        where wo_id in ("+ temp + ")";
+            string temp = string.Join(",", chkWOList);            
             int iRowAffect = 0;
-            using (SqlCommand cmd = new SqlCommand(sql, conn))
-            {                                
-                iRowAffect = cmd.ExecuteNonQuery();
-                Dispose();
+            int check = 0;
+
+            
+            //작업지시확정 > 생산 > 생산실적
+            using (SqlCommand cmd = new SqlCommand())
+            {
+                SqlTransaction tran = conn.BeginTransaction();
+
+                try
+                {
+                    cmd.Transaction = tran;
+
+                    cmd.Connection = conn;
+                    cmd.CommandText = @"update TBL_WORK_ORDER set wo_state = '작업대기'
+                        where wo_id in (" + temp + ")";
+                    iRowAffect = cmd.ExecuteNonQuery();
+
+
+
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.CommandText = "SP_ConfirmationWO";
+                    foreach (int woid in chkWOList)
+                    {
+                        cmd.Parameters.Clear();
+                        cmd.Parameters.AddWithValue("@wo_id", woid);
+                        check += cmd.ExecuteNonQuery();
+                    }
+
+                    tran.Commit();
+                    Dispose();                    
+                    return true;
+                }
+                catch
+                {
+                    tran.Rollback();
+                    return false;
+                }
+                
             }
-            return (iRowAffect > 0);
+            
+
+            
         }
 
         public List<WorkOrderVO> GetWoList()

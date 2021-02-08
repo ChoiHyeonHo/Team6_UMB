@@ -40,6 +40,7 @@ namespace Team6_UMB.Forms.ASB
             List<MachineVO> allMachineItem = mService.GetMachineInfo();
 
 
+
             CommonUtil.ComboBinding(cboProcess, allProcessItem, "공정명");
             CommonUtil.ProdNameBinding(cboProduct, allProItem);
             CommonUtil.MachineNameBinding(cboMachine, allMachineItem);

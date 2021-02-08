@@ -43,6 +43,7 @@
   <ItemGroup>
     <Compile Include="ASB\CheckListVO.cs" />
     <Compile Include="ASB\MachineVO.cs" />
+    <Compile Include="ASB\PerformanceVO.cs" />
     <Compile Include="ASB\ProductVO.cs" />
     <Compile Include="ASB\WorkOrderVO.cs" />
     <Compile Include="CHH\BOMVO.cs" />

@@ -22,8 +22,7 @@ namespace Team6_UMB.Forms
         // wo_id, so_id, product_id, product_name, m_id, m_name, wo_pcount, wo_count, wo_date, wo_sdate, wo_state, wo_uadmin, wo_udate
         List<WorkOrderVO> woList = null;
         CheckBox headerCheck = new CheckBox();
-        string nstate = "작업지시대기";
-        string cstate = "작업대기";
+        
 
         public frmWorkOrderRegi()
         {
@@ -158,8 +157,14 @@ namespace Team6_UMB.Forms
             }
         }
 
+        /// <summary>
+        /// 작업지시확정
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnOrderComplete_Click(object sender, EventArgs e)
         {
+            //생산실적 생성
             List<int> chkWOList = new List<int>();
 
             foreach (DataGridViewRow row in dgvOrder.Rows)
@@ -195,6 +200,11 @@ namespace Team6_UMB.Forms
             DGV_Binding(dgvOrder);
         }
 
+        /// <summary>
+        /// 초기화
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void newBtns1_btnRefresh_Event(object sender, EventArgs e)
         {
             periodSearchControl.dtFrom = DateTime.Now.AddDays(-7).ToString();
@@ -204,6 +214,11 @@ namespace Team6_UMB.Forms
             
         }
 
+        /// <summary>
+        /// 엑셀
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void newBtns1_btnExcel_Event(object sender, EventArgs e)
         {
             try
