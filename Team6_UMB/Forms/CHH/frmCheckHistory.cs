@@ -36,7 +36,7 @@ namespace Team6_UMB.Forms.CHH
             CommonUtil.AddGridTextColumn(dgvCheckHistory, "품목코드", "product_id", 160);
             CommonUtil.AddGridTextColumn(dgvCheckHistory, "검사일", "ch_date", 160);
             CommonUtil.AddGridTextColumn(dgvCheckHistory, "검사구분", "ch_type", 160);
-            CommonUtil.AddGridTextColumn(dgvCheckHistory, "비고", "ch_comment", 470);
+            CommonUtil.AddGridTextColumn(dgvCheckHistory, "비고", "ch_comment", 250);
             CommonUtil.AddGridTextColumn(dgvCheckHistory, "제품검사ID", "cl_ship_id", 150);
             CommonUtil.AddGridTextColumn(dgvCheckHistory, "수입검사ID", "cl_inc_id", 150);
             DGVBinding();

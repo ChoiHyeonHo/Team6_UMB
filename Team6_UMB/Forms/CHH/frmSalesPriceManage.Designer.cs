@@ -235,7 +235,7 @@ namespace Team6_UMB.Forms
             // frmSalesPriceManage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
-            this.ClientSize = new System.Drawing.Size(1488, 856);
+            this.ClientSize = new System.Drawing.Size(1535, 950);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.dgvPrice);
             this.Controls.Add(this.temp6);

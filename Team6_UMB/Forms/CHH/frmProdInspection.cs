@@ -57,7 +57,7 @@ namespace Team6_UMB.Forms.CHH
             CommonUtil.AddGridTextColumn(dgvProdCheck, "생산상태", "production_state", 200);
             CommonUtil.AddGridTextColumn(dgvProdCheck, "납기일", "so_edate", 150);
             CommonUtil.AddGridTextColumn(dgvProdCheck, "출하번호", "ship_id", 150);
-            CommonUtil.AddGridTextColumn(dgvProdCheck, "생산량", "production_count", 150);
+            CommonUtil.AddGridTextColumn(dgvProdCheck, "생산량", "production_QtyReleased", 150);
             DGVBinding();
         }
 

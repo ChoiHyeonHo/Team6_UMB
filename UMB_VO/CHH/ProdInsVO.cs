@@ -17,7 +17,7 @@ namespace UMB_VO.CHH
         public string production_state { get; set; }
         public string so_edate { get; set; }
         public int ship_id { get; set; }
-        public int production_count { get; set; }
+        public int production_QtyReleased { get; set; }
     }
     public class ProdInsPopUpVO
     {
