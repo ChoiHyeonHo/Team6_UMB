@@ -21,6 +21,7 @@ namespace Team6_UMB
     public partial class frmMain : Form
     {
         #region 싱글톤 - 스태틱 선언
+        public static frmFirstPage frmFirstPage;
         public static frmSalesPriceManage frmSalesPriceManage;
         public static frmMatPriceManage frmMatPriceManage;
         public static frmProductManage frmProductManage;
@@ -51,7 +52,6 @@ namespace Team6_UMB
         public static frmdefectiveStatus frmDS; //불량처리현황
         public static frmAuthority frmAuthority; //권한관리
         #endregion
-
         public frmMain()
         {
             InitializeComponent();
@@ -61,6 +61,13 @@ namespace Team6_UMB
 
         #region 싱글톤 - 메서드를 통한 폼 유무 체크
         #region CHH 싱글톤
+        public static frmFirstPage CreateFirstPage()
+        {
+            if (frmFirstPage == null)
+                frmFirstPage = new frmFirstPage();
+            return frmFirstPage;
+        }
+
         public static frmSalesPriceManage CreateSalesPriceManage()
         {
             if (frmSalesPriceManage == null)
@@ -242,35 +249,42 @@ namespace Team6_UMB
         private void btnMain1_Click(object sender, EventArgs e)
         {
             PanelControl(1);
+            btn1_1.PerformClick();
         }
 
         private void btnMain2_Click(object sender, EventArgs e)
         {
             PanelControl(2);
+            btn2_1.PerformClick();
         }
 
         private void btnMain3_Click(object sender, EventArgs e)
         {
             PanelControl(3);
+            btn3_1.PerformClick();
         }
 
         private void btnMain4_Click(object sender, EventArgs e)
         {
             PanelControl(4);
+            btn4_1.PerformClick();
         }
 
         private void btnMain5_Click(object sender, EventArgs e)
         {
             PanelControl(5);
+            btn5_2.PerformClick();
         }
 
         private void btnMain6_Click(object sender, EventArgs e)
         {
             PanelControl(6);
+            btn6_1.PerformClick();
         }
         private void btnMain7_Click(object sender, EventArgs e)
         {
             PanelControl(7);
+            btn7_1.PerformClick();
         }
         #endregion
 
@@ -552,6 +566,16 @@ namespace Team6_UMB
         #endregion
 
         #region CHH폼
+        private void btnFirstPage_Click(object sender, EventArgs e)
+        {
+            CreateFirstPage();
+            frmFirstPage.TopLevel = false;
+            pnlBackPage.Controls.Clear();
+            pnlBackPage.Controls.Add(frmFirstPage);
+            frmFirstPage.Dock = DockStyle.Fill;
+            frmFirstPage.Show();
+        }
+
         private void btn2_1_Click(object sender, EventArgs e)
         {
             this.btn2_1.BackColor = Color.White;
@@ -755,8 +779,8 @@ namespace Team6_UMB
         {
             this.btn6_1.BackColor = Color.White;
             this.btn6_1.ForeColor = Color.Black;
-            this.btn6_2.BackColor = this.btn6_3.BackColor = this.btn6_4.BackColor = this.btn6_5.BackColor = this.btn6_6.BackColor = Color.Transparent;
-            this.btn6_2.ForeColor = this.btn6_3.ForeColor = this.btn6_4.ForeColor = this.btn6_5.ForeColor = this.btn6_6.ForeColor = Color.White;
+            this.btn6_3.BackColor = this.btn6_5.BackColor = this.btn6_6.BackColor = Color.Transparent;
+            this.btn6_3.ForeColor = this.btn6_5.ForeColor = this.btn6_6.ForeColor = Color.White;
             CreatePS();
             frmPS.TopLevel = false;
             pnlBackPage.Controls.Clear();
@@ -769,8 +793,8 @@ namespace Team6_UMB
         {
             this.btn6_3.BackColor = Color.White;
             this.btn6_3.ForeColor = Color.Black;
-            this.btn6_1.BackColor = this.btn6_2.BackColor = this.btn6_4.BackColor = this.btn6_5.BackColor = this.btn6_6.BackColor = Color.Transparent;
-            this.btn6_1.ForeColor = this.btn6_2.ForeColor = this.btn6_4.ForeColor = this.btn6_5.ForeColor = this.btn6_6.ForeColor = Color.White;
+            this.btn6_1.BackColor = this.btn6_5.BackColor = this.btn6_6.BackColor = Color.Transparent;
+            this.btn6_1.ForeColor = this.btn6_5.ForeColor = this.btn6_6.ForeColor = Color.White;
             CreateWOR();
             frmWOR.TopLevel = false;
             pnlBackPage.Controls.Clear();
@@ -778,20 +802,12 @@ namespace Team6_UMB
             frmWOR.Dock = DockStyle.Fill;
             frmWOR.Show();
         }
-        private void btn6_4_Click(object sender, EventArgs e)
-        {
-            this.btn6_4.BackColor = Color.White;
-            this.btn6_4.ForeColor = Color.Black;
-            this.btn6_1.BackColor = this.btn6_2.BackColor = this.btn6_3.BackColor = this.btn6_5.BackColor = this.btn6_6.BackColor = Color.Transparent;
-            this.btn6_1.ForeColor = this.btn6_2.ForeColor = this.btn6_3.ForeColor = this.btn6_5.ForeColor = this.btn6_6.ForeColor = Color.White;
-            
-        }
         private void btn6_5_Click(object sender, EventArgs e)
         {
             this.btn6_5.BackColor = Color.White;
             this.btn6_5.ForeColor = Color.Black;
-            this.btn6_1.BackColor = this.btn6_2.BackColor = this.btn6_3.BackColor = this.btn6_4.BackColor = this.btn6_6.BackColor = Color.Transparent;
-            this.btn6_1.ForeColor = this.btn6_2.ForeColor = this.btn6_3.ForeColor = this.btn6_4.ForeColor = this.btn6_6.ForeColor = Color.White;
+            this.btn6_1.BackColor = this.btn6_3.BackColor = this.btn6_6.BackColor = Color.Transparent;
+            this.btn6_1.ForeColor = this.btn6_3.ForeColor = this.btn6_6.ForeColor = Color.White;
             CreateDR();
             frmDR.TopLevel = false;
             pnlBackPage.Controls.Clear();
@@ -803,8 +819,8 @@ namespace Team6_UMB
         {
             this.btn6_6.BackColor = Color.White;
             this.btn6_6.ForeColor = Color.Black;
-            this.btn6_1.BackColor = this.btn6_2.BackColor = this.btn6_3.BackColor = this.btn6_4.BackColor = this.btn6_5.BackColor = Color.Transparent;
-            this.btn6_1.ForeColor = this.btn6_2.ForeColor = this.btn6_3.ForeColor = this.btn6_4.ForeColor = this.btn6_5.ForeColor = Color.White;
+            this.btn6_1.BackColor = this.btn6_3.BackColor = this.btn6_5.BackColor = Color.Transparent;
+            this.btn6_1.ForeColor = this.btn6_3.ForeColor = this.btn6_5.ForeColor = Color.White;
             CreateDS();
             frmDS.TopLevel = false;
             pnlBackPage.Controls.Clear();
@@ -847,6 +863,17 @@ namespace Team6_UMB
             Process.Start("https://www.naver.com/");
         }
 
+
         #endregion
+
+        private void frmMain_Load(object sender, EventArgs e)
+        {
+            CreateFirstPage();
+            frmFirstPage.TopLevel = false;
+            pnlBackPage.Controls.Clear();
+            pnlBackPage.Controls.Add(frmFirstPage);
+            frmFirstPage.Dock = DockStyle.Fill;
+            frmFirstPage.Show();
+        }
     }
 }

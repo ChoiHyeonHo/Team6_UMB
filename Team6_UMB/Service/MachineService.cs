@@ -35,5 +35,10 @@ namespace Team6_UMB.Service
             MachineDAC dac = new MachineDAC();
             return dac.CHH_MachineDelete(m_id);
         }
+        public List<MachineVO> CHH_MachineWhere(string m_name)
+        {
+            MachineDAC dac = new MachineDAC();
+            return dac.CHH_MachineWhere(m_name);
+        }
     }
 }

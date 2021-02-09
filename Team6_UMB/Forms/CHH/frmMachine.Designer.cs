@@ -29,17 +29,17 @@ namespace Team6_UMB.Forms
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label1 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.newBtns1 = new Team6_UMB.Controls.NewBtns();
             this.label3 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.cbMachine = new System.Windows.Forms.ComboBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label6 = new System.Windows.Forms.Label();
-            this.cbMachine = new System.Windows.Forms.ComboBox();
             this.dgvMachine = new Team6_UMB.DGV_Custom();
-            this.newBtns1 = new Team6_UMB.Controls.NewBtns();
             this.panel1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -70,6 +70,7 @@ namespace Team6_UMB.Forms
             this.button1.Size = new System.Drawing.Size(34, 30);
             this.button1.TabIndex = 21;
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // panel1
             // 
@@ -82,6 +83,19 @@ namespace Team6_UMB.Forms
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1511, 35);
             this.panel1.TabIndex = 25;
+            // 
+            // newBtns1
+            // 
+            this.newBtns1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(52)))), ((int)(((byte)(79)))));
+            this.newBtns1.Dock = System.Windows.Forms.DockStyle.Right;
+            this.newBtns1.Location = new System.Drawing.Point(741, 0);
+            this.newBtns1.Name = "newBtns1";
+            this.newBtns1.Size = new System.Drawing.Size(770, 35);
+            this.newBtns1.TabIndex = 2;
+            this.newBtns1.btnRefresh_Event += new System.EventHandler(this.newBtns1_btnRefresh_Event);
+            this.newBtns1.btnCreate_Event += new System.EventHandler(this.newBtns1_btnCreate_Event);
+            this.newBtns1.btnUpdate_Event += new System.EventHandler(this.newBtns1_btnUpdate_Event);
+            this.newBtns1.btnDelete_Event += new System.EventHandler(this.newBtns1_btnDelete_Event);
             // 
             // label3
             // 
@@ -108,6 +122,18 @@ namespace Team6_UMB.Forms
             this.groupBox1.TabIndex = 26;
             this.groupBox1.TabStop = false;
             // 
+            // cbMachine
+            // 
+            this.cbMachine.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this.cbMachine.Font = new System.Drawing.Font("나눔바른고딕", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.cbMachine.FormattingEnabled = true;
+            this.cbMachine.Location = new System.Drawing.Point(59, 15);
+            this.cbMachine.Name = "cbMachine";
+            this.cbMachine.Size = new System.Drawing.Size(172, 25);
+            this.cbMachine.TabIndex = 26;
+            this.cbMachine.SelectedIndexChanged += new System.EventHandler(this.cbMachine_SelectedIndexChanged);
+            // 
             // panel2
             // 
             this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
@@ -129,29 +155,18 @@ namespace Team6_UMB.Forms
             this.label6.TabIndex = 22;
             this.label6.Text = "설비 리스트";
             // 
-            // cbMachine
-            // 
-            this.cbMachine.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
-            this.cbMachine.Font = new System.Drawing.Font("나눔바른고딕", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.cbMachine.FormattingEnabled = true;
-            this.cbMachine.Location = new System.Drawing.Point(59, 15);
-            this.cbMachine.Name = "cbMachine";
-            this.cbMachine.Size = new System.Drawing.Size(172, 25);
-            this.cbMachine.TabIndex = 26;
-            // 
             // dgvMachine
             // 
             this.dgvMachine.BackgroundColor = System.Drawing.Color.White;
             this.dgvMachine.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("나눔바른고딕", 9F);
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvMachine.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("나눔바른고딕", 9F);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvMachine.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dgvMachine.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvMachine.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.dgvMachine.GridColor = System.Drawing.Color.LightGray;
@@ -164,19 +179,6 @@ namespace Team6_UMB.Forms
             this.dgvMachine.Size = new System.Drawing.Size(1510, 800);
             this.dgvMachine.TabIndex = 46;
             this.dgvMachine.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvMachine_CellClick);
-            // 
-            // newBtns1
-            // 
-            this.newBtns1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(52)))), ((int)(((byte)(79)))));
-            this.newBtns1.Dock = System.Windows.Forms.DockStyle.Right;
-            this.newBtns1.Location = new System.Drawing.Point(741, 0);
-            this.newBtns1.Name = "newBtns1";
-            this.newBtns1.Size = new System.Drawing.Size(770, 35);
-            this.newBtns1.TabIndex = 2;
-            this.newBtns1.btnRefresh_Event += new System.EventHandler(this.newBtns1_btnRefresh_Event);
-            this.newBtns1.btnCreate_Event += new System.EventHandler(this.newBtns1_btnCreate_Event);
-            this.newBtns1.btnUpdate_Event += new System.EventHandler(this.newBtns1_btnUpdate_Event);
-            this.newBtns1.btnDelete_Event += new System.EventHandler(this.newBtns1_btnDelete_Event);
             // 
             // frmMachine
             // 

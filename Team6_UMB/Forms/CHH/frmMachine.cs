@@ -60,6 +60,17 @@ namespace Team6_UMB.Forms
             DGVBinding();
         }
 
+        private void button1_Click(object sender, EventArgs e)
+        {
+            allList = service.CHH_MachineWhere(m_name);
+            dgvMachine.DataSource = allList;
+        }
+
+        private void cbMachine_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            m_name = cbMachine.Text;
+        }
+
         private void newBtns1_btnUpdate_Event(object sender, EventArgs e)
         {
             string HeaderName = "설비정보 수정";

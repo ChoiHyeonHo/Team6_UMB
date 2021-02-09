@@ -288,6 +288,12 @@
     <Compile Include="Forms\CHH\frmCheckHistory.Designer.cs">
       <DependentUpon>frmCheckHistory.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\CHH\frmFirstPage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\CHH\frmFirstPage.Designer.cs">
+      <DependentUpon>frmFirstPage.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\CHH\frmImpInsComment.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -619,6 +625,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\CHH\frmCheckHistory.resx">
       <DependentUpon>frmCheckHistory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\CHH\frmFirstPage.resx">
+      <DependentUpon>frmFirstPage.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\CHH\frmImpInsComment.resx">
       <DependentUpon>frmImpInsComment.cs</DependentUpon>

@@ -99,5 +99,25 @@ namespace UMB_DAC.ASB
                 return iRowAffect > 0;
             }
         }
+        public List<MachineVO> CHH_MachineWhere(string m_name)
+        {
+            StringBuilder sb = new StringBuilder();
+            sb.Append(@"select * from TBL_MACHINE where m_yn = 'Y' and 1 =1 ");
+            if (m_name.Trim().Length > 0)
+                sb.Append("and m_name = @m_name");
+            string sql = sb.ToString();
+
+            using (SqlCommand cmd = new SqlCommand(sql, conn))
+            {
+                cmd.Parameters.AddWithValue("@m_name", m_name);
+
+                SqlDataReader reader = cmd.ExecuteReader();
+
+                List<MachineVO> list = Helper.DataReaderMapToList<MachineVO>(reader);
+                Dispose();
+
+                return list;
+            }
+        }
     }
 }
