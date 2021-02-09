@@ -15,4 +15,15 @@ namespace UMB_VO
         public int ship_count { get; set; }
         public string ship_edate { get; set; }
     }
+
+    public class ShipSOVO
+    {
+        public int so_id { get; set; }
+        public string company_name { get; set; }
+        public string product_name { get; set; }
+        public string so_edate { get; set; }
+        public int so_ocount { get; set; }
+        public string so_rep { get; set; }
+        public string so_state { get; set; }
+    }
 }

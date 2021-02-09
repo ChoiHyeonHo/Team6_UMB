@@ -94,7 +94,12 @@ namespace UMB_DAC
                         cmd.CommandText = "select IDENT_CURRENT('TBL_SO_MASTER')";
                         int so_id = Convert.ToInt32(cmd.ExecuteScalar());
                         cmd.CommandText = "EXEC SP_InsertWO @so_id, @product_id, @so_ocount";
-                        cmd.Parameters.AddWithValue("@so_id", so_id);
+
+                        if (cmd.Parameters.Contains("@so_id") == false)
+                        {
+                            cmd.Parameters.Add("@so_id", SqlDbType.Int);
+                        }
+                        cmd.Parameters["@so_id"].Value = so_id;
                         cmd.ExecuteNonQuery();
                     }
 

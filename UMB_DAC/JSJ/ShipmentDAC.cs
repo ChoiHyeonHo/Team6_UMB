@@ -39,5 +39,21 @@ namespace UMB_DAC
                 return list;
             }
         }
+
+        public List<ShipSOVO> ShipmentSOList()
+        {
+            string sql = @"select so_id, company_name, S.product_name, so_edate, so_ocount, so_rep, case when so_ocount > PS.ps_stock then '재고부족' else '출하대기 가능' end as so_state
+                          from SOList S
+                          inner
+                          join TBL_PRODUCT P on S.product_name = P.product_name
+                          inner
+                          join TBL_PRODUCT_STOCK PS on P.product_id = PS.product_id ";
+            using (SqlCommand cmd = new SqlCommand(sql, conn))
+            {
+                SqlDataReader reader = cmd.ExecuteReader();
+                List<ShipSOVO> list = Helper.DataReaderMapToList<ShipSOVO>(reader);
+                return list;
+            }
+        }
     }
 }

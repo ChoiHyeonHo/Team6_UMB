@@ -12,7 +12,7 @@ namespace Team6_UMB.Forms.JSJ
 {
     public partial class frmShipment : Team6_UMB.BaseForm.frmList
     {
-        List<SOListVO> SOList;
+        List<ShipSOVO> SOList;
         List<ShipmentVO> ShipList;
         int so_id = 0;
         int shipment_id = 0;
@@ -39,6 +39,7 @@ namespace Team6_UMB.Forms.JSJ
             CommonUtil.AddGridTextColumn(dgvList, "납기일", "so_edate", 250);
             CommonUtil.AddGridTextColumn(dgvList, "주문수량", "so_ocount", 250);
             CommonUtil.AddGridTextColumn(dgvList, "담당자", "so_rep", 250);
+            CommonUtil.AddGridTextColumn(dgvList, "상태", "so_state", 250);
 
             CommonUtil.SetInitGridView(dgvShipment);
             CommonUtil.AddGridTextColumn(dgvShipment, "출하번호", "ship_id", 200);
@@ -54,8 +55,8 @@ namespace Team6_UMB.Forms.JSJ
 
         public void SOListBind()
         {
-            SOService service = new SOService();
-            SOList = service.SOList();
+            ShipmentService service = new ShipmentService();
+            SOList = service.ShipmentSOList();
             dgvList.DataSource = SOList;
         }
 
