@@ -14,7 +14,7 @@ namespace Team6_UMB.Forms.JSJ
     {
         List<ShipSOVO> SOList;
         List<ShipmentVO> ShipList;
-        int so_id = 0;
+        ShipWaitVO ShipWaitVO = new ShipWaitVO();
         int shipment_id = 0;
 
         public frmShipment()
@@ -69,7 +69,20 @@ namespace Team6_UMB.Forms.JSJ
 
         private void dgvList_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            so_id = Convert.ToInt32(dgvList[0, e.RowIndex].Value);
+            if (e.RowIndex >= 0)
+            {
+                ShipWaitVO.so_id = Convert.ToInt32(dgvList[0, e.RowIndex].Value);
+                ShipWaitVO.ship_count = Convert.ToInt32(dgvList[4, e.RowIndex].Value);
+                ShipWaitVO.ship_state = dgvList[6, e.RowIndex].Value.ToString();
+                if(dgvList[2, e.RowIndex].Value.ToString() == "L_UMB1")
+                {
+                    ShipWaitVO.product_id = "P1001";
+                }
+                else
+                {
+                    ShipWaitVO.product_id = "P1002";
+                }
+            }
         }
 
         private void newBtns1_btnShipment_Event(object sender, EventArgs e)
@@ -85,7 +98,18 @@ namespace Team6_UMB.Forms.JSJ
 
         private void newBtns1_btnWait_Event(object sender, EventArgs e)
         {
-
+            ShipmentService service = new ShipmentService();
+            if (ShipWaitVO.ship_state == "출하대기 가능")
+            {
+                if (service.ShipWait(ShipWaitVO) != 0)
+                {
+                    MessageBox.Show("출하대기 완료");
+                }
+            }
+            else
+            {
+                MessageBox.Show("재고가 부족합니다.");
+            }
         }
 
         private void newBtns1_btnDocument_Event(object sender, EventArgs e)

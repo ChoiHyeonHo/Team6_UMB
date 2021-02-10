@@ -71,6 +71,7 @@
     <Compile Include="JSJ\IncommingDAC.cs" />
     <Compile Include="JSJ\LoginDAC.cs" />
     <Compile Include="JSJ\OrderDAC.cs" />
+    <Compile Include="JSJ\SalesDAC.cs" />
     <Compile Include="JSJ\ShipmentDAC.cs" />
     <Compile Include="JSJ\SODAC.cs" />
     <Compile Include="JSJ\UserDAC.cs" />

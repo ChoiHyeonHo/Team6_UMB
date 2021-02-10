@@ -26,4 +26,12 @@ namespace UMB_VO
         public string so_rep { get; set; }
         public string so_state { get; set; }
     }
+
+    public class ShipWaitVO
+    {
+        public int so_id { get; set; }
+        public int ship_count { get; set; }
+        public string ship_state { get; set; }
+        public string product_id { get; set; }
+    }
 }

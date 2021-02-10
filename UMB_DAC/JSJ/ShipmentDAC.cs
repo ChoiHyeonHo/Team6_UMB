@@ -42,17 +42,74 @@ namespace UMB_DAC
 
         public List<ShipSOVO> ShipmentSOList()
         {
-            string sql = @"select so_id, company_name, S.product_name, so_edate, so_ocount, so_rep, case when so_ocount > PS.ps_stock then '재고부족' else '출하대기 가능' end as so_state
-                          from SOList S
-                          inner
-                          join TBL_PRODUCT P on S.product_name = P.product_name
-                          inner
-                          join TBL_PRODUCT_STOCK PS on P.product_id = PS.product_id ";
+            string sql = @"select so_id, company_name, product_name, so_edate, so_ocount, so_rep, so_state from ShipSOList where so_deleted = 'N'";
             using (SqlCommand cmd = new SqlCommand(sql, conn))
             {
                 SqlDataReader reader = cmd.ExecuteReader();
                 List<ShipSOVO> list = Helper.DataReaderMapToList<ShipSOVO>(reader);
                 return list;
+            }
+        }
+
+        public int ShipWait(ShipWaitVO vo)
+        {
+            using (SqlCommand cmd = new SqlCommand())
+            {
+                cmd.Connection = conn;
+                SqlTransaction trans = conn.BeginTransaction();
+
+                cmd.Transaction = trans;
+
+                try
+                {
+                    cmd.Parameters.AddWithValue("@so_id", vo.so_id);
+                    cmd.Parameters.AddWithValue("@ship_count", vo.ship_count);
+                    cmd.Parameters.AddWithValue("@ship_uadmin", LoginVO.user.Name);
+                    cmd.CommandText = @"insert into TBL_SHIPMENT (so_id, ship_count, ship_uadmin, ship_udate, ship_state) values(@so_id, @ship_count, @ship_uadmin, replace(convert(varchar(10), getdate(), 120), '-', '-'), '검사대기');
+                                        update TBL_SO_MASTER set so_deleted = 'Y' where so_id = @so_id";
+
+                    cmd.ExecuteNonQuery();
+
+                    cmd.CommandText = @"insert into TBL_SHIP_CHECKLIST (ship_id) select IDENT_CURRENT('TBL_SHIPMENT')";
+                    cmd.ExecuteNonQuery();
+
+                    cmd.CommandText = "insert into TBL_PRODUCT_STOCK (product_id, ps_odate, ps_stock) values (@product_id, replace(convert(varchar(10), getdate(), 120), '-', '-'), @ship_count)";
+                    cmd.Parameters.AddWithValue("@product_id", vo.product_id);
+                    cmd.ExecuteNonQuery();
+                    trans.Commit();
+                    conn.Close();
+                    return 1;
+                }
+                catch (Exception err)
+                {
+                    string msg = err.Message;
+                    trans.Rollback();
+                    conn.Close();
+                    return 0;
+                }
+            }
+        }
+
+        public int Shipment(int ship_id)
+        {
+            string sql = "update TBL_SHIMPENT set ship_edate = replace(convert(varchar(10), getdate(), 120), '-', '-'), ship_uadmin = @ship_uadmin ship_udate = replace(convert(varchar(10), getdate(), 120), '-', '-') where ship_id = @ship_id";
+
+            using (SqlCommand cmd = new SqlCommand(sql, conn))
+            {
+                try
+                {
+                    cmd.Parameters.AddWithValue("@ship_uadmin", LoginVO.user.Name);
+                    cmd.Parameters.AddWithValue("@ship_id", ship_id);
+
+                    int iRow = cmd.ExecuteNonQuery();
+
+                    return iRow;
+                }
+                catch(Exception err)
+                {
+                    string msg = err.Message;
+                    return 0;
+                }
             }
         }
     }

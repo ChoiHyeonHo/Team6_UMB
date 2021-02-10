@@ -21,5 +21,11 @@ namespace Team6_UMB.Service
             ShipmentDAC dac = new ShipmentDAC();
             return dac.ShipmentSOList();
         }
+
+        public int ShipWait(ShipWaitVO vo)
+        {
+            ShipmentDAC dac = new ShipmentDAC();
+            return dac.ShipWait(vo);
+        }
     }
 }
