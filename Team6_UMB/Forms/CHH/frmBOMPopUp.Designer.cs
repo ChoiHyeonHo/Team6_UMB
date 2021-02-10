@@ -103,7 +103,6 @@ namespace Team6_UMB.Forms
             this.cbParent.Name = "cbParent";
             this.cbParent.Size = new System.Drawing.Size(300, 25);
             this.cbParent.TabIndex = 62;
-            this.cbParent.SelectedIndexChanged += new System.EventHandler(this.cbParent_SelectedIndexChanged);
             // 
             // txtComment
             // 
@@ -220,6 +219,7 @@ namespace Team6_UMB.Forms
             this.btnCancle.TabIndex = 18;
             this.btnCancle.Text = "취소";
             this.btnCancle.UseVisualStyleBackColor = false;
+            this.btnCancle.Click += new System.EventHandler(this.btnCancle_Click);
             // 
             // btnEdit
             // 
