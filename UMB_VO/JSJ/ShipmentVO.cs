@@ -9,6 +9,7 @@ namespace UMB_VO
     public class ShipmentVO
     {
         public int ship_id { get; set; }
+        public string product_id { get; set; }
         public string product_name { get; set; }
         public string company_name { get; set; }
         public string ship_state { get; set; }

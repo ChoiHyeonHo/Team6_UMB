@@ -90,24 +90,38 @@ namespace UMB_DAC
             }
         }
 
-        public int Shipment(int ship_id)
+        public int Shipment(ShipmentVO vo)
         {
-            string sql = "update TBL_SHIMPENT set ship_edate = replace(convert(varchar(10), getdate(), 120), '-', '-'), ship_uadmin = @ship_uadmin ship_udate = replace(convert(varchar(10), getdate(), 120), '-', '-') where ship_id = @ship_id";
-
-            using (SqlCommand cmd = new SqlCommand(sql, conn))
+            using (SqlCommand cmd = new SqlCommand())
             {
+                cmd.Connection = conn;
+                SqlTransaction trans = conn.BeginTransaction();
+
+                cmd.Transaction = trans;
+
                 try
                 {
+                    cmd.CommandText = "update TBL_SHIPMENT set ship_edate = replace(convert(varchar(10), getdate(), 120), '-', '-'), ship_uadmin = @ship_uadmin, ship_udate = replace(convert(varchar(10), getdate(), 120), '-', '-'), ship_state = '출하완료' where ship_id = @ship_id";
                     cmd.Parameters.AddWithValue("@ship_uadmin", LoginVO.user.Name);
-                    cmd.Parameters.AddWithValue("@ship_id", ship_id);
+                    cmd.Parameters.AddWithValue("@ship_id", vo.ship_id);
 
-                    int iRow = cmd.ExecuteNonQuery();
+                    cmd.ExecuteNonQuery();
 
-                    return iRow;
+                    cmd.CommandText = "select price_present from TBL_P_PRICE where product_id = @product_id and price_yn = 'Y'";
+                    cmd.Parameters.AddWithValue("@product_id", vo.product_id);
+                    int price = (Convert.ToInt32(cmd.ExecuteScalar()) * vo.ship_count);
+
+                    cmd.CommandText = "insert into TBL_SALES (ship_id, sales_date, sales_price) values(@ship_id, replace(convert(varchar(10), getdate(), 120), '-', '-'), @sales_price)";
+                    cmd.Parameters.AddWithValue("@sales_price", price);
+                    cmd.ExecuteNonQuery();
+
+                    trans.Commit();
+                    return 1;
                 }
                 catch(Exception err)
                 {
                     string msg = err.Message;
+                    trans.Rollback();
                     return 0;
                 }
             }

@@ -15,7 +15,7 @@ namespace Team6_UMB.Forms.JSJ
         List<ShipSOVO> SOList;
         List<ShipmentVO> ShipList;
         ShipWaitVO ShipWaitVO = new ShipWaitVO();
-        int shipment_id = 0;
+        ShipmentVO ShipmentVO = new ShipmentVO();
 
         public frmShipment()
         {
@@ -42,12 +42,12 @@ namespace Team6_UMB.Forms.JSJ
             CommonUtil.AddGridTextColumn(dgvList, "상태", "so_state", 250);
 
             CommonUtil.SetInitGridView(dgvShipment);
-            CommonUtil.AddGridTextColumn(dgvShipment, "출하번호", "ship_id", 200);
-            CommonUtil.AddGridTextColumn(dgvShipment, "업체명", "company_name", 300);
-            CommonUtil.AddGridTextColumn(dgvShipment, "품목명", "product_name", 300);
-            CommonUtil.AddGridTextColumn(dgvShipment, "출하수량", "ship_count", 250);
-            CommonUtil.AddGridTextColumn(dgvShipment, "출하일", "ship_edate", 250);
-            CommonUtil.AddGridTextColumn(dgvShipment, "상태", "ship_state", 250);
+            CommonUtil.AddGridTextColumn(dgvShipment, "출하번호", "ship_id", 150);
+            CommonUtil.AddGridTextColumn(dgvShipment, "업체명", "company_name", 200);
+            CommonUtil.AddGridTextColumn(dgvShipment, "품목명", "product_name", 200);
+            CommonUtil.AddGridTextColumn(dgvShipment, "출하수량", "ship_count", 200);
+            CommonUtil.AddGridTextColumn(dgvShipment, "출하일", "ship_edate", 200);
+            CommonUtil.AddGridTextColumn(dgvShipment, "상태", "ship_state", 200);
 
             SOListBind();
             ShipListBind();
@@ -87,7 +87,14 @@ namespace Team6_UMB.Forms.JSJ
 
         private void newBtns1_btnShipment_Event(object sender, EventArgs e)
         {
-            
+            if(ShipmentVO.ship_state == "출하가능")
+            {
+                ShipmentService service = new ShipmentService();
+                if(service.Shipment(ShipmentVO) == 1)
+                {
+                    MessageBox.Show("출하완료");
+                }
+            }
         }
 
         private void newBtns1_btnRefresh_Event(object sender, EventArgs e)
@@ -119,7 +126,20 @@ namespace Team6_UMB.Forms.JSJ
 
         private void dgvShipment_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            shipment_id = Convert.ToInt32(dgvShipment[0, e.RowIndex].Value);
+            if (e.RowIndex >= 0)
+            {
+                ShipmentVO.ship_id = Convert.ToInt32(dgvShipment[0, e.RowIndex].Value);
+                ShipmentVO.ship_state = dgvShipment[5, e.RowIndex].Value.ToString();
+                ShipmentVO.ship_count = Convert.ToInt32(dgvShipment[3, e.RowIndex].Value);
+                if (dgvShipment[2, e.RowIndex].Value.ToString() == "L_UMB1")
+                {
+                    ShipmentVO.product_id = "P1001";
+                }
+                else
+                {
+                    ShipmentVO.product_id = "P1002";
+                }
+            }
         }
     }
 }
