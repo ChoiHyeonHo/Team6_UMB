@@ -19,8 +19,8 @@ namespace Team6_UMB.Forms.ASB
 
         private void frmShift_Load(object sender, EventArgs e)
         {
-            CommonUtil.SetInitGridView(dgvDepartment);
-            CommonUtil.AddGridTextColumn(dgvDepartment, "부서번호", "department_id", 150);
+            //CommonUtil.SetInitGridView(dgvDepartment);
+            //CommonUtil.AddGridTextColumn(dgvDepartment, "부서번호", "department_id", 150);
         }
     }
 }

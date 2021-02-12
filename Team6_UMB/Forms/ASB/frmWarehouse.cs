@@ -7,11 +7,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Team6_UMB.Service;
+using UMB_VO;
 
 namespace Team6_UMB.Forms.ASB
 {
     public partial class frmWarehouse : Form
     {
+        List<WarehouseVO> list;
         public frmWarehouse()
         {
             InitializeComponent();
@@ -28,7 +31,14 @@ namespace Team6_UMB.Forms.ASB
             CommonUtil.AddGridTextColumn(dgvList, "수정자", "w_uadmin", 150);
             CommonUtil.AddGridTextColumn(dgvList, "수정일", "w_udate", 150);
 
+            WarehouseList();
+        }
 
+        public void WarehouseList()
+        {
+            WarehouseService service = new WarehouseService();
+            list = service.WarehouseList();
+            dgvList.DataSource = list;
         }
     }
 }
