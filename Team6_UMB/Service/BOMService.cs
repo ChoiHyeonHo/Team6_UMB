@@ -22,11 +22,6 @@ namespace Team6_UMB.Service
             BOMDAC dac = new BOMDAC();
             return dac.GetBOMPreView(bomID);
         }
-        public List<BOMVO> GetBOMComboBoxCall(int lv)
-        {
-            BOMDAC dac = new BOMDAC();
-            return dac.GetBOMComboBoxCall(lv);
-        }
         public List<BOMVO> GetBOMCBProdName()
         {
             BOMDAC dac = new BOMDAC();
