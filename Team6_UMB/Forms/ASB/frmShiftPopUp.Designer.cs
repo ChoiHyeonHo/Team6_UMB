@@ -33,8 +33,8 @@ namespace Team6_UMB.Forms.ASB
             this.btnCancel = new System.Windows.Forms.Button();
             this.btnCreate = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.cboYN = new System.Windows.Forms.ComboBox();
-            this.label6 = new System.Windows.Forms.Label();
+            this.nuPersonnel = new System.Windows.Forms.NumericUpDown();
+            this.dtpETime = new System.Windows.Forms.DateTimePicker();
             this.dtpEnd = new System.Windows.Forms.DateTimePicker();
             this.label10 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
@@ -43,18 +43,19 @@ namespace Team6_UMB.Forms.ASB
             this.cboMachine = new System.Windows.Forms.ComboBox();
             this.txtComment = new System.Windows.Forms.TextBox();
             this.label13 = new System.Windows.Forms.Label();
+            this.dtpSTime = new System.Windows.Forms.DateTimePicker();
             this.dtpStart = new System.Windows.Forms.DateTimePicker();
-            this.txtPerson = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
-            this.txtETime = new System.Windows.Forms.TextBox();
-            this.txtSTime = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.btnExit = new System.Windows.Forms.Button();
+            this.label4 = new System.Windows.Forms.Label();
+            this.cboWeekend = new System.Windows.Forms.ComboBox();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nuPersonnel)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -108,24 +109,25 @@ namespace Team6_UMB.Forms.ASB
             this.btnCreate.TabIndex = 0;
             this.btnCreate.Text = "저장";
             this.btnCreate.UseVisualStyleBackColor = false;
+            this.btnCreate.Click += new System.EventHandler(this.btnCreate_Click);
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.cboYN);
-            this.groupBox1.Controls.Add(this.label6);
+            this.groupBox1.Controls.Add(this.nuPersonnel);
+            this.groupBox1.Controls.Add(this.dtpETime);
             this.groupBox1.Controls.Add(this.dtpEnd);
             this.groupBox1.Controls.Add(this.label10);
             this.groupBox1.Controls.Add(this.label9);
+            this.groupBox1.Controls.Add(this.cboWeekend);
+            this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.cboDns);
             this.groupBox1.Controls.Add(this.label8);
             this.groupBox1.Controls.Add(this.cboMachine);
             this.groupBox1.Controls.Add(this.txtComment);
             this.groupBox1.Controls.Add(this.label13);
+            this.groupBox1.Controls.Add(this.dtpSTime);
             this.groupBox1.Controls.Add(this.dtpStart);
-            this.groupBox1.Controls.Add(this.txtPerson);
             this.groupBox1.Controls.Add(this.label11);
-            this.groupBox1.Controls.Add(this.txtETime);
-            this.groupBox1.Controls.Add(this.txtSTime);
             this.groupBox1.Controls.Add(this.label5);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.label2);
@@ -137,29 +139,23 @@ namespace Team6_UMB.Forms.ASB
             this.groupBox1.TabIndex = 22;
             this.groupBox1.TabStop = false;
             // 
-            // cboYN
+            // nuPersonnel
             // 
-            this.cboYN.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.cboYN.FormattingEnabled = true;
-            this.cboYN.Items.AddRange(new object[] {
-            "Y",
-            "N"});
-            this.cboYN.Location = new System.Drawing.Point(127, 183);
-            this.cboYN.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.cboYN.Name = "cboYN";
-            this.cboYN.Size = new System.Drawing.Size(204, 32);
-            this.cboYN.TabIndex = 71;
+            this.nuPersonnel.Location = new System.Drawing.Point(127, 190);
+            this.nuPersonnel.Name = "nuPersonnel";
+            this.nuPersonnel.Size = new System.Drawing.Size(120, 25);
+            this.nuPersonnel.TabIndex = 70;
             // 
-            // label6
+            // dtpETime
             // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.Color.RoyalBlue;
-            this.label6.Location = new System.Drawing.Point(11, 185);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(70, 24);
-            this.label6.TabIndex = 70;
-            this.label6.Text = "사용유무";
+            this.dtpETime.CustomFormat = "HH:mm";
+            this.dtpETime.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.dtpETime.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtpETime.Location = new System.Drawing.Point(472, 71);
+            this.dtpETime.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.dtpETime.Name = "dtpETime";
+            this.dtpETime.Size = new System.Drawing.Size(204, 29);
+            this.dtpETime.TabIndex = 69;
             // 
             // dtpEnd
             // 
@@ -198,8 +194,8 @@ namespace Team6_UMB.Forms.ASB
             this.cboDns.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.cboDns.FormattingEnabled = true;
             this.cboDns.Items.AddRange(new object[] {
-            "Y",
-            "N"});
+            "주간",
+            "야간"});
             this.cboDns.Location = new System.Drawing.Point(472, 18);
             this.cboDns.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.cboDns.Name = "cboDns";
@@ -251,6 +247,17 @@ namespace Team6_UMB.Forms.ASB
             this.label13.TabIndex = 62;
             this.label13.Text = "비고";
             // 
+            // dtpSTime
+            // 
+            this.dtpSTime.CustomFormat = "HH:mm";
+            this.dtpSTime.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.dtpSTime.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtpSTime.Location = new System.Drawing.Point(127, 73);
+            this.dtpSTime.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.dtpSTime.Name = "dtpSTime";
+            this.dtpSTime.Size = new System.Drawing.Size(204, 29);
+            this.dtpSTime.TabIndex = 61;
+            // 
             // dtpStart
             // 
             this.dtpStart.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
@@ -261,43 +268,16 @@ namespace Team6_UMB.Forms.ASB
             this.dtpStart.Size = new System.Drawing.Size(204, 29);
             this.dtpStart.TabIndex = 61;
             // 
-            // txtPerson
-            // 
-            this.txtPerson.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.txtPerson.Location = new System.Drawing.Point(472, 183);
-            this.txtPerson.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.txtPerson.Name = "txtPerson";
-            this.txtPerson.Size = new System.Drawing.Size(204, 29);
-            this.txtPerson.TabIndex = 59;
-            // 
             // label11
             // 
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.ForeColor = System.Drawing.Color.Black;
-            this.label11.Location = new System.Drawing.Point(357, 185);
+            this.label11.ForeColor = System.Drawing.Color.RoyalBlue;
+            this.label11.Location = new System.Drawing.Point(12, 186);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(100, 24);
             this.label11.TabIndex = 58;
             this.label11.Text = "현장투입인원";
-            // 
-            // txtETime
-            // 
-            this.txtETime.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.txtETime.Location = new System.Drawing.Point(472, 75);
-            this.txtETime.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.txtETime.Name = "txtETime";
-            this.txtETime.Size = new System.Drawing.Size(204, 29);
-            this.txtETime.TabIndex = 55;
-            // 
-            // txtSTime
-            // 
-            this.txtSTime.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.txtSTime.Location = new System.Drawing.Point(127, 75);
-            this.txtSTime.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.txtSTime.Name = "txtSTime";
-            this.txtSTime.Size = new System.Drawing.Size(204, 29);
-            this.txtSTime.TabIndex = 46;
             // 
             // label5
             // 
@@ -347,6 +327,31 @@ namespace Team6_UMB.Forms.ASB
             this.btnExit.UseVisualStyleBackColor = false;
             this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.RoyalBlue;
+            this.label4.Location = new System.Drawing.Point(357, 193);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(100, 24);
+            this.label4.TabIndex = 65;
+            this.label4.Text = "주말사용여부";
+            // 
+            // cboWeekend
+            // 
+            this.cboWeekend.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.cboWeekend.FormattingEnabled = true;
+            this.cboWeekend.Items.AddRange(new object[] {
+            "",
+            "Y",
+            "N"});
+            this.cboWeekend.Location = new System.Drawing.Point(472, 190);
+            this.cboWeekend.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.cboWeekend.Name = "cboWeekend";
+            this.cboWeekend.Size = new System.Drawing.Size(204, 32);
+            this.cboWeekend.TabIndex = 66;
+            // 
             // frmShiftPopUp
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
@@ -358,6 +363,7 @@ namespace Team6_UMB.Forms.ASB
             this.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.Name = "frmShiftPopUp";
             this.Text = "frmShiftPopUp";
+            this.Load += new System.EventHandler(this.frmShiftPopUp_Load);
             this.Controls.SetChildIndex(this.panel1, 0);
             this.Controls.SetChildIndex(this.groupBox1, 0);
             this.Controls.SetChildIndex(this.panel2, 0);
@@ -366,6 +372,7 @@ namespace Team6_UMB.Forms.ASB
             this.panel2.ResumeLayout(false);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nuPersonnel)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -379,15 +386,10 @@ namespace Team6_UMB.Forms.ASB
         private System.Windows.Forms.TextBox txtComment;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.DateTimePicker dtpStart;
-        private System.Windows.Forms.TextBox txtPerson;
         private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.TextBox txtETime;
-        private System.Windows.Forms.TextBox txtSTime;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.ComboBox cboYN;
-        private System.Windows.Forms.Label label6;
         private System.Windows.Forms.DateTimePicker dtpEnd;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label9;
@@ -395,5 +397,10 @@ namespace Team6_UMB.Forms.ASB
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.ComboBox cboMachine;
         private System.Windows.Forms.Button btnExit;
+        private System.Windows.Forms.DateTimePicker dtpETime;
+        private System.Windows.Forms.DateTimePicker dtpSTime;
+        private System.Windows.Forms.NumericUpDown nuPersonnel;
+        private System.Windows.Forms.ComboBox cboWeekend;
+        private System.Windows.Forms.Label label4;
     }
 }
