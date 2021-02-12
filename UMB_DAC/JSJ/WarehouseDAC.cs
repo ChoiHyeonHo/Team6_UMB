@@ -39,5 +39,87 @@ namespace UMB_DAC
                 return list;
             }
         }
+
+        public int InsertWH(WarehouseVO vo)
+        {
+            string sql = "insert into TBL_WAREHOUSE (w_name, w_address, w_type, w_uadmin, w_udate) values (@w_name, @w_address, @w_type, @w_uadmin, replace(convert(varchar(10), getdate(), 120), '-', '-'))";
+
+            using (SqlCommand cmd = new SqlCommand(sql, conn))
+            {
+                try
+                {
+                    cmd.Parameters.AddWithValue("@w_name", vo.w_name);
+                    cmd.Parameters.AddWithValue("@w_address", vo.w_address);
+                    cmd.Parameters.AddWithValue("@w_type", vo.w_type);
+                    cmd.Parameters.AddWithValue("@w_uadmin", LoginVO.user.Name);
+
+                    cmd.ExecuteNonQuery();
+                    return 1;
+                }
+                catch (Exception err)
+                {
+                    string msg = err.Message;
+                    return 0;
+                }
+            }
+        }
+
+        public int UpdateWH(WarehouseVO vo)
+        {
+            string sql = "update TBL_WAREHOUSE set w_name = @w_name, w_address = @w_address, w_type = @w_type, w_uadmin = @w_uadmin, w_udate = replace(convert(varchar(10), getdate(), 120), '-', '-') where w_id = @w_id";
+
+            using (SqlCommand cmd = new SqlCommand(sql, conn))
+            {
+                try
+                {
+                    cmd.Parameters.AddWithValue("@w_id", vo.w_id);
+                    cmd.Parameters.AddWithValue("@w_name", vo.w_name);
+                    cmd.Parameters.AddWithValue("@w_address", vo.w_address);
+                    cmd.Parameters.AddWithValue("@w_type", vo.w_type);
+                    cmd.Parameters.AddWithValue("@w_uadmin", LoginVO.user.Name);
+
+                    cmd.ExecuteNonQuery();
+                    return 1;
+                }
+                catch (Exception err)
+                {
+                    string msg = err.Message;
+                    return 0;
+                }
+            }
+        }
+
+        public int DeleteWH(int w_id)
+        {
+            string sql = "update TBL_WAREHOUSE set w_deleted = 'Y' where w_id = @w_id";
+
+            using (SqlCommand cmd = new SqlCommand(sql, conn))
+            {
+                try
+                {
+                    cmd.Parameters.AddWithValue("@w_id", w_id);
+
+                    cmd.ExecuteNonQuery();
+                    return 1;
+                }
+                catch (Exception err)
+                {
+                    string msg = err.Message;
+                    return 0;
+                }
+            }
+        }
+
+        public List<ComboItemVO> WType()
+        {
+            string sql = "select common_name, common_type from TBL_COMMON_CODE where common_type = '창고구분'";
+
+            using (SqlCommand cmd = new SqlCommand(sql, conn))
+            {
+                SqlDataReader reader = cmd.ExecuteReader();
+                List<ComboItemVO> list = Helper.DataReaderMapToList<ComboItemVO>(reader);
+                return list;
+            }
+        }
     }
 }
