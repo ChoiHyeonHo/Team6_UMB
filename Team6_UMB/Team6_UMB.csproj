@@ -493,9 +493,11 @@
     <Compile Include="Service\ProductService.cs" />
     <Compile Include="Service\SalesPriceService.cs" />
     <Compile Include="Service\SalesService.cs" />
+    <Compile Include="Service\ShiftService.cs" />
     <Compile Include="Service\ShipmentService.cs" />
     <Compile Include="Service\SOService.cs" />
     <Compile Include="Service\UserService.cs" />
+    <Compile Include="Service\WarehouseService.cs" />
     <Compile Include="Service\WorkOrderService.cs" />
     <Compile Include="Util\ChamJo.cs" />
     <Compile Include="Util\CommonUtil.cs" />
