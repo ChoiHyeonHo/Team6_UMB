@@ -15,7 +15,7 @@ namespace UMB_WEBAPI.DAC
         public SampleDAC(ILog log)
         {
             this.log = log;
-            conn = new SqlConnection(Connection.strConn);
+            conn = new SqlConnection();
             conn.Open();
         }
 

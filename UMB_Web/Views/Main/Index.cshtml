@@ -1,4 +1,7 @@
-﻿@model UMB_WEB.Models.EISInfo
+﻿@model UMB_WEBAPI.Models.Sales
+@using System.Data
+@using System.Text;
+@using System.Globalization
 
 @{ ViewBag.Title = "Index";
     Layout = "~/Views/Shared/_Layout.cshtml"; }
@@ -23,9 +26,9 @@
                     <div class="info-box-content">
                         <span class="info-box-text">불량률</span>
                         <span class="info-box-number">10<small>%</small></span>
-                        <span class="description-percentage text-red"><i class="fa fa-caret-down"></i> 10%</span> 
-                        @*<span class="description-percentage text-yellow"><i class="fa fa-caret-left"></i> 10%</span> 
-                        <span class="description-percentage text-green"><i class="fa fa-caret-up"></i> 10%</span>*@
+                        <span class="description-percentage text-red"><i class="fa fa-caret-down"></i> 10%</span>
+                        @*<span class="description-percentage text-yellow"><i class="fa fa-caret-left"></i> 10%</span>
+                            <span class="description-percentage text-green"><i class="fa fa-caret-up"></i> 10%</span>*@
                     </div>
                     <!-- /.info-box-content -->
                 </div>
@@ -35,13 +38,22 @@
                 <div class="info-box">
                     <span class="info-box-icon bg-aqua"><i class="ion ion-ios-gear-outline"></i></span>
 
-                    <div class="info-box-content">
-                        <span class="info-box-text">매출현황</span>
-                        <span class="info-box-number">전월대비<small>10%</small></span>
-                        @*<span class="description-percentage text-red"><i class="fa fa-caret-down"></i> 10%</span> 
-                        <span class="description-percentage text-yellow"><i class="fa fa-caret-left"></i> 10%</span>*@ 
-                        <span class="description-percentage text-green"><i class="fa fa-caret-up"></i> 10%</span>
-                    </div>
+                        <div class="info-box-content">
+                            <span class="info-box-text">매출현황</span>
+                            <span class="info-box-number">@Model.growth_rate <small>%</small></span>
+                            @if (@Model.growth_rate < 0)
+                            {
+                        <span class="description-percentage text-red"><i class="fa fa-caret-down"></i> @Model.growth_rate%</span>
+                            }
+                            else if (@Model.growth_rate == 0)
+                            {
+                        <span class="description-percentage text-yellow"><i class="fa fa-caret-left"></i> @Model.growth_rate%</span>
+                            }
+                            else
+                            {
+                        <span class="description-percentage text-green"><i class="fa fa-caret-up"></i> @Model.growth_rate%</span>
+                            }
+                        </div>
                     <!-- /.info-box-content -->
                 </div>
                 <!-- /.info-box -->
@@ -63,19 +75,19 @@
                 <div class="box-body col-md-14">
                     <div class="row">
                         @*<div class="col-md-6 col-sm-6 col-xs-14">*@
-                            <p class="text-center">
-                                <strong>월별 양품, 불량품 수</strong>
-                            </p>
-                            <div></div>
-                            <ul class="chart-legend clearfix pull-left" style="padding-left:20px">
-                                <li><i class="fa fa-square text-green"></i> 양품</li>
-                                <li><i class="fa fa-square text-red"></i> 불량품</li>
-                            </ul>
-                            <div class="description-block border-right ">
-                                <div class="chart">
-                                    <canvas id="barChart" style="height:600px"></canvas>
-                                </div>
+                        <p class="text-center">
+                            <strong>월별 양품, 불량품 수</strong>
+                        </p>
+                        <div></div>
+                        <ul class="chart-legend clearfix pull-left" style="padding-left:20px">
+                            <li><i class="fa fa-square text-green"></i> 양품</li>
+                            <li><i class="fa fa-square text-red"></i> 불량품</li>
+                        </ul>
+                        <div class="description-block border-right ">
+                            <div class="chart">
+                                <canvas id="barChart" style="height:600px"></canvas>
                             </div>
+                        </div>
                         @*</div>*@
                     </div>
                 </div>
@@ -84,20 +96,20 @@
             <!-- /.box-footer -->
         </div>
         <!-- /.box -->
-    </div>  
+    </div>
     <!-- /.col -->
     <P></P>
     <!--<div class="row">
         <div class="col-md-14">-->
-            @*로고 이미지 부분*@
-            <!--<img src="~/dist/img/logo.png" style=" max-width: 100%;
-            height: auto;
-            margin-left: auto;
-            margin-right: auto;
-            display: block;" />
-        </div>-->
-        @*/.row*@
-        @*/.col*@
+    @*로고 이미지 부분*@
+    <!--<img src="~/dist/img/logo.png" style=" max-width: 100%;
+        height: auto;
+        margin-left: auto;
+        margin-right: auto;
+        display: block;" />
+    </div>-->
+    @*/.row*@
+    @*/.col*@
     <!--</div>-->
 
 </section>
@@ -135,7 +147,7 @@
                         @*data: [@fail]*@
                     }
                 ]
-            }                    
+            }
 
 
             //-------------

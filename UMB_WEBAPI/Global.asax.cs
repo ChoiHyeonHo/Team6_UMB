@@ -20,8 +20,6 @@ namespace UMB_WEBAPI
             string strConn = WebConfigurationManager.ConnectionStrings["DB"].ConnectionString;
             EncrytLibrary.AES aes = new EncrytLibrary.AES();
             strConn = aes.AESDecrypt256(strConn);
-
-            Connection.strConn = strConn;
         }
     }
 }
