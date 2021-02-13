@@ -17,9 +17,17 @@ namespace Team6_UMB.Forms
         CheckBox headerCheck = new CheckBox();
         int Order_id;
 
-        public frmOrderStatus()
+        public frmOrderStatus(bool Authority)
         {
             InitializeComponent();
+
+            if (Authority == false)
+            {
+                newBtns1.btnWait.Visible = false;
+                newBtns1.btnCreate.Visible = false;
+                newBtns1.btnUpdate.Visible = false;
+                newBtns1.btnDelete.Visible = false;
+            }
         }
 
         private void newBtns1_btnCreate_Event(object sender, EventArgs e)

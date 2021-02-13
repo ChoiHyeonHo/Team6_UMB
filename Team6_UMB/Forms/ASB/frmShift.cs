@@ -17,9 +17,16 @@ namespace Team6_UMB.Forms.ASB
         List<ShiftVO> list = new List<ShiftVO>();
         ShiftVO vo = new ShiftVO();
 
-        public frmShift()
+        public frmShift(bool Authority)
         {
             InitializeComponent();
+
+            if (Authority == false)
+            {
+                newBtns1.btnCreate.Visible = false;
+                newBtns1.btnUpdate.Visible = false;
+                newBtns1.btnDelete.Visible = false;
+            }
         }
 
         private void frmShift_Load(object sender, EventArgs e)

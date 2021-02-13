@@ -20,13 +20,20 @@ namespace Team6_UMB.Forms
         int priceID, companyID, Present;
 
         #region 생성자
-        public frmMatPriceManage()
+        public frmMatPriceManage(bool Authority)
         {
             InitializeComponent();
             newBtns.btnBarCode.Visible = newBtns.btnDocument.Visible = newBtns.btnShipment.Visible = newBtns.btnWait.Visible = newBtns.btnSearch.Visible = false;
             periodSearchControl.dtFrom = DateTime.Now.AddDays(-7).ToString();
             periodSearchControl.dtTo = DateTime.Now.ToString();
             cheView.Checked = true;
+
+            if (Authority == false)
+            {
+                newBtns.btnCreate.Visible = false;
+                newBtns.btnUpdate.Visible = false;
+                newBtns.btnDelete.Visible = false;
+            }
         }
         #endregion
 

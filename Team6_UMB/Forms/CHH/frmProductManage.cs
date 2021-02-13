@@ -26,10 +26,17 @@ namespace Team6_UMB.Forms
         string cbpName, cbpType, cbpCompany, cbpWH, cbpExam;
 
         #region 생성자
-        public frmProductManage()
+        public frmProductManage(bool Authority)
         {
             InitializeComponent();
             newBtns.btnShipment.Visible = newBtns.btnWait.Visible = newBtns.btnSearch.Visible = newBtns.btnDocument.Visible = false;
+
+            if (Authority == false)
+            {
+                newBtns.btnCreate.Visible = false;
+                newBtns.btnUpdate.Visible = false;
+                newBtns.btnDelete.Visible = false;
+            }
         }
         #endregion
 

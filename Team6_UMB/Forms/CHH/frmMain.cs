@@ -15,11 +15,15 @@ using Team6_UMB.Forms.JSJ;
 using Team6_UMB.Forms.BMN;
 using Team6_UMB.Service;
 using System.Diagnostics;
+using UMB_VO;
 
 namespace Team6_UMB
 {
     public partial class frmMain : Form
     {
+        //권한 부여된 메뉴 목록
+        List<string> MenuList = new List<string>();
+
         #region 싱글톤 - 스태틱 선언
         public static frmFirstPage frmFirstPage;
         public static frmSalesPriceManage frmSalesPriceManage;
@@ -68,40 +72,40 @@ namespace Team6_UMB
             return frmFirstPage;
         }
 
-        public static frmSalesPriceManage CreateSalesPriceManage()
+        public static frmSalesPriceManage CreateSalesPriceManage(bool Authority)
         {
             if (frmSalesPriceManage == null)
-                frmSalesPriceManage = new frmSalesPriceManage();
+                frmSalesPriceManage = new frmSalesPriceManage(Authority);
             return frmSalesPriceManage;
         }
-        public static frmMatPriceManage CreateMatPriceManage()
+        public static frmMatPriceManage CreateMatPriceManage(bool Authority)
         {
             if (frmMatPriceManage == null)
-                frmMatPriceManage = new frmMatPriceManage();
+                frmMatPriceManage = new frmMatPriceManage(Authority);
             return frmMatPriceManage;
         }
-        public static frmProductManage CreateProductManage()
+        public static frmProductManage CreateProductManage(bool Authority)
         {
             if (frmProductManage == null)
-                frmProductManage = new frmProductManage();
+                frmProductManage = new frmProductManage(Authority);
             return frmProductManage;
         }
-        public static frmBOM CreateBOM()
+        public static frmBOM CreateBOM(bool Authority)
         {
             if (frmBOM == null)
-                frmBOM = new frmBOM();
+                frmBOM = new frmBOM(Authority);
             return frmBOM;
         }
-        public static frmImportInspection CreateImpIns()
+        public static frmImportInspection CreateImpIns(bool Authority)
         {
             if (frmImportInspection == null)
-                frmImportInspection = new frmImportInspection();
+                frmImportInspection = new frmImportInspection(Authority);
             return frmImportInspection;
         }
-        public static frmProdInspection CreateProdIns()
+        public static frmProdInspection CreateProdIns(bool Authority)
         {
             if (frmProdInspection == null)
-                frmProdInspection = new frmProdInspection();
+                frmProdInspection = new frmProdInspection(Authority);
             return frmProdInspection;
         }
         public static frmCheckHistory CreateCkHis()
@@ -119,28 +123,30 @@ namespace Team6_UMB
         #endregion
 
         #region ASB 싱글톤
-        public static frmShift CreateShift()
+        public static frmShift CreateShift(bool Authority)
         {
             if (frmShift == null)
-                frmShift = new frmShift();
+            {
+                frmShift = new frmShift(Authority);
+            }
             return frmShift;
         }
-        public static frmMachine CreateMachine()
+        public static frmMachine CreateMachine(bool Authority)
         {
             if (frmMachine == null)
-                frmMachine = new frmMachine();
+                frmMachine = new frmMachine(Authority);
             return frmMachine;
         }
-        public static frmCompany CreateCompany()
+        public static frmCompany CreateCompany(bool Authority)
         {
             if (frmCompany == null)
-                frmCompany = new frmCompany();
+                frmCompany = new frmCompany(Authority);
             return frmCompany;
         }
-        public static frmBOR CreateBOR()
+        public static frmBOR CreateBOR(bool Authority)
         {
             if (frmBOR == null)
-                frmBOR = new frmBOR();
+                frmBOR = new frmBOR(Authority);
             return frmBOR;
         }
         public static frmUser CreateUser()
@@ -149,16 +155,16 @@ namespace Team6_UMB
                 frmUser = new frmUser();
             return frmUser;
         }
-        public static frmDepartment CreateDepartment()
+        public static frmDepartment CreateDepartment(bool Authority)
         {
             if (frmDepartment == null)
-                frmDepartment = new frmDepartment();
+                frmDepartment = new frmDepartment(Authority);
             return frmDepartment;
         }
-        public static frmWarehouse CreateWarehouse()
+        public static frmWarehouse CreateWarehouse(bool Authority)
         {
             if (frmWarehouse == null)
-                frmWarehouse = new frmWarehouse();
+                frmWarehouse = new frmWarehouse(Authority);
             return frmWarehouse;
         }
         public static frmCheckList CreateCheckList()
@@ -170,22 +176,22 @@ namespace Team6_UMB
         #endregion
 
         #region JSJ 싱글톤
-        public static frmOrderStatus CreateOrderStatus()
+        public static frmOrderStatus CreateOrderStatus(bool Authority)
         {
             if (frmOStatus == null)
-                frmOStatus = new frmOrderStatus();
+                frmOStatus = new frmOrderStatus(Authority);
             return frmOStatus;
         }
-        public static frmShipment CreateShipment()
+        public static frmShipment CreateShipment(bool Authority)
         {
             if (frmShipment == null)
-                frmShipment = new frmShipment();
+                frmShipment = new frmShipment(Authority);
             return frmShipment;
         }
-        public static frmSO CreateSO()
+        public static frmSO CreateSO(bool Authority)
         {
             if (frmSO == null)
-                frmSO = new frmSO();
+                frmSO = new frmSO(Authority);
             return frmSO;
         }
         public static frmIncommingStatus CreateIcStatus()
@@ -194,10 +200,10 @@ namespace Team6_UMB
                 frmIcStatus = new frmIncommingStatus();
             return frmIcStatus;
         }
-        public static frmIncommingWait CreateIcWait()
+        public static frmIncommingWait CreateIcWait(bool Authority)
         {
             if (frmIcWait == null)
-                frmIcWait = new frmIncommingWait();
+                frmIcWait = new frmIncommingWait(Authority);
             return frmIcWait;
         }
         public static frmSalesStatus CreateSales()
@@ -465,7 +471,14 @@ namespace Team6_UMB
             this.btn1_1.ForeColor = Color.Black;
             this.btn1_2.BackColor = this.btn1_3.BackColor = this.btn1_4.BackColor = this.btn1_5.BackColor = this.btn1_6.BackColor = this.btn1_7.BackColor = this.btn1_8.BackColor = Color.Transparent;
             this.btn1_2.ForeColor = this.btn1_3.ForeColor = this.btn1_4.ForeColor = this.btn1_5.ForeColor = this.btn1_6.ForeColor = this.btn1_7.ForeColor = this.btn1_8.ForeColor = Color.White;
-            CreateShift();
+            if (MenuList.Contains("Shift 기준정보"))
+            {
+                CreateShift(true);
+            }
+            else
+            {
+                CreateShift(false);
+            }
             frmShift.TopLevel = false;
             pnlBackPage.Controls.Clear();
             pnlBackPage.Controls.Add(frmShift);
@@ -478,7 +491,14 @@ namespace Team6_UMB
             this.btn1_2.ForeColor = Color.Black;
             this.btn1_1.BackColor = this.btn1_3.BackColor = this.btn1_4.BackColor = this.btn1_5.BackColor = this.btn1_6.BackColor = this.btn1_7.BackColor = this.btn1_8.BackColor = Color.Transparent;
             this.btn1_1.ForeColor = this.btn1_3.ForeColor = this.btn1_4.ForeColor = this.btn1_5.ForeColor = this.btn1_6.ForeColor = this.btn1_7.ForeColor = this.btn1_8.ForeColor = Color.White;
-            CreateMachine();
+            if (MenuList.Contains("설비관리"))
+            {
+                CreateMachine(true);
+            }
+            else
+            {
+                CreateMachine(false);
+            }
             frmMachine.TopLevel = false;
             pnlBackPage.Controls.Clear();
             pnlBackPage.Controls.Add(frmMachine);
@@ -491,7 +511,14 @@ namespace Team6_UMB
             this.btn1_3.ForeColor = Color.Black;
             this.btn1_1.BackColor = this.btn1_2.BackColor = this.btn1_4.BackColor = this.btn1_5.BackColor = this.btn1_6.BackColor = this.btn1_7.BackColor = this.btn1_8.BackColor = Color.Transparent;
             this.btn1_1.ForeColor = this.btn1_2.ForeColor = this.btn1_4.ForeColor = this.btn1_5.ForeColor = this.btn1_6.ForeColor = this.btn1_7.ForeColor = this.btn1_8.ForeColor = Color.White;
-            CreateCompany();
+            if (MenuList.Contains("업체관리"))
+            {
+                CreateCompany(true);
+            }
+            else
+            {
+                CreateCompany(false);
+            }
             frmCompany.TopLevel = false;
             pnlBackPage.Controls.Clear();
             pnlBackPage.Controls.Add(frmCompany);
@@ -504,7 +531,14 @@ namespace Team6_UMB
             this.btn1_4.ForeColor = Color.Black;
             this.btn1_1.BackColor = this.btn1_2.BackColor = this.btn1_3.BackColor = this.btn1_5.BackColor = this.btn1_6.BackColor = this.btn1_7.BackColor = this.btn1_8.BackColor = Color.Transparent;
             this.btn1_1.ForeColor = this.btn1_2.ForeColor = this.btn1_3.ForeColor = this.btn1_5.ForeColor = this.btn1_6.ForeColor = this.btn1_7.ForeColor = this.btn1_8.ForeColor = Color.White;
-            CreateBOR();
+            if (MenuList.Contains("BOR"))
+            {
+                CreateBOR(true);
+            }
+            else
+            {
+                CreateBOR(false);
+            }
             frmBOR.TopLevel = false;
             pnlBackPage.Controls.Clear();
             pnlBackPage.Controls.Add(frmBOR);
@@ -530,7 +564,14 @@ namespace Team6_UMB
             this.btn1_6.ForeColor = Color.Black;
             this.btn1_1.BackColor = this.btn1_2.BackColor = this.btn1_3.BackColor = this.btn1_4.BackColor = this.btn1_5.BackColor = this.btn1_7.BackColor = this.btn1_8.BackColor = Color.Transparent;
             this.btn1_1.ForeColor = this.btn1_2.ForeColor = this.btn1_3.ForeColor = this.btn1_4.ForeColor = this.btn1_5.ForeColor = this.btn1_7.ForeColor = this.btn1_8.ForeColor = Color.White;
-            CreateDepartment();
+            if (MenuList.Contains("부서관리"))
+            {
+                CreateDepartment(true);
+            }
+            else
+            {
+                CreateDepartment(false);
+            }
             frmDepartment.TopLevel = false;
             pnlBackPage.Controls.Clear();
             pnlBackPage.Controls.Add(frmDepartment);
@@ -543,7 +584,14 @@ namespace Team6_UMB
             this.btn1_7.ForeColor = Color.Black;
             this.btn1_1.BackColor = this.btn1_2.BackColor = this.btn1_3.BackColor = this.btn1_4.BackColor = this.btn1_5.BackColor = this.btn1_6.BackColor = this.btn1_8.BackColor = Color.Transparent;
             this.btn1_1.ForeColor = this.btn1_2.ForeColor = this.btn1_3.ForeColor = this.btn1_4.ForeColor = this.btn1_5.ForeColor = this.btn1_6.ForeColor = this.btn1_8.ForeColor = Color.White;
-            CreateWarehouse();
+            if (MenuList.Contains("창고관리"))
+            {
+                CreateWarehouse(true);
+            }
+            else
+            {
+                CreateWarehouse(false);
+            }
             frmWarehouse.TopLevel = false;
             pnlBackPage.Controls.Clear();
             pnlBackPage.Controls.Add(frmWarehouse);
@@ -582,7 +630,14 @@ namespace Team6_UMB
             this.btn2_2.BackColor = Color.Transparent;
             this.btn2_1.ForeColor = Color.Black;
             this.btn2_2.ForeColor = Color.White;
-            CreateSalesPriceManage();
+            if (MenuList.Contains("영업단가관리"))
+            {
+                CreateSalesPriceManage(true);
+            }
+            else
+            {
+                CreateSalesPriceManage(false);
+            }
             frmSalesPriceManage.TopLevel = false;
             pnlBackPage.Controls.Clear();
             pnlBackPage.Controls.Add(frmSalesPriceManage);
@@ -595,7 +650,14 @@ namespace Team6_UMB
             this.btn2_2.BackColor = Color.White;
             this.btn2_1.ForeColor = Color.White;
             this.btn2_2.ForeColor = Color.Black;
-            CreateMatPriceManage();
+            if (MenuList.Contains("자재단가관리"))
+            {
+                CreateMatPriceManage(true);
+            }
+            else
+            {
+                CreateMatPriceManage(false);
+            }
             frmMatPriceManage.TopLevel = false;
             pnlBackPage.Controls.Clear();
             pnlBackPage.Controls.Add(frmMatPriceManage);
@@ -608,7 +670,14 @@ namespace Team6_UMB
             this.btn3_2.BackColor = this.btn3_3.BackColor = Color.Transparent;
             this.btn3_1.ForeColor = Color.Black;
             this.btn3_2.ForeColor = this.btn3_3.ForeColor = Color.White;
-            CreateProductManage();
+            if (MenuList.Contains("품목관리"))
+            {
+                CreateProductManage(true);
+            }
+            else
+            {
+                CreateProductManage(false);
+            }
             frmProductManage.TopLevel = false;
             pnlBackPage.Controls.Clear();
             pnlBackPage.Controls.Add(frmProductManage);
@@ -621,7 +690,14 @@ namespace Team6_UMB
             this.btn3_1.BackColor = this.btn3_3.BackColor = Color.Transparent;
             this.btn3_2.ForeColor = Color.Black;
             this.btn3_1.ForeColor = this.btn3_3.ForeColor = Color.White;
-            CreateBOM();
+            if (MenuList.Contains("BOM"))
+            {
+                CreateBOM(true);
+            }
+            else
+            {
+                CreateBOM(false);
+            }
             frmBOM.TopLevel = false;
             pnlBackPage.Controls.Clear();
             pnlBackPage.Controls.Add(frmBOM);
@@ -647,7 +723,14 @@ namespace Team6_UMB
             this.btn4_2.BackColor = this.btn4_3.BackColor = Color.Transparent;
             this.btn4_1.ForeColor = Color.Black;
             this.btn4_2.ForeColor = this.btn4_3.ForeColor = Color.White;
-            CreateImpIns();
+            if (MenuList.Contains("수입검사"))
+            {
+                CreateImpIns(true);
+            }
+            else
+            {
+                CreateImpIns(false);
+            }
             frmImportInspection.TopLevel = false;
             pnlBackPage.Controls.Clear();
             pnlBackPage.Controls.Add(frmImportInspection);
@@ -660,7 +743,14 @@ namespace Team6_UMB
             this.btn4_1.BackColor = this.btn4_3.BackColor = Color.Transparent;
             this.btn4_2.ForeColor = Color.Black;
             this.btn4_1.ForeColor = this.btn4_3.ForeColor = Color.White;
-            CreateProdIns();
+            if (MenuList.Contains("제품검사"))
+            {
+                CreateProdIns(true);
+            }
+            else
+            {
+                CreateProdIns(false);
+            }
             frmProdInspection.TopLevel = false;
             pnlBackPage.Controls.Clear();
             pnlBackPage.Controls.Add(frmProdInspection);
@@ -689,7 +779,14 @@ namespace Team6_UMB
             this.btn5_2.ForeColor = Color.Black;
             this.btn5_3.BackColor = this.btn5_4.BackColor = this.btn5_5.BackColor = this.btn5_6.BackColor = this.btn5_7.BackColor = Color.Transparent;
             this.btn5_3.ForeColor = this.btn5_4.ForeColor = this.btn5_5.ForeColor = this.btn5_6.ForeColor = this.btn5_7.ForeColor = Color.White;
-            CreateOrderStatus();
+            if (MenuList.Contains("발주현황"))
+            {
+                CreateOrderStatus(true);
+            }
+            else
+            {
+                CreateOrderStatus(false);
+            }
             frmOStatus.TopLevel = false;
             pnlBackPage.Controls.Clear();
             pnlBackPage.Controls.Add(frmOStatus);
@@ -702,7 +799,14 @@ namespace Team6_UMB
             this.btn5_3.ForeColor = Color.Black;
             this.btn5_2.BackColor = this.btn5_4.BackColor = this.btn5_5.BackColor = this.btn5_6.BackColor = this.btn5_7.BackColor = Color.Transparent;
             this.btn5_2.ForeColor = this.btn5_4.ForeColor = this.btn5_5.ForeColor = this.btn5_6.ForeColor = this.btn5_7.ForeColor = Color.White;
-            CreateShipment();
+            if (MenuList.Contains("출하관리"))
+            {
+                CreateShipment(true);
+            }
+            else
+            {
+                CreateShipment(false);
+            }
             frmShipment.TopLevel = false;
             pnlBackPage.Controls.Clear();
             pnlBackPage.Controls.Add(frmShipment);
@@ -715,7 +819,14 @@ namespace Team6_UMB
             this.btn5_4.ForeColor = Color.Black;
             this.btn5_2.BackColor = this.btn5_3.BackColor = this.btn5_5.BackColor = this.btn5_6.BackColor = this.btn5_7.BackColor = Color.Transparent;
             this.btn5_2.ForeColor = this.btn5_3.ForeColor = this.btn5_5.ForeColor = this.btn5_6.ForeColor = this.btn5_7.ForeColor = Color.White;
-            CreateSO();
+            if (MenuList.Contains("수주현황"))
+            {
+                CreateSO(true);
+            }
+            else
+            {
+                CreateSO(false);
+            }
             frmSO.TopLevel = false;
             pnlBackPage.Controls.Clear();
             pnlBackPage.Controls.Add(frmSO);
@@ -741,7 +852,14 @@ namespace Team6_UMB
             this.btn5_6.ForeColor = Color.Black;
             this.btn5_2.BackColor = this.btn5_3.BackColor = this.btn5_4.BackColor = this.btn5_5.BackColor = this.btn5_7.BackColor = Color.Transparent;
             this.btn5_2.ForeColor = this.btn5_3.ForeColor = this.btn5_4.ForeColor = this.btn5_5.ForeColor = this.btn5_7.ForeColor = Color.White;
-            CreateIcWait();
+            if (MenuList.Contains("입고대기현황"))
+            {
+                CreateIcWait(true);
+            }
+            else
+            {
+                CreateIcWait(false);
+            }
             frmIcWait.TopLevel = false;
             pnlBackPage.Controls.Clear();
             pnlBackPage.Controls.Add(frmIcWait);
@@ -874,6 +992,14 @@ namespace Team6_UMB
             pnlBackPage.Controls.Add(frmFirstPage);
             frmFirstPage.Dock = DockStyle.Fill;
             frmFirstPage.Show();
+            //관리자가 아닌경우 시스템, 사원관리 visible = false;
+            if(LoginVO.user.Department != 1)
+            {
+                btnMain7.Visible = false;
+                btn1_5.Visible = false;
+            }
+            AuthorityService service = new AuthorityService();
+            MenuList = service.MenuCheck(LoginVO.user.Department);
         }
     }
 }

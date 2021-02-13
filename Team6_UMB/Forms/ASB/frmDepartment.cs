@@ -17,9 +17,16 @@ namespace Team6_UMB.Forms.ASB
     {
         int department_id = 0;
         List<DepartmentVO> list = new List<DepartmentVO>();
-        public frmDepartment()
+        public frmDepartment(bool Authority)
         {
             InitializeComponent();
+
+            if (Authority == false)
+            {
+                newBtns1.btnCreate.Visible = false;
+                newBtns1.btnUpdate.Visible = false;
+                newBtns1.btnDelete.Visible = false;
+            }
         }
 
         public void DepartmentList()
