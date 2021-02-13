@@ -88,7 +88,7 @@ namespace Team6_UMB.Forms
             // btnSignIn
             // 
             this.btnSignIn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSignIn.Font = new System.Drawing.Font("나눔바른고딕", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.btnSignIn.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.btnSignIn.ForeColor = System.Drawing.Color.White;
             this.btnSignIn.Location = new System.Drawing.Point(52, 175);
             this.btnSignIn.Name = "btnSignIn";
@@ -102,11 +102,11 @@ namespace Team6_UMB.Forms
             // 
             this.txtPwd.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(52)))), ((int)(((byte)(67)))));
             this.txtPwd.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtPwd.Font = new System.Drawing.Font("나눔바른고딕", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.txtPwd.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.txtPwd.ForeColor = System.Drawing.Color.White;
             this.txtPwd.Location = new System.Drawing.Point(98, 133);
             this.txtPwd.Name = "txtPwd";
-            this.txtPwd.Size = new System.Drawing.Size(209, 18);
+            this.txtPwd.Size = new System.Drawing.Size(209, 17);
             this.txtPwd.TabIndex = 9;
             this.txtPwd.Text = "PassWord";
             this.txtPwd.Click += new System.EventHandler(this.textBox2_Click);
@@ -135,11 +135,11 @@ namespace Team6_UMB.Forms
             // 
             this.txtID.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(52)))), ((int)(((byte)(67)))));
             this.txtID.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtID.Font = new System.Drawing.Font("나눔바른고딕", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.txtID.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.txtID.ForeColor = System.Drawing.Color.White;
             this.txtID.Location = new System.Drawing.Point(98, 87);
             this.txtID.Name = "txtID";
-            this.txtID.Size = new System.Drawing.Size(209, 18);
+            this.txtID.Size = new System.Drawing.Size(209, 17);
             this.txtID.TabIndex = 7;
             this.txtID.Text = "UserID";
             this.txtID.Click += new System.EventHandler(this.textBox1_Click);

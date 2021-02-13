@@ -23,8 +23,6 @@ namespace UMB_POP
             Timer t = new Timer();
             t.Tick += new EventHandler(SystemTimer_Tick);
             t.Start();
-
-      
         }
 
         private void SystemTimer_Tick(object sender, EventArgs e)

@@ -53,6 +53,7 @@
     <Compile Include="ASB\CheckListDAC.cs" />
     <Compile Include="ASB\MachineDAC.cs" />
     <Compile Include="ASB\PerformanceDAC.cs" />
+    <Compile Include="ASB\POPDAC.cs" />
     <Compile Include="ASB\WorkOrderDAC.cs" />
     <Compile Include="CHH\BOMDAC.cs" />
     <Compile Include="CHH\CheckHistoryDAC.cs" />
