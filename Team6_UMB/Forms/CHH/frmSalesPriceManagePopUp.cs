@@ -17,6 +17,7 @@ namespace Team6_UMB.Forms
         List<Mat_ProdCBOBindingVO> matprodName;
         List<Mat_CompanyCBOBindingVO> matcompanyName;
 
+        #region 등록 생성자
         public frmSalesPricePopUp(string headerName)
         {
             InitializeComponent();
@@ -24,7 +25,9 @@ namespace Team6_UMB.Forms
             dtpStart.Value = DateTime.Now;
             cboBinding();
         }
+        #endregion
 
+        #region 수정 생성자
         public frmSalesPricePopUp(string headerName, int priceID, string productID, string productName, int companyID, string companyName, int Present, string sDate, string eDate, string yn, string comment)
         {
             InitializeComponent();
@@ -42,6 +45,7 @@ namespace Team6_UMB.Forms
             txtPricePresent.Text = Present.ToString();
             txtComment.Text = comment;
         }
+        #endregion
 
         #region 제품명, 콤보박스 바인딩
         /// <summary>
@@ -52,25 +56,32 @@ namespace Team6_UMB.Forms
         /// </summary>
         private void cboBinding()
         {
-            if (label1.Text == "영업단가관리 등록" || label1.Text == "영업단가관리 수정")
+            try
             {
-                SalesPriceService service = new SalesPriceService();
-                prodName = service.GetProdName();
-                CommonUtil.ProdNameBinding(cbProductName, prodName);
+                if (label1.Text == "영업단가관리 등록" || label1.Text == "영업단가관리 수정")
+                {
+                    SalesPriceService service = new SalesPriceService();
+                    prodName = service.GetProdName();
+                    CommonUtil.ProdNameBinding(cbProductName, prodName);
 
-                service = new SalesPriceService();
-                companyName = service.GetCompanyName();
-                CommonUtil.CompanyNameBinding(cbCompanyName, companyName);
+                    service = new SalesPriceService();
+                    companyName = service.GetCompanyName();
+                    CommonUtil.CompanyNameBinding(cbCompanyName, companyName);
+                }
+                else if (label1.Text == "자재단가관리 등록" || label1.Text == "자재단가관리 수정")
+                {
+                    MatPriceService Mservice = new MatPriceService();
+                    matprodName = Mservice.GetProdName();
+                    CommonUtil.Mat_ProdNameBinding(cbProductName, matprodName);
+
+                    Mservice = new MatPriceService();
+                    matcompanyName = Mservice.GetCompanyNameName();
+                    CommonUtil.Mat_CompanyNameBinding(cbCompanyName, matcompanyName);
+                }
             }
-            else if (label1.Text == "자재단가관리 등록" || label1.Text == "자재단가관리 수정")
+            catch (Exception err)
             {
-                MatPriceService Mservice = new MatPriceService();
-                matprodName = Mservice.GetProdName();
-                CommonUtil.Mat_ProdNameBinding(cbProductName, matprodName);
-
-                Mservice = new MatPriceService();
-                matcompanyName = Mservice.GetCompanyNameName();
-                CommonUtil.Mat_CompanyNameBinding(cbCompanyName, matcompanyName);
+                MessageBox.Show(err.Message);
             }
         }
         #endregion
@@ -97,14 +108,24 @@ namespace Team6_UMB.Forms
         }
         #endregion
 
+        #region 텍스트박스 초기화
         private void ClearTB()
         {
-            cbProductName.SelectedIndex = cbCompanyName.SelectedIndex = cbYN.SelectedIndex = 0;
-            dtpStart.Value = DateTime.Now;
-            //dtpEnd.Value = new DateTime(9999 - 12 - 30);
-            txtPricePresent.Text = txtComment.Text = string.Empty;
+            try
+            {
+                cbProductName.SelectedIndex = cbCompanyName.SelectedIndex = cbYN.SelectedIndex = 0;
+                dtpStart.Value = DateTime.Now;
+                //dtpEnd.Value = new DateTime(9999 - 12 - 30);
+                txtPricePresent.Text = txtComment.Text = string.Empty;
+            }
+            catch (Exception err)
+            {
+                MessageBox.Show(err.Message);
+            }
         }
+        #endregion
 
+        #region Edit버튼
         private void btnEdit_Click(object sender, EventArgs e)
         {
             SalesPriceService Sservice;
@@ -229,5 +250,6 @@ namespace Team6_UMB.Forms
                 }
             }
         }
+        #endregion
     }
 }

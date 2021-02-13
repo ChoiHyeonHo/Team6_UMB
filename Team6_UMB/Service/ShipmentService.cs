@@ -10,16 +10,28 @@ namespace Team6_UMB.Service
 {
     class ShipmentService
     {
-        public List<SOListVO> SOList()
-        {
-            SODAC dac = new SODAC();
-            return dac.SOList();
-        }
-
         public List<ShipmentVO> ShipmentList()
         {
             ShipmentDAC dac = new ShipmentDAC();
             return dac.ShipmentList();
+        }
+
+        public List<ShipSOVO> ShipmentSOList()
+        {
+            ShipmentDAC dac = new ShipmentDAC();
+            return dac.ShipmentSOList();
+        }
+
+        public int ShipWait(ShipWaitVO vo)
+        {
+            ShipmentDAC dac = new ShipmentDAC();
+            return dac.ShipWait(vo);
+        }
+
+        public int Shipment(ShipmentVO vo)
+        {
+            ShipmentDAC dac = new ShipmentDAC();
+            return dac.Shipment(vo);
         }
     }
 }

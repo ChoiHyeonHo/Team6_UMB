@@ -288,6 +288,12 @@
     <Compile Include="Forms\CHH\frmCheckHistory.Designer.cs">
       <DependentUpon>frmCheckHistory.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\CHH\frmFirstPage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\CHH\frmFirstPage.Designer.cs">
+      <DependentUpon>frmFirstPage.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\CHH\frmImpInsComment.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -486,9 +492,12 @@
     <Compile Include="Service\ProdStatusService.cs" />
     <Compile Include="Service\ProductService.cs" />
     <Compile Include="Service\SalesPriceService.cs" />
+    <Compile Include="Service\SalesService.cs" />
+    <Compile Include="Service\ShiftService.cs" />
     <Compile Include="Service\ShipmentService.cs" />
     <Compile Include="Service\SOService.cs" />
     <Compile Include="Service\UserService.cs" />
+    <Compile Include="Service\WarehouseService.cs" />
     <Compile Include="Service\WorkOrderService.cs" />
     <Compile Include="Util\ChamJo.cs" />
     <Compile Include="Util\CommonUtil.cs" />
@@ -619,6 +628,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\CHH\frmCheckHistory.resx">
       <DependentUpon>frmCheckHistory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\CHH\frmFirstPage.resx">
+      <DependentUpon>frmFirstPage.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\CHH\frmImpInsComment.resx">
       <DependentUpon>frmImpInsComment.cs</DependentUpon>

@@ -31,7 +31,7 @@ namespace Team6_UMB
         {
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.splitContainer2 = new System.Windows.Forms.SplitContainer();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.btnFirstPage = new System.Windows.Forms.Button();
             this.pnlAppState = new System.Windows.Forms.Panel();
             this.pnMin = new System.Windows.Forms.PictureBox();
             this.pbMax = new System.Windows.Forms.PictureBox();
@@ -44,26 +44,12 @@ namespace Team6_UMB
             this.btnMain2 = new System.Windows.Forms.Button();
             this.btnMain1 = new System.Windows.Forms.Button();
             this.pnlBackPage = new System.Windows.Forms.Panel();
-            this.pnlMain5 = new System.Windows.Forms.Panel();
-            this.btn5_7 = new System.Windows.Forms.Button();
-            this.btn5_6 = new System.Windows.Forms.Button();
-            this.btn5_5 = new System.Windows.Forms.Button();
-            this.btn5_4 = new System.Windows.Forms.Button();
-            this.btn5_3 = new System.Windows.Forms.Button();
-            this.btn5_2 = new System.Windows.Forms.Button();
             this.pnlMenu = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnHome = new System.Windows.Forms.Button();
             this.btnUserChange = new System.Windows.Forms.Button();
             this.btnOpenClose = new System.Windows.Forms.Button();
             this.pnlButtons = new System.Windows.Forms.Panel();
-            this.pnlMain7 = new System.Windows.Forms.Panel();
-            this.btn7_1 = new System.Windows.Forms.Button();
-            this.pnlMain6 = new System.Windows.Forms.Panel();
-            this.btn6_4 = new System.Windows.Forms.Button();
-            this.btn6_3 = new System.Windows.Forms.Button();
-            this.btn6_2 = new System.Windows.Forms.Button();
-            this.btn6_1 = new System.Windows.Forms.Button();
             this.pnlMain1 = new System.Windows.Forms.Panel();
             this.btn1_8 = new System.Windows.Forms.Button();
             this.btn1_7 = new System.Windows.Forms.Button();
@@ -73,6 +59,20 @@ namespace Team6_UMB
             this.btn1_3 = new System.Windows.Forms.Button();
             this.btn1_2 = new System.Windows.Forms.Button();
             this.btn1_1 = new System.Windows.Forms.Button();
+            this.pnlMain7 = new System.Windows.Forms.Panel();
+            this.btn7_1 = new System.Windows.Forms.Button();
+            this.pnlMain6 = new System.Windows.Forms.Panel();
+            this.btn6_6 = new System.Windows.Forms.Button();
+            this.btn6_5 = new System.Windows.Forms.Button();
+            this.btn6_3 = new System.Windows.Forms.Button();
+            this.btn6_1 = new System.Windows.Forms.Button();
+            this.pnlMain5 = new System.Windows.Forms.Panel();
+            this.btn5_7 = new System.Windows.Forms.Button();
+            this.btn5_6 = new System.Windows.Forms.Button();
+            this.btn5_5 = new System.Windows.Forms.Button();
+            this.btn5_4 = new System.Windows.Forms.Button();
+            this.btn5_3 = new System.Windows.Forms.Button();
+            this.btn5_2 = new System.Windows.Forms.Button();
             this.pnlMain4 = new System.Windows.Forms.Panel();
             this.btn4_3 = new System.Windows.Forms.Button();
             this.btn4_2 = new System.Windows.Forms.Button();
@@ -84,8 +84,6 @@ namespace Team6_UMB
             this.pnlMain2 = new System.Windows.Forms.Panel();
             this.btn2_2 = new System.Windows.Forms.Button();
             this.btn2_1 = new System.Windows.Forms.Button();
-            this.btn6_5 = new System.Windows.Forms.Button();
-            this.btn6_6 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -94,18 +92,17 @@ namespace Team6_UMB
             this.splitContainer2.Panel1.SuspendLayout();
             this.splitContainer2.Panel2.SuspendLayout();
             this.splitContainer2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.pnlAppState.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pnMin)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbMax)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbClose)).BeginInit();
-            this.pnlMain5.SuspendLayout();
             this.pnlMenu.SuspendLayout();
             this.panel1.SuspendLayout();
             this.pnlButtons.SuspendLayout();
+            this.pnlMain1.SuspendLayout();
             this.pnlMain7.SuspendLayout();
             this.pnlMain6.SuspendLayout();
-            this.pnlMain1.SuspendLayout();
+            this.pnlMain5.SuspendLayout();
             this.pnlMain4.SuspendLayout();
             this.pnlMain3.SuspendLayout();
             this.pnlMain2.SuspendLayout();
@@ -140,7 +137,7 @@ namespace Team6_UMB
             // 
             // splitContainer2.Panel1
             // 
-            this.splitContainer2.Panel1.Controls.Add(this.pictureBox1);
+            this.splitContainer2.Panel1.Controls.Add(this.btnFirstPage);
             this.splitContainer2.Panel1.Enabled = false;
             // 
             // splitContainer2.Panel2
@@ -158,15 +155,18 @@ namespace Team6_UMB
             this.splitContainer2.SplitterWidth = 1;
             this.splitContainer2.TabIndex = 0;
             // 
-            // pictureBox1
+            // btnFirstPage
             // 
-            this.pictureBox1.Image = global::Team6_UMB.Properties.Resources.Logo_White;
-            this.pictureBox1.Location = new System.Drawing.Point(24, 11);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(100, 50);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 1;
-            this.pictureBox1.TabStop = false;
+            this.btnFirstPage.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnFirstPage.FlatAppearance.BorderSize = 0;
+            this.btnFirstPage.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnFirstPage.Image = global::Team6_UMB.Properties.Resources.Logo_White;
+            this.btnFirstPage.Location = new System.Drawing.Point(0, 0);
+            this.btnFirstPage.Name = "btnFirstPage";
+            this.btnFirstPage.Size = new System.Drawing.Size(145, 71);
+            this.btnFirstPage.TabIndex = 0;
+            this.btnFirstPage.UseVisualStyleBackColor = true;
+            this.btnFirstPage.Click += new System.EventHandler(this.btnFirstPage_Click);
             // 
             // pnlAppState
             // 
@@ -220,7 +220,7 @@ namespace Team6_UMB
             this.btnMain7.Dock = System.Windows.Forms.DockStyle.Left;
             this.btnMain7.FlatAppearance.BorderSize = 0;
             this.btnMain7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnMain7.Font = new System.Drawing.Font("나눔바른고딕", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.btnMain7.Font = new System.Drawing.Font("나눔바른고딕", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.btnMain7.ForeColor = System.Drawing.Color.White;
             this.btnMain7.Location = new System.Drawing.Point(930, 0);
             this.btnMain7.Name = "btnMain7";
@@ -235,7 +235,7 @@ namespace Team6_UMB
             this.btnMain6.Dock = System.Windows.Forms.DockStyle.Left;
             this.btnMain6.FlatAppearance.BorderSize = 0;
             this.btnMain6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnMain6.Font = new System.Drawing.Font("나눔바른고딕", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.btnMain6.Font = new System.Drawing.Font("나눔바른고딕", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.btnMain6.ForeColor = System.Drawing.Color.White;
             this.btnMain6.Location = new System.Drawing.Point(775, 0);
             this.btnMain6.Name = "btnMain6";
@@ -250,7 +250,7 @@ namespace Team6_UMB
             this.btnMain5.Dock = System.Windows.Forms.DockStyle.Left;
             this.btnMain5.FlatAppearance.BorderSize = 0;
             this.btnMain5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnMain5.Font = new System.Drawing.Font("나눔바른고딕", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.btnMain5.Font = new System.Drawing.Font("나눔바른고딕", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.btnMain5.ForeColor = System.Drawing.Color.White;
             this.btnMain5.Location = new System.Drawing.Point(620, 0);
             this.btnMain5.Name = "btnMain5";
@@ -265,7 +265,7 @@ namespace Team6_UMB
             this.btnMain4.Dock = System.Windows.Forms.DockStyle.Left;
             this.btnMain4.FlatAppearance.BorderSize = 0;
             this.btnMain4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnMain4.Font = new System.Drawing.Font("나눔바른고딕", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.btnMain4.Font = new System.Drawing.Font("나눔바른고딕", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.btnMain4.ForeColor = System.Drawing.Color.White;
             this.btnMain4.Location = new System.Drawing.Point(465, 0);
             this.btnMain4.Name = "btnMain4";
@@ -280,7 +280,7 @@ namespace Team6_UMB
             this.btnMain3.Dock = System.Windows.Forms.DockStyle.Left;
             this.btnMain3.FlatAppearance.BorderSize = 0;
             this.btnMain3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnMain3.Font = new System.Drawing.Font("나눔바른고딕", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.btnMain3.Font = new System.Drawing.Font("나눔바른고딕", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.btnMain3.ForeColor = System.Drawing.Color.White;
             this.btnMain3.Location = new System.Drawing.Point(310, 0);
             this.btnMain3.Name = "btnMain3";
@@ -295,7 +295,7 @@ namespace Team6_UMB
             this.btnMain2.Dock = System.Windows.Forms.DockStyle.Left;
             this.btnMain2.FlatAppearance.BorderSize = 0;
             this.btnMain2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnMain2.Font = new System.Drawing.Font("나눔바른고딕", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.btnMain2.Font = new System.Drawing.Font("나눔바른고딕", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.btnMain2.ForeColor = System.Drawing.Color.White;
             this.btnMain2.Location = new System.Drawing.Point(155, 0);
             this.btnMain2.Name = "btnMain2";
@@ -310,7 +310,7 @@ namespace Team6_UMB
             this.btnMain1.Dock = System.Windows.Forms.DockStyle.Left;
             this.btnMain1.FlatAppearance.BorderSize = 0;
             this.btnMain1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnMain1.Font = new System.Drawing.Font("나눔바른고딕", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.btnMain1.Font = new System.Drawing.Font("나눔바른고딕", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.btnMain1.ForeColor = System.Drawing.Color.White;
             this.btnMain1.Location = new System.Drawing.Point(0, 0);
             this.btnMain1.Name = "btnMain1";
@@ -329,128 +329,6 @@ namespace Team6_UMB
             this.pnlBackPage.Name = "pnlBackPage";
             this.pnlBackPage.Size = new System.Drawing.Size(1239, 789);
             this.pnlBackPage.TabIndex = 1;
-            // 
-            // pnlMain5
-            // 
-            this.pnlMain5.BackColor = System.Drawing.Color.Transparent;
-            this.pnlMain5.Controls.Add(this.btn5_7);
-            this.pnlMain5.Controls.Add(this.btn5_6);
-            this.pnlMain5.Controls.Add(this.btn5_5);
-            this.pnlMain5.Controls.Add(this.btn5_4);
-            this.pnlMain5.Controls.Add(this.btn5_3);
-            this.pnlMain5.Controls.Add(this.btn5_2);
-            this.pnlMain5.Location = new System.Drawing.Point(16, 395);
-            this.pnlMain5.Name = "pnlMain5";
-            this.pnlMain5.Size = new System.Drawing.Size(119, 36);
-            this.pnlMain5.TabIndex = 11;
-            // 
-            // btn5_7
-            // 
-            this.btn5_7.BackColor = System.Drawing.Color.Transparent;
-            this.btn5_7.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btn5_7.FlatAppearance.BorderSize = 0;
-            this.btn5_7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn5_7.Font = new System.Drawing.Font("나눔바른고딕", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.btn5_7.ForeColor = System.Drawing.Color.White;
-            this.btn5_7.Location = new System.Drawing.Point(0, 300);
-            this.btn5_7.Name = "btn5_7";
-            this.btn5_7.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
-            this.btn5_7.Size = new System.Drawing.Size(119, 60);
-            this.btn5_7.TabIndex = 6;
-            this.btn5_7.Text = "매출현황";
-            this.btn5_7.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn5_7.UseVisualStyleBackColor = false;
-            this.btn5_7.Click += new System.EventHandler(this.btn5_7_Click);
-            // 
-            // btn5_6
-            // 
-            this.btn5_6.BackColor = System.Drawing.Color.Transparent;
-            this.btn5_6.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btn5_6.FlatAppearance.BorderSize = 0;
-            this.btn5_6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn5_6.Font = new System.Drawing.Font("나눔바른고딕", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.btn5_6.ForeColor = System.Drawing.Color.White;
-            this.btn5_6.Location = new System.Drawing.Point(0, 240);
-            this.btn5_6.Name = "btn5_6";
-            this.btn5_6.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
-            this.btn5_6.Size = new System.Drawing.Size(119, 60);
-            this.btn5_6.TabIndex = 5;
-            this.btn5_6.Text = "입고대기현황";
-            this.btn5_6.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn5_6.UseVisualStyleBackColor = false;
-            this.btn5_6.Click += new System.EventHandler(this.btn5_6_Click);
-            // 
-            // btn5_5
-            // 
-            this.btn5_5.BackColor = System.Drawing.Color.Transparent;
-            this.btn5_5.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btn5_5.FlatAppearance.BorderSize = 0;
-            this.btn5_5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn5_5.Font = new System.Drawing.Font("나눔바른고딕", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.btn5_5.ForeColor = System.Drawing.Color.White;
-            this.btn5_5.Location = new System.Drawing.Point(0, 180);
-            this.btn5_5.Name = "btn5_5";
-            this.btn5_5.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
-            this.btn5_5.Size = new System.Drawing.Size(119, 60);
-            this.btn5_5.TabIndex = 4;
-            this.btn5_5.Text = "입고현황";
-            this.btn5_5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn5_5.UseVisualStyleBackColor = false;
-            this.btn5_5.Click += new System.EventHandler(this.btn5_5_Click);
-            // 
-            // btn5_4
-            // 
-            this.btn5_4.BackColor = System.Drawing.Color.Transparent;
-            this.btn5_4.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btn5_4.FlatAppearance.BorderSize = 0;
-            this.btn5_4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn5_4.Font = new System.Drawing.Font("나눔바른고딕", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.btn5_4.ForeColor = System.Drawing.Color.White;
-            this.btn5_4.Location = new System.Drawing.Point(0, 120);
-            this.btn5_4.Name = "btn5_4";
-            this.btn5_4.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
-            this.btn5_4.Size = new System.Drawing.Size(119, 60);
-            this.btn5_4.TabIndex = 3;
-            this.btn5_4.Text = "수주현황";
-            this.btn5_4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn5_4.UseVisualStyleBackColor = false;
-            this.btn5_4.Click += new System.EventHandler(this.btn5_4_Click);
-            // 
-            // btn5_3
-            // 
-            this.btn5_3.BackColor = System.Drawing.Color.Transparent;
-            this.btn5_3.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btn5_3.FlatAppearance.BorderSize = 0;
-            this.btn5_3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn5_3.Font = new System.Drawing.Font("나눔바른고딕", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.btn5_3.ForeColor = System.Drawing.Color.White;
-            this.btn5_3.Location = new System.Drawing.Point(0, 60);
-            this.btn5_3.Name = "btn5_3";
-            this.btn5_3.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
-            this.btn5_3.Size = new System.Drawing.Size(119, 60);
-            this.btn5_3.TabIndex = 2;
-            this.btn5_3.Text = "출하관리";
-            this.btn5_3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn5_3.UseVisualStyleBackColor = false;
-            this.btn5_3.Click += new System.EventHandler(this.btn5_3_Click);
-            // 
-            // btn5_2
-            // 
-            this.btn5_2.BackColor = System.Drawing.Color.Transparent;
-            this.btn5_2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btn5_2.FlatAppearance.BorderSize = 0;
-            this.btn5_2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn5_2.Font = new System.Drawing.Font("나눔바른고딕", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.btn5_2.ForeColor = System.Drawing.Color.White;
-            this.btn5_2.Location = new System.Drawing.Point(0, 0);
-            this.btn5_2.Name = "btn5_2";
-            this.btn5_2.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
-            this.btn5_2.Size = new System.Drawing.Size(119, 60);
-            this.btn5_2.TabIndex = 1;
-            this.btn5_2.Text = "발주현황";
-            this.btn5_2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn5_2.UseVisualStyleBackColor = false;
-            this.btn5_2.Click += new System.EventHandler(this.btn5_2_Click);
             // 
             // pnlMenu
             // 
@@ -519,9 +397,9 @@ namespace Team6_UMB
             // pnlButtons
             // 
             this.pnlButtons.Controls.Add(this.pnlMain6);
-            this.pnlButtons.Controls.Add(this.pnlMain7);
             this.pnlButtons.Controls.Add(this.pnlMain5);
             this.pnlButtons.Controls.Add(this.pnlMain1);
+            this.pnlButtons.Controls.Add(this.pnlMain7);
             this.pnlButtons.Controls.Add(this.pnlMain4);
             this.pnlButtons.Controls.Add(this.pnlMain3);
             this.pnlButtons.Controls.Add(this.pnlMain2);
@@ -530,119 +408,6 @@ namespace Team6_UMB
             this.pnlButtons.Name = "pnlButtons";
             this.pnlButtons.Size = new System.Drawing.Size(145, 563);
             this.pnlButtons.TabIndex = 0;
-            // 
-            // pnlMain7
-            // 
-            this.pnlMain7.BackColor = System.Drawing.Color.Transparent;
-            this.pnlMain7.Controls.Add(this.btn7_1);
-            this.pnlMain7.Location = new System.Drawing.Point(9, 527);
-            this.pnlMain7.Name = "pnlMain7";
-            this.pnlMain7.Size = new System.Drawing.Size(137, 33);
-            this.pnlMain7.TabIndex = 13;
-            // 
-            // btn7_1
-            // 
-            this.btn7_1.BackColor = System.Drawing.Color.Transparent;
-            this.btn7_1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btn7_1.FlatAppearance.BorderSize = 0;
-            this.btn7_1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn7_1.Font = new System.Drawing.Font("나눔바른고딕", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.btn7_1.ForeColor = System.Drawing.Color.White;
-            this.btn7_1.Location = new System.Drawing.Point(0, 0);
-            this.btn7_1.Name = "btn7_1";
-            this.btn7_1.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
-            this.btn7_1.Size = new System.Drawing.Size(137, 60);
-            this.btn7_1.TabIndex = 1;
-            this.btn7_1.Text = "권한관리";
-            this.btn7_1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn7_1.UseVisualStyleBackColor = false;
-            this.btn7_1.Click += new System.EventHandler(this.btn7_1_Click);
-            // 
-            // pnlMain6
-            // 
-            this.pnlMain6.BackColor = System.Drawing.Color.Transparent;
-            this.pnlMain6.Controls.Add(this.btn6_6);
-            this.pnlMain6.Controls.Add(this.btn6_5);
-            this.pnlMain6.Controls.Add(this.btn6_4);
-            this.pnlMain6.Controls.Add(this.btn6_3);
-            this.pnlMain6.Controls.Add(this.btn6_2);
-            this.pnlMain6.Controls.Add(this.btn6_1);
-            this.pnlMain6.Location = new System.Drawing.Point(5, 472);
-            this.pnlMain6.Name = "pnlMain6";
-            this.pnlMain6.Size = new System.Drawing.Size(137, 34);
-            this.pnlMain6.TabIndex = 12;
-            // 
-            // btn6_4
-            // 
-            this.btn6_4.BackColor = System.Drawing.Color.Transparent;
-            this.btn6_4.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btn6_4.FlatAppearance.BorderSize = 0;
-            this.btn6_4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn6_4.Font = new System.Drawing.Font("나눔바른고딕", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.btn6_4.ForeColor = System.Drawing.Color.White;
-            this.btn6_4.Location = new System.Drawing.Point(0, 180);
-            this.btn6_4.Name = "btn6_4";
-            this.btn6_4.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
-            this.btn6_4.Size = new System.Drawing.Size(137, 60);
-            this.btn6_4.TabIndex = 3;
-            this.btn6_4.Text = "작업지시현황";
-            this.btn6_4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn6_4.UseVisualStyleBackColor = false;
-            this.btn6_4.Click += new System.EventHandler(this.btn6_4_Click);
-            // 
-            // btn6_3
-            // 
-            this.btn6_3.BackColor = System.Drawing.Color.Transparent;
-            this.btn6_3.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btn6_3.FlatAppearance.BorderSize = 0;
-            this.btn6_3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn6_3.Font = new System.Drawing.Font("나눔바른고딕", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.btn6_3.ForeColor = System.Drawing.Color.White;
-            this.btn6_3.Location = new System.Drawing.Point(0, 120);
-            this.btn6_3.Name = "btn6_3";
-            this.btn6_3.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
-            this.btn6_3.Size = new System.Drawing.Size(137, 60);
-            this.btn6_3.TabIndex = 2;
-            this.btn6_3.Text = "작업지시등록";
-            this.btn6_3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn6_3.UseVisualStyleBackColor = false;
-            this.btn6_3.Click += new System.EventHandler(this.btn6_3_Click);
-            // 
-            // btn6_2
-            // 
-            this.btn6_2.BackColor = System.Drawing.Color.Transparent;
-            this.btn6_2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btn6_2.FlatAppearance.BorderSize = 0;
-            this.btn6_2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn6_2.Font = new System.Drawing.Font("나눔바른고딕", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.btn6_2.ForeColor = System.Drawing.Color.White;
-            this.btn6_2.Location = new System.Drawing.Point(0, 60);
-            this.btn6_2.Name = "btn6_2";
-            this.btn6_2.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
-            this.btn6_2.Size = new System.Drawing.Size(137, 60);
-            this.btn6_2.TabIndex = 1;
-            this.btn6_2.Text = "생산실적관리";
-            this.btn6_2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn6_2.UseVisualStyleBackColor = false;
-            
-            // 
-            // btn6_1
-            // 
-            this.btn6_1.BackColor = System.Drawing.Color.Transparent;
-            this.btn6_1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btn6_1.FlatAppearance.BorderSize = 0;
-            this.btn6_1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn6_1.Font = new System.Drawing.Font("나눔바른고딕", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.btn6_1.ForeColor = System.Drawing.Color.White;
-            this.btn6_1.Location = new System.Drawing.Point(0, 0);
-            this.btn6_1.Name = "btn6_1";
-            this.btn6_1.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
-            this.btn6_1.Size = new System.Drawing.Size(137, 60);
-            this.btn6_1.TabIndex = 0;
-            this.btn6_1.Text = "생산실적현황";
-            this.btn6_1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn6_1.UseVisualStyleBackColor = false;
-            this.btn6_1.Click += new System.EventHandler(this.btn6_1_Click);
             // 
             // pnlMain1
             // 
@@ -655,9 +420,9 @@ namespace Team6_UMB
             this.pnlMain1.Controls.Add(this.btn1_3);
             this.pnlMain1.Controls.Add(this.btn1_2);
             this.pnlMain1.Controls.Add(this.btn1_1);
-            this.pnlMain1.Location = new System.Drawing.Point(5, 52);
+            this.pnlMain1.Location = new System.Drawing.Point(3, 27);
             this.pnlMain1.Name = "pnlMain1";
-            this.pnlMain1.Size = new System.Drawing.Size(139, 41);
+            this.pnlMain1.Size = new System.Drawing.Size(139, 35);
             this.pnlMain1.TabIndex = 0;
             // 
             // btn1_8
@@ -666,7 +431,7 @@ namespace Team6_UMB
             this.btn1_8.Dock = System.Windows.Forms.DockStyle.Top;
             this.btn1_8.FlatAppearance.BorderSize = 0;
             this.btn1_8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn1_8.Font = new System.Drawing.Font("나눔바른고딕", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.btn1_8.Font = new System.Drawing.Font("나눔바른고딕", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.btn1_8.ForeColor = System.Drawing.Color.White;
             this.btn1_8.Location = new System.Drawing.Point(0, 420);
             this.btn1_8.Name = "btn1_8";
@@ -684,7 +449,7 @@ namespace Team6_UMB
             this.btn1_7.Dock = System.Windows.Forms.DockStyle.Top;
             this.btn1_7.FlatAppearance.BorderSize = 0;
             this.btn1_7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn1_7.Font = new System.Drawing.Font("나눔바른고딕", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.btn1_7.Font = new System.Drawing.Font("나눔바른고딕", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.btn1_7.ForeColor = System.Drawing.Color.White;
             this.btn1_7.Location = new System.Drawing.Point(0, 360);
             this.btn1_7.Name = "btn1_7";
@@ -702,7 +467,7 @@ namespace Team6_UMB
             this.btn1_6.Dock = System.Windows.Forms.DockStyle.Top;
             this.btn1_6.FlatAppearance.BorderSize = 0;
             this.btn1_6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn1_6.Font = new System.Drawing.Font("나눔바른고딕", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.btn1_6.Font = new System.Drawing.Font("나눔바른고딕", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.btn1_6.ForeColor = System.Drawing.Color.White;
             this.btn1_6.Location = new System.Drawing.Point(0, 300);
             this.btn1_6.Name = "btn1_6";
@@ -720,7 +485,7 @@ namespace Team6_UMB
             this.btn1_5.Dock = System.Windows.Forms.DockStyle.Top;
             this.btn1_5.FlatAppearance.BorderSize = 0;
             this.btn1_5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn1_5.Font = new System.Drawing.Font("나눔바른고딕", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.btn1_5.Font = new System.Drawing.Font("나눔바른고딕", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.btn1_5.ForeColor = System.Drawing.Color.White;
             this.btn1_5.Location = new System.Drawing.Point(0, 240);
             this.btn1_5.Name = "btn1_5";
@@ -738,7 +503,7 @@ namespace Team6_UMB
             this.btn1_4.Dock = System.Windows.Forms.DockStyle.Top;
             this.btn1_4.FlatAppearance.BorderSize = 0;
             this.btn1_4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn1_4.Font = new System.Drawing.Font("나눔바른고딕", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.btn1_4.Font = new System.Drawing.Font("나눔바른고딕", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.btn1_4.ForeColor = System.Drawing.Color.White;
             this.btn1_4.Location = new System.Drawing.Point(0, 180);
             this.btn1_4.Name = "btn1_4";
@@ -756,7 +521,7 @@ namespace Team6_UMB
             this.btn1_3.Dock = System.Windows.Forms.DockStyle.Top;
             this.btn1_3.FlatAppearance.BorderSize = 0;
             this.btn1_3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn1_3.Font = new System.Drawing.Font("나눔바른고딕", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.btn1_3.Font = new System.Drawing.Font("나눔바른고딕", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.btn1_3.ForeColor = System.Drawing.Color.White;
             this.btn1_3.Location = new System.Drawing.Point(0, 120);
             this.btn1_3.Name = "btn1_3";
@@ -774,7 +539,7 @@ namespace Team6_UMB
             this.btn1_2.Dock = System.Windows.Forms.DockStyle.Top;
             this.btn1_2.FlatAppearance.BorderSize = 0;
             this.btn1_2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn1_2.Font = new System.Drawing.Font("나눔바른고딕", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.btn1_2.Font = new System.Drawing.Font("나눔바른고딕", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.btn1_2.ForeColor = System.Drawing.Color.White;
             this.btn1_2.Location = new System.Drawing.Point(0, 60);
             this.btn1_2.Name = "btn1_2";
@@ -792,7 +557,7 @@ namespace Team6_UMB
             this.btn1_1.Dock = System.Windows.Forms.DockStyle.Top;
             this.btn1_1.FlatAppearance.BorderSize = 0;
             this.btn1_1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn1_1.Font = new System.Drawing.Font("나눔바른고딕", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.btn1_1.Font = new System.Drawing.Font("나눔바른고딕", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.btn1_1.ForeColor = System.Drawing.Color.White;
             this.btn1_1.Location = new System.Drawing.Point(0, 0);
             this.btn1_1.Name = "btn1_1";
@@ -804,13 +569,246 @@ namespace Team6_UMB
             this.btn1_1.UseVisualStyleBackColor = false;
             this.btn1_1.Click += new System.EventHandler(this.btn1_1_Click);
             // 
+            // pnlMain7
+            // 
+            this.pnlMain7.BackColor = System.Drawing.Color.Transparent;
+            this.pnlMain7.Controls.Add(this.btn7_1);
+            this.pnlMain7.Location = new System.Drawing.Point(5, 530);
+            this.pnlMain7.Name = "pnlMain7";
+            this.pnlMain7.Size = new System.Drawing.Size(137, 31);
+            this.pnlMain7.TabIndex = 13;
+            // 
+            // btn7_1
+            // 
+            this.btn7_1.BackColor = System.Drawing.Color.Transparent;
+            this.btn7_1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btn7_1.FlatAppearance.BorderSize = 0;
+            this.btn7_1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn7_1.Font = new System.Drawing.Font("나눔바른고딕", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.btn7_1.ForeColor = System.Drawing.Color.White;
+            this.btn7_1.Location = new System.Drawing.Point(0, 0);
+            this.btn7_1.Name = "btn7_1";
+            this.btn7_1.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
+            this.btn7_1.Size = new System.Drawing.Size(137, 60);
+            this.btn7_1.TabIndex = 1;
+            this.btn7_1.Text = "권한관리";
+            this.btn7_1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn7_1.UseVisualStyleBackColor = false;
+            this.btn7_1.Click += new System.EventHandler(this.btn7_1_Click);
+            // 
+            // pnlMain6
+            // 
+            this.pnlMain6.BackColor = System.Drawing.Color.Transparent;
+            this.pnlMain6.Controls.Add(this.btn6_6);
+            this.pnlMain6.Controls.Add(this.btn6_5);
+            this.pnlMain6.Controls.Add(this.btn6_3);
+            this.pnlMain6.Controls.Add(this.btn6_1);
+            this.pnlMain6.Location = new System.Drawing.Point(5, 471);
+            this.pnlMain6.Name = "pnlMain6";
+            this.pnlMain6.Size = new System.Drawing.Size(137, 36);
+            this.pnlMain6.TabIndex = 12;
+            // 
+            // btn6_6
+            // 
+            this.btn6_6.BackColor = System.Drawing.Color.Transparent;
+            this.btn6_6.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btn6_6.FlatAppearance.BorderSize = 0;
+            this.btn6_6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn6_6.Font = new System.Drawing.Font("나눔바른고딕", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.btn6_6.ForeColor = System.Drawing.Color.White;
+            this.btn6_6.Location = new System.Drawing.Point(0, 180);
+            this.btn6_6.Name = "btn6_6";
+            this.btn6_6.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
+            this.btn6_6.Size = new System.Drawing.Size(137, 60);
+            this.btn6_6.TabIndex = 5;
+            this.btn6_6.Text = "불량처리현황";
+            this.btn6_6.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn6_6.UseVisualStyleBackColor = false;
+            this.btn6_6.Click += new System.EventHandler(this.btn6_6_Click);
+            // 
+            // btn6_5
+            // 
+            this.btn6_5.BackColor = System.Drawing.Color.Transparent;
+            this.btn6_5.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btn6_5.FlatAppearance.BorderSize = 0;
+            this.btn6_5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn6_5.Font = new System.Drawing.Font("나눔바른고딕", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.btn6_5.ForeColor = System.Drawing.Color.White;
+            this.btn6_5.Location = new System.Drawing.Point(0, 120);
+            this.btn6_5.Name = "btn6_5";
+            this.btn6_5.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
+            this.btn6_5.Size = new System.Drawing.Size(137, 60);
+            this.btn6_5.TabIndex = 4;
+            this.btn6_5.Text = "불량등록/수정";
+            this.btn6_5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn6_5.UseVisualStyleBackColor = false;
+            this.btn6_5.Click += new System.EventHandler(this.btn6_5_Click);
+            // 
+            // btn6_3
+            // 
+            this.btn6_3.BackColor = System.Drawing.Color.Transparent;
+            this.btn6_3.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btn6_3.FlatAppearance.BorderSize = 0;
+            this.btn6_3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn6_3.Font = new System.Drawing.Font("나눔바른고딕", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.btn6_3.ForeColor = System.Drawing.Color.White;
+            this.btn6_3.Location = new System.Drawing.Point(0, 60);
+            this.btn6_3.Name = "btn6_3";
+            this.btn6_3.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
+            this.btn6_3.Size = new System.Drawing.Size(137, 60);
+            this.btn6_3.TabIndex = 2;
+            this.btn6_3.Text = "작업지시현황";
+            this.btn6_3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn6_3.UseVisualStyleBackColor = false;
+            this.btn6_3.Click += new System.EventHandler(this.btn6_3_Click);
+            // 
+            // btn6_1
+            // 
+            this.btn6_1.BackColor = System.Drawing.Color.Transparent;
+            this.btn6_1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btn6_1.FlatAppearance.BorderSize = 0;
+            this.btn6_1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn6_1.Font = new System.Drawing.Font("나눔바른고딕", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.btn6_1.ForeColor = System.Drawing.Color.White;
+            this.btn6_1.Location = new System.Drawing.Point(0, 0);
+            this.btn6_1.Name = "btn6_1";
+            this.btn6_1.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
+            this.btn6_1.Size = new System.Drawing.Size(137, 60);
+            this.btn6_1.TabIndex = 0;
+            this.btn6_1.Text = "생산실적현황";
+            this.btn6_1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn6_1.UseVisualStyleBackColor = false;
+            this.btn6_1.Click += new System.EventHandler(this.btn6_1_Click);
+            // 
+            // pnlMain5
+            // 
+            this.pnlMain5.BackColor = System.Drawing.Color.Transparent;
+            this.pnlMain5.Controls.Add(this.btn5_7);
+            this.pnlMain5.Controls.Add(this.btn5_6);
+            this.pnlMain5.Controls.Add(this.btn5_5);
+            this.pnlMain5.Controls.Add(this.btn5_4);
+            this.pnlMain5.Controls.Add(this.btn5_3);
+            this.pnlMain5.Controls.Add(this.btn5_2);
+            this.pnlMain5.Location = new System.Drawing.Point(16, 393);
+            this.pnlMain5.Name = "pnlMain5";
+            this.pnlMain5.Size = new System.Drawing.Size(119, 38);
+            this.pnlMain5.TabIndex = 11;
+            // 
+            // btn5_7
+            // 
+            this.btn5_7.BackColor = System.Drawing.Color.Transparent;
+            this.btn5_7.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btn5_7.FlatAppearance.BorderSize = 0;
+            this.btn5_7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn5_7.Font = new System.Drawing.Font("나눔바른고딕", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.btn5_7.ForeColor = System.Drawing.Color.White;
+            this.btn5_7.Location = new System.Drawing.Point(0, 300);
+            this.btn5_7.Name = "btn5_7";
+            this.btn5_7.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
+            this.btn5_7.Size = new System.Drawing.Size(119, 60);
+            this.btn5_7.TabIndex = 6;
+            this.btn5_7.Text = "매출현황";
+            this.btn5_7.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn5_7.UseVisualStyleBackColor = false;
+            this.btn5_7.Click += new System.EventHandler(this.btn5_7_Click);
+            // 
+            // btn5_6
+            // 
+            this.btn5_6.BackColor = System.Drawing.Color.Transparent;
+            this.btn5_6.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btn5_6.FlatAppearance.BorderSize = 0;
+            this.btn5_6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn5_6.Font = new System.Drawing.Font("나눔바른고딕", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.btn5_6.ForeColor = System.Drawing.Color.White;
+            this.btn5_6.Location = new System.Drawing.Point(0, 240);
+            this.btn5_6.Name = "btn5_6";
+            this.btn5_6.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
+            this.btn5_6.Size = new System.Drawing.Size(119, 60);
+            this.btn5_6.TabIndex = 5;
+            this.btn5_6.Text = "입고대기현황";
+            this.btn5_6.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn5_6.UseVisualStyleBackColor = false;
+            this.btn5_6.Click += new System.EventHandler(this.btn5_6_Click);
+            // 
+            // btn5_5
+            // 
+            this.btn5_5.BackColor = System.Drawing.Color.Transparent;
+            this.btn5_5.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btn5_5.FlatAppearance.BorderSize = 0;
+            this.btn5_5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn5_5.Font = new System.Drawing.Font("나눔바른고딕", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.btn5_5.ForeColor = System.Drawing.Color.White;
+            this.btn5_5.Location = new System.Drawing.Point(0, 180);
+            this.btn5_5.Name = "btn5_5";
+            this.btn5_5.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
+            this.btn5_5.Size = new System.Drawing.Size(119, 60);
+            this.btn5_5.TabIndex = 4;
+            this.btn5_5.Text = "입고현황";
+            this.btn5_5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn5_5.UseVisualStyleBackColor = false;
+            this.btn5_5.Click += new System.EventHandler(this.btn5_5_Click);
+            // 
+            // btn5_4
+            // 
+            this.btn5_4.BackColor = System.Drawing.Color.Transparent;
+            this.btn5_4.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btn5_4.FlatAppearance.BorderSize = 0;
+            this.btn5_4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn5_4.Font = new System.Drawing.Font("나눔바른고딕", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.btn5_4.ForeColor = System.Drawing.Color.White;
+            this.btn5_4.Location = new System.Drawing.Point(0, 120);
+            this.btn5_4.Name = "btn5_4";
+            this.btn5_4.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
+            this.btn5_4.Size = new System.Drawing.Size(119, 60);
+            this.btn5_4.TabIndex = 3;
+            this.btn5_4.Text = "수주현황";
+            this.btn5_4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn5_4.UseVisualStyleBackColor = false;
+            this.btn5_4.Click += new System.EventHandler(this.btn5_4_Click);
+            // 
+            // btn5_3
+            // 
+            this.btn5_3.BackColor = System.Drawing.Color.Transparent;
+            this.btn5_3.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btn5_3.FlatAppearance.BorderSize = 0;
+            this.btn5_3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn5_3.Font = new System.Drawing.Font("나눔바른고딕", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.btn5_3.ForeColor = System.Drawing.Color.White;
+            this.btn5_3.Location = new System.Drawing.Point(0, 60);
+            this.btn5_3.Name = "btn5_3";
+            this.btn5_3.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
+            this.btn5_3.Size = new System.Drawing.Size(119, 60);
+            this.btn5_3.TabIndex = 2;
+            this.btn5_3.Text = "출하관리";
+            this.btn5_3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn5_3.UseVisualStyleBackColor = false;
+            this.btn5_3.Click += new System.EventHandler(this.btn5_3_Click);
+            // 
+            // btn5_2
+            // 
+            this.btn5_2.BackColor = System.Drawing.Color.Transparent;
+            this.btn5_2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btn5_2.FlatAppearance.BorderSize = 0;
+            this.btn5_2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn5_2.Font = new System.Drawing.Font("나눔바른고딕", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.btn5_2.ForeColor = System.Drawing.Color.White;
+            this.btn5_2.Location = new System.Drawing.Point(0, 0);
+            this.btn5_2.Name = "btn5_2";
+            this.btn5_2.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
+            this.btn5_2.Size = new System.Drawing.Size(119, 60);
+            this.btn5_2.TabIndex = 1;
+            this.btn5_2.Text = "발주현황";
+            this.btn5_2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn5_2.UseVisualStyleBackColor = false;
+            this.btn5_2.Click += new System.EventHandler(this.btn5_2_Click);
+            // 
             // pnlMain4
             // 
             this.pnlMain4.BackColor = System.Drawing.Color.Transparent;
             this.pnlMain4.Controls.Add(this.btn4_3);
             this.pnlMain4.Controls.Add(this.btn4_2);
             this.pnlMain4.Controls.Add(this.btn4_1);
-            this.pnlMain4.Location = new System.Drawing.Point(9, 311);
+            this.pnlMain4.Location = new System.Drawing.Point(9, 303);
             this.pnlMain4.Name = "pnlMain4";
             this.pnlMain4.Size = new System.Drawing.Size(126, 35);
             this.pnlMain4.TabIndex = 10;
@@ -821,7 +819,7 @@ namespace Team6_UMB
             this.btn4_3.Dock = System.Windows.Forms.DockStyle.Top;
             this.btn4_3.FlatAppearance.BorderSize = 0;
             this.btn4_3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn4_3.Font = new System.Drawing.Font("나눔바른고딕", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.btn4_3.Font = new System.Drawing.Font("나눔바른고딕", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.btn4_3.ForeColor = System.Drawing.Color.White;
             this.btn4_3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn4_3.Location = new System.Drawing.Point(0, 120);
@@ -840,7 +838,7 @@ namespace Team6_UMB
             this.btn4_2.Dock = System.Windows.Forms.DockStyle.Top;
             this.btn4_2.FlatAppearance.BorderSize = 0;
             this.btn4_2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn4_2.Font = new System.Drawing.Font("나눔바른고딕", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.btn4_2.Font = new System.Drawing.Font("나눔바른고딕", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.btn4_2.ForeColor = System.Drawing.Color.White;
             this.btn4_2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn4_2.Location = new System.Drawing.Point(0, 60);
@@ -859,7 +857,7 @@ namespace Team6_UMB
             this.btn4_1.Dock = System.Windows.Forms.DockStyle.Top;
             this.btn4_1.FlatAppearance.BorderSize = 0;
             this.btn4_1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn4_1.Font = new System.Drawing.Font("나눔바른고딕", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.btn4_1.Font = new System.Drawing.Font("나눔바른고딕", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.btn4_1.ForeColor = System.Drawing.Color.White;
             this.btn4_1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn4_1.Location = new System.Drawing.Point(0, 0);
@@ -878,9 +876,9 @@ namespace Team6_UMB
             this.pnlMain3.Controls.Add(this.btn3_3);
             this.pnlMain3.Controls.Add(this.btn3_2);
             this.pnlMain3.Controls.Add(this.btn3_1);
-            this.pnlMain3.Location = new System.Drawing.Point(9, 227);
+            this.pnlMain3.Location = new System.Drawing.Point(10, 183);
             this.pnlMain3.Name = "pnlMain3";
-            this.pnlMain3.Size = new System.Drawing.Size(129, 35);
+            this.pnlMain3.Size = new System.Drawing.Size(129, 41);
             this.pnlMain3.TabIndex = 9;
             // 
             // btn3_3
@@ -889,7 +887,7 @@ namespace Team6_UMB
             this.btn3_3.Dock = System.Windows.Forms.DockStyle.Top;
             this.btn3_3.FlatAppearance.BorderSize = 0;
             this.btn3_3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn3_3.Font = new System.Drawing.Font("나눔바른고딕", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.btn3_3.Font = new System.Drawing.Font("나눔바른고딕", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.btn3_3.ForeColor = System.Drawing.Color.White;
             this.btn3_3.Location = new System.Drawing.Point(0, 120);
             this.btn3_3.Name = "btn3_3";
@@ -907,7 +905,7 @@ namespace Team6_UMB
             this.btn3_2.Dock = System.Windows.Forms.DockStyle.Top;
             this.btn3_2.FlatAppearance.BorderSize = 0;
             this.btn3_2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn3_2.Font = new System.Drawing.Font("나눔바른고딕", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.btn3_2.Font = new System.Drawing.Font("나눔바른고딕", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.btn3_2.ForeColor = System.Drawing.Color.White;
             this.btn3_2.Location = new System.Drawing.Point(0, 60);
             this.btn3_2.Name = "btn3_2";
@@ -925,7 +923,7 @@ namespace Team6_UMB
             this.btn3_1.Dock = System.Windows.Forms.DockStyle.Top;
             this.btn3_1.FlatAppearance.BorderSize = 0;
             this.btn3_1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn3_1.Font = new System.Drawing.Font("나눔바른고딕", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.btn3_1.Font = new System.Drawing.Font("나눔바른고딕", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.btn3_1.ForeColor = System.Drawing.Color.White;
             this.btn3_1.Location = new System.Drawing.Point(0, 0);
             this.btn3_1.Name = "btn3_1";
@@ -942,9 +940,9 @@ namespace Team6_UMB
             this.pnlMain2.BackColor = System.Drawing.Color.Transparent;
             this.pnlMain2.Controls.Add(this.btn2_2);
             this.pnlMain2.Controls.Add(this.btn2_1);
-            this.pnlMain2.Location = new System.Drawing.Point(3, 142);
+            this.pnlMain2.Location = new System.Drawing.Point(3, 104);
             this.pnlMain2.Name = "pnlMain2";
-            this.pnlMain2.Size = new System.Drawing.Size(145, 37);
+            this.pnlMain2.Size = new System.Drawing.Size(145, 29);
             this.pnlMain2.TabIndex = 8;
             // 
             // btn2_2
@@ -953,7 +951,7 @@ namespace Team6_UMB
             this.btn2_2.Dock = System.Windows.Forms.DockStyle.Top;
             this.btn2_2.FlatAppearance.BorderSize = 0;
             this.btn2_2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn2_2.Font = new System.Drawing.Font("나눔바른고딕", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.btn2_2.Font = new System.Drawing.Font("나눔바른고딕", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.btn2_2.ForeColor = System.Drawing.Color.White;
             this.btn2_2.Location = new System.Drawing.Point(0, 60);
             this.btn2_2.Name = "btn2_2";
@@ -971,7 +969,7 @@ namespace Team6_UMB
             this.btn2_1.Dock = System.Windows.Forms.DockStyle.Top;
             this.btn2_1.FlatAppearance.BorderSize = 0;
             this.btn2_1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn2_1.Font = new System.Drawing.Font("나눔바른고딕", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.btn2_1.Font = new System.Drawing.Font("나눔바른고딕", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.btn2_1.ForeColor = System.Drawing.Color.White;
             this.btn2_1.Location = new System.Drawing.Point(0, 0);
             this.btn2_1.Name = "btn2_1";
@@ -982,42 +980,6 @@ namespace Team6_UMB
             this.btn2_1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn2_1.UseVisualStyleBackColor = false;
             this.btn2_1.Click += new System.EventHandler(this.btn2_1_Click);
-            // 
-            // btn6_5
-            // 
-            this.btn6_5.BackColor = System.Drawing.Color.Transparent;
-            this.btn6_5.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btn6_5.FlatAppearance.BorderSize = 0;
-            this.btn6_5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn6_5.Font = new System.Drawing.Font("나눔바른고딕", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.btn6_5.ForeColor = System.Drawing.Color.White;
-            this.btn6_5.Location = new System.Drawing.Point(0, 240);
-            this.btn6_5.Name = "btn6_5";
-            this.btn6_5.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
-            this.btn6_5.Size = new System.Drawing.Size(137, 60);
-            this.btn6_5.TabIndex = 4;
-            this.btn6_5.Text = "불량등록/수정";
-            this.btn6_5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn6_5.UseVisualStyleBackColor = false;
-            this.btn6_5.Click += new System.EventHandler(this.btn6_5_Click);
-            // 
-            // btn6_6
-            // 
-            this.btn6_6.BackColor = System.Drawing.Color.Transparent;
-            this.btn6_6.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btn6_6.FlatAppearance.BorderSize = 0;
-            this.btn6_6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn6_6.Font = new System.Drawing.Font("나눔바른고딕", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.btn6_6.ForeColor = System.Drawing.Color.White;
-            this.btn6_6.Location = new System.Drawing.Point(0, 300);
-            this.btn6_6.Name = "btn6_6";
-            this.btn6_6.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
-            this.btn6_6.Size = new System.Drawing.Size(137, 60);
-            this.btn6_6.TabIndex = 5;
-            this.btn6_6.Text = "불량처리현황";
-            this.btn6_6.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn6_6.UseVisualStyleBackColor = false;
-            this.btn6_6.Click += new System.EventHandler(this.btn6_6_Click);
             // 
             // frmMain
             // 
@@ -1030,6 +992,7 @@ namespace Team6_UMB
             this.Name = "frmMain";
             this.Text = "frmMain";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.Load += new System.EventHandler(this.frmMain_Load);
             this.splitContainer1.Panel1.ResumeLayout(false);
             this.splitContainer1.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
@@ -1038,18 +1001,17 @@ namespace Team6_UMB
             this.splitContainer2.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer2)).EndInit();
             this.splitContainer2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.pnlAppState.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pnMin)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbMax)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbClose)).EndInit();
-            this.pnlMain5.ResumeLayout(false);
             this.pnlMenu.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.pnlButtons.ResumeLayout(false);
+            this.pnlMain1.ResumeLayout(false);
             this.pnlMain7.ResumeLayout(false);
             this.pnlMain6.ResumeLayout(false);
-            this.pnlMain1.ResumeLayout(false);
+            this.pnlMain5.ResumeLayout(false);
             this.pnlMain4.ResumeLayout(false);
             this.pnlMain3.ResumeLayout(false);
             this.pnlMain2.ResumeLayout(false);
@@ -1097,11 +1059,8 @@ namespace Team6_UMB
         private System.Windows.Forms.Button btn5_2;
         private System.Windows.Forms.Panel pnlButtons;
         private System.Windows.Forms.Panel pnlMain6;
-        private System.Windows.Forms.Button btn6_4;
         private System.Windows.Forms.Button btn6_3;
-        private System.Windows.Forms.Button btn6_2;
         private System.Windows.Forms.Button btn6_1;
-        private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Panel pnlAppState;
         private System.Windows.Forms.PictureBox pnMin;
         private System.Windows.Forms.PictureBox pbMax;
@@ -1116,5 +1075,6 @@ namespace Team6_UMB
         private System.Windows.Forms.Button btn5_7;
         private System.Windows.Forms.Button btn6_5;
         private System.Windows.Forms.Button btn6_6;
+        private System.Windows.Forms.Button btnFirstPage;
     }
 }

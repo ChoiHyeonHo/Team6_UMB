@@ -49,6 +49,7 @@ namespace Team6_UMB
 
                 range.set_Value(optionalValue, objHeaders.Values.ToArray());
                 range.BorderAround(Type.Missing, Excel.XlBorderWeight.xlThin, Excel.XlColorIndex.xlColorIndexAutomatic, Type.Missing);
+                range.Interior.Color = Color.FromArgb(51, 52, 79);
                 range.Font.Color = Color.White;
 
                 int rowIndex = 0;
@@ -91,7 +92,5 @@ namespace Team6_UMB
                 return ex.Message;
             }
         }
-
-
     }
 }

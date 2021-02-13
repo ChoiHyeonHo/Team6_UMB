@@ -17,6 +17,7 @@ namespace Team6_UMB.Forms.CHH
         List<ProdInsVO> allList;
         CheckBox headerCheck = new CheckBox();
 
+        #region 생성자
         public frmProdInspection()
         {
             InitializeComponent();
@@ -26,94 +27,177 @@ namespace Team6_UMB.Forms.CHH
             periodSearchControl.dtFrom = DateTime.Now.AddDays(-7).ToString();
             periodSearchControl.dtTo = DateTime.Now.ToString();
         }
+        #endregion
+
+        #region Form Load Event
+        /// <summary>
+        /// 그리드뷰에 체크박스 바인딩
+        /// 컬럼 헤더 텍스트 바인딩
+        /// 데이터 조회해서 바인딩
+        /// 작성자: 최현호 / 작성일: 210210
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void frmProdInspection_Load(object sender, EventArgs e)
         {
-            dgvProdCheck.AutoGenerateColumns = false;
-            dgvProdCheck.AllowUserToAddRows = false;
-            dgvProdCheck.MultiSelect = false;
-            dgvProdCheck.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            try
+            {
+                dgvProdCheck.AutoGenerateColumns = false;
+                dgvProdCheck.AllowUserToAddRows = false;
+                dgvProdCheck.MultiSelect = false;
+                dgvProdCheck.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
 
-            DataGridViewCheckBoxColumn chk = new DataGridViewCheckBoxColumn();
-            chk.HeaderText = "";
-            chk.Name = "chk";
-            chk.Width = 30;
-            dgvProdCheck.Columns.Add(chk);
+                DataGridViewCheckBoxColumn chk = new DataGridViewCheckBoxColumn();
+                chk.HeaderText = "";
+                chk.Name = "chk";
+                chk.Width = 30;
+                dgvProdCheck.Columns.Add(chk);
 
-            Point point = dgvProdCheck.GetCellDisplayRectangle(0, -1, true).Location;
+                Point point = dgvProdCheck.GetCellDisplayRectangle(0, -1, true).Location;
 
-            headerCheck.Location = new Point(point.X + 8, point.Y + 2);
-            headerCheck.BackColor = Color.White;
-            headerCheck.Size = new Size(18, 18);
-            headerCheck.Click += HeaderCheck_Click;
-            dgvProdCheck.Controls.Add(headerCheck);
+                headerCheck.Location = new Point(point.X + 8, point.Y + 2);
+                headerCheck.BackColor = Color.White;
+                headerCheck.Size = new Size(18, 18);
+                headerCheck.Click += HeaderCheck_Click;
+                dgvProdCheck.Controls.Add(headerCheck);
 
-            CommonUtil.SetInitGridView(dgvProdCheck);
-            CommonUtil.AddGridTextColumn(dgvProdCheck, "생산번호", "production_id", 90);
-            CommonUtil.AddGridTextColumn(dgvProdCheck, "작업지시번호", "wo_id", 100);
-            CommonUtil.AddGridTextColumn(dgvProdCheck, "수주번호", "so_id", 90);
-            CommonUtil.AddGridTextColumn(dgvProdCheck, "품목코드", "product_id", 150);
-            CommonUtil.AddGridTextColumn(dgvProdCheck, "품목명", "product_name", 150);
-            CommonUtil.AddGridTextColumn(dgvProdCheck, "출하상태", "ship_state", 200);
-            CommonUtil.AddGridTextColumn(dgvProdCheck, "생산상태", "production_state", 200);
-            CommonUtil.AddGridTextColumn(dgvProdCheck, "납기일", "so_edate", 150);
-            CommonUtil.AddGridTextColumn(dgvProdCheck, "출하번호", "ship_id", 150);
-            CommonUtil.AddGridTextColumn(dgvProdCheck, "생산량", "production_count", 150);
-            DGVBinding();
+                CommonUtil.SetInitGridView(dgvProdCheck);
+                CommonUtil.AddGridTextColumn(dgvProdCheck, "생산번호", "production_id", 90);
+                CommonUtil.AddGridTextColumn(dgvProdCheck, "작업지시번호", "wo_id", 100);
+                CommonUtil.AddGridTextColumn(dgvProdCheck, "수주번호", "so_id", 90);
+                CommonUtil.AddGridTextColumn(dgvProdCheck, "품목코드", "product_id", 150);
+                CommonUtil.AddGridTextColumn(dgvProdCheck, "품목명", "product_name", 150);
+                CommonUtil.AddGridTextColumn(dgvProdCheck, "출하상태", "ship_state", 200);
+                CommonUtil.AddGridTextColumn(dgvProdCheck, "생산상태", "production_state", 200);
+                CommonUtil.AddGridTextColumn(dgvProdCheck, "납기일", "so_edate", 150);
+                CommonUtil.AddGridTextColumn(dgvProdCheck, "출하번호", "ship_id", 150);
+                CommonUtil.AddGridTextColumn(dgvProdCheck, "생산량", "production_QtyReleased", 150);
+                DGVBinding();
+            }
+            catch (Exception err)
+            {
+                MessageBox.Show(err.Message);
+            }
         }
+        #endregion
 
+        #region DGV Binding
         private void DGVBinding()
         {
-            allList = service.GetProdInsInfo();
-            dgvProdCheck.DataSource = allList;
+            try
+            {
+                allList = service.GetProdInsInfo();
+                dgvProdCheck.DataSource = allList;
+            }
+            catch (Exception err)
+            {
+                MessageBox.Show(err.Message);
+            }
         }
+        #endregion
 
+        #region 컬럼헤더 체크박스 클릭
+        /// <summary>
+        /// EndEdit() 를 통해 현재 포커스가 있는 셀의 편집을 종료
+        /// foreach문을 돌면서 체크박스의 Value를 Checked로 변경
+        /// 작성자: 최현호 / 작성일: 210210
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void HeaderCheck_Click(object sender, EventArgs e)
         {
-            dgvProdCheck.EndEdit(); //현재 포커스가 있는 셀의 편집을 종료(다른 셀로 이동시키는것과 같은 효과)
-
-            foreach (DataGridViewRow row in dgvProdCheck.Rows)
+            try
             {
-                DataGridViewCheckBoxCell chk = (DataGridViewCheckBoxCell)row.Cells["chk"];
-                chk.Value = headerCheck.Checked;
-            }
-        }
+                dgvProdCheck.EndEdit();
 
-        private void newBtns1_btnCreate_Event(object sender, EventArgs e)
-        {
-            List<int> chkBarCodeList = new List<int>();
-            foreach (DataGridViewRow row in dgvProdCheck.Rows)
-            {
-                bool bCheck = (bool)row.Cells["chk"].EditedFormattedValue;
-                if (bCheck)
+                foreach (DataGridViewRow row in dgvProdCheck.Rows)
                 {
-                    chkBarCodeList.Add(int.Parse(row.Cells["ship_id"].Value.ToString()));
+                    DataGridViewCheckBoxCell chk = (DataGridViewCheckBoxCell)row.Cells["chk"];
+                    chk.Value = headerCheck.Checked;
                 }
             }
-            string temp = string.Join(",", chkBarCodeList);
-            frmProdInspPopUp frm = new frmProdInspPopUp(temp);
-            frm.Show();
+            catch (Exception err)
+            {
+                MessageBox.Show(err.Message);
+            }
         }
+        #endregion
 
+        #region 등록버튼
+        /// <summary>
+        /// 체크박스가 Checked인 것의 출하ID를 List에 담는다
+        /// List에 담긴 ID들을 string.Join의 "," 사용해서 쿼리문의 Where in()에 담길 문자열로 변환
+        /// 문자열을 팝업폼의 파라미터로 전달
+        /// 작성자: 최현호 / 작성일: 210210
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void newBtns1_btnCreate_Event(object sender, EventArgs e)
+        {
+            try
+            {
+                List<int> chkBarCodeList = new List<int>();
+                foreach (DataGridViewRow row in dgvProdCheck.Rows)
+                {
+                    bool bCheck = (bool)row.Cells["chk"].EditedFormattedValue;
+                    if (bCheck)
+                    {
+                        chkBarCodeList.Add(int.Parse(row.Cells["ship_id"].Value.ToString()));
+                    }
+                }
+                string temp = string.Join(",", chkBarCodeList);
+                frmProdInspPopUp frm = new frmProdInspPopUp(temp);
+                frm.Show();
+            }
+            catch (Exception err)
+            {
+                MessageBox.Show(err.Message);
+            }
+        }
+        #endregion
+
+        #region DGV Binding
+        /// <summary>
+        /// 작성자: 최현호 / 작성일: 210210
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void newBtns1_btnRefresh_Event(object sender, EventArgs e)
         {
             DGVBinding();
         }
+        #endregion
 
+        #region 검색조건 기간조회
+        /// <summary>
+        /// 납기일이 FromDate와 ToDate의 사이에 있어야 함
+        /// 작성자: 최현호 / 작성일: 210210
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void periodSearchControl2_ChangedPeriod(object sender, EventArgs e)
         {
-            if (dgvProdCheck.DataSource != null)
+            try
             {
-                if (periodSearchControl.dtFrom != DateTime.Now.ToShortDateString())
+                if (dgvProdCheck.DataSource != null)
                 {
-                    string FromDate = periodSearchControl.dtFrom;
-                    string ToDate = periodSearchControl.dtTo;
+                    if (periodSearchControl.dtFrom != DateTime.Now.ToShortDateString())
+                    {
+                        string FromDate = periodSearchControl.dtFrom;
+                        string ToDate = periodSearchControl.dtTo;
 
-                    List<ProdInsVO> periodList = (from period in allList
-                                                     where Convert.ToDateTime(FromDate) <= Convert.ToDateTime(period.so_edate) && Convert.ToDateTime(period.so_edate) <= Convert.ToDateTime(ToDate)
-                                                     select period).ToList();
-                    dgvProdCheck.DataSource = periodList;
+                        List<ProdInsVO> periodList = (from period in allList
+                                                      where Convert.ToDateTime(FromDate) <= Convert.ToDateTime(period.so_edate) && Convert.ToDateTime(period.so_edate) <= Convert.ToDateTime(ToDate)
+                                                      select period).ToList();
+                        dgvProdCheck.DataSource = periodList;
+                    }
                 }
             }
+            catch (Exception err)
+            {
+                MessageBox.Show(err.Message);
+            }
         }
+        #endregion
     }
 }
