@@ -49,9 +49,9 @@ namespace Team6_UMB
         public static frmShipment frmShipment;
         public static frmSO frmSO;
         public static frmperformanceStatus frmPS; //생산실적 현황
-        
+
         public static frmWorkOrderRegi frmWOR; //작업지시 등록
-        
+
         public static frmdefectiveRegi frmDR; //불량관리 등록/수정
         public static frmdefectiveStatus frmDS; //불량처리현황
         public static frmAuthority frmAuthority; //권한관리
@@ -227,14 +227,14 @@ namespace Team6_UMB
                 frmPS = new frmperformanceStatus();
             return frmPS;
         }
-        
+
         public static frmWorkOrderRegi CreateWOR()
         {
             if (frmWOR == null)
                 frmWOR = new frmWorkOrderRegi();
             return frmWOR;
         }
-        
+
         public static frmdefectiveRegi CreateDR()
         {
             if (frmDR == null)
@@ -420,7 +420,7 @@ namespace Team6_UMB
 
                 case 7:
                     #region Visible 제어
-                    pnlMain1.Visible = pnlMain2.Visible = pnlMain3.Visible = pnlMain4.Visible = pnlMain5.Visible= pnlMain6.Visible = false;
+                    pnlMain1.Visible = pnlMain2.Visible = pnlMain3.Visible = pnlMain4.Visible = pnlMain5.Visible = pnlMain6.Visible = false;
                     #endregion
 
                     #region 버튼7의 BackColor, ForeColor 제어
@@ -440,7 +440,7 @@ namespace Team6_UMB
         }
         #endregion
 
-        
+
 
         #region 최소, 최대, 닫기
         private void pnMin_Click(object sender, EventArgs e)
@@ -906,7 +906,7 @@ namespace Team6_UMB
             frmPS.Dock = DockStyle.Fill;
             frmPS.Show();
         }
-        
+
         private void btn6_3_Click(object sender, EventArgs e)
         {
             this.btn6_3.BackColor = Color.White;
@@ -961,7 +961,7 @@ namespace Team6_UMB
                 btnHome.Location = new Point(0, 30);
                 btnOpenClose.Text = ">>";
             }
-            else if(btnOpenClose.Text == ">>")
+            else if (btnOpenClose.Text == ">>")
             {
                 pnlMenu.Size = new Size(145, 789);
                 pnlButtons.Visible = true;
@@ -973,7 +973,36 @@ namespace Team6_UMB
 
         private void btnUserChange_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("User Change...");
+            frmFirstPage = null;
+            frmSalesPriceManage = null;
+            frmMatPriceManage = null;
+            frmProductManage = null;
+            frmBOM = null;
+            frmImportInspection = null;
+            frmProdInspection = null;
+            frmCheckHistory = null;
+            frmPDStock = null;
+            frmShift = null;
+            frmBOR = null;
+            frmCheckList = null;
+            frmCompany = null;
+            frmDepartment = null;
+            frmMachine = null;
+            frmUser = null;
+            frmWarehouse = null;
+            frmIcStatus = null;
+            frmIcWait = null;
+            frmOStatus = null;
+            frmSales = null;
+            frmShipment = null;
+            frmSO = null;
+            frmPS = null; //생산실적 현황
+            frmWOR = null; //작업지시 등록
+            frmDR = null; //불량관리 등록/수정
+            frmDS = null; //불량처리현황
+            frmAuthority = null; //권한관리
+
+            this.Close();
         }
 
         private void btnHome_Click(object sender, EventArgs e)
@@ -993,7 +1022,7 @@ namespace Team6_UMB
             frmFirstPage.Dock = DockStyle.Fill;
             frmFirstPage.Show();
             //관리자가 아닌경우 시스템, 사원관리 visible = false;
-            if(LoginVO.user.Department != 1)
+            if (LoginVO.user.Department != 1)
             {
                 btnMain7.Visible = false;
                 btn1_5.Visible = false;
