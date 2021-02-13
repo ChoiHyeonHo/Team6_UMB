@@ -35,6 +35,7 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Data.Linq" />
     <Reference Include="System.Xml.Linq" />
@@ -48,6 +49,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Back\POPClient.cs" />
     <Compile Include="login.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -68,6 +70,7 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Service\POPService.cs" />
     <EmbeddedResource Include="login.resx">
       <DependentUpon>login.cs</DependentUpon>
     </EmbeddedResource>
@@ -155,6 +158,20 @@
     <Content Include="Resources\SearchWhite.png" />
     <Content Include="Resources\umbrella.png" />
     <Content Include="Resources\UserIcon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Team6_UMB\Team6_UMB.csproj">
+      <Project>{fa87d9a7-9a29-4d0f-a2b9-2f286e920030}</Project>
+      <Name>Team6_UMB</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\UMB_DAC\UMB_DAC.csproj">
+      <Project>{8f8b5eda-bf7d-4853-a6ac-f200f018366b}</Project>
+      <Name>UMB_DAC</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\UMB_VO\UMB_VO.csproj">
+      <Project>{35dbb28e-b923-48c0-acc6-68811c8b72bd}</Project>
+      <Name>UMB_VO</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

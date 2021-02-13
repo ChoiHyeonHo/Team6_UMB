@@ -16,7 +16,7 @@ namespace UMB_POP
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmPOP());
+            Application.Run(new login());
         }
     }
 }

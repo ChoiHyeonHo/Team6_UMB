@@ -24,6 +24,8 @@ namespace UMB_POP
             t.Tick += new EventHandler(SystemTimer_Tick);
             t.Start();
 
+
+
       
         }
 

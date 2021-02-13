@@ -16,7 +16,7 @@ namespace Team6_UMB.Service
             return dac.GetPerList();
         }
 
-        internal List<PerformanceVO> SearchPerList(string pid, string process)
+        public List<PerformanceVO> SearchPerList(string pid, string process)
         {
             PerformanceDAC dac = new PerformanceDAC();
             return dac.SearchPerList(pid, process);

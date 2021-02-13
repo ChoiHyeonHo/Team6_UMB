@@ -211,6 +211,78 @@ namespace UMB_POP.Properties {
         }
         
         /// <summary>
+        ///   정말로 삭제하시겠습니까?과(와) 유사한 지역화된 문자열을 찾습니다.
+        /// </summary>
+        internal static string msgDelete {
+            get {
+                return ResourceManager.GetString("msgDelete", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   작업 수행중 오류 발생. 확인 후 다시 시도하여 주십시오.과(와) 유사한 지역화된 문자열을 찾습니다.
+        /// </summary>
+        internal static string msgError {
+            get {
+                return ResourceManager.GetString("msgError", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   아이디 비밀번호를 확인해 주십시오.과(와) 유사한 지역화된 문자열을 찾습니다.
+        /// </summary>
+        internal static string msgLoginCheck {
+            get {
+                return ResourceManager.GetString("msgLoginCheck", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   아이디 비밀번호를 입력해 주십시오.과(와) 유사한 지역화된 문자열을 찾습니다.
+        /// </summary>
+        internal static string msgLoginNull {
+            get {
+                return ResourceManager.GetString("msgLoginNull", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   정상적으로 처리되었습니다.과(와) 유사한 지역화된 문자열을 찾습니다.
+        /// </summary>
+        internal static string msgOK {
+            get {
+                return ResourceManager.GetString("msgOK", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   수주 등록이 완료되었습니다.과(와) 유사한 지역화된 문자열을 찾습니다.
+        /// </summary>
+        internal static string msgOrder {
+            get {
+                return ResourceManager.GetString("msgOrder", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   입고 처리가 완료되었습니다.과(와) 유사한 지역화된 문자열을 찾습니다.
+        /// </summary>
+        internal static string msgReceiving {
+            get {
+                return ResourceManager.GetString("msgReceiving", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   출고 처리가 완료되었습니다.과(와) 유사한 지역화된 문자열을 찾습니다.
+        /// </summary>
+        internal static string msgRelease {
+            get {
+                return ResourceManager.GetString("msgRelease", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   System.Drawing.Bitmap 형식의 지역화된 리소스를 찾습니다.
         /// </summary>
         internal static System.Drawing.Bitmap Password {
