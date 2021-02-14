@@ -13,9 +13,13 @@ namespace UMB_POP
 {
     public partial class frmPOP : Form
     {
+        //전역변수
+
         public frmPOP()
         {
             InitializeComponent();
+
+
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -23,6 +27,8 @@ namespace UMB_POP
             Timer t = new Timer();
             t.Tick += new EventHandler(SystemTimer_Tick);
             t.Start();
+
+
         }
 
         private void SystemTimer_Tick(object sender, EventArgs e)

@@ -35,26 +35,18 @@ namespace Team6_UMB.Forms.BMN
             this.btnSearch = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.txtprocess = new System.Windows.Forms.TextBox();
-            this.txtprod = new System.Windows.Forms.TextBox();
+            this.cboProcess = new System.Windows.Forms.ComboBox();
+            this.cboProduct = new System.Windows.Forms.ComboBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.periodSearchControl1 = new PJT_Olive.Control.PeriodSearchControl();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.btnAllButtons1 = new Team6_UMB.Controls.btnAllButtons();
+            this.newBtns1 = new Team6_UMB.Controls.NewBtns();
             this.label1 = new System.Windows.Forms.Label();
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
             this.panel2 = new System.Windows.Forms.Panel();
             this.label5 = new System.Windows.Forms.Label();
             this.dgvStatus = new Team6_UMB.DGV_Custom();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column12 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -67,11 +59,12 @@ namespace Team6_UMB.Forms.BMN
             this.btnSearch.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btnSearch.FlatAppearance.BorderSize = 0;
             this.btnSearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSearch.Location = new System.Drawing.Point(903, 12);
+            this.btnSearch.Location = new System.Drawing.Point(927, 13);
             this.btnSearch.Name = "btnSearch";
             this.btnSearch.Size = new System.Drawing.Size(34, 30);
             this.btnSearch.TabIndex = 21;
             this.btnSearch.UseVisualStyleBackColor = true;
+            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
             // 
             // label3
             // 
@@ -87,10 +80,10 @@ namespace Team6_UMB.Forms.BMN
             // 
             this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupBox1.Controls.Add(this.cboProcess);
+            this.groupBox1.Controls.Add(this.cboProduct);
             this.groupBox1.Controls.Add(this.btnSearch);
-            this.groupBox1.Controls.Add(this.txtprocess);
             this.groupBox1.Controls.Add(this.label3);
-            this.groupBox1.Controls.Add(this.txtprod);
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.periodSearchControl1);
@@ -100,21 +93,21 @@ namespace Team6_UMB.Forms.BMN
             this.groupBox1.TabIndex = 40;
             this.groupBox1.TabStop = false;
             // 
-            // txtprocess
+            // cboProcess
             // 
-            this.txtprocess.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.txtprocess.Location = new System.Drawing.Point(731, 15);
-            this.txtprocess.Name = "txtprocess";
-            this.txtprocess.Size = new System.Drawing.Size(164, 24);
-            this.txtprocess.TabIndex = 25;
+            this.cboProcess.FormattingEnabled = true;
+            this.cboProcess.Location = new System.Drawing.Point(730, 17);
+            this.cboProcess.Name = "cboProcess";
+            this.cboProcess.Size = new System.Drawing.Size(167, 20);
+            this.cboProcess.TabIndex = 26;
             // 
-            // txtprod
+            // cboProduct
             // 
-            this.txtprod.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.txtprod.Location = new System.Drawing.Point(460, 15);
-            this.txtprod.Name = "txtprod";
-            this.txtprod.Size = new System.Drawing.Size(164, 24);
-            this.txtprod.TabIndex = 25;
+            this.cboProduct.FormattingEnabled = true;
+            this.cboProduct.Location = new System.Drawing.Point(465, 17);
+            this.cboProduct.Name = "cboProduct";
+            this.cboProduct.Size = new System.Drawing.Size(167, 20);
+            this.cboProduct.TabIndex = 25;
             // 
             // label4
             // 
@@ -152,21 +145,24 @@ namespace Team6_UMB.Forms.BMN
             this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(52)))), ((int)(((byte)(79)))));
-            this.panel1.Controls.Add(this.btnAllButtons1);
+            this.panel1.Controls.Add(this.newBtns1);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Location = new System.Drawing.Point(12, 16);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1511, 35);
             this.panel1.TabIndex = 39;
             // 
-            // btnAllButtons1
+            // newBtns1
             // 
-            this.btnAllButtons1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnAllButtons1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(52)))), ((int)(((byte)(79)))));
-            this.btnAllButtons1.Location = new System.Drawing.Point(972, -2);
-            this.btnAllButtons1.Name = "btnAllButtons1";
-            this.btnAllButtons1.Size = new System.Drawing.Size(539, 38);
-            this.btnAllButtons1.TabIndex = 47;
+            this.newBtns1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(52)))), ((int)(((byte)(79)))));
+            this.newBtns1.Dock = System.Windows.Forms.DockStyle.Right;
+            this.newBtns1.Location = new System.Drawing.Point(741, 0);
+            this.newBtns1.Name = "newBtns1";
+            this.newBtns1.Size = new System.Drawing.Size(770, 35);
+            this.newBtns1.TabIndex = 2;
+            this.newBtns1.btnRefresh_Event += new System.EventHandler(this.newBtns1_btnRefresh_Event);
+            this.newBtns1.btnExcel_Event += new System.EventHandler(this.newBtns1_btnExcel_Event);
+            this.newBtns1.btnPrint_Event += new System.EventHandler(this.newBtns1_btnPrint_Event);
             // 
             // label1
             // 
@@ -197,7 +193,7 @@ namespace Team6_UMB.Forms.BMN
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel2.BackColor = System.Drawing.Color.Gainsboro;
             this.panel2.Controls.Add(this.label5);
-            this.panel2.Location = new System.Drawing.Point(12, 106);
+            this.panel2.Location = new System.Drawing.Point(12, 109);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1511, 35);
             this.panel2.TabIndex = 41;
@@ -208,9 +204,9 @@ namespace Team6_UMB.Forms.BMN
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.label5.Location = new System.Drawing.Point(12, 9);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(86, 18);
+            this.label5.Size = new System.Drawing.Size(60, 18);
             this.label5.TabIndex = 22;
-            this.label5.Text = "생산실적내역";
+            this.label5.Text = "불량현황";
             // 
             // dgvStatus
             // 
@@ -228,65 +224,16 @@ namespace Team6_UMB.Forms.BMN
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dgvStatus.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvStatus.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvStatus.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Column3,
-            this.Column12,
-            this.Column11,
-            this.Column1,
-            this.Column9,
-            this.Column2,
-            this.Column5,
-            this.Column6});
             this.dgvStatus.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.dgvStatus.GridColor = System.Drawing.Color.LightGray;
-            this.dgvStatus.Location = new System.Drawing.Point(12, 141);
+            this.dgvStatus.Location = new System.Drawing.Point(12, 148);
             this.dgvStatus.Margin = new System.Windows.Forms.Padding(4, 1, 4, 1);
             this.dgvStatus.MinimumSize = new System.Drawing.Size(150, 150);
             this.dgvStatus.Name = "dgvStatus";
             this.dgvStatus.RowTemplate.Height = 23;
             this.dgvStatus.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.dgvStatus.Size = new System.Drawing.Size(1510, 800);
+            this.dgvStatus.Size = new System.Drawing.Size(1510, 795);
             this.dgvStatus.TabIndex = 42;
-            // 
-            // Column3
-            // 
-            this.Column3.HeaderText = "생산실적번호";
-            this.Column3.Name = "Column3";
-            // 
-            // Column12
-            // 
-            this.Column12.HeaderText = "품목명";
-            this.Column12.Name = "Column12";
-            // 
-            // Column11
-            // 
-            this.Column11.HeaderText = "공정명";
-            this.Column11.Name = "Column11";
-            // 
-            // Column1
-            // 
-            this.Column1.HeaderText = "불량유형";
-            this.Column1.Name = "Column1";
-            // 
-            // Column9
-            // 
-            this.Column9.HeaderText = "불량처리유형";
-            this.Column9.Name = "Column9";
-            // 
-            // Column2
-            // 
-            this.Column2.HeaderText = "불량수량";
-            this.Column2.Name = "Column2";
-            // 
-            // Column5
-            // 
-            this.Column5.HeaderText = "작업자";
-            this.Column5.Name = "Column5";
-            // 
-            // Column6
-            // 
-            this.Column6.HeaderText = "처리일";
-            this.Column6.Name = "Column6";
             // 
             // frmdefectiveStatus
             // 
@@ -300,6 +247,7 @@ namespace Team6_UMB.Forms.BMN
             this.Controls.Add(this.dgvStatus);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmdefectiveStatus";
+            this.Load += new System.EventHandler(this.frmdefectiveStatus_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.panel1.ResumeLayout(false);
@@ -316,8 +264,6 @@ namespace Team6_UMB.Forms.BMN
         private System.Windows.Forms.Button btnSearch;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.TextBox txtprocess;
-        private System.Windows.Forms.TextBox txtprod;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label2;
         private PJT_Olive.Control.PeriodSearchControl periodSearchControl1;
@@ -327,14 +273,8 @@ namespace Team6_UMB.Forms.BMN
         private System.Windows.Forms.Label label5;
         private DGV_Custom dgvStatus;
         private System.Windows.Forms.ImageList imageList1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column12;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column11;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column9;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
-        private Controls.btnAllButtons btnAllButtons1;
+        private System.Windows.Forms.ComboBox cboProcess;
+        private System.Windows.Forms.ComboBox cboProduct;
+        private Controls.NewBtns newBtns1;
     }
 }

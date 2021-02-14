@@ -38,17 +38,17 @@ namespace Team6_UMB.Forms
             this.label4 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.cboState = new System.Windows.Forms.ComboBox();
+            this.periodSearchControl = new PJT_Olive.Control.PeriodSearchControl();
             this.cboProductName = new System.Windows.Forms.ComboBox();
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.newBtns1 = new Team6_UMB.Controls.NewBtns();
             this.btnOrderComplete1 = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label5 = new System.Windows.Forms.Label();
-            this.cboState = new System.Windows.Forms.ComboBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.periodSearchControl = new PJT_Olive.Control.PeriodSearchControl();
-            this.newBtns1 = new Team6_UMB.Controls.NewBtns();
             this.dgvOrder = new Team6_UMB.DGV_Custom();
             this.groupBox1.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -107,6 +107,35 @@ namespace Team6_UMB.Forms
             this.groupBox1.TabIndex = 23;
             this.groupBox1.TabStop = false;
             // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label3.Location = new System.Drawing.Point(582, 20);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(34, 18);
+            this.label3.TabIndex = 28;
+            this.label3.Text = "상태";
+            // 
+            // cboState
+            // 
+            this.cboState.FormattingEnabled = true;
+            this.cboState.Location = new System.Drawing.Point(622, 18);
+            this.cboState.Name = "cboState";
+            this.cboState.Size = new System.Drawing.Size(159, 20);
+            this.cboState.TabIndex = 27;
+            // 
+            // periodSearchControl
+            // 
+            this.periodSearchControl.DateType = "";
+            this.periodSearchControl.dtFrom = "2021-01-31";
+            this.periodSearchControl.dtTo = "2021-02-07";
+            this.periodSearchControl.Font = new System.Drawing.Font("돋움", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.periodSearchControl.Location = new System.Drawing.Point(43, 14);
+            this.periodSearchControl.Name = "periodSearchControl";
+            this.periodSearchControl.Size = new System.Drawing.Size(301, 29);
+            this.periodSearchControl.TabIndex = 26;
+            // 
             // cboProductName
             // 
             this.cboProductName.FormattingEnabled = true;
@@ -150,6 +179,18 @@ namespace Team6_UMB.Forms
             this.panel1.Size = new System.Drawing.Size(1511, 35);
             this.panel1.TabIndex = 22;
             // 
+            // newBtns1
+            // 
+            this.newBtns1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(52)))), ((int)(((byte)(79)))));
+            this.newBtns1.Dock = System.Windows.Forms.DockStyle.Right;
+            this.newBtns1.Location = new System.Drawing.Point(616, 0);
+            this.newBtns1.Name = "newBtns1";
+            this.newBtns1.Size = new System.Drawing.Size(770, 35);
+            this.newBtns1.TabIndex = 26;
+            this.newBtns1.btnRefresh_Event += new System.EventHandler(this.newBtns1_btnRefresh_Event);
+            this.newBtns1.btnExcel_Event += new System.EventHandler(this.newBtns1_btnExcel_Event);
+            this.newBtns1.btnPrint_Event += new System.EventHandler(this.newBtns1_btnPrint_Event);
+            // 
             // btnOrderComplete1
             // 
             this.btnOrderComplete1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(52)))), ((int)(((byte)(79)))));
@@ -184,50 +225,9 @@ namespace Team6_UMB.Forms
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.label5.Location = new System.Drawing.Point(12, 9);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(125, 18);
+            this.label5.Size = new System.Drawing.Size(86, 18);
             this.label5.TabIndex = 22;
-            this.label5.Text = "미등록작업지시내역";
-            // 
-            // cboState
-            // 
-            this.cboState.FormattingEnabled = true;
-            this.cboState.Location = new System.Drawing.Point(622, 18);
-            this.cboState.Name = "cboState";
-            this.cboState.Size = new System.Drawing.Size(159, 20);
-            this.cboState.TabIndex = 27;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label3.Location = new System.Drawing.Point(582, 20);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(34, 18);
-            this.label3.TabIndex = 28;
-            this.label3.Text = "상태";
-            // 
-            // periodSearchControl
-            // 
-            this.periodSearchControl.DateType = "";
-            this.periodSearchControl.dtFrom = "2021-01-31";
-            this.periodSearchControl.dtTo = "2021-02-07";
-            this.periodSearchControl.Font = new System.Drawing.Font("돋움", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.periodSearchControl.Location = new System.Drawing.Point(43, 14);
-            this.periodSearchControl.Name = "periodSearchControl";
-            this.periodSearchControl.Size = new System.Drawing.Size(301, 29);
-            this.periodSearchControl.TabIndex = 26;
-            // 
-            // newBtns1
-            // 
-            this.newBtns1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(52)))), ((int)(((byte)(79)))));
-            this.newBtns1.Dock = System.Windows.Forms.DockStyle.Right;
-            this.newBtns1.Location = new System.Drawing.Point(616, 0);
-            this.newBtns1.Name = "newBtns1";
-            this.newBtns1.Size = new System.Drawing.Size(770, 35);
-            this.newBtns1.TabIndex = 26;
-            this.newBtns1.btnRefresh_Event += new System.EventHandler(this.newBtns1_btnRefresh_Event);
-            this.newBtns1.btnExcel_Event += new System.EventHandler(this.newBtns1_btnExcel_Event);
-            this.newBtns1.btnPrint_Event += new System.EventHandler(this.newBtns1_btnPrint_Event);
+            this.label5.Text = "작업지시내역";
             // 
             // dgvOrder
             // 

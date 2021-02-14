@@ -181,6 +181,8 @@ namespace UMB_POP
             // 
             // TabDGV
             // 
+            this.TabDGV.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.TabDGV.Controls.Add(this.tabPage1);
             this.TabDGV.Controls.Add(this.tabPage2);
             this.TabDGV.Controls.Add(this.tabPage3);
@@ -204,6 +206,8 @@ namespace UMB_POP
             // 
             // dgvWaitWork
             // 
+            this.dgvWaitWork.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvWaitWork.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvWaitWork.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column5,
@@ -211,7 +215,6 @@ namespace UMB_POP
             this.Column7,
             this.Column8,
             this.Column9});
-            this.dgvWaitWork.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvWaitWork.Location = new System.Drawing.Point(3, 3);
             this.dgvWaitWork.Name = "dgvWaitWork";
             this.dgvWaitWork.RowTemplate.Height = 23;
@@ -544,6 +547,8 @@ namespace UMB_POP
             // 
             // groupBox1
             // 
+            this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox1.Controls.Add(this.txtProcessName);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.label8);
@@ -640,6 +645,7 @@ namespace UMB_POP
             // 
             // button3
             // 
+            this.button3.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Bold);
             this.button3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button3.ImageKey = "red-size11.png";
@@ -653,6 +659,7 @@ namespace UMB_POP
             // 
             // button7
             // 
+            this.button7.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.button7.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Bold);
             this.button7.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button7.ImageKey = "ZZZZZZZZZ.png";
@@ -693,7 +700,7 @@ namespace UMB_POP
             this.lblUser.Name = "lblUser";
             this.lblUser.Size = new System.Drawing.Size(184, 23);
             this.lblUser.TabIndex = 3;
-            this.lblUser.Text = "작업자 : ";
+            this.lblUser.Text = "작업자 : 안성빈";
             // 
             // lb_time
             // 
@@ -749,6 +756,7 @@ namespace UMB_POP
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "frmPOP";
             this.Text = "pop";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.Form1_Load);
             this.TabDGV.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);

@@ -5,6 +5,7 @@ using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using UMB_VO;
 using UMB_VO.ASB;
 
 namespace UMB_DAC.ASB
@@ -19,6 +20,97 @@ namespace UMB_DAC.ASB
             strConn = this.ConnectionString;
             conn = new SqlConnection(strConn);
             conn.Open();
+        }
+
+        /// <summary>
+        /// 불량유형 
+        /// </summary>
+        /// <returns></returns>
+        public List<ComboItemVO> GetDefList()
+        {
+            string sql = @"select common_name, common_value
+                        from TBL_COMMON_CODE
+                        where common_type = '불량유형'";
+                        
+            using (SqlCommand cmd = new SqlCommand(sql, conn))
+            {
+                SqlDataReader reader = cmd.ExecuteReader();
+
+                List<ComboItemVO> list = Helper.DataReaderMapToList<ComboItemVO>(reader);
+                Dispose();
+                return list;
+            }
+        }
+
+        public bool DefDelete(int common_id)
+        {
+            string sql = @"delete from TBL_COMMON_CODE
+                            where common_id = @common_id";
+            int iRowAffect = 0;
+            using (SqlCommand cmd = new SqlCommand(sql, conn))
+            {
+                cmd.Parameters.AddWithValue("@common_id", common_id);
+                
+
+
+                iRowAffect = cmd.ExecuteNonQuery();
+                Dispose();
+            }
+            return (iRowAffect > 0);
+        }
+
+        public bool DefUpdate(ComboItemVO def)
+        {
+            string sql = @"update TBL_COMMON_CODE 
+                        set common_name = @common_name, common_value = @common_value
+                        where common_id = @common_id";
+            int iRowAffect = 0;
+            using (SqlCommand cmd = new SqlCommand(sql, conn))
+            {
+                cmd.Parameters.AddWithValue("@common_id", def.common_id);
+                cmd.Parameters.AddWithValue("@common_name", def.common_name);
+                cmd.Parameters.AddWithValue("@common_value", def.common_value);
+
+
+                iRowAffect = cmd.ExecuteNonQuery();
+                Dispose();
+            }
+            return (iRowAffect > 0);
+        }
+
+        public int GetDefID(string common_name)
+        {
+            int common_id;
+            string sql = @"select common_id
+                            from TBL_COMMON_CODE
+                            where common_name = @common_name";
+
+            using (SqlCommand cmd = new SqlCommand(sql, conn))
+            {
+                cmd.Parameters.AddWithValue("@common_name", common_name);
+
+                common_id = Convert.ToInt32(cmd.ExecuteScalar());
+                Dispose();
+            }
+            return common_id;
+        }
+
+        public bool DefInsert(ComboItemVO def)
+        {
+            
+            string sql = @"insert into TBL_COMMON_CODE(common_type, common_name, common_value)
+                            values('불량유형', @common_name, @common_value)";
+            int iRowAffect = 0;
+            using (SqlCommand cmd = new SqlCommand(sql, conn))
+            {
+                cmd.Parameters.AddWithValue("@common_name", def.common_name);
+                cmd.Parameters.AddWithValue("@common_value", def.common_value);
+                             
+
+                iRowAffect = cmd.ExecuteNonQuery();
+                Dispose();
+            }
+            return (iRowAffect > 0);
         }
 
         public void Dispose()

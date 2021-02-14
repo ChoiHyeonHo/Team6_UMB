@@ -60,8 +60,8 @@ namespace Team6_UMB.Forms.ASB
 
         private void btnCreate_Click(object sender, EventArgs e)
         {
-            if(cboProductName.SelectedIndex < 1 && cboMachine.SelectedIndex < 1 && cboProcessName.SelectedIndex < 1
-                && txtTactTime.Text.Trim().Length < 1 && cboYN.SelectedIndex < 1 )
+            if(cboProductName.SelectedIndex < 1 || cboMachine.SelectedIndex < 1 || cboProcessName.SelectedIndex < 1
+                || txtTactTime.Text.Trim().Length < 1 || cboYN.SelectedIndex < 1 )
             {
                 MessageBox.Show("필수항목을 채워주세요");
                 return;

@@ -479,6 +479,7 @@
     <Compile Include="Service\CheckHistoryService.cs" />
     <Compile Include="Service\CheckListService.cs" />
     <Compile Include="Service\CompanyService.cs" />
+    <Compile Include="Service\DefService.cs" />
     <Compile Include="Service\DepartmentService.cs" />
     <Compile Include="Service\IncommingService.cs" />
     <Compile Include="Service\LoginService.cs" />

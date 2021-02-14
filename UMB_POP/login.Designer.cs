@@ -276,6 +276,7 @@ namespace UMB_POP
             this.Controls.Add(this.panel8);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel3);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "login";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.login_Load);

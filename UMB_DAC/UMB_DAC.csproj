@@ -51,6 +51,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ASB\CheckListDAC.cs" />
+    <Compile Include="ASB\DefetiveDAC.cs" />
     <Compile Include="ASB\MachineDAC.cs" />
     <Compile Include="ASB\PerformanceDAC.cs" />
     <Compile Include="ASB\POPDAC.cs" />
