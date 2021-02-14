@@ -183,6 +183,7 @@
             this.newBtns1.btnWait_Event += new System.EventHandler(this.newBtns1_btnWait_Event);
             this.newBtns1.btnRefresh_Event += new System.EventHandler(this.newBtns1_btnRefresh_Event);
             this.newBtns1.btnCreate_Event += new System.EventHandler(this.newBtns1_btnCreate_Event);
+            this.newBtns1.btnUpdate_Event += new System.EventHandler(this.newBtns1_btnUpdate_Event);
             this.newBtns1.btnDelete_Event += new System.EventHandler(this.newBtns1_btnDelete_Event);
             // 
             // frmOrderStatus

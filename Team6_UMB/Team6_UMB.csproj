@@ -474,6 +474,12 @@
     <Compile Include="Forms\JSJ\frmSOPopUP.Designer.cs">
       <DependentUpon>frmSOPopUP.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\JSJ\frmUpdateCount.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\JSJ\frmUpdateCount.Designer.cs">
+      <DependentUpon>frmUpdateCount.cs</DependentUpon>
+    </Compile>
     <Compile Include="Service\AuthorityService.cs" />
     <Compile Include="Service\BORService.cs" />
     <Compile Include="Service\CheckHistoryService.cs" />
@@ -724,6 +730,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\JSJ\frmSOPopUP.resx">
       <DependentUpon>frmSOPopUP.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\JSJ\frmUpdateCount.resx">
+      <DependentUpon>frmUpdateCount.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">

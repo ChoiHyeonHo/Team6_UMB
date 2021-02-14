@@ -15,7 +15,7 @@ namespace Team6_UMB.Forms
     {
         List<OrderListVO> list = new List<OrderListVO>();
         CheckBox headerCheck = new CheckBox();
-        int Order_id;
+        int Order_id = 0;
 
         public frmOrderStatus(bool Authority)
         {
@@ -162,6 +162,16 @@ namespace Team6_UMB.Forms
                     MessageBox.Show("입고대기 처리완료");
                     OrderList();
                 }
+            }
+        }
+
+        private void newBtns1_btnUpdate_Event(object sender, EventArgs e)
+        {
+            if (Order_id != 0)
+            {
+                frmUpdateCount frm = new frmUpdateCount("발주 수정", Order_id);
+                frm.ShowDialog();
+                OrderList();
             }
         }
     }

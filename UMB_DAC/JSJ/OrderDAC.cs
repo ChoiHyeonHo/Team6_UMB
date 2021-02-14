@@ -121,6 +121,29 @@ namespace UMB_DAC
                     return 0;
                 }
             }
-        }     
+        }    
+        
+        public int UpdateOrder(OrderListVO vo)
+        {
+            string sql = "update TBL_ORDER set order_count = @ordercount, order_edate = @order_edate where order_id = @order_id";
+
+            using (SqlCommand cmd = new SqlCommand(sql, conn))
+            {
+                try
+                {
+                    cmd.Parameters.AddWithValue("@order_id", vo.order_id);
+                    cmd.Parameters.AddWithValue("@order_count", vo.order_count);
+                    cmd.Parameters.AddWithValue("@order_edate", vo.order_edate);
+                    cmd.ExecuteNonQuery();
+                    conn.Close();
+                    return 1;
+                }
+                catch (Exception err)
+                {
+                    string msg = err.Message;
+                    return 0;
+                }
+            }
+        }
     }
 }
