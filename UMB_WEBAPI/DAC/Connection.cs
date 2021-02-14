@@ -14,7 +14,7 @@ namespace UMB_WEBAPI.DAC
             get
             {
                 EncrytLibrary.AES aes = new EncrytLibrary.AES();
-                string strConn = aes.AESDecrypt256(WebConfigurationManager.ConnectionStrings["DB"].ConnectionString);
+                string strConn = aes.AESDecrypt256("i6pa+AHin2K+66qIB5p0uzito3JITwRxyQcdJqaZpaOt9YPp/nAdHd+PQ8jvsBUPlubhPSagYyNip5ZA7Yk/H+wefTdlHI+wHHPPuGVZI0c=");
 
                 return strConn;
             }

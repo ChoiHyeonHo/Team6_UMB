@@ -9,7 +9,7 @@ namespace UMB_WEBAPI.Models
     {
         public int sales_date { get; set; }
         public string product_name { get; set; }
-        public int sales_price { get; set; }
+        public string sales_price { get; set; }
         public int growth_rate { get; set; }
     }
 }

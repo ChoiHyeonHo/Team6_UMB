@@ -17,11 +17,20 @@ namespace UMB_WEB.Controllers
         // GET: Main
         public ActionResult Index()
         {
-            Sales model = new Sales();
+            Sales sale = new Sales();
             MainDAC dac = new MainDAC();
-            model = dac.GetSales();
+            sale = dac.GetSales();
+            ViewBag.growth_rate = sale.growth_rate;
+            ViewBag.sales_price = sale.sales_price;
+            Performance per = new Performance();
+            per = dac.GetPerformance();
+            ViewBag.Per_gr = per.growth_rate;
+            ViewBag.Per_ng = per.ng_rate;
+            List<Performance> perList = new List<Performance>();
+            perList = dac.GetPerList();
+            ViewBag.performance = perList;
 
-            return View(model);
+            return View();
         }
     }
 }
