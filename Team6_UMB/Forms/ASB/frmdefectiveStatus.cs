@@ -57,14 +57,14 @@ namespace Team6_UMB.Forms.BMN
             CommonUtil.ProdNameBinding(cboProduct, allProItem);           
 
             CommonUtil.SetInitGridView(dgvStatus);
-            CommonUtil.AddGridTextColumn(dgvStatus, "불량이력ID", "defective_ID", 60);
-            CommonUtil.AddGridTextColumn(dgvStatus, "품목코드", "production_id", 60);
-            CommonUtil.AddGridTextColumn(dgvStatus, "품목명", "product_name", 60);
-            CommonUtil.AddGridTextColumn(dgvStatus, "공정명", "process_name", 60);
+            CommonUtil.AddGridTextColumn(dgvStatus, "불량이력ID", "defective_ID", 120);
+            CommonUtil.AddGridTextColumn(dgvStatus, "품목코드", "product_id", 120);
+            CommonUtil.AddGridTextColumn(dgvStatus, "품목명", "product_name", 120);
+            CommonUtil.AddGridTextColumn(dgvStatus, "공정명", "process_name", 120);
             CommonUtil.AddGridTextColumn(dgvStatus, "발생시간", "defective_stime", 150);
-            CommonUtil.AddGridTextColumn(dgvStatus, "생산실적ID", "performance_id", 150);
-            CommonUtil.AddGridTextColumn(dgvStatus, "common_name", "불량명", 150);
-            CommonUtil.AddGridTextColumn(dgvStatus, "불량갯수", "defective_count", 150);
+            CommonUtil.AddGridTextColumn(dgvStatus, "생산실적ID", "performance_id", 100);
+            CommonUtil.AddGridTextColumn(dgvStatus, "불량명", "common_name", 150);
+            CommonUtil.AddGridTextColumn(dgvStatus, "불량갯수", "defective_count", 100);
             
             DGV_Binding();
         }

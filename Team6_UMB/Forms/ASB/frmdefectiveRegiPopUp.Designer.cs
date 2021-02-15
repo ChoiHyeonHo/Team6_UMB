@@ -116,6 +116,7 @@ namespace Team6_UMB.Forms.BMN
             this.btnClose.Size = new System.Drawing.Size(29, 23);
             this.btnClose.TabIndex = 48;
             this.btnClose.UseVisualStyleBackColor = false;
+            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
             // label1
             // 
@@ -149,6 +150,7 @@ namespace Team6_UMB.Forms.BMN
             this.btnCancel.TabIndex = 18;
             this.btnCancel.Text = "취소";
             this.btnCancel.UseVisualStyleBackColor = false;
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
             // btnCreate
             // 

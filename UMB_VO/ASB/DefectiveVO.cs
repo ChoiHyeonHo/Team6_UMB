@@ -13,7 +13,7 @@ namespace UMB_VO.ASB
         public int performance_id { get; set; }
         public int common_name { get; set; }
         public int defective_count { get; set; }
-        public string production_id { get; set; }
+        public string product_id { get; set; }
         public string process_name { get; set; }
         public string product_name { get; set; }
     }

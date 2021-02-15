@@ -58,14 +58,86 @@ namespace UMB_DAC.ASB
             }
         }
 
+        public List<PerformanceVO> GetWorkPerList()
+        {
+            string sql = @"select P.wo_id, performance_id, PER.production_id, PER.product_id, product_name, process_name, performance_qtyimport, m_name,
+                        production_state,  CONVERT(CHAR(10), production_sdate, 23) production_sdate
+                        from TBL_performance PER inner join TBL_Production P
+                        on PER.production_id = P.production_id
+                        inner join TBL_PRODUCT pro
+                        on PER.product_id = pro.product_id
+						inner join TBL_WORK_ORDER wo
+						on P.wo_id = wo.wo_id
+                        inner join TBL_MACHINE m
+						on wo.m_id = m.m_id
+                        where production_state = '작업중'";
+
+            using (SqlCommand cmd = new SqlCommand(sql, conn))
+            {
+                SqlDataReader reader = cmd.ExecuteReader();
+
+                List<PerformanceVO> list = Helper.DataReaderMapToList<PerformanceVO>(reader);
+                Dispose();
+                return list;
+            }
+        }
+
+        public List<PerformanceVO> GetEndPerList()
+        {
+            string sql = @"select P.wo_id, performance_id, PER.production_id, PER.product_id, product_name, process_name, performance_qtyimport, performance_qty_ok, performance_qty_ng, m_name,
+                        production_state,  CONVERT(CHAR(10), production_sdate, 23) production_sdate,CONVERT(CHAR(10), production_edate, 23) production_edate
+                        from TBL_performance PER inner join TBL_Production P
+                        on PER.production_id = P.production_id
+                        inner join TBL_PRODUCT pro
+                        on PER.product_id = pro.product_id
+						inner join TBL_WORK_ORDER wo
+						on P.wo_id = wo.wo_id
+						inner join TBL_MACHINE m
+						on wo.m_id = m.m_id
+                        where production_state = '작업종료'";
+
+            using (SqlCommand cmd = new SqlCommand(sql, conn))
+            {
+                SqlDataReader reader = cmd.ExecuteReader();
+
+                List<PerformanceVO> list = Helper.DataReaderMapToList<PerformanceVO>(reader);
+                Dispose();
+                return list;
+            }
+        }
+
         public List<PerformanceVO> GetPerList()
         {
-            string sql = @"select performance_id, PER.production_id, PER.product_id, product_name, process_name, performance_qty_ok, performance_qty_ng, performance_qtyimport,
+            string sql = @"select performance_id, PER.production_id, PER.product_id, product_name, process_name, performance_qty_ok, performance_qty_ng, performance_qtyimport, 
                         production_state,  CONVERT(CHAR(10), production_sdate, 23) production_sdate
                         from TBL_performance PER inner join TBL_Production P
                         on PER.production_id = P.production_id
                         inner join TBL_PRODUCT pro
                         on PER.product_id = pro.product_id";
+
+            using (SqlCommand cmd = new SqlCommand(sql, conn))
+            {
+                SqlDataReader reader = cmd.ExecuteReader();
+
+                List<PerformanceVO> list = Helper.DataReaderMapToList<PerformanceVO>(reader);
+                Dispose();
+                return list;
+            }
+        }
+
+        public List<PerformanceVO> GetWaitPerList()
+        {
+            string sql = @"select P.wo_id, performance_id, PER.production_id, PER.product_id, product_name, process_name, performance_qtyimport, m_name,
+                        production_state,  CONVERT(CHAR(10), production_sdate, 23) production_sdate
+                        from TBL_performance PER inner join TBL_Production P
+                        on PER.production_id = P.production_id
+                        inner join TBL_PRODUCT pro
+                        on PER.product_id = pro.product_id
+						inner join TBL_WORK_ORDER wo
+						on P.wo_id = wo.wo_id
+						inner join TBL_MACHINE m
+						on wo.m_id = m.m_id
+                        where production_state = '작업대기'";
 
             using (SqlCommand cmd = new SqlCommand(sql, conn))
             {

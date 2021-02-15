@@ -37,6 +37,7 @@ namespace Team6_UMB.Forms.BMN
         {
             DefService service = new DefService();
             defList = service.GetDefList();
+            dgvdef.DataSource = defList;
         }
 
         private void newBtns1_btnCreate_Event(object sender, EventArgs e)

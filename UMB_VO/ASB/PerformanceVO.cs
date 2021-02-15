@@ -20,6 +20,8 @@ namespace UMB_VO.ASB
         public int performance_qtyimport { get; set; }        
         public string production_state { get; set; }
         public string production_sdate { get; set; }
-
+        public string production_edate { get; set; }
+        public string m_name { get; set; }
+        public int wo_id { get; set; }
     }
 }

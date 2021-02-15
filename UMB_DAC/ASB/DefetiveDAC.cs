@@ -32,7 +32,7 @@ namespace UMB_DAC.ASB
 
         public List<DefectiveVO> GetDefStatus()
         {
-            string sql = @"select defective_ID, defective_stime, d.performance_id, per.product_id, product_name, process_name , common_name, defective_count
+            string sql = @"select defective_ID, defective_stime, d.performance_id performance_id, per.product_id product_id, product_name, process_name , common_name, defective_count
                             from TBL_DEFECTIVE d inner join  TBL_COMMON_CODE c
                             on d.common_id = c.common_id
                             inner join TBL_performance per
@@ -43,14 +43,16 @@ namespace UMB_DAC.ASB
                             on per.production_id = pro.production_id
                             ";
 
-            using (SqlCommand cmd = new SqlCommand(sql, conn))
-            {
-                SqlDataReader reader = cmd.ExecuteReader();
+            
+                using (SqlCommand cmd = new SqlCommand(sql, conn))
+                {
+                    SqlDataReader reader = cmd.ExecuteReader();
 
-                List<DefectiveVO> list = Helper.DataReaderMapToList<DefectiveVO>(reader);
-                Dispose();
-                return list;
-            }
+                    List<DefectiveVO> list = Helper.DataReaderMapToList<DefectiveVO>(reader);
+                    Dispose();
+
+                    return list;
+                }
         }
 
         public List<DefectiveVO> SearchDefList(string pid, string pname)

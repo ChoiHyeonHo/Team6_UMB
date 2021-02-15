@@ -58,6 +58,7 @@ namespace Team6_UMB.Forms.BMN
                     if (bResult)
                     {
                         MessageBox.Show("새로운 불량유형 등록하였습니다");
+                        this.Close();
                     }
                     else
                     {
@@ -77,6 +78,7 @@ namespace Team6_UMB.Forms.BMN
                     if (bResult)
                     {
                         MessageBox.Show("불량유형을 수정하였습니다");
+                        this.Close();
                     }
                     else
                     {
@@ -88,6 +90,16 @@ namespace Team6_UMB.Forms.BMN
             {
                 MessageBox.Show(err.Message);
             }
+        }
+
+        private void btnClose_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void btnCancel_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }
