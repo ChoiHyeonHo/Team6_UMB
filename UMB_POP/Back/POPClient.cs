@@ -22,7 +22,7 @@ namespace UMB_POP.Back
         public int production_id { get; set; }
         public int performance_qtyimport { get; set; }
         public int time { get; set; }
-        public bool IsLine { get; set; }
+        
 
         public bool Connected { get; set; }
 
@@ -32,9 +32,9 @@ namespace UMB_POP.Back
         // 어떤 라인인지 필요
         // 서버에 접속할 client 필요  (AppConfig에 추가할 목록)
         string host = ConfigurationManager.AppSettings["serverIP"];
-        IPAddress clientIPInfo = Dns.GetHostEntry(Dns.GetHostName()).AddressList.ToList().Find(i => i.AddressFamily == AddressFamily.InterNetwork);
-        int port = 8800;
+        IPAddress clientIPInfo = Dns.GetHostEntry(Dns.GetHostName()).AddressList.ToList().Find(i => i.AddressFamily == AddressFamily.InterNetwork);        
         NetworkStream netStream;
+        int port = 5000;
         System.Timers.Timer timer;
         TcpClient client;
 
@@ -153,7 +153,7 @@ namespace UMB_POP.Back
             }
         }
 
-        // 서버에 송신메서드 (생산 실적아이디를 윈도우 서비스(생산 기계)로 넘겨줌)
+        // 서버에 송신메서드 (생산 실적아이디를 생산 기계로 넘겨줌)
         public void Writer(Stream stream, object[] objArr)
         {
             try
@@ -180,7 +180,7 @@ namespace UMB_POP.Back
         {
             try
             {
-                Writer(netStream, new object[] { 0, performance_id, IsLine });
+                Writer(netStream, new object[] { 0, performance_id, product_id, performance_qtyimport, time});
             }
             catch (Exception ex)
             {
@@ -214,11 +214,9 @@ namespace UMB_POP.Back
 
                         if (frms[i] is frmPOP)
                         {
-                            frmPOP pop = (frmPOP)frms[i];
-                            // 해당 POP의 라인아이디와 같은 경우
+                            frmPOP pop = (frmPOP)frms[i];                            
                             if (pop.WorkInfo.performance_id == Convert.ToInt32(msg[0]))
-                            {
-                                //respone 형태 (실시간모니터인지 아닌지(0), 라인아이디(1),메세지(2),생산실적아이디(3),완료여부(4),총 투입수량(5)) 
+                            {                                
                                 ReceiveEventArgs e = new ReceiveEventArgs();
                                 if (msg.Length == 5)
                                 {
@@ -265,8 +263,7 @@ namespace UMB_POP.Back
                 }
                 if (frms[i] is frmPOP)
                 {
-                    frmPOP pop = (frmPOP)frms[i];
-                    // 해당 POP의 라인아이디와 같은 경우
+                    frmPOP pop = (frmPOP)frms[i];                    
                     if (pop.WorkInfo.performance_id == performance_id)
                     {
                         ReceiveEventArgs e = new ReceiveEventArgs();

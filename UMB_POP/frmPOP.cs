@@ -1,9 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.Configuration;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Net;
+using System.Net.Sockets;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
@@ -27,7 +30,7 @@ namespace UMB_POP
         int performance_id, production_id, wo_id, performance_qtyimport, performance_qty_ok, performance_qty_ng;
         int tacttime;
         string production_state;
-        System.Timers.Timer timer;
+        System.Timers.Timer timer;        
         POPClient client;
 
         public PerformanceVO WorkInfo { get; set; }
@@ -147,6 +150,7 @@ namespace UMB_POP
         {
             if(e.RowIndex >= 0)
             {
+                
                 production_state = dgvWaitWork.Rows[e.RowIndex].Cells[8].Value.ToString();
                 performance_id = Convert.ToInt32(dgvWaitWork.Rows[e.RowIndex].Cells[1].Value);
                 production_id = Convert.ToInt32(dgvWaitWork.Rows[e.RowIndex].Cells[2].Value);
@@ -156,6 +160,8 @@ namespace UMB_POP
                 txtMachineName.Text = dgvWaitWork.Rows[e.RowIndex].Cells[7].Value.ToString();
                 txtProcessName.Text = dgvWaitWork.Rows[e.RowIndex].Cells[5].Value.ToString();
                 txtcount.Text = dgvWaitWork.Rows[e.RowIndex].Cells[6].Value.ToString();
+                txtpcount.Text = txtok.Text = txtng.Text = "0";
+                
             }                 
         }
 
@@ -165,18 +171,23 @@ namespace UMB_POP
 
         }
 
+        private void dgvEndWork_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            performance_id = Convert.ToInt32(dgvWaitWork.Rows[e.RowIndex].Cells[2].Value);
+            production_id = Convert.ToInt32(dgvWaitWork.Rows[e.RowIndex].Cells[1].Value);
+        }
+
         // 생산을 시작하는 경우
-        private void ProduceStart()
+        public void ProduceStart()
         {
             try
             {                
                 if (production_state == "작업대기")
                 {
-                    client.performance_id = performance_id;
-                    client.production_id = production_id;
-                    client.performance_id = performance_id;
-
-
+                    POPService service = new POPService();
+                    bool bresult = service.updatePOP(wo_id);
+                    if (!bresult) return;
+                    DGV_Binding();                                        
                     //서버와 연결되어있지 않은경우
                     if (!client.Connected)
                     {
@@ -188,14 +199,13 @@ namespace UMB_POP
                             ConnectServer();
                         }
                     }
-
                     //서버와 연결된 경우 (정상실행)
                     else
                     {
-                        MessageBox.Show("서버와 연결되었습니다.");                       
+                        MessageBox.Show("서버와 연결되었습니다.");
+                        
                     }
-                }
-                // 비정상 수량
+                }                
                 else
                 {
                     
@@ -236,21 +246,20 @@ namespace UMB_POP
         // 서버에 연결하는 코드
         private void ConnectServer()
         {
+            POPService service = new POPService();
             client = new POPClient()
             {
-                
+                performance_id = WorkInfo.performance_id
             };
-
-            
-
             if (client.Connect())
             {
-                
-                client.IsLine = true;
+                client.performance_id = performance_id;
+                client.production_id = production_id;
+                client.performance_qtyimport = Convert.ToInt32(txtcount.Text);
+                client.time = service.setTacttime(txtProductID.Text);
                 client.Certification();
             }
         }
-
         private void btnStop_Click(object sender, EventArgs e)
         {
 

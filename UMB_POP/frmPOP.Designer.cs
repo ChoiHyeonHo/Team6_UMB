@@ -228,6 +228,7 @@ namespace UMB_POP
             this.dgvEndWork.RowTemplate.Height = 23;
             this.dgvEndWork.Size = new System.Drawing.Size(1857, 532);
             this.dgvEndWork.TabIndex = 0;
+            this.dgvEndWork.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvEndWork_CellClick);
             // 
             // label3
             // 

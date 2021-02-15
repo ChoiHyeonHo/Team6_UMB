@@ -82,6 +82,12 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ReceiveEventArgs.cs" />
+    <Compile Include="WorkStart.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="WorkStart.Designer.cs">
+      <DependentUpon>WorkStart.cs</DependentUpon>
+    </Compile>
     <Compile Include="Service\POPService.cs" />
     <Compile Include="Util\LoggingUtility.cs" />
     <EmbeddedResource Include="Control\periodSearchControl.resx">

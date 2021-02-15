@@ -17,22 +17,34 @@ namespace UMB_POP.Service
             dac.Login(ID, Pwd);
         }
 
-        internal List<PerformanceVO> GetWaitPerList()
+        public List<PerformanceVO> GetWaitPerList()
         {
             PerformanceDAC dac = new PerformanceDAC();
             return dac.GetWaitPerList();
         }
 
-        internal List<PerformanceVO> GetWorkPerList()
+        public List<PerformanceVO> GetWorkPerList()
         {
             PerformanceDAC dac = new PerformanceDAC();
             return dac.GetWorkPerList();
         }
 
-        internal List<PerformanceVO> GetEndPerList()
+        public List<PerformanceVO> GetEndPerList()
         {
             PerformanceDAC dac = new PerformanceDAC();
             return dac.GetEndPerList();
+        }
+
+        public int setTacttime(string product_id)
+        {
+            POPDAC dac = new POPDAC();
+            return dac.setTacttime(product_id);
+        }
+
+        internal bool updatePOP(int wo_id)
+        {
+            POPDAC dac = new POPDAC();
+            return dac.updatePOP(wo_id);
         }
     }
 }
