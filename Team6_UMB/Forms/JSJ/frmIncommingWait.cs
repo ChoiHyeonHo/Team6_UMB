@@ -15,9 +15,14 @@ namespace Team6_UMB.Forms
         CheckBox headerCheck = new CheckBox();
         List<OrderListVO> OList;
 
-        public frmIncommingWait()
+        public frmIncommingWait(bool Authority)
         {
             InitializeComponent();
+
+            if (Authority == false)
+            {
+                newBtns1.btnWait.Visible = false;
+            }
         }
 
         private void frmIncommingWait_Load(object sender, EventArgs e)

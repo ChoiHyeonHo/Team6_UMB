@@ -1,7 +1,25 @@
-﻿@model UMB_WEB.Models.EISInfo
+﻿@Model UMB_WEBAPI.Models.Sales
+@using System.Data
+@using System.Text;
+@using System.Globalization
+@using UMB_WEBAPI.Models;
 
-@{ ViewBag.Title = "Index";
-    Layout = "~/Views/Shared/_Layout.cshtml"; }
+@{
+    StringBuilder sb = new StringBuilder();
+    StringBuilder sb2 = new StringBuilder();
+    StringBuilder sb3 = new StringBuilder();
+    List<Performance> list = ViewBag.performance;
+    for (int i = 0; i < list.Count; i ++)
+    {
+        sb.Append($"{list[i].production_edate},");
+        sb2.Append($"{list[i].performance_qty_ok},");
+        sb3.Append($"{list[i].performance_qty_ng},");
+    }
+    string production_edate = sb.ToString().TrimEnd(',');
+    string performance_qty_ok = sb2.ToString().TrimEnd(',');
+    string performance_qty_ng = sb3.ToString().TrimEnd(',');
+}
+
 
 <section class="content-header container-fluid" style="text-align:left">
     <h1>
@@ -22,10 +40,20 @@
                     <span class="info-box-icon bg-aqua"><i class="ion ion-ios-gear-outline"></i></span>
                     <div class="info-box-content">
                         <span class="info-box-text">불량률</span>
-                        <span class="info-box-number">10<small>%</small></span>
-                        <span class="description-percentage text-red"><i class="fa fa-caret-down"></i> 10%</span> 
-                        @*<span class="description-percentage text-yellow"><i class="fa fa-caret-left"></i> 10%</span> 
-                        <span class="description-percentage text-green"><i class="fa fa-caret-up"></i> 10%</span>*@
+                        @*<span class="info-box-number">@Viewbag.Per_ng%</span>*@
+                        <span class="info-box-number">@ViewBag.Per_ng% </span>
+                        @if (@ViewBag.Per_gr > 0)
+                        {
+                            <span class="description-percentage text-red"><i class="fa fa-caret-down"></i> @ViewBag.Per_gr%</span>
+                        }
+                        else if (@ViewBag.Per_gr == 0)
+                        {
+                            <span class="description-percentage text-yellow"><i class="fa fa-caret-left"></i> @ViewBag.Per_gr%</span>
+                        }
+                        else
+                        {
+                            <span class="description-percentage text-green"><i class="fa fa-caret-up"></i> @ViewBag.Per_gr%</span>
+                        }
                     </div>
                     <!-- /.info-box-content -->
                 </div>
@@ -37,10 +65,19 @@
 
                     <div class="info-box-content">
                         <span class="info-box-text">매출현황</span>
-                        <span class="info-box-number">전월대비<small>10%</small></span>
-                        @*<span class="description-percentage text-red"><i class="fa fa-caret-down"></i> 10%</span> 
-                        <span class="description-percentage text-yellow"><i class="fa fa-caret-left"></i> 10%</span>*@ 
-                        <span class="description-percentage text-green"><i class="fa fa-caret-up"></i> 10%</span>
+                        <span class="info-box-number">@ViewBag.sales_price </span>
+                        @if (@ViewBag.growth_rate < 0)
+                        {
+                            <span class="description-percentage text-red"><i class="fa fa-caret-down"></i> @ViewBag.growth_rate%</span>
+                        }
+                        else if (@ViewBag.growth_rate == 0)
+                        {
+                            <span class="description-percentage text-yellow"><i class="fa fa-caret-left"></i> @ViewBag.growth_rate%</span>
+                        }
+                        else
+                        {
+                            <span class="description-percentage text-green"><i class="fa fa-caret-up"></i> @ViewBag.growth_rate%</span>
+                        }
                     </div>
                     <!-- /.info-box-content -->
                 </div>
@@ -63,19 +100,19 @@
                 <div class="box-body col-md-14">
                     <div class="row">
                         @*<div class="col-md-6 col-sm-6 col-xs-14">*@
-                            <p class="text-center">
-                                <strong>월별 양품, 불량품 수</strong>
-                            </p>
-                            <div></div>
-                            <ul class="chart-legend clearfix pull-left" style="padding-left:20px">
-                                <li><i class="fa fa-square text-green"></i> 양품</li>
-                                <li><i class="fa fa-square text-red"></i> 불량품</li>
-                            </ul>
-                            <div class="description-block border-right ">
-                                <div class="chart">
-                                    <canvas id="barChart" style="height:600px"></canvas>
-                                </div>
+                        <p class="text-center">
+                            <strong>월별 양품, 불량품 수</strong>
+                        </p>
+                        <div></div>
+                        <ul class="chart-legend clearfix pull-left" style="padding-left:20px">
+                            <li><i class="fa fa-square text-green"></i> 양품</li>
+                            <li><i class="fa fa-square text-red"></i> 불량품</li>
+                        </ul>
+                        <div class="description-block border-right ">
+                            <div class="chart">
+                                <canvas id="barChart" style="padding-left:20px; height:600px"></canvas>
                             </div>
+                        </div>
                         @*</div>*@
                     </div>
                 </div>
@@ -84,20 +121,20 @@
             <!-- /.box-footer -->
         </div>
         <!-- /.box -->
-    </div>  
+    </div>
     <!-- /.col -->
     <P></P>
     <!--<div class="row">
         <div class="col-md-14">-->
-            @*로고 이미지 부분*@
-            <!--<img src="~/dist/img/logo.png" style=" max-width: 100%;
-            height: auto;
-            margin-left: auto;
-            margin-right: auto;
-            display: block;" />
-        </div>-->
-        @*/.row*@
-        @*/.col*@
+    @*로고 이미지 부분*@
+    <!--<img src="~/dist/img/logo.png" style=" max-width: 100%;
+        height: auto;
+        margin-left: auto;
+        margin-right: auto;
+        display: block;" />
+    </div>-->
+    @*/.row*@
+    @*/.col*@
     <!--</div>-->
 
 </section>
@@ -109,7 +146,7 @@
              * -------
              * Here we will create a few charts using ChartJS
              */
-            @*var temp = "@lines";*@
+            var temp = "@production_edate";
             var arrtemp = temp.split(',');
             var areaChartData = {
                 labels: arrtemp,
@@ -122,7 +159,7 @@
                         pointStrokeColor: 'rgba(60,141,188,1)',
                         pointHighlightFill: '#fff',
                         pointHighlightStroke: 'rgba(60,141,188,1)',
-                        @*data: [@success]*@
+                        data: [@performance_qty_ok]
                     },
                     {
                         label: '불량품',
@@ -132,10 +169,10 @@
                         pointStrokeColor: '#c1c7d1',
                         pointHighlightFill: '#fff',
                         pointHighlightStroke: 'rgba(220,220,220,1)',
-                        @*data: [@fail]*@
+                        data: [@performance_qty_ng]
                     }
                 ]
-            }                    
+            }
 
 
             //-------------

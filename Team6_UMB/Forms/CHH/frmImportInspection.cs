@@ -18,7 +18,7 @@ namespace Team6_UMB.Forms.CHH
         CheckBox headerCheck = new CheckBox();
 
         #region 생성자
-        public frmImportInspection()
+        public frmImportInspection(bool Authority)
         {
             InitializeComponent();
             newBtns1.btnCreate.Text = "검사";
@@ -26,6 +26,13 @@ namespace Team6_UMB.Forms.CHH
 
             periodSearchControl.dtFrom = DateTime.Now.AddDays(-7).ToString();
             periodSearchControl.dtTo = DateTime.Now.ToString();
+
+            if (Authority == false)
+            {
+                newBtns1.btnCreate.Visible = false;
+                newBtns1.btnUpdate.Visible = false;
+                newBtns1.btnDelete.Visible = false;
+            }
         }
         #endregion
 

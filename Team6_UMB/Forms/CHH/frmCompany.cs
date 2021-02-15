@@ -50,11 +50,16 @@ namespace Team6_UMB.Forms
         /// 거래처명, 거래처분류 콤보박스 바인딩
         /// 작성자: 최현호 / 작성일: 210210
         /// </summary>
-        public frmCompany()
+        public frmCompany(bool Authority)
         {
             InitializeComponent();
             newBtns1.btnBarCode.Visible = newBtns1.btnDocument.Visible = newBtns1.btnExcel.Visible = newBtns1.btnPrint.Visible = newBtns1.btnSearch.Visible = newBtns1.btnShipment.Visible = newBtns1.btnWait.Visible = false;
-
+            if (Authority == false)
+            {
+                newBtns1.btnCreate.Visible = false;
+                newBtns1.btnUpdate.Visible = false;
+                newBtns1.btnDelete.Visible = false;
+            }
             try
             {
                 Ctype = service.GetCompanyType();

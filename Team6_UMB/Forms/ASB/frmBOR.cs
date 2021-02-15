@@ -21,11 +21,17 @@ namespace Team6_UMB.Forms.ASB
         string product_id, process_name, bor_yn, bor_comment, bor_uadmin, bor_udate,
             product_name, m_name;
         
-        public frmBOR()
+        public frmBOR(bool Authority)
         {
             InitializeComponent();
             newBtns.btnBarCode.Visible = newBtns.btnDocument.Visible = newBtns.btnShipment.Visible =
                 newBtns.btnWait.Visible = newBtns.btnSearch.Visible = newBtns.btnPrint.Visible = false;
+            if (Authority == false)
+            {
+                newBtns.btnCreate.Visible = false;
+                newBtns.btnUpdate.Visible = false;
+                newBtns.btnDelete.Visible = false;
+            }
         }
 
         

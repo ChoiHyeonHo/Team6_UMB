@@ -17,9 +17,15 @@ namespace Team6_UMB.Forms.JSJ
         ShipWaitVO ShipWaitVO = new ShipWaitVO();
         ShipmentVO ShipmentVO = new ShipmentVO();
 
-        public frmShipment()
+        public frmShipment(bool Authority)
         {
             InitializeComponent();
+
+            if (Authority == false)
+            {
+                newBtns1.btnShipment.Visible = false;
+                newBtns1.btnWait.Visible = false;
+            }
         }
 
         private void frmShipment_Load(object sender, EventArgs e)

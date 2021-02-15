@@ -17,6 +17,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UMB_POP", "UMB_POP\UMB_POP.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UMB_RealTimeMonitor", "UMB_RealTimeMonitor\UMB_RealTimeMonitor.csproj", "{B2BAC957-1335-44C3-BA90-70A92E1E8FBF}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UMB_SERVICE", "UMB_SERVICE\UMB_SERVICE.csproj", "{73D059B9-60D1-4CFA-A199-5FBB4E1B291D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -51,6 +53,10 @@ Global
 		{B2BAC957-1335-44C3-BA90-70A92E1E8FBF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B2BAC957-1335-44C3-BA90-70A92E1E8FBF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B2BAC957-1335-44C3-BA90-70A92E1E8FBF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{73D059B9-60D1-4CFA-A199-5FBB4E1B291D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{73D059B9-60D1-4CFA-A199-5FBB4E1B291D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{73D059B9-60D1-4CFA-A199-5FBB4E1B291D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{73D059B9-60D1-4CFA-A199-5FBB4E1B291D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

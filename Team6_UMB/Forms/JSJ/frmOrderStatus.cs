@@ -15,11 +15,19 @@ namespace Team6_UMB.Forms
     {
         List<OrderListVO> list = new List<OrderListVO>();
         CheckBox headerCheck = new CheckBox();
-        int Order_id;
+        int Order_id = 0;
 
-        public frmOrderStatus()
+        public frmOrderStatus(bool Authority)
         {
             InitializeComponent();
+
+            if (Authority == false)
+            {
+                newBtns1.btnWait.Visible = false;
+                newBtns1.btnCreate.Visible = false;
+                newBtns1.btnUpdate.Visible = false;
+                newBtns1.btnDelete.Visible = false;
+            }
         }
 
         private void newBtns1_btnCreate_Event(object sender, EventArgs e)
@@ -154,6 +162,16 @@ namespace Team6_UMB.Forms
                     MessageBox.Show("입고대기 처리완료");
                     OrderList();
                 }
+            }
+        }
+
+        private void newBtns1_btnUpdate_Event(object sender, EventArgs e)
+        {
+            if (Order_id != 0)
+            {
+                frmUpdateCount frm = new frmUpdateCount("발주 수정", Order_id);
+                frm.ShowDialog();
+                OrderList();
             }
         }
     }

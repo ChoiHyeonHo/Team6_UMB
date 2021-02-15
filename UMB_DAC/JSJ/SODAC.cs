@@ -117,11 +117,6 @@ namespace UMB_DAC
             }
         }
 
-        //public int UpdateSO(List<SOVO> list)
-        //{
-        //    string sql = "update "
-        //}
-
         public int DeleteSO(int so_id)
         {
             string sql = "update TBL_SO_MASTER set so_deleted = 'Y' where so_id = @so_id";
@@ -137,6 +132,29 @@ namespace UMB_DAC
                 catch(Exception err)
                 {
                     string smg = err.Message;
+                    return 0;
+                }
+            }
+        }
+
+        public int UpdateSO(SOListVO vo)
+        {
+            string sql = "update TBL_SO_MASTER set so_ocount = @so_ocount, so_edate = @so_edate where so_id = @so_id";
+
+            using (SqlCommand cmd = new SqlCommand(sql, conn))
+            {
+                try
+                {
+                    cmd.Parameters.AddWithValue("@so_id", vo.so_id);
+                    cmd.Parameters.AddWithValue("@so_ocount", vo.so_ocount);
+                    cmd.Parameters.AddWithValue("@so_edate", vo.so_edate);
+                    cmd.ExecuteNonQuery();
+                    conn.Close();
+                    return 1;
+                }
+                catch (Exception err)
+                {
+                    string msg = err.Message;
                     return 0;
                 }
             }

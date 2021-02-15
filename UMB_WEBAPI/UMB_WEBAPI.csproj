@@ -147,10 +147,14 @@
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\EISController.cs" />
     <Compile Include="DAC\Connection.cs" />
+    <Compile Include="DAC\Helper.cs" />
+    <Compile Include="DAC\MainDAC.cs" />
     <Compile Include="DAC\SampleDAC.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\Performance.cs" />
+    <Compile Include="Models\Sales.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -179,7 +183,6 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Data\" />
-    <Folder Include="Models\" />
     <Folder Include="Views\EIS\" />
   </ItemGroup>
   <PropertyGroup>

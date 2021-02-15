@@ -19,11 +19,18 @@ namespace Team6_UMB.Forms
         string m_info, m_name, m_yn, m_comment;
         int m_id;
 
-        public frmMachine()
+        public frmMachine(bool Authority)
         {
             InitializeComponent();
 
             newBtns1.btnBarCode.Visible = newBtns1.btnDocument.Visible = newBtns1.btnExcel.Visible = newBtns1.btnPrint.Visible = newBtns1.btnSearch.Visible = newBtns1.btnShipment.Visible = newBtns1.btnWait.Visible = false;
+
+            if (Authority == false)
+            {
+                newBtns1.btnCreate.Visible = false;
+                newBtns1.btnUpdate.Visible = false;
+                newBtns1.btnDelete.Visible = false;
+            }
         }
 
         #region Form Load Event

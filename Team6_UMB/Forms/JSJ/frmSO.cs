@@ -14,11 +14,17 @@ namespace Team6_UMB.Forms.JSJ
     public partial class frmSO : Team6_UMB.BaseForm.frmList
     {
         List<SOListVO> list;
-        int so_id;
+        int so_id = 0;
 
-        public frmSO()
+        public frmSO(bool Authority)
         {
             InitializeComponent();
+            if (Authority == false)
+            {
+                newBtns1.btnCreate.Visible = false;
+                newBtns1.btnUpdate.Visible = false;
+                newBtns1.btnDelete.Visible = false;
+            }
         }
 
         private void frmSO_Load(object sender, EventArgs e)
@@ -73,9 +79,12 @@ namespace Team6_UMB.Forms.JSJ
 
         private void newBtns1_btnUpdate_Event(object sender, EventArgs e)
         {
-            frmSOPopUP frm = new frmSOPopUP();
-            frm.ShowDialog();
-            SOList();            
+            if (so_id != 0)
+            {
+                frmUpdateCount frm = new frmUpdateCount("수주 수정", so_id);
+                frm.ShowDialog();
+                SOList();
+            }
         }
 
         public void SOList()

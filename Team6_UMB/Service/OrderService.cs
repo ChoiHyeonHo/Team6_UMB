@@ -39,5 +39,11 @@ namespace Team6_UMB.Service
             OrderDAC dac = new OrderDAC();
             return dac.RegistOrder(list);
         }
+
+        public int UpdateOrder(OrderListVO vo)
+        {
+            OrderDAC dac = new OrderDAC();
+            return dac.UpdateOrder(vo);
+        }
     }
 }

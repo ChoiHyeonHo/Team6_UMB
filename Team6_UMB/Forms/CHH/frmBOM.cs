@@ -24,10 +24,16 @@ namespace Team6_UMB.Forms
         string prodName, prodType;
         int level;
 
-        public frmBOM()
+        public frmBOM(bool Authority)
         {
             InitializeComponent();
             newBtns1.btnBarCode.Visible = newBtns1.btnShipment.Visible = newBtns1.btnDocument.Visible = newBtns1.btnSearch.Visible = newBtns1.btnWait.Visible = newBtns1.btnExcel.Visible = newBtns1.btnPrint.Visible = false;
+            if (Authority == false)
+            {
+                newBtns1.btnCreate.Visible = false;
+                newBtns1.btnUpdate.Visible = false;
+                newBtns1.btnDelete.Visible = false;
+            }
         }
 
         #region ComboBox Selected Index Changed Event
