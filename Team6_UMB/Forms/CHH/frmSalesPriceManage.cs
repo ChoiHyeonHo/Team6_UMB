@@ -24,7 +24,7 @@ namespace Team6_UMB.Forms
         public frmSalesPriceManage(bool Authority)
         {
             InitializeComponent();
-            newBtns.btnBarCode.Visible = newBtns.btnDocument.Visible = newBtns.btnShipment.Visible = newBtns.btnWait.Visible = newBtns.btnSearch.Visible = false;
+            newBtns.btnBarCode.Visible = newBtns.btnDocument.Visible = newBtns.btnShipment.Visible = newBtns.btnWait.Visible = newBtns.btnSearch.Visible = newBtns.btnPrint.Visible = false;
             periodSearchControl.dtFrom = DateTime.Now.AddDays(-7).ToString();
             periodSearchControl.dtTo = DateTime.Now.ToString();
             cheView.Checked = true;

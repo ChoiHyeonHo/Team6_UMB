@@ -40,6 +40,7 @@ namespace Team6_UMB.Forms.ASB
             newBtns1.btnSearch.Visible = false;
             newBtns1.btnShipment.Visible = false;
             newBtns1.btnWait.Visible = false;
+            newBtns1.btnPrint.Visible = false;
             newBtns1.btnDelete.Text = "퇴사";
 
             CommonUtil.SetInitGridView(dgvUser);

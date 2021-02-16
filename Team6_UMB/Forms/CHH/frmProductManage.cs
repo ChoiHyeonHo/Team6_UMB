@@ -29,7 +29,7 @@ namespace Team6_UMB.Forms
         public frmProductManage(bool Authority)
         {
             InitializeComponent();
-            newBtns.btnShipment.Visible = newBtns.btnWait.Visible = newBtns.btnSearch.Visible = newBtns.btnDocument.Visible = false;
+            newBtns.btnShipment.Visible = newBtns.btnWait.Visible = newBtns.btnSearch.Visible = newBtns.btnDocument.Visible = newBtns.btnExcel.Visible = false;
 
             if (Authority == false)
             {

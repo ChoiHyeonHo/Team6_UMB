@@ -95,6 +95,7 @@ namespace Team6_UMB.Forms
             // 
             this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupBox1.Controls.Add(this.cheView);
             this.groupBox1.Controls.Add(this.txtCompanyName);
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.txtProdName);
@@ -186,7 +187,6 @@ namespace Team6_UMB.Forms
             this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel2.BackColor = System.Drawing.Color.Gainsboro;
-            this.panel2.Controls.Add(this.cheView);
             this.panel2.Controls.Add(this.label5);
             this.panel2.Location = new System.Drawing.Point(12, 106);
             this.panel2.Name = "panel2";
@@ -196,11 +196,10 @@ namespace Team6_UMB.Forms
             // cheView
             // 
             this.cheView.AutoSize = true;
-            this.cheView.Dock = System.Windows.Forms.DockStyle.Right;
             this.cheView.Font = new System.Drawing.Font("나눔바른고딕", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.cheView.Location = new System.Drawing.Point(1432, 0);
+            this.cheView.Location = new System.Drawing.Point(1426, 19);
             this.cheView.Name = "cheView";
-            this.cheView.Size = new System.Drawing.Size(79, 35);
+            this.cheView.Size = new System.Drawing.Size(79, 21);
             this.cheView.TabIndex = 24;
             this.cheView.Text = "전체보기";
             this.cheView.UseVisualStyleBackColor = true;
