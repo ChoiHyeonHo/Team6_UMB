@@ -81,6 +81,7 @@ namespace Team6_UMB.Forms
             this.btnCancle.TabIndex = 18;
             this.btnCancle.Text = "취소";
             this.btnCancle.UseVisualStyleBackColor = false;
+            this.btnCancle.Click += new System.EventHandler(this.btnCancle_Click);
             // 
             // btnEdit
             // 
@@ -205,6 +206,7 @@ namespace Team6_UMB.Forms
             this.button3.Size = new System.Drawing.Size(29, 23);
             this.button3.TabIndex = 46;
             this.button3.UseVisualStyleBackColor = false;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // lblID
             // 
@@ -226,6 +228,7 @@ namespace Team6_UMB.Forms
             this.Controls.Add(this.groupBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmMachinePopUp";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmMachinePopUp";
             this.Controls.SetChildIndex(this.panel1, 0);
             this.Controls.SetChildIndex(this.groupBox1, 0);

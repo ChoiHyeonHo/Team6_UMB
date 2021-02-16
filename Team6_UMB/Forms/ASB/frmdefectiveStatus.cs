@@ -23,7 +23,7 @@ namespace Team6_UMB.Forms.BMN
         {
             InitializeComponent();
             newBtns1.btnBarCode.Visible = newBtns1.btnDocument.Visible = newBtns1.btnShipment.Visible =
-                newBtns1.btnWait.Visible = newBtns1.btnSearch.Visible = false;
+                newBtns1.btnWait.Visible = newBtns1.btnSearch.Visible = newBtns1.btnPrint.Visible = false;
 
             periodSearchControl1.dtFrom = DateTime.Now.AddDays(-7).ToString();
             periodSearchControl1.dtTo = DateTime.Now.ToString();

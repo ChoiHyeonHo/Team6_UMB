@@ -108,7 +108,7 @@
             this.periodSearchControl.dtFrom = "2021-01-16";
             this.periodSearchControl.dtTo = "2021-01-23";
             this.periodSearchControl.Font = new System.Drawing.Font("돋움", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.periodSearchControl.Location = new System.Drawing.Point(293, 14);
+            this.periodSearchControl.Location = new System.Drawing.Point(308, 14);
             this.periodSearchControl.Name = "periodSearchControl";
             this.periodSearchControl.Size = new System.Drawing.Size(301, 29);
             this.periodSearchControl.TabIndex = 23;
@@ -117,7 +117,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("나눔바른고딕", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label3.Location = new System.Drawing.Point(240, 19);
+            this.label3.Location = new System.Drawing.Point(255, 19);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(47, 17);
             this.label3.TabIndex = 0;
@@ -129,9 +129,9 @@
             this.label2.Font = new System.Drawing.Font("나눔바른고딕", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.label2.Location = new System.Drawing.Point(6, 19);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(34, 17);
+            this.label2.Size = new System.Drawing.Size(47, 17);
             this.label2.TabIndex = 0;
-            this.label2.Text = "업체";
+            this.label2.Text = "업체명";
             // 
             // btnSearch
             // 
@@ -139,7 +139,7 @@
             this.btnSearch.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btnSearch.FlatAppearance.BorderSize = 0;
             this.btnSearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSearch.Location = new System.Drawing.Point(598, 13);
+            this.btnSearch.Location = new System.Drawing.Point(613, 13);
             this.btnSearch.Name = "btnSearch";
             this.btnSearch.Size = new System.Drawing.Size(34, 30);
             this.btnSearch.TabIndex = 22;
@@ -149,7 +149,7 @@
             // txtCompany
             // 
             this.txtCompany.Font = new System.Drawing.Font("나눔바른고딕", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.txtCompany.Location = new System.Drawing.Point(43, 15);
+            this.txtCompany.Location = new System.Drawing.Point(58, 15);
             this.txtCompany.Name = "txtCompany";
             this.txtCompany.Size = new System.Drawing.Size(176, 25);
             this.txtCompany.TabIndex = 1;

@@ -34,6 +34,8 @@ namespace Team6_UMB.Forms.JSJ
             newBtns1.btnSearch.Visible = false;
             newBtns1.btnShipment.Visible = false;
             newBtns1.btnWait.Visible = false;
+            newBtns1.btnExcel.Visible = false;
+            newBtns1.btnPrint.Visible = false;
 
             CommonUtil.SetInitGridView(dgvSO);
             CommonUtil.AddGridTextColumn(dgvSO, "수주번호", "so_id", 200);

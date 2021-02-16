@@ -83,6 +83,8 @@ namespace Team6_UMB.Forms
             newBtns1.btnDocument.Visible = false;
             newBtns1.btnSearch.Visible = false;
             newBtns1.btnShipment.Visible = false;
+            newBtns1.btnExcel.Visible = false;
+            newBtns1.btnPrint.Visible = false;
 
             DataGridViewCheckBoxColumn chk = new DataGridViewCheckBoxColumn();
             chk.HeaderText = "";

@@ -96,6 +96,7 @@ namespace Team6_UMB.Forms
             // 
             this.temp6.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.temp6.Controls.Add(this.cheView);
             this.temp6.Controls.Add(this.btnWhere);
             this.temp6.Controls.Add(this.txtCompanyName);
             this.temp6.Controls.Add(this.label4);
@@ -158,7 +159,7 @@ namespace Team6_UMB.Forms
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(47, 18);
             this.label3.TabIndex = 22;
-            this.label3.Text = "제품명";
+            this.label3.Text = "품목명";
             // 
             // label2
             // 
@@ -187,7 +188,6 @@ namespace Team6_UMB.Forms
             this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel2.BackColor = System.Drawing.Color.Gainsboro;
-            this.panel2.Controls.Add(this.cheView);
             this.panel2.Controls.Add(this.label5);
             this.panel2.Location = new System.Drawing.Point(12, 106);
             this.panel2.Name = "panel2";
@@ -197,11 +197,10 @@ namespace Team6_UMB.Forms
             // cheView
             // 
             this.cheView.AutoSize = true;
-            this.cheView.Dock = System.Windows.Forms.DockStyle.Right;
             this.cheView.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.cheView.Location = new System.Drawing.Point(1432, 0);
+            this.cheView.Location = new System.Drawing.Point(1426, 19);
             this.cheView.Name = "cheView";
-            this.cheView.Size = new System.Drawing.Size(79, 35);
+            this.cheView.Size = new System.Drawing.Size(79, 22);
             this.cheView.TabIndex = 23;
             this.cheView.Text = "전체보기";
             this.cheView.UseVisualStyleBackColor = true;

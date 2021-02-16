@@ -40,16 +40,17 @@ namespace Team6_UMB.Forms.ASB
             newBtns1.btnSearch.Visible = false;
             newBtns1.btnShipment.Visible = false;
             newBtns1.btnWait.Visible = false;
+            newBtns1.btnPrint.Visible = false;
             newBtns1.btnDelete.Text = "퇴사";
 
             CommonUtil.SetInitGridView(dgvUser);
             CommonUtil.AddGridTextColumn(dgvUser, "사원번호", "user_id", 80);
-            CommonUtil.AddGridTextColumn(dgvUser, "사원이름", "user_name", 80);
+            CommonUtil.AddGridTextColumn(dgvUser, "사원명", "user_name", 80);
             CommonUtil.AddGridTextColumn(dgvUser, "입사일", "user_hiredate", 120);
             CommonUtil.AddGridTextColumn(dgvUser, "국적", "user_national", 120);
             CommonUtil.AddGridTextColumn(dgvUser, "퇴사일", "user_enddate", 120);
             CommonUtil.AddGridTextColumn(dgvUser, "관리자여부", "user_isadmin", 80);
-            CommonUtil.AddGridTextColumn(dgvUser, "부서", "department_name", 150);
+            CommonUtil.AddGridTextColumn(dgvUser, "부서명", "department_name", 150);
             CommonUtil.AddGridTextColumn(dgvUser, "전화번호", "user_phone", 120);
             CommonUtil.AddGridTextColumn(dgvUser, "생년월일", "user_birth", 120);
             CommonUtil.AddGridTextColumn(dgvUser, "비밀번호", "user_pwd", 80);

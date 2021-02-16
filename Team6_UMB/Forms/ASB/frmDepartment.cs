@@ -42,6 +42,7 @@ namespace Team6_UMB.Forms.ASB
             newBtns1.btnSearch.Visible = false;
             newBtns1.btnShipment.Visible = false;
             newBtns1.btnWait.Visible = false;
+            newBtns1.btnPrint.Visible = false;
 
             CommonUtil.SetInitGridView(dgvDepartment);
             CommonUtil.AddGridTextColumn(dgvDepartment, "부서번호", "department_id", 150);

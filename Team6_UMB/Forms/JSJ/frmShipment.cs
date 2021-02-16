@@ -24,7 +24,6 @@ namespace Team6_UMB.Forms.JSJ
             if (Authority == false)
             {
                 newBtns1.btnShipment.Visible = false;
-                newBtns1.btnWait.Visible = false;
             }
         }
 
@@ -37,6 +36,8 @@ namespace Team6_UMB.Forms.JSJ
             newBtns1.btnSearch.Visible = false;
             newBtns1.btnUpdate.Visible = false;
             newBtns1.btnPrint.Visible = false;
+            newBtns1.btnWait.Visible = false;
+            newBtns1.btnDocument.Visible = false;
 
             CommonUtil.SetInitGridView(dgvList);
             CommonUtil.AddGridTextColumn(dgvList, "수주번호", "so_id", 200);
@@ -75,18 +76,32 @@ namespace Team6_UMB.Forms.JSJ
 
         private void dgvList_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (e.RowIndex >= 0)
+            //if (e.RowIndex >= 0)
+            //{
+            //    ShipWaitVO.so_id = Convert.ToInt32(dgvList[0, e.RowIndex].Value);
+            //    ShipWaitVO.ship_count = Convert.ToInt32(dgvList[4, e.RowIndex].Value);
+            //    ShipWaitVO.ship_state = dgvList[6, e.RowIndex].Value.ToString();
+            //    if(dgvList[2, e.RowIndex].Value.ToString() == "L_UMB1")
+            //    {
+            //        ShipWaitVO.product_id = "P1001";
+            //    }
+            //    else
+            //    {
+            //        ShipWaitVO.product_id = "P1002";
+            //    }
+            //}
+            if (e.RowIndex > -1)
             {
-                ShipWaitVO.so_id = Convert.ToInt32(dgvList[0, e.RowIndex].Value);
-                ShipWaitVO.ship_count = Convert.ToInt32(dgvList[4, e.RowIndex].Value);
-                ShipWaitVO.ship_state = dgvList[6, e.RowIndex].Value.ToString();
-                if(dgvList[2, e.RowIndex].Value.ToString() == "L_UMB1")
+                ShipmentVO.so_id = Convert.ToInt32(dgvList[0, e.RowIndex].Value);
+                ShipmentVO.ship_state = dgvList[6, e.RowIndex].Value.ToString();
+                ShipmentVO.ship_count = Convert.ToInt32(dgvList[4, e.RowIndex].Value);
+                if (dgvList[2, e.RowIndex].Value.ToString() == "L_UMB1")
                 {
-                    ShipWaitVO.product_id = "P1001";
+                    ShipmentVO.product_id = "P1001";
                 }
                 else
                 {
-                    ShipWaitVO.product_id = "P1002";
+                    ShipmentVO.product_id = "P1002";
                 }
             }
         }
@@ -99,7 +114,13 @@ namespace Team6_UMB.Forms.JSJ
                 if(service.Shipment(ShipmentVO) == 1)
                 {
                     MessageBox.Show("출하완료");
+                    SOListBind();
+                    ShipListBind();
                 }
+            }
+            else
+            {
+                MessageBox.Show("재고가 부족합니다.");
             }
         }
 
@@ -111,18 +132,18 @@ namespace Team6_UMB.Forms.JSJ
 
         private void newBtns1_btnWait_Event(object sender, EventArgs e)
         {
-            ShipmentService service = new ShipmentService();
-            if (ShipWaitVO.ship_state == "출하대기 가능")
-            {
-                if (service.ShipWait(ShipWaitVO) != 0)
-                {
-                    MessageBox.Show("출하대기 완료");
-                }
-            }
-            else
-            {
-                MessageBox.Show("재고가 부족합니다.");
-            }
+            //ShipmentService service = new ShipmentService();
+            //if (ShipWaitVO.ship_state == "출하가능")
+            //{
+            //    if (service.ShipWait(ShipWaitVO) != 0)
+            //    {
+            //        MessageBox.Show("출하 완료");
+            //    }
+            //}
+            //else
+            //{
+            //    MessageBox.Show("재고가 부족합니다.");
+            //}
         }
 
         private void newBtns1_btnDocument_Event(object sender, EventArgs e)
@@ -132,20 +153,20 @@ namespace Team6_UMB.Forms.JSJ
 
         private void dgvShipment_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (e.RowIndex >= 0)
-            {
-                ShipmentVO.ship_id = Convert.ToInt32(dgvShipment[0, e.RowIndex].Value);
-                ShipmentVO.ship_state = dgvShipment[5, e.RowIndex].Value.ToString();
-                ShipmentVO.ship_count = Convert.ToInt32(dgvShipment[3, e.RowIndex].Value);
-                if (dgvShipment[2, e.RowIndex].Value.ToString() == "L_UMB1")
-                {
-                    ShipmentVO.product_id = "P1001";
-                }
-                else
-                {
-                    ShipmentVO.product_id = "P1002";
-                }
-            }
+            //if (e.RowIndex >= 0)
+            //{
+            //    ShipmentVO.ship_id = Convert.ToInt32(dgvShipment[0, e.RowIndex].Value);
+            //    ShipmentVO.ship_state = dgvShipment[5, e.RowIndex].Value.ToString();
+            //    ShipmentVO.ship_count = Convert.ToInt32(dgvShipment[3, e.RowIndex].Value);
+            //    if (dgvShipment[2, e.RowIndex].Value.ToString() == "L_UMB1")
+            //    {
+            //        ShipmentVO.product_id = "P1001";
+            //    }
+            //    else
+            //    {
+            //        ShipmentVO.product_id = "P1002";
+            //    }
+            //}
         }
     }
 }

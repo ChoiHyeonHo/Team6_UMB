@@ -469,8 +469,8 @@ namespace Team6_UMB
         {
             this.btn1_1.BackColor = Color.White;
             this.btn1_1.ForeColor = Color.Black;
-            this.btn1_2.BackColor = this.btn1_3.BackColor = this.btn1_4.BackColor = this.btn1_5.BackColor = this.btn1_6.BackColor = this.btn1_7.BackColor = this.btn1_8.BackColor = Color.Transparent;
-            this.btn1_2.ForeColor = this.btn1_3.ForeColor = this.btn1_4.ForeColor = this.btn1_5.ForeColor = this.btn1_6.ForeColor = this.btn1_7.ForeColor = this.btn1_8.ForeColor = Color.White;
+            this.btn1_2.BackColor = this.btn1_3.BackColor = this.btn1_4.BackColor = this.btn1_5.BackColor = this.btn1_6.BackColor = this.btn1_7.BackColor = Color.Transparent;
+            this.btn1_2.ForeColor = this.btn1_3.ForeColor = this.btn1_4.ForeColor = this.btn1_5.ForeColor = this.btn1_6.ForeColor = this.btn1_7.ForeColor = Color.White;
             if (MenuList.Contains("Shift 기준정보"))
             {
                 CreateShift(true);
@@ -489,8 +489,8 @@ namespace Team6_UMB
         {
             this.btn1_2.BackColor = Color.White;
             this.btn1_2.ForeColor = Color.Black;
-            this.btn1_1.BackColor = this.btn1_3.BackColor = this.btn1_4.BackColor = this.btn1_5.BackColor = this.btn1_6.BackColor = this.btn1_7.BackColor = this.btn1_8.BackColor = Color.Transparent;
-            this.btn1_1.ForeColor = this.btn1_3.ForeColor = this.btn1_4.ForeColor = this.btn1_5.ForeColor = this.btn1_6.ForeColor = this.btn1_7.ForeColor = this.btn1_8.ForeColor = Color.White;
+            this.btn1_1.BackColor = this.btn1_3.BackColor = this.btn1_4.BackColor = this.btn1_5.BackColor = this.btn1_6.BackColor = this.btn1_7.BackColor = Color.Transparent;
+            this.btn1_1.ForeColor = this.btn1_3.ForeColor = this.btn1_4.ForeColor = this.btn1_5.ForeColor = this.btn1_6.ForeColor = this.btn1_7.ForeColor = Color.White;
             if (MenuList.Contains("설비관리"))
             {
                 CreateMachine(true);
@@ -509,8 +509,8 @@ namespace Team6_UMB
         {
             this.btn1_3.BackColor = Color.White;
             this.btn1_3.ForeColor = Color.Black;
-            this.btn1_1.BackColor = this.btn1_2.BackColor = this.btn1_4.BackColor = this.btn1_5.BackColor = this.btn1_6.BackColor = this.btn1_7.BackColor = this.btn1_8.BackColor = Color.Transparent;
-            this.btn1_1.ForeColor = this.btn1_2.ForeColor = this.btn1_4.ForeColor = this.btn1_5.ForeColor = this.btn1_6.ForeColor = this.btn1_7.ForeColor = this.btn1_8.ForeColor = Color.White;
+            this.btn1_1.BackColor = this.btn1_2.BackColor = this.btn1_4.BackColor = this.btn1_5.BackColor = this.btn1_6.BackColor = this.btn1_7.BackColor = Color.Transparent;
+            this.btn1_1.ForeColor = this.btn1_2.ForeColor = this.btn1_4.ForeColor = this.btn1_5.ForeColor = this.btn1_6.ForeColor = this.btn1_7.ForeColor = Color.White;
             if (MenuList.Contains("업체관리"))
             {
                 CreateCompany(true);
@@ -529,8 +529,8 @@ namespace Team6_UMB
         {
             this.btn1_4.BackColor = Color.White;
             this.btn1_4.ForeColor = Color.Black;
-            this.btn1_1.BackColor = this.btn1_2.BackColor = this.btn1_3.BackColor = this.btn1_5.BackColor = this.btn1_6.BackColor = this.btn1_7.BackColor = this.btn1_8.BackColor = Color.Transparent;
-            this.btn1_1.ForeColor = this.btn1_2.ForeColor = this.btn1_3.ForeColor = this.btn1_5.ForeColor = this.btn1_6.ForeColor = this.btn1_7.ForeColor = this.btn1_8.ForeColor = Color.White;
+            this.btn1_1.BackColor = this.btn1_2.BackColor = this.btn1_3.BackColor = this.btn1_5.BackColor = this.btn1_6.BackColor = this.btn1_7.BackColor = Color.Transparent;
+            this.btn1_1.ForeColor = this.btn1_2.ForeColor = this.btn1_3.ForeColor = this.btn1_5.ForeColor = this.btn1_6.ForeColor = this.btn1_7.ForeColor = Color.White;
             if (MenuList.Contains("BOR"))
             {
                 CreateBOR(true);
@@ -549,8 +549,8 @@ namespace Team6_UMB
         {
             this.btn1_5.BackColor = Color.White;
             this.btn1_5.ForeColor = Color.Black;
-            this.btn1_1.BackColor = this.btn1_2.BackColor = this.btn1_3.BackColor = this.btn1_4.BackColor = this.btn1_6.BackColor = this.btn1_7.BackColor = this.btn1_8.BackColor = Color.Transparent;
-            this.btn1_1.ForeColor = this.btn1_2.ForeColor = this.btn1_3.ForeColor = this.btn1_4.ForeColor = this.btn1_6.ForeColor = this.btn1_7.ForeColor = this.btn1_8.ForeColor = Color.White;
+            this.btn1_1.BackColor = this.btn1_2.BackColor = this.btn1_3.BackColor = this.btn1_4.BackColor = this.btn1_6.BackColor = this.btn1_7.BackColor = Color.Transparent;
+            this.btn1_1.ForeColor = this.btn1_2.ForeColor = this.btn1_3.ForeColor = this.btn1_4.ForeColor = this.btn1_6.ForeColor = this.btn1_7.ForeColor = Color.White;
             CreateUser();
             frmUser.TopLevel = false;
             pnlBackPage.Controls.Clear();
@@ -562,8 +562,8 @@ namespace Team6_UMB
         {
             this.btn1_6.BackColor = Color.White;
             this.btn1_6.ForeColor = Color.Black;
-            this.btn1_1.BackColor = this.btn1_2.BackColor = this.btn1_3.BackColor = this.btn1_4.BackColor = this.btn1_5.BackColor = this.btn1_7.BackColor = this.btn1_8.BackColor = Color.Transparent;
-            this.btn1_1.ForeColor = this.btn1_2.ForeColor = this.btn1_3.ForeColor = this.btn1_4.ForeColor = this.btn1_5.ForeColor = this.btn1_7.ForeColor = this.btn1_8.ForeColor = Color.White;
+            this.btn1_1.BackColor = this.btn1_2.BackColor = this.btn1_3.BackColor = this.btn1_4.BackColor = this.btn1_5.BackColor = this.btn1_7.BackColor = Color.Transparent;
+            this.btn1_1.ForeColor = this.btn1_2.ForeColor = this.btn1_3.ForeColor = this.btn1_4.ForeColor = this.btn1_5.ForeColor = this.btn1_7.ForeColor = Color.White;
             if (MenuList.Contains("부서관리"))
             {
                 CreateDepartment(true);
@@ -582,8 +582,8 @@ namespace Team6_UMB
         {
             this.btn1_7.BackColor = Color.White;
             this.btn1_7.ForeColor = Color.Black;
-            this.btn1_1.BackColor = this.btn1_2.BackColor = this.btn1_3.BackColor = this.btn1_4.BackColor = this.btn1_5.BackColor = this.btn1_6.BackColor = this.btn1_8.BackColor = Color.Transparent;
-            this.btn1_1.ForeColor = this.btn1_2.ForeColor = this.btn1_3.ForeColor = this.btn1_4.ForeColor = this.btn1_5.ForeColor = this.btn1_6.ForeColor = this.btn1_8.ForeColor = Color.White;
+            this.btn1_1.BackColor = this.btn1_2.BackColor = this.btn1_3.BackColor = this.btn1_4.BackColor = this.btn1_5.BackColor = this.btn1_6.BackColor = Color.Transparent;
+            this.btn1_1.ForeColor = this.btn1_2.ForeColor = this.btn1_3.ForeColor = this.btn1_4.ForeColor = this.btn1_5.ForeColor = this.btn1_6.ForeColor = Color.White;
             if (MenuList.Contains("창고관리"))
             {
                 CreateWarehouse(true);
@@ -597,19 +597,6 @@ namespace Team6_UMB
             pnlBackPage.Controls.Add(frmWarehouse);
             frmWarehouse.Dock = DockStyle.Fill;
             frmWarehouse.Show();
-        }
-        private void btn1_8_Click(object sender, EventArgs e)
-        {
-            this.btn1_8.BackColor = Color.White;
-            this.btn1_8.ForeColor = Color.Black;
-            this.btn1_1.BackColor = this.btn1_2.BackColor = this.btn1_3.BackColor = this.btn1_4.BackColor = this.btn1_5.BackColor = this.btn1_6.BackColor = this.btn1_7.BackColor = Color.Transparent;
-            this.btn1_1.ForeColor = this.btn1_2.ForeColor = this.btn1_3.ForeColor = this.btn1_4.ForeColor = this.btn1_5.ForeColor = this.btn1_6.ForeColor = this.btn1_7.ForeColor = Color.White;
-            CreateCheckList();
-            frmCheckList.TopLevel = false;
-            pnlBackPage.Controls.Clear();
-            pnlBackPage.Controls.Add(frmCheckList);
-            frmCheckList.Dock = DockStyle.Fill;
-            frmCheckList.Show();
         }
         #endregion
 
@@ -777,8 +764,8 @@ namespace Team6_UMB
         {
             this.btn5_2.BackColor = Color.White;
             this.btn5_2.ForeColor = Color.Black;
-            this.btn5_3.BackColor = this.btn5_4.BackColor = this.btn5_5.BackColor = this.btn5_6.BackColor = this.btn5_7.BackColor = Color.Transparent;
-            this.btn5_3.ForeColor = this.btn5_4.ForeColor = this.btn5_5.ForeColor = this.btn5_6.ForeColor = this.btn5_7.ForeColor = Color.White;
+            this.btn5_3.BackColor = this.btn5_4.BackColor = this.btn5_5.BackColor = this.btn5_7.BackColor = Color.Transparent;
+            this.btn5_3.ForeColor = this.btn5_4.ForeColor = this.btn5_5.ForeColor = this.btn5_7.ForeColor = Color.White;
             if (MenuList.Contains("발주현황"))
             {
                 CreateOrderStatus(true);
@@ -797,8 +784,8 @@ namespace Team6_UMB
         {
             this.btn5_3.BackColor = Color.White;
             this.btn5_3.ForeColor = Color.Black;
-            this.btn5_2.BackColor = this.btn5_4.BackColor = this.btn5_5.BackColor = this.btn5_6.BackColor = this.btn5_7.BackColor = Color.Transparent;
-            this.btn5_2.ForeColor = this.btn5_4.ForeColor = this.btn5_5.ForeColor = this.btn5_6.ForeColor = this.btn5_7.ForeColor = Color.White;
+            this.btn5_2.BackColor = this.btn5_4.BackColor = this.btn5_5.BackColor = this.btn5_7.BackColor = Color.Transparent;
+            this.btn5_2.ForeColor = this.btn5_4.ForeColor = this.btn5_5.ForeColor = this.btn5_7.ForeColor = Color.White;
             if (MenuList.Contains("출하관리"))
             {
                 CreateShipment(true);
@@ -817,8 +804,8 @@ namespace Team6_UMB
         {
             this.btn5_4.BackColor = Color.White;
             this.btn5_4.ForeColor = Color.Black;
-            this.btn5_2.BackColor = this.btn5_3.BackColor = this.btn5_5.BackColor = this.btn5_6.BackColor = this.btn5_7.BackColor = Color.Transparent;
-            this.btn5_2.ForeColor = this.btn5_3.ForeColor = this.btn5_5.ForeColor = this.btn5_6.ForeColor = this.btn5_7.ForeColor = Color.White;
+            this.btn5_2.BackColor = this.btn5_3.BackColor = this.btn5_5.BackColor = this.btn5_7.BackColor = Color.Transparent;
+            this.btn5_2.ForeColor = this.btn5_3.ForeColor = this.btn5_5.ForeColor = this.btn5_7.ForeColor = Color.White;
             if (MenuList.Contains("수주현황"))
             {
                 CreateSO(true);
@@ -837,8 +824,8 @@ namespace Team6_UMB
         {
             this.btn5_5.BackColor = Color.White;
             this.btn5_5.ForeColor = Color.Black;
-            this.btn5_2.BackColor = this.btn5_3.BackColor = this.btn5_4.BackColor = this.btn5_6.BackColor = this.btn5_7.BackColor = Color.Transparent;
-            this.btn5_2.ForeColor = this.btn5_3.ForeColor = this.btn5_4.ForeColor = this.btn5_6.ForeColor = this.btn5_7.ForeColor = Color.White;
+            this.btn5_2.BackColor = this.btn5_3.BackColor = this.btn5_4.BackColor = this.btn5_7.BackColor = Color.Transparent;
+            this.btn5_2.ForeColor = this.btn5_3.ForeColor = this.btn5_4.ForeColor = this.btn5_7.ForeColor = Color.White;
             CreateIcStatus();
             frmIcStatus.TopLevel = false;
             pnlBackPage.Controls.Clear();
@@ -846,32 +833,12 @@ namespace Team6_UMB
             frmIcStatus.Dock = DockStyle.Fill;
             frmIcStatus.Show();
         }
-        private void btn5_6_Click(object sender, EventArgs e)
-        {
-            this.btn5_6.BackColor = Color.White;
-            this.btn5_6.ForeColor = Color.Black;
-            this.btn5_2.BackColor = this.btn5_3.BackColor = this.btn5_4.BackColor = this.btn5_5.BackColor = this.btn5_7.BackColor = Color.Transparent;
-            this.btn5_2.ForeColor = this.btn5_3.ForeColor = this.btn5_4.ForeColor = this.btn5_5.ForeColor = this.btn5_7.ForeColor = Color.White;
-            if (MenuList.Contains("입고대기현황"))
-            {
-                CreateIcWait(true);
-            }
-            else
-            {
-                CreateIcWait(false);
-            }
-            frmIcWait.TopLevel = false;
-            pnlBackPage.Controls.Clear();
-            pnlBackPage.Controls.Add(frmIcWait);
-            frmIcWait.Dock = DockStyle.Fill;
-            frmIcWait.Show();
-        }
         private void btn5_7_Click(object sender, EventArgs e)
         {
             this.btn5_7.BackColor = Color.White;
             this.btn5_7.ForeColor = Color.Black;
-            this.btn5_2.BackColor = this.btn5_3.BackColor = this.btn5_4.BackColor = this.btn5_5.BackColor = this.btn5_6.BackColor = Color.Transparent;
-            this.btn5_2.ForeColor = this.btn5_3.ForeColor = this.btn5_4.ForeColor = this.btn5_5.ForeColor = this.btn5_6.ForeColor = Color.White;
+            this.btn5_2.BackColor = this.btn5_3.BackColor = this.btn5_4.BackColor = this.btn5_5.BackColor = Color.Transparent;
+            this.btn5_2.ForeColor = this.btn5_3.ForeColor = this.btn5_4.ForeColor = this.btn5_5.ForeColor = Color.White;
             CreateSales();
             frmSales.TopLevel = false;
             pnlBackPage.Controls.Clear();

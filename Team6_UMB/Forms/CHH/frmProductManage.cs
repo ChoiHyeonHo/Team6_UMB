@@ -29,7 +29,7 @@ namespace Team6_UMB.Forms
         public frmProductManage(bool Authority)
         {
             InitializeComponent();
-            newBtns.btnShipment.Visible = newBtns.btnWait.Visible = newBtns.btnSearch.Visible = newBtns.btnDocument.Visible = false;
+            newBtns.btnShipment.Visible = newBtns.btnWait.Visible = newBtns.btnSearch.Visible = newBtns.btnDocument.Visible = newBtns.btnExcel.Visible = false;
 
             if (Authority == false)
             {
@@ -81,7 +81,7 @@ namespace Team6_UMB.Forms
                 CommonUtil.AddGridTextColumn(dgvProduct, "창고명", "w_name", 150);                    //5
                 CommonUtil.AddGridTextColumn(dgvProduct, "최소발주량", "product_lorder_count", 100);  //6
                 CommonUtil.AddGridTextColumn(dgvProduct, "안전재고량", "product_safety_count", 100);  //7
-                CommonUtil.AddGridTextColumn(dgvProduct, "업체명", "company_name", 170);              //8
+                CommonUtil.AddGridTextColumn(dgvProduct, "거래처명", "company_name", 170);              //8
                 CommonUtil.AddGridTextColumn(dgvProduct, "검사여부", "product_exam", 90);             //9
                 CommonUtil.AddGridTextColumn(dgvProduct, "규격", "product_stnd", 130);               //10
                 CommonUtil.AddGridTextColumn(dgvProduct, "비고", "product_comment", 10, false);      //11

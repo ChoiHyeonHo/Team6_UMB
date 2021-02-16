@@ -51,7 +51,6 @@ namespace Team6_UMB
             this.btnOpenClose = new System.Windows.Forms.Button();
             this.pnlButtons = new System.Windows.Forms.Panel();
             this.pnlMain1 = new System.Windows.Forms.Panel();
-            this.btn1_8 = new System.Windows.Forms.Button();
             this.btn1_7 = new System.Windows.Forms.Button();
             this.btn1_6 = new System.Windows.Forms.Button();
             this.btn1_5 = new System.Windows.Forms.Button();
@@ -59,8 +58,6 @@ namespace Team6_UMB
             this.btn1_3 = new System.Windows.Forms.Button();
             this.btn1_2 = new System.Windows.Forms.Button();
             this.btn1_1 = new System.Windows.Forms.Button();
-            this.pnlMain7 = new System.Windows.Forms.Panel();
-            this.btn7_1 = new System.Windows.Forms.Button();
             this.pnlMain6 = new System.Windows.Forms.Panel();
             this.btn6_6 = new System.Windows.Forms.Button();
             this.btn6_5 = new System.Windows.Forms.Button();
@@ -68,11 +65,12 @@ namespace Team6_UMB
             this.btn6_1 = new System.Windows.Forms.Button();
             this.pnlMain5 = new System.Windows.Forms.Panel();
             this.btn5_7 = new System.Windows.Forms.Button();
-            this.btn5_6 = new System.Windows.Forms.Button();
             this.btn5_5 = new System.Windows.Forms.Button();
             this.btn5_4 = new System.Windows.Forms.Button();
             this.btn5_3 = new System.Windows.Forms.Button();
             this.btn5_2 = new System.Windows.Forms.Button();
+            this.pnlMain7 = new System.Windows.Forms.Panel();
+            this.btn7_1 = new System.Windows.Forms.Button();
             this.pnlMain4 = new System.Windows.Forms.Panel();
             this.btn4_3 = new System.Windows.Forms.Button();
             this.btn4_2 = new System.Windows.Forms.Button();
@@ -100,9 +98,9 @@ namespace Team6_UMB
             this.panel1.SuspendLayout();
             this.pnlButtons.SuspendLayout();
             this.pnlMain1.SuspendLayout();
-            this.pnlMain7.SuspendLayout();
             this.pnlMain6.SuspendLayout();
             this.pnlMain5.SuspendLayout();
+            this.pnlMain7.SuspendLayout();
             this.pnlMain4.SuspendLayout();
             this.pnlMain3.SuspendLayout();
             this.pnlMain2.SuspendLayout();
@@ -396,9 +394,9 @@ namespace Team6_UMB
             // 
             // pnlButtons
             // 
-            this.pnlButtons.Controls.Add(this.pnlMain6);
             this.pnlButtons.Controls.Add(this.pnlMain5);
             this.pnlButtons.Controls.Add(this.pnlMain1);
+            this.pnlButtons.Controls.Add(this.pnlMain6);
             this.pnlButtons.Controls.Add(this.pnlMain7);
             this.pnlButtons.Controls.Add(this.pnlMain4);
             this.pnlButtons.Controls.Add(this.pnlMain3);
@@ -412,7 +410,6 @@ namespace Team6_UMB
             // pnlMain1
             // 
             this.pnlMain1.BackColor = System.Drawing.Color.Transparent;
-            this.pnlMain1.Controls.Add(this.btn1_8);
             this.pnlMain1.Controls.Add(this.btn1_7);
             this.pnlMain1.Controls.Add(this.btn1_6);
             this.pnlMain1.Controls.Add(this.btn1_5);
@@ -420,28 +417,10 @@ namespace Team6_UMB
             this.pnlMain1.Controls.Add(this.btn1_3);
             this.pnlMain1.Controls.Add(this.btn1_2);
             this.pnlMain1.Controls.Add(this.btn1_1);
-            this.pnlMain1.Location = new System.Drawing.Point(3, 27);
+            this.pnlMain1.Location = new System.Drawing.Point(3, 35);
             this.pnlMain1.Name = "pnlMain1";
-            this.pnlMain1.Size = new System.Drawing.Size(139, 35);
+            this.pnlMain1.Size = new System.Drawing.Size(139, 40);
             this.pnlMain1.TabIndex = 0;
-            // 
-            // btn1_8
-            // 
-            this.btn1_8.BackColor = System.Drawing.Color.Transparent;
-            this.btn1_8.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btn1_8.FlatAppearance.BorderSize = 0;
-            this.btn1_8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn1_8.Font = new System.Drawing.Font("나눔바른고딕", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.btn1_8.ForeColor = System.Drawing.Color.White;
-            this.btn1_8.Location = new System.Drawing.Point(0, 420);
-            this.btn1_8.Name = "btn1_8";
-            this.btn1_8.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
-            this.btn1_8.Size = new System.Drawing.Size(139, 60);
-            this.btn1_8.TabIndex = 7;
-            this.btn1_8.Text = "검사항목관리";
-            this.btn1_8.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn1_8.UseVisualStyleBackColor = false;
-            this.btn1_8.Click += new System.EventHandler(this.btn1_8_Click);
             // 
             // btn1_7
             // 
@@ -569,33 +548,6 @@ namespace Team6_UMB
             this.btn1_1.UseVisualStyleBackColor = false;
             this.btn1_1.Click += new System.EventHandler(this.btn1_1_Click);
             // 
-            // pnlMain7
-            // 
-            this.pnlMain7.BackColor = System.Drawing.Color.Transparent;
-            this.pnlMain7.Controls.Add(this.btn7_1);
-            this.pnlMain7.Location = new System.Drawing.Point(5, 530);
-            this.pnlMain7.Name = "pnlMain7";
-            this.pnlMain7.Size = new System.Drawing.Size(137, 31);
-            this.pnlMain7.TabIndex = 13;
-            // 
-            // btn7_1
-            // 
-            this.btn7_1.BackColor = System.Drawing.Color.Transparent;
-            this.btn7_1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btn7_1.FlatAppearance.BorderSize = 0;
-            this.btn7_1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn7_1.Font = new System.Drawing.Font("나눔바른고딕", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.btn7_1.ForeColor = System.Drawing.Color.White;
-            this.btn7_1.Location = new System.Drawing.Point(0, 0);
-            this.btn7_1.Name = "btn7_1";
-            this.btn7_1.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
-            this.btn7_1.Size = new System.Drawing.Size(137, 60);
-            this.btn7_1.TabIndex = 1;
-            this.btn7_1.Text = "권한관리";
-            this.btn7_1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn7_1.UseVisualStyleBackColor = false;
-            this.btn7_1.Click += new System.EventHandler(this.btn7_1_Click);
-            // 
             // pnlMain6
             // 
             this.pnlMain6.BackColor = System.Drawing.Color.Transparent;
@@ -684,12 +636,11 @@ namespace Team6_UMB
             // 
             this.pnlMain5.BackColor = System.Drawing.Color.Transparent;
             this.pnlMain5.Controls.Add(this.btn5_7);
-            this.pnlMain5.Controls.Add(this.btn5_6);
             this.pnlMain5.Controls.Add(this.btn5_5);
             this.pnlMain5.Controls.Add(this.btn5_4);
             this.pnlMain5.Controls.Add(this.btn5_3);
             this.pnlMain5.Controls.Add(this.btn5_2);
-            this.pnlMain5.Location = new System.Drawing.Point(16, 393);
+            this.pnlMain5.Location = new System.Drawing.Point(12, 401);
             this.pnlMain5.Name = "pnlMain5";
             this.pnlMain5.Size = new System.Drawing.Size(119, 38);
             this.pnlMain5.TabIndex = 11;
@@ -702,7 +653,7 @@ namespace Team6_UMB
             this.btn5_7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn5_7.Font = new System.Drawing.Font("나눔바른고딕", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.btn5_7.ForeColor = System.Drawing.Color.White;
-            this.btn5_7.Location = new System.Drawing.Point(0, 300);
+            this.btn5_7.Location = new System.Drawing.Point(0, 240);
             this.btn5_7.Name = "btn5_7";
             this.btn5_7.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
             this.btn5_7.Size = new System.Drawing.Size(119, 60);
@@ -711,24 +662,6 @@ namespace Team6_UMB
             this.btn5_7.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn5_7.UseVisualStyleBackColor = false;
             this.btn5_7.Click += new System.EventHandler(this.btn5_7_Click);
-            // 
-            // btn5_6
-            // 
-            this.btn5_6.BackColor = System.Drawing.Color.Transparent;
-            this.btn5_6.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btn5_6.FlatAppearance.BorderSize = 0;
-            this.btn5_6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn5_6.Font = new System.Drawing.Font("나눔바른고딕", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.btn5_6.ForeColor = System.Drawing.Color.White;
-            this.btn5_6.Location = new System.Drawing.Point(0, 240);
-            this.btn5_6.Name = "btn5_6";
-            this.btn5_6.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
-            this.btn5_6.Size = new System.Drawing.Size(119, 60);
-            this.btn5_6.TabIndex = 5;
-            this.btn5_6.Text = "입고대기현황";
-            this.btn5_6.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn5_6.UseVisualStyleBackColor = false;
-            this.btn5_6.Click += new System.EventHandler(this.btn5_6_Click);
             // 
             // btn5_5
             // 
@@ -801,6 +734,33 @@ namespace Team6_UMB
             this.btn5_2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn5_2.UseVisualStyleBackColor = false;
             this.btn5_2.Click += new System.EventHandler(this.btn5_2_Click);
+            // 
+            // pnlMain7
+            // 
+            this.pnlMain7.BackColor = System.Drawing.Color.Transparent;
+            this.pnlMain7.Controls.Add(this.btn7_1);
+            this.pnlMain7.Location = new System.Drawing.Point(5, 530);
+            this.pnlMain7.Name = "pnlMain7";
+            this.pnlMain7.Size = new System.Drawing.Size(137, 31);
+            this.pnlMain7.TabIndex = 13;
+            // 
+            // btn7_1
+            // 
+            this.btn7_1.BackColor = System.Drawing.Color.Transparent;
+            this.btn7_1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btn7_1.FlatAppearance.BorderSize = 0;
+            this.btn7_1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn7_1.Font = new System.Drawing.Font("나눔바른고딕", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.btn7_1.ForeColor = System.Drawing.Color.White;
+            this.btn7_1.Location = new System.Drawing.Point(0, 0);
+            this.btn7_1.Name = "btn7_1";
+            this.btn7_1.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
+            this.btn7_1.Size = new System.Drawing.Size(137, 60);
+            this.btn7_1.TabIndex = 1;
+            this.btn7_1.Text = "권한관리";
+            this.btn7_1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn7_1.UseVisualStyleBackColor = false;
+            this.btn7_1.Click += new System.EventHandler(this.btn7_1_Click);
             // 
             // pnlMain4
             // 
@@ -1009,9 +969,9 @@ namespace Team6_UMB
             this.panel1.ResumeLayout(false);
             this.pnlButtons.ResumeLayout(false);
             this.pnlMain1.ResumeLayout(false);
-            this.pnlMain7.ResumeLayout(false);
             this.pnlMain6.ResumeLayout(false);
             this.pnlMain5.ResumeLayout(false);
+            this.pnlMain7.ResumeLayout(false);
             this.pnlMain4.ResumeLayout(false);
             this.pnlMain3.ResumeLayout(false);
             this.pnlMain2.ResumeLayout(false);
@@ -1032,7 +992,6 @@ namespace Team6_UMB
         private System.Windows.Forms.Button btnMain2;
         private System.Windows.Forms.Button btnMain1;
         private System.Windows.Forms.Panel pnlMain1;
-        private System.Windows.Forms.Button btn1_8;
         private System.Windows.Forms.Button btn1_7;
         private System.Windows.Forms.Button btn1_6;
         private System.Windows.Forms.Button btn1_5;
@@ -1052,7 +1011,6 @@ namespace Team6_UMB
         private System.Windows.Forms.Button btn4_2;
         private System.Windows.Forms.Button btn4_1;
         private System.Windows.Forms.Panel pnlMain5;
-        private System.Windows.Forms.Button btn5_6;
         private System.Windows.Forms.Button btn5_5;
         private System.Windows.Forms.Button btn5_4;
         private System.Windows.Forms.Button btn5_3;
