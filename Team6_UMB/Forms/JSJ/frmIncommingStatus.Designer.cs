@@ -120,7 +120,7 @@
             // txtCompany
             // 
             this.txtCompany.Font = new System.Drawing.Font("나눔바른고딕", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.txtCompany.Location = new System.Drawing.Point(46, 17);
+            this.txtCompany.Location = new System.Drawing.Point(58, 17);
             this.txtCompany.Name = "txtCompany";
             this.txtCompany.Size = new System.Drawing.Size(160, 22);
             this.txtCompany.TabIndex = 24;
@@ -150,11 +150,11 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("나눔바른고딕", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label5.Location = new System.Drawing.Point(243, 17);
+            this.label5.Location = new System.Drawing.Point(236, 18);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(34, 17);
+            this.label5.Size = new System.Drawing.Size(47, 17);
             this.label5.TabIndex = 0;
-            this.label5.Text = "품목";
+            this.label5.Text = "품목명";
             // 
             // label2
             // 
@@ -162,9 +162,9 @@
             this.label2.Font = new System.Drawing.Font("나눔바른고딕", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.label2.Location = new System.Drawing.Point(6, 19);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(34, 17);
+            this.label2.Size = new System.Drawing.Size(47, 17);
             this.label2.TabIndex = 0;
-            this.label2.Text = "업체";
+            this.label2.Text = "업체명";
             // 
             // btnSearch
             // 
