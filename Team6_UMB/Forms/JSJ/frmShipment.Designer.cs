@@ -237,9 +237,9 @@
             this.label4.Font = new System.Drawing.Font("나눔바른고딕", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.label4.Location = new System.Drawing.Point(12, 9);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(89, 17);
+            this.label4.Size = new System.Drawing.Size(63, 17);
             this.label4.TabIndex = 22;
-            this.label4.Text = "출하대기 목록";
+            this.label4.Text = "출하 목록";
             // 
             // dgvShipment
             // 
