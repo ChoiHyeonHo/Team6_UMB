@@ -29,9 +29,11 @@ namespace UMB_POP
         List<PerformanceVO> endList;
         int performance_id, production_id, wo_id, performance_qtyimport, performance_qty_ok, performance_qty_ng;
         int tacttime;
-        string production_state;
-        System.Timers.Timer timer;        
+        string production_state, product_id;
+        System.Timers.Timer timer;
+        System.Timers.Timer timer2;
         POPClient client;
+        WorkStart ws;
 
         public PerformanceVO WorkInfo { get; set; }
 
@@ -104,6 +106,30 @@ namespace UMB_POP
             timer.Start();
         }
 
+        private void GetCount()
+        {
+            timer2 = new System.Timers.Timer(5000);
+            timer2.Elapsed += new ElapsedEventHandler(ctimer_Elapsed);
+            timer2.Start();
+
+            
+        }
+
+        private void ctimer_Elapsed(object sender, ElapsedEventArgs e)
+        {
+            if (int.Parse(txtpcount.Text) == int.Parse(txtcount.Text))
+            {
+                CompleteProduction();
+                MessageBox.Show("생산완료");                
+            }
+            if (client.Connected)
+            {
+                txtcount.Text = ws.count.ToString();
+                txtok.Text = ws.okcount.ToString();
+                txtng.Text = ws.ngcount.ToString();
+            }
+        }
+
         private void timer_Elapsed(object sender, ElapsedEventArgs e)
         {
             try
@@ -113,6 +139,8 @@ namespace UMB_POP
                     this.Invoke(new Action(delegate ()
                     { lb_time.Text = DateTime.Now.ToString("yyyy-MM-dd  hh:mm:ss"); }
                     ));
+                    
+                    
                 }
             }
             catch (Exception ex)
@@ -208,7 +236,7 @@ namespace UMB_POP
                 }                
                 else
                 {
-                    
+                    MessageBox.Show("작업대기상태인 지시만 실행시켜주세요.");
                 }
 
             }
@@ -243,17 +271,23 @@ namespace UMB_POP
 
         }
 
+        public void CompleteProduction()
+        {
+            //작업지시, 생산실적 state > 생산완료
+
+
+        }
+
         // 서버에 연결하는 코드
         private void ConnectServer()
         {
             POPService service = new POPService();
             client = new POPClient()
             {
-                performance_id = WorkInfo.performance_id
+                performance_id = this.performance_id
             };
             if (client.Connect())
-            {
-                client.performance_id = performance_id;
+            {                
                 client.production_id = production_id;
                 client.performance_qtyimport = Convert.ToInt32(txtcount.Text);
                 client.time = service.setTacttime(txtProductID.Text);

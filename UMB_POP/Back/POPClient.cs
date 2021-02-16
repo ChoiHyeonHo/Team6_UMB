@@ -33,10 +33,11 @@ namespace UMB_POP.Back
         // 서버에 접속할 client 필요  (AppConfig에 추가할 목록)
         string host = ConfigurationManager.AppSettings["serverIP"];
         IPAddress clientIPInfo = Dns.GetHostEntry(Dns.GetHostName()).AddressList.ToList().Find(i => i.AddressFamily == AddressFamily.InterNetwork);        
-        NetworkStream netStream;
+        public NetworkStream netStream;
         int port = 5000;
         System.Timers.Timer timer;
-        TcpClient client;
+        public TcpClient client;
+        
 
         // 빈 생성자
         public POPClient()
@@ -60,7 +61,6 @@ namespace UMB_POP.Back
             catch (Exception ex)
             {
                 WriteLog(ex);
-                ErrorMessage(ex);
                 timer.Stop();
                 timer.Enabled = false;
                 timer.Dispose();
@@ -74,13 +74,13 @@ namespace UMB_POP.Back
             {
                 if (Connected && timer.Enabled)
                 {
-                    Writer(netStream, new object[] { 1, performance_id, performance_qtyimport, product_id, time });
+                    Writer(netStream, new object[] { performance_id, performance_qtyimport, product_id, time });
                 }
                 else if (Connected)
                 {
                     timer.Enabled = true;
                     timer.Start();
-                    Writer(netStream, new object[] { 1, performance_id, performance_qtyimport, product_id, time });
+                    Writer(netStream, new object[] { performance_id, performance_qtyimport, product_id, time });
 
                 }
                 else
@@ -120,7 +120,6 @@ namespace UMB_POP.Back
             catch (Exception ex)
             {
                 WriteLog(ex);
-                ErrorMessage(ex);
                 return client.Connected;
             }
         }
@@ -153,7 +152,7 @@ namespace UMB_POP.Back
             }
         }
 
-        // 서버에 송신메서드 (생산 실적아이디를 생산 기계로 넘겨줌)
+        // 서버에 송신메서드
         public void Writer(Stream stream, object[] objArr)
         {
             try
@@ -172,7 +171,6 @@ namespace UMB_POP.Back
             catch (Exception ex)
             {
                 WriteLog(ex);
-                ErrorMessage(ex);
             }
         }
 
@@ -180,12 +178,11 @@ namespace UMB_POP.Back
         {
             try
             {
-                Writer(netStream, new object[] { 0, performance_id, product_id, performance_qtyimport, time});
+                Writer(netStream, new object[] { performance_id, product_id, performance_qtyimport, time});
             }
             catch (Exception ex)
             {
                 WriteLog(ex);
-                ErrorMessage(ex);
                 DisConnected();
             }
         }
@@ -246,40 +243,9 @@ namespace UMB_POP.Back
             }
             catch(Exception ex)
             {
-                WriteLog(ex);
-                ErrorMessage(ex);
+                WriteLog(ex);               
             }
-        }
-        private void ErrorMessage(Exception ex)
-        {
-            WriteLog(ex);
-            FormCollection frms = Application.OpenForms;
-            for (int i = 0; i < frms.Count; i++)
-            {
-                if (frms[i] == null)
-                {
-                    i++;
-                    continue;
-                }
-                if (frms[i] is frmPOP)
-                {
-                    frmPOP pop = (frmPOP)frms[i];                    
-                    if (pop.WorkInfo.performance_id == performance_id)
-                    {
-                        ReceiveEventArgs e = new ReceiveEventArgs();
-                        e.Message = string.Join("오류", ex.Message);
-                        e.LineID = performance_id;
-                        e.IsCompleted = false;
-
-                        if (!pop.IsDisposed)
-                        {
-                            if (Received != null)
-                                Received.Invoke(this, e);
-                        }
-                    }
-                }
-            }
-        }
+        }        
 
         private void WriteLog(Exception ex)
         {
