@@ -117,7 +117,7 @@ namespace Team6_UMB.Forms.BMN
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(47, 18);
             this.label4.TabIndex = 24;
-            this.label4.Text = "제품명";
+            this.label4.Text = "품목명";
             // 
             // label2
             // 

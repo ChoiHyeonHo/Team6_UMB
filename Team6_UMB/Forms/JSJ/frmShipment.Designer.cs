@@ -119,7 +119,7 @@
             this.periodSearchControl1.dtFrom = "2021-01-16";
             this.periodSearchControl1.dtTo = "2021-01-23";
             this.periodSearchControl1.Font = new System.Drawing.Font("돋움", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.periodSearchControl1.Location = new System.Drawing.Point(293, 14);
+            this.periodSearchControl1.Location = new System.Drawing.Point(306, 14);
             this.periodSearchControl1.Name = "periodSearchControl1";
             this.periodSearchControl1.Size = new System.Drawing.Size(301, 29);
             this.periodSearchControl1.TabIndex = 23;
@@ -128,7 +128,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("나눔바른고딕", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label3.Location = new System.Drawing.Point(240, 19);
+            this.label3.Location = new System.Drawing.Point(253, 19);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(47, 17);
             this.label3.TabIndex = 0;
@@ -140,9 +140,9 @@
             this.label2.Font = new System.Drawing.Font("나눔바른고딕", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.label2.Location = new System.Drawing.Point(6, 19);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(34, 17);
+            this.label2.Size = new System.Drawing.Size(47, 17);
             this.label2.TabIndex = 0;
-            this.label2.Text = "업체";
+            this.label2.Text = "업체명";
             // 
             // button3
             // 
@@ -150,7 +150,7 @@
             this.button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.button3.FlatAppearance.BorderSize = 0;
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Location = new System.Drawing.Point(600, 12);
+            this.button3.Location = new System.Drawing.Point(613, 12);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(34, 30);
             this.button3.TabIndex = 22;
@@ -159,7 +159,7 @@
             // maskedTextBox1
             // 
             this.maskedTextBox1.Font = new System.Drawing.Font("나눔바른고딕", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.maskedTextBox1.Location = new System.Drawing.Point(43, 15);
+            this.maskedTextBox1.Location = new System.Drawing.Point(56, 15);
             this.maskedTextBox1.Name = "maskedTextBox1";
             this.maskedTextBox1.Size = new System.Drawing.Size(176, 25);
             this.maskedTextBox1.TabIndex = 1;

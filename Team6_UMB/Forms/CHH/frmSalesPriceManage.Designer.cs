@@ -158,7 +158,7 @@ namespace Team6_UMB.Forms
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(47, 18);
             this.label3.TabIndex = 22;
-            this.label3.Text = "제품명";
+            this.label3.Text = "품목명";
             // 
             // label2
             // 
