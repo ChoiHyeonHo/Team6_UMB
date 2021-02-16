@@ -151,7 +151,7 @@
             this.dgvDepartment.RowHeadersWidth = 51;
             this.dgvDepartment.RowTemplate.Height = 23;
             this.dgvDepartment.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.dgvDepartment.Size = new System.Drawing.Size(1094, 800);
+            this.dgvDepartment.Size = new System.Drawing.Size(964, 894);
             this.dgvDepartment.TabIndex = 46;
             this.dgvDepartment.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvDepartment_CellClick);
             // 
@@ -173,31 +173,31 @@
             this.dgvMenu.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvMenu.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.dgvMenu.GridColor = System.Drawing.Color.LightGray;
-            this.dgvMenu.Location = new System.Drawing.Point(1114, 141);
+            this.dgvMenu.Location = new System.Drawing.Point(984, 141);
             this.dgvMenu.Margin = new System.Windows.Forms.Padding(4, 1, 4, 1);
             this.dgvMenu.MinimumSize = new System.Drawing.Size(150, 150);
             this.dgvMenu.Name = "dgvMenu";
             this.dgvMenu.RowHeadersWidth = 51;
             this.dgvMenu.RowTemplate.Height = 23;
             this.dgvMenu.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.dgvMenu.Size = new System.Drawing.Size(409, 800);
+            this.dgvMenu.Size = new System.Drawing.Size(535, 894);
             this.dgvMenu.TabIndex = 47;
             // 
             // newBtns1
             // 
-            this.newBtns1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.newBtns1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(52)))), ((int)(((byte)(79)))));
-            this.newBtns1.Location = new System.Drawing.Point(739, 2);
+            this.newBtns1.Dock = System.Windows.Forms.DockStyle.Right;
+            this.newBtns1.Location = new System.Drawing.Point(741, 0);
             this.newBtns1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.newBtns1.Name = "newBtns1";
-            this.newBtns1.Size = new System.Drawing.Size(770, 33);
+            this.newBtns1.Size = new System.Drawing.Size(770, 35);
             this.newBtns1.TabIndex = 2;
             this.newBtns1.btnUpdate_Event += new System.EventHandler(this.newBtns1_btnUpdate_Event);
             // 
             // frmAuthority
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
-            this.ClientSize = new System.Drawing.Size(1488, 856);
+            this.ClientSize = new System.Drawing.Size(1535, 950);
             this.Controls.Add(this.dgvMenu);
             this.Controls.Add(this.dgvDepartment);
             this.Controls.Add(this.panel2);

@@ -25,7 +25,7 @@ namespace Team6_UMB.Forms.BMN
 
             newBtns1.btnCreate.Visible = newBtns1.btnDelete.Visible = newBtns1.btnUpdate.Visible =
                 newBtns1.btnBarCode.Visible = newBtns1.btnDocument.Visible = newBtns1.btnSearch.Visible = newBtns1.btnBarCode.Visible =
-                newBtns1.btnShipment.Visible = newBtns1.btnWait.Visible = false;
+                newBtns1.btnShipment.Visible = newBtns1.btnWait.Visible = newBtns1.btnPrint.Visible = false;
 
             periodSearchControl.dtFrom = DateTime.Now.AddDays(-7).ToString();
             periodSearchControl.dtTo = DateTime.Now.ToString();

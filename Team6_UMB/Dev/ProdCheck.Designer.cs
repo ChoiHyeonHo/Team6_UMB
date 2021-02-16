@@ -38,9 +38,6 @@ namespace Team6_UMB.Dev
             this.ReportHeader = new DevExpress.XtraReports.UI.ReportHeaderBand();
             this.xrLabel1 = new DevExpress.XtraReports.UI.XRLabel();
             this.PageHeader = new DevExpress.XtraReports.UI.PageHeaderBand();
-            this.DetailReport = new DevExpress.XtraReports.UI.DetailReportBand();
-            this.Detail1 = new DevExpress.XtraReports.UI.DetailBand();
-            this.sqlDataSource1 = new DevExpress.DataAccess.Sql.SqlDataSource(this.components);
             this.xrTable1 = new DevExpress.XtraReports.UI.XRTable();
             this.xrTableRow1 = new DevExpress.XtraReports.UI.XRTableRow();
             this.xrTableCell1 = new DevExpress.XtraReports.UI.XRTableCell();
@@ -50,6 +47,8 @@ namespace Team6_UMB.Dev
             this.xrTableCell7 = new DevExpress.XtraReports.UI.XRTableCell();
             this.xrTableCell11 = new DevExpress.XtraReports.UI.XRTableCell();
             this.xrTableCell6 = new DevExpress.XtraReports.UI.XRTableCell();
+            this.DetailReport = new DevExpress.XtraReports.UI.DetailReportBand();
+            this.Detail1 = new DevExpress.XtraReports.UI.DetailBand();
             this.xrTable2 = new DevExpress.XtraReports.UI.XRTable();
             this.xrTableRow2 = new DevExpress.XtraReports.UI.XRTableRow();
             this.xrTableCell5 = new DevExpress.XtraReports.UI.XRTableCell();
@@ -59,6 +58,7 @@ namespace Team6_UMB.Dev
             this.xrTableCell12 = new DevExpress.XtraReports.UI.XRTableCell();
             this.xrTableCell13 = new DevExpress.XtraReports.UI.XRTableCell();
             this.xrTableCell14 = new DevExpress.XtraReports.UI.XRTableCell();
+            this.sqlDataSource1 = new DevExpress.DataAccess.Sql.SqlDataSource(this.components);
             this.PageFooter = new DevExpress.XtraReports.UI.PageFooterBand();
             this.xrLabel3 = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabel2 = new DevExpress.XtraReports.UI.XRLabel();
@@ -115,7 +115,7 @@ namespace Team6_UMB.Dev
             this.xrLabel1.StylePriority.UseFont = false;
             this.xrLabel1.StylePriority.UseForeColor = false;
             this.xrLabel1.StylePriority.UseTextAlignment = false;
-            this.xrLabel1.Text = "출하검사";
+            this.xrLabel1.Text = "제품검사";
             this.xrLabel1.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter;
             // 
             // PageHeader
@@ -125,34 +125,6 @@ namespace Team6_UMB.Dev
             this.PageHeader.Dpi = 254F;
             this.PageHeader.HeightF = 95.25004F;
             this.PageHeader.Name = "PageHeader";
-            // 
-            // DetailReport
-            // 
-            this.DetailReport.Bands.AddRange(new DevExpress.XtraReports.UI.Band[] {
-            this.Detail1});
-            this.DetailReport.DataSource = this.sqlDataSource1;
-            this.DetailReport.Dpi = 254F;
-            this.DetailReport.Level = 0;
-            this.DetailReport.Name = "DetailReport";
-            // 
-            // Detail1
-            // 
-            this.Detail1.Controls.AddRange(new DevExpress.XtraReports.UI.XRControl[] {
-            this.xrTable2});
-            this.Detail1.Dpi = 254F;
-            this.Detail1.HeightF = 95.25004F;
-            this.Detail1.HierarchyPrintOptions.Indent = 50.8F;
-            this.Detail1.Name = "Detail1";
-            // 
-            // sqlDataSource1
-            // 
-            this.sqlDataSource1.ConnectionName = "Connection_ProdStatus";
-            this.sqlDataSource1.Name = "sqlDataSource1";
-            customSqlQuery1.Name = "Query";
-            customSqlQuery1.Sql = resources.GetString("customSqlQuery1.Sql");
-            this.sqlDataSource1.Queries.AddRange(new DevExpress.DataAccess.Sql.SqlQuery[] {
-            customSqlQuery1});
-            this.sqlDataSource1.ResultSchemaSerializable = resources.GetString("sqlDataSource1.ResultSchemaSerializable");
             // 
             // xrTable1
             // 
@@ -206,7 +178,7 @@ namespace Team6_UMB.Dev
             this.xrTableCell2.Multiline = true;
             this.xrTableCell2.Name = "xrTableCell2";
             this.xrTableCell2.Text = "출하번호";
-            this.xrTableCell2.Weight = 0.60486565330244457D;
+            this.xrTableCell2.Weight = 0.5655633310870628D;
             // 
             // xrTableCell3
             // 
@@ -214,7 +186,7 @@ namespace Team6_UMB.Dev
             this.xrTableCell3.Multiline = true;
             this.xrTableCell3.Name = "xrTableCell3";
             this.xrTableCell3.Text = "품목명";
-            this.xrTableCell3.Weight = 0.68865138236090928D;
+            this.xrTableCell3.Weight = 0.83013994179765627D;
             // 
             // xrTableCell4
             // 
@@ -222,7 +194,7 @@ namespace Team6_UMB.Dev
             this.xrTableCell4.Multiline = true;
             this.xrTableCell4.Name = "xrTableCell4";
             this.xrTableCell4.Text = "생산상태";
-            this.xrTableCell4.Weight = 0.63935983659414919D;
+            this.xrTableCell4.Weight = 0.62363883517658825D;
             // 
             // xrTableCell7
             // 
@@ -230,7 +202,7 @@ namespace Team6_UMB.Dev
             this.xrTableCell7.Multiline = true;
             this.xrTableCell7.Name = "xrTableCell7";
             this.xrTableCell7.Text = "구성품";
-            this.xrTableCell7.Weight = 0.52931282667122259D;
+            this.xrTableCell7.Weight = 0.6708007514581471D;
             // 
             // xrTableCell11
             // 
@@ -238,7 +210,7 @@ namespace Team6_UMB.Dev
             this.xrTableCell11.Multiline = true;
             this.xrTableCell11.Name = "xrTableCell11";
             this.xrTableCell11.Text = "포장";
-            this.xrTableCell11.Weight = 0.6105788355629036D;
+            this.xrTableCell11.Weight = 0.67346247857610608D;
             // 
             // xrTableCell6
             // 
@@ -246,7 +218,25 @@ namespace Team6_UMB.Dev
             this.xrTableCell6.Multiline = true;
             this.xrTableCell6.Name = "xrTableCell6";
             this.xrTableCell6.Text = "비고";
-            this.xrTableCell6.Weight = 2.009991429839102D;
+            this.xrTableCell6.Weight = 1.7191546262351707D;
+            // 
+            // DetailReport
+            // 
+            this.DetailReport.Bands.AddRange(new DevExpress.XtraReports.UI.Band[] {
+            this.Detail1});
+            this.DetailReport.DataSource = this.sqlDataSource1;
+            this.DetailReport.Dpi = 254F;
+            this.DetailReport.Level = 0;
+            this.DetailReport.Name = "DetailReport";
+            // 
+            // Detail1
+            // 
+            this.Detail1.Controls.AddRange(new DevExpress.XtraReports.UI.XRControl[] {
+            this.xrTable2});
+            this.Detail1.Dpi = 254F;
+            this.Detail1.HeightF = 95.25004F;
+            this.Detail1.HierarchyPrintOptions.Indent = 50.8F;
+            this.Detail1.Name = "Detail1";
             // 
             // xrTable2
             // 
@@ -304,7 +294,7 @@ namespace Team6_UMB.Dev
             this.xrTableCell8.Multiline = true;
             this.xrTableCell8.Name = "xrTableCell8";
             this.xrTableCell8.Text = "출하번호";
-            this.xrTableCell8.Weight = 0.60486565330244457D;
+            this.xrTableCell8.Weight = 0.56556763763942985D;
             // 
             // xrTableCell9
             // 
@@ -314,7 +304,7 @@ namespace Team6_UMB.Dev
             this.xrTableCell9.Multiline = true;
             this.xrTableCell9.Name = "xrTableCell9";
             this.xrTableCell9.Text = "품목명";
-            this.xrTableCell9.Weight = 0.68865138236090928D;
+            this.xrTableCell9.Weight = 0.830135589913159D;
             // 
             // xrTableCell10
             // 
@@ -324,7 +314,7 @@ namespace Team6_UMB.Dev
             this.xrTableCell10.Multiline = true;
             this.xrTableCell10.Name = "xrTableCell10";
             this.xrTableCell10.Text = "생산상태";
-            this.xrTableCell10.Weight = 0.63935983659414919D;
+            this.xrTableCell10.Weight = 0.62363883517658814D;
             // 
             // xrTableCell12
             // 
@@ -334,7 +324,7 @@ namespace Team6_UMB.Dev
             this.xrTableCell12.Multiline = true;
             this.xrTableCell12.Name = "xrTableCell12";
             this.xrTableCell12.Text = "구성품";
-            this.xrTableCell12.Weight = 0.52931282667122259D;
+            this.xrTableCell12.Weight = 0.6708007514581471D;
             // 
             // xrTableCell13
             // 
@@ -344,7 +334,7 @@ namespace Team6_UMB.Dev
             this.xrTableCell13.Multiline = true;
             this.xrTableCell13.Name = "xrTableCell13";
             this.xrTableCell13.Text = "포장";
-            this.xrTableCell13.Weight = 0.6105788355629036D;
+            this.xrTableCell13.Weight = 0.67346252390823624D;
             // 
             // xrTableCell14
             // 
@@ -354,7 +344,17 @@ namespace Team6_UMB.Dev
             this.xrTableCell14.Multiline = true;
             this.xrTableCell14.Name = "xrTableCell14";
             this.xrTableCell14.Text = "비고";
-            this.xrTableCell14.Weight = 2.009991429839102D;
+            this.xrTableCell14.Weight = 1.7191546262351707D;
+            // 
+            // sqlDataSource1
+            // 
+            this.sqlDataSource1.ConnectionName = "Connection_ProdStatus";
+            this.sqlDataSource1.Name = "sqlDataSource1";
+            customSqlQuery1.Name = "Query";
+            customSqlQuery1.Sql = resources.GetString("customSqlQuery1.Sql");
+            this.sqlDataSource1.Queries.AddRange(new DevExpress.DataAccess.Sql.SqlQuery[] {
+            customSqlQuery1});
+            this.sqlDataSource1.ResultSchemaSerializable = resources.GetString("sqlDataSource1.ResultSchemaSerializable");
             // 
             // PageFooter
             // 

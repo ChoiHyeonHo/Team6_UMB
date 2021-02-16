@@ -39,7 +39,7 @@ namespace UMB_DAC.CHH
         {
             try
             {
-                string sql = @"select * from ProdCheck where ship_state = '검사대기'";
+                string sql = @"select * from ProdCheck where production_state = '작업종료'";
 
                 using (SqlCommand cmd = new SqlCommand(sql, conn))
                 {

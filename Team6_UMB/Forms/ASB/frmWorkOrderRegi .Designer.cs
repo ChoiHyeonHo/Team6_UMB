@@ -164,7 +164,7 @@ namespace Team6_UMB.Forms
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(114, 25);
             this.label1.TabIndex = 1;
-            this.label1.Text = "작업지시 등록";
+            this.label1.Text = "작업지시 현황";
             // 
             // panel1
             // 
