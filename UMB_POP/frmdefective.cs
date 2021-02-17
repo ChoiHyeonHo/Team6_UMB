@@ -19,9 +19,8 @@ namespace UMB_POP
         int performance_id, common_id ,count;
         public frmdefective(int performance_id)
         {
-            lblper.Text = performance_id.ToString();
-
             InitializeComponent();
+            lblper.Text = performance_id.ToString();
         }
 
         private void frmdefective_Load(object sender, EventArgs e)

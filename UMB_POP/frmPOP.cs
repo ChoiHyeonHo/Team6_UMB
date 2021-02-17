@@ -34,7 +34,9 @@ namespace UMB_POP
         System.Timers.Timer timer2;
         POPClient client;
         WorkStart ws;
-        
+
+        delegate void CrossThreadSafetySetText();
+
         public PerformanceVO WorkInfo { get; set; }
 
         public frmPOP()
@@ -97,6 +99,7 @@ namespace UMB_POP
             DGV_Binding();
             changePeriod();
             GetTime();
+            performance_qty_ok = performance_qty_ng = count = 0;
         }
 
         private void GetTime()
@@ -116,23 +119,38 @@ namespace UMB_POP
             
         }
 
-        private void ctimer_Elapsed(object sender, ElapsedEventArgs e)
+        private void ctimerCotrol()
         {
             if (int.Parse(txtpcount.Text) == int.Parse(txtcount.Text))
             {
                 CompleteProduction();
+                if (this.btnNg.InvokeRequired)
+                {
+                    btnNg.Invoke(new CrossThreadSafetySetText(ctimerCotrol));
+                }
                 btnNg.Enabled = true;
                 timer2.Stop();
 
             }
             if (client.Connected)
-            {                
-                txtcount.Text = count.ToString();
-                txtok.Text = performance_qty_ok.ToString();
-                txtng.Text = performance_qty_ng.ToString();
-                count++;
-                performance_qty_ok++;
+            {
+                if (this.txtcount.InvokeRequired && this.txtok.InvokeRequired && this.txtng.InvokeRequired)
+                {
+                    txtcount.Invoke(new CrossThreadSafetySetText(ctimerCotrol));
+                }
+                else
+                {
+                    txtpcount.Text = count++.ToString();
+                    txtok.Text = performance_qty_ok++.ToString();
+                    txtng.Text = performance_qty_ng.ToString();
+                }
+
             }
+        }
+
+        private void ctimer_Elapsed(object sender, ElapsedEventArgs e)
+        {
+            ctimerCotrol();
         }
 
         private void timer_Elapsed(object sender, ElapsedEventArgs e)
@@ -254,8 +272,7 @@ namespace UMB_POP
                     //서버와 연결된 경우 (정상실행)
                     else
                     {
-                        MessageBox.Show("서버와 연결되었습니다.");
-                        performance_qty_ok = performance_qty_ng = count = 0;
+                        MessageBox.Show("서버와 연결되었습니다.");                        
                         tacttime = service.setTacttime(product_id);
                         GetCount();
                     }
