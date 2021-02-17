@@ -56,6 +56,8 @@ namespace UMB_POP
             this.txtProcessName = new System.Windows.Forms.TextBox();
             this.txtcount = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.lblwo = new System.Windows.Forms.Label();
+            this.lblProduction = new System.Windows.Forms.Label();
             this.txtpcount = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
             this.txtProductID = new System.Windows.Forms.TextBox();
@@ -69,8 +71,6 @@ namespace UMB_POP
             this.lblUser = new System.Windows.Forms.Label();
             this.lb_time = new System.Windows.Forms.Label();
             this.button4 = new System.Windows.Forms.Button();
-            this.lblProduction = new System.Windows.Forms.Label();
-            this.lblwo = new System.Windows.Forms.Label();
             this.TabDGV.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvWaitWork)).BeginInit();
@@ -406,6 +406,26 @@ namespace UMB_POP
             this.groupBox1.TabIndex = 9;
             this.groupBox1.TabStop = false;
             // 
+            // lblwo
+            // 
+            this.lblwo.AutoSize = true;
+            this.lblwo.Location = new System.Drawing.Point(1496, 135);
+            this.lblwo.Name = "lblwo";
+            this.lblwo.Size = new System.Drawing.Size(89, 25);
+            this.lblwo.TabIndex = 9;
+            this.lblwo.Text = "label12";
+            this.lblwo.Visible = false;
+            // 
+            // lblProduction
+            // 
+            this.lblProduction.AutoSize = true;
+            this.lblProduction.Location = new System.Drawing.Point(1414, 135);
+            this.lblProduction.Name = "lblProduction";
+            this.lblProduction.Size = new System.Drawing.Size(76, 25);
+            this.lblProduction.TabIndex = 8;
+            this.lblProduction.Text = "label1";
+            this.lblProduction.Visible = false;
+            // 
             // txtpcount
             // 
             this.txtpcount.BackColor = System.Drawing.Color.Gainsboro;
@@ -496,6 +516,7 @@ namespace UMB_POP
             // btnNg
             // 
             this.btnNg.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnNg.Enabled = false;
             this.btnNg.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Bold);
             this.btnNg.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnNg.ImageKey = "ZZZZZZZZZ.png";
@@ -564,26 +585,6 @@ namespace UMB_POP
             this.button4.Text = "조회";
             this.button4.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.button4.UseVisualStyleBackColor = false;
-            // 
-            // lblProduction
-            // 
-            this.lblProduction.AutoSize = true;
-            this.lblProduction.Location = new System.Drawing.Point(1414, 135);
-            this.lblProduction.Name = "lblProduction";
-            this.lblProduction.Size = new System.Drawing.Size(76, 25);
-            this.lblProduction.TabIndex = 8;
-            this.lblProduction.Text = "label1";
-            this.lblProduction.Visible = false;
-            // 
-            // lblwo
-            // 
-            this.lblwo.AutoSize = true;
-            this.lblwo.Location = new System.Drawing.Point(1496, 135);
-            this.lblwo.Name = "lblwo";
-            this.lblwo.Size = new System.Drawing.Size(89, 25);
-            this.lblwo.TabIndex = 9;
-            this.lblwo.Text = "label12";
-            this.lblwo.Visible = false;
             // 
             // frmPOP
             // 
