@@ -467,7 +467,6 @@ namespace Team6_UMB
         #region ASB 폼
         private void btn1_1_Click(object sender, EventArgs e)
         {
-            //this.btn1_1.FlatAppearance.MouseOverBackColor = Color.DarkGray;
             this.btn1_1.BackColor = Color.White;
             this.btn1_1.ForeColor = Color.Black;
             this.btn1_2.BackColor = this.btn1_3.BackColor = this.btn1_4.BackColor = this.btn1_5.BackColor = this.btn1_6.BackColor = this.btn1_7.BackColor = Color.Transparent;
@@ -997,10 +996,6 @@ namespace Team6_UMB
             }
             AuthorityService service = new AuthorityService();
             MenuList = service.MenuCheck(LoginVO.user.Department);
-        }
-
-        private void btnMain1_MouseUp(object sender, MouseEventArgs e)
-        {
         }
     }
 }
