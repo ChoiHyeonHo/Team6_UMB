@@ -82,7 +82,7 @@ namespace UMB_WEBAPI.DAC
                     SqlDataReader reader = cmd.ExecuteReader();
                     while (reader.Read())
                     {
-                        model.production_edate = Convert.ToInt32(reader["production_edate"]);
+                        model.production_edate = reader["production_edate"].ToString();
                         model.performance_qty_ng = Convert.ToInt32(reader["performance_qty_ng"]);
                         model.performance_qty_ok = Convert.ToInt32(reader["performance_qty_ok"]);
                         model.ng_rate = Convert.ToInt32(reader["ng_rate"]);
@@ -103,11 +103,11 @@ namespace UMB_WEBAPI.DAC
         public List<Performance> GetPerList()
         {
             string sql = @"select *, (100 * performance_qty_ng / (performance_qty_ng + performance_qty_ok)) growth_rate from(
-						   select datepart(month,production_edate) production_edate, sum(performance_qty_ng) performance_qty_ng, sum(performance_qty_ok) performance_qty_ok, (100 * sum(performance_qty_ng) / (sum(performance_qty_ng) + sum(performance_qty_ok))) ng_rate
+						   select concat(datepart(YEAR, production_edate), datepart(MONTH, production_edate)) production_edate, sum(performance_qty_ng) performance_qty_ng, sum(performance_qty_ok) performance_qty_ok, (100 * sum(performance_qty_ng) / (sum(performance_qty_ng) + sum(performance_qty_ok))) ng_rate
 						   from performanceList 
-						   group by datepart(month,production_edate)
+						   group by concat(datepart(YEAR, production_edate), datepart(MONTH, production_edate))
 						   ) as A
-						   where production_edate = datepart(month, getdate())";
+						   order by production_edate";
 
             using (SqlCommand cmd = new SqlCommand(sql, conn))
             {
