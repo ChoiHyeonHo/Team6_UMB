@@ -121,7 +121,9 @@ namespace UMB_POP
             if (int.Parse(txtpcount.Text) == int.Parse(txtcount.Text))
             {
                 CompleteProduction();
-                MessageBox.Show("생산완료");                
+                btnNg.Enabled = true;
+                timer2.Stop();
+
             }
             if (client.Connected)
             {                
@@ -320,7 +322,8 @@ namespace UMB_POP
 
         private void btnNg_Click(object sender, EventArgs e)
         {
-
+            frmdefective frm = new frmdefective(performance_id);
+            frm.ShowDialog();
         }
 
         private void btnPeriodSearch_Click(object sender, EventArgs e)

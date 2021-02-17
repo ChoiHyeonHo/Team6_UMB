@@ -18,7 +18,7 @@ namespace UMB_POP
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmPOP());
+            Application.Run(new login());
         }
 
         private static LoggingUtility _logging = LoggingUtility.GetLoggingUtility("TEAM2_POP", Level.Debug);

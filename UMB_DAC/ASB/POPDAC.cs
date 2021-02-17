@@ -84,12 +84,12 @@ namespace UMB_DAC.ASB
                 cmd.Connection = conn;
                 try
                 {
-                    cmd.CommandText = @"update TBL_WORK_ORDER set wo_state = '작업완료'
+                    cmd.CommandText = @"update TBL_WORK_ORDER set wo_state = '작업종료'
                             where wo_id = @wo_id";
                     cmd.Parameters.AddWithValue("@wo_id", woid);
                     cmd.ExecuteNonQuery();
 
-                    cmd.CommandText = @"update TBL_Production set production_state = '작업완료'
+                    cmd.CommandText = @"update TBL_Production set production_state = '작업종료'
                              where production_id = @product_id ";
                     cmd.Parameters.AddWithValue("@product_id", pid);
                     cmd.ExecuteNonQuery();
