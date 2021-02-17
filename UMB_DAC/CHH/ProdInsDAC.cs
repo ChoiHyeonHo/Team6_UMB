@@ -67,9 +67,7 @@ namespace UMB_DAC.CHH
             {
                 string sql = $@"select cl_ship_id, S.ship_id, P.product_name, cl_ship_Components, cl_ship_Packing, etc, production_state
                         from TBL_SHIP_CHECKLIST S join ProdCheck P on S.ship_id = P.ship_id
-                        where S.ship_id in ({temp}) and production_state = '작업종료' 
-                        and (cl_ship_Components = '미실시' or cl_ship_Components = '불량')
-                        or (cl_ship_Packing = '미실시' or cl_ship_Packing = '불량')";
+                        where S.ship_id in ({temp}) and production_state = '작업종료'";
 
                 using (SqlCommand cmd = new SqlCommand(sql, conn))
                 {
