@@ -75,6 +75,35 @@ namespace UMB_DAC.ASB
             }
         }
 
+        public void CompleteProduction(int pid)
+        {
+            using (SqlCommand cmd = new SqlCommand())
+            {
+                SqlTransaction tran = conn.BeginTransaction();
+                cmd.Transaction = tran;
+                cmd.Connection = conn;
+                try
+                {
+                    cmd.CommandText = @"update TBL_performance set performance_qty_ok = performance_qtyimport
+                            where production_id = @pid";
+                    cmd.Parameters.AddWithValue("@pid", pid);
+                    cmd.ExecuteNonQuery();
+
+                    cmd.CommandText = @"update TBL_Production set production_QtyReleased = production_QtyRequested
+                                where production_id = @pid2";
+                    cmd.Parameters.AddWithValue("@pid2", pid);
+                    cmd.ExecuteNonQuery();
+                    tran.Commit();
+                    Dispose();
+                    
+                }
+                catch (Exception ex)
+                {
+                    tran.Rollback();                    
+                }
+            }
+        }
+
         public bool ChangeWPState(int pid, int woid)
         {
             using (SqlCommand cmd = new SqlCommand())

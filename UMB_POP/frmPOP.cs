@@ -114,9 +114,7 @@ namespace UMB_POP
             MessageBox.Show("생산시작");
             timer2 = new System.Timers.Timer(1000*tacttime);
             timer2.Elapsed += new ElapsedEventHandler(ctimer_Elapsed);
-            timer2.Start();
-
-            
+            timer2.Start();   
         }
 
         private void ctimerCotrol()
@@ -124,28 +122,25 @@ namespace UMB_POP
             if (int.Parse(txtpcount.Text) == int.Parse(txtcount.Text))
             {
                 CompleteProduction();
-                if (this.btnNg.InvokeRequired)
-                {
-                    btnNg.Invoke(new CrossThreadSafetySetText(ctimerCotrol));
-                }
-                btnNg.Enabled = true;
                 timer2.Stop();
-
             }
-            if (client.Connected)
+            else
             {
-                if (this.txtcount.InvokeRequired && this.txtok.InvokeRequired && this.txtng.InvokeRequired)
+                if (client.Connected)
                 {
-                    txtcount.Invoke(new CrossThreadSafetySetText(ctimerCotrol));
+                    if (this.txtcount.InvokeRequired && this.txtok.InvokeRequired && this.txtng.InvokeRequired)
+                    {
+                        txtcount.Invoke(new CrossThreadSafetySetText(ctimerCotrol));
+                    }
+                    else
+                    {
+                        txtpcount.Text = count++.ToString();
+                        txtok.Text = performance_qty_ok++.ToString();
+                        txtng.Text = performance_qty_ng.ToString();
+                    }
                 }
-                else
-                {
-                    txtpcount.Text = count++.ToString();
-                    txtok.Text = performance_qty_ok++.ToString();
-                    txtng.Text = performance_qty_ng.ToString();
-                }
-
             }
+            
         }
 
         private void ctimer_Elapsed(object sender, ElapsedEventArgs e)
@@ -185,29 +180,48 @@ namespace UMB_POP
             //작업지시 , 생산 state > 생산완료
             int pid = int.Parse(lblProduction.Text);
             int woid = int.Parse(lblwo.Text);
-
+            if (this.btnNg.InvokeRequired)
+            {
+                btnNg.Invoke(new CrossThreadSafetySetText(ctimerCotrol));
+            }
+            btnNg.Enabled = true;
             POPService service = new POPService();
             bool result = service.ChangeWPState(pid, woid);
+
+            service.CompleteProduction(pid);
             if (result)
             {
                 MessageBox.Show("작업완료");
+                DGV_Binding();
+                changePeriod();
             }
 
         }
 
         private void DGV_Binding()
         {
-            POPService serviceWa = new POPService();
-            waitList = serviceWa.GetWaitPerList();
-            dgvWaitWork.DataSource = waitList;
 
-            POPService serviceW = new POPService();
-            workList = serviceW.GetWorkPerList();
-            dgvWorking.DataSource = workList;
+            if (this.dgvWaitWork.InvokeRequired && this.dgvWorking.InvokeRequired && this.dgvEndWork.InvokeRequired)
+            {
+                dgvWaitWork.Invoke(new CrossThreadSafetySetText(DGV_Binding));
+                dgvWorking.Invoke(new CrossThreadSafetySetText(DGV_Binding));
+                dgvEndWork.Invoke(new CrossThreadSafetySetText(DGV_Binding));
+            }
+            else
+            {
+                POPService serviceWa = new POPService();
+                waitList = serviceWa.GetWaitPerList();
+                dgvWaitWork.DataSource = waitList;
 
-            POPService serviceE = new POPService();
-            endList = serviceE.GetEndPerList();
-            dgvEndWork.DataSource = endList;
+                POPService serviceW = new POPService();
+                workList = serviceW.GetWorkPerList();
+                dgvWorking.DataSource = workList;
+
+                POPService serviceE = new POPService();
+                endList = serviceE.GetEndPerList();
+                dgvEndWork.DataSource = endList;
+            }
+            
 
         }
 
@@ -257,7 +271,7 @@ namespace UMB_POP
                     bool bresult = service.updatePOP(wo_id, production_id);
                     if (!bresult) return;
                     DGV_Binding();
-                    btnPeriodSearch.PerformClick();
+                    changePeriod();
                     //서버와 연결되어있지 않은경우
                     if (!client.Connected)
                     {
@@ -275,6 +289,7 @@ namespace UMB_POP
                         MessageBox.Show("서버와 연결되었습니다.");                        
                         tacttime = service.setTacttime(product_id);
                         GetCount();
+
                     }
                 }                
                 else
@@ -351,33 +366,43 @@ namespace UMB_POP
 
         private void changePeriod()
         {
-            if (dgvWaitWork.DataSource != null)
+            if (this.dgvWaitWork.InvokeRequired && this.dgvWorking.InvokeRequired && this.dgvEndWork.InvokeRequired)
             {
-                string FromDate = dtpstart.Value.ToShortDateString();
-
-                List<PerformanceVO> list = (from wa in waitList
-                                                     where FromDate == wa.production_sdate
-                                                     select wa).ToList();
-                dgvWaitWork.DataSource = list;
+                dgvWaitWork.Invoke(new CrossThreadSafetySetText(changePeriod));
+                dgvWorking.Invoke(new CrossThreadSafetySetText(changePeriod));
+                dgvEndWork.Invoke(new CrossThreadSafetySetText(changePeriod));
             }
-            if (dgvWorking.DataSource != null)
+            else
             {
-                string FromDate = dtpstart.Value.ToShortDateString();
+                if (dgvWaitWork.DataSource != null)
+                {
+                    string FromDate = dtpstart.Value.ToShortDateString();
 
-                List<PerformanceVO> list = (from wa in workList
-                                                     where FromDate == wa.production_sdate
-                                                     select wa).ToList();
-                dgvWorking.DataSource = list;
-            }
-            if (dgvEndWork.DataSource != null)
-            {
-                string FromDate = dtpstart.Value.ToShortDateString();
+                    List<PerformanceVO> list = (from wa in waitList
+                                                where FromDate == wa.production_sdate
+                                                select wa).ToList();
+                    dgvWaitWork.DataSource = list;
+                }
+                if (dgvWorking.DataSource != null)
+                {
+                    string FromDate = dtpstart.Value.ToShortDateString();
 
-                List<PerformanceVO> list = (from wa in endList
-                                                     where FromDate == wa.production_sdate
-                                                     select wa).ToList();
-                dgvEndWork.DataSource = list;
+                    List<PerformanceVO> list = (from wa in workList
+                                                where FromDate == wa.production_sdate
+                                                select wa).ToList();
+                    dgvWorking.DataSource = list;
+                }
+                if (dgvEndWork.DataSource != null)
+                {
+                    string FromDate = dtpstart.Value.ToShortDateString();
+
+                    List<PerformanceVO> list = (from wa in endList
+                                                where FromDate == wa.production_sdate
+                                                select wa).ToList();
+                    dgvEndWork.DataSource = list;
+                }
             }
+   
         }
 
         private void WriteLog(Exception ex)

@@ -53,5 +53,11 @@ namespace UMB_POP.Service
             return dac.ChangeWPState(pid, woid);
 
         }
+
+        internal void CompleteProduction(int pid)
+        {
+            POPDAC dac = new POPDAC();
+            dac.CompleteProduction(pid);
+        }
     }
 }
