@@ -8,7 +8,6 @@ namespace UMB_VO
 {
     public class ShipmentVO
     {
-        public int so_id { get; set; }
         public int ship_id { get; set; }
         public string product_id { get; set; }
         public string product_name { get; set; }
