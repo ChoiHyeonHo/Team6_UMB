@@ -45,21 +45,64 @@ namespace UMB_DAC.ASB
             return time;
         }
 
-        public bool updatePOP(int wo_id)
+        public bool updatePOP(int wo_id, int production_id)
         {
-            int result;
-            string sql = @"update TBL_WORK_ORDER set wo_state = '작업중'
-                            where = @wo_id";
-
-            using (SqlCommand cmd = new SqlCommand(sql, conn))
+            using (SqlCommand cmd = new SqlCommand())
             {
+                SqlTransaction tran = conn.BeginTransaction();
+                cmd.Transaction = tran;
+                cmd.Connection = conn;
+                try
+                {
+                    cmd.CommandText = @"update TBL_WORK_ORDER set wo_state = '작업중'
+                            where wo_id = @wo_id";
+                    cmd.Parameters.AddWithValue("@wo_id", wo_id);
+                    cmd.ExecuteNonQuery();
 
-                cmd.Parameters.AddWithValue("@wo_id", wo_id);
+                    cmd.CommandText = @"update TBL_Production set production_state = '작업중'
+                            where production_id = @product_id ";
+                    cmd.Parameters.AddWithValue("@product_id", production_id);
+                    cmd.ExecuteNonQuery();
+                    tran.Commit();
+                    Dispose();
+                    return true;
+                }
+                catch(Exception ex)
+                {
+                    tran.Rollback();
+                    return false;
+                }                
+            }
+        }
 
-                result = cmd.ExecuteNonQuery();
-                Dispose();
+        public bool ChangeWPState(int pid, int woid)
+        {
+            using (SqlCommand cmd = new SqlCommand())
+            {
+                SqlTransaction tran = conn.BeginTransaction();
+                cmd.Transaction = tran;
+                cmd.Connection = conn;
+                try
+                {
+                    cmd.CommandText = @"update TBL_WORK_ORDER set wo_state = '작업완료'
+                            where wo_id = @wo_id";
+                    cmd.Parameters.AddWithValue("@wo_id", woid);
+                    cmd.ExecuteNonQuery();
 
-                return result > 0;
+                    cmd.CommandText = @"update TBL_Production set production_state = '작업완료'
+                             where production_id = @product_id ";
+                    cmd.Parameters.AddWithValue("@product_id", pid);
+                    cmd.ExecuteNonQuery();
+                    tran.Commit();
+                    Dispose();
+                    return true;
+                }
+                catch (Exception ex)
+                {
+                    tran.Rollback();
+                    return false;
+                }
+
             }
         }
     }

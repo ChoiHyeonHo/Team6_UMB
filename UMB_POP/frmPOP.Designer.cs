@@ -69,6 +69,8 @@ namespace UMB_POP
             this.lblUser = new System.Windows.Forms.Label();
             this.lb_time = new System.Windows.Forms.Label();
             this.button4 = new System.Windows.Forms.Button();
+            this.lblProduction = new System.Windows.Forms.Label();
+            this.lblwo = new System.Windows.Forms.Label();
             this.TabDGV.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvWaitWork)).BeginInit();
@@ -378,6 +380,8 @@ namespace UMB_POP
             // 
             this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupBox1.Controls.Add(this.lblwo);
+            this.groupBox1.Controls.Add(this.lblProduction);
             this.groupBox1.Controls.Add(this.txtProcessName);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.label8);
@@ -561,6 +565,26 @@ namespace UMB_POP
             this.button4.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.button4.UseVisualStyleBackColor = false;
             // 
+            // lblProduction
+            // 
+            this.lblProduction.AutoSize = true;
+            this.lblProduction.Location = new System.Drawing.Point(1414, 135);
+            this.lblProduction.Name = "lblProduction";
+            this.lblProduction.Size = new System.Drawing.Size(76, 25);
+            this.lblProduction.TabIndex = 8;
+            this.lblProduction.Text = "label1";
+            this.lblProduction.Visible = false;
+            // 
+            // lblwo
+            // 
+            this.lblwo.AutoSize = true;
+            this.lblwo.Location = new System.Drawing.Point(1496, 135);
+            this.lblwo.Name = "lblwo";
+            this.lblwo.Size = new System.Drawing.Size(89, 25);
+            this.lblwo.TabIndex = 9;
+            this.lblwo.Text = "label12";
+            this.lblwo.Visible = false;
+            // 
             // frmPOP
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
@@ -639,6 +663,8 @@ namespace UMB_POP
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.TextBox txtProductID;
         private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Label lblwo;
+        private System.Windows.Forms.Label lblProduction;
     }
 }
 

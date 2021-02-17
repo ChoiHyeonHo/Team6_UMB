@@ -41,10 +41,17 @@ namespace UMB_POP.Service
             return dac.setTacttime(product_id);
         }
 
-        internal bool updatePOP(int wo_id)
+        public bool updatePOP(int wo_id, int pid)
         {
             POPDAC dac = new POPDAC();
-            return dac.updatePOP(wo_id);
+            return dac.updatePOP(wo_id, pid);
+        }
+
+        public bool ChangeWPState(int pid, int woid)
+        {
+            POPDAC dac = new POPDAC();
+            return dac.ChangeWPState(pid, woid);
+
         }
     }
 }

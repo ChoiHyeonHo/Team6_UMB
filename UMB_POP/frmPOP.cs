@@ -27,14 +27,14 @@ namespace UMB_POP
         List<PerformanceVO> waitList;
         List<PerformanceVO> workList;
         List<PerformanceVO> endList;
-        int performance_id, production_id, wo_id, performance_qtyimport, performance_qty_ok, performance_qty_ng;
+        int performance_id, production_id, wo_id, performance_qtyimport, performance_qty_ok, performance_qty_ng, count;
         int tacttime;
         string production_state, product_id;
         System.Timers.Timer timer;
         System.Timers.Timer timer2;
         POPClient client;
         WorkStart ws;
-
+        
         public PerformanceVO WorkInfo { get; set; }
 
         public frmPOP()
@@ -108,7 +108,8 @@ namespace UMB_POP
 
         private void GetCount()
         {
-            timer2 = new System.Timers.Timer(5000);
+            MessageBox.Show("생산시작");
+            timer2 = new System.Timers.Timer(1000*tacttime);
             timer2.Elapsed += new ElapsedEventHandler(ctimer_Elapsed);
             timer2.Start();
 
@@ -123,10 +124,12 @@ namespace UMB_POP
                 MessageBox.Show("생산완료");                
             }
             if (client.Connected)
-            {
-                txtcount.Text = ws.count.ToString();
-                txtok.Text = ws.okcount.ToString();
-                txtng.Text = ws.ngcount.ToString();
+            {                
+                txtcount.Text = count.ToString();
+                txtok.Text = performance_qty_ok.ToString();
+                txtng.Text = performance_qty_ng.ToString();
+                count++;
+                performance_qty_ok++;
             }
         }
 
@@ -139,8 +142,8 @@ namespace UMB_POP
                     this.Invoke(new Action(delegate ()
                     { lb_time.Text = DateTime.Now.ToString("yyyy-MM-dd  hh:mm:ss"); }
                     ));
-                    
-                    
+
+
                 }
             }
             catch (Exception ex)
@@ -155,6 +158,21 @@ namespace UMB_POP
                 }
                 MessageBox.Show(ex.Message);
             }
+        }
+
+        public void CompleteProduction()
+        {
+            //작업지시 , 생산 state > 생산완료
+            int pid = int.Parse(lblProduction.Text);
+            int woid = int.Parse(lblwo.Text);
+
+            POPService service = new POPService();
+            bool result = service.ChangeWPState(pid, woid);
+            if (result)
+            {
+                MessageBox.Show("작업완료");
+            }
+
         }
 
         private void DGV_Binding()
@@ -182,8 +200,11 @@ namespace UMB_POP
                 production_state = dgvWaitWork.Rows[e.RowIndex].Cells[8].Value.ToString();
                 performance_id = Convert.ToInt32(dgvWaitWork.Rows[e.RowIndex].Cells[1].Value);
                 production_id = Convert.ToInt32(dgvWaitWork.Rows[e.RowIndex].Cells[2].Value);
+                lblProduction.Text = production_id.ToString();
                 wo_id = Convert.ToInt32(dgvWaitWork.Rows[e.RowIndex].Cells[0].Value);
+                lblwo.Text = wo_id.ToString();
                 txtProductID.Text = dgvWaitWork.Rows[e.RowIndex].Cells[3].Value.ToString();
+                product_id = dgvWaitWork.Rows[e.RowIndex].Cells[3].Value.ToString();
                 txtProductName.Text = dgvWaitWork.Rows[e.RowIndex].Cells[4].Value.ToString();
                 txtMachineName.Text = dgvWaitWork.Rows[e.RowIndex].Cells[7].Value.ToString();
                 txtProcessName.Text = dgvWaitWork.Rows[e.RowIndex].Cells[5].Value.ToString();
@@ -213,9 +234,10 @@ namespace UMB_POP
                 if (production_state == "작업대기")
                 {
                     POPService service = new POPService();
-                    bool bresult = service.updatePOP(wo_id);
+                    bool bresult = service.updatePOP(wo_id, production_id);
                     if (!bresult) return;
-                    DGV_Binding();                                        
+                    DGV_Binding();
+                    btnPeriodSearch.PerformClick();
                     //서버와 연결되어있지 않은경우
                     if (!client.Connected)
                     {
@@ -231,7 +253,9 @@ namespace UMB_POP
                     else
                     {
                         MessageBox.Show("서버와 연결되었습니다.");
-                        
+                        performance_qty_ok = performance_qty_ng = count = 0;
+                        tacttime = service.setTacttime(product_id);
+                        GetCount();
                     }
                 }                
                 else
@@ -271,12 +295,7 @@ namespace UMB_POP
 
         }
 
-        public void CompleteProduction()
-        {
-            //작업지시, 생산실적 state > 생산완료
-
-
-        }
+        
 
         // 서버에 연결하는 코드
         private void ConnectServer()

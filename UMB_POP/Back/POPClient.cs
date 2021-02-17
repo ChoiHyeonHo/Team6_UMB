@@ -14,6 +14,7 @@ namespace UMB_POP.Back
 {
     public delegate void ReceiveEventHandler(object sender, ReceiveEventArgs e);
 
+    
     public class POPClient
     {
         //프로퍼티 생산실적ID, 요구수량
@@ -32,9 +33,12 @@ namespace UMB_POP.Back
         // 어떤 라인인지 필요
         // 서버에 접속할 client 필요  (AppConfig에 추가할 목록)
         string host = ConfigurationManager.AppSettings["serverIP"];
-        IPAddress clientIPInfo = Dns.GetHostEntry(Dns.GetHostName()).AddressList.ToList().Find(i => i.AddressFamily == AddressFamily.InterNetwork);        
-        public NetworkStream netStream;
         int port = 5000;
+
+        IPAddress clientIPInfo = 
+            Dns.GetHostEntry(Dns.GetHostName()).AddressList.ToList().Find(i => i.AddressFamily == AddressFamily.InterNetwork);        
+        public NetworkStream netStream;
+        
         System.Timers.Timer timer;
         public TcpClient client;
         
@@ -100,11 +104,11 @@ namespace UMB_POP.Back
         public bool Connect()
         {
 
-            IPEndPoint clientIP = new IPEndPoint(clientIPInfo, new Random((int)DateTime.UtcNow.Ticks).Next(5001, 8901));
+            IPEndPoint clientIP = new IPEndPoint(IPAddress.Parse(host), port);
             client = new TcpClient(clientIP);
             try
             {
-                client.ConnectAsync(host, port).Wait();
+                client.ConnectAsync(IPAddress.Parse(host), port).Wait();
                 client.NoDelay = true;
 
                 netStream = client.GetStream();

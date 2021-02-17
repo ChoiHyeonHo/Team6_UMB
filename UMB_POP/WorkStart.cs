@@ -39,6 +39,9 @@ namespace UMB_POP
         public WorkStart()
         {
             InitializeComponent();
+            okcount = 0;
+            ngcount = 0;
+            count = 0;
         }
 
         protected override void OnStart(string[] args)
@@ -96,7 +99,7 @@ namespace UMB_POP
 
         protected override void OnStop()
         {
-            
+            serverP.CompleteProduction();
         }
 
 
