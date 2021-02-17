@@ -15,7 +15,7 @@ namespace Team6_UMB.Forms
     {
         List<OrderListVO> list = new List<OrderListVO>();
         CheckBox headerCheck = new CheckBox();
-        int Order_id = 0;
+        List<int> Order_id = null;
 
         public frmOrderStatus(bool Authority)
         {
@@ -39,11 +39,19 @@ namespace Team6_UMB.Forms
 
         private void newBtns1_btnDelete_Event(object sender, EventArgs e)
         {
-            OrderService service = new OrderService();
-            if(service.DeleteOrder(Order_id) != 0)
-            {
-                MessageBox.Show(Properties.Resources.msgDelete, "삭제확인", MessageBoxButtons.YesNo);
-            }
+            //OrderService service = new OrderService();
+            //if(service.DeleteOrder(Order_id) != 0)
+            //{
+            //    MessageBox.Show(Properties.Resources.msgDelete, "삭제확인", MessageBoxButtons.YesNo);
+            //}
+            //foreach (DataGridViewRow row in dgvOrder.Rows)
+            //{
+            //    bool bCheck = (bool)row.Cells["chk"].EditedFormattedValue;
+            //    if (bCheck)
+            //    {
+                    
+            //    }
+            //}
         }
 
         private void btnSearch_Click(object sender, EventArgs e)
@@ -71,10 +79,10 @@ namespace Team6_UMB.Forms
 
         private void dgvOrder_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (e.RowIndex > 0)
-            {
-                Order_id = Convert.ToInt32(dgvOrder[0, e.RowIndex].Value);
-            }
+            //if (e.RowIndex > 0)
+            //{
+            //    Order_id = Convert.ToInt32(dgvOrder[0, e.RowIndex].Value);
+            //}
         }
 
         private void frmOrderStatus_Load(object sender, EventArgs e)
@@ -169,12 +177,12 @@ namespace Team6_UMB.Forms
 
         private void newBtns1_btnUpdate_Event(object sender, EventArgs e)
         {
-            if (Order_id != 0)
-            {
-                frmUpdateCount frm = new frmUpdateCount("발주 수정", Order_id);
-                frm.ShowDialog();
-                OrderList();
-            }
+            //if (Order_id != 0)
+            //{
+            //    frmUpdateCount frm = new frmUpdateCount("발주 수정", Order_id);
+            //    frm.ShowDialog();
+            //    OrderList();
+            //}
         }
     }
 }

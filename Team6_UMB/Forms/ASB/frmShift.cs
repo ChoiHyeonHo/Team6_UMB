@@ -43,7 +43,7 @@ namespace Team6_UMB.Forms.ASB
             CommonUtil.AddGridTextColumn(dgvShift, "shift번호", "shift_id", 80);
             CommonUtil.AddGridTextColumn(dgvShift, "설비번호", "m_id", 80);
             CommonUtil.AddGridTextColumn(dgvShift, "시작시간", "shift_stime", 100);
-            CommonUtil.AddGridTextColumn(dgvShift, "완료시간", "shift_etime", 100);
+            //CommonUtil.AddGridTextColumn(dgvShift, "완료시간", "shift_etime", 100);
             CommonUtil.AddGridTextColumn(dgvShift, "시작일", "shift_sdate", 120);
             CommonUtil.AddGridTextColumn(dgvShift, "완료일", "shift_edate", 120);
             CommonUtil.AddGridTextColumn(dgvShift, "사용유무", "shift_yn", 80);

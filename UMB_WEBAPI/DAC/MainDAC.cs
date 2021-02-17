@@ -39,7 +39,7 @@ namespace UMB_WEBAPI.DAC
                                from salesList
                                group by product_name, datepart(month,sales_date))
                                as A
-                               where sales_date = datepart(month, getdate())";
+                               where sales_date = datepart(month, getdate()) and product_name = 'L_UMB1'";
                 using (SqlCommand cmd = new SqlCommand(sql, conn))
                 {
                     conn.Open();
