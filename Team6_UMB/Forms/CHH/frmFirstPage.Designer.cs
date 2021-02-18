@@ -31,23 +31,20 @@ namespace Team6_UMB.Forms.CHH
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmFirstPage));
             this.BackPanel1 = new System.Windows.Forms.Panel();
-            this.FrontPanel1 = new System.Windows.Forms.Panel();
-            this.FrontPanel2 = new System.Windows.Forms.Panel();
-            this.BackPanel2 = new System.Windows.Forms.Panel();
-            this.FrontPanel3 = new System.Windows.Forms.Panel();
-            this.BackPanel3 = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.lblName = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
+            this.textBox9 = new System.Windows.Forms.TextBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
+            this.textBox8 = new System.Windows.Forms.TextBox();
+            this.lblName = new System.Windows.Forms.Label();
+            this.textBox7 = new System.Windows.Forms.TextBox();
             this.textBox3 = new System.Windows.Forms.TextBox();
+            this.textBox6 = new System.Windows.Forms.TextBox();
             this.textBox4 = new System.Windows.Forms.TextBox();
             this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.textBox7 = new System.Windows.Forms.TextBox();
-            this.textBox8 = new System.Windows.Forms.TextBox();
-            this.textBox9 = new System.Windows.Forms.TextBox();
+            this.FrontPanel1 = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.FrontPanel2 = new System.Windows.Forms.Panel();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.BackPanel2 = new System.Windows.Forms.Panel();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.textBox10 = new System.Windows.Forms.TextBox();
             this.textBox11 = new System.Windows.Forms.TextBox();
@@ -56,9 +53,10 @@ namespace Team6_UMB.Forms.CHH
             this.textBox14 = new System.Windows.Forms.TextBox();
             this.textBox15 = new System.Windows.Forms.TextBox();
             this.textBox16 = new System.Windows.Forms.TextBox();
-            this.textBox17 = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.FrontPanel3 = new System.Windows.Forms.Panel();
+            this.BackPanel3 = new System.Windows.Forms.Panel();
             this.textBox18 = new System.Windows.Forms.TextBox();
-            this.textBox19 = new System.Windows.Forms.TextBox();
             this.textBox20 = new System.Windows.Forms.TextBox();
             this.textBox21 = new System.Windows.Forms.TextBox();
             this.textBox22 = new System.Windows.Forms.TextBox();
@@ -82,14 +80,17 @@ namespace Team6_UMB.Forms.CHH
             this.panel6 = new System.Windows.Forms.Panel();
             this.textBox32 = new System.Windows.Forms.TextBox();
             this.textBox33 = new System.Windows.Forms.TextBox();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.BackPanel1.SuspendLayout();
             this.FrontPanel1.SuspendLayout();
-            this.FrontPanel2.SuspendLayout();
-            this.BackPanel2.SuspendLayout();
-            this.BackPanel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.FrontPanel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            this.BackPanel2.SuspendLayout();
+            this.FrontPanel3.SuspendLayout();
+            this.BackPanel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.SuspendLayout();
             // 
             // BackPanel1
@@ -109,109 +110,18 @@ namespace Team6_UMB.Forms.CHH
             this.BackPanel1.Size = new System.Drawing.Size(976, 223);
             this.BackPanel1.TabIndex = 0;
             // 
-            // FrontPanel1
+            // textBox9
             // 
-            this.FrontPanel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(52)))), ((int)(((byte)(90)))));
-            this.FrontPanel1.Controls.Add(this.pictureBox1);
-            this.FrontPanel1.Location = new System.Drawing.Point(511, 12);
-            this.FrontPanel1.Name = "FrontPanel1";
-            this.FrontPanel1.Size = new System.Drawing.Size(237, 223);
-            this.FrontPanel1.TabIndex = 1;
-            // 
-            // FrontPanel2
-            // 
-            this.FrontPanel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(52)))), ((int)(((byte)(90)))));
-            this.FrontPanel2.Controls.Add(this.pictureBox2);
-            this.FrontPanel2.Location = new System.Drawing.Point(511, 274);
-            this.FrontPanel2.Name = "FrontPanel2";
-            this.FrontPanel2.Size = new System.Drawing.Size(237, 223);
-            this.FrontPanel2.TabIndex = 3;
-            // 
-            // BackPanel2
-            // 
-            this.BackPanel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(52)))), ((int)(((byte)(65)))));
-            this.BackPanel2.Controls.Add(this.textBox2);
-            this.BackPanel2.Controls.Add(this.textBox10);
-            this.BackPanel2.Controls.Add(this.textBox11);
-            this.BackPanel2.Controls.Add(this.textBox12);
-            this.BackPanel2.Controls.Add(this.textBox13);
-            this.BackPanel2.Controls.Add(this.textBox14);
-            this.BackPanel2.Controls.Add(this.textBox15);
-            this.BackPanel2.Controls.Add(this.textBox16);
-            this.BackPanel2.Controls.Add(this.label1);
-            this.BackPanel2.Location = new System.Drawing.Point(522, 285);
-            this.BackPanel2.Name = "BackPanel2";
-            this.BackPanel2.Size = new System.Drawing.Size(976, 223);
-            this.BackPanel2.TabIndex = 2;
-            // 
-            // FrontPanel3
-            // 
-            this.FrontPanel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(52)))), ((int)(((byte)(90)))));
-            this.FrontPanel3.Location = new System.Drawing.Point(511, 554);
-            this.FrontPanel3.Name = "FrontPanel3";
-            this.FrontPanel3.Size = new System.Drawing.Size(237, 223);
-            this.FrontPanel3.TabIndex = 5;
-            // 
-            // BackPanel3
-            // 
-            this.BackPanel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(52)))), ((int)(((byte)(65)))));
-            this.BackPanel3.Controls.Add(this.textBox17);
-            this.BackPanel3.Controls.Add(this.textBox18);
-            this.BackPanel3.Controls.Add(this.textBox19);
-            this.BackPanel3.Controls.Add(this.textBox20);
-            this.BackPanel3.Controls.Add(this.textBox21);
-            this.BackPanel3.Controls.Add(this.textBox22);
-            this.BackPanel3.Controls.Add(this.textBox23);
-            this.BackPanel3.Controls.Add(this.textBox24);
-            this.BackPanel3.Controls.Add(this.label2);
-            this.BackPanel3.Location = new System.Drawing.Point(522, 565);
-            this.BackPanel3.Name = "BackPanel3";
-            this.BackPanel3.Size = new System.Drawing.Size(976, 223);
-            this.BackPanel3.TabIndex = 4;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(237, 223);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(237, 223);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox2.TabIndex = 1;
-            this.pictureBox2.TabStop = false;
-            // 
-            // lblName
-            // 
-            this.lblName.AutoSize = true;
-            this.lblName.Font = new System.Drawing.Font("나눔바른고딕", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.lblName.ForeColor = System.Drawing.Color.LightGray;
-            this.lblName.Location = new System.Drawing.Point(255, 15);
-            this.lblName.Name = "lblName";
-            this.lblName.Size = new System.Drawing.Size(86, 31);
-            this.lblName.TabIndex = 6;
-            this.lblName.Text = "최현호";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("나눔바른고딕", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label1.ForeColor = System.Drawing.Color.LightGray;
-            this.label1.Location = new System.Drawing.Point(255, 18);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(86, 31);
-            this.label1.TabIndex = 7;
-            this.label1.Text = "진승준";
+            this.textBox9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(52)))), ((int)(((byte)(65)))));
+            this.textBox9.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox9.Font = new System.Drawing.Font("나눔바른고딕", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.textBox9.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.textBox9.Location = new System.Drawing.Point(807, 93);
+            this.textBox9.Multiline = true;
+            this.textBox9.Name = "textBox9";
+            this.textBox9.Size = new System.Drawing.Size(99, 51);
+            this.textBox9.TabIndex = 18;
+            this.textBox9.Text = "설비관리\r\n업체관리";
             // 
             // textBox1
             // 
@@ -226,6 +136,43 @@ namespace Team6_UMB.Forms.CHH
             this.textBox1.TabIndex = 10;
             this.textBox1.Text = "단가관리";
             // 
+            // textBox8
+            // 
+            this.textBox8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(52)))), ((int)(((byte)(65)))));
+            this.textBox8.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox8.Font = new System.Drawing.Font("나눔바른고딕", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.textBox8.ForeColor = System.Drawing.Color.White;
+            this.textBox8.Location = new System.Drawing.Point(785, 61);
+            this.textBox8.Multiline = true;
+            this.textBox8.Name = "textBox8";
+            this.textBox8.Size = new System.Drawing.Size(84, 26);
+            this.textBox8.TabIndex = 17;
+            this.textBox8.Text = "기준정보";
+            // 
+            // lblName
+            // 
+            this.lblName.AutoSize = true;
+            this.lblName.Font = new System.Drawing.Font("나눔바른고딕", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.lblName.ForeColor = System.Drawing.Color.LightGray;
+            this.lblName.Location = new System.Drawing.Point(255, 15);
+            this.lblName.Name = "lblName";
+            this.lblName.Size = new System.Drawing.Size(86, 31);
+            this.lblName.TabIndex = 6;
+            this.lblName.Text = "최현호";
+            // 
+            // textBox7
+            // 
+            this.textBox7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(52)))), ((int)(((byte)(65)))));
+            this.textBox7.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox7.Font = new System.Drawing.Font("나눔바른고딕", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.textBox7.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.textBox7.Location = new System.Drawing.Point(667, 93);
+            this.textBox7.Multiline = true;
+            this.textBox7.Name = "textBox7";
+            this.textBox7.Size = new System.Drawing.Size(99, 51);
+            this.textBox7.TabIndex = 16;
+            this.textBox7.Text = "수입검사\r\n제품검사\r\n검사이력";
+            // 
             // textBox3
             // 
             this.textBox3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(52)))), ((int)(((byte)(65)))));
@@ -238,6 +185,19 @@ namespace Team6_UMB.Forms.CHH
             this.textBox3.Size = new System.Drawing.Size(99, 39);
             this.textBox3.TabIndex = 12;
             this.textBox3.Text = "영업단가 관리\r\n자재단가 관리";
+            // 
+            // textBox6
+            // 
+            this.textBox6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(52)))), ((int)(((byte)(65)))));
+            this.textBox6.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox6.Font = new System.Drawing.Font("나눔바른고딕", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.textBox6.ForeColor = System.Drawing.Color.White;
+            this.textBox6.Location = new System.Drawing.Point(645, 61);
+            this.textBox6.Multiline = true;
+            this.textBox6.Name = "textBox6";
+            this.textBox6.Size = new System.Drawing.Size(84, 26);
+            this.textBox6.TabIndex = 15;
+            this.textBox6.Text = "품질관리";
             // 
             // textBox4
             // 
@@ -265,57 +225,62 @@ namespace Team6_UMB.Forms.CHH
             this.textBox5.TabIndex = 14;
             this.textBox5.Text = "품목관리";
             // 
-            // textBox6
+            // FrontPanel1
             // 
-            this.textBox6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(52)))), ((int)(((byte)(65)))));
-            this.textBox6.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox6.Font = new System.Drawing.Font("나눔바른고딕", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.textBox6.ForeColor = System.Drawing.Color.White;
-            this.textBox6.Location = new System.Drawing.Point(645, 61);
-            this.textBox6.Multiline = true;
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(84, 26);
-            this.textBox6.TabIndex = 15;
-            this.textBox6.Text = "품질관리";
+            this.FrontPanel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(52)))), ((int)(((byte)(90)))));
+            this.FrontPanel1.Controls.Add(this.pictureBox1);
+            this.FrontPanel1.Location = new System.Drawing.Point(511, 12);
+            this.FrontPanel1.Name = "FrontPanel1";
+            this.FrontPanel1.Size = new System.Drawing.Size(237, 223);
+            this.FrontPanel1.TabIndex = 1;
             // 
-            // textBox7
+            // pictureBox1
             // 
-            this.textBox7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(52)))), ((int)(((byte)(65)))));
-            this.textBox7.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox7.Font = new System.Drawing.Font("나눔바른고딕", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.textBox7.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.textBox7.Location = new System.Drawing.Point(667, 93);
-            this.textBox7.Multiline = true;
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(99, 51);
-            this.textBox7.TabIndex = 16;
-            this.textBox7.Text = "수입검사\r\n제품검사\r\n검사이력";
+            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(237, 223);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
             // 
-            // textBox8
+            // FrontPanel2
             // 
-            this.textBox8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(52)))), ((int)(((byte)(65)))));
-            this.textBox8.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox8.Font = new System.Drawing.Font("나눔바른고딕", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.textBox8.ForeColor = System.Drawing.Color.White;
-            this.textBox8.Location = new System.Drawing.Point(785, 61);
-            this.textBox8.Multiline = true;
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(84, 26);
-            this.textBox8.TabIndex = 17;
-            this.textBox8.Text = "기준정보";
+            this.FrontPanel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(52)))), ((int)(((byte)(90)))));
+            this.FrontPanel2.Controls.Add(this.pictureBox2);
+            this.FrontPanel2.Location = new System.Drawing.Point(511, 274);
+            this.FrontPanel2.Name = "FrontPanel2";
+            this.FrontPanel2.Size = new System.Drawing.Size(237, 223);
+            this.FrontPanel2.TabIndex = 3;
             // 
-            // textBox9
+            // pictureBox2
             // 
-            this.textBox9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(52)))), ((int)(((byte)(65)))));
-            this.textBox9.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox9.Font = new System.Drawing.Font("나눔바른고딕", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.textBox9.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.textBox9.Location = new System.Drawing.Point(807, 93);
-            this.textBox9.Multiline = true;
-            this.textBox9.Name = "textBox9";
-            this.textBox9.Size = new System.Drawing.Size(99, 51);
-            this.textBox9.TabIndex = 18;
-            this.textBox9.Text = "설비관리\r\n업체관리";
+            this.pictureBox2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(237, 223);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.TabIndex = 1;
+            this.pictureBox2.TabStop = false;
+            // 
+            // BackPanel2
+            // 
+            this.BackPanel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(52)))), ((int)(((byte)(65)))));
+            this.BackPanel2.Controls.Add(this.textBox2);
+            this.BackPanel2.Controls.Add(this.textBox10);
+            this.BackPanel2.Controls.Add(this.textBox11);
+            this.BackPanel2.Controls.Add(this.textBox12);
+            this.BackPanel2.Controls.Add(this.textBox13);
+            this.BackPanel2.Controls.Add(this.textBox14);
+            this.BackPanel2.Controls.Add(this.textBox15);
+            this.BackPanel2.Controls.Add(this.textBox16);
+            this.BackPanel2.Controls.Add(this.label1);
+            this.BackPanel2.Location = new System.Drawing.Point(522, 285);
+            this.BackPanel2.Name = "BackPanel2";
+            this.BackPanel2.Size = new System.Drawing.Size(976, 223);
+            this.BackPanel2.TabIndex = 2;
             // 
             // textBox2
             // 
@@ -421,18 +386,40 @@ namespace Team6_UMB.Forms.CHH
             this.textBox16.TabIndex = 22;
             this.textBox16.Text = "영업관리";
             // 
-            // textBox17
+            // label1
             // 
-            this.textBox17.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(52)))), ((int)(((byte)(65)))));
-            this.textBox17.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox17.Font = new System.Drawing.Font("나눔바른고딕", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.textBox17.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.textBox17.Location = new System.Drawing.Point(807, 95);
-            this.textBox17.Multiline = true;
-            this.textBox17.Name = "textBox17";
-            this.textBox17.Size = new System.Drawing.Size(99, 51);
-            this.textBox17.TabIndex = 35;
-            this.textBox17.Text = "로그인\r\n사용자권한관리";
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("나눔바른고딕", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label1.ForeColor = System.Drawing.Color.LightGray;
+            this.label1.Location = new System.Drawing.Point(255, 18);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(86, 31);
+            this.label1.TabIndex = 7;
+            this.label1.Text = "진승준";
+            // 
+            // FrontPanel3
+            // 
+            this.FrontPanel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(52)))), ((int)(((byte)(90)))));
+            this.FrontPanel3.Controls.Add(this.pictureBox4);
+            this.FrontPanel3.Location = new System.Drawing.Point(511, 554);
+            this.FrontPanel3.Name = "FrontPanel3";
+            this.FrontPanel3.Size = new System.Drawing.Size(237, 223);
+            this.FrontPanel3.TabIndex = 5;
+            // 
+            // BackPanel3
+            // 
+            this.BackPanel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(52)))), ((int)(((byte)(65)))));
+            this.BackPanel3.Controls.Add(this.textBox18);
+            this.BackPanel3.Controls.Add(this.textBox20);
+            this.BackPanel3.Controls.Add(this.textBox21);
+            this.BackPanel3.Controls.Add(this.textBox22);
+            this.BackPanel3.Controls.Add(this.textBox23);
+            this.BackPanel3.Controls.Add(this.textBox24);
+            this.BackPanel3.Controls.Add(this.label2);
+            this.BackPanel3.Location = new System.Drawing.Point(522, 565);
+            this.BackPanel3.Name = "BackPanel3";
+            this.BackPanel3.Size = new System.Drawing.Size(976, 223);
+            this.BackPanel3.TabIndex = 4;
             // 
             // textBox18
             // 
@@ -446,19 +433,6 @@ namespace Team6_UMB.Forms.CHH
             this.textBox18.Size = new System.Drawing.Size(84, 26);
             this.textBox18.TabIndex = 28;
             this.textBox18.Text = "기준정보";
-            // 
-            // textBox19
-            // 
-            this.textBox19.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(52)))), ((int)(((byte)(65)))));
-            this.textBox19.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox19.Font = new System.Drawing.Font("나눔바른고딕", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.textBox19.ForeColor = System.Drawing.Color.White;
-            this.textBox19.Location = new System.Drawing.Point(775, 63);
-            this.textBox19.Multiline = true;
-            this.textBox19.Name = "textBox19";
-            this.textBox19.Size = new System.Drawing.Size(84, 26);
-            this.textBox19.TabIndex = 34;
-            this.textBox19.Text = "기타";
             // 
             // textBox20
             // 
@@ -722,6 +696,17 @@ namespace Team6_UMB.Forms.CHH
             this.textBox33.TabIndex = 31;
             this.textBox33.Text = "GitHub, DevExpress\r\n";
             // 
+            // pictureBox4
+            // 
+            this.pictureBox4.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
+            this.pictureBox4.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(237, 223);
+            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox4.TabIndex = 2;
+            this.pictureBox4.TabStop = false;
+            // 
             // frmFirstPage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
@@ -757,14 +742,16 @@ namespace Team6_UMB.Forms.CHH
             this.BackPanel1.ResumeLayout(false);
             this.BackPanel1.PerformLayout();
             this.FrontPanel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.FrontPanel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.BackPanel2.ResumeLayout(false);
             this.BackPanel2.PerformLayout();
+            this.FrontPanel3.ResumeLayout(false);
             this.BackPanel3.ResumeLayout(false);
             this.BackPanel3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -798,9 +785,7 @@ namespace Team6_UMB.Forms.CHH
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel FrontPanel3;
         private System.Windows.Forms.Panel BackPanel3;
-        private System.Windows.Forms.TextBox textBox17;
         private System.Windows.Forms.TextBox textBox18;
-        private System.Windows.Forms.TextBox textBox19;
         private System.Windows.Forms.TextBox textBox20;
         private System.Windows.Forms.TextBox textBox21;
         private System.Windows.Forms.TextBox textBox22;
@@ -824,5 +809,6 @@ namespace Team6_UMB.Forms.CHH
         private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.TextBox textBox32;
         private System.Windows.Forms.TextBox textBox33;
+        private System.Windows.Forms.PictureBox pictureBox4;
     }
 }
