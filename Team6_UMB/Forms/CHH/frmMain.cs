@@ -974,7 +974,10 @@ namespace Team6_UMB
 
         private void btnHome_Click(object sender, EventArgs e)
         {
-            Process.Start("https://www.naver.com/");
+            //Process.Start("https://localhost:44359/");
+            ProcessStartInfo startInfo = new ProcessStartInfo("https://localhost:44359/");
+            startInfo.WindowStyle = ProcessWindowStyle.Maximized;
+            Process.Start(startInfo);
         }
 
 

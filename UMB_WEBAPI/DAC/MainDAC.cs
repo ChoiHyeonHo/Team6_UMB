@@ -70,12 +70,12 @@ namespace UMB_WEBAPI.DAC
         {
             try
             {
-                string sql = @"select *, (100 * (ng_rate - lag_rate) / lag_rate) growth_rate from(
-							   select CONVERT(nvarchar(6), production_edate, 112) production_edate, sum(performance_qty_ng) performance_qty_ng, sum(performance_qty_ok) performance_qty_ok, (100 * sum(performance_qty_ng) / (sum(performance_qty_ng) + sum(performance_qty_ok))) ng_rate
-							   , lag((100 * sum(performance_qty_ng) / (sum(performance_qty_ng) + sum(performance_qty_ok))), 1, (100 * sum(performance_qty_ng) / (sum(performance_qty_ng) + sum(performance_qty_ok)))) over (order by CONVERT(nvarchar(6), GETDATE(), 112)) as lag_rate
-							   from performanceList 
-							   group by CONVERT(nvarchar(6), production_edate, 112)
-							   ) as A
+                string sql = @"select *, (ng_rate - lag_rate) growth_rate from(
+						       select CONVERT(nvarchar(6), production_edate, 112) production_edate, sum(performance_qty_ng) performance_qty_ng, sum(performance_qty_ok) performance_qty_ok, (100 * sum(performance_qty_ng) / (sum(performance_qty_ng) + sum(performance_qty_ok))) ng_rate
+						       , lag((100 * sum(performance_qty_ng) / (sum(performance_qty_ng) + sum(performance_qty_ok))), 1, (100 * sum(performance_qty_ng) / (sum(performance_qty_ng) + sum(performance_qty_ok)))) over (order by CONVERT(nvarchar(6), GETDATE(), 112)) as lag_rate
+						       from performanceList 
+						       group by CONVERT(nvarchar(6), production_edate, 112)
+						       ) as A
 							   where production_edate = CONVERT(nvarchar(6), GETDATE(), 112)";
                 using (SqlCommand cmd = new SqlCommand(sql, conn))
                 {
@@ -104,7 +104,7 @@ namespace UMB_WEBAPI.DAC
 
         public List<Performance> GetPerList()
         {
-            string sql = @"select *, (100 * (ng_rate - lag_rate) / lag_rate) growth_rate from(
+            string sql = @"select *, (ng_rate - lag_rate) growth_rate from(
 						   select CONVERT(nvarchar(6), production_edate, 112) production_edate, sum(performance_qty_ng) performance_qty_ng, sum(performance_qty_ok) performance_qty_ok, (100 * sum(performance_qty_ng) / (sum(performance_qty_ng) + sum(performance_qty_ok))) ng_rate
 						   , lag((100 * sum(performance_qty_ng) / (sum(performance_qty_ng) + sum(performance_qty_ok))), 1, (100 * sum(performance_qty_ng) / (sum(performance_qty_ng) + sum(performance_qty_ok)))) over (order by CONVERT(nvarchar(6), GETDATE(), 112)) as lag_rate
 						   from performanceList 
