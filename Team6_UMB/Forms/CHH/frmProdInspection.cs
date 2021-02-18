@@ -70,7 +70,7 @@ namespace Team6_UMB.Forms.CHH
 
                 CommonUtil.SetInitGridView(dgvProdCheck);
                 CommonUtil.AddGridTextColumn(dgvProdCheck, "생산번호", "production_id", 90);
-                CommonUtil.AddGridTextColumn(dgvProdCheck, "작업지시번호", "wo_id", 100);
+                CommonUtil.AddGridTextColumn(dgvProdCheck, "작업지시번호", "wo_id", 120);
                 CommonUtil.AddGridTextColumn(dgvProdCheck, "수주번호", "so_id", 90);
                 CommonUtil.AddGridTextColumn(dgvProdCheck, "품목코드", "product_id", 150);
                 CommonUtil.AddGridTextColumn(dgvProdCheck, "품목명", "product_name", 150);

@@ -32,6 +32,7 @@ namespace Team6_UMB.Forms
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dgvPrice = new Team6_UMB.DGV_Custom();
             this.temp6 = new System.Windows.Forms.GroupBox();
+            this.cheView = new System.Windows.Forms.CheckBox();
             this.btnWhere = new System.Windows.Forms.Button();
             this.txtCompanyName = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
@@ -40,7 +41,6 @@ namespace Team6_UMB.Forms
             this.label2 = new System.Windows.Forms.Label();
             this.periodSearchControl = new PJT_Olive.Control.PeriodSearchControl();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.cheView = new System.Windows.Forms.CheckBox();
             this.label5 = new System.Windows.Forms.Label();
             this.newBtns = new Team6_UMB.Controls.NewBtns();
             this.panel1.SuspendLayout();
@@ -110,10 +110,22 @@ namespace Team6_UMB.Forms
             this.temp6.TabIndex = 17;
             this.temp6.TabStop = false;
             // 
+            // cheView
+            // 
+            this.cheView.AutoSize = true;
+            this.cheView.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.cheView.Location = new System.Drawing.Point(1426, 19);
+            this.cheView.Name = "cheView";
+            this.cheView.Size = new System.Drawing.Size(79, 22);
+            this.cheView.TabIndex = 23;
+            this.cheView.Text = "전체보기";
+            this.cheView.UseVisualStyleBackColor = true;
+            this.cheView.Click += new System.EventHandler(this.cheView_Click);
+            // 
             // btnWhere
             // 
             this.btnWhere.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            | System.Windows.Forms.AnchorStyles.Left)));
             this.btnWhere.BackgroundImage = global::Team6_UMB.Properties.Resources.Search;
             this.btnWhere.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btnWhere.FlatAppearance.BorderSize = 0;
@@ -127,6 +139,8 @@ namespace Team6_UMB.Forms
             // 
             // txtCompanyName
             // 
+            this.txtCompanyName.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
             this.txtCompanyName.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.txtCompanyName.Location = new System.Drawing.Point(689, 15);
             this.txtCompanyName.Name = "txtCompanyName";
@@ -135,6 +149,8 @@ namespace Team6_UMB.Forms
             // 
             // label4
             // 
+            this.label4.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.label4.Location = new System.Drawing.Point(622, 19);
@@ -145,6 +161,8 @@ namespace Team6_UMB.Forms
             // 
             // txtProdName
             // 
+            this.txtProdName.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
             this.txtProdName.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.txtProdName.Location = new System.Drawing.Point(414, 15);
             this.txtProdName.Name = "txtProdName";
@@ -153,6 +171,8 @@ namespace Team6_UMB.Forms
             // 
             // label3
             // 
+            this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.label3.Location = new System.Drawing.Point(361, 19);
@@ -163,6 +183,8 @@ namespace Team6_UMB.Forms
             // 
             // label2
             // 
+            this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.label2.Location = new System.Drawing.Point(6, 19);
@@ -173,6 +195,8 @@ namespace Team6_UMB.Forms
             // 
             // periodSearchControl
             // 
+            this.periodSearchControl.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
             this.periodSearchControl.DateType = "";
             this.periodSearchControl.dtFrom = "2021-01-11";
             this.periodSearchControl.dtTo = "2021-01-18";
@@ -193,18 +217,6 @@ namespace Team6_UMB.Forms
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1511, 35);
             this.panel2.TabIndex = 43;
-            // 
-            // cheView
-            // 
-            this.cheView.AutoSize = true;
-            this.cheView.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.cheView.Location = new System.Drawing.Point(1426, 19);
-            this.cheView.Name = "cheView";
-            this.cheView.Size = new System.Drawing.Size(79, 22);
-            this.cheView.TabIndex = 23;
-            this.cheView.Text = "전체보기";
-            this.cheView.UseVisualStyleBackColor = true;
-            this.cheView.Click += new System.EventHandler(this.cheView_Click);
             // 
             // label5
             // 
