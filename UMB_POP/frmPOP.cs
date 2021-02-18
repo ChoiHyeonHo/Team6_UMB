@@ -256,8 +256,12 @@ namespace UMB_POP
 
         private void dgvEndWork_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            performance_id = Convert.ToInt32(dgvWaitWork.Rows[e.RowIndex].Cells[2].Value);
-            production_id = Convert.ToInt32(dgvWaitWork.Rows[e.RowIndex].Cells[1].Value);
+            if(e.RowIndex >= 0)
+            {
+                performance_id = Convert.ToInt32(dgvEndWork.Rows[e.RowIndex].Cells[2].Value);
+                production_id = Convert.ToInt32(dgvEndWork.Rows[e.RowIndex].Cells[1].Value);
+            }
+            
         }
 
         // 생산을 시작하는 경우
@@ -348,12 +352,14 @@ namespace UMB_POP
             }
         }
         private void btnStop_Click(object sender, EventArgs e)
-        {
-
+        {            
+            timer2.Stop();
+            MessageBox.Show("작업이 중단되었습니다");
         }
 
         private void btnNg_Click(object sender, EventArgs e)
         {
+            
             frmdefective frm = new frmdefective(performance_id);
             frm.ShowDialog();
         }

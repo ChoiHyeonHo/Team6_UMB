@@ -85,7 +85,7 @@ namespace UMB_POP
             // cboDef
             // 
             this.cboDef.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold);
-            this.cboDef.ForeColor = System.Drawing.Color.White;
+            this.cboDef.ForeColor = System.Drawing.Color.Black;
             this.cboDef.FormattingEnabled = true;
             this.cboDef.Location = new System.Drawing.Point(27, 190);
             this.cboDef.Name = "cboDef";

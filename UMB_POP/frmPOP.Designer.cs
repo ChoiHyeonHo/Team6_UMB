@@ -516,7 +516,6 @@ namespace UMB_POP
             // btnNg
             // 
             this.btnNg.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnNg.Enabled = false;
             this.btnNg.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Bold);
             this.btnNg.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnNg.ImageKey = "ZZZZZZZZZ.png";
