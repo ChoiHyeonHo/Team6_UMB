@@ -351,6 +351,7 @@ namespace Team6_UMB.Forms.ASB
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "frmShiftPopUp";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "frmShiftPopUp";
             this.Load += new System.EventHandler(this.frmShiftPopUp_Load);
             this.Controls.SetChildIndex(this.panel1, 0);
