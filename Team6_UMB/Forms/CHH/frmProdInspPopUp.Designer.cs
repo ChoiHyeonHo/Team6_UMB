@@ -99,7 +99,7 @@ namespace Team6_UMB.Forms.CHH
             this.포장ToolStripMenuItem,
             this.비고ToolStripMenuItem});
             this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(181, 92);
+            this.contextMenuStrip1.Size = new System.Drawing.Size(111, 70);
             // 
             // 구성품ToolStripMenuItem
             // 
@@ -107,7 +107,7 @@ namespace Team6_UMB.Forms.CHH
             this.양품ToolStripMenuItem,
             this.불량ToolStripMenuItem});
             this.구성품ToolStripMenuItem.Name = "구성품ToolStripMenuItem";
-            this.구성품ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.구성품ToolStripMenuItem.Size = new System.Drawing.Size(110, 22);
             this.구성품ToolStripMenuItem.Text = "구성품";
             // 
             // 양품ToolStripMenuItem
@@ -130,7 +130,7 @@ namespace Team6_UMB.Forms.CHH
             this.양품ToolStripMenuItem1,
             this.불량ToolStripMenuItem1});
             this.포장ToolStripMenuItem.Name = "포장ToolStripMenuItem";
-            this.포장ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.포장ToolStripMenuItem.Size = new System.Drawing.Size(110, 22);
             this.포장ToolStripMenuItem.Text = "포장";
             // 
             // 양품ToolStripMenuItem1
@@ -150,7 +150,7 @@ namespace Team6_UMB.Forms.CHH
             // 비고ToolStripMenuItem
             // 
             this.비고ToolStripMenuItem.Name = "비고ToolStripMenuItem";
-            this.비고ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.비고ToolStripMenuItem.Size = new System.Drawing.Size(110, 22);
             this.비고ToolStripMenuItem.Text = "비고";
             this.비고ToolStripMenuItem.Click += new System.EventHandler(this.비고ToolStripMenuItem_Click);
             // 
@@ -234,6 +234,7 @@ namespace Team6_UMB.Forms.CHH
             this.Controls.Add(this.dgv_CheckList);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmProdInspPopUp";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Load += new System.EventHandler(this.frmProdInspPopUp_Load);
             this.Controls.SetChildIndex(this.panel1, 0);
             this.Controls.SetChildIndex(this.dgv_CheckList, 0);
