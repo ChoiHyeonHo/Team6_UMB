@@ -177,6 +177,7 @@ namespace Team6_UMB.Forms.BMN
             this.Controls.Add(this.groupBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmdefectiveRegiPopUp";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "frmdefectiveRegiPopUp";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();

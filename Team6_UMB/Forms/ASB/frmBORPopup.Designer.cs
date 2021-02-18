@@ -42,12 +42,12 @@ namespace Team6_UMB.Forms.ASB
             this.label13 = new System.Windows.Forms.Label();
             this.txtComment = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.txtUadmin = new System.Windows.Forms.TextBox();
             this.cboYN = new System.Windows.Forms.ComboBox();
             this.cboProductName = new System.Windows.Forms.ComboBox();
             this.cboProcessName = new System.Windows.Forms.ComboBox();
-            this.btnClose = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
-            this.txtUadmin = new System.Windows.Forms.TextBox();
+            this.btnClose = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -56,8 +56,8 @@ namespace Team6_UMB.Forms.ASB
             // panel1
             // 
             this.panel1.Controls.Add(this.btnClose);
-            this.panel1.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
-            this.panel1.Size = new System.Drawing.Size(486, 44);
+            this.panel1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.panel1.Size = new System.Drawing.Size(425, 35);
             this.panel1.Controls.SetChildIndex(this.label1, 0);
             this.panel1.Controls.SetChildIndex(this.btnClose, 0);
             // 
@@ -70,10 +70,9 @@ namespace Team6_UMB.Forms.ASB
             // 
             this.panel2.Controls.Add(this.btnCancle);
             this.panel2.Controls.Add(this.btnCreate);
-            this.panel2.Location = new System.Drawing.Point(159, 614);
-            this.panel2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.panel2.Location = new System.Drawing.Point(139, 491);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(185, 55);
+            this.panel2.Size = new System.Drawing.Size(162, 44);
             this.panel2.TabIndex = 23;
             // 
             // btnCancle
@@ -82,10 +81,9 @@ namespace Team6_UMB.Forms.ASB
             this.btnCancle.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCancle.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.btnCancle.ForeColor = System.Drawing.Color.White;
-            this.btnCancle.Location = new System.Drawing.Point(96, 9);
-            this.btnCancle.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnCancle.Location = new System.Drawing.Point(84, 7);
             this.btnCancle.Name = "btnCancle";
-            this.btnCancle.Size = new System.Drawing.Size(86, 42);
+            this.btnCancle.Size = new System.Drawing.Size(75, 34);
             this.btnCancle.TabIndex = 18;
             this.btnCancle.Text = "취소";
             this.btnCancle.UseVisualStyleBackColor = false;
@@ -97,10 +95,9 @@ namespace Team6_UMB.Forms.ASB
             this.btnCreate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCreate.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.btnCreate.ForeColor = System.Drawing.Color.White;
-            this.btnCreate.Location = new System.Drawing.Point(3, 9);
-            this.btnCreate.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnCreate.Location = new System.Drawing.Point(3, 7);
             this.btnCreate.Name = "btnCreate";
-            this.btnCreate.Size = new System.Drawing.Size(86, 42);
+            this.btnCreate.Size = new System.Drawing.Size(75, 34);
             this.btnCreate.TabIndex = 0;
             this.btnCreate.Text = "저장";
             this.btnCreate.UseVisualStyleBackColor = false;
@@ -111,7 +108,7 @@ namespace Team6_UMB.Forms.ASB
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.label2.ForeColor = System.Drawing.Color.RoyalBlue;
-            this.label2.Location = new System.Drawing.Point(11, 21);
+            this.label2.Location = new System.Drawing.Point(10, 17);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(34, 18);
             this.label2.TabIndex = 22;
@@ -122,7 +119,7 @@ namespace Team6_UMB.Forms.ASB
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.label3.ForeColor = System.Drawing.Color.RoyalBlue;
-            this.label3.Location = new System.Drawing.Point(11, 75);
+            this.label3.Location = new System.Drawing.Point(10, 60);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(34, 18);
             this.label3.TabIndex = 25;
@@ -133,7 +130,7 @@ namespace Team6_UMB.Forms.ASB
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.label5.ForeColor = System.Drawing.Color.RoyalBlue;
-            this.label5.Location = new System.Drawing.Point(11, 131);
+            this.label5.Location = new System.Drawing.Point(10, 105);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(34, 18);
             this.label5.TabIndex = 29;
@@ -144,7 +141,7 @@ namespace Team6_UMB.Forms.ASB
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.label6.ForeColor = System.Drawing.Color.RoyalBlue;
-            this.label6.Location = new System.Drawing.Point(11, 185);
+            this.label6.Location = new System.Drawing.Point(10, 148);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(106, 18);
             this.label6.TabIndex = 31;
@@ -155,7 +152,7 @@ namespace Team6_UMB.Forms.ASB
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.label7.ForeColor = System.Drawing.Color.RoyalBlue;
-            this.label7.Location = new System.Drawing.Point(11, 239);
+            this.label7.Location = new System.Drawing.Point(10, 191);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(60, 18);
             this.label7.TabIndex = 33;
@@ -168,19 +165,17 @@ namespace Team6_UMB.Forms.ASB
             this.cboMachine.Items.AddRange(new object[] {
             "Y",
             "N"});
-            this.cboMachine.Location = new System.Drawing.Point(154, 129);
-            this.cboMachine.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.cboMachine.Location = new System.Drawing.Point(135, 103);
             this.cboMachine.Name = "cboMachine";
-            this.cboMachine.Size = new System.Drawing.Size(300, 26);
+            this.cboMachine.Size = new System.Drawing.Size(263, 26);
             this.cboMachine.TabIndex = 43;
             // 
             // txtTactTime
             // 
             this.txtTactTime.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.txtTactTime.Location = new System.Drawing.Point(154, 182);
-            this.txtTactTime.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtTactTime.Location = new System.Drawing.Point(135, 146);
             this.txtTactTime.Name = "txtTactTime";
-            this.txtTactTime.Size = new System.Drawing.Size(300, 24);
+            this.txtTactTime.Size = new System.Drawing.Size(263, 24);
             this.txtTactTime.TabIndex = 49;
             this.txtTactTime.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtTactTime_KeyPress);
             // 
@@ -189,7 +184,7 @@ namespace Team6_UMB.Forms.ASB
             this.label13.AutoSize = true;
             this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.label13.ForeColor = System.Drawing.Color.Black;
-            this.label13.Location = new System.Drawing.Point(11, 370);
+            this.label13.Location = new System.Drawing.Point(10, 296);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(34, 18);
             this.label13.TabIndex = 62;
@@ -198,11 +193,10 @@ namespace Team6_UMB.Forms.ASB
             // txtComment
             // 
             this.txtComment.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.txtComment.Location = new System.Drawing.Point(154, 370);
-            this.txtComment.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtComment.Location = new System.Drawing.Point(135, 296);
             this.txtComment.Multiline = true;
             this.txtComment.Name = "txtComment";
-            this.txtComment.Size = new System.Drawing.Size(300, 145);
+            this.txtComment.Size = new System.Drawing.Size(263, 117);
             this.txtComment.TabIndex = 63;
             // 
             // groupBox1
@@ -221,13 +215,19 @@ namespace Team6_UMB.Forms.ASB
             this.groupBox1.Controls.Add(this.label5);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Location = new System.Drawing.Point(14, 71);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.groupBox1.Location = new System.Drawing.Point(12, 57);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.groupBox1.Size = new System.Drawing.Size(486, 523);
+            this.groupBox1.Size = new System.Drawing.Size(425, 418);
             this.groupBox1.TabIndex = 22;
             this.groupBox1.TabStop = false;
+            // 
+            // txtUadmin
+            // 
+            this.txtUadmin.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.txtUadmin.Location = new System.Drawing.Point(135, 243);
+            this.txtUadmin.Name = "txtUadmin";
+            this.txtUadmin.Size = new System.Drawing.Size(263, 24);
+            this.txtUadmin.TabIndex = 67;
             // 
             // cboYN
             // 
@@ -237,10 +237,9 @@ namespace Team6_UMB.Forms.ASB
             "",
             "y",
             "n"});
-            this.cboYN.Location = new System.Drawing.Point(154, 236);
-            this.cboYN.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.cboYN.Location = new System.Drawing.Point(135, 189);
             this.cboYN.Name = "cboYN";
-            this.cboYN.Size = new System.Drawing.Size(300, 26);
+            this.cboYN.Size = new System.Drawing.Size(263, 26);
             this.cboYN.TabIndex = 66;
             // 
             // cboProductName
@@ -250,10 +249,9 @@ namespace Team6_UMB.Forms.ASB
             this.cboProductName.Items.AddRange(new object[] {
             "Y",
             "N"});
-            this.cboProductName.Location = new System.Drawing.Point(154, 18);
-            this.cboProductName.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.cboProductName.Location = new System.Drawing.Point(135, 14);
             this.cboProductName.Name = "cboProductName";
-            this.cboProductName.Size = new System.Drawing.Size(300, 26);
+            this.cboProductName.Size = new System.Drawing.Size(263, 26);
             this.cboProductName.TabIndex = 65;
             // 
             // cboProcessName
@@ -263,11 +261,21 @@ namespace Team6_UMB.Forms.ASB
             this.cboProcessName.Items.AddRange(new object[] {
             "Y",
             "N"});
-            this.cboProcessName.Location = new System.Drawing.Point(154, 71);
-            this.cboProcessName.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.cboProcessName.Location = new System.Drawing.Point(135, 57);
             this.cboProcessName.Name = "cboProcessName";
-            this.cboProcessName.Size = new System.Drawing.Size(300, 26);
+            this.cboProcessName.Size = new System.Drawing.Size(263, 26);
             this.cboProcessName.TabIndex = 64;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label4.ForeColor = System.Drawing.Color.Black;
+            this.label4.Location = new System.Drawing.Point(10, 246);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(47, 18);
+            this.label4.TabIndex = 62;
+            this.label4.Text = "수정자";
             // 
             // btnClose
             // 
@@ -276,44 +284,24 @@ namespace Team6_UMB.Forms.ASB
             this.btnClose.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btnClose.FlatAppearance.BorderSize = 0;
             this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnClose.Location = new System.Drawing.Point(449, 9);
-            this.btnClose.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnClose.Location = new System.Drawing.Point(393, 7);
             this.btnClose.Name = "btnClose";
-            this.btnClose.Size = new System.Drawing.Size(33, 29);
+            this.btnClose.Size = new System.Drawing.Size(29, 23);
             this.btnClose.TabIndex = 46;
             this.btnClose.UseVisualStyleBackColor = false;
             this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label4.ForeColor = System.Drawing.Color.Black;
-            this.label4.Location = new System.Drawing.Point(11, 307);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(47, 18);
-            this.label4.TabIndex = 62;
-            this.label4.Text = "수정자";
-            // 
-            // txtUadmin
-            // 
-            this.txtUadmin.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.txtUadmin.Location = new System.Drawing.Point(154, 304);
-            this.txtUadmin.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.txtUadmin.Name = "txtUadmin";
-            this.txtUadmin.Size = new System.Drawing.Size(300, 24);
-            this.txtUadmin.TabIndex = 67;
-            // 
             // frmBORPopup
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.ClientSize = new System.Drawing.Size(517, 682);
+            this.ClientSize = new System.Drawing.Size(452, 546);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.groupBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "frmBORPopup";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "frmBorPopUp";
             this.Load += new System.EventHandler(this.frmBORPopup_Load);
             this.Controls.SetChildIndex(this.groupBox1, 0);
