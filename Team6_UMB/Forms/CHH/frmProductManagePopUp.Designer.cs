@@ -30,6 +30,12 @@ namespace Team6_UMB.Forms
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.lblCompanyID = new System.Windows.Forms.Label();
+            this.cbDeleted = new System.Windows.Forms.ComboBox();
+            this.lblWHID = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
+            this.txtProdID = new System.Windows.Forms.TextBox();
+            this.label11 = new System.Windows.Forms.Label();
             this.cbProdName = new System.Windows.Forms.ComboBox();
             this.txtComment = new System.Windows.Forms.TextBox();
             this.label14 = new System.Windows.Forms.Label();
@@ -54,12 +60,6 @@ namespace Team6_UMB.Forms
             this.panel2 = new System.Windows.Forms.Panel();
             this.btnCancle = new System.Windows.Forms.Button();
             this.btnEdit = new System.Windows.Forms.Button();
-            this.lblWHID = new System.Windows.Forms.Label();
-            this.lblCompanyID = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
-            this.txtProdID = new System.Windows.Forms.TextBox();
-            this.cbDeleted = new System.Windows.Forms.ComboBox();
-            this.label12 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nuSafeCount)).BeginInit();
@@ -112,6 +112,69 @@ namespace Team6_UMB.Forms
             this.groupBox1.Size = new System.Drawing.Size(586, 274);
             this.groupBox1.TabIndex = 16;
             this.groupBox1.TabStop = false;
+            // 
+            // lblCompanyID
+            // 
+            this.lblCompanyID.AutoSize = true;
+            this.lblCompanyID.Location = new System.Drawing.Point(490, 178);
+            this.lblCompanyID.Name = "lblCompanyID";
+            this.lblCompanyID.Size = new System.Drawing.Size(88, 12);
+            this.lblCompanyID.TabIndex = 64;
+            this.lblCompanyID.Text = "업체ID임시변수";
+            this.lblCompanyID.Visible = false;
+            // 
+            // cbDeleted
+            // 
+            this.cbDeleted.Font = new System.Drawing.Font("나눔바른고딕", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.cbDeleted.FormattingEnabled = true;
+            this.cbDeleted.Items.AddRange(new object[] {
+            "",
+            "Y",
+            "N"});
+            this.cbDeleted.Location = new System.Drawing.Point(72, 172);
+            this.cbDeleted.Name = "cbDeleted";
+            this.cbDeleted.Size = new System.Drawing.Size(198, 25);
+            this.cbDeleted.TabIndex = 66;
+            // 
+            // lblWHID
+            // 
+            this.lblWHID.AutoSize = true;
+            this.lblWHID.Location = new System.Drawing.Point(378, 178);
+            this.lblWHID.Name = "lblWHID";
+            this.lblWHID.Size = new System.Drawing.Size(88, 12);
+            this.lblWHID.TabIndex = 63;
+            this.lblWHID.Text = "창고ID임시변수";
+            this.lblWHID.Visible = false;
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("나눔바른고딕", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label12.ForeColor = System.Drawing.Color.RoyalBlue;
+            this.label12.Location = new System.Drawing.Point(6, 177);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(60, 17);
+            this.label12.TabIndex = 65;
+            this.label12.Text = "사용여부";
+            // 
+            // txtProdID
+            // 
+            this.txtProdID.Font = new System.Drawing.Font("나눔바른고딕", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.txtProdID.Location = new System.Drawing.Point(72, 13);
+            this.txtProdID.Name = "txtProdID";
+            this.txtProdID.Size = new System.Drawing.Size(198, 25);
+            this.txtProdID.TabIndex = 64;
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("나눔바른고딕", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label11.ForeColor = System.Drawing.Color.RoyalBlue;
+            this.label11.Location = new System.Drawing.Point(6, 18);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(49, 17);
+            this.label11.TabIndex = 63;
+            this.label11.Text = "제품ID";
             // 
             // cbProdName
             // 
@@ -388,69 +451,6 @@ namespace Team6_UMB.Forms
             this.btnEdit.UseVisualStyleBackColor = false;
             this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
             // 
-            // lblWHID
-            // 
-            this.lblWHID.AutoSize = true;
-            this.lblWHID.Location = new System.Drawing.Point(378, 178);
-            this.lblWHID.Name = "lblWHID";
-            this.lblWHID.Size = new System.Drawing.Size(88, 12);
-            this.lblWHID.TabIndex = 63;
-            this.lblWHID.Text = "창고ID임시변수";
-            this.lblWHID.Visible = false;
-            // 
-            // lblCompanyID
-            // 
-            this.lblCompanyID.AutoSize = true;
-            this.lblCompanyID.Location = new System.Drawing.Point(490, 178);
-            this.lblCompanyID.Name = "lblCompanyID";
-            this.lblCompanyID.Size = new System.Drawing.Size(88, 12);
-            this.lblCompanyID.TabIndex = 64;
-            this.lblCompanyID.Text = "업체ID임시변수";
-            this.lblCompanyID.Visible = false;
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("나눔바른고딕", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label11.ForeColor = System.Drawing.Color.RoyalBlue;
-            this.label11.Location = new System.Drawing.Point(6, 18);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(49, 17);
-            this.label11.TabIndex = 63;
-            this.label11.Text = "제품ID";
-            // 
-            // txtProdID
-            // 
-            this.txtProdID.Font = new System.Drawing.Font("나눔바른고딕", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.txtProdID.Location = new System.Drawing.Point(72, 13);
-            this.txtProdID.Name = "txtProdID";
-            this.txtProdID.Size = new System.Drawing.Size(198, 25);
-            this.txtProdID.TabIndex = 64;
-            // 
-            // cbDeleted
-            // 
-            this.cbDeleted.Font = new System.Drawing.Font("나눔바른고딕", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.cbDeleted.FormattingEnabled = true;
-            this.cbDeleted.Items.AddRange(new object[] {
-            "",
-            "Y",
-            "N"});
-            this.cbDeleted.Location = new System.Drawing.Point(72, 172);
-            this.cbDeleted.Name = "cbDeleted";
-            this.cbDeleted.Size = new System.Drawing.Size(198, 25);
-            this.cbDeleted.TabIndex = 66;
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("나눔바른고딕", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label12.ForeColor = System.Drawing.Color.RoyalBlue;
-            this.label12.Location = new System.Drawing.Point(6, 177);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(60, 17);
-            this.label12.TabIndex = 65;
-            this.label12.Text = "사용여부";
-            // 
             // frmProductManagePopUp
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
@@ -460,7 +460,7 @@ namespace Team6_UMB.Forms
             this.Controls.Add(this.groupBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmProductManagePopUp";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Controls.SetChildIndex(this.groupBox1, 0);
             this.Controls.SetChildIndex(this.panel1, 0);
             this.Controls.SetChildIndex(this.panel2, 0);
