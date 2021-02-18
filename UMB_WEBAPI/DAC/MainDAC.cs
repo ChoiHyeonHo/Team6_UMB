@@ -40,6 +40,7 @@ namespace UMB_WEBAPI.DAC
                                group by product_name, datepart(month,sales_date))
                                as A
                                where sales_date = datepart(month, getdate()) and product_name = 'L_UMB1'";
+
                 using (SqlCommand cmd = new SqlCommand(sql, conn))
                 {
                     conn.Open();
@@ -69,12 +70,13 @@ namespace UMB_WEBAPI.DAC
         {
             try
             {
-                string sql = @"select *, (100 * performance_qty_ng / (performance_qty_ng + performance_qty_ok)) growth_rate from(
-							   select datepart(month,production_edate) production_edate, sum(performance_qty_ng) performance_qty_ng, sum(performance_qty_ok) performance_qty_ok, (100 * sum(performance_qty_ng) / (sum(performance_qty_ng) + sum(performance_qty_ok))) ng_rate
+                string sql = @"select *, (100 * (ng_rate - lag_rate) / lag_rate) growth_rate from(
+							   select CONVERT(nvarchar(6), production_edate, 112) production_edate, sum(performance_qty_ng) performance_qty_ng, sum(performance_qty_ok) performance_qty_ok, (100 * sum(performance_qty_ng) / (sum(performance_qty_ng) + sum(performance_qty_ok))) ng_rate
+							   , lag((100 * sum(performance_qty_ng) / (sum(performance_qty_ng) + sum(performance_qty_ok))), 1, (100 * sum(performance_qty_ng) / (sum(performance_qty_ng) + sum(performance_qty_ok)))) over (order by CONVERT(nvarchar(6), GETDATE(), 112)) as lag_rate
 							   from performanceList 
-							   group by datepart(month,production_edate)
+							   group by CONVERT(nvarchar(6), production_edate, 112)
 							   ) as A
-							   where production_edate = datepart(month, getdate())";
+							   where production_edate = CONVERT(nvarchar(6), GETDATE(), 112)";
                 using (SqlCommand cmd = new SqlCommand(sql, conn))
                 {
                     conn.Open();
@@ -102,12 +104,12 @@ namespace UMB_WEBAPI.DAC
 
         public List<Performance> GetPerList()
         {
-            string sql = @"select *, (100 * performance_qty_ng / (performance_qty_ng + performance_qty_ok)) growth_rate from(
-						   select concat(datepart(YEAR, production_edate), datepart(MONTH, production_edate)) production_edate, sum(performance_qty_ng) performance_qty_ng, sum(performance_qty_ok) performance_qty_ok, (100 * sum(performance_qty_ng) / (sum(performance_qty_ng) + sum(performance_qty_ok))) ng_rate
+            string sql = @"select *, (100 * (ng_rate - lag_rate) / lag_rate) growth_rate from(
+						   select CONVERT(nvarchar(6), production_edate, 112) production_edate, sum(performance_qty_ng) performance_qty_ng, sum(performance_qty_ok) performance_qty_ok, (100 * sum(performance_qty_ng) / (sum(performance_qty_ng) + sum(performance_qty_ok))) ng_rate
+						   , lag((100 * sum(performance_qty_ng) / (sum(performance_qty_ng) + sum(performance_qty_ok))), 1, (100 * sum(performance_qty_ng) / (sum(performance_qty_ng) + sum(performance_qty_ok)))) over (order by CONVERT(nvarchar(6), GETDATE(), 112)) as lag_rate
 						   from performanceList 
-						   group by concat(datepart(YEAR, production_edate), datepart(MONTH, production_edate))
-						   ) as A
-						   order by production_edate";
+						   group by CONVERT(nvarchar(6), production_edate, 112)
+						   ) as A";
 
             using (SqlCommand cmd = new SqlCommand(sql, conn))
             {
